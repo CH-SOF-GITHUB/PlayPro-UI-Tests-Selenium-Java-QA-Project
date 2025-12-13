@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget de réservation Playpro</title>
+    <style>
+        /* Styles pour s'assurer que l'iframe prend toute la place */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Empêche les barres de défilement sur le body */
+        }
+        .iframe-container {
+            width: 100%;
+            height: 100vh; /* Prend 100% de la hauteur de la fenêtre */
+            border: none;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Conteneur pour le widget -->
+<div class="iframe-container">
+    <iframe
+            src="https://devsite.playpro.fr/discover/reservation/activite-vr-dfgdg"
+            title="Widget de réservation Playpro"
+            frameborder="0"
+            scrolling="yes"
+    ></iframe>
+</div>
+
+</body>
+</html>

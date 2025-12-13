@@ -1,0 +1,83 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+      - name: Set build name
+
+        run: |
+          BUILD_NAME="PR-${{ github.event.pull_request.number }}-${{ github.sha }}"
+          echo "BUILD_NAME=$BUILD_NAME" >> $GITHUB_ENV
+      - name: Set Repository Name
+
+        run: |
+          REPO_NAME="${{ github.repository }}"
+          echo "REPO_NAME=$REPO_NAME" >> $GITHUB_ENV
+
+      - name: Set github run ID
+
+        run: |
+          GITHUB_RUN_ID="${{ github.run_id }}"
+          echo "GITHUB_RUN_ID=$GITHUB_RUN_ID" >> $GITHUB_ENV  
+
+      - name: Clean and build project
+        run: mvn clean compile
+
+      - name: List existing screenshots before tests
+        run: |
+          mkdir -p src/test/java/tests/screenshots
+          ls src/test/java/tests/screenshots > screenshots_before.txt || true
+
+      - name: Run Test Case 04 of Reservation Suite
+        run: mvn -B -Dtest=tests.PlayPro.DEV.Edge.LambdaTest.Reservations.TC05 test
+
+      #  name: Upload TestNG reports
+      #  name: Run TestNG suite with testng.xml
+      #  uses: actions/upload-artifact@v4
+      #  with:
+      #    name: testng-reports
+      #    path: src/test/java/Reports
+
+      - name: List screenshots after test
+        run: |
+          ls src/test/java/tests/screenshots > screenshots_after.txt || true
+
+      - name: Detect new screenshots
+        id: detect
+        run: |
+          comm -13 screenshots_before.txt screenshots_after.txt > new_screenshots.txt || true
+          if [ -s new_screenshots.txt ]; then echo "has_new_screenshots=true" >> $GITHUB_OUTPUT; else echo "has_new_screenshots=false" >> $GITHUB_OUTPUT; fi
+
+      - name: Upload new screenshots if any
+        if: steps.detect.outputs.has_new_screenshots == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: new-screenshots
+          path: src/test/java/tests/screenshots
+
+      # -B à la commande Maven dans ton workflow. Cela garantit que Maven fonctionne en mode non interactif,
+      # ce qui est recommandé dans les environnements CI comme GitHub Actions.
+      # mvn -B test -Dsurefire.suiteXmlFiles=/home/runner/work/PlayPro-UI-Tests-Selenium-Java/PlayPro-UI-Tests-Selenium-Java/src/test/resources/suites/testng.xml
+      # mvn -B -Dtest=tests.PlayPro.DEV.Edge.LambdaTest.Reservations.TC03 test
+      # Optional: désactivé car provoque 403
+      # - name: Update dependency graph
+      #   uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
