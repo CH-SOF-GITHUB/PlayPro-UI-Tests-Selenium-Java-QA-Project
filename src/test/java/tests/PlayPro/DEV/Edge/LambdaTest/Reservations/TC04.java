@@ -59,7 +59,7 @@ public class TC04 extends LTConfigEdge {
             testname = "TC04: Update NavBar - Client should navigate to Reservation page via Réserver button on navbar";
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
             // locate and actions of selenium web elements
-            WebElement ReserverLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/header/div/div[1]/ul/a[5]")));
+            WebElement ReserverLink = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[class='bg-neutral text-primary px-4 py-1.5 rounded-[10px] shadow']")));
             ReserverLink.click();
             // wait for 10s
             Thread.sleep(10000);
