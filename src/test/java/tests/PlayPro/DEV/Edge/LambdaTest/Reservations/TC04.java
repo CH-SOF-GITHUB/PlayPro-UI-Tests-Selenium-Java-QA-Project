@@ -53,16 +53,16 @@ public class TC04 extends LTConfigEdge {
     }
 
     // TC04: Client should navigate to Reservation page via Réserver button on navbar
-    @Test(priority = 1)
+    @Test()
     public void NavigateToReservationPageViaReservationBtn() {
         try {
             testname = "TC04: Update NavBar - Client should navigate to Reservation page via Réserver button on navbar";
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
             // locate and actions of selenium web elements
-            WebElement ReserverLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Réserver")));
+            WebElement ReserverLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/header/div/div[1]/ul/a[5]")));
             ReserverLink.click();
             // wait for 10s
-            Thread.sleep(15000);
+            Thread.sleep(10000);
             // verify the navigation to reservation page
             String expectedUrl = "https://devsite.playpro.fr/discover/reservation";
             boolean isReservationURL = driver.getCurrentUrl().equals(expectedUrl);
