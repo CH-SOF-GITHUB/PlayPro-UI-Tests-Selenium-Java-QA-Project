@@ -52,26 +52,26 @@ public class TC04 extends LTConfigEdge {
         }
     }
 
-    // TC04: Client should navigate to Reservation page via Réserver button on navbar
+    // TC04: Client should navigate to Actualités page via Actualités link on navbar
     @Test()
-    public void NavigateToReservationPageViaReservationBtn() {
+    public void NavigateActualitésPage() {
         try {
-            testname = "TC04: Update NavBar - Client should navigate to Reservation page via Réserver button on navbar";
+            testname = "TC04: Update NavBar - Client should navigate to Actualités page via 'Actualités' link on navbar";
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
             // locate and actions of selenium web elements
-            WebElement ReserverLink = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[class='bg-neutral text-primary px-4 py-1.5 rounded-[10px] shadow']")));
-            ReserverLink.click();
+            WebElement ActualitesLink = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Actualités")));
+            ActualitesLink.click();
             // wait for 10s
             Thread.sleep(10000);
             // verify the navigation to reservation page
-            String expectedUrl = "https://devsite.playpro.fr/discover/reservation";
-            boolean isReservationURL = driver.getCurrentUrl().equals(expectedUrl);
-            Assert.assertTrue(isReservationURL, "error : reservation URL is not displayed");
+            String expectedUrl = "https://devsite.playpro.fr/blog";
+            boolean isCurrentURL = driver.getCurrentUrl().equals(expectedUrl);
+            Assert.assertTrue(isCurrentURL, "error : Actualités URL is not displayed");
             // verify the title of page
             String ActualTitle = driver.getTitle();
             System.out.println("Actual Title of Page : " + ActualTitle);
-            boolean isTitleOfPage = ActualTitle.equals("Réservation");
-            Assert.assertTrue(isTitleOfPage, "error : title of reservation page is not displayed");
+            boolean isTitleOfPage = ActualTitle.equals("Actualités");
+            Assert.assertTrue(isTitleOfPage, "error : title of Actualités page is not displayed");
             status = "passed";
             System.out.println("Test case : " + testname + " & status : " + status);
         } catch (NoSuchElementException | InterruptedException e) {
