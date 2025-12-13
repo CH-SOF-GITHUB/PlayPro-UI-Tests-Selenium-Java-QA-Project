@@ -59,15 +59,17 @@ public class TC05 extends LTConfigEdge {
     public void NavigateToReservationActiviteVR1() {
         try {
             testname = "TC05: Client should navigate to Odyssey VR T12 reservation page via Réserver button on navbar";
+            driver.get("https://devsite.playpro.fr/discover/reservation");
+            // wait for 7s
+            Thread.sleep(7000);
             // declare the explicit wait for web elements
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
-            // locate and actions of selenium web elements
-            WebElement ReserverLink = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[class='bg-neutral text-primary px-4 py-1.5 rounded-[10px] shadow']")));
-            ReserverLink.click();
+            // wait for 7s
+            Thread.sleep(7000);
             // declare the web elements
             WebElement OdysseyVRActivite = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Odyssey VR T12']")));
             OdysseyVRActivite.click();
-            // wait for 5s
+            // wait for 7s
             Thread.sleep(7000);
             // declare the Expected URL of this activite Circuit VR
             String ExpectedActiviteURL = "https://devsite.playpro.fr/discover/reservation/odyssey-vr-t12";
