@@ -18,9 +18,9 @@ import java.time.Duration;
 public class TC05 extends LTConfigEdge {
     private RemoteWebDriver driver;
     // declare status of Test
-    String status = "failed";
+    static String status = "failed";
     // declare testname
-    String testname = "";
+    static String testname = "";
 
     // add a constructor for this class of test
     public TC05() {
@@ -56,21 +56,19 @@ public class TC05 extends LTConfigEdge {
 
     //TC05
     @Test(priority = 1)
-    public void NavigateToReservationActiviteVR1() {
+    public void NavigateToReservationActiviteVR1() throws InterruptedException {
         try {
             testname = "TC05: Client should navigate to Odyssey VR T12 reservation page via Réserver button on navbar";
             driver.get("https://devsite.playpro.fr/discover/reservation");
-            // wait for 7s
-            Thread.sleep(7000);
+            // wait for 5s
+            Thread.sleep(5000);
             // declare the explicit wait for web elements
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
-            // wait for 7s
-            Thread.sleep(7000);
             // declare the web elements
             WebElement OdysseyVRActivite = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Odyssey VR T12']")));
             OdysseyVRActivite.click();
-            // wait for 7s
-            Thread.sleep(7000);
+            // wait for 5s
+            Thread.sleep(5000);
             // declare the Expected URL of this activite Circuit VR
             String ExpectedActiviteURL = "https://devsite.playpro.fr/discover/reservation/odyssey-vr-t12";
             boolean isReservationOdysseyVrURL = driver.getCurrentUrl().equals(ExpectedActiviteURL);
@@ -81,13 +79,11 @@ public class TC05 extends LTConfigEdge {
             System.out.println("Test case : " + testname + " & status : " + status);
         } catch (NoSuchElementException e) {
             e.fillInStackTrace();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
         }
     }
 
     @Test(priority = 2, dependsOnMethods = {"NavigateToReservationActiviteVR1"})
-    public void BilletsActiviteVR2() {
+    public void BilletsActiviteVR2() throws InterruptedException {
         try {
             testname = "TC05: Client should manage Billets section of Odyssey VR T12 reservation page";
             // declare the explicit wait for web elements
@@ -95,11 +91,10 @@ public class TC05 extends LTConfigEdge {
             // locate and actions of selenium web elements
             WebElement NBParticipants = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='relative']//button[@id='menu-button']")));
             NBParticipants.click();
-            Thread.sleep(10000);
+            status = "passed";
+            System.out.println("Test case : " + testname + " & status : " + status);
         } catch (NoSuchElementException e) {
             e.fillInStackTrace();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
         }
     }
 

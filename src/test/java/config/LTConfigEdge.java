@@ -33,14 +33,13 @@ public class LTConfigEdge {
     public RemoteWebDriver getLTDriver() {
         MutableCapabilities caps = new MutableCapabilities();
         caps.setCapability("browserName", "microsoftedge");
-        caps.setCapability("browserVersion", "142");
+        caps.setCapability("browserVersion", "latest");
         caps.setCapability("platformName", "WIN11");
         int Num1 = ThreadLocalRandom.current().nextInt(1, 10);
         int Num2 = ThreadLocalRandom.current().nextInt(0, 10);
         int Num3 = ThreadLocalRandom.current().nextInt(0, 10);
         buildName = buildName != null ? buildName : "PlayPro-DEV-Edge-Build-" + Num1 + Num2 + Num3;
         HashMap<String, Object> ltOptions = new HashMap<>();
-        ltOptions.put("edgeVersion", "120");
         ltOptions.put("project", "UI-PlayPro-Testing");
         ltOptions.put("w3c", true);
         ltOptions.put("build", buildName);
