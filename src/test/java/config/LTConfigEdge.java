@@ -47,6 +47,7 @@ public class LTConfigEdge {
         ltOptions.put("network", true);
         ltOptions.put("visual", true);
         ltOptions.put("video", true);
+        ltOptions.put("screenshot", true);
         ltOptions.put("console", true);
         ltOptions.put("terminal", true);
         ltOptions.put("devicelog", true);

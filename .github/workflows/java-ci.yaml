@@ -45,7 +45,7 @@ jobs:
           mkdir -p src/test/java/tests/screenshots
           ls src/test/java/tests/screenshots > screenshots_before.txt || true
 
-      - name: Run Test Case 04 of Reservation Suite
+      - name: Run Specific Suite (test cases)
         run: mvn -B -Dtest=tests.PlayPro.DEV.Edge.LambdaTest.Reservations.TC05 test
 
       #  name: Upload TestNG reports
