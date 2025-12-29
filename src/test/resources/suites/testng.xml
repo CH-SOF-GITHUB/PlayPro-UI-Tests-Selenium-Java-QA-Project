@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" name="Suite" parallel="tests">
-    <test name="FirstTest">
+<suite thread-count="2" name="Suite" parallel="tests">
+    <test name="ChromeTest">
         <parameter name="browser" value="chrome"/>
         <parameter name="version" value="latest"/>
         <parameter name="platform" value="WINDOWS"/>
@@ -9,18 +9,18 @@
             <class name="tests.PlayPro.DEV.Parallel_Tests.SampleParallelTest"/>
         </classes>
     </test> <!-- Test -->
-    <test name="SecondTest">
-        <parameter name="browser" value="firefox"/>
+    <test name="EdgeTest">
+        <parameter name="browser" value="microsoftedge"/>
         <parameter name="version" value="latest"/>
         <parameter name="platform" value="WINDOWS"/>
         <classes>
             <class name="tests.PlayPro.DEV.Parallel_Tests.SampleParallelTest"/>
         </classes>
     </test> <!-- Test -->
-    <test name="ThirdTest">
-        <parameter name="browser" value="edge"/>
+    <test name="SafariTest">
+        <parameter name="browser" value="safari"/>
         <parameter name="version" value="latest"/>
-        <parameter name="platform" value="WINDOWS"/>
+        <parameter name="platform" value="MAC"/>
         <classes>
             <class name="tests.PlayPro.DEV.Parallel_Tests.SampleParallelTest"/>
         </classes>

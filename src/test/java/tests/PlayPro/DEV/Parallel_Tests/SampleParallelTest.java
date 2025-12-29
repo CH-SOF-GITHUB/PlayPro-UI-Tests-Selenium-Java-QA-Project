@@ -20,7 +20,7 @@ public class SampleParallelTest extends ConfigTBParallelTest {
     RemoteWebDriver driver = null;
 
     @BeforeTest
-    @Parameters({"browser", "version", "platform"})
+    @Parameters(value = {"browser", "version", "platform"})
     public void setUp(String browser, String version, String platform) throws MalformedURLException {
         System.out.println("Sample Parallel Test is running...");
         driver = getParallelTestDriver(browser, version, platform);
