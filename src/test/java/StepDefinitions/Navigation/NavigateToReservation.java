@@ -1,5 +1,6 @@
-package StepDefinitions;
+package StepDefinitions.Navigation;
 
+import StepDefinitions.Hooks;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;

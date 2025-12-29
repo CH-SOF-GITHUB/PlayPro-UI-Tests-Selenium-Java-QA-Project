@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="My suite version 1.0" verbose="2" parallel="classes">
-    <test name="Test 1">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Suite" parallel="tests">
+    <test name="FirstTest">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="latest"/>
+        <parameter name="platform" value="WINDOWS"/>
         <classes>
-            <class name="tests.PlayPro.DEV.Edge.LambdaTest.Reservations.TC01"/>
-            <class name="tests.PlayPro.DEV.Edge.LambdaTest.Reservations.TC02"/>
-            <class name="tests.PlayPro.DEV.Edge.LambdaTest.Reservations.TC03"/>
+            <class name="tests.PlayPro.DEV.ParallelTests.SampleParallelTest"/>
         </classes>
-    </test>
-</suite>
+    </test> <!-- Test -->
+    <test name="SecondTest">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="version" value="latest"/>
+        <parameter name="platform" value="WINDOWS"/>
+        <classes>
+            <class name="tests.PlayPro.DEV.ParallelTests.SampleParallelTest"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="ThirdTest">
+        <parameter name="browser" value="edge"/>
+        <parameter name="version" value="latest"/>
+        <parameter name="platform" value="WINDOWS"/>
+        <classes>
+            <class name="tests.PlayPro.DEV.ParallelTests.SampleParallelTest"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

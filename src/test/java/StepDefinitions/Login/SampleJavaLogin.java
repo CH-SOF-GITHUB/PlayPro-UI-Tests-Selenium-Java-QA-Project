@@ -1,6 +1,6 @@
-package StepDefinitions;
+package StepDefinitions.Login;
 
-import config.ConfigTBCucumber;
+import StepDefinitions.Hooks;
 import config.ConfigTestingBot;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -8,12 +8,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.*;
 import org.openqa.selenium.io.FileHandler;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 
 import java.io.File;
 import java.io.IOException;
-import java.rmi.Remote;
 
 public class SampleJavaLogin extends ConfigTestingBot {
     // declare an instance of WebDriver
