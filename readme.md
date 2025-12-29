@@ -31,3 +31,17 @@ Ce projet vise à automatiser les tests de l'interface utilisateur du site PlayP
 
 ```bash
 git clone https://github.com/CH-SOF-GITHUB/PlayPro-UI-Tests-Selenium-Java.git
+
+## Architecture Cloud et Exécution des tests sur le Cloud (Cross-Browser Testing)
+
+Selon la configuration utilisée, les tests peuvent être exécutés :
+- En local (navigateur local)
+- Sur LambdaTest Cloud
+- Sur TestingBot Cloud
+- Exécution des tests sur différents navigateurs (Chrome, Edge, Firefox, etc.)
+- Support de plusieurs systèmes d’exploitation (Windows, macOS)
+- Gestion des tests à distance via RemoteWebDriver
+- Visualisation des vidéos, logs et screenshots dans le dashboard LambdaTest
+
+➡️ Idéal pour valider la compatibilité multi-navigateurs et paralléliser les tests.
+➡️ La sélection de la plateforme se fait via des classes java de configuration dédiées

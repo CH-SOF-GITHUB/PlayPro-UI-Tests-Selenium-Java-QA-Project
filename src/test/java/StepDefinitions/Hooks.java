@@ -1,8 +1,7 @@
 package StepDefinitions;
 
-//import StepDefinitions.Login.BackgroundLogin;
 import com.testingbot.testingbotrest.TestingbotREST;
-import config.TBConfigCucumber;
+import config.ConfigTBCucumber;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
@@ -12,26 +11,30 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.util.HashMap;
 import java.util.Map;
 
+import static config.ConfigTBCucumber.KEY;
+import static config.ConfigTBCucumber.SECRET;
 
-public class Hooks extends TBConfigCucumber {
-    public static RemoteWebDriver driver = null;
+public class Hooks {
+    public static RemoteWebDriver driver;
 
     @Before
     public void setUp() throws Exception {
-        driver = getDriver();
+        driver = (RemoteWebDriver) ConfigTBCucumber.getDriver();
         System.out.println("🚀 Driver TestingBot initialisé avec succès !\n");
     }
+
 
     @After
     public void tearDown(Scenario scenario) throws Exception {
         if (driver != null) {
+            System.out.println("🚀 Teardown Driver of Cucumber Tests\n");
+            String sessionId = driver.getSessionId().toString();
             TestingbotREST r = new TestingbotREST(KEY, SECRET);
             Map<String, Object> data = new HashMap<>();
-            data.put("success", "1");
+            data.put("success", true);
             data.put("name", scenario.getName());
-            r.updateTest(driver.getSessionId().toString(), data);
-            driver.quit();
-            System.out.println("\n---🚀 Teardown of Driver Testing of Cucumber ---\n");
-        }
+            r.updateTest(sessionId, data);
+                driver.quit();
+            }
     }
 }
