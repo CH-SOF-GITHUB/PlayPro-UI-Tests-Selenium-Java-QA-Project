@@ -1,17 +1,16 @@
 package config;
 
 import com.testingbot.testingbotrest.TestingbotUnauthorizedException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.net.URL;
 import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ConfigTBCucumber {
+public class ConfigTBParallelTest {
     // TestingBot key
     public static final String KEY = "5c797835f6a08f70fd15b5823c2a6e52";
     // TestingBot Secret
@@ -23,20 +22,18 @@ public class ConfigTBCucumber {
     // declare a remote web driver
     static RemoteWebDriver driver = null;
 
-    public ConfigTBCucumber() {}
-
-    public static RemoteWebDriver getDriver() throws MalformedURLException {
+    public static RemoteWebDriver getParallelTestDriver(String browser, String version, String platform) throws MalformedURLException {
         try {
             System.out.println("----Driver is configured now !----\n");
             // set capabilities of tests
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability(CapabilityType.BROWSER_NAME, "MicrosoftEdge");
-            capabilities.setCapability(CapabilityType.BROWSER_VERSION, "latest");
-            capabilities.setCapability(CapabilityType.PLATFORM_NAME, "Windows 11");
+            capabilities.setCapability(CapabilityType.BROWSER_NAME, browser);
+            capabilities.setCapability(CapabilityType.BROWSER_VERSION, version);
+            capabilities.setCapability(CapabilityType.PLATFORM_NAME, platform);
 
             // capabilites specific to TestingBot
             Map<String, Object> testingBotOptions = new HashMap<>();
-            testingBotOptions.put("build", "Build-TestingBot-Playpro-Demo-With-Cucumber");
+            testingBotOptions.put("build", "Build-TestingBot-For-Parallel-Tests");
             testingBotOptions.put("tunnel", true);
             testingBotOptions.put("screenshot", true);
             capabilities.setCapability("tb:options", testingBotOptions);

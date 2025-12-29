@@ -19,10 +19,9 @@ public class Hooks {
 
     @Before
     public void setUp() throws Exception {
-        driver = (RemoteWebDriver) ConfigTBCucumber.getDriver();
+        driver = ConfigTBCucumber.getDriver();
         System.out.println("🚀 Driver TestingBot initialisé avec succès !\n");
     }
-
 
     @After
     public void tearDown(Scenario scenario) throws Exception {
