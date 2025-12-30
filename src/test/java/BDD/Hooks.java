@@ -1,4 +1,4 @@
-package StepDefinitions;
+package BDD;
 
 import config.LTConfigCucumber;
 import io.cucumber.java.After;

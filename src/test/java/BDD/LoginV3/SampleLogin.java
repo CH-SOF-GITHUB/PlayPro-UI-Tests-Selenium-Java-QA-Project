@@ -1,6 +1,6 @@
-package StepDefinitions.LoginV3;
+package BDD.LoginV3;
 
-import StepDefinitions.Hooks;
+import BDD.Hooks;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
