@@ -2,7 +2,7 @@ Feature: sample login sur playpro demo v3
 
   Rule: Client cannot login with invalid email or invalid password
 
-    @validlogin1
+    @dev
     Scenario: Successful login with email and password valides
       Given Client access to login page
       When Client enter valid email
