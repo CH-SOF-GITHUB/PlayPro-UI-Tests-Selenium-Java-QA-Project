@@ -46,7 +46,7 @@ jobs:
           ls src/test/java/tests/screenshots > screenshots_before.txt || true
 
       - name: Run Specific Suite (test cases)
-        run: mvn -B clean test -Pdev -Dtest=Runners.TestRunner
+        run: mvn -B -Dtest=Runners.TestRunner test
 
       #  name: Upload TestNG reports
       #  name: Run TestNG suite with testng.xml
