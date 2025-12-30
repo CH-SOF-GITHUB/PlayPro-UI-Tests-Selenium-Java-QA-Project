@@ -4,9 +4,9 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        features = "src/test/resources/features/navigateReservation.feature",
+        features = "src/test/resources/features/demov3/sampleLogin.feature",
         glue = {"StepDefinitions"},
-        tags = "@NavigationToReservation",
+        tags = "@validlogin1",
         plugin = {"pretty", "html:target/cucumber-reports.html"}
 )
 

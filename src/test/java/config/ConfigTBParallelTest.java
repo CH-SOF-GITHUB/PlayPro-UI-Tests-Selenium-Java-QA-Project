@@ -22,27 +22,23 @@ public class ConfigTBParallelTest {
     // declare a remote web driver
     static RemoteWebDriver driver = null;
 
-    public static RemoteWebDriver getParallelTestDriver(String browser, String version, String platform) throws MalformedURLException {
-        try {
-            System.out.println("----Driver is configured now !----\n");
-            // set capabilities of tests
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability(CapabilityType.BROWSER_NAME, browser);
-            capabilities.setCapability(CapabilityType.BROWSER_VERSION, version);
-            capabilities.setCapability(CapabilityType.PLATFORM_NAME, platform);
+    public static RemoteWebDriver getParallelTestDriver(String browser, String version, String platform) throws MalformedURLException, TestingbotUnauthorizedException {
+        System.out.println("----Driver For Parallel Testing is configured now !----\n");
+        // set capabilities of tests
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(CapabilityType.BROWSER_NAME, browser);
+        capabilities.setCapability(CapabilityType.BROWSER_VERSION, version);
+        capabilities.setCapability(CapabilityType.PLATFORM_NAME, platform);
 
-            // capabilites specific to TestingBot
-            Map<String, Object> testingBotOptions = new HashMap<>();
-            testingBotOptions.put("build", "Build-TestingBot-For-Parallel-Tests");
-            testingBotOptions.put("tunnel", true);
-            testingBotOptions.put("screenshot", true);
-            capabilities.setCapability("tb:options", testingBotOptions);
-            // initialise webdriver
-            driver = new RemoteWebDriver((new URL(HUB_URL)), capabilities);
-            // return now the driver
-            return driver;
-        } catch (TestingbotUnauthorizedException e) {
-            throw e;
-        }
+        // capabilites specific to TestingBot
+        Map<String, Object> testingBotOptions = new HashMap<>();
+        testingBotOptions.put("build", "Build-TestingBot-For-Parallel-Tests");
+        testingBotOptions.put("tunnel", true);
+        testingBotOptions.put("screenshot", true);
+        capabilities.setCapability("tb:options", testingBotOptions);
+        // initialise webdriver
+        driver = new RemoteWebDriver((new URL(HUB_URL)), capabilities);
+        // return now the driver
+        return driver;
     }
 }

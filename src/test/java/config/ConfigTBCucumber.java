@@ -1,7 +1,6 @@
 package config;
 
 import com.testingbot.testingbotrest.TestingbotUnauthorizedException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -12,10 +11,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ConfigTBCucumber {
-    // TestingBot key
-    public static final String KEY = "5c797835f6a08f70fd15b5823c2a6e52";
+    // Credentials
+    // Use these identifiers to authenticate with TestingBot in your automated tests.
+    // TestingBot Key
+    public static final String KEY = "4f978bbf1c5989cf2b2a8ee530d278d2";
     // TestingBot Secret
-    public static final String SECRET = "9fb978750fc0c45558d5caa85c9f239b";
+    public static final String SECRET = "17e87457ac005023c357a117980c3b9f";
     // Run cross browser Selenium tests on your local network or CI with TestingBot
     // public static String LOCAL_URL = "http://" + KEY + ":" + SECRET + "@localhost:4445/wd/hub";
     // Run cross browser Selenium tests on TestingBot cloud platform
@@ -23,29 +24,26 @@ public class ConfigTBCucumber {
     // declare a remote web driver
     static RemoteWebDriver driver = null;
 
-    public ConfigTBCucumber() {}
+    public ConfigTBCucumber() {
+    }
 
-    public static RemoteWebDriver getDriver() throws MalformedURLException {
-        try {
-            System.out.println("----Driver is configured now !----\n");
-            // set capabilities of tests
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability(CapabilityType.BROWSER_NAME, "MicrosoftEdge");
-            capabilities.setCapability(CapabilityType.BROWSER_VERSION, "latest");
-            capabilities.setCapability(CapabilityType.PLATFORM_NAME, "Windows 11");
+    public static RemoteWebDriver getDriver() throws MalformedURLException, TestingbotUnauthorizedException {
+        System.out.println("----Driver For Cucumber Testing is configured now !----\n");
+        // Set capabilities: browsername, version, OS
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
+        capabilities.setCapability(CapabilityType.BROWSER_VERSION, "143");
+        capabilities.setCapability(CapabilityType.PLATFORM_NAME, "Windows 11");
 
-            // capabilites specific to TestingBot
-            Map<String, Object> testingBotOptions = new HashMap<>();
-            testingBotOptions.put("build", "Build-TestingBot-Playpro-Demo-With-Cucumber");
-            testingBotOptions.put("tunnel", true);
-            testingBotOptions.put("screenshot", true);
-            capabilities.setCapability("tb:options", testingBotOptions);
-            // initialise webdriver
-            driver = new RemoteWebDriver((new URL(HUB_URL)), capabilities);
-            // return now the driver
-            return driver;
-        } catch (TestingbotUnauthorizedException e) {
-            throw e;
-        }
+        // set specific capabilites to TestingBot cloud
+        Map<String, Object> testingBotOptions = new HashMap<>();
+        testingBotOptions.put("build", "Build-TestingBot-Cucumber");
+        testingBotOptions.put("tunnel", true);
+        testingBotOptions.put("screenshot", true);
+        capabilities.setCapability("tb:options", testingBotOptions);
+        // initialise webdriver
+        driver = new RemoteWebDriver((new URL(HUB_URL)), capabilities);
+        // return now the driver
+        return driver;
     }
 }
