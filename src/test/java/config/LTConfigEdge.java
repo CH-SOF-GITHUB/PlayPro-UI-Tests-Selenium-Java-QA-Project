@@ -1,7 +1,7 @@
 package config;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import javax.imageio.ImageIO;
@@ -32,13 +32,13 @@ public class LTConfigEdge {
 
     public RemoteWebDriver getLTDriver() {
         MutableCapabilities caps = new MutableCapabilities();
-        caps.setCapability("browserName", "microsoftedge");
-        caps.setCapability("browserVersion", "latest");
-        caps.setCapability("platformName", "WIN11");
+        caps.setCapability(CapabilityType.BROWSER_NAME, "microsoftedge");
+        caps.setCapability(CapabilityType.BROWSER_VERSION, "latest");
+        caps.setCapability(CapabilityType.PLATFORM_NAME, "WIN11");
         int Num1 = ThreadLocalRandom.current().nextInt(1, 10);
         int Num2 = ThreadLocalRandom.current().nextInt(0, 10);
         int Num3 = ThreadLocalRandom.current().nextInt(0, 10);
-        buildName = buildName != null ? buildName : "PlayPro-DEV-Edge-Build-" + Num1 + Num2 + Num3;
+        buildName = buildName != null ? buildName : "PlayPro-Loisirs-DEV-Build-" + Num1 + Num2 + Num3;
         HashMap<String, Object> ltOptions = new HashMap<>();
         ltOptions.put("project", "UI-PlayPro-Testing");
         ltOptions.put("w3c", true);
@@ -55,7 +55,7 @@ public class LTConfigEdge {
         // URL Selenium Grid de TestingBot Edge
         try {
             return new RemoteWebDriver(new URL(gridURL), caps);
-        } catch (MalformedURLException e) {
+        } catch (MalformedURLException | SessionNotCreatedException e) {
             e.fillInStackTrace();
             throw new RuntimeException("Invalid URL provided for TestingBot hub", e);
         }

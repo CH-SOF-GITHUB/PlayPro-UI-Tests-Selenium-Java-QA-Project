@@ -120,7 +120,11 @@ public class TC05 extends LTConfigEdge {
             // declare the explicit wait for web elements
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
             // locate and actions of selenium web elements
-            WebElement Creneau1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//p[@translate='no'])[5]")));
+            /*Error:  Failures:
+              Error:    TC05.ReservationOfCreneau:123 » Timeout Expected condition failed:
+              waiting for element to be clickable: By.xpath: (//p[@translate='no'])[5] (tried for 25 second(s) with 500 milliseconds interval)
+            * */
+            WebElement Creneau1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//p[@translate='no'])[23]")));
             Creneau1.click();
             status = "passed";
             System.out.println("Test case : " + testname + " & status : " + status);
