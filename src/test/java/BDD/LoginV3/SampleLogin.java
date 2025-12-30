@@ -30,6 +30,7 @@ public class SampleLogin {
         WebElement EmailInputV3 = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//input[@placeholder='Adresse email'])[1]")));
         String ActualPlaceholder = EmailInputV3.getAttribute("placeholder");
         Assert.assertEquals("Adresse email", ActualPlaceholder);
+        EmailInputV3.clear();
         EmailInputV3.sendKeys("chaker.nehos@yopmail.com");
         System.out.println("CUCUMBER STEP 2: client enter valid email");
     }
@@ -39,6 +40,7 @@ public class SampleLogin {
         WebElement PasswordInputV3 = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//input[@placeholder='Mot de passe'])[1]")));
         String ActualPlaceholder = PasswordInputV3.getAttribute("placeholder");
         Assert.assertEquals("Mot de passe", ActualPlaceholder);
+        PasswordInputV3.clear();
         PasswordInputV3.sendKeys("Admin1234!");
         System.out.println("CUCUMBER STEP 3: client enter valid password");
     }
