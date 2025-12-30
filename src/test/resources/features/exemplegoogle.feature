@@ -1,6 +1,6 @@
 Feature: User search in google
 
-  @SampleGoogleSearch
+  @dev
   Scenario: user search for a keyword in google
     Given I open Google
     When I search for "Google"

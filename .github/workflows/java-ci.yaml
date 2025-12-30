@@ -46,7 +46,7 @@ jobs:
           ls src/test/java/tests/screenshots > screenshots_before.txt || true
 
       - name: Run Specific Suite (test cases)
-        run: mvn -B -Dtest=Runners.TestRunner test
+        run: mvn -B clean test -Pdev -Dtest=Runners.TestRunner
 
       #  name: Upload TestNG reports
       #  name: Run TestNG suite with testng.xml
@@ -72,6 +72,7 @@ jobs:
           name: new-screenshots
           path: src/test/java/tests/screenshots
 
+      # mvn clean test -Dtest=Runners.TestRunner -Dcucumber.filter.tags="@SampleGoogleSearch"
       # TestRunner: run: mvn -B -Dtest=Runners.TestRunner test
       # -B à la commande Maven dans ton workflow. Cela garantit que Maven fonctionne en mode non interactif,
       # ce qui est recommandé dans les environnements CI comme GitHub Actions.
