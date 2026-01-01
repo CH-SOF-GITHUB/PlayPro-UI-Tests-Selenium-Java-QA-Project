@@ -1,12 +1,8 @@
 package Data_Driven.InvalidLoginV3;
 
-
-import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
-import com.qaprosoft.carina.core.foundation.utils.tag.Priority;
-import com.qaprosoft.carina.core.foundation.utils.tag.TestPriority;
-import com.qaprosoft.carina.core.foundation.utils.tag.TestTag;
 import com.zebrunner.carina.core.IAbstractTest;
-import com.zebrunner.carina.dataprovider.IAbstractDataProvider;
+import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
+import com.zebrunner.carina.core.registrar.tag.TestTag;
 import config.LTConfig;
 import dataproviders.DataprovidersSampleTest;
 import org.openqa.selenium.By;
@@ -20,7 +16,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class TC01 extends LTConfig implements IAbstractTest, IAbstractDataProvider {
+public class TC01 extends LTConfig implements IAbstractTest {
     // declare the web driver to control the browser
     // define explicit wait for web elements
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
@@ -39,7 +35,6 @@ public class TC01 extends LTConfig implements IAbstractTest, IAbstractDataProvid
             dataProvider = "dataprovider",
             dataProviderClass = DataprovidersSampleTest.class
     )
-    @TestPriority(value = Priority.P1)
     @MethodOwner(owner = "chaker.nehos")
     @TestTag(name = "feature", value = "web")
     public void DisplayErrorMessages(String TUID, String email, String pwd, String ExpectedErrorMsg) throws InterruptedException {
