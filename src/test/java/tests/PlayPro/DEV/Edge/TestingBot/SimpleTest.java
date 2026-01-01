@@ -2,9 +2,7 @@ package tests.PlayPro.DEV.Edge.TestingBot;
 
 import com.testingbot.testingbotrest.TestingbotREST;
 import config.ConfigTestingBot;
-import config.LTConfigEdge;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,13 +12,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
-import java.rmi.Remote;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
-
-import static config.ConfigTestingBot.KEY;
-import static config.ConfigTestingBot.SECRET;
 
 
 public class SimpleTest extends ConfigTestingBot {

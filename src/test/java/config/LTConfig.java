@@ -12,9 +12,8 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
-import java.util.concurrent.ThreadLocalRandom;
 
-public class LTConfigEdge {
+public class LTConfig {
     // declare a Remote web driver as null
     public static RemoteWebDriver driver = null;
     // declare username and access key of lambdatest cloud account
@@ -22,28 +21,21 @@ public class LTConfigEdge {
     public static final String AccessKey = "LT_6tPniB7x45TXRmqWcTF45zqrsCzOU1I1gbJSQg6xkqwfbTG";
     // declare URL of lambdatest selenium grid
     public static final String gridURL = "https://" + Username + ":" + AccessKey + "@hub.lambdatest.com/wd/hub";
-    // get build name environment variable
-    String buildName = System.getenv("BUILD_NAME");
 
     // declare a constructor of class
-    public LTConfigEdge() {
+    public LTConfig() {
 
     }
 
     public RemoteWebDriver getLTDriver() {
         MutableCapabilities caps = new MutableCapabilities();
-        caps.setCapability(CapabilityType.BROWSER_NAME, "microsoftedge");
+        caps.setCapability(CapabilityType.BROWSER_NAME, "chrome");
         caps.setCapability(CapabilityType.BROWSER_VERSION, "latest");
         caps.setCapability(CapabilityType.PLATFORM_NAME, "WIN11");
-        int Num1 = ThreadLocalRandom.current().nextInt(1, 10);
-        int Num2 = ThreadLocalRandom.current().nextInt(0, 10);
-        int Num3 = ThreadLocalRandom.current().nextInt(0, 10);
-        buildName = buildName != null ? buildName : "PlayPro-Loisirs-DEV-Build-" + Num1 + Num2 + Num3;
         HashMap<String, Object> ltOptions = new HashMap<>();
         ltOptions.put("project", "UI-PlayPro-Testing");
         ltOptions.put("w3c", true);
-        ltOptions.put("build", buildName);
-        ltOptions.put("name", "TC01 - Client should navigate to home page -edge browser");
+        ltOptions.put("build", "Build-LT-PlayProDemoV3-1.0.0");
         ltOptions.put("network", true);
         ltOptions.put("visual", true);
         ltOptions.put("video", true);
@@ -57,7 +49,7 @@ public class LTConfigEdge {
             return new RemoteWebDriver(new URL(gridURL), caps);
         } catch (MalformedURLException | SessionNotCreatedException e) {
             e.fillInStackTrace();
-            throw new RuntimeException("Invalid URL provided for TestingBot hub", e);
+            throw new RuntimeException("Error is generated : ", e);
         }
     }
 

@@ -14,13 +14,22 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <repositories>
+        <!-- Uncomment only for testing any SNAPSHOT version of carina or zebrunner agent! -->
+        <!--repository>
+            <id>zebrunner_snapshots</id>
+            <name>zebrunner Snapshots</name>
+            <url>https://nexus.zebrunner.dev/repository/ce-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository-->
+    </repositories>
+
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
@@ -60,8 +69,67 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>4.13.1</version>
             <scope>test</scope>
+        </dependency>
+        <!-- Carina : Custom data providers Pre requirements -->
+        <dependency>
+            <groupId>com.qaprosoft</groupId>
+            <artifactId>carina-dataprovider</artifactId>
+            <version>7.3.20</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zebrunner</groupId>
+            <artifactId>carina-dataprovider</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.zebrunner/carina-commons -->
+        <dependency>
+            <groupId>com.zebrunner</groupId>
+            <artifactId>carina-commons</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.zebrunner/carina-utils -->
+        <dependency>
+            <groupId>com.zebrunner</groupId>
+            <artifactId>carina-utils</artifactId>
+            <version>1.0.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.zebrunner/agent-testng -->
+        <dependency>
+            <groupId>com.zebrunner</groupId>
+            <artifactId>agent-testng</artifactId>
+            <version>1.6.6</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.zebrunner/agent-core -->
+        <dependency>
+            <groupId>com.zebrunner</groupId>
+            <artifactId>agent-core</artifactId>
+            <version>1.9.8</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.zebrunner/agent-testng-pluggable -->
+        <dependency>
+            <groupId>com.zebrunner</groupId>
+            <artifactId>agent-testng-pluggable</artifactId>
+            <version>1.9.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.zebrunner/carina-archetype -->
+        <dependency>
+            <groupId>com.zebrunner</groupId>
+            <artifactId>carina-archetype</artifactId>
+            <version>1.1.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.zebrunner/carina-api -->
+        <dependency>
+            <groupId>com.zebrunner</groupId>
+            <artifactId>carina-api</artifactId>
+            <version>1.2.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.zebrunner/carina-core -->
+        <dependency>
+            <groupId>com.zebrunner</groupId>
+            <artifactId>carina-core</artifactId>
+            <version>1.2.9</version>
         </dependency>
     </dependencies>
     <profiles>
@@ -80,6 +148,12 @@
                 <configuration>
                     <source>11</source>
                     <target>11</target>
+                    <!--carina: Adding test unique identifier (TUID) to the test name using Java data provider
+                        TUID sets at the beginning of the test name in a test result report.
+                        For this functionality to work, update your maven-compiler-plugin (add -parameters compiler argument)-->
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
             <plugin>

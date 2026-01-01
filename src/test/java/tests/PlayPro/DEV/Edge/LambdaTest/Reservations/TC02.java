@@ -1,6 +1,6 @@
 package tests.PlayPro.DEV.Edge.LambdaTest.Reservations;
 
-import config.LTConfigEdge;
+import config.LTConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -12,7 +12,7 @@ import org.testng.annotations.*;
 
 import java.time.Duration;
 
-public class TC02 extends LTConfigEdge {
+public class TC02 extends LTConfig {
     private RemoteWebDriver driver;
     // declare status of Test
     String status = "failed";

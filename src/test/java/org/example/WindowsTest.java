@@ -1,12 +1,9 @@
 package org.example;
 
-import config.ConfigTestingBot;
-import config.LTConfigEdge;
+import config.LTConfig;
 import org.junit.Test;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.net.MalformedURLException;
 import java.time.Duration;
 
 import static org.junit.Assert.assertEquals;
@@ -17,7 +14,7 @@ public class WindowsTest {
     @Test
     public void windowsExampleCode() {
 
-        WebDriver driver = new LTConfigEdge().getLTDriver();
+        WebDriver driver = new LTConfig().getLTDriver();
         //driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
         // Navigate to Url

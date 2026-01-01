@@ -1,24 +1,20 @@
 package tests.PlayPro.DEV.Edge.LambdaTest;
 
-import config.LTConfigEdge;
+import config.LTConfig;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.ITestNGMethod;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.lang.reflect.Method;
 import java.time.Duration;
 
-public class BackOfficeTest1 extends LTConfigEdge {
+public class BackOfficeTest1 extends LTConfig {
     RemoteWebDriver driver;
     // declare status of Test
     String status = "failed";
