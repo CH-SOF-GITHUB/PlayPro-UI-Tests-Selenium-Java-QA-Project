@@ -8,12 +8,12 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.WebDriver;
 
 
-public class Hooks {
+public class Hooks extends LTConfigCucumber{
     public static WebDriver driver;
 
     @Before
     public void setUp() {
-        driver = LTConfigCucumber.getCucumberDriver();
+        driver = getCucumberDriver();
         System.out.println("🚀 Driver TestingBot initialisé avec succès !\n");
     }
 

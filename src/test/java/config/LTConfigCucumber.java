@@ -12,15 +12,15 @@ import java.util.Map;
 
 public class LTConfigCucumber {
     // LambdaTest Credentials
-    static final String LT_USERNAME_CUCUMBER = "chakerbensaid555";
-    static final String LT_ACCESSKEY_CUCUMBER = "LT_6tPniB7x45TXRmqWcTF45zqrsCzOU1I1gbJSQg6xkqwfbTG";
+    public static final String LT_USERNAME_CUCUMBER = "chaker.nehos";
+    public static final String LT_ACCESSKEY_CUCUMBER = "YzCmbZk6LHmgfa7wrkb6Asyr5IZKkmDGeu2V9CNtW07vyfkg4E";
 
     // declare the web driver to control navigateurs web
     static WebDriver driver = null;
     // declare the LambdaTest Grid URL
     static final String LT_GRID_URL = "https://" + LT_USERNAME_CUCUMBER + ":" + LT_ACCESSKEY_CUCUMBER + "@hub.lambdatest.com/wd/hub";
 
-    public static WebDriver getCucumberDriver() {
+    protected static WebDriver getCucumberDriver() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
         capabilities.setCapability(CapabilityType.BROWSER_VERSION, "latest");
