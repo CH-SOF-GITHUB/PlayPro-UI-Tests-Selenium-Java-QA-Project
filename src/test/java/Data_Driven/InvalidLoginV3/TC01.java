@@ -1,11 +1,10 @@
 package Data_Driven.InvalidLoginV3;
 
-import com.zebrunner.carina.core.IAbstractTest;
-import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
-import com.zebrunner.carina.core.registrar.tag.TestTag;
+import Levels.Priority;
 import config.LTConfig;
 import dataproviders.DataprovidersSampleTest;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,27 +15,29 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class TC01 extends LTConfig implements IAbstractTest {
+public class TC01 extends LTConfig {
     // declare the web driver to control the browser
+    WebDriver driver = null;
     // define explicit wait for web elements
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+    WebDriverWait wait = null;
 
     public TC01() {
-        super();
+
     }
 
     @BeforeTest
     public void setUp() throws Exception {
         // get the driver of LambdaTest
+        driver = getLTDriver();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(25));
         System.out.println("Driver setup successfully for Data-Driver Testing !\n");
     }
 
     @Test(
             dataProvider = "dataprovider",
-            dataProviderClass = DataprovidersSampleTest.class
+            dataProviderClass = DataprovidersSampleTest.class,
+            priority = Priority.P0
     )
-    @MethodOwner(owner = "chaker.nehos")
-    @TestTag(name = "feature", value = "web")
     public void DisplayErrorMessages(String TUID, String email, String pwd, String ExpectedErrorMsg) throws InterruptedException {
         System.out.println("This is Test Case 01: Display Error Messages for Invalid Login Using Data Provider\n");
         // Write the code of test case here

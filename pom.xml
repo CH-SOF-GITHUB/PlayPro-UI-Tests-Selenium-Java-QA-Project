@@ -67,7 +67,12 @@
             <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
-        <!-- Carina -->
+        <!-- Carina
+        <dependency>
+            <groupId>com.zebrunner</groupId>
+            <artifactId>carina-dataprovider</artifactId>
+            <version>RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>com.zebrunner</groupId>
             <artifactId>carina-core</artifactId>
@@ -75,31 +80,49 @@
         </dependency>
         <dependency>
             <groupId>com.zebrunner</groupId>
-            <artifactId>carina-utils</artifactId>
-            <version>1.0.3</version>
-        </dependency>
-        <dependency>
-            <groupId>com.zebrunner</groupId>
-            <artifactId>carina-dataprovider</artifactId>
-            <version>1.2.4</version>
-        </dependency>
-
-        <!-- Zebrunner Agent -->
-        <dependency>
-            <groupId>com.zebrunner</groupId>
-            <artifactId>agent-core</artifactId>
-            <version>1.9.3</version>
-        </dependency>
-        <dependency>
-            <groupId>com.zebrunner</groupId>
             <artifactId>agent-testng</artifactId>
             <version>1.6.6</version>
         </dependency>
         <dependency>
-            <groupId>com.zebrunner</groupId>
-            <artifactId>agent-testng-pluggable</artifactId>
-            <version>1.9.3</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.17.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.17.1</version>
+        </dependency>
+
+        <dependency>
+            we need it to reuse benefits of zebrunner testng agent for webdriver
+                sesssion(s) declaration
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+            <version>1.10.18</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.3.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>compile</scope>
+        </dependency>-->
     </dependencies>
     <profiles>
         <profile>
