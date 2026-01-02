@@ -9,10 +9,9 @@ public class DataprovidersSampleTest {
         return new Object[][]{
                 {"TUID1", "chaker.nehos@yopmail.com", "Admin123!", "Veuillez vérifier votre email/ mot de passe"},
                 {"TUID2", "chaker.nehos1@yopmail.com", "Admin1234!", "Veuillez vérifier votre email/ mot de passe"},
-                {"TUID", "chaker.nehos2@yopmail.com", "Admin12345!", "Veuillez vérifier votre email/ mot de passe"},
-                //{"DATA4", "chaker.nehos@yopmail.com", "", "Adresse email est obligatoire"},
-                //{"DATA5", "", "Admin1234!", "Mot de passe est obligatoire"},
-                //{"DATA6", "", "", "Adresse email est obligatoire \nMot de passe est obligatoire"}
+                {"TUID3", "chaker.nehos2@yopmail.com", "Admin12345!", "Veuillez vérifier votre email/ mot de passe"},
+                {"TUID4", "chaker.nehos@yopmail.com", "", "Mot de passe est obligatoire"}, // data with empty password
+                {"TUID5", "", "Admin1234!", "Adresse email est obligatoire"} // data with empty email
         };
     }
 }
