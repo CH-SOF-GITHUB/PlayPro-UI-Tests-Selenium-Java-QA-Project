@@ -15,10 +15,11 @@ import java.util.HashMap;
 
 public class LTConfig {
     // declare a Remote web driver as null
-    public static RemoteWebDriver driver = null;
+    static RemoteWebDriver driver = null;
+
     // declare username and access key of lambdatest cloud account
-    public static final String Username = "chakerbensaid555";
-    public static final String AccessKey = "LT_6tPniB7x45TXRmqWcTF45zqrsCzOU1I1gbJSQg6xkqwfbTG";
+    public static final String Username = "chaker.nehos";
+    public static final String AccessKey = "YzCmbZk6LHmgfa7wrkb6Asyr5IZKkmDGeu2V9CNtW07vyfkg4E";
     // declare URL of lambdatest selenium grid
     public static final String gridURL = "https://" + Username + ":" + AccessKey + "@hub.lambdatest.com/wd/hub";
 
@@ -27,11 +28,12 @@ public class LTConfig {
 
     }
 
-    public RemoteWebDriver getLTDriver() {
+    protected static RemoteWebDriver getLTDriver() {
         MutableCapabilities caps = new MutableCapabilities();
         caps.setCapability(CapabilityType.BROWSER_NAME, "chrome");
         caps.setCapability(CapabilityType.BROWSER_VERSION, "latest");
-        caps.setCapability(CapabilityType.PLATFORM_NAME, "WIN11");
+        caps.setCapability(CapabilityType.PLATFORM_NAME, "WIN10");
+
         HashMap<String, Object> ltOptions = new HashMap<>();
         ltOptions.put("project", "UI-PlayPro-Testing");
         ltOptions.put("w3c", true);

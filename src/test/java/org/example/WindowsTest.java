@@ -9,12 +9,12 @@ import java.time.Duration;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class WindowsTest {
+public class WindowsTest extends LTConfig{
 
     @Test
     public void windowsExampleCode() {
 
-        WebDriver driver = new LTConfig().getLTDriver();
+        WebDriver driver = getLTDriver();
         //driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
         // Navigate to Url

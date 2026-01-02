@@ -6,6 +6,7 @@ import dataproviders.DataprovidersSampleTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -17,7 +18,7 @@ import java.time.Duration;
 
 public class TC01 extends LTConfig {
     // declare the web driver to control the browser
-    WebDriver driver = null;
+    RemoteWebDriver driver = null;
     // define explicit wait for web elements
     WebDriverWait wait = null;
 
