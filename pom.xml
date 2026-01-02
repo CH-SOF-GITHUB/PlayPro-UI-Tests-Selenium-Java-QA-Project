@@ -28,7 +28,18 @@
             </snapshots>
         </repository-->
     </repositories>
-
+    <dependencyManagement>
+        <dependencies>
+            <!-- Utiliser le BOM de Cucumber pour gérer les versions cohérentes -->
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-bom</artifactId>
+                <version>7.18.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
@@ -49,18 +60,25 @@
             <version>7.10.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- cucumber + testng -->
+        <!-- Dépendances Cucumber cohérentes avec A reporter plug-in for pretty Cucumber reports-->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>7.18.1</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
-            <version>7.18.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-gherkin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.jvt.cucumber</groupId>
+            <artifactId>reporting-plugin</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+        <!-- junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

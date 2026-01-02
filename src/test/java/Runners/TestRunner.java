@@ -4,9 +4,9 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        features = "src/test/resources/features/demov3/sampleLoginParameterType.feature",
+        features = "src/test/resources/features/demov3/sampleLogin.feature",
         glue = {"BDD"},
-        plugin = {"pretty", "html:target/cucumber-reports.html"}
+        plugin = { "me.jvt.cucumber.report.PrettyReports:target/cucumber" }
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests {
