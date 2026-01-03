@@ -22,9 +22,9 @@ public class LTConfigCucumber {
 
     protected static WebDriver getCucumberDriver() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
+        capabilities.setCapability(CapabilityType.BROWSER_NAME, "safari");
         capabilities.setCapability(CapabilityType.BROWSER_VERSION, "latest");
-        capabilities.setCapability(CapabilityType.PLATFORM_NAME, "WIN10");
+        capabilities.setCapability(CapabilityType.PLATFORM_NAME, "macOS Ventura");
 
         Map<String, Object> ltOptions = new HashMap<>();
         ltOptions.put("project", "UI-PlayPro-Testing");
