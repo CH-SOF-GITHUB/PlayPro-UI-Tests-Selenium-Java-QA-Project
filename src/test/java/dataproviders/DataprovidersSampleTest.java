@@ -14,4 +14,11 @@ public class DataprovidersSampleTest {
                 {"TUID5", "", "Admin1234!", "Adresse email est obligatoire"} // data with empty email
         };
     }
+
+    public static Object[][] GoToReservationsData() {
+        return new Object[][]{
+                {"TUID1", "", "", ""},
+                {"TUID2", "", "", ""}
+        };
+    }
 }

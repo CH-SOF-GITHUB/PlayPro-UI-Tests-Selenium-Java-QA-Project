@@ -30,9 +30,9 @@ public class LTConfig {
 
     protected static RemoteWebDriver getLTDriver() {
         MutableCapabilities caps = new MutableCapabilities();
-        caps.setCapability(CapabilityType.BROWSER_NAME, "chrome");
+        caps.setCapability(CapabilityType.BROWSER_NAME, "safari");
         caps.setCapability(CapabilityType.BROWSER_VERSION, "latest");
-        caps.setCapability(CapabilityType.PLATFORM_NAME, "WIN10");
+        caps.setCapability(CapabilityType.PLATFORM_NAME, "MAC");
 
         HashMap<String, Object> ltOptions = new HashMap<>();
         ltOptions.put("project", "UI-PlayPro-Testing");
