@@ -59,7 +59,7 @@ public class TC01 extends LTConfig {
         // Naviguer vers la page réservation
         driver.get("https://site.playpro.fr/discover/reservation");
         // Vérifier que le titre de la home N'EXISTE PLUS
-        boolean isHeaderPresent = driver.findElements(headerTitleLocator).size() > 0;
+        boolean isHeaderPresent = !driver.findElements(headerTitleLocator).isEmpty();
         Assert.assertFalse(isHeaderPresent,
                 "Header title should NOT be present on reservation page");
     }

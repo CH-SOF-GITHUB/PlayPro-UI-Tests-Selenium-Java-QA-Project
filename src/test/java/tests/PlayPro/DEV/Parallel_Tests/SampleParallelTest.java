@@ -22,8 +22,8 @@ public class SampleParallelTest extends ConfigTBParallelTest {
     @BeforeTest
     @Parameters(value = {"browser", "version", "platform"})
     public void setUp(String browser, String version, String platform) throws MalformedURLException {
-        System.out.println("Sample Parallel Test is running...");
         driver = getParallelTestDriver(browser, version, platform);
+        System.out.println("Sample Parallel Test is running...");
     }
 
     @Test
