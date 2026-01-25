@@ -18,8 +18,8 @@ public class LTConfig {
     static RemoteWebDriver driver = null;
 
     // declare username and access key of lambdatest cloud account
-    public static final String Username = "chaker.nehos";
-    public static final String AccessKey = "YzCmbZk6LHmgfa7wrkb6Asyr5IZKkmDGeu2V9CNtW07vyfkg4E";
+    public static final String Username = "LambdaTest02outlook";
+    public static final String AccessKey = "LT_OeKIsPcFeDNbCXdCF8F61YHX4U4JIW0qFsvvCM4804D4Cuz";
     // declare URL of lambdatest selenium grid
     public static final String gridURL = "https://" + Username + ":" + AccessKey + "@hub.lambdatest.com/wd/hub";
 
@@ -28,16 +28,35 @@ public class LTConfig {
 
     }
 
+    public static String getBuildName(int nb) {
+        String name = null;
+        try {
+         switch (nb)  {
+             case 1:
+                    name = "BuildLT-BackOffice-PlayProV3-1.0.0";
+                    break;
+             case 2:
+                    name = "BuildLT-Front-PlayProV3-1.0.0";
+                    break;
+             default:
+                 return null;
+         }
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        return name;
+    }
+
     protected static RemoteWebDriver getLTDriver() {
         MutableCapabilities caps = new MutableCapabilities();
-        caps.setCapability(CapabilityType.BROWSER_NAME, "safari");
+        caps.setCapability(CapabilityType.BROWSER_NAME, "chrome");
         caps.setCapability(CapabilityType.BROWSER_VERSION, "latest");
-        caps.setCapability(CapabilityType.PLATFORM_NAME, "MAC");
+        caps.setCapability(CapabilityType.PLATFORM_NAME, "WIN11");
 
         HashMap<String, Object> ltOptions = new HashMap<>();
         ltOptions.put("project", "UI-PlayPro-Testing");
         ltOptions.put("w3c", true);
-        ltOptions.put("build", "Build-LT-PlayProDemoV3-1.0.0");
+        ltOptions.put("build", getBuildName(1));
         ltOptions.put("network", true);
         ltOptions.put("visual", true);
         ltOptions.put("video", true);
