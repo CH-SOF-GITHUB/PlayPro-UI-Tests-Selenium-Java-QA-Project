@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 public class LTConfig {
     // declare a Remote web driver as null
-    static RemoteWebDriver driver = null;
+    // static RemoteWebDriver driver = null;
 
     // declare username and access key of lambdatest cloud account
     public static final String Username = "LambdaTest02outlook";
