@@ -6,9 +6,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+import tests.PlayPro.PageObject.BOBasePage;
 import tests.PlayPro.PageObject.BOLoginPage;
 import tests.PlayPro.PageObject.BOPlanningPage;
 
@@ -20,8 +19,10 @@ public class TC01 extends LTConfig {
     BOLoginPage boLoginPage;
     // Page object 2
     BOPlanningPage boPlanningPage;
+    // Page object 3
+    BOBasePage boBasePage = new BOBasePage();
 
-    @BeforeMethod
+    @BeforeTest
     public void setUp() {
         try {
             driver = getLTDriver();
@@ -54,14 +55,23 @@ public class TC01 extends LTConfig {
             Assert.assertEquals(ActualNbOfEspaces, ExpectedNbOfEspaces, "Counting of Espaces is incorrect!");
             Thread.sleep(3000);
             // get screenshot
-            boLoginPage.TakeScreenshot("BO-Planning-Espaces-Toutcocher");
         } catch (Exception e) {
             e.getStackTrace();
         }
     }
 
+    @Test(priority = 2, dependsOnMethods = {"CheckPlanning01"})
+    public void CheckPlanning02() {
+        try {
+            // Delete all espaces
+            boPlanningPage.clickEffacerButton();
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
 
-    @AfterMethod
+    @AfterTest
     public void tearDown() {
         if (driver != null) {
             driver.quit();

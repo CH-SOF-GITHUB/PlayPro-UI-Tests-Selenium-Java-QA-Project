@@ -1,9 +1,6 @@
 package tests.PlayPro.PageObject;
 
 
-import org.codehaus.plexus.util.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,8 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.io.File;
-import java.io.IOException;
 import java.time.Duration;
 
 
@@ -77,8 +72,4 @@ public class BOLoginPage {
         BOForgotPasswordLink.click();
     }
 
-    public void TakeScreenshot(String image) throws IOException {
-        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile, new File("src/test/java/tests/Captures/" + image + ".png"));
-    }
 }

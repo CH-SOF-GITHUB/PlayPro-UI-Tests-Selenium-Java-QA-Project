@@ -37,7 +37,7 @@ public class TC01 extends LTConfig {
             String ExpectedURL = "https://chakertestqa-bo.playpro.fr/back-office/planning";
             Assert.assertEquals(driver.getCurrentUrl(), ExpectedURL, "Login Failed!");
             // get screenshot
-            boLoginPage.TakeScreenshot("BO-Login-Success");
+            // boLoginPage.TakeScreenshot("BO-Login-Success");
         } catch (Exception e) {
             e.getStackTrace();
         }

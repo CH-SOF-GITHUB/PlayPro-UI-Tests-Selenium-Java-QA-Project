@@ -85,6 +85,12 @@
             <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
+        <!-- AShot dependency To - Take screenshots-->
+        <dependency>
+            <groupId>ru.yandex.qatools.ashot</groupId>
+            <artifactId>ashot</artifactId>
+            <version>1.5.4</version>
+        </dependency>
         <!-- Carina
         <dependency>
             <groupId>com.zebrunner</groupId>
