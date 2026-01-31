@@ -4,6 +4,7 @@ package tests.PlayPro.BackOfficeV3.Planning;
 import config.LTConfig;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -38,7 +39,7 @@ public class TC01 extends LTConfig {
             String ExpectedURL = "https://chakertestqa-bo.playpro.fr/back-office/planning";
             Assert.assertEquals(driver.getCurrentUrl(), ExpectedURL, "Login Failed!");
             log.info("WebDriver is setup and Automate-Test is lunched using Page Object ...\n");
-        } catch (Exception e) {
+        } catch (NoSuchElementException | InterruptedException e) {
             e.getStackTrace();
         }
     }
@@ -50,12 +51,12 @@ public class TC01 extends LTConfig {
             boPlanningPage.clickEspacesDropdown();
             boPlanningPage.clickToutcocherButton();
             // check the testng results
-            int ExpectedNbOfEspaces = 41;
-            int ActualNbOfEspaces = Integer.parseInt(boPlanningPage.getNbOfEspaces());
+            String ExpectedNbOfEspaces = "(43)";
+            String ActualNbOfEspaces = boPlanningPage.getNbOfEspaces();
             Assert.assertEquals(ActualNbOfEspaces, ExpectedNbOfEspaces, "Counting of Espaces is incorrect!");
             Thread.sleep(3000);
             // get screenshot
-        } catch (Exception e) {
+        } catch (NoSuchElementException | InterruptedException e) {
             e.getStackTrace();
         }
     }
@@ -66,7 +67,22 @@ public class TC01 extends LTConfig {
             // Delete all espaces
             boPlanningPage.clickEffacerButton();
             Thread.sleep(3000);
-        } catch (Exception e) {
+        } catch (NoSuchElementException | InterruptedException e) {
+            e.getStackTrace();
+        }
+    }
+
+    @Test(priority = 3, dependsOnMethods = {"CheckPlanning02"})
+    public void CheckPlanning03() {
+        try {
+            // open Liste filtres espaces
+            boPlanningPage.ClickFiltreButton();
+            Thread.sleep(3000);
+            String ExpectedFiltreBtn = "Filtres";
+            String ActualFiltreBtn = boPlanningPage.GetFiltreButtonText();
+            Assert.assertEquals(ActualFiltreBtn, ExpectedFiltreBtn, "Filtre Button is not correct!");
+            // get screenshot
+        } catch (NoSuchElementException | InterruptedException e) {
             e.getStackTrace();
         }
     }

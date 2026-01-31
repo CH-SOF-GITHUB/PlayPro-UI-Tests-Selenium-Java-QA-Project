@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -38,7 +39,10 @@ public class BOPlanningPage {
     private WebElement EffacerButton;
 
     @FindBy(xpath = "//*[@id=\"app\"]/div/div[1]/div/div/div[1]/div[4]/button/span/span")
-    private WebElement NbOfEspaces;
+    protected WebElement NbOfEspaces;
+
+    @FindBy(xpath = "/html/body/div[2]/main/div/div/div[1]/div/div/div[1]/div[5]/button")
+    private WebElement FiltreButton;
 
     /* methods of POM class */
     public void clickEspacesDropdown() {
@@ -56,9 +60,23 @@ public class BOPlanningPage {
         EffacerButton.click();
     }
 
-
     public String getNbOfEspaces() {
         wait.until(ExpectedConditions.visibilityOf(NbOfEspaces));
         return NbOfEspaces.getText();
+    }
+
+    public WebElement NbOfEspacesElement() {
+        return NbOfEspaces;
+    }
+
+    /* Methods of filtres planning (to be continued) */
+    public void ClickFiltreButton() {
+        wait.until(ExpectedConditions.visibilityOf(FiltreButton));
+        FiltreButton.click();
+    }
+
+    public String GetFiltreButtonText() {
+        wait.until(ExpectedConditions.visibilityOf(FiltreButton));
+        return FiltreButton.getText();
     }
 }
