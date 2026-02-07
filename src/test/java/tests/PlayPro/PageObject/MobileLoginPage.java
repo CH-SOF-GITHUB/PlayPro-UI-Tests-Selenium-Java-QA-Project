@@ -16,6 +16,8 @@ public class MobileLoginPage {
     private WebDriver driver;
     // define explicit wait
     private final WebDriverWait wait;
+    // define URL Login Page
+    private final String LoginURL = "https://chakertestqa.playpro.fr/connexion";
 
     public MobileLoginPage(WebDriver driver) {
         this.driver = driver;
@@ -39,7 +41,7 @@ public class MobileLoginPage {
     @FindBy(xpath = "//button[normalize-space()='Me connecter']")
     private WebElement LoginButton;
 
-    @FindBy(xpath = "/html/body/div[3]/main/div/form/div[2]/button")
+    @FindBy(xpath = "//div[@class='relative w-full']//button[@type='button']")
     private WebElement ShowPwdButton;
 
     @FindBy(xpath = "/html/body/div[3]/main/div/form/button")
@@ -77,7 +79,6 @@ public class MobileLoginPage {
         LoginButton.click();
     }
 
-
     public void ClickShowPwdButton() {
         wait.until(ExpectedConditions.visibilityOf(ShowPwdButton));
         ShowPwdButton.click();
@@ -91,5 +92,9 @@ public class MobileLoginPage {
     public void ClickToSignUpButton() {
         wait.until(ExpectedConditions.visibilityOf(ToSignUpButton));
         ToSignUpButton.click();
+    }
+
+    public void GoToLoginPage() {
+        driver.get(LoginURL);
     }
 }

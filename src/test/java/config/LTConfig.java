@@ -56,7 +56,7 @@ public class LTConfig {
         HashMap<String, Object> ltOptions = new HashMap<>();
         ltOptions.put("project", "UI-PlayPro-Testing");
         ltOptions.put("w3c", true);
-        ltOptions.put("build", getBuildName(1));
+        ltOptions.put("build", getBuildName(2));
         ltOptions.put("network", true);
         ltOptions.put("visual", true);
         ltOptions.put("video", true);

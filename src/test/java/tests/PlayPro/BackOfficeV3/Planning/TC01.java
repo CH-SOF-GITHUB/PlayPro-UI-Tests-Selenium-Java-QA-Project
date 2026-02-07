@@ -8,9 +8,9 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import tests.PlayPro.PageObject.BOBasePage;
 import tests.PlayPro.PageObject.BOLoginPage;
 import tests.PlayPro.PageObject.BOPlanningPage;
+import tests.PlayPro.PageObject.BasePage;
 
 public class TC01 extends LTConfig {
     // logging apache commons
@@ -21,7 +21,7 @@ public class TC01 extends LTConfig {
     // Page object 2
     BOPlanningPage boPlanningPage;
     // Page object 3
-    BOBasePage boBasePage = new BOBasePage();
+    // BasePage boBasePage;
 
     @BeforeTest
     public void setUp() {
