@@ -47,6 +47,12 @@ public class WebLoginPage {
     @FindBy(xpath = "(//span[@class='text-xs leading-[0.625rem] font-normal text-[#DA1414]'])[1]")
     private WebElement LoginErrorMessage;
 
+    @FindBy(xpath = "//span[normalize-space()='Adresse email est obligatoire']")
+    private WebElement EmailRequiredErrorMessage;
+
+    @FindBy(xpath = "//span[normalize-space()='Mot de passe est obligatoire']")
+    private WebElement PasswordRequiredErrorMessage;
+
     /* methods of POM class */
     public void GoToLoginPage() {
         driver.get(LOGIN_URL);
@@ -82,6 +88,16 @@ public class WebLoginPage {
     public String GetLoginErrorMessage() {
         wait.until(ExpectedConditions.visibilityOf(LoginErrorMessage));
         return LoginErrorMessage.getText();
+    }
+
+    public String GetEmailRequiredErrorMessage() {
+        wait.until(ExpectedConditions.visibilityOf(EmailRequiredErrorMessage));
+        return EmailRequiredErrorMessage.getText();
+    }
+
+    public String GetPasswordRequiredErrorMessage() {
+        wait.until(ExpectedConditions.visibilityOf(PasswordRequiredErrorMessage));
+        return PasswordRequiredErrorMessage.getText();
     }
 
     /**

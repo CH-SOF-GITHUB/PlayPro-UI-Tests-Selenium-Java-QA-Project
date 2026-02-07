@@ -50,15 +50,25 @@ public class TCGroupLogin01 extends LTConfig {
         }
     }
 
-    /*@Test(groups = "WebLoginTests")
-    public void testInvalidLogin() {
-        // code to test invalid login scenario
-    }
-
     @Test(groups = "WebLoginTests")
-    public void testEmptyCredentials() {
-        // code to test login with empty credentials
-    }*/
+    public void testInvalidLogin() {
+        try {
+            // code to test invalid login scenario
+            webLoginPage.GoToLoginPage();
+            webLoginPage.EnterEmail("chTenant01@yopmail.com");
+            webLoginPage.EnterPassword("Admin12345!");
+            webLoginPage.ClickLoginButton();
+            // check the testng results
+            Thread.sleep(5000);
+            String ExpectedErrorMsg = "Veuillez vérifier votre email/ mot de passe";
+            String ActualErrorMsg = webLoginPage.GetLoginErrorMessage();
+            Assert.assertEquals(ActualErrorMsg, ExpectedErrorMsg, "Login Failed!");
+            // get screenshot
+            webLoginPage.takeSnapShot(driver, "src/test/java/tests/Screenshots/TestngGroupInvalidLogin.png");
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
 
     @AfterGroups("WebLoginTests")
     public void tearDown() {
