@@ -6,8 +6,8 @@ import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
-import tests.PlayPro.PageObject.BasePage;
-import tests.PlayPro.PageObject.MobileLoginPage;
+import PageObject.BasePage;
+import PageObject.MobileLoginPage;
 
 import java.io.IOException;
 import java.lang.reflect.Method;

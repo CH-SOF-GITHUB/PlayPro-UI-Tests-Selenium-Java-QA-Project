@@ -1,4 +1,4 @@
-package tests.PlayPro.PageObject;
+package PageObject;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -43,6 +43,9 @@ public class WebLoginPage {
     @FindBy(xpath = "//button[@class='underline text-sky-400']")
     private WebElement SignUpButton;
 
+    @FindBy(xpath = "//button[@class='absolute right-4 top-1/2 -translate-y-1/2']")
+    private WebElement ShowPasswordButton;
+
     // errors messages
     @FindBy(xpath = "(//span[@class='text-xs leading-[0.625rem] font-normal text-[#DA1414]'])[1]")
     private WebElement LoginErrorMessage;
@@ -85,6 +88,12 @@ public class WebLoginPage {
         SignUpButton.click();
     }
 
+    public void ClickShowPasswordButton() {
+        wait.until(ExpectedConditions.elementToBeClickable(ShowPasswordButton));
+        ShowPasswordButton.click();
+    }
+
+    // getters for error messages
     public String GetLoginErrorMessage() {
         wait.until(ExpectedConditions.visibilityOf(LoginErrorMessage));
         return LoginErrorMessage.getText();

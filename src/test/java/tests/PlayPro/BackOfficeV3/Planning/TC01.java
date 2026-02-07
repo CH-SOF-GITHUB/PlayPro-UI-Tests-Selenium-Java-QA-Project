@@ -8,9 +8,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import tests.PlayPro.PageObject.BOLoginPage;
-import tests.PlayPro.PageObject.BOPlanningPage;
-import tests.PlayPro.PageObject.BasePage;
+import PageObject.BOLoginPage;
+import PageObject.BOPlanningPage;
 
 public class TC01 extends LTConfig {
     // logging apache commons

@@ -7,7 +7,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import tests.PlayPro.PageObject.MobileLoginPage;
+import PageObject.MobileLoginPage;
 
 import java.lang.reflect.Method;
 

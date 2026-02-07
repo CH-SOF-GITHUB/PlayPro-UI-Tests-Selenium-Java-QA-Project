@@ -1,5 +1,6 @@
 package config;
 
+import org.openqa.selenium.SessionNotCreatedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -12,19 +13,17 @@ import java.util.Map;
 
 public class LTConfigCucumber {
     // LambdaTest Credentials
-    public static final String LT_USERNAME_CUCUMBER = "chaker.nehos";
-    public static final String LT_ACCESSKEY_CUCUMBER = "YzCmbZk6LHmgfa7wrkb6Asyr5IZKkmDGeu2V9CNtW07vyfkg4E";
+    public static final String LT_USERNAME_CUCUMBER = "LambdaTest02outlook";
+    public static final String LT_ACCESSKEY_CUCUMBER = "LT_OeKIsPcFeDNbCXdCF8F61YHX4U4JIW0qFsvvCM4804D4Cuz";
 
-    // declare the web driver to control navigateurs web
-    static WebDriver driver = null;
     // declare the LambdaTest Grid URL
-    static final String LT_GRID_URL = "https://" + LT_USERNAME_CUCUMBER + ":" + LT_ACCESSKEY_CUCUMBER + "@hub.lambdatest.com/wd/hub";
+    public static final String LT_GRID_URL = "https://" + LT_USERNAME_CUCUMBER + ":" + LT_ACCESSKEY_CUCUMBER + "@hub.lambdatest.com/wd/hub";
 
     protected static WebDriver getCucumberDriver() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(CapabilityType.BROWSER_NAME, "safari");
+        capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
         capabilities.setCapability(CapabilityType.BROWSER_VERSION, "latest");
-        capabilities.setCapability(CapabilityType.PLATFORM_NAME, "macOS Ventura");
+        capabilities.setCapability(CapabilityType.PLATFORM_NAME, "WIN11");
 
         Map<String, Object> ltOptions = new HashMap<>();
         ltOptions.put("project", "UI-PlayPro-Testing");
@@ -40,10 +39,10 @@ public class LTConfigCucumber {
 
         capabilities.setCapability("lt:options", ltOptions);
         try {
-            driver = new RemoteWebDriver(new URL(LT_GRID_URL), capabilities);
-        } catch (MalformedURLException e) {
+            return new RemoteWebDriver(new URL(LT_GRID_URL), capabilities);
+        } catch (MalformedURLException | SessionNotCreatedException e) {
             e.fillInStackTrace();
+            throw new RuntimeException("Error is generated : ", e);
         }
-        return driver;
     }
 }

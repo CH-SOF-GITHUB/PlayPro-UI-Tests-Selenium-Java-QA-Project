@@ -1,4 +1,4 @@
-package BDD.LoginV3;
+package BDD.PlayProV3.Login;
 
 import BDD.Hooks;
 import io.cucumber.java.en.Given;

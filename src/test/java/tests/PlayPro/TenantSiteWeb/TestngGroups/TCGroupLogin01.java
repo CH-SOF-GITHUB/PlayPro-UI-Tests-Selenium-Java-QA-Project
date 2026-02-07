@@ -6,7 +6,7 @@ import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import tests.PlayPro.PageObject.WebLoginPage;
+import PageObject.WebLoginPage;
 
 
 public class TCGroupLogin01 extends LTConfig {

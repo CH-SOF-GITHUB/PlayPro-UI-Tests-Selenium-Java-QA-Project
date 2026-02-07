@@ -5,29 +5,32 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
 import io.cucumber.java.Scenario;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class Hooks extends LTConfigCucumber {
+    private static final Log log = LogFactory.getLog(Hooks.class);
     // initialize the web driver
     public static WebDriver driver;
     // define explicit wait for web elements conditions
-    public static WebDriverWait wait;
+    // public static WebDriverWait wait;
 
     @Before
     public void setUp() {
         driver = getCucumberDriver();
-        wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(25));
-        System.out.println("🚀 Driver For Cucumber Tests initialized successfully !\n");
+        // wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(25));
+        log.info("🚀 Driver For Cucumber Tests initialized successfully !\n");
     }
 
     @After
     public void tearDown(Scenario scenario) {
         if (driver != null) {
-            System.out.println("\n 🚀 Le Scenario Testé: " + scenario.getName() + " Et le status : " + scenario.getStatus());
+            log.info("\n 🚀 Le Scenario Testé: " + scenario.getName() + " Et le status : " + scenario.getStatus());
             driver.quit();
-            System.out.println("\n 🚀 Teardown Driver For Cucumber Tests\n");
+            log.info("\n 🚀 Teardown Driver For Cucumber Tests\n");
         }
     }
 }

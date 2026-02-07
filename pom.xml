@@ -30,7 +30,7 @@
     </repositories>
     <dependencyManagement>
         <dependencies>
-            <!-- Utiliser le BOM de Cucumber pour gérer les versions cohérentes -->
+            <!-- Utiliser le BOM de Cucumber pour gérer cucumber dependencies by version -->
             <dependency>
                 <groupId>io.cucumber</groupId>
                 <artifactId>cucumber-bom</artifactId>
@@ -46,12 +46,14 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.22.0</version>
+            <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.testingbot/testingbotrest -->
         <dependency>
             <groupId>com.testingbot</groupId>
             <artifactId>testingbotrest</artifactId>
             <version>1.0.8</version>
+            <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
@@ -64,19 +66,29 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
+            <scope>test</scope>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
+            <scope>test</scope>
+        </dependency>-->
+        <!-- Source: https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-gherkin</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>me.jvt.cucumber</groupId>
             <artifactId>reporting-plugin</artifactId>
             <version>5.0.0</version>
+            <scope>test</scope>
         </dependency>
         <!-- junit -->
         <dependency>
@@ -84,12 +96,6 @@
             <artifactId>junit</artifactId>
             <version>4.13.1</version>
             <scope>test</scope>
-        </dependency>
-        <!-- AShot dependency To - Take screenshots-->
-        <dependency>
-            <groupId>ru.yandex.qatools.ashot</groupId>
-            <artifactId>ashot</artifactId>
-            <version>1.5.4</version>
         </dependency>
         <!-- Carina
         <dependency>

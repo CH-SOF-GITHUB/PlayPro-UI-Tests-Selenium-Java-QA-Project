@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterGroups;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.Test;
-import tests.PlayPro.PageObject.WebLoginPage;
+import PageObject.WebLoginPage;
 
 public class TCGroupLogin02 extends LTConfig {
     // declare web driver and other necessary variables for the test class
@@ -48,6 +48,24 @@ public class TCGroupLogin02 extends LTConfig {
             Assert.assertEquals(ActualPasswordErrorMsg, ExpectedPasswordErrorMsg, "Empty password error msg Failed!");
             // get screenshot
             webLoginPage.takeSnapShot(driver, "src/test/java/tests/Screenshots/TestngGroupEmptyCredentials.png");
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+
+    @Test(groups = "WebLoginTests")
+    public void testShowPassword() {
+        try {
+            // code to test login with empty credentials
+            webLoginPage.GoToLoginPage();
+            webLoginPage.EnterEmail("chTenant01@yopmail.com");
+            webLoginPage.EnterPassword("Admin1234!");
+            webLoginPage.ClickShowPasswordButton();
+            // check the testng results
+            Thread.sleep(5000);
+            // get screenshot after clicking show password
+            webLoginPage.takeSnapShot(driver, "src/test/java/tests/Screenshots/TestngGroupShowPassword.png");
+            webLoginPage.ClickShowPasswordButton();
         } catch (Exception e) {
             e.getStackTrace();
         }
