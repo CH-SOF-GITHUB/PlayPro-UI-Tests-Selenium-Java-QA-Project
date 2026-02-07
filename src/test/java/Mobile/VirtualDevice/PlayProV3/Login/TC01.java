@@ -1,4 +1,4 @@
-package tests.Mobile.Virtual.PlayProV3.Login;
+package Mobile.VirtualDevice.PlayProV3.Login;
 
 import config.LTMobileConfig;
 import org.apache.commons.logging.Log;
