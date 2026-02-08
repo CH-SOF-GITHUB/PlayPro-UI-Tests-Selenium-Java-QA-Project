@@ -44,7 +44,7 @@ public class TC01 extends LTConfig {
             log.info("This is Test Case 01: Display Error Messages for Invalid Login Using Data Provider\n");
             // Write the code of test case here
             webLoginPage.GoToLoginPage();
-            webCookiesPage.clickAcceptCookiesButton();
+            // webCookiesPage.clickAcceptCookiesButton();
             webLoginPage.EnterEmail(email);
             Thread.sleep(1000);
             webLoginPage.EnterPassword(pwd);

@@ -40,6 +40,7 @@ public class LTConfig {
                     break;
              case 3:
                    name = "BuildLT-DataDriven-PlayProV3-1.0.0";
+                   break;
              default:
                  return null;
          }
