@@ -38,6 +38,8 @@ public class LTConfig {
              case 2:
                     name = "BuildLT-Front-PlayProV3-1.0.0";
                     break;
+             case 3:
+                   name = "BuildLT-DataDriven-PlayProV3-1.0.0";
              default:
                  return null;
          }
@@ -56,7 +58,7 @@ public class LTConfig {
         HashMap<String, Object> ltOptions = new HashMap<>();
         ltOptions.put("project", "UI-PlayPro-Testing");
         ltOptions.put("w3c", true);
-        ltOptions.put("build", getBuildName(2));
+        ltOptions.put("build", getBuildName(3));
         ltOptions.put("network", true);
         ltOptions.put("visual", true);
         ltOptions.put("video", true);

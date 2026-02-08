@@ -46,7 +46,7 @@ jobs:
           ls src/test/java/tests/screenshots > screenshots_before.txt || true
 
       - name: Run Specific Suite (test cases)
-        run: mvn -B -Dtest=tests.PlayPro.TenantSiteWeb.TestngGroups.TCGroupLogin01 test
+        run: mvn -B -Dtest=Data_Driven.PlayProV3.InvalidLogin.TC01 test
 
       #  name: Upload TestNG reports
       #  name: Run TestNG suite with testng.xml
