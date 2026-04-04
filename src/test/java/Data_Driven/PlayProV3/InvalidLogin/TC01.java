@@ -3,7 +3,7 @@ package Data_Driven.PlayProV3.InvalidLogin;
 import Levels.Priority;
 import PageObject.WebCookiesPage;
 import PageObject.WebLoginPage;
-import config.LTConfig;
+import configuration.LTConfig;
 import Data_Driven.testdata.DataProviderUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

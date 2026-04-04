@@ -1,6 +1,6 @@
 package BDD;
 
-import config.LTConfigCucumber;
+import configuration.LTConfigCucumber;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
@@ -8,7 +8,6 @@ import io.cucumber.java.Scenario;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class Hooks extends LTConfigCucumber {

@@ -21,7 +21,7 @@ public class SampleLoginWithParameter {
 
     @Given("Client access to connexion page")
     public void client_access_to_connexion_page() {
-        driver.get("https://site.playpro.fr/connexion");
+        driver.get("https://chaker-qa-playpro.playpro.fr/connexion");
         System.out.println("CUCUMBER STEP 1: client access to login page");
     }
 
@@ -61,8 +61,9 @@ public class SampleLoginWithParameter {
             Thread.sleep(5000);
             // verify the login passed or not
             String ActualUrlPage = driver.getCurrentUrl();
-            Assert.assertEquals("https://site.playpro.fr/", ActualUrlPage);
-            Assert.assertFalse(ActualUrlPage.contains("/connexion"));
+            String ActualTitle = driver.getTitle();
+            Assert.assertEquals("https://chaker-qa-playpro.playpro.fr/", ActualUrlPage);
+            Assert.assertEquals("Accueil", ActualTitle);
         } catch (InterruptedException e) {
             e.fillInStackTrace();
         }

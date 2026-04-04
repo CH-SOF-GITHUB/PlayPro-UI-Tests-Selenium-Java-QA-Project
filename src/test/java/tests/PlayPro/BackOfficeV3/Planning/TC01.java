@@ -1,7 +1,7 @@
 package tests.PlayPro.BackOfficeV3.Planning;
 
 
-import config.LTConfig;
+import configuration.LTConfig;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.NoSuchElementException;

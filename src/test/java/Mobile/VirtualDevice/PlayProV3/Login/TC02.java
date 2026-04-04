@@ -1,6 +1,6 @@
 package Mobile.VirtualDevice.PlayProV3.Login;
 
-import config.LTMobileConfig;
+import configuration.LTMobileConfig;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.NoSuchElementException;

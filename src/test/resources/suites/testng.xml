@@ -8,8 +8,8 @@
             </run>
         </groups>
         <classes>
-            <class name="tests.PlayPro.TenantSiteWeb.TestngGroups.TCGroupLogin01"/>
-            <class name="tests.PlayPro.TenantSiteWeb.TestngGroups.TCGroupLogin02"/>
+            <class name="tests.PlayPro.DEV.TestngGroups.TCGroupLogin01"/>
+            <class name="tests.PlayPro.DEV.TestngGroups.TCGroupLogin02"/>
         </classes>
     </test>
 </suite> <!-- Suite -->
