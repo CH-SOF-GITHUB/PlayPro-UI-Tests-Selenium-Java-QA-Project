@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="classes" name="Failed suite [PlayPro-Suite]" guice-stage="DEVELOPMENT" verbose="2">
+  <test thread-count="4" parallel="classes" name="DEV-Login-Tests(failed)" verbose="2">
+    <classes>
+      <class name="tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC01">
+        <methods>
+          <include name="tearDown"/>
+          <include name="SampleLogin"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC01 -->
+    </classes>
+  </test> <!-- DEV-Login-Tests(failed) -->
+</suite> <!-- Failed suite [PlayPro-Suite] -->

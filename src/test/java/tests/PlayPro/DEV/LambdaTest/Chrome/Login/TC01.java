@@ -27,4 +27,19 @@ public class TC01 extends BaseTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void SampleErrorLogin() {
+        try {
+            webLoginPage = new WebLoginPage(driver);
+            webLoginPage.EnterEmail("demotenant1@yopmail.com");
+            webLoginPage.EnterPassword("Admin1234!");
+            webLoginPage.ClickLoginButton();
+            // verify the error login is appeared
+            String ErrorMsg = webLoginPage.GetLoginErrorMessage();
+            Assert.assertEquals(ErrorMsg, "Veuillez vérifier votre email/ mot de passe", "Error Login Failed!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

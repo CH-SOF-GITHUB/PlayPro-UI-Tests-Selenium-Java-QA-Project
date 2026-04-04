@@ -34,7 +34,7 @@ public class BaseTest {
     public void tearDown(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            File targetFile = new File("tests/Screenshots/failure/" + result.getMethod().getMethodName() + ".png");
+            File targetFile = new File("C:\\Users\\chaker\\Desktop\\automation\\Mobile-Web-Testing\\MobileWebTesting\\src\\test\\java\\tests\\Screenshots\\failure\\" + result.getMethod().getMethodName() + ".png");
             FileUtils.copyFile(srcFile, targetFile);
         }
 

@@ -8,14 +8,54 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">PlayPro v3 Web Login Test Suite</th></tr>
-<tr><td><a href="#t0">PlayPro Web Login Test by Groups</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">62 770</td><td>WebLoginTests</td><td></td></tr>
+<tr><th colspan="8">PlayPro-Suite</th></tr>
+<tr><td><a href="#t0">DEV-Login-Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">21 014</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">PlayPro v3 Web Login Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PlayPro Web Login Test by Groups &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">tests.PlayPro.TenantSiteWeb.TestngGroups.TCGroupLogin01</td><td><a href="#m0">testInvalidLogin</a></td><td rowspan="1">1770477773066</td><td rowspan="1">10562</td></tr><tr class="passedeven"><td><a href="#m1">testValidLogin</a></td><td rowspan="1">1770477783633</td><td rowspan="1">9139</td></tr><tr class="passedodd"><td rowspan="2">tests.PlayPro.TenantSiteWeb.TestngGroups.TCGroupLogin02</td><td><a href="#m2">testEmptyCredentials</a></td><td rowspan="1">1770477792775</td><td rowspan="1">11449</td></tr><tr class="passedodd"><td><a href="#m3">testShowPassword</a></td><td rowspan="1">1770477804224</td><td rowspan="1">9957</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">PlayPro-Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">DEV-Login-Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC01</td><td><a href="#m0">SampleLogin</a></td><td rowspan="1">1775318140773</td><td rowspan="1">11671</td></tr></tbody>
 </table>
-<h2>PlayPro Web Login Test by Groups</h2><h3 id="m0">tests.PlayPro.TenantSiteWeb.TestngGroups.TCGroupLogin01#testInvalidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.PlayPro.TenantSiteWeb.TestngGroups.TCGroupLogin01#testValidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.PlayPro.TenantSiteWeb.TestngGroups.TCGroupLogin02#testEmptyCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.PlayPro.TenantSiteWeb.TestngGroups.TCGroupLogin02#testShowPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>DEV-Login-Tests</h2><h3 id="m0">tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC01#SampleLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [https://demotenant.playpro.fr/] but found [https://demotenant.playpro.fr/connexion]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC01.SampleLogin(TC01.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
+	at java.base/java.util.concurrent.FutureTask.&lt;init&gt;(FutureTask.java:151)
+	at org.testng.internal.thread.graph.TestNGFutureTask.&lt;init&gt;(TestNGFutureTask.java:15)
+	at org.testng.internal.thread.graph.GraphOrchestrator.runNodes(GraphOrchestrator.java:58)
+	at org.testng.internal.thread.graph.GraphOrchestrator.run(GraphOrchestrator.java:46)
+	at org.testng.TestTaskExecutor.execute(TestTaskExecutor.java:69)
+	at org.testng.TestRunner.privateRun(TestRunner.java:720)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
