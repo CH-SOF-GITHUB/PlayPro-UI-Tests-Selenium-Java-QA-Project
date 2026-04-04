@@ -1,4 +1,4 @@
-package BDD.PlayProV3.Reservations;
+package BDD.DEV.Reservations;
 
 import BDD.Hooks;
 import PageObject.WebCookiesPage;

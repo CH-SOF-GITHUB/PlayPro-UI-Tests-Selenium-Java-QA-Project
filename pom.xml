@@ -93,6 +93,12 @@
             <version>7.10.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>7.12.1</version> <!-- Use the latest stable version -->
+            <scope>test</scope>
+        </dependency>
         <!-- Dépendances Cucumber cohérentes avec A reporter plug-in for pretty Cucumber reports-->
         <dependency>
             <groupId>io.cucumber</groupId>

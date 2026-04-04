@@ -18,7 +18,7 @@ import java.time.Duration;
 public class WebLoginPage {
     /* web driver of POM class */
     private final WebDriver driver;
-    private final String LOGIN_URL = "https://chakertestqa.playpro.fr/connexion";
+    private final String LOGIN_URL = "https://demotenant.playpro.fr/connexion";
     private final WebDriverWait wait;
 
     public WebLoginPage(WebDriver driver) {
