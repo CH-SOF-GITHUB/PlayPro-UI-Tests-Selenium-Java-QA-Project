@@ -74,10 +74,5 @@ public class VoucherTC01 {
         String SuccessOrderMsg = webGiftVoucherPage.GetOrderConfirmationMessage();
         Assert.assertEquals(SuccessOrderMsg, "Merci pour votre commande ! \uD83C\uDF89", "Gift Voucher buying Failed! and Msg is not correct");
     }
-
-
-    @Then("Check that Voucher was buying With {string}")
-    public void checkThatVoucherWasBuyingWith(String status) {
-    }
 }
 

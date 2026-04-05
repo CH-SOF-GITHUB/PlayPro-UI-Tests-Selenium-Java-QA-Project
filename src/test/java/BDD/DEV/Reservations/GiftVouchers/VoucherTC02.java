@@ -20,33 +20,39 @@ public class VoucherTC02 {
     WebGiftVoucherPage webGiftVoucherPage = new WebGiftVoucherPage(driver);
 
     // define the steps of the scenario
-    @Given("I open login page")
-    public void i_open_login_page() {
+    @Given("I open the login page")
+    public void i_open_the_login_page() {
+        // Write code here that turns the phrase above into concrete actions
         webCookiesPage.clickAcceptCookiesButton();
     }
 
-    @Given("I type email {string}")
-    public void i_type_email(String Email) {
+    @Given("I type an email {string}")
+    public void i_type_an_email(String Email) {
+        // Write code here that turns the phrase above into concrete actions
         webLoginPage.EnterEmail(Email);
     }
 
-    @Given("I type pwd {string}")
-    public void i_type_pwd(String pwd) {
-        webLoginPage.EnterPassword(pwd);
+    @Given("I type a pwd {string}")
+    public void i_type_a_pwd(String Pwd) {
+        // Write code here that turns the phrase above into concrete actions
+        webLoginPage.EnterPassword(Pwd);
     }
 
-    @When("I click on Login Btn")
-    public void i_click_on_login_btn() {
+    @When("I click on Login Button")
+    public void i_click_on_login_button() {
+        // Write code here that turns the phrase above into concrete actions
         webLoginPage.ClickLoginButton();
     }
 
-    @Given("Click on Btn Offer a gift voucher")
-    public void click_on_btn_offer_a_gift_voucher() {
+    @Given("Click on Button Offer a gift voucher")
+    public void click_on_button_offer_a_gift_voucher() {
+        // Write code here that turns the phrase above into concrete actions
         webGiftVoucherPage.clickAddGiftVoucherBtn();
     }
 
-    @When("Choose your gift card {int} CHF")
-    public void choose_your_gift_card_chf(int amount) {
+    @When("Choose my gift card {int} CHF")
+    public void choose_my_gift_card_chf(int amount) {
+        // Write code here that turns the phrase above into concrete actions
         if (amount == 250) {
             webGiftVoucherPage.clickGift250Btn();
             log.info("Gift card of " + amount + " CHF is selected");
@@ -67,19 +73,22 @@ public class VoucherTC02 {
         }
     }
 
-    @When("I click on Next Btn")
-    public void i_click_on_next_btn() {
+    @When("I click on Next Button")
+    public void i_click_on_next_button() {
+        // Write code here that turns the phrase above into concrete actions
         webGiftVoucherPage.clickNextBtn();
     }
 
-    @When("I click on bank card stripe in cart")
-    public void i_click_on_bank_card_stripe_in_cart() {
+    @When("I click on bank card stripe")
+    public void i_click_on_bank_card_stripe() {
+        // Write code here that turns the phrase above into concrete actions
         webGiftVoucherPage.clickBankCardBtn();
         webGiftVoucherPage.clickVisaCard11_26Btn();
     }
 
-    @When("I click on payment btn")
-    public void i_click_on_payment_btn() {
+    @When("I click on payment button")
+    public void i_click_on_payment_button() {
+        // Write code here that turns the phrase above into concrete actions
         webGiftVoucherPage.clickPayNowBtn();
     }
 
@@ -91,4 +100,5 @@ public class VoucherTC02 {
         Assert.assertEquals(SuccessOrderMsg, "Merci pour votre commande ! \uD83C\uDF89", "Gift Voucher buying Failed! and Msg is not correct");
         log.info("Gift Voucher buying is " + status);
     }
+
 }

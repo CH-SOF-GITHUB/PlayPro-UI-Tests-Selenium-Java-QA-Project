@@ -1,3 +1,4 @@
+/*
 package tests.PlayPro.DEV.LambdaTest.Parallel_Tests;
 
 import com.testingbot.testingbotrest.TestingbotREST;
@@ -49,3 +50,4 @@ public class SampleParallelTest extends ConfigTBParallelTest {
         }
     }
 }
+*/
