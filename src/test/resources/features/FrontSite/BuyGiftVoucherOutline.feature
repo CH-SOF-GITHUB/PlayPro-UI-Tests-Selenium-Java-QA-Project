@@ -23,3 +23,4 @@ Feature: Buy Gift Voucher Outline
       | 100    | passed |
       | 50     | passed |
       | 25     | passed |
+      | 1      | fail   |
