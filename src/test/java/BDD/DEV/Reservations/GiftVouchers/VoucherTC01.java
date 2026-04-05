@@ -1,6 +1,5 @@
 package BDD.DEV.Reservations.GiftVouchers;
 
-import BDD.Hooks;
 import PageObject.WebCookiesPage;
 import PageObject.WebGiftVoucherPage;
 import PageObject.WebLoginPage;
@@ -13,8 +12,8 @@ import org.testng.Assert;
 
 import static BDD.Hooks.driver;
 
-public class TC01 {
-    private static final Log log = LogFactory.getLog(TC01.class);
+public class VoucherTC01 {
+    private static final Log log = LogFactory.getLog(VoucherTC01.class);
     // define the objects pages
     WebLoginPage webLoginPage = new WebLoginPage(driver);
     WebCookiesPage webCookiesPage = new WebCookiesPage(driver);
@@ -27,8 +26,8 @@ public class TC01 {
     }
 
     @Given("I type email {string}")
-    public void i_type_email(String email) {
-        webLoginPage.EnterEmail(email);
+    public void i_type_email(String Email) {
+        webLoginPage.EnterEmail(Email);
     }
 
     @Given("I type pwd {string}")
@@ -76,3 +75,4 @@ public class TC01 {
         Assert.assertEquals(SuccessOrderMsg, "Merci pour votre commande ! \uD83C\uDF89", "Gift Voucher buying Failed! and Msg is not correct");
     }
 }
+
