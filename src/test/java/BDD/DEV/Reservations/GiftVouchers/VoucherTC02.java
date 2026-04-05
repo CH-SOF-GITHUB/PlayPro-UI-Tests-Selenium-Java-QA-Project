@@ -12,8 +12,8 @@ import org.testng.Assert;
 
 import static BDD.Hooks.driver;
 
-public class VoucherTC01 {
-    private static final Log log = LogFactory.getLog(VoucherTC01.class);
+public class VoucherTC02 {
+    private static final Log log = LogFactory.getLog(VoucherTC02.class);
     // define the objects pages
     WebLoginPage webLoginPage = new WebLoginPage(driver);
     WebCookiesPage webCookiesPage = new WebCookiesPage(driver);
@@ -47,8 +47,24 @@ public class VoucherTC01 {
 
     @When("Choose your gift card {int} CHF")
     public void choose_your_gift_card_chf(int amount) {
-        webGiftVoucherPage.clickGift250Btn();
-        log.info("Gift card of " + amount + " CHF is selected");
+        if (amount == 250) {
+            webGiftVoucherPage.clickGift250Btn();
+            log.info("Gift card of " + amount + " CHF is selected");
+        } else if (amount == 200) {
+            webGiftVoucherPage.clickGift200Btn();
+            log.info("Gift card of " + amount + " CHF is selected");
+        } else if (amount == 100) {
+            webGiftVoucherPage.clickGift100Btn();
+            log.info("Gift card of " + amount + " CHF is selected");
+        } else if (amount == 50) {
+            webGiftVoucherPage.clickGift50Btn();
+            log.info("Gift card of " + amount + " CHF is selected");
+        } else if (amount == 25) {
+            webGiftVoucherPage.clickGift25Btn();
+            log.info("Gift card of " + amount + " CHF is selected");
+        } else {
+            log.info("Gift card of " + amount + " CHF is not available");
+        }
     }
 
     @When("I click on Next Btn")
@@ -67,17 +83,12 @@ public class VoucherTC01 {
         webGiftVoucherPage.clickPayNowBtn();
     }
 
-    @Then("Check that Voucher was buying successfully")
-    public void check_that_voucher_was_buying_successfully() throws InterruptedException {
+    @Then("Check that Voucher was buying With {string}")
+    public void checkThatVoucherWasBuyingWith(String status) throws InterruptedException {
         // wait for 7s to load page
         Thread.sleep(7000);
         String SuccessOrderMsg = webGiftVoucherPage.GetOrderConfirmationMessage();
         Assert.assertEquals(SuccessOrderMsg, "Merci pour votre commande ! \uD83C\uDF89", "Gift Voucher buying Failed! and Msg is not correct");
-    }
-
-
-    @Then("Check that Voucher was buying With {string}")
-    public void checkThatVoucherWasBuyingWith(String status) {
+        log.info("Gift Voucher buying is " + status);
     }
 }
-

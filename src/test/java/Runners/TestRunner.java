@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
 */
 
 @CucumberOptions(
-        features = "src/test/resources/features/FrontSite/SampleBuyGiftVoucher.feature",
+        features = "src/test/resources/features/FrontSite/BuyGiftVoucherOutline.feature",
         glue = {"BDD"},
         tags = "@dev",
         plugin = {"pretty", "html:target/cucumber-reports.html", "json:target/cucumber-reports.json"}
