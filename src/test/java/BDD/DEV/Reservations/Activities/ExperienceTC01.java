@@ -1,6 +1,6 @@
 package BDD.DEV.Reservations.Activities;
 
-import BDD.DEV.Reservations.GiftVouchers.VoucherTC02;
+
 import PageObject.Activites.WebEXP1Page;
 import PageObject.WebCookiesPage;
 import PageObject.WebLoginPage;
