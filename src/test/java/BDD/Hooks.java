@@ -12,6 +12,7 @@ import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,12 +21,11 @@ import java.io.IOException;
 public class Hooks extends LTConfigCucumber {
     private static final Log log = LogFactory.getLog(Hooks.class);
     // initialize the web driver
-    public static WebDriver driver;
+    public static WebDriver driver = new ChromeDriver();
 
     @Before
     public void setUp() {
         log.info("🚀 Starting WebDriver For Cucumber BDD...");
-        driver = getCucumberDriver();
         driver.manage().window().maximize();
         log.info("Navigating to URL...");
         driver.navigate().to("https://demotenant.playpro.fr/connexion");

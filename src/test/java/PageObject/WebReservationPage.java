@@ -29,7 +29,7 @@ public class WebReservationPage {
     private WebElement RéserverLink;
 
     /* methods of POM class */
-    public void clickRéservationsLink() {
+    public void clickRéservationsLinkEnNavBar() {
         wait.until(ExpectedConditions.visibilityOf(RéservationsLink));
         RéservationsLink.click();
     }

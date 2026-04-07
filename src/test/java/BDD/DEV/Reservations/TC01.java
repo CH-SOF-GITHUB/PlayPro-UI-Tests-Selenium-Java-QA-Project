@@ -51,7 +51,7 @@ public class TC01 {
     @When("Le client clique sur le bouton Réservations dans la barre de navigation")
     public void leClientCliqueSurLeBoutonReservationsDansLaBarreDeNavigation() {
         try {
-            webReservationPage.clickRéservationsLink();
+            webReservationPage.clickRéservationsLinkEnNavBar();
         } catch (Exception e) {
             e.getStackTrace();
         }

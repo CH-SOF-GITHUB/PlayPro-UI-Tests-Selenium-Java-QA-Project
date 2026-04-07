@@ -101,9 +101,13 @@ public class WebEXP1Page {
     /**
      *  Method of POM class: Experience Card Path
      */
-    public void clickVrPartyTestCard() {
+
+    public void clickVrPartyTestCard() throws InterruptedException {
+        // wait for 7S
+        Thread.sleep(7000);
+        // scroll down to the experience card
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,250)");
+        js.executeScript("window.scrollBy(0,10000)");
         wait.until(ExpectedConditions.elementToBeClickable(Vr_Party_Test));
         Vr_Party_Test.click();
     }

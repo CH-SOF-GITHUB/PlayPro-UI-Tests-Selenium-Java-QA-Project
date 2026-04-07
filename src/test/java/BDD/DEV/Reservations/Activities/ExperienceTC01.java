@@ -4,6 +4,7 @@ package BDD.DEV.Reservations.Activities;
 import PageObject.Activites.WebEXP1Page;
 import PageObject.WebCookiesPage;
 import PageObject.WebLoginPage;
+import PageObject.WebReservationPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -20,6 +21,7 @@ public class ExperienceTC01 {
     WebLoginPage webLoginPage = new WebLoginPage(driver);
     WebCookiesPage webCookiesPage = new WebCookiesPage(driver);
     WebEXP1Page webEXP1Page = new WebEXP1Page(driver);
+    WebReservationPage webReservationPage = new WebReservationPage(driver);
 
     // define the steps of the scenario
     @Given("I navigate to login page")
@@ -47,8 +49,9 @@ public class ExperienceTC01 {
     }
 
     @Given("I click on Experience Card")
-    public void i_click_on_experience_card() {
+    public void i_click_on_experience_card() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
+        webReservationPage.clickRéserverLink();
         webEXP1Page.clickVrPartyTestCard();
     }
 
