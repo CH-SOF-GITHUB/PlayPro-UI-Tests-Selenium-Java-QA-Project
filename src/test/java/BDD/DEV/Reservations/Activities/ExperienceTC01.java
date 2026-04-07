@@ -2,6 +2,7 @@ package BDD.DEV.Reservations.Activities;
 
 
 import PageObject.Activites.WebEXP1Page;
+import PageObject.WebCartPage;
 import PageObject.WebCookiesPage;
 import PageObject.WebLoginPage;
 import PageObject.WebReservationPage;
@@ -22,6 +23,7 @@ public class ExperienceTC01 {
     WebCookiesPage webCookiesPage = new WebCookiesPage(driver);
     WebEXP1Page webEXP1Page = new WebEXP1Page(driver);
     WebReservationPage webReservationPage = new WebReservationPage(driver);
+    WebCartPage webCartPage = new WebCartPage(driver);
 
     // define the steps of the scenario
     @Given("I navigate to login page")
@@ -109,11 +111,15 @@ public class ExperienceTC01 {
     }
 
     @Given("I select time slot {string}")
-    public void i_select_time_slot(String time) {
+    public void i_select_time_slot(String time) throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
-        webEXP1Page.clickSelectDurationPriceBtn();
+        // Thread.sleep(7000);
         if (time.equals("20:45")) {
             webEXP1Page.clickTimeSlot20_45Btn();
+        } else if (time.equals("20:00")) {
+            webEXP1Page.clickTimeSlot20_00Btn();
+        } else {
+            log.info("Invalid time slot: " + time);
         }
     }
 
@@ -130,16 +136,16 @@ public class ExperienceTC01 {
     }
 
     @Given("I click on bank card by stripe")
-    public void i_click_on_bank_card_by_stripe() {
+    public void i_click_on_bank_card_by_stripe() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
-        webEXP1Page.clickBankCardBtn();
-        webEXP1Page.clickVisaCard11_26Btn();
+        webCartPage.clickBankCardBtn();
+        webCartPage.clickVisaCard11_26Btn();
     }
 
     @When("I click on payment now button")
-    public void i_click_on_payment_now_button() {
+    public void i_click_on_payment_now_button() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
-        webEXP1Page.clickPayNowBtn();
+        webCartPage.clickPayNowBtn();
     }
 
     @Then("Check that reservation was made with {string}")
@@ -147,7 +153,7 @@ public class ExperienceTC01 {
         // Write code here that turns the phrase above into concrete actions
         // wait for 7s to load page
         Thread.sleep(7000);
-        String SuccessOrderMsg = webEXP1Page.GetOrderConfirmationMessage();
+        String SuccessOrderMsg = webCartPage.GetOrderConfirmationMessage();
         Assert.assertEquals(SuccessOrderMsg, "Merci pour votre commande ! \uD83C\uDF89", "Gift Voucher buying Failed! and Msg is not correct");
         log.info("Experience reservation is " + string);
     }

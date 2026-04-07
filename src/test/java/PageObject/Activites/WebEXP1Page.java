@@ -27,6 +27,9 @@ public class WebEXP1Page {
     /**
      *  Experience Card Path
      */
+    @FindBy(xpath = "(//p[normalize-space()='Nos activités'])[1]")
+    private WebElement Nos_Activites_Text;
+
     @FindBy(xpath = "(//h3[normalize-space()='Vr Party Test'])[1]")
     private WebElement Vr_Party_Test;
     /**
@@ -76,27 +79,14 @@ public class WebEXP1Page {
     @FindBy(xpath = "(//button[@type='button'])[6]")
     private WebElement TimeSlot20_45Btn;
 
+    @FindBy(xpath = "(//button[@type='button'])[5]")
+    private WebElement TimeSlot20_00Btn;
+
     @FindBy(xpath = "(//button[@class='opacity-100 w-full lg:w-1/3 h-[60px] rounded-md px-[15px] py-[7px] gap-[10px] opacity-100 font-poppins font-medium text-[15px] leading-[21px] tracking-[0px] text-center bg-primary text-accent'])[1]")
     private WebElement ConfirmBtn;
 
     @FindBy(xpath = "(//button[normalize-space()='Continuer sans option'])[1]")
     private WebElement ContinueWithoutOptionBtn;
-
-    /**
-     *  Card & Payment Buttons
-     */
-    @FindBy(xpath = "(//span[@class='md:w-5 w-4 md:h-5 h-4 border-2 border-black rounded-full'])[1]")
-    private WebElement BankCardBtn;
-
-    @FindBy(xpath = "(//span[@class='relative rounded-lg w-[17px] h-[17px] border-2 bg-white'])[1]")
-    private WebElement VisaCard11_26Btn;
-
-    @FindBy(xpath = "(//button[normalize-space()='Payer maintenant'])[1]")
-    private WebElement PayNowBtn;
-
-    @FindBy(xpath = "(//p[@class='font-poppins font-semibold text-black lg:text-xl text-sm py-4 text-center leading-4'])[1]")
-    private WebElement OrderConfirmationMessage;
-
 
     /**
      *  Method of POM class: Experience Card Path
@@ -107,7 +97,11 @@ public class WebEXP1Page {
         Thread.sleep(7000);
         // scroll down to the experience card
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,10000)");
+        // Scroll down to the experience card
+        for (int i = 0; i < 3; i++) {
+            js.executeScript("window.scrollBy(0, 300);");
+            Thread.sleep(1000);
+        }
         wait.until(ExpectedConditions.elementToBeClickable(Vr_Party_Test));
         Vr_Party_Test.click();
     }
@@ -182,7 +176,14 @@ public class WebEXP1Page {
     /**
      *  Methods of POM class: STEP 3 Time Slot Selection buttons
      */
-    public void clickTimeSlot20_45Btn() {
+    public void clickTimeSlot20_00Btn() throws InterruptedException {
+        Thread.sleep(10000);
+        wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_00Btn));
+        TimeSlot20_00Btn.click();
+    }
+
+    public void clickTimeSlot20_45Btn() throws InterruptedException {
+        Thread.sleep(10000);
         wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_45Btn));
         TimeSlot20_45Btn.click();
     }
@@ -195,30 +196,5 @@ public class WebEXP1Page {
     public void clickContinueWithoutOptionBtn() {
         wait.until(ExpectedConditions.elementToBeClickable(ContinueWithoutOptionBtn));
         ContinueWithoutOptionBtn.click();
-    }
-
-
-    /** Methods of POM class: Card & Payment Buttons
-     */
-    public void clickBankCardBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(BankCardBtn));
-        BankCardBtn.click();
-    }
-
-    public void clickVisaCard11_26Btn() {
-        wait.until(ExpectedConditions.elementToBeClickable(VisaCard11_26Btn));
-        VisaCard11_26Btn.click();
-    }
-
-    public void clickPayNowBtn() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,100)");
-        wait.until(ExpectedConditions.elementToBeClickable(PayNowBtn));
-        PayNowBtn.click();
-    }
-
-    public String GetOrderConfirmationMessage() {
-        wait.until(ExpectedConditions.visibilityOf(OrderConfirmationMessage));
-        return OrderConfirmationMessage.getText();
     }
 }
