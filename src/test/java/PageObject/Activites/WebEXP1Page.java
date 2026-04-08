@@ -93,8 +93,8 @@ public class WebEXP1Page {
      */
 
     public void clickVrPartyTestCard() throws InterruptedException {
-        // wait for 7S
-        Thread.sleep(7000);
+        // wait for 10s
+        Thread.sleep(10000);
         // scroll down to the experience card
         JavascriptExecutor js = (JavascriptExecutor) driver;
         // Scroll down to the experience card
