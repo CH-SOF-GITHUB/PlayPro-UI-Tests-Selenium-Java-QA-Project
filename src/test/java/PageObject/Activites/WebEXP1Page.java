@@ -27,9 +27,6 @@ public class WebEXP1Page {
     /**
      *  Experience Card Path
      */
-    @FindBy(xpath = "(//p[normalize-space()='Nos activités'])[1]")
-    private WebElement Nos_Activites_Text;
-
     @FindBy(xpath = "(//h3[normalize-space()='Vr Party Test'])[1]")
     private WebElement Vr_Party_Test;
     /**
@@ -94,7 +91,7 @@ public class WebEXP1Page {
 
     public void clickVrPartyTestCard() throws InterruptedException {
         // wait for 10s
-        Thread.sleep(10000);
+        // Thread.sleep(5000);
         // scroll down to the experience card
         JavascriptExecutor js = (JavascriptExecutor) driver;
         // Scroll down to the experience card
@@ -177,13 +174,13 @@ public class WebEXP1Page {
      *  Methods of POM class: STEP 3 Time Slot Selection buttons
      */
     public void clickTimeSlot20_00Btn() throws InterruptedException {
-        Thread.sleep(10000);
+        //Thread.sleep(10000);
         wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_00Btn));
         TimeSlot20_00Btn.click();
     }
 
     public void clickTimeSlot20_45Btn() throws InterruptedException {
-        Thread.sleep(10000);
+        //Thread.sleep(10000);
         wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_45Btn));
         TimeSlot20_45Btn.click();
     }

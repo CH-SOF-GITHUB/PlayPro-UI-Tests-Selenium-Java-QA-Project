@@ -12,7 +12,7 @@ Feature:  PlayPro Fo - Reservation Experience/Activites
     And I select Nbre of participants 5
     And I select duration price by min 45
     And I click on Continue Btn
-    And I select time slot "20:00"
+    And I select time slot "20:45"
     And I click on Confirm Btn
     And I click on Continue without option Btn
     And I click on bank card by stripe

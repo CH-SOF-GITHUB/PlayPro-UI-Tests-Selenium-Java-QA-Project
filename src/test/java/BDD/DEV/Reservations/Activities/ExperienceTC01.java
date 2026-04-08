@@ -54,6 +54,7 @@ public class ExperienceTC01 {
     public void i_click_on_experience_card() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
         webReservationPage.clickRéserverLink();
+        webReservationPage.checkVisibilityOfNosActivitesText();
         webEXP1Page.clickVrPartyTestCard();
     }
 

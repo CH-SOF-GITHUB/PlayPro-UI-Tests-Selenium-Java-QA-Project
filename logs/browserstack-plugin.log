@@ -728,3 +728,21 @@
 18:20:17.666 [ApplicationImpl pooled thread 22] INFO  c.b.l.BrowserStackRunExtension - testng
 18:20:17.666 [ApplicationImpl pooled thread 22] INFO  com.browserstack.utils.Helpers - null
 18:20:17.667 [ApplicationImpl pooled thread 22] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
+18:24:13.366 [ApplicationImpl pooled thread 32] INFO  c.b.l.BrowserStackRunExtension - testng
+18:24:13.366 [ApplicationImpl pooled thread 32] INFO  com.browserstack.utils.Helpers - null
+18:24:13.366 [ApplicationImpl pooled thread 32] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
+18:28:38.193 [ApplicationImpl pooled thread 39] INFO  c.b.l.BrowserStackRunExtension - testng
+18:28:38.193 [ApplicationImpl pooled thread 39] INFO  com.browserstack.utils.Helpers - null
+18:28:38.193 [ApplicationImpl pooled thread 39] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
+18:32:55.926 [ApplicationImpl pooled thread 40] INFO  c.b.l.BrowserStackRunExtension - testng
+18:32:55.932 [ApplicationImpl pooled thread 40] INFO  com.browserstack.utils.Helpers - null
+18:32:55.942 [ApplicationImpl pooled thread 40] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
+18:35:24.587 [ApplicationImpl pooled thread 44] INFO  c.b.l.BrowserStackRunExtension - testng
+18:35:24.587 [ApplicationImpl pooled thread 44] INFO  com.browserstack.utils.Helpers - null
+18:35:24.587 [ApplicationImpl pooled thread 44] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
+18:37:23.617 [ApplicationImpl pooled thread 40] INFO  c.b.l.BrowserStackRunExtension - testng
+18:37:23.617 [ApplicationImpl pooled thread 40] INFO  com.browserstack.utils.Helpers - null
+18:37:23.617 [ApplicationImpl pooled thread 40] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
+18:40:48.135 [ApplicationImpl pooled thread 50] INFO  c.b.l.BrowserStackRunExtension - testng
+18:40:48.135 [ApplicationImpl pooled thread 50] INFO  com.browserstack.utils.Helpers - null
+18:40:48.151 [ApplicationImpl pooled thread 50] INFO  c.b.l.BrowserStackRunExtension - Agent path: null

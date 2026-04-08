@@ -28,6 +28,9 @@ public class WebReservationPage {
     @FindBy(xpath = "/html/body/div[1]/main/section[1]/div[2]/div[2]/div/a[1]")
     private WebElement RéserverLink;
 
+    @FindBy(xpath = "(//p[normalize-space()='Nos activités'])[1]")
+    private WebElement Nos_Activites_Text;
+
     /* methods of POM class */
     public void clickRéservationsLinkEnNavBar() {
         wait.until(ExpectedConditions.visibilityOf(RéservationsLink));
@@ -38,4 +41,9 @@ public class WebReservationPage {
         wait.until(ExpectedConditions.visibilityOf(RéserverLink));
         RéserverLink.click();
     }
+
+    public void checkVisibilityOfNosActivitesText() {
+        wait.until(ExpectedConditions.visibilityOf(Nos_Activites_Text));
+    }
+
 }
