@@ -194,6 +194,8 @@ public class WebEXP1Page {
     }
 
     public void clickContinueWithoutOptionBtn() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, 300);");
         wait.until(ExpectedConditions.elementToBeClickable(ContinueWithoutOptionBtn));
         ContinueWithoutOptionBtn.click();
     }

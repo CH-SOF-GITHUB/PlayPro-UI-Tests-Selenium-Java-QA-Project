@@ -113,7 +113,7 @@ public class ExperienceTC01 {
     @Given("I select time slot {string}")
     public void i_select_time_slot(String time) throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
-        // Thread.sleep(7000);
+        Thread.sleep(7000);
         if (time.equals("20:45")) {
             webEXP1Page.clickTimeSlot20_45Btn();
         } else if (time.equals("20:00")) {
@@ -130,8 +130,9 @@ public class ExperienceTC01 {
     }
 
     @Given("I click on Continue without option Btn")
-    public void i_click_on_continue_without_option_btn() {
+    public void i_click_on_continue_without_option_btn() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
+        Thread.sleep(7000);
         webEXP1Page.clickContinueWithoutOptionBtn();
     }
 
@@ -154,7 +155,7 @@ public class ExperienceTC01 {
         // wait for 7s to load page
         Thread.sleep(7000);
         String SuccessOrderMsg = webCartPage.GetOrderConfirmationMessage();
-        Assert.assertEquals(SuccessOrderMsg, "Merci pour votre commande ! \uD83C\uDF89", "Gift Voucher buying Failed! and Msg is not correct");
+        Assert.assertEquals(SuccessOrderMsg, "Merci pour votre réservation ! \uD83C\uDF89", "Gift Voucher buying Failed! and Msg is not correct");
         log.info("Experience reservation is " + string);
     }
 }
