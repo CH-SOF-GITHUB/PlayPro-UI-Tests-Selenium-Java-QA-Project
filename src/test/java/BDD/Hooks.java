@@ -21,7 +21,8 @@ import java.io.IOException;
 public class Hooks extends LTConfigCucumber {
     private static final Log log = LogFactory.getLog(Hooks.class);
     // initialize the web driver
-    public static WebDriver driver = new ChromeDriver();
+    public static WebDriver driver = getCucumberDriver();
+    //public static WebDriver driver = new ChromeDriver();
 
     @Before
     public void setUp() {

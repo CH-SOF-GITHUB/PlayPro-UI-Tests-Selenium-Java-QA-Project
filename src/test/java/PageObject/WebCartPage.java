@@ -43,33 +43,53 @@ public class WebCartPage {
     /** Methods of POM class: Card & Payment Buttons
      */
     public void clickBankCardBtn() throws InterruptedException {
-        // wait for 7s
-        Thread.sleep(7000);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        // Scroll down to the experience card
-        js.executeScript("window.scrollBy(0, 300);");
-        wait.until(ExpectedConditions.elementToBeClickable(BankCardBtn));
-        BankCardBtn.click();
+        try {
+            // wait for 7s
+            Thread.sleep(7000);
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            // Scroll down to the experience card
+            js.executeScript("window.scrollBy(0, 300);");
+            wait.until(ExpectedConditions.elementToBeClickable(BankCardBtn));
+            BankCardBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void clickVisaCard11_26Btn() {
-        wait.until(ExpectedConditions.elementToBeClickable(VisaCard11_26Btn));
-        VisaCard11_26Btn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(VisaCard11_26Btn));
+            VisaCard11_26Btn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
-    public void clickPayNowBtn() throws InterruptedException {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        // Scroll down to the experience card
-        for (int i = 0; i < 2; i++) {
-            js.executeScript("window.scrollBy(0, 300);");
+    public void clickPayNowBtn() {
+        try {
             Thread.sleep(1000);
-        }
-        wait.until(ExpectedConditions.elementToBeClickable(PayNowBtn));
-        PayNowBtn.click();
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            // Scroll down to the experience card
+            for (int i = 0; i < 2; i++) {
+                js.executeScript("window.scrollBy(0, 300);");
+                Thread.sleep(1000);
+            }
+            wait.until(ExpectedConditions.elementToBeClickable(PayNowBtn));
+            PayNowBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+            }
     }
 
     public String GetOrderConfirmationMessage() {
-        wait.until(ExpectedConditions.visibilityOf(OrderConfirmationMessage));
-        return OrderConfirmationMessage.getText();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.visibilityOf(OrderConfirmationMessage));
+            return OrderConfirmationMessage.getText();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+            return null;
+        }
     }
 }

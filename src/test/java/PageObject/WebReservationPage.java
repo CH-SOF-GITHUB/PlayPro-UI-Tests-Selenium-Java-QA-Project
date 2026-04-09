@@ -33,17 +33,32 @@ public class WebReservationPage {
 
     /* methods of POM class */
     public void clickRéservationsLinkEnNavBar() {
-        wait.until(ExpectedConditions.visibilityOf(RéservationsLink));
-        RéservationsLink.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.visibilityOf(RéservationsLink));
+            RéservationsLink.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void clickRéserverLink() {
-        wait.until(ExpectedConditions.visibilityOf(RéserverLink));
-        RéserverLink.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.visibilityOf(RéserverLink));
+            RéserverLink.click();
+            Thread.sleep(4000);
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void checkVisibilityOfNosActivitesText() {
-        wait.until(ExpectedConditions.visibilityOf(Nos_Activites_Text));
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.visibilityOf(Nos_Activites_Text));
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
-
 }

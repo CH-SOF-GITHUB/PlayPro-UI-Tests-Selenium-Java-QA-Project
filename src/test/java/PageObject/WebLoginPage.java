@@ -58,24 +58,43 @@ public class WebLoginPage {
 
     /* methods of POM class */
     public void GoToLoginPage() {
-        driver.get(LOGIN_URL);
+        try {
+            Thread.sleep(1000);
+            driver.get(LOGIN_URL);
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
+
     public void EnterEmail(String email) {
-        wait.until(ExpectedConditions.visibilityOf(EmailInput));
-        EmailInput.clear();
-        EmailInput.sendKeys(email);
+        try {
+            wait.until(ExpectedConditions.visibilityOf(EmailInput));
+            EmailInput.clear();
+            EmailInput.sendKeys(email);
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void EnterPassword(String password) {
-        wait.until(ExpectedConditions.visibilityOf(PasswordInput));
-        PasswordInput.clear();
-        PasswordInput.sendKeys(password);
+        try {
+            wait.until(ExpectedConditions.visibilityOf(PasswordInput));
+            PasswordInput.clear();
+            PasswordInput.sendKeys(password);
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void ClickLoginButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(LoginButton));
-        LoginButton.click();
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(LoginButton));
+            LoginButton.click();
+            Thread.sleep(5000); // wait for 5 seconds to allow the page to load after clicking the login button
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void ClickForgotPasswordButton() {

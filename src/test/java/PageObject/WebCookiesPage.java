@@ -30,9 +30,13 @@ public class WebCookiesPage {
 
     /* methods of POM class */
     public void clickAcceptCookiesButton() {
-        wait.until(ExpectedConditions.visibilityOf(AcceptCookiesButton));
-        AcceptCookiesButton.click();
-        log.info("Accepted cookies successfully.");
+        try {
+            wait.until(ExpectedConditions.visibilityOf(AcceptCookiesButton));
+            AcceptCookiesButton.click();
+            log.info("Accepted cookies successfully.");
+        } catch (Exception e) {
+            log.warn("Accept Cookies button not found or not clickable: " + e.getMessage());
+        }
 
     }
 }

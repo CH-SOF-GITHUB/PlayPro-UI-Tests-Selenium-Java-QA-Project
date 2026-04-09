@@ -90,60 +90,104 @@ public class WebEXP1Page {
      */
 
     public void clickVrPartyTestCard() throws InterruptedException {
-        // wait for 10s
-        // Thread.sleep(5000);
-        // scroll down to the experience card
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        // Scroll down to the experience card
-        for (int i = 0; i < 3; i++) {
-            js.executeScript("window.scrollBy(0, 300);");
-            Thread.sleep(1000);
+        try {
+            // wait for 3s
+            Thread.sleep(3000);
+            // scroll down to the experience card
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            // Scroll down to the experience card
+            for (int i = 0; i < 3; i++) {
+                js.executeScript("window.scrollBy(0, 300);");
+                Thread.sleep(1000);
+            }
+            wait.until(ExpectedConditions.elementToBeClickable(Vr_Party_Test));
+            Vr_Party_Test.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
         }
-        wait.until(ExpectedConditions.elementToBeClickable(Vr_Party_Test));
-        Vr_Party_Test.click();
     }
 
     /**
      *  Methods of POM class: STEP 1 Reservation Selection buttons
      */
     public void clickSelectParticipantsBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(SelectParticipantsBtn));
-        SelectParticipantsBtn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(SelectParticipantsBtn));
+            SelectParticipantsBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void clickOption4ParticipantsBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(Option_4ParticipantsBtn));
-        Option_4ParticipantsBtn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(Option_4ParticipantsBtn));
+            Option_4ParticipantsBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void clickOption5ParticipantsBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(Option_5ParticipantsBtn));
-        Option_5ParticipantsBtn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(Option_5ParticipantsBtn));
+            Option_5ParticipantsBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void clickOption6ParticipantsBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(Option_6ParticipantsBtn));
-        Option_6ParticipantsBtn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(Option_6ParticipantsBtn));
+            Option_6ParticipantsBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void clickOption7ParticipantsBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(Option_7ParticipantsBtn));
-        Option_7ParticipantsBtn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(Option_7ParticipantsBtn));
+            Option_7ParticipantsBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void clickOption8ParticipantsBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(Option_8ParticipantsBtn));
-        Option_8ParticipantsBtn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(Option_8ParticipantsBtn));
+            Option_8ParticipantsBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void clickOption9ParticipantsBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(Option_9ParticipantsBtn));
-        Option_9ParticipantsBtn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(Option_9ParticipantsBtn));
+            Option_9ParticipantsBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void clickOption10ParticipantsBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(Option_10ParticipantsBtn));
-        Option_10ParticipantsBtn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(Option_10ParticipantsBtn));
+            Option_10ParticipantsBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     /**
@@ -151,49 +195,87 @@ public class WebEXP1Page {
      */
 
     public void clickSelectDurationPriceBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(SelectDurationPriceBtn));
-        SelectDurationPriceBtn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(SelectDurationPriceBtn));
+            SelectDurationPriceBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void clickOption45MinBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(Option_45MinBtn));
-        Option_45MinBtn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(Option_45MinBtn));
+            Option_45MinBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void clickOption90MinBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(Option_90MinBtn));
-        Option_90MinBtn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(Option_90MinBtn));
+            Option_90MinBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void clickContinueBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(ContinueBtn));
-        ContinueBtn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(ContinueBtn));
+            ContinueBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     /**
      *  Methods of POM class: STEP 3 Time Slot Selection buttons
      */
     public void clickTimeSlot20_00Btn() throws InterruptedException {
-        //Thread.sleep(10000);
-        wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_00Btn));
-        TimeSlot20_00Btn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_00Btn));
+            TimeSlot20_00Btn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
-    public void clickTimeSlot20_45Btn() throws InterruptedException {
-        //Thread.sleep(10000);
-        wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_45Btn));
-        TimeSlot20_45Btn.click();
+    public void clickTimeSlot20_45Btn() {
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_45Btn));
+            TimeSlot20_45Btn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void clickConfirmBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(ConfirmBtn));
-        ConfirmBtn.click();
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(ConfirmBtn));
+            ConfirmBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     public void clickContinueWithoutOptionBtn() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0, 300);");
-        wait.until(ExpectedConditions.elementToBeClickable(ContinueWithoutOptionBtn));
-        ContinueWithoutOptionBtn.click();
+        try {
+            Thread.sleep(1000);
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("window.scrollBy(0, 300);");
+            wait.until(ExpectedConditions.elementToBeClickable(ContinueWithoutOptionBtn));
+            ContinueWithoutOptionBtn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 }

@@ -13,8 +13,8 @@ import java.util.Map;
 
 public class LTConfigCucumber {
     // LambdaTest Credentials
-    public static final String LT_USERNAME_CUCUMBER = "LambdaTest02outlook";
-    public static final String LT_ACCESSKEY_CUCUMBER = "LT_OeKIsPcFeDNbCXdCF8F61YHX4U4JIW0qFsvvCM4804D4Cuz";
+    public static final String LT_USERNAME_CUCUMBER = "chakerlt1";
+    public static final String LT_ACCESSKEY_CUCUMBER = "LT_CbXl7y5tdDqGXPrCFWXXcWBzIuJVPrjEeVvZvOmdFTGBs69";
 
     // declare the LambdaTest Grid URL
     public static final String LT_GRID_URL = "https://" + LT_USERNAME_CUCUMBER + ":" + LT_ACCESSKEY_CUCUMBER + "@hub.lambdatest.com/wd/hub";
