@@ -14,17 +14,17 @@ import java.io.File;
 import java.io.IOException;
 
 import static configuration.LTConfig.getLTDriver;
+import static tests.LTTestStatus.markTestStatusViaJS;
 
 public class BaseTest {
     // define web driver
-    protected WebDriver driver = null;
+    protected WebDriver driver = getLTDriver();
     // define log from apache
     Log log = LogFactory.getLog(BaseTest.class);
 
     @BeforeMethod
     public void setUp() {
         log.info("Starting WebDriver...");
-        driver = getLTDriver();
         driver.manage().window().maximize();
         log.info("Navigating to URL...");
         driver.navigate().to("https://demotenant.playpro.fr/connexion");
@@ -37,6 +37,8 @@ public class BaseTest {
             File targetFile = new File("C:\\Users\\chaker\\Desktop\\automation\\Mobile-Web-Testing\\MobileWebTesting\\src\\test\\java\\tests\\Screenshots\\failure\\" + result.getMethod().getMethodName() + ".png");
             FileUtils.copyFile(srcFile, targetFile);
         }
+
+        markTestStatusViaJS(driver, result.getStatus() == ITestResult.SUCCESS, "Test " + result.getMethod().getMethodName() + " " + (result.getStatus() == ITestResult.SUCCESS ? "passed" : "failed"));
 
         if (driver != null) {
             log.info("Closing WebDriver...");

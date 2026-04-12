@@ -15,8 +15,8 @@ import java.util.HashMap;
 
 public class LTConfig {
     // declare username and access key of lambdatest cloud account
-    public static final String Username = "LambdaTest02outlook";
-    public static final String AccessKey = "LT_OeKIsPcFeDNbCXdCF8F61YHX4U4JIW0qFsvvCM4804D4Cuz";
+    public static final String Username = "chakerlt1";
+    public static final String AccessKey = "LT_CbXl7y5tdDqGXPrCFWXXcWBzIuJVPrjEeVvZvOmdFTGBs69";
     // declare URL of lambdatest selenium grid
     public static final String gridURL = "https://" + Username + ":" + AccessKey + "@hub.lambdatest.com/wd/hub";
 

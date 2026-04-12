@@ -17,6 +17,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.File;
 import java.io.IOException;
 
+import static tests.LTTestStatus.markTestStatusViaJS;
+
 
 public class Hooks extends LTConfigCucumber {
     private static final Log log = LogFactory.getLog(Hooks.class);
@@ -40,6 +42,8 @@ public class Hooks extends LTConfigCucumber {
             File targetFile = new File("C:\\Users\\chaker\\Desktop\\automation\\Mobile-Web-Testing\\MobileWebTesting\\src\\test\\java\\BDD\\Screenshots\\failure\\" + scenario.getName() + ".png");
             FileUtils.copyFile(srcFile, targetFile);
         }
+        // declare a method to set the test status in LambdaTest via JS
+        markTestStatusViaJS(driver, scenario.getStatus() == Status.PASSED, "Scenario " + scenario.getName() + " " + (scenario.getStatus() == Status.PASSED ? "passed" : "failed"));
         if (driver != null) {
             log.info("\n 🚀 Closing WebDriver For Cucumber BDD...");
             driver.quit();

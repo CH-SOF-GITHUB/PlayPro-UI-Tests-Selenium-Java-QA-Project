@@ -73,11 +73,24 @@ public class WebEXP1Page {
     /**
      *  STEP 3 Time Slot Selection buttons
      */
+    // java
+    @FindBy(xpath = "(//*[name()='svg'])[8]")
+    private WebElement IncrementCalendarBtn;
+
+    @FindBy(xpath = "(//p[contains(@class,'cursor-pointer text-center font-poppins lg:text-base leading-4 tracking-[0%] font-normal text-sm outline-none rounded-lg text-black')])[1]")
+    private WebElement Day_14_04_2026_Btn;
+
+    @FindBy(css = "div[class='grid-cols-[repeat(auto-fit,minmax(80px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(80px,80px))] lg:gap-2 grid gap-y-3 justify-center gap-x-1'] div:nth-child(1) button:nth-child(1)")
+    private WebElement TimeSlot20_45_5_Btn;
+
     @FindBy(xpath = "(//button[@type='button'])[6]")
-    private WebElement TimeSlot20_45Btn;
+    private WebElement TimeSlot20_45_6_Btn;
 
     @FindBy(xpath = "(//button[@type='button'])[5]")
-    private WebElement TimeSlot20_00Btn;
+    private WebElement TimeSlot20_00_5_Btn;
+
+    @FindBy(css = "div[class='grid-cols-[repeat(auto-fit,minmax(80px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(80px,80px))] lg:gap-2 grid gap-y-3 justify-center gap-x-1'] div:nth-child(1) button:nth-child(1)")
+    private WebElement TimeSlot20_00_4_Btn;
 
     @FindBy(xpath = "(//button[@class='opacity-100 w-full lg:w-1/3 h-[60px] rounded-md px-[15px] py-[7px] gap-[10px] opacity-100 font-poppins font-medium text-[15px] leading-[21px] tracking-[0px] text-center bg-primary text-accent'])[1]")
     private WebElement ConfirmBtn;
@@ -110,7 +123,7 @@ public class WebEXP1Page {
     /**
      *  Methods of POM class: STEP 1 Reservation Selection buttons
      */
-    public void clickSelectParticipantsBtn() {
+    public void clickSelectParticipantsBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(SelectParticipantsBtn));
@@ -120,7 +133,7 @@ public class WebEXP1Page {
         }
     }
 
-    public void clickOption4ParticipantsBtn() {
+    public void clickOption4ParticipantsBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(Option_4ParticipantsBtn));
@@ -130,7 +143,7 @@ public class WebEXP1Page {
         }
     }
 
-    public void clickOption5ParticipantsBtn() {
+    public void clickOption5ParticipantsBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(Option_5ParticipantsBtn));
@@ -140,7 +153,7 @@ public class WebEXP1Page {
         }
     }
 
-    public void clickOption6ParticipantsBtn() {
+    public void clickOption6ParticipantsBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(Option_6ParticipantsBtn));
@@ -150,7 +163,7 @@ public class WebEXP1Page {
         }
     }
 
-    public void clickOption7ParticipantsBtn() {
+    public void clickOption7ParticipantsBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(Option_7ParticipantsBtn));
@@ -160,7 +173,7 @@ public class WebEXP1Page {
         }
     }
 
-    public void clickOption8ParticipantsBtn() {
+    public void clickOption8ParticipantsBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(Option_8ParticipantsBtn));
@@ -170,7 +183,7 @@ public class WebEXP1Page {
         }
     }
 
-    public void clickOption9ParticipantsBtn() {
+    public void clickOption9ParticipantsBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(Option_9ParticipantsBtn));
@@ -180,7 +193,7 @@ public class WebEXP1Page {
         }
     }
 
-    public void clickOption10ParticipantsBtn() {
+    public void clickOption10ParticipantsBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(Option_10ParticipantsBtn));
@@ -194,7 +207,7 @@ public class WebEXP1Page {
      *  Methods of POM class: STEP 2: Duration/Price buttons
      */
 
-    public void clickSelectDurationPriceBtn() {
+    public void clickSelectDurationPriceBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(SelectDurationPriceBtn));
@@ -204,7 +217,7 @@ public class WebEXP1Page {
         }
     }
 
-    public void clickOption45MinBtn() {
+    public void clickOption45MinBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(Option_45MinBtn));
@@ -214,7 +227,7 @@ public class WebEXP1Page {
         }
     }
 
-    public void clickOption90MinBtn() {
+    public void clickOption90MinBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(Option_90MinBtn));
@@ -224,7 +237,7 @@ public class WebEXP1Page {
         }
     }
 
-    public void clickContinueBtn() {
+    public void clickContinueBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(ContinueBtn));
@@ -235,29 +248,70 @@ public class WebEXP1Page {
     }
 
     /**
-     *  Methods of POM class: STEP 3 Time Slot Selection buttons
+     *  Methods of POM class: STEP 3 Time Slot Selection buttons (20:00 & 20:45) are updated based on availability and scenario executed
      */
-    public void clickTimeSlot20_00Btn() throws InterruptedException {
+    public void clickIncrementCalendarBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
-            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_00Btn));
-            TimeSlot20_00Btn.click();
+            wait.until(ExpectedConditions.elementToBeClickable(IncrementCalendarBtn));
+            IncrementCalendarBtn.click();
         } catch (Exception e) {
             e.fillInStackTrace();
         }
     }
 
-    public void clickTimeSlot20_45Btn() {
+    public String checkDay14_04_2026_Btn() throws InterruptedException {
         try {
             Thread.sleep(1000);
-            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_45Btn));
-            TimeSlot20_45Btn.click();
+            wait.until(ExpectedConditions.visibilityOf(Day_14_04_2026_Btn));
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
+        return Day_14_04_2026_Btn.getText();
+    }
+
+    public void clickTimeSlot20_00_5_Btn() throws InterruptedException {
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_00_5_Btn));
+            TimeSlot20_00_5_Btn.click();
         } catch (Exception e) {
             e.fillInStackTrace();
         }
     }
 
-    public void clickConfirmBtn() {
+    public void clickTimeSlot20_00_4_Btn() throws InterruptedException {
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_00_4_Btn));
+            TimeSlot20_00_4_Btn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
+    }
+
+
+    public void clickTimeSlot20_45_5_Btn() throws InterruptedException {
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_45_5_Btn));
+            TimeSlot20_45_5_Btn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
+    }
+
+    public void clickTimeSlot20_45_6_Btn() throws InterruptedException {
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_45_6_Btn));
+            TimeSlot20_45_6_Btn.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
+    }
+
+    public void clickConfirmBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(ConfirmBtn));
@@ -267,7 +321,7 @@ public class WebEXP1Page {
         }
     }
 
-    public void clickContinueWithoutOptionBtn() {
+    public void clickContinueWithoutOptionBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             JavascriptExecutor js = (JavascriptExecutor) driver;

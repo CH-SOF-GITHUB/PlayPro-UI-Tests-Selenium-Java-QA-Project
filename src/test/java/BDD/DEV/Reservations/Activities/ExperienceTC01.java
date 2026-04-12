@@ -59,7 +59,7 @@ public class ExperienceTC01 {
     }
 
     @Given("I select Nbre of participants {int}")
-    public void i_select_nbre_of_participants(Integer number) {
+    public void i_select_nbre_of_participants(Integer number) throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
         webEXP1Page.clickSelectParticipantsBtn();
         switch (number) {
@@ -90,7 +90,7 @@ public class ExperienceTC01 {
     }
 
     @And("I select duration price by min {int}")
-    public void iSelectDurationPriceByMin(int min) {
+    public void iSelectDurationPriceByMin(int min) throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
         webEXP1Page.clickSelectDurationPriceBtn();
         switch (min) {
@@ -106,7 +106,7 @@ public class ExperienceTC01 {
     }
 
     @Given("I click on Continue Btn")
-    public void i_click_on_continue_btn() {
+    public void i_click_on_continue_btn() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
         webEXP1Page.clickContinueBtn();
     }
@@ -114,18 +114,24 @@ public class ExperienceTC01 {
     @Given("I select time slot {string}")
     public void i_select_time_slot(String time) throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
-        Thread.sleep(7000);
-        if (time.equals("20:45")) {
-            webEXP1Page.clickTimeSlot20_45Btn();
-        } else if (time.equals("20:00")) {
-            webEXP1Page.clickTimeSlot20_00Btn();
+        webEXP1Page.clickIncrementCalendarBtn();
+        String DayOfReservation = webEXP1Page.checkDay14_04_2026_Btn();
+        log.info("The day of reservation is " + DayOfReservation);
+        if (DayOfReservation.equals("mardi 14 avril")) {
+            if (time.equals("20:45")) {
+                webEXP1Page.clickTimeSlot20_45_5_Btn();
+            } else if (time.equals("20:00")) {
+                webEXP1Page.clickTimeSlot20_00_4_Btn();
+            } else {
+                log.info("Invalid time slot: " + time);
+            }
         } else {
-            log.info("Invalid time slot: " + time);
+            log.info("The day of reservation is not correct!");
         }
     }
 
     @Given("I click on Confirm Btn")
-    public void i_click_on_confirm_btn() {
+    public void i_click_on_confirm_btn() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
         webEXP1Page.clickConfirmBtn();
     }
@@ -133,14 +139,13 @@ public class ExperienceTC01 {
     @Given("I click on Continue without option Btn")
     public void i_click_on_continue_without_option_btn() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
-        Thread.sleep(7000);
+        Thread.sleep(3000);
         webEXP1Page.clickContinueWithoutOptionBtn();
     }
 
     @Given("I click on bank card by stripe")
     public void i_click_on_bank_card_by_stripe() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
-        webCartPage.clickBankCardBtn();
         webCartPage.clickVisaCard11_26Btn();
     }
 

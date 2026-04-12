@@ -28,10 +28,10 @@ public class WebCartPage {
     /**
      *  Card & Payment Buttons
      */
-    @FindBy(xpath = "(//span[@class='md:w-5 w-4 md:h-5 h-4 border-2 border-black rounded-full'])[1]")
-    private WebElement BankCardBtn;
+    // @FindBy(xpath = "(//span[@class='md:w-5 w-4 md:h-5 h-4 border-2 border-black rounded-full'])[1]")
+    // private WebElement BankCardBtn;
 
-    @FindBy(xpath = "(//span[@class='relative rounded-lg w-[17px] h-[17px] border-2 bg-white'])[1]")
+    @FindBy(xpath = "(//span[@class='md:w-5 w-4 md:h-5 h-4 border-2 border-black rounded-full'])[1]")
     private WebElement VisaCard11_26Btn;
 
     @FindBy(xpath = "(//button[normalize-space()='Payer maintenant'])[1]")
@@ -42,6 +42,7 @@ public class WebCartPage {
 
     /** Methods of POM class: Card & Payment Buttons
      */
+    /*
     public void clickBankCardBtn() throws InterruptedException {
         try {
             // wait for 7s
@@ -54,8 +55,7 @@ public class WebCartPage {
         } catch (Exception e) {
             e.fillInStackTrace();
         }
-    }
-
+    }*/
     public void clickVisaCard11_26Btn() {
         try {
             Thread.sleep(1000);
@@ -79,7 +79,7 @@ public class WebCartPage {
             PayNowBtn.click();
         } catch (Exception e) {
             e.fillInStackTrace();
-            }
+        }
     }
 
     public String GetOrderConfirmationMessage() {
