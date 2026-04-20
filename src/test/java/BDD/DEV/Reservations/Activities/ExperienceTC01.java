@@ -3,8 +3,6 @@ package BDD.DEV.Reservations.Activities;
 
 import PageObject.Activites.WebEXP1Page;
 import PageObject.WebCartPage;
-import PageObject.WebCookiesPage;
-import PageObject.WebLoginPage;
 import PageObject.WebReservationPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -19,37 +17,11 @@ import static BDD.Hooks.driver;
 public class ExperienceTC01 {
     private static final Log log = LogFactory.getLog(ExperienceTC01.class);
     // define the objects pages
-    WebLoginPage webLoginPage = new WebLoginPage(driver);
-    WebCookiesPage webCookiesPage = new WebCookiesPage(driver);
     WebEXP1Page webEXP1Page = new WebEXP1Page(driver);
     WebReservationPage webReservationPage = new WebReservationPage(driver);
     WebCartPage webCartPage = new WebCartPage(driver);
 
     // define the steps of the scenario
-    @Given("I navigate to login page")
-    public void i_navigate_to_login_page() {
-        // Write code here that turns the phrase above into concrete actions
-        webCookiesPage.clickAcceptCookiesButton();
-    }
-
-    @Given("I enter email {string}")
-    public void i_enter_email(String Email) {
-        // Write code here that turns the phrase above into concrete actions
-        webLoginPage.EnterEmail(Email);
-    }
-
-    @Given("I enter pwd {string}")
-    public void i_enter_pwd(String Pwd) {
-        // Write code here that turns the phrase above into concrete actions
-        webLoginPage.EnterPassword(Pwd);
-    }
-
-    @When("I click Login Button")
-    public void i_click_login_button() {
-        // Write code here that turns the phrase above into concrete actions
-        webLoginPage.ClickLoginButton();
-    }
-
     @Given("I click on Experience Card")
     public void i_click_on_experience_card() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions

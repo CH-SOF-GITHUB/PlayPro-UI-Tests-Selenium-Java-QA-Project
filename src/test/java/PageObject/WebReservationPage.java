@@ -22,7 +22,7 @@ public class WebReservationPage {
     }
 
     /* web elements of POM class */
-    @FindBy(xpath = "/html/body/header/div/div[1]/ul/a[5]")
+    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' rounded-md ') and contains(concat(' ', normalize-space(@class), ' '), ' font-poppins ')]")
     private WebElement RéservationsLink;
 
     @FindBy(xpath = "/html/body/div[1]/main/section[1]/div[2]/div[2]/div/a[1]")
@@ -37,6 +37,7 @@ public class WebReservationPage {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.visibilityOf(RéservationsLink));
             RéservationsLink.click();
+            System.out.println("Réservations link clicked in navbar");
         } catch (Exception e) {
             e.fillInStackTrace();
         }

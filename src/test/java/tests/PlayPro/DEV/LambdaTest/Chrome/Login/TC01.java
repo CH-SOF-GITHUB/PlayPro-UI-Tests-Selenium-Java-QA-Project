@@ -22,7 +22,7 @@ public class TC01 extends BaseTest {
             String ActualURL = driver.getCurrentUrl();
             String ActualTitle = driver.getTitle();
             Assert.assertEquals(ActualURL, "https://demotenant.playpro.fr/");
-            Assert.assertEquals(ActualTitle, "playprosite");
+            Assert.assertEquals(ActualTitle, "DEMO TENANT");
         } catch (Exception e) {
             e.printStackTrace();
         }
