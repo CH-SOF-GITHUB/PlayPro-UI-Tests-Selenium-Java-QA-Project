@@ -45,75 +45,49 @@ public class WebGiftVoucherPage {
     @FindBy(xpath = "(//button[normalize-space()='Suivant'])[1]")
     private WebElement NextBtn;
 
-    @FindBy(xpath = "(//span[@class='md:w-5 w-4 md:h-5 h-4 border-2 border-black rounded-full'])[1]")
-    private WebElement BankCardBtn;
-
-    @FindBy(xpath = "(//span[@class='relative rounded-lg w-[17px] h-[17px] border-2 bg-white'])[1]")
-    private WebElement VisaCard11_26Btn;
-
-    @FindBy(xpath = "(//button[normalize-space()='Payer maintenant'])[1]")
-    private WebElement PayNowBtn;
-
-    @FindBy(xpath = "(//p[@class='font-poppins font-semibold text-black lg:text-xl text-sm py-4 text-center leading-4'])[1]")
-    private WebElement OrderConfirmationMessage;
-
     /* methods of POM class */
     public void clickAddGiftVoucherBtn() {
         wait.until(ExpectedConditions.elementToBeClickable(AddGiftVoucherBtn));
         AddGiftVoucherBtn.click();
+        System.out.println("Clicked on Btn Offer a gift voucher in home page");
     }
 
     /* Begin Methods Of Gift Vouchers */
     public void clickGift250Btn() {
         wait.until(ExpectedConditions.elementToBeClickable(Gift250Btn));
         Gift250Btn.click();
+        System.out.println("Clicked on Gift Voucher Price 250");
     }
 
     public void clickGift200Btn() {
         wait.until(ExpectedConditions.elementToBeClickable(Gift200Btn));
         Gift200Btn.click();
+        System.out.println("Clicked on Gift Voucher Price 200");
     }
 
     public void clickGift100Btn() {
         wait.until(ExpectedConditions.elementToBeClickable(Gift100Btn));
         Gift100Btn.click();
+        System.out.println("Clicked on Gift Voucher Price 100");
     }
 
     public void clickGift50Btn() {
         wait.until(ExpectedConditions.elementToBeClickable(Gift50Btn));
         Gift50Btn.click();
+        System.out.println("Clicked on Gift Voucher Price 50");
     }
 
     public void clickGift25Btn() {
         wait.until(ExpectedConditions.elementToBeClickable(Gift25Btn));
         Gift25Btn.click();
+        System.out.println("Clicked on Gift Voucher Price 25");
     }
 
     /* End Methods Of Gift Vouchers */
     public void clickNextBtn() {
         wait.until(ExpectedConditions.elementToBeClickable(NextBtn));
         NextBtn.click();
+        System.out.println("Clicked on Next Btn in Gift Voucher page");
     }
 
-    public void clickBankCardBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(BankCardBtn));
-        BankCardBtn.click();
-    }
-
-    public void clickVisaCard11_26Btn() {
-        wait.until(ExpectedConditions.elementToBeClickable(VisaCard11_26Btn));
-        VisaCard11_26Btn.click();
-    }
-
-    public void clickPayNowBtn() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,100)");
-        wait.until(ExpectedConditions.elementToBeClickable(PayNowBtn));
-        PayNowBtn.click();
-    }
-
-    public String GetOrderConfirmationMessage() {
-        wait.until(ExpectedConditions.visibilityOf(OrderConfirmationMessage));
-        return OrderConfirmationMessage.getText();
-    }
 }

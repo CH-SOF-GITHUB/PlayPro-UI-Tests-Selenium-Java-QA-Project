@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 */
 
 @CucumberOptions(
-        features = "src/test/resources/features/FrontSite/GoToSubsReserPage.feature",
+        features = "src/test/resources/features/FrontSite/SampleBuyGiftVoucher.feature",
         glue = {"BDD"},
         tags = "@dev",    // Profiles > Run/Debug Configurations > Cucumber Options > Tags
         plugin = {"pretty", "html:target/cucumber-reports.html", "json:target/cucumber-reports.json"}

@@ -31,7 +31,7 @@ public class WebCartPage {
     // @FindBy(xpath = "(//span[@class='md:w-5 w-4 md:h-5 h-4 border-2 border-black rounded-full'])[1]")
     // private WebElement BankCardBtn;
 
-    @FindBy(xpath = "(//span[@class='md:w-5 w-4 md:h-5 h-4 border-2 border-black rounded-full'])[1]")
+    @FindBy(xpath = "//*[(name() = 'div') and (position() = 1)]/*[@class and contains(concat(' ', normalize-space(@class), ' '), ' undefined ') and contains(concat(' ', normalize-space(@class), ' '), ' rounded-lg ')]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' rounded-full ')]")
     private WebElement VisaCard11_26Btn;
 
     @FindBy(xpath = "(//button[normalize-space()='Payer maintenant'])[1]")
@@ -42,25 +42,12 @@ public class WebCartPage {
 
     /** Methods of POM class: Card & Payment Buttons
      */
-    /*
-    public void clickBankCardBtn() throws InterruptedException {
-        try {
-            // wait for 7s
-            Thread.sleep(7000);
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            // Scroll down to the experience card
-            js.executeScript("window.scrollBy(0, 300);");
-            wait.until(ExpectedConditions.elementToBeClickable(BankCardBtn));
-            BankCardBtn.click();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
-    }*/
     public void clickVisaCard11_26Btn() {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(VisaCard11_26Btn));
             VisaCard11_26Btn.click();
+            System.out.println("Visa Card 11 26 button clicked");
         } catch (Exception e) {
             e.fillInStackTrace();
         }
@@ -77,6 +64,7 @@ public class WebCartPage {
             }
             wait.until(ExpectedConditions.elementToBeClickable(PayNowBtn));
             PayNowBtn.click();
+            System.out.println("Pay Now button clicked");
         } catch (Exception e) {
             e.fillInStackTrace();
         }
@@ -92,4 +80,5 @@ public class WebCartPage {
             return null;
         }
     }
+
 }
