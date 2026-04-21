@@ -27,15 +27,15 @@ public class WebEXP1Page {
     /**
      *  Experience Card Path
      */
-    @FindBy(xpath = "(//h3[normalize-space()='Vr Party Test'])[1]")
+    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' shadow-md ') and (@role = 'button') and (position() = 1)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' shadow-lg ')]")
     private WebElement Vr_Party_Test;
     /**
      *  STEP 1 Reservation Selection buttons
      */
-    @FindBy(xpath = "(//button[@id='menu-button'])[1]")
+    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' w-full ') and (name() = 'div') and (position() = 1)]/*[@class and contains(concat(' ', normalize-space(@class), ' '), ' justify-bewteen ')]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' font-poppins ') and contains(concat(' ', normalize-space(@class), ' '), ' text-sm ') and contains(concat(' ', normalize-space(@class), ' '), ' font-normal ') and contains(concat(' ', normalize-space(@class), ' '), ' text-left ')]")
     private WebElement SelectParticipantsBtn;
 
-    @FindBy(xpath = "(//button[normalize-space()='4 personnes'])[1]")
+    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' rounded-xl ') and contains(concat(' ', normalize-space(@class), ' '), ' border-[var(--neutral-gray)] ') and contains(concat(' ', normalize-space(@class), ' '), ' bg-[#FCFBF] ') and contains(concat(' ', normalize-space(@class), ' '), ' [&::-webkit-scrollbar]:rounded-xl ') and contains(concat(' ', normalize-space(@class), ' '), ' [&::-webkit-scrollbar-thumb]:rounded-xl ') and contains(concat(' ', normalize-space(@class), ' '), ' [&::-webkit-scrollbar-thumb]:bg-primary ') and contains(concat(' ', normalize-space(@class), ' '), ' block ')]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' bg-white ') and (name() = 'div') and (position() = 1)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' cursor-pointer ')]")
     private WebElement Option_4ParticipantsBtn;
 
     @FindBy(xpath = "(//button[normalize-space()='5 personnes'])[1]")
@@ -58,7 +58,7 @@ public class WebEXP1Page {
     /**
      * STEP 2: Duration/Price buttons
      */
-    @FindBy(xpath = "(//button[@id='menu-button'])[2]")
+    @FindBy(xpath = "//div[@class and contains(concat(' ', normalize-space(@class), ' '), ' relative ') and contains(concat(' ', normalize-space(@class), ' '), ' w-full ')]/*[@class and contains(concat(' ', normalize-space(@class), ' '), ' justify-bewteen ')]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' font-poppins ') and contains(concat(' ', normalize-space(@class), ' '), ' text-sm ') and contains(concat(' ', normalize-space(@class), ' '), ' font-normal ') and contains(concat(' ', normalize-space(@class), ' '), ' text-left ')]")
     private WebElement SelectDurationPriceBtn;
 
     @FindBy(xpath = "(//button[contains(text(),'45 min')])[1]")
@@ -67,7 +67,7 @@ public class WebEXP1Page {
     @FindBy(xpath = "(//button[normalize-space()='90 min'])[1]")
     private WebElement Option_90MinBtn;
 
-    @FindBy(xpath = "(//button[@class='w-full lg:w-1/3 h-[60px] rounded-md px-[15px] lg:text-lg lg:px-0 lg:py-1 py-[7px] gap-[10px] opacity-100 bg-primary text-accent'])[1]")
+    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' rounded-md ')]")
     private WebElement ContinueBtn;
 
     /**
@@ -77,22 +77,17 @@ public class WebEXP1Page {
     @FindBy(xpath = "(//*[name()='svg'])[8]")
     private WebElement IncrementCalendarBtn;
 
-    @FindBy(xpath = "(//p[contains(@class,'cursor-pointer text-center font-poppins lg:text-base leading-4 tracking-[0%] font-normal text-sm outline-none rounded-lg text-black')])[1]")
-    private WebElement Day_14_04_2026_Btn;
+    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' rounded-lg ')]")
+    private WebElement Day__Btn;
 
     @FindBy(css = "div[class='grid-cols-[repeat(auto-fit,minmax(80px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(80px,80px))] lg:gap-2 grid gap-y-3 justify-center gap-x-1'] div:nth-child(1) button:nth-child(1)")
-    private WebElement TimeSlot20_45_5_Btn;
+    private WebElement TimeSlot20_45_Btn;
 
-    @FindBy(xpath = "(//button[@type='button'])[6]")
-    private WebElement TimeSlot20_45_6_Btn;
 
-    @FindBy(xpath = "(//button[@type='button'])[5]")
-    private WebElement TimeSlot20_00_5_Btn;
+    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' relative ') and (name() = 'div') and (position() = 1)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' text-black ') and (@type = 'button')]")
+    private WebElement TimeSlot20_00_Btn;
 
-    @FindBy(css = "div[class='grid-cols-[repeat(auto-fit,minmax(80px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(80px,80px))] lg:gap-2 grid gap-y-3 justify-center gap-x-1'] div:nth-child(1) button:nth-child(1)")
-    private WebElement TimeSlot20_00_4_Btn;
-
-    @FindBy(xpath = "(//button[@class='opacity-100 w-full lg:w-1/3 h-[60px] rounded-md px-[15px] py-[7px] gap-[10px] opacity-100 font-poppins font-medium text-[15px] leading-[21px] tracking-[0px] text-center bg-primary text-accent'])[1]")
+    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' rounded-md ') and contains(concat(' ', normalize-space(@class), ' '), ' bg-secondary ')]")
     private WebElement ConfirmBtn;
 
     @FindBy(xpath = "(//button[normalize-space()='Continuer sans option'])[1]")
@@ -107,12 +102,12 @@ public class WebEXP1Page {
             // wait for 3s
             Thread.sleep(3000);
             // scroll down to the experience card
-            JavascriptExecutor js = (JavascriptExecutor) driver;
+            // JavascriptExecutor js = (JavascriptExecutor) driver;
             // Scroll down to the experience card
-            for (int i = 0; i < 3; i++) {
-                js.executeScript("window.scrollBy(0, 300);");
-                Thread.sleep(1000);
-            }
+            // for (int i = 0; i < 3; i++) {
+            //    js.executeScript("window.scrollBy(0, 300);");
+            //    Thread.sleep(1000);
+            //}
             wait.until(ExpectedConditions.elementToBeClickable(Vr_Party_Test));
             Vr_Party_Test.click();
         } catch (Exception e) {
@@ -250,7 +245,7 @@ public class WebEXP1Page {
     /**
      *  Methods of POM class: STEP 3 Time Slot Selection buttons (20:00 & 20:45) are updated based on availability and scenario executed
      */
-    public void clickIncrementCalendarBtn() throws InterruptedException {
+    /* public void clickIncrementCalendarBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.elementToBeClickable(IncrementCalendarBtn));
@@ -258,54 +253,33 @@ public class WebEXP1Page {
         } catch (Exception e) {
             e.fillInStackTrace();
         }
-    }
+    } */
 
-    public String checkDay14_04_2026_Btn() throws InterruptedException {
+    public String checkDayOfReservation() throws InterruptedException {
         try {
             Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(Day_14_04_2026_Btn));
+            wait.until(ExpectedConditions.visibilityOf(Day__Btn));
         } catch (Exception e) {
             e.fillInStackTrace();
         }
-        return Day_14_04_2026_Btn.getText();
-    }
-
-    public void clickTimeSlot20_00_5_Btn() throws InterruptedException {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_00_5_Btn));
-            TimeSlot20_00_5_Btn.click();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+        return Day__Btn.getText();
     }
 
     public void clickTimeSlot20_00_4_Btn() throws InterruptedException {
         try {
             Thread.sleep(1000);
-            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_00_4_Btn));
-            TimeSlot20_00_4_Btn.click();
+            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_00_Btn));
+            TimeSlot20_00_Btn.click();
         } catch (Exception e) {
             e.fillInStackTrace();
         }
     }
-
 
     public void clickTimeSlot20_45_5_Btn() throws InterruptedException {
         try {
             Thread.sleep(1000);
-            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_45_5_Btn));
-            TimeSlot20_45_5_Btn.click();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
-    }
-
-    public void clickTimeSlot20_45_6_Btn() throws InterruptedException {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_45_6_Btn));
-            TimeSlot20_45_6_Btn.click();
+            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_45_Btn));
+            TimeSlot20_45_Btn.click();
         } catch (Exception e) {
             e.fillInStackTrace();
         }

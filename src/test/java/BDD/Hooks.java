@@ -23,12 +23,13 @@ import static tests.LTTestStatus.markTestStatusViaJS;
 public class Hooks extends LTConfigCucumber {
     private static final Log log = LogFactory.getLog(Hooks.class);
     // initialize the web driver
-    public static WebDriver driver = getCucumberDriver();
+    public static WebDriver driver = null;
     //public static WebDriver driver = new ChromeDriver();
 
     @Before
     public void setUp() {
         log.info("🚀 Starting WebDriver For Cucumber BDD...");
+        driver = getCucumberDriver();
         driver.manage().window().maximize();
         log.info("Navigating to URL...");
         driver.navigate().to("https://demotenant.playpro.fr/connexion");

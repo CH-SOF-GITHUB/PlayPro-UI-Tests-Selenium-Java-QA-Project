@@ -24,9 +24,8 @@ public class WebCookiesPage {
     }
 
     /* web elements of POM class */
-    @FindBy(xpath = "//button[@data-testid=\"cookie-banner-accept-button\"]")
+    @FindBy(xpath = "//*[@data-testid = 'cookie-banner-footer-sub-group']//*[@data-testid = 'cookie-banner-accept-button']")
     private WebElement AcceptCookiesButton;
-    // xpath = "//div[@class='c15t-footerSubGroup-HbTp3']//button[@class='c15t-button-YKOgW c15t-button-small-n5LJg c15t-button-primary-stroke-TWzjH'][normalize-space()='Accepter']"
 
     /* methods of POM class */
     public void clickAcceptCookiesButton() {

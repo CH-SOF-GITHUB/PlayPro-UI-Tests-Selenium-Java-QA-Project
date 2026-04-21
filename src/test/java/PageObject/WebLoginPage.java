@@ -27,24 +27,25 @@ public class WebLoginPage {
         PageFactory.initElements(driver, this);
     }
 
-    /* web elements of POM class */
-    @FindBy(xpath = "//input[@placeholder='Adresse email']")
+    /* first web elements of POM class */
+    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' rounded-xl ')]")
     private WebElement EmailInput;
 
-    @FindBy(xpath = "//input[@placeholder='Mot de passe']")
+    @FindBy(xpath = "//*[@placeholder = 'Mot de passe']")
     private WebElement PasswordInput;
 
-    @FindBy(xpath = "//button[normalize-space()='Me connecter']")
+    @FindBy(xpath = "//*[@type = 'submit']")
     private WebElement LoginButton;
 
+    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' relative ') and contains(concat(' ', normalize-space(@class), ' '), ' w-full ') and (name() = 'div') and (position() = 2)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' undefined ')]")
+    private WebElement ShowPasswordButton;
+
+    /* next web elements of POM class */
     @FindBy(xpath = "//button[normalize-space()='Mot de passe oublié ?']")
     private WebElement ForgotPasswordButton;
 
     @FindBy(xpath = "//button[@class='underline text-sky-400']")
     private WebElement SignUpButton;
-
-    @FindBy(xpath = "//button[@class='absolute right-4 top-1/2 -translate-y-1/2']")
-    private WebElement ShowPasswordButton;
 
     // errors messages
     @FindBy(xpath = "(//span[@class='text-xs leading-[0.625rem] font-normal text-[#DA1414]'])[1]")
