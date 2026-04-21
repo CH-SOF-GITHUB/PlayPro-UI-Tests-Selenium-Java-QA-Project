@@ -22,11 +22,20 @@ public class ExperienceTC01 {
     WebCartPage webCartPage = new WebCartPage(driver);
 
     // define the steps of the scenario
+    @Given("I click on reservations link on navbar")
+    public void iClickOnReservationsLinkOnNavbar() {
+        try {
+            // Write code here that turns the phrase above into concrete actions
+            webReservationPage.clickRéservationsLinkEnNavBar();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
+    }
+
     @Given("I click on Experience Card")
     public void i_click_on_experience_card() throws InterruptedException {
         try {
-            // Write code here that turns the phrase above into concrete actions
-            webReservationPage.clickRéserverLink();
+            // Write code here that turns the phrase above into concrete action
             webEXP1Page.clickVrPartyTestCard();
         } catch (Exception e) {
             e.fillInStackTrace();

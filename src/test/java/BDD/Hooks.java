@@ -23,8 +23,8 @@ import static tests.LTTestStatus.markTestStatusViaJS;
 public class Hooks extends LTConfigCucumber {
     private static final Log log = LogFactory.getLog(Hooks.class);
     // initialize the web driver
+    // public static WebDriver driver = null;
     public static WebDriver driver = null;
-    //public static WebDriver driver = new ChromeDriver();
 
     @Before
     public void setUp() {

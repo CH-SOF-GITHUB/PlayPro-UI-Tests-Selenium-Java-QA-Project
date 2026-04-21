@@ -8,7 +8,8 @@ Feature:  PlayPro Fo - Reservation Experience/Activites
 
   @dev
   Scenario:  Reservation Experience Named: "Vr Party Test"
-    Given I click on Experience Card
+    Given I click on reservations link on navbar
+    When I click on Experience Card
     And I select Nbre of participants 4
     And I select duration price by min 45
     And I click on Continue Btn
