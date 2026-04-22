@@ -15,9 +15,10 @@ public class SubscriptionTC01 {
     WebSubscriptionsPage webSubscriptionsPage = new WebSubscriptionsPage(driver);
 
     @Given("I click on Offre menu button")
-    public void i_click_on_offre_menu_button() {
+    public void i_click_on_offre_menu_button() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(1000);
             webReservationPage.ClickOffreMenuNavbar();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -26,9 +27,10 @@ public class SubscriptionTC01 {
     }
 
     @When("I click on the Abonnements link")
-    public void iClickOnTheAbonnementsLink() {
+    public void iClickOnTheAbonnementsLink() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(1000);
             webSubscriptionsPage.clickSeriesLink();
         } catch (Exception e) {
             e.fillInStackTrace();
