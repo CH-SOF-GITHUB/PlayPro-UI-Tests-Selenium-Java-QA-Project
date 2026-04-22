@@ -31,11 +31,26 @@ public class WebReservationPage {
     @FindBy(xpath = "(//p[normalize-space()='Nos activités'])[1]")
     private WebElement Nos_Activites_Text;
 
+    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' rounded-md ') and contains(concat(' ', normalize-space(@class), ' '), ' font-poppins ')]")
+    private WebElement Offre_Link;
+
     /* methods of POM class */
+    public void ClickOffreMenuNavbar() {
+        try {
+            Thread.sleep(1000);
+            wait.until(ExpectedConditions.visibilityOf(Offre_Link));
+            wait.until(ExpectedConditions.elementToBeClickable(Offre_Link));
+            Offre_Link.click();
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
+    }
+
     public void clickRéservationsLinkEnNavBar() {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.visibilityOf(RéservationsLink));
+            wait.until(ExpectedConditions.elementToBeClickable(RéservationsLink));
             RéservationsLink.click();
             System.out.println("Réservations link clicked in navbar");
         } catch (Exception e) {
@@ -47,6 +62,7 @@ public class WebReservationPage {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.visibilityOf(RéserverLink));
+            wait.until(ExpectedConditions.elementToBeClickable(RéserverLink));
             RéserverLink.click();
             Thread.sleep(4000);
         } catch (Exception e) {
@@ -58,6 +74,7 @@ public class WebReservationPage {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.visibilityOf(Nos_Activites_Text));
+            wait.until(ExpectedConditions.elementToBeClickable(Nos_Activites_Text));
         } catch (Exception e) {
             e.fillInStackTrace();
         }

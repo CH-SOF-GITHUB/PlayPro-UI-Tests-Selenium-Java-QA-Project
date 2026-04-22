@@ -18,7 +18,7 @@ public class SubscriptionTC01 {
     public void i_click_on_offre_menu_button() {
         try {
             // Write code here that turns the phrase above into concrete actions
-            webReservationPage.clickRéservationsLinkEnNavBar();
+            webReservationPage.ClickOffreMenuNavbar();
         } catch (Exception e) {
             e.fillInStackTrace();
             throw e;
