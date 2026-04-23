@@ -74,18 +74,21 @@ public class WebEXP1Page {
      *  STEP 3 Time Slot Selection buttons
      */
     // java
-    @FindBy(xpath = "(//*[name()='svg'])[8]")
+    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' border ') and (position() = 4)]")
     private WebElement IncrementCalendarBtn;
 
     @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' rounded-lg ')]")
     private WebElement Day__Btn;
 
-    @FindBy(css = "div[class='grid-cols-[repeat(auto-fit,minmax(80px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(80px,80px))] lg:gap-2 grid gap-y-3 justify-center gap-x-1'] div:nth-child(1) button:nth-child(1)")
+    @FindBy(xpath = "(//button[@type='button'])[3]")
     private WebElement TimeSlot20_45_Btn;
 
-    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' relative ') and (name() = 'div') and (position() = 1)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' text-black ') and (@type = 'button')]")
+    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' relative ') and (name() = 'div') and (position() = 1)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' text-black ') and (@type = 'button')]//div[@class and contains(concat(' ', normalize-space(@class), ' '), ' justify-center ') and contains(concat(' ', normalize-space(@class), ' '), ' w-full ') and contains(concat(' ', normalize-space(@class), ' '), ' items-center ') and contains(concat(' ', normalize-space(@class), ' '), ' flex ')]")
     private WebElement TimeSlot20_00_Btn;
 
+
+    /*        */
+    /*    -------    */
     @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' rounded-md ') and contains(concat(' ', normalize-space(@class), ' '), ' bg-secondary ')]")
     private WebElement ConfirmBtn;
 
@@ -256,15 +259,17 @@ public class WebEXP1Page {
     /**
      *  Methods of POM class: STEP 3 Time Slot Selection buttons (20:00 & 20:45) are updated based on availability and scenario executed
      */
-    /* public void clickIncrementCalendarBtn() throws InterruptedException {
+    public void clickIncrementCalendarBtn() throws InterruptedException {
         try {
             Thread.sleep(1000);
+            wait.until(ExpectedConditions.visibilityOf(IncrementCalendarBtn));
             wait.until(ExpectedConditions.elementToBeClickable(IncrementCalendarBtn));
             IncrementCalendarBtn.click();
         } catch (Exception e) {
             e.fillInStackTrace();
         }
-    } */
+    }
+
     public String checkDayOfReservation() throws InterruptedException {
         try {
             Thread.sleep(1000);
@@ -278,6 +283,8 @@ public class WebEXP1Page {
     public void clickTimeSlot20_00_4_Btn() throws InterruptedException {
         try {
             Thread.sleep(1000);
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("window.scrollBy(0, 100);");
             wait.until(ExpectedConditions.visibilityOf(TimeSlot20_00_Btn));
             wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_00_Btn));
             TimeSlot20_00_Btn.click();

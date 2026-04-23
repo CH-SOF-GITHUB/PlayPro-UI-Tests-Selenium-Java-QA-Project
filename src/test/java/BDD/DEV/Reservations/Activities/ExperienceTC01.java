@@ -10,6 +10,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 
 import static BDD.Hooks.driver;
@@ -23,12 +24,14 @@ public class ExperienceTC01 {
 
     // define the steps of the scenario
     @Given("I click on reservations link on navbar")
-    public void iClickOnReservationsLinkOnNavbar() {
+    public void iClickOnReservationsLinkOnNavbar() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(1000);
             webReservationPage.clickRéservationsLinkEnNavBar();
         } catch (Exception e) {
             e.fillInStackTrace();
+            throw e;
         }
     }
 
@@ -36,6 +39,9 @@ public class ExperienceTC01 {
     public void i_click_on_experience_card() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete action
+            Thread.sleep(3000);
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("window.scrollBy(0,150)");
             webEXP1Page.clickVrPartyTestCard();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -47,27 +53,35 @@ public class ExperienceTC01 {
     public void i_select_nbre_of_participants(Integer number) throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(1000);
             webEXP1Page.clickSelectParticipantsBtn();
             switch (number) {
                 case 4:
+                    Thread.sleep(1000);
                     webEXP1Page.clickOption4ParticipantsBtn();
                     break;
                 case 5:
+                    Thread.sleep(1000);
                     webEXP1Page.clickOption5ParticipantsBtn();
                     break;
                 case 6:
+                    Thread.sleep(1000);
                     webEXP1Page.clickOption6ParticipantsBtn();
                     break;
                 case 7:
+                    Thread.sleep(1000);
                     webEXP1Page.clickOption7ParticipantsBtn();
                     break;
                 case 8:
+                    Thread.sleep(1000);
                     webEXP1Page.clickOption8ParticipantsBtn();
                     break;
                 case 9:
+                    Thread.sleep(1000);
                     webEXP1Page.clickOption9ParticipantsBtn();
                     break;
                 case 10:
+                    Thread.sleep(1000);
                     webEXP1Page.clickOption10ParticipantsBtn();
                     break;
                 default:
@@ -83,12 +97,15 @@ public class ExperienceTC01 {
     public void iSelectDurationPriceByMin(int min) throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(1000);
             webEXP1Page.clickSelectDurationPriceBtn();
             switch (min) {
                 case 45:
+                    Thread.sleep(1000);
                     webEXP1Page.clickOption45MinBtn();
                     break;
                 case 90:
+                    Thread.sleep(1000);
                     webEXP1Page.clickOption90MinBtn();
                     break;
                 default:
@@ -104,6 +121,7 @@ public class ExperienceTC01 {
     public void i_click_on_continue_btn() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(1000);
             webEXP1Page.clickContinueBtn();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -115,18 +133,14 @@ public class ExperienceTC01 {
     public void i_select_time_slot(String time) throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(7000);
+            webEXP1Page.clickIncrementCalendarBtn();
             String DayOfReservation = webEXP1Page.checkDayOfReservation();
             log.info("The day of reservation is " + DayOfReservation);
-            if (DayOfReservation.equals("vendredi 24 avril")) {
-                if (time.equals("20:45")) {
-                    webEXP1Page.clickTimeSlot20_45_5_Btn();
-                } else if (time.equals("20:00")) {
-                    webEXP1Page.clickTimeSlot20_00_4_Btn();
-                } else {
-                    log.info("Invalid time slot: " + time);
-                }
+            if (time.equals("20:00")) {
+                webEXP1Page.clickTimeSlot20_00_4_Btn();
             } else {
-                log.info("The day of reservation is not correct!");
+                log.info("Invalid time slot: " + time);
             }
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -138,7 +152,11 @@ public class ExperienceTC01 {
     public void i_click_on_confirm_btn() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(1000);
             webEXP1Page.clickConfirmBtn();
+            Thread.sleep(1000);
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("window.scrollBy(0,300)");
             webEXP1Page.clickContinueBtn();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -162,6 +180,7 @@ public class ExperienceTC01 {
     public void i_click_on_bank_card_by_stripe() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(1000);
             webCartPage.clickVisaCard11_26Btn();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -173,6 +192,7 @@ public class ExperienceTC01 {
     public void i_click_on_payment_now_button() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(1000);
             webCartPage.clickPayNowBtn();
         } catch (Exception e) {
             e.fillInStackTrace();
