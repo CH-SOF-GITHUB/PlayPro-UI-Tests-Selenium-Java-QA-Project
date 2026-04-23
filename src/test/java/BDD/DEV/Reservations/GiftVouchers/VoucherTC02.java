@@ -21,9 +21,10 @@ public class VoucherTC02 {
 
     // define the steps of the scenario
     @Given("Click on Button Offer a gift voucher")
-    public void click_on_button_offer_a_gift_voucher() {
+    public void click_on_button_offer_a_gift_voucher() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(1000);
             webGiftVoucherPage.clickAddGiftVoucherBtn();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -32,22 +33,27 @@ public class VoucherTC02 {
     }
 
     @When("Choose my gift card {int} CHF")
-    public void choose_my_gift_card_chf(int amount) {
+    public void choose_my_gift_card_chf(int amount) throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
             if (amount == 250) {
+                Thread.sleep(1000);
                 webGiftVoucherPage.clickGift250Btn();
                 log.info("Gift card of " + amount + " CHF is selected");
             } else if (amount == 200) {
+                Thread.sleep(1000);
                 webGiftVoucherPage.clickGift200Btn();
                 log.info("Gift card of " + amount + " CHF is selected");
             } else if (amount == 100) {
+                Thread.sleep(1000);
                 webGiftVoucherPage.clickGift100Btn();
                 log.info("Gift card of " + amount + " CHF is selected");
             } else if (amount == 50) {
+                Thread.sleep(1000);
                 webGiftVoucherPage.clickGift50Btn();
                 log.info("Gift card of " + amount + " CHF is selected");
             } else if (amount == 25) {
+                Thread.sleep(1000);
                 webGiftVoucherPage.clickGift25Btn();
                 log.info("Gift card of " + amount + " CHF is selected");
             } else {
@@ -60,9 +66,10 @@ public class VoucherTC02 {
     }
 
     @When("I click on Next Button")
-    public void i_click_on_next_button() {
+    public void i_click_on_next_button() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(1000);
             webGiftVoucherPage.clickNextBtn();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -71,9 +78,10 @@ public class VoucherTC02 {
     }
 
     @When("I click on bank card stripe")
-    public void i_click_on_bank_card_stripe() {
+    public void i_click_on_bank_card_stripe() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(1000);
             webCartPage.clickVisaCard11_26Btn();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -82,9 +90,10 @@ public class VoucherTC02 {
     }
 
     @When("I click on payment button")
-    public void i_click_on_payment_button() {
+    public void i_click_on_payment_button() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(1000);
             webCartPage.clickPayNowBtn();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -95,8 +104,8 @@ public class VoucherTC02 {
     @Then("Check that Voucher was buying With {string}")
     public void checkThatVoucherWasBuyingWith(String status) throws InterruptedException {
         try {
-            // wait for 7s to load page
-            Thread.sleep(7000);
+            // wait for 8s to load page
+            Thread.sleep(8000);
             String SuccessOrderMsg = webCartPage.GetOrderConfirmationMessage();
             Assert.assertEquals(SuccessOrderMsg, "Merci pour votre commande ! \uD83C\uDF89", "Gift Voucher buying Failed! and Msg is not correct");
             log.info("Gift Voucher buying is " + status);
