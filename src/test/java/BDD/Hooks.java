@@ -29,10 +29,19 @@ public class Hooks extends LTConfigCucumber {
     @Before
     public void setUp() {
         log.info("🚀 Starting WebDriver For Cucumber BDD...");
-        driver = getCucumberDriver();
-        driver.manage().window().maximize();
-        log.info("Navigating to URL...");
-        driver.navigate().to("https://demotenant.playpro.fr/connexion");
+        try {
+            driver = getCucumberDriver();
+            if (driver == null) {
+                log.error("❌ Driver initialization failed: driver is null");
+                throw new RuntimeException("Driver initialization failed: driver is null");
+            }
+            driver.manage().window().maximize();
+            log.info("Navigating to URL...");
+            driver.navigate().to("https://demotenant.playpro.fr/connexion");
+        } catch (Exception e) {
+            log.error("❌ Driver initialization failed: " + e.getMessage());
+            throw e;
+        }
     }
 
     @After
