@@ -1,4 +1,4 @@
-Feature:
+Feature:  Navigate To Abonnements Reservation Page
   As a user
   I want to go to the subscription reservation page
   So that I can make a reservation for a subscription
