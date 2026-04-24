@@ -43,42 +43,21 @@ public class WebCartPage {
     /** Methods of POM class: Card & Payment Buttons
      */
     public void clickVisaCard11_26Btn() {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.elementToBeClickable(VisaCard11_26Btn));
-            VisaCard11_26Btn.click();
-            System.out.println("Visa Card 11 26 button clicked");
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(VisaCard11_26Btn));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Visa Card 11 26 button clicked");
     }
 
     public void clickPayNowBtn() {
-        try {
-            Thread.sleep(1000);
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            // Scroll down to the experience card
-            for (int i = 0; i < 2; i++) {
-                js.executeScript("window.scrollBy(0, 300);");
-                Thread.sleep(1000);
-            }
-            wait.until(ExpectedConditions.elementToBeClickable(PayNowBtn));
-            PayNowBtn.click();
-            System.out.println("Pay Now button clicked");
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+        WebElement card = wait.until(ExpectedConditions.visibilityOf(PayNowBtn));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", card);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", card);
+        System.out.println("Pay Now button clicked");
     }
 
     public String GetOrderConfirmationMessage() {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(OrderConfirmationMessage));
-            return OrderConfirmationMessage.getText();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-            return null;
-        }
+        WebElement message = wait.until(ExpectedConditions.visibilityOf(OrderConfirmationMessage));
+        return message.getText();
     }
 
 }

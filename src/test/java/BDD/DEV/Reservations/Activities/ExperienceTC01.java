@@ -27,7 +27,6 @@ public class ExperienceTC01 {
     public void iClickOnReservationsLinkOnNavbar() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
-            Thread.sleep(1000);
             webReservationPage.clickRéservationsLinkEnNavBar();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -40,8 +39,6 @@ public class ExperienceTC01 {
         try {
             // Write code here that turns the phrase above into concrete action
             Thread.sleep(3000);
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("window.scrollBy(0,150)");
             webEXP1Page.clickVrPartyTestCard();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -130,13 +127,14 @@ public class ExperienceTC01 {
     }
 
     @Given("I select time slot {string}")
-    public void i_select_time_slot(String time) throws InterruptedException {
+    public void i_select_time_slot(String time) {
         try {
             // Write code here that turns the phrase above into concrete actions
-            Thread.sleep(7000);
-            webEXP1Page.clickIncrementCalendarBtn();
             String DayOfReservation = webEXP1Page.checkDayOfReservation();
-            log.info("The day of reservation is " + DayOfReservation);
+            log.info("The day of reservation is Before:  " + DayOfReservation);
+            webEXP1Page.clickIncrementCalendarBtn();
+            DayOfReservation = webEXP1Page.checkDayOfReservation();
+            log.info("The day of reservation is After:  " + DayOfReservation);
             if (time.equals("20:00")) {
                 webEXP1Page.clickTimeSlot20_00_4_Btn();
             } else {
@@ -152,11 +150,7 @@ public class ExperienceTC01 {
     public void i_click_on_confirm_btn() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
-            Thread.sleep(1000);
             webEXP1Page.clickConfirmBtn();
-            Thread.sleep(1000);
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("window.scrollBy(0,300)");
             webEXP1Page.clickContinueBtn();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -168,7 +162,6 @@ public class ExperienceTC01 {
     public void i_click_on_continue_without_option_btn() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
-            Thread.sleep(3000);
             webEXP1Page.clickContinueWithoutOptionBtn();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -180,7 +173,6 @@ public class ExperienceTC01 {
     public void i_click_on_bank_card_by_stripe() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
-            Thread.sleep(1000);
             webCartPage.clickVisaCard11_26Btn();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -192,7 +184,6 @@ public class ExperienceTC01 {
     public void i_click_on_payment_now_button() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
-            Thread.sleep(1000);
             webCartPage.clickPayNowBtn();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -207,11 +198,12 @@ public class ExperienceTC01 {
             // wait for 7s to load page
             Thread.sleep(7000);
             String SuccessOrderMsg = webCartPage.GetOrderConfirmationMessage();
+            System.out.println(SuccessOrderMsg);
             Assert.assertEquals(SuccessOrderMsg, "Merci pour votre réservation ! \uD83C\uDF89", "Gift Voucher buying Failed! and Msg is not correct");
             log.info("Experience reservation is " + string);
         } catch (Exception e) {
             e.fillInStackTrace();
-            log.info("Experience reservation is " + string);
+            log.info("Experience reservation is failed!");
             throw e;
         }
     }

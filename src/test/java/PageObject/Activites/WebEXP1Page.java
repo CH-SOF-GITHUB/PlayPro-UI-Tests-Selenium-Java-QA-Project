@@ -2,6 +2,7 @@ package PageObject.Activites;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -20,15 +21,18 @@ public class WebEXP1Page {
 
     public WebEXP1Page(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
     }
 
     /**
      *  Experience Card Path
      */
-    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' shadow-md ') and contains(concat(' ', normalize-space(@class), ' '), ' cursor-pointer ') and contains(concat(' ', normalize-space(@class), ' '), ' group ') and (@role = 'button') and (position() = 1)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' shadow-lg ')]")
+    /* @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' shadow-md ') and contains(concat(' ', normalize-space(@class), ' '), ' cursor-pointer ') and contains(concat(' ', normalize-space(@class), ' '), ' group ') and (@role = 'button') and (position() = 1)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' shadow-lg ')]")
+    private WebElement Vr_Party_Test; */
+    @FindBy(xpath = "//h3[normalize-space()='Vr Party Test']/ancestor::div[@role='button']")
     private WebElement Vr_Party_Test;
+
     /**
      *  STEP 1 Reservation Selection buttons
      */
@@ -77,7 +81,7 @@ public class WebEXP1Page {
     @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' border ') and (position() = 4)]")
     private WebElement IncrementCalendarBtn;
 
-    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' rounded-lg ')]")
+    @FindBy(xpath = "//div[contains(@class,'relative')]//button//p")
     private WebElement Day__Btn;
 
     @FindBy(xpath = "(//button[@type='button'])[3]")
@@ -99,47 +103,26 @@ public class WebEXP1Page {
      *  Method of POM class: Experience Card Path
      */
 
-    public void clickVrPartyTestCard() throws InterruptedException {
-        try {
-            // wait for 3s
-            Thread.sleep(3000);
-            // scroll down to the experience card
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            // Scroll down to the experience card
-            // for (int i = 0; i < 2; i++) {// }
-            js.executeScript("window.scrollBy(0, 300);");
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(Vr_Party_Test));
-            wait.until(ExpectedConditions.elementToBeClickable(Vr_Party_Test));
-            Vr_Party_Test.click();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+    public void clickVrPartyTestCard() {
+        WebElement card = wait.until(ExpectedConditions.visibilityOf(Vr_Party_Test));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", card);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", card);
+        System.out.println("Vr Party Test card clicked");
     }
 
     /**
      *  Methods of POM class: STEP 1 Reservation Selection buttons
      */
-    public void clickSelectParticipantsBtn() throws InterruptedException {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(SelectParticipantsBtn));
-            wait.until(ExpectedConditions.elementToBeClickable(SelectParticipantsBtn));
-            SelectParticipantsBtn.click();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+    public void clickSelectParticipantsBtn() {
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(SelectParticipantsBtn));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Select Participants button clicked");
     }
 
     public void clickOption4ParticipantsBtn() throws InterruptedException {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(Option_4ParticipantsBtn));
-            wait.until(ExpectedConditions.elementToBeClickable(Option_4ParticipantsBtn));
-            Option_4ParticipantsBtn.click();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(Option_4ParticipantsBtn));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Option 4 Person  clicked");
     }
 
     public void clickOption5ParticipantsBtn() throws InterruptedException {
@@ -212,26 +195,16 @@ public class WebEXP1Page {
      *  Methods of POM class: STEP 2: Duration/Price buttons
      */
 
-    public void clickSelectDurationPriceBtn() throws InterruptedException {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(SelectDurationPriceBtn));
-            wait.until(ExpectedConditions.elementToBeClickable(SelectDurationPriceBtn));
-            SelectDurationPriceBtn.click();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+    public void clickSelectDurationPriceBtn() {
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(SelectDurationPriceBtn));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Select Duration Price button clicked");
     }
 
     public void clickOption45MinBtn() throws InterruptedException {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(Option_45MinBtn));
-            wait.until(ExpectedConditions.elementToBeClickable(Option_45MinBtn));
-            Option_45MinBtn.click();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(Option_45MinBtn));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Option 45 min button clicked");
     }
 
     public void clickOption90MinBtn() throws InterruptedException {
@@ -245,52 +218,30 @@ public class WebEXP1Page {
         }
     }
 
-    public void clickContinueBtn() throws InterruptedException {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(ContinueBtn));
-            wait.until(ExpectedConditions.elementToBeClickable(ContinueBtn));
-            ContinueBtn.click();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+    public void clickContinueBtn() {
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(ContinueBtn));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Continue button clicked");
     }
 
     /**
      *  Methods of POM class: STEP 3 Time Slot Selection buttons (20:00 & 20:45) are updated based on availability and scenario executed
      */
-    public void clickIncrementCalendarBtn() throws InterruptedException {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(IncrementCalendarBtn));
-            wait.until(ExpectedConditions.elementToBeClickable(IncrementCalendarBtn));
-            IncrementCalendarBtn.click();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+    public void clickIncrementCalendarBtn() {
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(IncrementCalendarBtn));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Increment Calendar button > clicked");
     }
 
-    public String checkDayOfReservation() throws InterruptedException {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(Day__Btn));
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
-        return Day__Btn.getText();
+    public String checkDayOfReservation() {
+        WebElement dayButton = wait.until(ExpectedConditions.visibilityOf(Day__Btn));
+        return dayButton.getText();
     }
 
-    public void clickTimeSlot20_00_4_Btn() throws InterruptedException {
-        try {
-            Thread.sleep(1000);
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("window.scrollBy(0, 100);");
-            wait.until(ExpectedConditions.visibilityOf(TimeSlot20_00_Btn));
-            wait.until(ExpectedConditions.elementToBeClickable(TimeSlot20_00_Btn));
-            TimeSlot20_00_Btn.click();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+    public void clickTimeSlot20_00_4_Btn() {
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(TimeSlot20_00_Btn));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Time Slot 20:00 button clicked");
     }
 
     public void clickTimeSlot20_45_5_Btn() throws InterruptedException {
@@ -304,27 +255,15 @@ public class WebEXP1Page {
         }
     }
 
-    public void clickConfirmBtn() throws InterruptedException {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(ConfirmBtn));
-            wait.until(ExpectedConditions.elementToBeClickable(ConfirmBtn));
-            ConfirmBtn.click();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+    public void clickConfirmBtn() {
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(ConfirmBtn));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Confirm button clicked");
     }
 
-    public void clickContinueWithoutOptionBtn() throws InterruptedException {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(ContinueWithoutOptionBtn));
-            // JavascriptExecutor js = (JavascriptExecutor) driver;
-            // js.executeScript("window.scrollBy(0, 300);");
-            wait.until(ExpectedConditions.elementToBeClickable(ContinueWithoutOptionBtn));
-            ContinueWithoutOptionBtn.click();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+    public void clickContinueWithoutOptionBtn() {
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(ContinueWithoutOptionBtn));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Continue without option button clicked");
     }
 }

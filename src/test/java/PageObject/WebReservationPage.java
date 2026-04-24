@@ -1,5 +1,6 @@
 package PageObject;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,49 +29,32 @@ public class WebReservationPage {
     @FindBy(xpath = "/html/body/div[1]/main/section[1]/div[2]/div[2]/div/a[1]")
     private WebElement RéserverLink;
 
-    @FindBy(xpath = "(//p[normalize-space()='Nos activités'])[1]")
-    private WebElement Nos_Activites_Text;
+    // @FindBy(xpath = "(//p[normalize-space()='Nos activités'])[1]")
+    // private WebElement Nos_Activites_Text;
 
     @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' rounded-md ') and contains(concat(' ', normalize-space(@class), ' '), ' font-poppins ')]")
     private WebElement Offre_Link;
 
     /* methods of POM class */
     public void ClickOffreMenuNavbar() {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(Offre_Link));
-            wait.until(ExpectedConditions.elementToBeClickable(Offre_Link));
-            Offre_Link.click();
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(Offre_Link));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Offre link clicked in navbar");
     }
 
     public void clickRéservationsLinkEnNavBar() {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(RéservationsLink));
-            wait.until(ExpectedConditions.elementToBeClickable(RéservationsLink));
-            RéservationsLink.click();
-            System.out.println("Réservations link clicked in navbar");
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(RéservationsLink));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Réservations link clicked in navbar");
     }
 
     public void clickRéserverLink() {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(RéserverLink));
-            wait.until(ExpectedConditions.elementToBeClickable(RéserverLink));
-            RéserverLink.click();
-            Thread.sleep(4000);
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(RéserverLink));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Réserver link clicked in navbar");
     }
 
-    public void checkVisibilityOfNosActivitesText() {
+    /* public void checkVisibilityOfNosActivitesText() {
         try {
             Thread.sleep(1000);
             wait.until(ExpectedConditions.visibilityOf(Nos_Activites_Text));
@@ -78,5 +62,5 @@ public class WebReservationPage {
         } catch (Exception e) {
             e.fillInStackTrace();
         }
-    }
+    } */
 }
