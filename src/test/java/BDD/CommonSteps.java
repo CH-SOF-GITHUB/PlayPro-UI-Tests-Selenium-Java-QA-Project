@@ -27,21 +27,21 @@ public class CommonSteps {
     }
 
     @Given("I enter email {string}")
-    public void i_enter_email(String Email) {
+    public void i_enter_email(String Email) throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
         webLoginPage.EnterEmail(Email);
         log.info("COMMON-STEP: Enter email " + Email);
     }
 
     @Given("I enter pwd {string}")
-    public void i_enter_pwd(String Pwd) {
+    public void i_enter_pwd(String Pwd) throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
         webLoginPage.EnterPassword(Pwd);
         log.info("COMMON-STEP: Enter password " + Pwd);
     }
 
     @When("I click Login Button")
-    public void i_click_login_button() {
+    public void i_click_login_button() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
         webLoginPage.ClickLoginButton();
         log.info("COMMON-STEP: Click login button");

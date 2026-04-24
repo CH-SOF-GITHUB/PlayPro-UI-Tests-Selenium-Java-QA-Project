@@ -27,6 +27,7 @@ public class ExperienceTC01 {
     public void iClickOnReservationsLinkOnNavbar() throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
+            Thread.sleep(1000);
             webReservationPage.clickRéservationsLinkEnNavBar();
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -127,7 +128,7 @@ public class ExperienceTC01 {
     }
 
     @Given("I select time slot {string}")
-    public void i_select_time_slot(String time) {
+    public void i_select_time_slot(String time) throws InterruptedException {
         try {
             // Write code here that turns the phrase above into concrete actions
             String DayOfReservation = webEXP1Page.checkDayOfReservation();
@@ -151,6 +152,7 @@ public class ExperienceTC01 {
         try {
             // Write code here that turns the phrase above into concrete actions
             webEXP1Page.clickConfirmBtn();
+            Thread.sleep(1000);
             webEXP1Page.clickContinueBtn();
         } catch (Exception e) {
             e.fillInStackTrace();

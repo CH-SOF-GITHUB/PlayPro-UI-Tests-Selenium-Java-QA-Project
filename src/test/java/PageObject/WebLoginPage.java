@@ -1,10 +1,7 @@
 package PageObject;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -68,34 +65,27 @@ public class WebLoginPage {
     }
 
 
-    public void EnterEmail(String email) {
-        try {
-            wait.until(ExpectedConditions.visibilityOf(EmailInput));
-            EmailInput.clear();
-            EmailInput.sendKeys(email);
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+    public void EnterEmail(String email) throws InterruptedException {
+        Thread.sleep(1000);
+        WebElement input = wait.until(ExpectedConditions.visibilityOf(EmailInput));
+        input.clear();
+        input.sendKeys(email);
+        System.out.println("Entered email: " + email);
     }
 
-    public void EnterPassword(String password) {
-        try {
-            wait.until(ExpectedConditions.visibilityOf(PasswordInput));
-            PasswordInput.clear();
-            PasswordInput.sendKeys(password);
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+    public void EnterPassword(String password) throws InterruptedException {
+        Thread.sleep(1000);
+        WebElement input = wait.until(ExpectedConditions.visibilityOf(PasswordInput));
+        input.clear();
+        input.sendKeys(password);
+        System.out.println("Entered pwd: " + password);
     }
 
-    public void ClickLoginButton() {
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(LoginButton));
-            LoginButton.click();
-            Thread.sleep(5000); // wait for 5 seconds to allow the page to load after clicking the login button
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
+    public void ClickLoginButton() throws InterruptedException {
+        Thread.sleep(1000);
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(LoginButton));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Clicked on Login button");
     }
 
     public void ClickForgotPasswordButton() {
