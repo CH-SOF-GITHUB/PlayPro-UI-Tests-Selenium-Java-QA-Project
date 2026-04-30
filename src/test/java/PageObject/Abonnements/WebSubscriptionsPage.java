@@ -1,9 +1,11 @@
 package PageObject.Abonnements;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -27,8 +29,10 @@ public class WebSubscriptionsPage {
     private WebElement seriesLink;
 
     // define methods to interact with the web elements
-    public void clickSeriesLink() {
-        seriesLink.click();
+    public void clickSeriesLink() throws InterruptedException {
+        Thread.sleep(1000);
+        WebElement link = wait.until(ExpectedConditions.visibilityOf(seriesLink));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", link);
         System.out.println("Series link clicked in navbar");
     }
 }

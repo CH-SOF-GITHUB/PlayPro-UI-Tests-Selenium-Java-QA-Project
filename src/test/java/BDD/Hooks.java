@@ -30,7 +30,7 @@ public class Hooks extends LTConfigCucumber {
     public void setUp() {
         log.info("🚀 Starting WebDriver For Cucumber BDD...");
         try {
-            driver = new ChromeDriver();
+            driver = getCucumberDriver();
             if (driver == null) {
                 log.error("❌ Driver initialization failed: driver is null");
                 throw new RuntimeException("Driver initialization failed: driver is null");

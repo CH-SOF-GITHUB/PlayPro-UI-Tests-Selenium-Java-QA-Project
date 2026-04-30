@@ -36,19 +36,22 @@ public class WebReservationPage {
     private WebElement Offre_Link;
 
     /* methods of POM class */
-    public void ClickOffreMenuNavbar() {
+    public void ClickOffreMenuNavbar() throws InterruptedException {
+        Thread.sleep(1000);
         WebElement button = wait.until(ExpectedConditions.visibilityOf(Offre_Link));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
         System.out.println("Offre link clicked in navbar");
     }
 
-    public void clickRéservationsLinkEnNavBar() {
+    public void clickRéservationsLinkEnNavBar() throws InterruptedException {
+        Thread.sleep(1000);
         WebElement button = wait.until(ExpectedConditions.visibilityOf(RéservationsLink));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
         System.out.println("Réservations link clicked in navbar");
     }
 
-    public void clickRéserverLink() {
+    public void clickRéserverLink() throws InterruptedException {
+        Thread.sleep(1000);
         WebElement button = wait.until(ExpectedConditions.visibilityOf(RéserverLink));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
         System.out.println("Réserver link clicked in navbar");
