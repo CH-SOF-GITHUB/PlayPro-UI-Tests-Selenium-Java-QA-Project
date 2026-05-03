@@ -18,13 +18,14 @@ import static tests.LTTestStatus.markTestStatusViaJS;
 
 public class BaseTest {
     // define web driver
-    protected WebDriver driver = getLTDriver();
+    protected WebDriver driver;
     // define log from apache
     Log log = LogFactory.getLog(BaseTest.class);
 
     @BeforeMethod
     public void setUp() {
         log.info("Starting WebDriver...");
+        driver = getLTDriver();
         driver.manage().window().maximize();
         log.info("Navigating to URL...");
         driver.navigate().to("https://demotenant.playpro.fr/connexion");
