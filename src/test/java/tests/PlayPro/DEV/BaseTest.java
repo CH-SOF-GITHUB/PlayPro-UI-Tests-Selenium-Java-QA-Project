@@ -18,7 +18,7 @@ import static tests.LTTestStatus.markTestStatusViaJS;
 
 public class BaseTest {
     // define web driver
-    protected WebDriver;
+    protected WebDriver driver;
     // define log from apache
     Log log = LogFactory.getLog(BaseTest.class);
 
