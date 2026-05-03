@@ -15,7 +15,9 @@ jobs:
       - restore_cache:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
       - run:
-          command: mvn verify
+          name: Run single test TC01 with mvn verify
+          command: |
+            mvn -Dtest=tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC01 -DfailIfNoTests=false verify
       - store_test_results:
           path: target/surefire-reports
       - save_cache:
