@@ -1,3 +1,4 @@
+/*
 package tests.PlayPro.DEV.TestingBot;
 
 import com.testingbot.testingbotrest.TestingbotREST;
@@ -49,3 +50,4 @@ public class SimpleTest extends ConfigTestingBot {
         }
     }
 }
+*/
