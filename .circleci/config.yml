@@ -16,6 +16,9 @@ jobs:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
       - run:
           command: mvn verify
+          environment:
+            TB_KEY: ${TB_KEY}
+            TB_SECRET: ${TB_SECRET}
       - store_test_results:
           path: target/surefire-reports
       - save_cache:

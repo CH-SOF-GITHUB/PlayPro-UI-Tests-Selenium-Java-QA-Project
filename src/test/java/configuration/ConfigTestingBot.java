@@ -11,10 +11,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ConfigTestingBot {
-    // TestingBot key
-    public static final String KEY = "5c797835f6a08f70fd15b5823c2a6e52";
-    // TestingBot Secret
-    public static final String SECRET = "9fb978750fc0c45558d5caa85c9f239b";
+    // TestingBot key - read from environment variable TB_KEY if available
+    public static final String KEY = System.getenv("TB_KEY") != null ? System.getenv("TB_KEY") : "5c797835f6a08f70fd15b5823c2a6e52";
+    // TestingBot Secret - read from environment variable TB_SECRET if available
+    public static final String SECRET = System.getenv("TB_SECRET") != null ? System.getenv("TB_SECRET") : "9fb978750fc0c45558d5caa85c9f239b";
     // Run cross browser Selenium tests on your local network or CI with TestingBot
     // public static String LOCAL_URL = "http://" + KEY + ":" + SECRET + "@localhost:4445/wd/hub";
     // Run cross browser Selenium tests on TestingBot cloud platform
