@@ -190,6 +190,7 @@
             <version>7.10.2</version>
             <scope>compile</scope>
         </dependency>-->
+        <!-- A reporter plug-in for reports-->
     </dependencies>
     <profiles>
         <profile>
