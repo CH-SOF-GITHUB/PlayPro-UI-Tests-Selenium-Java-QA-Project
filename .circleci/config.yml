@@ -19,7 +19,7 @@ jobs:
           command: |
             mvn -Dtest=tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC01 -DfailIfNoTests=false verify
       - store_test_results:
-          path: target/surefire-reports
+          path: target/surefire-reports/junitreports
       - save_cache:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
           paths:

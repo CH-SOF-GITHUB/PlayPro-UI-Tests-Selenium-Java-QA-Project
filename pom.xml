@@ -222,10 +222,22 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
+                    <!-- keep your cucumber config -->
                     <systemPropertyVariables>
                         <!--suppress UnresolvedMavenProperty -->
                         <cucumber.filter.tags>${cucumber.filter.tags}</cucumber.filter.tags>
                     </systemPropertyVariables>
+                    <!-- 🔥 VERY IMPORTANT -->
+                    <!-- Force JUnit-style reports for CI tools like CircleCI -->
+                    <properties>
+                        <property>
+                            <name>junit</name>
+                            <value>true</value>
+                        </property>
+                    </properties>
+                    <!-- optional but recommended -->
+                    <useFile>true</useFile>
+                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
                 </configuration>
             </plugin>
         </plugins>
