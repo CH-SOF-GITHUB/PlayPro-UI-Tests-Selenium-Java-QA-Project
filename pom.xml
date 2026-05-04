@@ -227,16 +227,18 @@
                         <!--suppress UnresolvedMavenProperty -->
                         <cucumber.filter.tags>${cucumber.filter.tags}</cucumber.filter.tags>
                     </systemPropertyVariables>
-                    <!-- 🔥 VERY IMPORTANT -->
-                    <!-- Force JUnit-style reports for CI tools like CircleCI -->
+                    <!-- ✅ Force JUnit format (for CircleCI) -->
                     <properties>
                         <property>
                             <name>junit</name>
                             <value>true</value>
                         </property>
                     </properties>
-                    <!-- optional but recommended -->
+                    <!-- ✅ IMPORTANT: show logs in console -->
                     <useFile>true</useFile>
+                    <!-- ✅ show more details -->
+                    <printSummary>true</printSummary>
+                    <!-- optional -->
                     <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
                 </configuration>
             </plugin>
