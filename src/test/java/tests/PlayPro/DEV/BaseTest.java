@@ -1,5 +1,7 @@
 package tests.PlayPro.DEV;
 
+import PageObject.WebCookiesPage;
+import PageObject.WebLoginPage;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -25,7 +27,6 @@ public class BaseTest {
     Log log = LogFactory.getLog(BaseTest.class);
     // define explicit wait object
     protected WebDriverWait Wait;
-
     @BeforeMethod
     public void setUp() {
         log.info("Starting WebDriver...");
