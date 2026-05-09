@@ -19,12 +19,12 @@ jobs:
           command: |
             mkdir -p target/surefire-reports/junitreports
             
-            circleci tests glob "src/test/java/tests/PlayPro/DEV/LambdaTest/Chrome/Reservations/TC01.java" \
+            circleci tests glob "src/test/java/tests/PlayPro/DEV/LambdaTest/Chrome/Reservations/*.java" \
             | sed 's@src/test/java/@@' \
             | sed 's@/@.@g' \
             | sed 's/.java$//' \
             | circleci tests run \
-                --command="xargs mvn test -DfailIfNoTests=false -Dtest" \
+                --command="xargs -I{} mvn test -DfailIfNoTests=false -Dtest={}" \
                 --verbose \
                 --split-by=timings \
                 --timings-type=classname
