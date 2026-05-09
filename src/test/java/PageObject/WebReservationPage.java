@@ -26,7 +26,7 @@ public class WebReservationPage {
     @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' bg-secondary ') and contains(concat(' ', normalize-space(@class), ' '), ' shadow ')]")
     private WebElement RéservationsLink;
 
-    @FindBy(xpath = "/html/body/div[1]/main/section[1]/div[2]/div[2]/div/a[1]")
+    @FindBy(xpath = "(//a[@class='flex items-center justify-center gap-[0.625rem] rounded-[0.625rem] h-[35px] w-[7.938rem] bg-secondary text-accent font-medium text-[1rem] text-base leading-[1.2rem] first-letter:capitalize'])[1]")
     private WebElement RéserverLink;
 
     // @FindBy(xpath = "(//p[normalize-space()='Nos activités'])[1]")
