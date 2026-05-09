@@ -15,9 +15,19 @@ jobs:
       - restore_cache:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
       - run:
-          name: Run single test TC01 with mvn verify
+          name: glob, split and run TestNG tests
           command: |
-            mvn -Dtest=tests.PlayPro.DEV.LambdaTest.Chrome.Reservations.TC01 -DfailIfNoTests=false verify
+            mkdir -p target/surefire-reports/junitreports
+            
+            circleci tests glob "src/test/java/tests/PlayPro/DEV/LambdaTest/Chrome/Reservations/TC01.java" \
+            | sed 's@src/test/java/@@' \
+            | sed 's@/@.@g' \
+            | sed 's/.java$//' \
+            | circleci tests run \
+                --command="xargs mvn test -DfailIfNoTests=false -Dtest" \
+                --verbose \
+                --split-by=timings \
+                --timings-type=classname
       - store_test_results:
           path: target/surefire-reports/junitreports
       - store_artifacts:
