@@ -24,7 +24,7 @@ jobs:
             | sed 's@/@.@g' \
             | sed 's/.java$//' \
             | circleci tests run \
-                --command="xargs -I{} mvn test -DfailIfNoTests=false -Dtest={}" \
+                --command="tr '\n' ',' | sed 's/,$//' | xargs -I{} mvn test -DfailIfNoTests=false -Dtest={}" \
                 --verbose \
                 --split-by=timings \
                 --timings-type=classname
