@@ -28,11 +28,8 @@ public class WebEXP1Page {
     /**
      *  Experience Card Path
      */
-    /* @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' shadow-md ') and contains(concat(' ', normalize-space(@class), ' '), ' cursor-pointer ') and contains(concat(' ', normalize-space(@class), ' '), ' group ') and (@role = 'button') and (position() = 1)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' shadow-lg ')]")
-    private WebElement Vr_Party_Test; */
-    @FindBy(xpath = "//h3[normalize-space()='Vr Party Test']/ancestor::div[@role='button']")
+    @FindBy(xpath = "/html/body/div[1]/main/div/section/div/a[2]/div/div[2]/div/div[2]/div")
     private WebElement Vr_Party_Test;
-
     /**
      *  STEP 1 Reservation Selection buttons
      */
@@ -106,7 +103,6 @@ public class WebEXP1Page {
     public void clickVrPartyTestCard() throws InterruptedException {
         Thread.sleep(1000);
         WebElement card = wait.until(ExpectedConditions.visibilityOf(Vr_Party_Test));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", card);
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", card);
         System.out.println("Vr Party Test card clicked");
     }

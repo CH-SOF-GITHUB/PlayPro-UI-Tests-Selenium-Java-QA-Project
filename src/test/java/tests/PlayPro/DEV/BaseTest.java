@@ -1,7 +1,9 @@
 package tests.PlayPro.DEV;
 
+import PageObject.Activites.WebEXP1Page;
 import PageObject.WebCookiesPage;
 import PageObject.WebLoginPage;
+import PageObject.WebReservationPage;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -27,12 +29,19 @@ public class BaseTest {
     Log log = LogFactory.getLog(BaseTest.class);
     // define explicit wait object
     protected WebDriverWait Wait;
+    // declare instance of the pages objects
+    protected WebReservationPage webReservationPage = null;
+    protected WebEXP1Page webEXP1Page = null;
+
+
     @BeforeMethod
     public void setUp() {
         log.info("Starting WebDriver...");
         driver = getLTDriver();
         driver.manage().window().maximize();
         Wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+        webReservationPage = new WebReservationPage(driver);
+        webEXP1Page = new WebEXP1Page(driver);
         log.info("Navigating to URL...");
         driver.navigate().to("https://demotenant.playpro.fr/connexion");
     }

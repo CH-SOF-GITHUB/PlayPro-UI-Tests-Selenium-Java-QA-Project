@@ -7,15 +7,19 @@ import org.testng.annotations.Test;
 import tests.PlayPro.DEV.LoggedBaseTest;
 
 public class TC01 extends LoggedBaseTest {
+    /*
+    Test Case 1: Verify navigation to the Reservations page via navbar links.
 
-    // declare instance of the pages objects
-    WebReservationPage webReservationPage = null;
+    Description:
+    This test ensures an authenticated user (login performed automatically by LoggedBaseTest)
+    can reach the Reservations page from the navbar using two entries: "Réservations" and "Réserver".
+    It validates the final URL to confirm correct redirection.
+    */
     /**/
 
     @Test(priority = Priority.P1)
     public void ClickToNavigateToReservationsPage1() throws InterruptedException {
-        // open the home page of Demo V3 PlayPro site
-        webReservationPage = new WebReservationPage(driver);
+        // Test implementation goes here
         // click on Réservations link in navbar
         webReservationPage.clickRéservationsLinkEnNavBar();
         Thread.sleep(7000);
@@ -25,8 +29,7 @@ public class TC01 extends LoggedBaseTest {
 
     @Test(priority = Priority.P2)
     public void ClickToNavigateToReservationsPage2() throws InterruptedException {
-        // open the home page of Demo V3 PlayPro site
-        webReservationPage = new WebReservationPage(driver);
+        // Test implementation goes here
         // click on Réservations link in navbar
         webReservationPage.clickRéserverLink();
         Thread.sleep(7000);
