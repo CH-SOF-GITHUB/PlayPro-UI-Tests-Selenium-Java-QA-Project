@@ -37,7 +37,7 @@ public class WebReservationPage {
     /*
        Find web elements for Experiences, Activities, Events, and Categories (VR, Escape Game, etc.) if needed for future test cases.
      */
-    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' shadow-md ') and (name() = 'a') and (position() = 61)]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' shadow-lg ')]")
+    @FindBy(xpath = "//a[1]//div[1]//div[2]//div[1]//div[2]//div[1]")
     private WebElement Category_VR_Link;
 
     /* methods of POM class */
@@ -63,7 +63,7 @@ public class WebReservationPage {
     }
 
     public void clickOnCategoryVR() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         WebElement button = wait.until(ExpectedConditions.visibilityOf(Category_VR_Link));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
         System.out.println("Category VR clicked in reservation page");

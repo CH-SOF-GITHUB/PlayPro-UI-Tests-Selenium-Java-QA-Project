@@ -1,7 +1,6 @@
 package tests.PlayPro.DEV.LambdaTest.Chrome.Reservations;
 
 import Levels.Priority;
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 import tests.PlayPro.DEV.LoggedBaseTest;
 

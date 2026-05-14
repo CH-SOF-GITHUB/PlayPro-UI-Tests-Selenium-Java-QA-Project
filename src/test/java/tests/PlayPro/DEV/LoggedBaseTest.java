@@ -13,13 +13,15 @@ rendre le constructeur protected pour limiter l'instanciation externe, ou
 garder la classe non-abstraite mais ne pas lui ajouter de @Test (TestNG n'exécutera rien tant qu'il n'y a pas de méthodes @Test dedans).
 La solution abstract reste la plus claire et sûre pour une classe utilitaire de setup partagé.
  */
+
 public abstract class LoggedBaseTest extends BaseTest {
     // Define email and password for login
     protected final String user = "demotenant1@yopmail.com";
     protected final String pass = "Admin1234!";
     // define an instance of a specific page object
-    WebCookiesPage webCookiesPage = null;
-    WebLoginPage webLoginPage = null;
+    protected WebCookiesPage webCookiesPage = null;
+    protected WebLoginPage webLoginPage = null;
+
 
     @BeforeMethod
     public void loginBeforeEachTest() throws InterruptedException {
