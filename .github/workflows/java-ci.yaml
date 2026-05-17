@@ -49,23 +49,36 @@ jobs:
         with:
           node-version: '18'
 
+      # =========================
+      # INSTALL CHROMIUM
+      # =========================
+
       - name: Install Chromium + ChromeDriver + Xvfb
         run: |
           sudo apt-get update
           sudo apt-get install -y chromium-browser chromium-chromedriver xvfb
+
+          which chromium-browser
+          which chromedriver
+
           echo "CHROME_BIN=/usr/bin/chromium-browser" >> $GITHUB_ENV
 
+      # =========================
+      # INSTALL JS DEPENDENCIES
+      # =========================
+
       - name: Install JS dependencies
-        run: |
-          if [ -f src/test/java/js/package-lock.json ]; then
-            npm ci --prefix src/test/java/js
-          else
-            npm install --prefix src/test/java/js
-          fi
+        working-directory: src/test/java/js
+        run: npm install
+
+      # =========================
+      # RUN SELENIUM JS TEST
+      # =========================
 
       - name: Run JS Selenium test
         env:
           DISPLAY: :99
+          CHROME_BIN: /usr/bin/chromium-browser
         run: |
           xvfb-run --auto-servernum \
           --server-args="-screen 0 1920x1080x24" \
