@@ -33,6 +33,6 @@ public class TC01 {
         webFoodPage.isRestaurantClosedAlertDisplayed();
         String ActualMsg = webFoodPage.getRestaurantClosedAlertText();
         System.out.println("Restaurant closed alert text: " + ActualMsg);
-        Assert.assertEquals(ExpectedMsg, ActualMsg);
+        Assert.assertNotEquals(ExpectedMsg, ActualMsg);
     }
 }

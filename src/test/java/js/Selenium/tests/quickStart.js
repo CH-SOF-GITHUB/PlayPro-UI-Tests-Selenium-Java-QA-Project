@@ -35,6 +35,7 @@ async function getDriver() {
 
 
 (async function example() {
+    console.log("========== START JS TEST ==========");
     // code of the test
     driver = await getDriver();
     try {
@@ -78,6 +79,8 @@ async function getDriver() {
         throw e;
     } finally {
         await driver.quit();
+        console.log("Browser closed");
+        console.log("========== END JS TEST ==========");
     }
 
 })();
