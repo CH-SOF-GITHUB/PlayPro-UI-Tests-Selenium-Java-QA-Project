@@ -12,11 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "assert": "^2.1.0",
+    "chai": "^4.3.7",
     "webdriverio": "^9.27.1"
   },
   "devDependencies": {
     "@wdio/cli": "^9.27.1",
-    "chai": "^6.2.2",
     "mochawesome": "^7.1.4",
     "selenium-webdriver": "^4.44.0"
   }
