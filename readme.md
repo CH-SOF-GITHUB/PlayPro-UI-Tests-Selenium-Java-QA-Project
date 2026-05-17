@@ -45,3 +45,32 @@ Selon la configuration utilisée, les tests peuvent être exécutés :
 
 ➡️ Idéal pour valider la compatibilité multi-navigateurs et paralléliser les tests.
 ➡️ La sélection de la plateforme se fait via des classes java de configuration dédiées
+
+
+## 
+Commandes pour lancer localement (Git Bash / MINGW64) et voir le navigateur :  
+export HEADLESS=false && node quickStart.js
+Sous Windows (cmd) :  
+set HEADLESS=false && node quickStart.js
+Sous PowerShell :  
+$env:HEADLESS = "false"; node quickStart.js
+En CI garder HEADLESS=true (ou ne pas définir) et utiliser xvfb/headless.
+
+
+# Mettre à jour les refs distantes
+git fetch origin
+
+# Basculer sur main pour vérifier l'existence du dossier
+git checkout main
+ls -la src/test/java/js
+
+# Si le dossier existe sur main, revenir sur ta branche de travail
+git checkout circleci-project-setup
+
+# Copier le dossier `src/test/java/js` depuis la branche main vers la branche courante
+git checkout main -- src/test/java/js
+
+# Ajouter, committer et pousser les fichiers sur origin/circleci-project-setup
+git add src/test/java/js
+git commit -m "Import JS Selenium tests from main"
+git push -u origin circleci-project-setup
