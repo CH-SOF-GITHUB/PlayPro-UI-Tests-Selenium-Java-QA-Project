@@ -1,0 +1,23 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./wdio.conf.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.1.0",
+    "chai": "^4.3.7",
+    "webdriverio": "^9.27.1"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^9.27.1",
+    "mochawesome": "^7.1.4",
+    "selenium-webdriver": "^4.44.0"
+  }
+}
