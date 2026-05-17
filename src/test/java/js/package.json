@@ -13,11 +13,9 @@
   "dependencies": {
     "assert": "^2.1.0",
     "chai": "^4.3.7",
-    "chromedriver": "^148.0.3",
-    "webdriverio": "^9.27.1"
+    "chromedriver": "^148.0.3"
   },
   "devDependencies": {
-    "@wdio/cli": "^9.27.1",
     "mochawesome": "^7.1.4",
     "selenium-webdriver": "^4.44.0"
   }
