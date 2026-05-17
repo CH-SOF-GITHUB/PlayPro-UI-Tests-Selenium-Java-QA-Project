@@ -53,21 +53,20 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y chromium-browser chromium-chromedriver xvfb
-          
           echo "CHROME_BIN=/usr/bin/chromium-browser" >> $GITHUB_ENV
 
-          - name: Install JS dependencies
-          run: |
+      - name: Install JS dependencies
+        run: |
           if [ -f src/test/java/js/package-lock.json ]; then
             npm ci --prefix src/test/java/js
           else
             npm install --prefix src/test/java/js
           fi
 
-          - name: Run JS Selenium test
-          env:
+      - name: Run JS Selenium test
+        env:
           DISPLAY: :99
-          run: |
+        run: |
           xvfb-run --auto-servernum \
           --server-args="-screen 0 1920x1080x24" \
           node src/test/java/js/Selenium/tests/quickStart.js
