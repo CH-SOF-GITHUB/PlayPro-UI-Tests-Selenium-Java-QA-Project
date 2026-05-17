@@ -49,13 +49,8 @@ jobs:
         with:
           node-version: '20.18.1'
           cache: 'npm'
+          cache-dependency-path: 'src/test/java/js/package-lock.json'
 
-      - name: Install JS dependencies
-        working-directory: src/test/java/js
-        env:
-          CHROMEDRIVER_SKIP_DOWNLOAD: 'true'   # skip npm chromedriver download (on utilise le chromedriver apt)
-          npm_config_engine_strict: 'false'    # optionnel: ignore les engines stricts
-        run: npm install
       # =========================
       # INSTALL CHROMIUM
       # =========================
@@ -76,6 +71,9 @@ jobs:
 
       - name: Install JS dependencies
         working-directory: src/test/java/js
+        env:
+          CHROMEDRIVER_SKIP_DOWNLOAD: 'true'   # skip npm chromedriver download (on utilise chromedriver apt)
+          npm_config_engine_strict: 'false'    # ignore les vérifications d'engine (optionnel)
         run: npm install
 
       # =========================
