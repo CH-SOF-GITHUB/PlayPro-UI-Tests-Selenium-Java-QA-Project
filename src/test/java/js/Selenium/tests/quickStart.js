@@ -1,6 +1,7 @@
 const {Builder, By, Key, until, Browser} = require('selenium-webdriver');
 const assert = require("assert");
 const {expect} = require('chai');
+const chrome = require('selenium-webdriver/chrome');
 const logging = require('selenium-webdriver/lib/logging')
 logger = logging.getLogger('webdriver')
 logger.setLevel(logging.Level.INFO)
@@ -9,7 +10,26 @@ let InitialDriver;
 
 
 async function getDriver() {
-    InitialDriver = await new Builder().forBrowser(Browser.CHROME).build();
+
+    let options = new chrome.Options();
+
+    options.setChromeBinaryPath('/usr/bin/chromium-browser');
+
+    options.addArguments(
+        '--headless=new',
+        '--no-sandbox',
+        '--disable-dev-shm-usage',
+        '--window-size=1920,1080'
+    );
+
+    let service = new chrome.ServiceBuilder('/usr/bin/chromedriver');
+
+    InitialDriver = await new Builder()
+        .forBrowser(Browser.CHROME)
+        .setChromeOptions(options)
+        .setChromeService(service)
+        .build();
+
     return InitialDriver;
 }
 
