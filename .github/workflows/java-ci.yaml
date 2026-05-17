@@ -40,6 +40,42 @@ jobs:
       - name: Clean and build project
         run: mvn clean compile
 
+      # =========================
+      # NODE + SELENIUM JS SETUP
+      # =========================
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Chromium + ChromeDriver + Xvfb
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser chromium-chromedriver xvfb
+          
+          echo "CHROME_BIN=/usr/bin/chromium-browser" >> $GITHUB_ENV
+
+          - name: Install JS dependencies
+          run: |
+          if [ -f src/test/java/js/package-lock.json ]; then
+            npm ci --prefix src/test/java/js
+          else
+            npm install --prefix src/test/java/js
+          fi
+
+          - name: Run JS Selenium test
+          env:
+          DISPLAY: :99
+          run: |
+          xvfb-run --auto-servernum \
+          --server-args="-screen 0 1920x1080x24" \
+          node src/test/java/js/Selenium/tests/quickStart.js
+
+      # =========================
+      # JAVA TESTS
+      # =========================
+
       - name: List existing screenshots before tests
         run: |
           mkdir -p src/test/java/tests/screenshots
