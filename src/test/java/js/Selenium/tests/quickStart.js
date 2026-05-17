@@ -1,36 +1,95 @@
-const {Builder, By, Key, until, Browser} = require('selenium-webdriver');
+const {Builder, By, Key, until, Browser, logging} = require('selenium-webdriver');
 const assert = require("assert");
 const {expect} = require('chai');
+const fs = require('fs');
+const path = require('path');
+const os = require('os');
 const chrome = require('selenium-webdriver/chrome');
-const logging = require('selenium-webdriver/lib/logging')
-logger = logging.getLogger('webdriver')
-logger.setLevel(logging.Level.INFO)
+logging.installConsoleHandler();
+const logger = logging.getLogger('promise.ControlFlow');
+logger.setLevel(logging.Level.INFO);
 let driver;
-let InitialDriver;
+
+/**
+ * Retourne un chemin vers chromedriver s'il est trouvable :
+ * - prefer `require('chromedriver').path`
+ * - sinon quelques emplacements courants selon la plateforme
+ * - sinon null (service sans path -> rely on PATH)
+ */
+function resolveChromeDriverPath() {
+    try {
+        const chromedriver = require('chromedriver');
+        if (chromedriver && chromedriver.path && fs.existsSync(chromedriver.path)) {
+            return chromedriver.path;
+        }
+    } catch (e) {
+        // module non installé, continuer avec candidats
+    }
+
+    const platform = process.platform;
+    const candidates = platform === 'win32' ? [
+        path.join(process.cwd(), 'node_modules', 'chromedriver', 'lib', 'chromedriver', 'chromedriver.exe'),
+        'C:\\chromedriver\\chromedriver.exe'
+    ] : [
+        '/usr/bin/chromedriver',
+        '/usr/local/bin/chromedriver'
+    ];
+
+    for (const p of candidates) {
+        if (p && fs.existsSync(p)) return p;
+    }
+    return null;
+}
 
 
+// javascript
 async function getDriver() {
+    const options = new chrome.Options();
 
-    let options = new chrome.Options();
+    // headless toggle: default = true, set HEADLESS=false to voir le navigateur
+    const headless = (process.env.HEADLESS || 'true').toLowerCase() !== 'false';
+    console.log('Chrome headless:', headless);
 
-    options.setChromeBinaryPath('/usr/bin/chromium-browser');
+    // n'appliquer setChromeBinaryPath que sur Linux/CI si nécessaire
+    if (process.platform !== 'win32') {
+        options.setChromeBinaryPath('/usr/bin/chromium-browser'); // utile en CI linux
+    }
 
-    options.addArguments(
-        '--headless=new',
+    const args = [
         '--no-sandbox',
         '--disable-dev-shm-usage',
-        '--window-size=1920,1080'
-    );
+        '--window-size=1920,1080',
+        '--log-level=3',
+        '--disable-logging'
+    ];
 
-    let service = new chrome.ServiceBuilder('/usr/bin/chromedriver');
+    if (headless) {
+        args.unshift('--headless=new');
+    }
 
-    InitialDriver = await new Builder()
+    options.addArguments(...args);
+
+    const chromedriverPath = resolveChromeDriverPath();
+    let serviceBuilder;
+    const nulPath = process.platform === 'win32' ? 'NUL' : '/dev/null';
+
+    if (chromedriverPath) {
+        console.log('Using chromedriver at:', chromedriverPath);
+        serviceBuilder = new chrome.ServiceBuilder(chromedriverPath).loggingTo(nulPath);
+    } else {
+        console.warn('No explicit chromedriver found, relying on PATH to locate chromedriver.');
+        serviceBuilder = new chrome.ServiceBuilder().loggingTo(nulPath);
+    }
+
+    process.env.CHROME_LOG_FILE = nulPath;
+
+    driver = await new Builder()
         .forBrowser(Browser.CHROME)
         .setChromeOptions(options)
-        .setChromeService(service)
+        .setChromeService(serviceBuilder)
         .build();
 
-    return InitialDriver;
+    return driver;
 }
 
 
@@ -47,7 +106,7 @@ async function getDriver() {
         // get title of page
         const pageTitle1 = await driver.getTitle();
         // display the title of the page
-        console.log("Page Title 1 is : " + pageTitle1);
+        logger.info("Page Title 1 is : " + pageTitle1);
         // assert that the title is correct
         assert.ok("DEMO TENANT" === pageTitle1, "Title is not correct");
         // chai expect test
@@ -70,7 +129,7 @@ async function getDriver() {
         //On successful login get page title and Check page title, to confirm login was successful
         const pageTitle2 = await driver.getTitle();
         // display the title of the page
-        console.log("Page Title 2 is : " + pageTitle2);
+        logger.info("Page Title 2 is : " + pageTitle2);
         // assert using chai
         expect(pageTitle2).to.equal("DEMO TENANT");
         //Check if redirect to login page was successful
