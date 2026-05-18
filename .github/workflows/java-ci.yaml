@@ -90,6 +90,21 @@ jobs:
           node src/test/java/js/Selenium/tests/quickStart.js
 
       # =========================
+      # RUN WEBDRIVER IO JS TEST
+      # =========================
+
+      - name: Run WebdriverIO Tests
+        working-directory: src/test/java/js/WebdriverIO
+        env:
+          DISPLAY: :99
+          CHROME_BIN: /usr/bin/chromium-browser
+
+        run: |
+          xvfb-run --auto-servernum \
+          --server-args="-screen 0 1920x1080x24" \
+          npx wdio run wdio.conf.js
+
+      # =========================
       # JAVA TESTS
       # =========================
 
