@@ -45,7 +45,7 @@ class RegisterPage extends Page {
     }
 
     get btnRegister() {
-        return $('body > div:nth-child(30) > main > div:nth-child(3) > form > button');
+        return $('button[class=\'w-full h-[45px] text-poppins text-medium text-[15px] leading-5 px-8 mb-6 border-black border rounded-[6px] bg-secondary text-accent\']');
     }
 
     /**
@@ -60,12 +60,19 @@ class RegisterPage extends Page {
         } else {
             console.log("Invalid Gender !");
         }
+        setTimeout(() => 2000);
         await this.inputNom.setValue(nom);
+        setTimeout(() => 2000);
         await this.inputPrenom.setValue(prenom);
+        setTimeout(() => 2000);
         await this.inputEmail.setValue(email);
+        setTimeout(() => 2000);
         await this.inputTelephone.setValue(telephone);
+        setTimeout(() => 2000);
         await this.inputPassword.setValue(password);
+        setTimeout(() => 2000);
         await this.checkCGUV.click();
+        setTimeout(() => 2000);
         await this.btnRegister.click();
     }
 
