@@ -53,27 +53,43 @@ class RegisterPage extends Page {
      * e.g. to login using username and password
      */
     async register(gender, nom, prenom, email, telephone, password) {
+
         if (gender === "Male") {
             await this.checkMale.click();
         } else if (gender === "Female") {
             await this.checkFemale.click();
-        } else {
-            console.log("Invalid Gender !");
         }
-        setTimeout(() => 2000);
+
         await this.inputNom.setValue(nom);
-        setTimeout(() => 2000);
         await this.inputPrenom.setValue(prenom);
-        setTimeout(() => 2000);
         await this.inputEmail.setValue(email);
-        setTimeout(() => 2000);
         await this.inputTelephone.setValue(telephone);
-        setTimeout(() => 2000);
+
+        // petit scroll manuel
+        await browser.execute(() => {
+            window.scrollBy(0, 300);
+        });
+
+        await browser.pause(1000);
+
         await this.inputPassword.setValue(password);
-        setTimeout(() => 2000);
+
+        // scroll vers checkbox
+        await this.checkCGUV.scrollIntoView();
+
+        await browser.pause(1000);
+
         await this.checkCGUV.click();
-        setTimeout(() => 2000);
-        await this.btnRegister.click();
+
+        // scroll vers bouton
+        await this.btnRegister.scrollIntoView();
+
+        await browser.pause(2000);
+
+        // JS click pour éviter "click intercepted"
+        await browser.execute((btn) => {
+            btn.click();
+        }, await this.btnRegister);
     }
 
     /**
