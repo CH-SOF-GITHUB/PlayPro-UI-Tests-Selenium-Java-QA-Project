@@ -45,7 +45,7 @@ class RegisterPage extends Page {
     }
 
     get btnRegister() {
-        return $('button[class="w-full h-[45px] text-poppins text-medium text-[15px] leading-5 px-8 mb-6 border-black border rounded-[6px] bg-secondary text-accent"]');
+        return $('button[class=\'w-full h-[45px] text-poppins text-medium text-[15px] leading-5 px-8 mb-6 border-black border rounded-[6px] bg-secondary text-accent\']');
     }
 
     /**
