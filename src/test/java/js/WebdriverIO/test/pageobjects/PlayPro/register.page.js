@@ -45,7 +45,7 @@ class RegisterPage extends Page {
     }
 
     get btnRegister() {
-        return $('button[class=\'w-full h-[45px] text-poppins text-medium text-[15px] leading-5 px-8 mb-6 border-black border rounded-[6px] bg-secondary text-accent\']');
+        return $('body > div:nth-child(30) > main > div:nth-child(3) > form > button');
     }
 
     /**
@@ -64,7 +64,6 @@ class RegisterPage extends Page {
         await this.inputPrenom.setValue(prenom);
         await this.inputEmail.setValue(email);
         await this.inputTelephone.setValue(telephone);
-        // await this.inputDateDeNaissance.setValue(dateDeNaissance);
         await this.inputPassword.setValue(password);
         await this.checkCGUV.click();
         await this.btnRegister.click();
