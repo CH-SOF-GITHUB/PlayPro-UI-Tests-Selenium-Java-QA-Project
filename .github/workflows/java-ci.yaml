@@ -125,6 +125,9 @@ jobs:
           mkdir -p src/test/java/tests/screenshots
           ls src/test/java/tests/screenshots > screenshots_before.txt || true
 
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@v1
+
       - name: Run Specific Suite (test cases)
         run: mvn -B -Dtest=tests.PlayPro.DEV.LambdaTest.Chrome.Reservations.TC03 test
 
