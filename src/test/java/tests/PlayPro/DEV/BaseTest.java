@@ -46,7 +46,7 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
+        options.setBinary("/usr/bin/google-chrome-stable");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         Wait = new WebDriverWait(driver, Duration.ofSeconds(25));
