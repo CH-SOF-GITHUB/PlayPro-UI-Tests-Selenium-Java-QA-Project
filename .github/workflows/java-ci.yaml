@@ -41,6 +41,18 @@ jobs:
         run: mvn clean compile
 
       # =========================
+      # INSTALL CHROMIUM
+      # =========================
+
+      - name: Install Chromium + ChromeDriver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser chromium-chromedriver
+          
+          which chromium-browser
+          which chromedriver
+
+      # =========================
       # NODE + SELENIUM JS SETUP
       # =========================
 
