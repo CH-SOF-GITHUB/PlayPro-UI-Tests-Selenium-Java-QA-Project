@@ -74,3 +74,24 @@ git checkout main -- src/test/java/js
 git add src/test/java/js
 git commit -m "Import JS Selenium tests from main"
 git push -u origin circleci-project-setup
+
+
+
+
+
+
+
+
+
+
+      # mvn clean test -Dtest=Runners.TestRunner -Dcucumber.filter.tags="@SampleGoogleSearch"
+      # TestRunner: run: mvn -B -Dtest=Runners.TestRunner test  OR  mvn -B clean test -Pdev -Dtest=Runners.TestRunner
+      # -B à la commande Maven dans ton workflow. Cela garantit que Maven fonctionne en mode non interactif,
+      # ce qui est recommandé dans les environnements CI comme GitHub Actions.
+      # mvn -B test -Dsurefire.suiteXmlFiles=/home/runner/work/PlayPro-UI-Tests-Selenium-Java/PlayPro-UI-Tests-Selenium-Java/src/test/resources/suites/testng.xml
+      # mvn -B -Dtest=tests.PlayPro.DEV.Edge.LambdaTest.Reservations.TC03 test
+      # Optional: désactivé car provoque 403
+      # - name: Update dependency graph
+      #   uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
