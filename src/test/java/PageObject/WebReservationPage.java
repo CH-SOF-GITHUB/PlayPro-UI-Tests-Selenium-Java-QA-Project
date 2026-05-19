@@ -23,7 +23,7 @@ public class WebReservationPage {
     }
 
     /* web elements of POM class */
-    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' bg-secondary ') and contains(concat(' ', normalize-space(@class), ' '), ' shadow ')]")
+    @FindBy(xpath = "/html/body/header/div/div[2]/a[1]")
     private WebElement RéservationsLink;
 
     @FindBy(xpath = "(//a[@class='flex items-center justify-center gap-[0.625rem] rounded-[0.625rem] h-[35px] w-[7.938rem] bg-secondary text-accent font-medium text-[1rem] text-base leading-[1.2rem] first-letter:capitalize'])[1]")

@@ -23,7 +23,7 @@ public class TC03 extends LoggedBaseTest {
     public void AccessToCategoryVr() throws InterruptedException {
         // Test implementation goes here
         // click on Réservations link in navbar
-        webReservationPage.clickRéservationsLinkEnNavBar();
+        webReservationPage.clickRéserverLink();
         // scroll to category VR and click it
         webReservationPage.clickOnCategoryVR();
     }
