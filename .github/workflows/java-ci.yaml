@@ -114,7 +114,7 @@ jobs:
           ls src/test/java/tests/screenshots > screenshots_before.txt || true
 
       - name: Run Specific Suite (test cases)
-        run: mvn -B -Dtest=tests.PlayPro.DEV.Edge.LambdaTest.Reservations.TC03 test
+        run: mvn -B -Dtest=tests.PlayPro.DEV.LambdaTest.Chrome.Reservations.TC03 test
 
       #  name: Upload TestNG reports
       #  name: Run TestNG suite with testng.xml
