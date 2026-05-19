@@ -28,7 +28,7 @@ public class WebEXP2Page {
     /**
      *  Experience Card Path
      */
-    @FindBy(xpath = "//*[@href = '/discover/reservation/expert-vr']//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' h-full ') and contains(concat(' ', normalize-space(@class), ' '), ' justify-end ')]")
+    @FindBy(xpath = "//*[@href = '/discover/reservation/expert-vr']//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' shadow-lg ')]")
     private WebElement ExpertVRCard;
 
 
