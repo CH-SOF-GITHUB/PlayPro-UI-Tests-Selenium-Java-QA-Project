@@ -8,7 +8,7 @@ describe('PlayPro Register system', () => {
         // code of test here
         await RegisterPage.open();
         await CookiePage.acceptCookies();
-        await RegisterPage.register("Male", "Ben Said", "Chaker", "cbh02@yopmail.com", "33356895", "Admin1234!");
+        await RegisterPage.register("Male", "Ben Said", "Chaker", "cbh02@yopmail.com", "12356895", "Admin1234!");
         // check the expected result compared to the actual result
         await expect(SecurePage.ToastifyAlert).toBeExisting();
         await expect(SecurePage.ToastifyAlert).toHaveText(expect.stringContaining("Bienvenue ! Votre compte est activé."))
