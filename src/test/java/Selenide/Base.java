@@ -11,7 +11,7 @@ public class Base {
     @BeforeClass
     public void setUp() {
         System.out.println("Setting up Base Selenide configuration...");
-        Configuration.baseUrl = "https://demotenant.playpro.fr/";
+        Configuration.baseUrl = "https://demotenant.playpro.fr";
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
         Configuration.headless = false;
