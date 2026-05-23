@@ -104,7 +104,8 @@ public class WebLoginPage {
     }
 
     // getters for error messages
-    public String GetLoginErrorMessage() {
+    public String GetLoginErrorMessage() throws InterruptedException {
+        Thread.sleep(1000);
         wait.until(ExpectedConditions.visibilityOf(LoginErrorMessage));
         return LoginErrorMessage.getText();
     }
@@ -117,22 +118,5 @@ public class WebLoginPage {
     public String GetPasswordRequiredErrorMessage() {
         wait.until(ExpectedConditions.visibilityOf(PasswordRequiredErrorMessage));
         return PasswordRequiredErrorMessage.getText();
-    }
-
-    /**
-     * This function will take screenshot
-     * @param webdriver
-     * @param fileWithPath
-     * @throws Exception
-     */
-    public void takeSnapShot(WebDriver webdriver, String fileWithPath) throws RuntimeException, IOException {
-        //Convert web driver object to TakeScreenshot
-        TakesScreenshot scrShot = ((TakesScreenshot) webdriver);
-        //Call getScreenshotAs method to create image file
-        File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
-        //Move image file to new destination
-        File DestFile = new File(fileWithPath);
-        //Copy file at destination
-        FileUtils.copyFile(SrcFile, DestFile);
     }
 }

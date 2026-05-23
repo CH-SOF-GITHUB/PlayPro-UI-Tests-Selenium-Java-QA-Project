@@ -5,6 +5,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.PlayPro.DEV.BaseTest;
 
+import java.util.Objects;
+
 public class TC01 extends BaseTest {
     // define Login object page
     WebLoginPage webLoginPage = null;
@@ -16,13 +18,9 @@ public class TC01 extends BaseTest {
             webLoginPage.EnterEmail("demotenant1@yopmail.com");
             webLoginPage.EnterPassword("Admin1234!");
             webLoginPage.ClickLoginButton();
-            // wait for 7s for loading page
-            Thread.sleep(7000);
             // verify the login conditions
-            String ActualURL = driver.getCurrentUrl();
-            String ActualTitle = driver.getTitle();
-            Assert.assertEquals(ActualURL, "https://demotenant.playpro.fr/");
-            Assert.assertEquals(ActualTitle, "DEMO TENANT");
+            Wait.until(d -> Objects.equals(d.getCurrentUrl(), "https://demotenant.playpro.fr/"));
+            Wait.until(d -> Objects.equals(d.getTitle(), "DEMO TENANT"));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -33,10 +31,11 @@ public class TC01 extends BaseTest {
         try {
             webLoginPage = new WebLoginPage(driver);
             webLoginPage.EnterEmail("demotenant1@yopmail.com");
-            webLoginPage.EnterPassword("Admin1234!");
+            webLoginPage.EnterPassword("Admin12345!");
             webLoginPage.ClickLoginButton();
             // verify the error login is appeared
             String ErrorMsg = webLoginPage.GetLoginErrorMessage();
+            System.out.println(ErrorMsg);
             Assert.assertEquals(ErrorMsg, "Veuillez vérifier votre email/ mot de passe", "Error Login Failed!");
         } catch (Exception e) {
             e.printStackTrace();

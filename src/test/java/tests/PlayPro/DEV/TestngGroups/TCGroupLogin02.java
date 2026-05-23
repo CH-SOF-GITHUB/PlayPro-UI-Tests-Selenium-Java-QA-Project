@@ -47,7 +47,7 @@ public class TCGroupLogin02 extends LTConfig {
             Assert.assertEquals(ActualEmailErrorMsg, ExpectedEmailErrorMsg, "Empty email error msg Failed!");
             Assert.assertEquals(ActualPasswordErrorMsg, ExpectedPasswordErrorMsg, "Empty password error msg Failed!");
             // get screenshot
-            webLoginPage.takeSnapShot(driver, "src/test/java/tests/Screenshots/TestngGroupEmptyCredentials.png");
+            // webLoginPage.takeSnapShot(driver, "src/test/java/tests/Screenshots/TestngGroupEmptyCredentials.png");
         } catch (Exception e) {
             e.getStackTrace();
         }
@@ -64,7 +64,7 @@ public class TCGroupLogin02 extends LTConfig {
             // check the testng results
             Thread.sleep(5000);
             // get screenshot after clicking show password
-            webLoginPage.takeSnapShot(driver, "src/test/java/tests/Screenshots/TestngGroupShowPassword.png");
+            // webLoginPage.takeSnapShot(driver, "src/test/java/tests/Screenshots/TestngGroupShowPassword.png");
             webLoginPage.ClickShowPasswordButton();
         } catch (Exception e) {
             e.getStackTrace();

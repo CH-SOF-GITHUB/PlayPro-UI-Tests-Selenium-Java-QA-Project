@@ -1,0 +1,61 @@
+# This config was automatically generated from your source code
+# Stacks detected: cicd:github-actions:.github/workflows,deps:java:.
+version: 2.1
+jobs:
+  test-java:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
+      - run:
+          name: Calculate cache key
+          command: |-
+            find . -name 'pom.xml' -o -name 'gradlew*' -o -name '*.gradle*' | \
+                    sort | xargs cat > /tmp/CIRCLECI_CACHE_KEY
+      - restore_cache:
+          key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
+      - run:
+          name: glob, split and run TestNG tests
+          command: |
+            mkdir -p target/surefire-reports/junitreports
+            
+            circleci tests glob "src/test/java/tests/PlayPro/DEV/LambdaTest/Chrome/Reservations/*.java" \
+            | sed 's@src/test/java/@@' \
+            | sed 's@/@.@g' \
+            | sed 's/.java$//' \
+            | circleci tests run \
+                --command="xargs | sed 's/ /,/g' | xargs -I{} mvn test -Dtest={}" \
+                --verbose \
+                --split-by=timings \
+                --timings-type=classname
+      - store_test_results:
+          path: target/surefire-reports/junitreports
+      - store_artifacts:
+          path: target/surefire-reports
+          destination: test-reports
+      - store_artifacts:
+          path: src/test/java/tests/Screenshots
+          destination: screenshots
+      - save_cache:
+          key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
+          paths:
+            - ~/.m2/repository
+  deploy:
+    # This is an example deploy job, not actually used by the workflow
+    docker:
+      - image: cimg/base:stable
+    steps:
+      # Replace this with steps to deploy to users
+      - run:
+          name: deploy
+          command: '#e.g. ./deploy.sh'
+      - run:
+          name: found github actions config
+          command: ':'
+workflows:
+  build-and-test:
+    jobs:
+      - test-java
+    # - deploy:
+    #     requires:
+    #       - test-java

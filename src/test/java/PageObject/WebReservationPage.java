@@ -23,10 +23,10 @@ public class WebReservationPage {
     }
 
     /* web elements of POM class */
-    @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' bg-secondary ') and contains(concat(' ', normalize-space(@class), ' '), ' shadow ')]")
+    @FindBy(xpath = "//a[contains(@class, 'h-8')]")
     private WebElement RéservationsLink;
 
-    @FindBy(xpath = "/html/body/div[1]/main/section[1]/div[2]/div[2]/div/a[1]")
+    @FindBy(xpath = "//a[contains(@class, 'w-[7.938rem]')]")
     private WebElement RéserverLink;
 
     // @FindBy(xpath = "(//p[normalize-space()='Nos activités'])[1]")
@@ -34,6 +34,11 @@ public class WebReservationPage {
 
     @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' rounded-md ') and contains(concat(' ', normalize-space(@class), ' '), ' font-poppins ')]")
     private WebElement Offre_Link;
+    /*
+       Find web elements for Experiences, Activities, Events, and Categories (VR, Escape Game, etc.) if needed for future test cases.
+     */
+    @FindBy(xpath = "//a[1]//div[1]//div[2]//div[1]//div[2]//div[1]")
+    private WebElement Category_VR_Link;
 
     /* methods of POM class */
     public void ClickOffreMenuNavbar() throws InterruptedException {
@@ -55,6 +60,13 @@ public class WebReservationPage {
         WebElement button = wait.until(ExpectedConditions.visibilityOf(RéserverLink));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
         System.out.println("Réserver link clicked in navbar");
+    }
+
+    public void clickOnCategoryVR() throws InterruptedException {
+        Thread.sleep(2000);
+        WebElement button = wait.until(ExpectedConditions.visibilityOf(Category_VR_Link));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        System.out.println("Category VR clicked in reservation page");
     }
 
     /* public void checkVisibilityOfNosActivitesText() {

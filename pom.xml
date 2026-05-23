@@ -190,6 +190,12 @@
             <version>7.10.2</version>
             <scope>compile</scope>
         </dependency>-->
+        <!-- Selenide Java -->
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide-testng</artifactId>
+            <version>7.16.1</version>
+        </dependency>
     </dependencies>
     <profiles>
         <profile>
@@ -204,6 +210,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version> <!-- ajouter une version pour supprimer l'avertissement -->
                 <configuration>
                     <source>11</source>
                     <target>11</target>
@@ -220,10 +227,24 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
+                    <!-- keep your cucumber config -->
                     <systemPropertyVariables>
                         <!--suppress UnresolvedMavenProperty -->
                         <cucumber.filter.tags>${cucumber.filter.tags}</cucumber.filter.tags>
                     </systemPropertyVariables>
+                    <!-- ✅ Force JUnit format (for CircleCI) -->
+                    <properties>
+                        <property>
+                            <name>junit</name>
+                            <value>true</value>
+                        </property>
+                    </properties>
+                    <!-- ✅ IMPORTANT: show logs in console -->
+                    <useFile>true</useFile>
+                    <!-- ✅ show more details -->
+                    <printSummary>true</printSummary>
+                    <!-- optional -->
+                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
                 </configuration>
             </plugin>
         </plugins>
