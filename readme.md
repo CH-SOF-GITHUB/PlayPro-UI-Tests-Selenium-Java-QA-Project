@@ -79,6 +79,8 @@ git push -u origin circleci-project-setup
 # Ensuite, tu pourras créer une Pull Request pour
 Merge 'circleci-project-setup' into 'main' 
 
+clean test -Dsurefire.suiteXmlFiles=src/test/resources/xml/testng.xml
+
 
 
 # mvn clean test -Dtest=Runners.TestRunner -Dcucumber.filter.tags="@SampleGoogleSearch"
