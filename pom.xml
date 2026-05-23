@@ -190,7 +190,12 @@
             <version>7.10.2</version>
             <scope>compile</scope>
         </dependency>-->
-        <!-- A reporter plug-in for reports-->
+        <!-- Selenide Java -->
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide-testng</artifactId>
+            <version>7.16.1</version>
+        </dependency>
     </dependencies>
     <profiles>
         <profile>
