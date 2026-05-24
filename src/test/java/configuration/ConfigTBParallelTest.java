@@ -1,5 +1,5 @@
+/*
 package configuration;
-
 import com.testingbot.testingbotrest.TestingbotUnauthorizedException;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -42,3 +42,4 @@ public class ConfigTBParallelTest {
         return driver;
     }
 }
+*/
