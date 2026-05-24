@@ -27,6 +27,7 @@ public class TC01 extends Base {
         Thread.sleep(5000);
         String expectedUrl = "https://demotenant.playpro.fr/";
         String actualUrl = getWebDriver().getCurrentUrl();
+        // Junit assertion
         Assert.assertEquals(expectedUrl, actualUrl);
     }
 
@@ -40,6 +41,7 @@ public class TC01 extends Base {
         Thread.sleep(3000);
         String expectedUrl = "https://demotenant.playpro.fr/";
         String actualUrl = getWebDriver().getCurrentUrl();
+        // Junit assertion
         Assert.assertEquals(expectedUrl, actualUrl);
     }
 }
