@@ -9,14 +9,17 @@
 
     <name>MobileWebTesting</name>
     <url>http://maven.apache.org</url>
-
+    <scm>
+        <connection>scm:git@github.com:selenide/selenide.git</connection>
+        <developerConnection>scm:git@github.com:selenide/selenide.git</developerConnection>
+        <url>https://github.com/selenide/selenide</url>
+    </scm>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <repositories>
-        <!-- Uncomment only for testing any SNAPSHOT version of carina or zebrunner agent! -->
-        <!--repository>
+    <!--<repositories>
+        &lt;!&ndash; Uncomment only for testing any SNAPSHOT version of carina or zebrunner agent! &ndash;&gt;
+        &lt;!&ndash;repository>
             <id>zebrunner_snapshots</id>
             <name>zebrunner Snapshots</name>
             <url>https://nexus.zebrunner.dev/repository/ce-snapshots/</url>
@@ -26,8 +29,8 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </repository-->
-    </repositories>
+        </repository&ndash;&gt;
+    </repositories>-->
     <dependencyManagement>
         <dependencies>
             <!-- Utiliser le BOM de Cucumber pour gérer cucumber dependencies by version -->
@@ -37,6 +40,11 @@
                 <version>7.18.1</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>2.21.3</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -56,43 +64,20 @@
             <version>5.5.1</version>
             <scope>compile</scope>
         </dependency>
-        <!-- MOBILE -->
-        <!-- Source: https://mvnrepository.com/artifact/io.appium/java-client -->
+        <!-- MOBILE Source: https://mvnrepository.com/artifact/io.appium/java-client -->
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
             <version>10.0.0</version>
             <scope>compile</scope>
         </dependency>
-        <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-android-driver -->
-        <!--<dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-android-driver</artifactId>
-            <version>2.39.0</version>
-            <scope>compile</scope>
-        </dependency>-->
-        <!--END MOBILE -->
-        <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>4.41.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.testingbot/testingbotrest -->
+        <!-- https://mvnrepository.com/artifact/com.testingbot/testingbotrest
         <dependency>
             <groupId>com.testingbot</groupId>
             <artifactId>testingbotrest</artifactId>
             <version>1.0.8</version>
             <scope>test</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.10.2</version>
-            <scope>test</scope>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
@@ -134,67 +119,110 @@
             <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
-        <!-- Carina
-        <dependency>
-            <groupId>com.zebrunner</groupId>
-            <artifactId>carina-dataprovider</artifactId>
-            <version>RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>com.zebrunner</groupId>
-            <artifactId>carina-core</artifactId>
-            <version>1.2.9</version>
-        </dependency>
-        <dependency>
-            <groupId>com.zebrunner</groupId>
-            <artifactId>agent-testng</artifactId>
-            <version>1.6.6</version>
-        </dependency>
+        <!-- Carina -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.30</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>2.17.1</version>
         </dependency>
+        <!-- https://central.sonatype.com/artifact/com.codeborne/selenide-testng/overview -->
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.17.1</version>
-        </dependency>
-
-        <dependency>
-            we need it to reuse benefits of zebrunner testng agent for webdriver
-                sesssion(s) declaration
-            <groupId>net.bytebuddy</groupId>
-            <artifactId>byte-buddy</artifactId>
-            <version>1.10.18</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.5.6</version>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.3.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.10.2</version>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.43.0</version>
             <scope>compile</scope>
-        </dependency>-->
-        <!-- Selenide Java -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.google.code.findbugs</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>7.16.1</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide-testng</artifactId>
             <version>7.16.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.11.0</version>
+            <scope>compile</scope>
+            <!-- <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions> -->
+        </dependency>
+        <dependency>
+            <groupId>org.jspecify</groupId>
+            <artifactId>jspecify</artifactId>
+            <version>1.0.0</version>
+            <scope>runtime</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.findbugs</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.google.errorprone</groupId>
+            <artifactId>error_prone_annotations</artifactId>
+            <version>2.49.0</version>
+            <scope>runtime</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.findbugs</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.20.0</version>
+            <scope>runtime</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.findbugs</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.22.0</version>
+            <scope>runtime</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.findbugs</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- TestNG dépend de jcommander. Maven devrait gérer cela automatiquement, mais parfois, il faut explicitement ajouter la dépendance. -->
+        <dependency>
+            <groupId>com.beust</groupId>
+            <artifactId>jcommander</artifactId>
+            <version>1.81</version> <!-- Vérifiez la dernière version -->
         </dependency>
     </dependencies>
     <profiles>
