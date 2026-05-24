@@ -171,6 +171,18 @@
             </exclusions> -->
         </dependency>
         <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide-junit4</artifactId>
+            <version>7.16.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide-video-recorder</artifactId>
+            <version>7.16.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.jspecify</groupId>
             <artifactId>jspecify</artifactId>
             <version>1.0.0</version>

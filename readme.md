@@ -94,3 +94,90 @@ clean test -Dsurefire.suiteXmlFiles=src/test/resources/xml/testng.xml
 #   uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
 #   env:
 #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+
+###########################################################################################################################################################
+How best to confgurate POM.XML:
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.selenide.examples</groupId>
+  <artifactId>selenide-cucumber</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <properties>
+    <maven.compiler.source>25</maven.compiler.source>
+    <maven.compiler.target>25</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <surefireVersion>3.5.5</surefireVersion>
+    <cucumberVersion>7.34.3</cucumberVersion>
+    <selenideVersion>7.16.1</selenideVersion>
+  </properties>
+
+  <build>
+    <defaultGoal>test</defaultGoal>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${surefireVersion}</version>
+        <configuration>
+          <systemPropertyVariables>
+            <selenide.downloadsFolder>target/downloads</selenide.downloadsFolder>
+          </systemPropertyVariables>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>2.0.18</version>
+    </dependency>
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>${cucumberVersion}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-junit</artifactId>
+      <version>${cucumberVersion}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.codeborne</groupId>
+      <artifactId>selenide-junit4</artifactId>
+      <version>${selenideVersion}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.codeborne</groupId>
+      <artifactId>selenide-video-recorder</artifactId>
+      <version>${selenideVersion}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>${surefireVersion}</version>
+      </plugin>
+    </plugins>
+  </reporting>
+</project>

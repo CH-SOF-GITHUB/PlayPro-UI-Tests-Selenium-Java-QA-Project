@@ -17,7 +17,7 @@ public class LoginPage {
 
     // Method to open the login page
     public void openLoginPage() {
-        open("/connexion");
+        open("https://demotenant.playpro.fr/connexion");
     }
 
     // Method to set email
