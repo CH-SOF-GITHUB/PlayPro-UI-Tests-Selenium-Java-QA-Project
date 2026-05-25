@@ -2,9 +2,9 @@ name: Selenide UI Tests
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "circleci-project-setup" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "circleci-project-setup" ]
 
 jobs:
   selenide-tests:
