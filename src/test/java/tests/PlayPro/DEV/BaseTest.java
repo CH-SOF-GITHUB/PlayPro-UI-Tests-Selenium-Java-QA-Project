@@ -44,7 +44,14 @@ public class BaseTest {
     public void setUp() {
         log.info("Starting WebDriver...");
         // =========================
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        String headless = System.getProperty("headless", "false");
+        if (headless.equals("true")) {
+            options.addArguments("--headless=new");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+        }
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         // =========================
         Wait = new WebDriverWait(driver, Duration.ofSeconds(25));
@@ -64,7 +71,7 @@ public class BaseTest {
     public void tearDown(ITestResult result) throws IOException {
         if (result.getStatus() == ITestResult.FAILURE) {
             File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            File targetFile = new File("C:\\Users\\chaker\\Desktop\\automation\\Mobile-Web-Testing\\MobileWebTesting\\src\\test\\java\\tests\\Screenshots\\failure\\" + result.getMethod().getMethodName() + ".png");
+            File targetFile = new File("target/selenium/java/screenshots/failure/" + result.getMethod().getMethodName() + ".png");
             FileUtils.copyFile(srcFile, targetFile);
         }
 
