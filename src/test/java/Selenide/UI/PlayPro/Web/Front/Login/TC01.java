@@ -7,7 +7,8 @@ import Selenide.UI.PlayPro.Web.Front.Pages.LogoutPage;
 import Selenide.UI.PlayPro.Web.Front.Pages.UserProfilePage;
 import org.junit.Assert;
 import org.testng.annotations.Test;
-
+import static com.codeborne.selenide.Selenide.webdriver;
+import static com.codeborne.selenide.WebDriverConditions.url;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 
@@ -30,11 +31,7 @@ public class TC01 extends Base {
         // Step 3: Click on the login button
         loginPage.clickLoginButton();
         // Step 4: Verify that the user is successfully logged in and redirected to the dashboard
-        Thread.sleep(5000);
-        String expectedUrl = "https://demotenant.playpro.fr/";
-        String actualUrl = getWebDriver().getCurrentUrl();
-        // Junit assertion
-        Assert.assertEquals(expectedUrl, actualUrl);
+        webdriver().shouldHave(url("https://demotenant.playpro.fr/"));
     }
 
     @Test(priority = 2, dependsOnMethods = "UserCanLoginWithValidCredentials")
@@ -44,10 +41,6 @@ public class TC01 extends Base {
         // Step 2: Click on the logout button
         logoutPage.clickLogoutButton();
         // Step 3: Verify that the user is successfully logged out and redirected to the login page
-        Thread.sleep(3000);
-        String expectedUrl = "https://demotenant.playpro.fr/";
-        String actualUrl = getWebDriver().getCurrentUrl();
-        // Junit assertion
-        Assert.assertEquals(expectedUrl, actualUrl);
+        webdriver().shouldHave(url("https://demotenant.playpro.fr/"));
     }
 }

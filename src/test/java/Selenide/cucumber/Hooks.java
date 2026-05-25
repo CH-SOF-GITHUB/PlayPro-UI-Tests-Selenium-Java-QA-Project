@@ -17,8 +17,8 @@ public class Hooks {
     public void beforeTest(Scenario scenario) {
         scenario.log("Starting Selenide cucumber test: " + scenario.getName());
         Configuration.baseUrl = "https://demotenant.playpro.fr";
-        Configuration.reportsFolder = "target/selenide-reports";
-        Configuration.downloadsFolder = "target/selenide-downloads";
+        Configuration.reportsFolder = "target/selenide-cucumber/reports";
+        Configuration.downloadsFolder = "target/selenide-cucumber/downloads";
         Configuration.browserCapabilities = new ChromeOptions().addArguments("--disable-blink-features=AutomationControlled");
         report.start();
         // Start video recording

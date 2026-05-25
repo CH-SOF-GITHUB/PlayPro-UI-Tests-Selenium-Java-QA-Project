@@ -25,3 +25,10 @@ jobs:
 
       - name: Run Selenide tests
         run: mvn -Dtest=Selenide.UI.PlayPro.Web.Front.Login.TC01 test
+
+      - name: Upload Selenide Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: selenide-reports
+          path: target/selenide-ci-reports
