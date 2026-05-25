@@ -44,31 +44,16 @@ public class BaseTest {
     public void setUp() {
 
         log.info("Starting WebDriver...");
-
         ChromeOptions options = new ChromeOptions();
-
-        // =========================
-        // CI + LOCAL COMPATIBILITY FIX
-        // =========================
-        String chromeBinary = System.getenv("CHROME_BINARY");
-        if (chromeBinary != null && !chromeBinary.isEmpty()) {
-            options.setBinary(chromeBinary);
-        }
-
         // =========================
         // STABLE CI ARGUMENTS
         // =========================
-        options.addArguments("--headless=new");
-        options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--window-size=1920,1080");
-
         // =========================
         // INIT DRIVER
         // =========================
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
-
         Wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
         // =========================

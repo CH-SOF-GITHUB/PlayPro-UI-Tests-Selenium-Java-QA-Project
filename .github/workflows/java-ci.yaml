@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -20,19 +19,18 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
-      - name: Set build name
 
+      - name: Set build name
         run: |
           BUILD_NAME="PR-${{ github.event.pull_request.number }}-${{ github.sha }}"
           echo "BUILD_NAME=$BUILD_NAME" >> $GITHUB_ENV
-      - name: Set Repository Name
 
+      - name: Set Repository Name
         run: |
           REPO_NAME="${{ github.repository }}"
           echo "REPO_NAME=$REPO_NAME" >> $GITHUB_ENV
 
       - name: Set github run ID
-
         run: |
           GITHUB_RUN_ID="${{ github.run_id }}"
           echo "GITHUB_RUN_ID=$GITHUB_RUN_ID" >> $GITHUB_ENV  
@@ -40,73 +38,15 @@ jobs:
       - name: Clean and build project
         run: mvn clean compile
 
-      # =========================
-      # NODE + SELENIUM JS SETUP
-      # =========================
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20.18.1'
-          cache: 'npm'
-          cache-dependency-path: 'src/test/java/js/package-lock.json'
-
-      # =========================
-      # INSTALL CHROMIUM
-      # =========================
-
-      - name: Install Chromium + ChromeDriver + Xvfb
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium-browser chromium-chromedriver xvfb
-
-          which chromium-browser
-          which chromedriver
-
-          echo "CHROME_BIN=/usr/bin/chromium-browser" >> $GITHUB_ENV
-
-      # =========================
-      # INSTALL JS DEPENDENCIES
-      # =========================
-
-      - name: Install JS dependencies
-        working-directory: src/test/java/js
-        env:
-          CHROMEDRIVER_SKIP_DOWNLOAD: 'true'   # skip npm chromedriver download (on utilise chromedriver apt)
-          npm_config_engine_strict: 'false'    # ignore les vérifications d'engine (optionnel)
-        run: npm install
-
-      # =========================
-      # RUN SELENIUM JS TEST
-      # =========================
-
-      - name: Run JS Selenium test
-        env:
-          DISPLAY: :99
-          CHROME_BIN: /usr/bin/chromium-browser
-        run: |
-          xvfb-run --auto-servernum \
-          --server-args="-screen 0 1920x1080x24" \
-          node src/test/java/js/Selenium/tests/quickStart.js
-
-      # =========================
-      # JAVA TESTS
-      # =========================
+      # JAVA TESTS UNIQUEMENT
 
       - name: List existing screenshots before tests
         run: |
           mkdir -p src/test/java/tests/screenshots
           ls src/test/java/tests/screenshots > screenshots_before.txt || true
 
-      - name: Run Specific Suite (test cases)
-        run: mvn -Dtest=Selenide.UI.PlayPro.Web.Front.Login.TC01 test
-
-      #  name: Upload TestNG reports
-      #  name: Run TestNG suite with testng.xml
-      #  uses: actions/upload-artifact@v4
-      #  with:
-      #    name: testng-reports
-      #    path: src/test/java/Reports
+      - name: Run Specific Suite (test cases - selenium java)
+        run: mvn -Dtest=tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC01 test
 
       - name: List screenshots after test
         run: |
@@ -124,15 +64,3 @@ jobs:
         with:
           name: new-screenshots
           path: src/test/java/tests/screenshots
-
-      # mvn clean test -Dtest=Runners.TestRunner -Dcucumber.filter.tags="@SampleGoogleSearch"
-      # TestRunner: run: mvn -B -Dtest=Runners.TestRunner test  OR  mvn -B clean test -Pdev -Dtest=Runners.TestRunner
-      # -B à la commande Maven dans ton workflow. Cela garantit que Maven fonctionne en mode non interactif,
-      # ce qui est recommandé dans les environnements CI comme GitHub Actions.
-      # mvn -B test -Dsurefire.suiteXmlFiles=/home/runner/work/PlayPro-UI-Tests-Selenium-Java/PlayPro-UI-Tests-Selenium-Java/src/test/resources/suites/testng.xml
-      # mvn -B -Dtest=tests.PlayPro.DEV.Edge.LambdaTest.Reservations.TC03 test
-      # Optional: désactivé car provoque 403
-      # - name: Update dependency graph
-      #   uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

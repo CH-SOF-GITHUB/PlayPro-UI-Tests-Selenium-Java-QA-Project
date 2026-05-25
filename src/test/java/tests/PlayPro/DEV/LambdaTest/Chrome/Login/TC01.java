@@ -30,7 +30,7 @@ public class TC01 extends BaseTest {
     public void SampleErrorLogin() {
         try {
             webLoginPage = new WebLoginPage(driver);
-            webLoginPage.EnterEmail("demotenant1@yopmail.com");
+            webLoginPage.EnterEmail("demotenant11@yopmail.com");
             webLoginPage.EnterPassword("Admin12345!");
             webLoginPage.ClickLoginButton();
             // verify the error login is appeared

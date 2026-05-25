@@ -181,3 +181,46 @@ How best to confgurate POM.XML:
     </plugins>
   </reporting>
 </project>
+##############################################################################################################################
+@BeforeMethod
+    public void setUp() {
+
+        log.info("Starting WebDriver...");
+
+        ChromeOptions options = new ChromeOptions();
+
+        // =========================
+        // CI + LOCAL COMPATIBILITY FIX
+        // =========================
+        String chromeBinary = System.getenv("CHROME_BINARY");
+        if (chromeBinary != null && !chromeBinary.isEmpty()) {
+            options.setBinary(chromeBinary);
+        }
+
+        // =========================
+        // STABLE CI ARGUMENTS
+        // =========================
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--window-size=1920,1080");
+
+        // =========================
+        // INIT DRIVER
+        // =========================
+        driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
+
+        Wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+
+        // =========================
+        // PAGE OBJECT INIT
+        // =========================
+        webReservationPage = new WebReservationPage(driver);
+        webEXP1Page = new WebEXP1Page(driver);
+        webEXP2Page = new WebEXP2Page(driver);
+
+        log.info("Navigating to application...");
+
+        driver.get("https://demotenant.playpro.fr/connexion");
+    }
