@@ -19,7 +19,7 @@ jobs:
           command: |
             mkdir -p target/surefire-reports/junitreports
             
-            circleci tests glob "src/test/java/tests/PlayPro/DEV/LambdaTest/Chrome/Reservations/*.java" \
+            circleci tests glob "src/test/java/tests/PlayPro/DEV/LambdaTest/Chrome/Login/*.java" \
             | sed 's@src/test/java/@@' \
             | sed 's@/@.@g' \
             | sed 's/.java$//' \
