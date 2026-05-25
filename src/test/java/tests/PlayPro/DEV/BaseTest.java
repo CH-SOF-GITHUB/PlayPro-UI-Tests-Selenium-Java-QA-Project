@@ -42,20 +42,12 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp() {
-
         log.info("Starting WebDriver...");
-        ChromeOptions options = new ChromeOptions();
         // =========================
-        // STABLE CI ARGUMENTS
-        // =========================
-        options.addArguments("--disable-dev-shm-usage");
-        // =========================
-        // INIT DRIVER
-        // =========================
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
+        // =========================
         Wait = new WebDriverWait(driver, Duration.ofSeconds(25));
-
         // =========================
         // PAGE OBJECT INIT
         // =========================
