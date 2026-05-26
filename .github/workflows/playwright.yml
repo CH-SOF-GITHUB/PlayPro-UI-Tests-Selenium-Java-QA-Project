@@ -1,9 +1,9 @@
 name: Playwright Tests
 on:
   push:
-    branches: [ circleci-project-setup ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ circleci-project-setup ]
+    branches: [ "main" ]
 jobs:
   test:
     timeout-minutes: 60

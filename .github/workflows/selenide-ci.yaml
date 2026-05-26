@@ -2,9 +2,9 @@ name: Selenide UI Tests
 
 on:
   push:
-    branches: [ "circleci-project-setup" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "circleci-project-setup" ]
+    branches: [ "main" ]
 
 jobs:
   selenide-tests:
@@ -24,7 +24,7 @@ jobs:
         run: mvn clean compile
 
       - name: Run Selenide tests
-        run: mvn -Dtest=Selenide.UI.PlayPro.Web.Front.Login.TC01 test
+        run: mvn "-Dtest=Selenide.UI.PlayPro.Web.Front.**" test
 
       - name: Upload Selenide Reports
         if: always()
