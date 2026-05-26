@@ -1,5 +1,6 @@
 package tests.PlayPro.DEV.LambdaTest.Chrome.Login;
 
+import PageObject.WebCookiesPage;
 import PageObject.WebLoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,11 +11,13 @@ import java.util.Objects;
 public class TC01 extends BaseTest {
     // define Login object page
     WebLoginPage webLoginPage = null;
-
+    WebCookiesPage webCookiesPage = null;
     @Test
     public void SampleLogin() {
         try {
             webLoginPage = new WebLoginPage(driver);
+            webCookiesPage = new WebCookiesPage(driver);
+            webCookiesPage.clickAcceptCookiesButton();
             webLoginPage.EnterEmail("demotenant1@yopmail.com");
             webLoginPage.EnterPassword("Admin1234!");
             webLoginPage.ClickLoginButton();
@@ -30,6 +33,8 @@ public class TC01 extends BaseTest {
     public void SampleErrorLogin() {
         try {
             webLoginPage = new WebLoginPage(driver);
+            webCookiesPage = new WebCookiesPage(driver);
+            webCookiesPage.clickAcceptCookiesButton();
             webLoginPage.EnterEmail("demotenant11@yopmail.com");
             webLoginPage.EnterPassword("Admin12345!");
             webLoginPage.ClickLoginButton();

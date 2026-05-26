@@ -43,27 +43,36 @@ public class BaseTest {
     @BeforeMethod
     public void setUp() {
         log.info("Starting WebDriver...");
-        // =========================
+
         ChromeOptions options = new ChromeOptions();
+
+        // 🔥 default = false (LOCAL)
         String headless = System.getProperty("headless", "false");
+
         if (headless.equals("true")) {
             options.addArguments("--headless=new");
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
         }
+
+        // 🔥 COMMON STABLE OPTIONS (LOCAL + CI)
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-gpu");
+
+        // 🔥 IMPORTANT FIX: always set window size (CI + local)
+        options.addArguments("--window-size=1920,1080");
+
         driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
-        // =========================
+
+        // ❌ DO NOT USE maximize in CI (and avoid it globally)
+        // driver.manage().window().maximize(); ❌ REMOVE
+
         Wait = new WebDriverWait(driver, Duration.ofSeconds(25));
-        // =========================
-        // PAGE OBJECT INIT
-        // =========================
+
         webReservationPage = new WebReservationPage(driver);
         webEXP1Page = new WebEXP1Page(driver);
         webEXP2Page = new WebEXP2Page(driver);
 
         log.info("Navigating to application...");
-
         driver.get("https://demotenant.playpro.fr/connexion");
     }
 
