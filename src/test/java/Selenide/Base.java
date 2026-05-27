@@ -1,9 +1,11 @@
 package Selenide;
 
+import static com.codeborne.selenide.Selenide.webdriver;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.TextCheck;
 import org.junit.Rule;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import com.codeborne.selenide.testng.ScreenShooter;
@@ -11,6 +13,8 @@ import com.codeborne.selenide.testng.ScreenShooter;
 // import com.codeborne.selenide.junit4.ScreenShooter;
 // Use Listeners for TestNG
 import org.testng.annotations.Listeners;
+
+import static com.codeborne.selenide.Selenide.webdriver;
 
 // (TestNg )
 @Listeners(ScreenShooter.class)
@@ -25,7 +29,10 @@ public class Base {
         System.out.println("Setting up Base Selenide configuration...");
         Configuration.baseUrl = "https://demotenant.playpro.fr";
         Configuration.browser = "chrome";
-        Configuration.browserSize = "1920x1080";
+        // Add configuration chrome options
+        ChromeOptions options = new ChromeOptions();
+        // REAL Maximize
+        options.addArguments("--start-maximized");
         // Run tests in headless mode (without opening a browser window)
         /* Detect github actions
         sert à lire une variable d’environnement du système.
@@ -41,7 +48,9 @@ public class Base {
             System.out.println("GITHUB_ACTIONS detected: " + githubActions);
             System.out.print("Running in normal mode on local machine.");
         }
-        // Configuration.headless = false;
+        // set chrome capabilites;
+        Configuration.browserCapabilities = options;
+        // Timeouts
         Configuration.pageLoadTimeout = 10000;
         Configuration.timeout = 10000;
         Configuration.webdriverLogsEnabled = true;

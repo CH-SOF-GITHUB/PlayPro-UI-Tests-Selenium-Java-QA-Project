@@ -7,9 +7,9 @@ import Selenide.UI.PlayPro.Web.Front.Pages.LogoutPage;
 import Selenide.UI.PlayPro.Web.Front.Pages.UserProfilePage;
 import org.junit.Assert;
 import org.testng.annotations.Test;
+
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 
 public class TC01 extends Base {
