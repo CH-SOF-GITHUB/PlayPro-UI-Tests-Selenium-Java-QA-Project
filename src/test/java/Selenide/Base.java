@@ -1,7 +1,5 @@
 package Selenide;
 
-import static com.codeborne.selenide.Selenide.webdriver;
-
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.TextCheck;
 import org.junit.Rule;

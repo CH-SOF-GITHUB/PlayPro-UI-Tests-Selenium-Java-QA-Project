@@ -24,7 +24,7 @@ public class TC01 extends Base {
         // Step 1: Open the login page
         loginPage.openLoginPage();
         // Step 2: Click on the accept button of the cookie banner
-        cookiePage.clickAcceptButton();
+        // cookiePage.clickAcceptButton();
         // Step 2: Enter valid username and password
         loginPage.setEmail("demotenant3@yopmail.com");
         loginPage.setPassword("Admin1234!");
