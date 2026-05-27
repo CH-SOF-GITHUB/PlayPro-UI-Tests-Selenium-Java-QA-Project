@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class LogoutPage {
     // Define web elements using locators
-    SelenideElement userProfileIcon = $(By.xpath("(//button[normalize-space()='Me déconnecter'])[1]"));
+    private final SelenideElement userProfileIcon = $(By.xpath("(//button[normalize-space()='Me déconnecter'])[1]"));
 
     //Method to click on Logout button
     public void clickLogoutButton() {

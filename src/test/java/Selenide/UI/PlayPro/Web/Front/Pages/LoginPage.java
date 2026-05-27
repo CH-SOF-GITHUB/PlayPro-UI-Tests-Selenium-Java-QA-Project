@@ -7,9 +7,9 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class LoginPage {
     // Define web elements using locators
-    SelenideElement emailInput = $("input[name=email]");
-    SelenideElement passwordInput = $("input[name=password]");
-    SelenideElement loginButton = $("button[type=submit]");
+    private final SelenideElement emailInput = $("input[name=email]");
+    private final SelenideElement passwordInput = $("input[name=password]");
+    private final SelenideElement loginButton = $("button[type=submit]");
 
     // OR Use Classic Page Object
     // @FindBy(how = How.NAME, using = "q")

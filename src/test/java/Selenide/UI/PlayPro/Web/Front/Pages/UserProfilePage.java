@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class UserProfilePage {
     // Define web elements using locators
-    SelenideElement userProfileIcon = $(By.xpath("(//div[contains(@class,'relative')])[3]"));
+    private final SelenideElement userProfileIcon = $(By.xpath("(//div[contains(@class,'relative')])[3]"));
 
     // Methods
     public void clickUserProfileIcon() {
