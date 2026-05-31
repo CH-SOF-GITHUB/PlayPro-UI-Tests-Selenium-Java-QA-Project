@@ -1,6 +1,6 @@
 package org.example;
 
-import configuration.LTConfig;
+import com.qa.factory.LTConfig;
 import org.junit.Test;
 import org.openqa.selenium.*;
 

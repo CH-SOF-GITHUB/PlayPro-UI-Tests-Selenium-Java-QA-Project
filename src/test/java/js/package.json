@@ -1,0 +1,14 @@
+{
+  "name": "tests-javascript",
+  "version": "1.0.0",
+  "description": "use selenium js  framework for   automation testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chaker Ben Said",
+  "license": "ISC",
+  "dependencies": {
+    "selenium-webdriver": "^4.44.0"
+  }
+}

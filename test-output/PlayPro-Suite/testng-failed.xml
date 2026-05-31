@@ -3,13 +3,13 @@
 <suite thread-count="4" parallel="classes" name="Failed suite [PlayPro-Suite]" guice-stage="DEVELOPMENT" verbose="2">
   <test thread-count="4" parallel="classes" name="DEV-Login-Tests(failed)" verbose="2">
     <classes>
-      <class name="tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC01">
+      <class name="Login.Chrome.LambdaTest.DEV.PlayPro.com.qa.tests.TC01">
         <methods>
           <include name="tearDown"/>
           <include name="SampleLogin"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC01 -->
+      </class> <!-- Login.Chrome.LambdaTest.DEV.PlayPro.com.qa.tests.TC01 -->
     </classes>
   </test> <!-- DEV-Login-Tests(failed) -->
 </suite> <!-- Failed suite [PlayPro-Suite] -->
