@@ -1,13 +1,15 @@
-package Mobile.VirtualDevice.PlayProV3.Login;
+package Mobile.web.testing.appium;
 
+import PageObject.MobileLoginPage;
 import configuration.LTMobileConfig;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
-import org.testng.annotations.*;
-import PageObject.MobileLoginPage;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import java.lang.reflect.Method;
 
