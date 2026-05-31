@@ -3,11 +3,11 @@ package Mobile;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 import java.io.File;
@@ -18,6 +18,8 @@ import java.time.Duration;
 public class SampleTest {
 
     AndroidDriver driver;
+    // define a explicit wait object
+    WebDriverWait Wait;
 
     @BeforeTest
     public void setup() throws Exception {
@@ -42,7 +44,9 @@ public class SampleTest {
         URL url = new URL("http://127.0.0.1:4723/");
 
         driver = new AndroidDriver(url, caps);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
+        // define the explicit wait with a timeout of 15 seconds
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
     }
 
     @Test
@@ -50,6 +54,12 @@ public class SampleTest {
         driver.get("https://demotenant.playpro.fr/");
         Thread.sleep(7000);
         System.out.println(driver.getTitle());
+        // Close the cookie banner if it appears
+        WebElement acceptBtn = driver.findElement(By.xpath("//button[@data-testid='cookie-banner-accept-button']"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", acceptBtn);
+        js.executeScript("arguments[0].click();", acceptBtn);
+        // Click on the menu button
         WebElement MenuBtn = driver.findElement(By.xpath("//button[@aria-label='Navigation.open_menu']"));
         Assert.assertTrue(MenuBtn.isEnabled());
         MenuBtn.click();

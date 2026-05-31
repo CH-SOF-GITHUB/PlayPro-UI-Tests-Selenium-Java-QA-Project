@@ -1,17 +1,15 @@
 package Mobile;
 
-import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 
-public class SampleTestMobileWeb {
+public class SampleTestRemote {
 
     public static void main(String[] args) throws MalformedURLException, InterruptedException {
         MutableCapabilities caps = getMobileCapabilities();
