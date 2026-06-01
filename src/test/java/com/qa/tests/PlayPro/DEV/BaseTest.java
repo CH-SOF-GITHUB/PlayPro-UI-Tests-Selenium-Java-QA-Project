@@ -48,6 +48,7 @@ public class BaseTest {
 
         if (headless.equals("true")) {
             options.addArguments("--headless=new");
+            options.addArguments("--window-size=1920,1080");
         }
 
         // 🔥 COMMON STABLE OPTIONS (LOCAL + CI)
@@ -56,13 +57,13 @@ public class BaseTest {
         options.addArguments("--disable-gpu");
 
         // 🔥 IMPORTANT FIX: always set window size (CI + local)
-        options.addArguments("--window-size=1920,1080");
+        // options.addArguments("--window-size=1920,1080");
 
         driver = new ChromeDriver(options);
 
         // ❌ DO NOT USE maximize in CI (and avoid it globally)
         // driver.manage().window().maximize(); ❌ REMOVE
-
+        driver.manage().window().maximize();
         Wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
         webReservationPage = new WebReservationPage(driver);
