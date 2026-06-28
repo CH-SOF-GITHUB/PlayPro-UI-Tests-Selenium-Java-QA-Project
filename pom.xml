@@ -16,35 +16,38 @@
     </scm>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- 1. Align Java versions to match your JDK 17 execution environment -->
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <!-- Define the version of Allure you want to use via the allure.version property -->
+        <allure.version>2.29.0</allure.version>
+        <!-- Define the version of AspectJ for the functionality of @Step and @Attachment annotations -->
+        <aspectj.version>1.9.22</aspectj.version>
     </properties>
-    <!--<repositories>
-        &lt;!&ndash; Uncomment only for testing any SNAPSHOT version of carina or zebrunner agent! &ndash;&gt;
-        &lt;!&ndash;repository>
-            <id>zebrunner_snapshots</id>
-            <name>zebrunner Snapshots</name>
-            <url>https://nexus.zebrunner.dev/repository/ce-snapshots/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository&ndash;&gt;
-    </repositories>-->
     <dependencyManagement>
         <dependencies>
             <!-- Utiliser le BOM de Cucumber pour gérer cucumber dependencies by version -->
             <dependency>
                 <groupId>io.cucumber</groupId>
                 <artifactId>cucumber-bom</artifactId>
-                <version>7.18.1</version>
+                <version>7.12.1</version>        <!-- Use the latest stable version -->
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- Utiliser le BOM de Jackson pour gérer les versions des dépendances Jackson -->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-core</artifactId>
                 <version>2.21.3</version>
+            </dependency>
+            <!-- Add allure-bom to dependency management to ensure correct versions of all the dependencies are used -->
+            <dependency>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-bom</artifactId>
+                <version>${allure.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -81,7 +84,6 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
-            <version>7.12.1</version> <!-- Use the latest stable version -->
             <scope>test</scope>
         </dependency>
         <!-- Dépendances Cucumber cohérentes avec A reporter plug-in for pretty Cucumber reports-->
@@ -237,6 +239,31 @@
             <artifactId>jcommander</artifactId>
             <version>1.81</version> <!-- Vérifiez la dernière version -->
         </dependency>
+        <!-- Add necessary Allure dependencies to dependencies section -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-java-commons</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- 3. Explicitly include aspectjweaver so Maven resolves it to your local repository -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- ÉTAPE CRUCIALE : Ajout ici pour forcer le téléchargement par l'IDE -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjtools</artifactId>
+            <version>${aspectj.version}</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
     <profiles>
         <profile>
@@ -249,21 +276,42 @@
     <build>
         <plugins>
             <plugin>
+                <!-- Compiles Java source code -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version> <!-- ajouter une version pour supprimer l'avertissement -->
+                <version>3.11.0</version> <!-- ajouter une version -->
                 <configuration>
                     <source>11</source>
                     <target>11</target>
-                    <!--carina: Adding test unique identifier (TUID) to the test name using Java data provider
-                        TUID sets at the beginning of the test name in a test result report.
-                        For this functionality to work, update your maven-compiler-plugin (add -parameters compiler argument)-->
+                    <!--
+                    This is a very common configuration:
+                                 Develop with the latest JDK (21)
+                                 Produce code compatible with Java 11
+                                 This allows your tests to run on environments that only have Java 11.
+
+                    When should you change to 17?
+                    Only if you actually need Java 17 features or your team has decided to standardize on Java 17.
+                    Examples:
+                       - Pattern matching
+                       - Records
+                       - Sealed classes
+                       - Other Java 17 language/API features
+                       - For a Selenium automation framework, most teams don't need these features.
+
+                    Apache Maven : 3.9.9
+                    JDK          : 21.0.9 (Oracle)
+                    Maven Plugin : maven-compiler-plugin 3.11.0
+                    pom.xml      : source=11 / target=11
+
+                    Replace <source>/<target> with <release>?  Yes, recommended if the tester decided to do this
+                    -->
                     <compilerArgs>
                         <arg>-parameters</arg>
                     </compilerArgs>
                 </configuration>
             </plugin>
             <plugin>
+                <!-- Runs TestNG/JUnit tests -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
@@ -286,7 +334,34 @@
                     <printSummary>true</printSummary>
                     <!-- optional -->
                     <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                    <!-- Add the following options of allure report to your maven-surefire-plugin -->
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>dev.aspectj</groupId>
+                <artifactId>aspectj-maven-plugin</artifactId>
+                <version>1.14</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjtools</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <complianceLevel>17</complianceLevel>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

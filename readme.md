@@ -30,6 +30,185 @@ Ce projet vise à automatiser les tests de l'interface utilisateur du site PlayP
 1. Cloner ce dépôt :
 
 ```bash
+
+## how to configurate your project with Allure TestNG.
+1. Add Allure properties
+
+In your <properties> section, replace:
+
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+</properties>
+
+with:
+
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <allure.version>2.29.1</allure.version>
+    <aspectj.version>1.9.24</aspectj.version>
+</properties>
+
+2. Add Allure BOM
+
+Inside <dependencyManagement>, add this before your Cucumber BOM:
+
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-bom</artifactId>
+    <version>${allure.version}</version>
+    <type>pom</type>
+    <scope>import</scope>
+</dependency>
+
+Then your dependencyManagement will manage the versions automatically.
+
+3. Add Allure dependencies
+
+Inside <dependencies>, add:
+
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-testng</artifactId>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-java-commons</artifactId>
+    <scope>test</scope>
+</dependency>
+
+If you use REST Assured later, you can also add:
+
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-rest-assured</artifactId>
+    <scope>test</scope>
+</dependency>
+
+4. Configure AspectJ
+Your current maven-surefire-plugin must be updated.
+
+Inside the plugin configuration, add:
+
+<argLine>
+    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+</argLine>
+
+and add the plugin dependency:
+
+<dependencies>
+    <dependency>
+        <groupId>org.aspectj</groupId>
+        <artifactId>aspectjweaver</artifactId>
+        <version>${aspectj.version}</version>
+    </dependency>
+</dependencies>
+
+So the end of your maven-surefire-plugin should look like:
+
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.2.5</version>
+
+    <configuration>
+
+        <argLine>
+            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+        </argLine>
+
+        ...
+    </configuration>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+    </dependencies>
+
+</plugin>
+
+5. Create allure.properties
+
+Create the file:
+
+src/test/resources/allure.properties
+
+Content:
+allure.results.directory=target/allure-results
+
+6. Execute tests
+
+Run:
+
+mvn clean test
+
+or
+
+mvn clean verify
+
+The folder
+
+target/allure-results
+
+should be created automatically.
+
+7. Generate report
+allure serve target/allure-results
+
+or
+
+allure generate target/allure-results --clean
+allure open
+
+8. Then you can use all Allure annotations
+For example:
+
+@Epic("Authentication")
+@Feature("Login")
+@Story("Successful login")
+@Severity(SeverityLevel.CRITICAL)
+@Test
+public void loginTest() {
+    ...
+}
+
+and
+
+@Step("Login with user {username}")
+public void login(String username, String password) {
+    ...
+}
+
+and
+
+@Attachment(value = "Screenshot", type = "image/png")
+public byte[] takeScreenshot() {
+    return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 git clone https://github.com/CH-SOF-GITHUB/PlayPro-UI-Tests-Selenium-Java.git
 
 ## Architecture Cloud et Exécution des tests sur le Cloud (Cross-Browser Testing)

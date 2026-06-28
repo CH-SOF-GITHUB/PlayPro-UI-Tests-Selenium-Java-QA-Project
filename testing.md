@@ -22,6 +22,18 @@ Voici les solutions les plus rapides pour y remédier :
 3. Cliquer via JavaScript (Alternative)Si l'élément est masqué par le design CSS du site, forcez le clic via le DOM :java
    WebElement element = driver.findElement(By.id("votre-id"));
    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Allure Report: is a reporting framework, it's opened with differents versions: Allure 2, Allure 3 ...
+and it supports many languages and frameworks and can be added to your testing workflow with little to zero configuration.
+It products visually rich HTML reports based on your test results that can be easily shared with your team and stakeholders. 
+It provides detailed insights into test execution, including test steps, attachments, and logs, making it easier to identify issues and improve the quality of your software.
+
+A testing workflow with Allure Report consists of two steps, both of which can be done locally, without sending anything over the wire:
+   Tests --------------->  Test results  ---------------------> HTML Report
+
+1) Collection phase: while the tests are running, the test framework writes their results into a file or directory.
+2) Visualization phase: the Allure Report command-line utility reads the test results and builds an HTML report.
+Once the HTML report is generated, you can safely remove the test results — for example, as part of a cleaning procedure before the next test run.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 To get the status of a test in Selenium Java during the teardown phase, you must use the built-in capability of your testing framework (TestNG or JUnit), as Selenium WebDriver itself does not track test execution states.
