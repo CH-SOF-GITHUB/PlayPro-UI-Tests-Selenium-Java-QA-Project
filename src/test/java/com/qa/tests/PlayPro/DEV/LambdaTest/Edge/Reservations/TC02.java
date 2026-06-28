@@ -51,7 +51,7 @@ public class TC02 extends LTConfig {
     @Test(priority = 2)
     public void NavigateToReservationPage02() {
         try {
-            testname = "TC02: Client should navigate to Reservation page via Réserver button on home page";
+            testname = "TC002: Client should navigate to Reservation page via Réserver button on home page";
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
             WebElement RéserverBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/main/section[1]/div[1]/div[2]/div/div/a")));
             RéserverBtn.click();

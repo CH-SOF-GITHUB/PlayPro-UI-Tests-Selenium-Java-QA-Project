@@ -1,6 +1,8 @@
 <component name="ProjectDictionaryState">
   <dictionary name="chaker">
     <words>
+      <w>abstraite</w>
+      <w>abstraites</w>
       <w>afin</w>
       <w>ajoutez</w>
       <w>apparaître</w>
@@ -8,6 +10,8 @@
       <w>autodownload</w>
       <w>automatisation</w>
       <w>automatiser</w>
+      <w>autonome</w>
+      <w>bénéficier</w>
       <w>chevauchement</w>
       <w>cible</w>
       <w>complet</w>
@@ -15,31 +19,46 @@
       <w>coordonnées</w>
       <w>courantes</w>
       <w>cruciale</w>
+      <w>d'auto</w>
+      <w>d'exécutions</w>
       <w>d'interagir</w>
+      <w>dedans</w>
       <w>dehors</w>
       <w>dernière</w>
       <w>devrait</w>
+      <w>directe</w>
+      <w>donc</w>
+      <w>dupliquer</w>
+      <w>découverte</w>
       <w>découvrir</w>
       <w>dépendance</w>
       <w>développement</w>
       <w>explicitement</w>
+      <w>externe</w>
       <w>forcez</w>
       <w>intégré</w>
       <w>jusqu</w>
+      <w>l'héritage</w>
       <w>l'ide</w>
+      <w>l'instanciation</w>
+      <w>l'intention</w>
       <w>l'écran</w>
       <w>maintenant</w>
       <w>masquage</w>
+      <w>n'exécutera</w>
       <w>objectif</w>
       <w>parfois</w>
+      <w>partagé</w>
       <w>peut</w>
       <w>possède</w>
+      <w>préférez</w>
       <w>prérequis</w>
       <w>qualité</w>
       <w>rapides</w>
       <w>recouvre</w>
       <w>remédier</w>
       <w>repéré</w>
+      <w>reste</w>
       <w>resto</w>
       <w>réserver</w>
       <w>s'exécute</w>
@@ -48,10 +67,15 @@
       <w>supérieur</w>
       <w>système</w>
       <w>toastify</w>
+      <w>traitée</w>
       <w>téléchargement</w>
       <w>utilisant</w>
+      <w>utilitaire</w>
       <w>videorecorder</w>
+      <w>vous</w>
       <w>étape</w>
+      <w>étendent</w>
+      <w>évite</w>
     </words>
   </dictionary>
 </component>

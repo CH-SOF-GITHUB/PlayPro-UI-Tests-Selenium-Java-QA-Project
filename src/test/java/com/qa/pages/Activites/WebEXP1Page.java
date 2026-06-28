@@ -19,14 +19,14 @@ public class WebEXP1Page {
 
     public WebEXP1Page(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         PageFactory.initElements(driver, this);
     }
 
     /**
-     *  Experience Card Path
+     *  Experience Card Path: Vr Party Test
      */
-    @FindBy(xpath = "/html/body/div[1]/main/div/section/div/a[2]/div/div[2]/div/div[2]/div")
+    @FindBy(xpath = "//a[@href='/discover/reservation/vr-party-test']//div//div//div//div//div[contains(text(),'Réserver')]")
     private WebElement Vr_Party_Test;
     /**
      *  STEP 1 Reservation Selection buttons

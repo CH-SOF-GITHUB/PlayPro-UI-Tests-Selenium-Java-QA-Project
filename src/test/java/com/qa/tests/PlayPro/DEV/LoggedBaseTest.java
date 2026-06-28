@@ -10,7 +10,7 @@ TestNG ignore les classes abstraites pour la découverte d'exécutions, donc on 
 Les classes concrètes (vos tests) étendent cette classe pour bénéficier du @BeforeMethod d'auto-login sans dupliquer le code.
 Si vous préférez ne pas utiliser abstract, on peut aussi :
 rendre le constructeur protected pour limiter l'instanciation externe, ou
-garder la classe non-abstraite mais ne pas lui ajouter de @Test (TestNG n'exécutera rien tant qu'il n'y a pas de méthodes @Test dedans).
+harder la classe non-abstraite mais ne pas lui ajouter de @Test (TestNG n'exécutera rien tant qu'il n'y a pas de méthodes @Test dedans).
 La solution abstract reste la plus claire et sûre pour une classe utilitaire de setup partagé.
  */
 

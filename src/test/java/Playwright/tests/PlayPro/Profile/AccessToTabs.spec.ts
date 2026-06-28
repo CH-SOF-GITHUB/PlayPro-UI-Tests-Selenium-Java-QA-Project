@@ -56,7 +56,7 @@ test('Access to the reclamation page', async ({page}) => {
 
 });
 
-// TC02
+// TC002
 test('Access to my bank cartes page', async ({page}) => {
 
     // Increase timeout for this test
@@ -111,7 +111,7 @@ test('Access to my bank cartes page', async ({page}) => {
 
 });
 
-// TC03
+// TC003
 test('Access to my subscriptions page', async ({page}) => {
 
     // Increase timeout for this test

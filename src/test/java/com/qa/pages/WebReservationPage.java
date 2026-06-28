@@ -37,7 +37,7 @@ public class WebReservationPage {
     /*
        Find web elements for Experiences, Activities, Events, and Categories (VR, Escape Game, etc.) if needed for future test cases.
      */
-    @FindBy(xpath = "//a[1]//div[1]//div[2]//div[1]//div[2]//div[1]")
+    @FindBy(xpath = "/html/body/div[1]/div/section[1]/section[1]/div[2]/a[1]/div/div[2]")
     private WebElement Category_VR_Link;
 
     /* methods of POM class */

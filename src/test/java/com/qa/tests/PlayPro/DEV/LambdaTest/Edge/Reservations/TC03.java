@@ -51,7 +51,7 @@ public class TC03 extends LTConfig {
     @Test(priority = 1)
     public void GoToMesAchatsEtReservations() {
         try {
-            testname = "TC03: Client should navigate to Mes Achats et Réservations page via user menu";
+            testname = "TC003: Client should navigate to Mes Achats et Réservations page via user menu";
             // locate and actions of selenium web elements
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
             WebElement WelcomeBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/header/div[4]/div/div/button")));

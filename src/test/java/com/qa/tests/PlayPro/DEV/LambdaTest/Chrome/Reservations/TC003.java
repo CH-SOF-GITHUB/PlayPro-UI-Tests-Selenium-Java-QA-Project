@@ -7,7 +7,7 @@ import com.qa.tests.PlayPro.DEV.LoggedBaseTest;
 
 import java.util.Objects;
 
-public class TC03 extends LoggedBaseTest {
+public class TC003 extends LoggedBaseTest {
         /*
         Test Case 3: Verify that the user can navigate to one of Expériences grouped by Gategory VR
                     by clicking on button of the Experience.
