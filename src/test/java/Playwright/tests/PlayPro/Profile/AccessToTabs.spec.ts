@@ -1,6 +1,6 @@
 import {test, expect} from "@playwright/test";
 
-// TC01
+// TC001
 test('Access to the reclamation page', async ({page}) => {
 
     // Increase timeout for this test

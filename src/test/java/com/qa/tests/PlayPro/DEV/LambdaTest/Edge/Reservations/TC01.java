@@ -52,7 +52,7 @@ public class TC01 extends LTConfig {
     @Test(priority = 1)
     public void NavigateToReservationPage01() {
         try {
-            testname = "TC01: Client should navigate to Reservation page via Découvrir menu";
+            testname = "TC001: Client should navigate to Reservation page via Découvrir menu";
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
             WebElement découvrirMenu = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/header/div[3]/div[1]/div/button/div/span")));
             découvrirMenu.click();
