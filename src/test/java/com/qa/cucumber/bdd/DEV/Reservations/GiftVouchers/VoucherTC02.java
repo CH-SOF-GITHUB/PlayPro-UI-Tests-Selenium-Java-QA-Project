@@ -2,6 +2,7 @@ package com.qa.cucumber.bdd.DEV.Reservations.GiftVouchers;
 
 import com.qa.pages.WebCartPage;
 import com.qa.pages.WebGiftVoucherPage;
+import com.qa.pages.WebReservationPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -16,6 +17,7 @@ public class VoucherTC02 {
     // define the objects pages
     WebGiftVoucherPage webGiftVoucherPage = new WebGiftVoucherPage(driver);
     WebCartPage webCartPage = new WebCartPage(driver);
+    WebReservationPage webReservationPage = new WebReservationPage(driver);
 
     // define the steps of the scenario
     @Given("Click on Button Offer a gift voucher")
@@ -80,7 +82,7 @@ public class VoucherTC02 {
         try {
             // Write code here that turns the phrase above into concrete actions
             Thread.sleep(1000);
-            webCartPage.clickVisaCard11_26Btn();
+            webCartPage.clickVisaCard4242Btn();
         } catch (Exception e) {
             e.fillInStackTrace();
             throw e;
@@ -104,7 +106,7 @@ public class VoucherTC02 {
         try {
             // wait for 8s to load page
             Thread.sleep(8000);
-            String SuccessOrderMsg = webCartPage.GetOrderConfirmationMessage();
+            String SuccessOrderMsg = webReservationPage.getOrderConfirmationMessage();
             Assert.assertEquals(SuccessOrderMsg, "Merci pour votre commande ! \uD83C\uDF89", "Gift Voucher buying Failed! and Msg is not correct");
             log.info("Gift Voucher buying is " + status);
         } catch (Exception e) {

@@ -29,9 +29,6 @@ public class WebReservationPage {
     @FindBy(xpath = "//a[contains(@class, 'w-[7.938rem]')]")
     private WebElement RéserverLink;
 
-    // @FindBy(xpath = "(//p[normalize-space()='Nos activités'])[1]")
-    // private WebElement Nos_Activites_Text;
-
     @FindBy(xpath = "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' rounded-md ') and contains(concat(' ', normalize-space(@class), ' '), ' font-poppins ')]")
     private WebElement Offre_Link;
     /*
@@ -39,6 +36,13 @@ public class WebReservationPage {
      */
     @FindBy(xpath = "/html/body/div[1]/div/section[1]/section[1]/div[2]/a[1]/div/div[2]")
     private WebElement Category_VR_Link;
+
+    /*
+      Locate Success Message of Reservation
+     */
+    @FindBy(xpath = "//p[@class='font-poppins font-semibold text-black md:text-xl text-sm py-6 text-center leading-4']")
+    private WebElement OrderConfirmationMessage;
+
 
     /* methods of POM class */
     public void ClickOffreMenuNavbar() throws InterruptedException {
@@ -69,13 +73,9 @@ public class WebReservationPage {
         System.out.println("Category VR clicked in reservation page");
     }
 
-    /* public void checkVisibilityOfNosActivitesText() {
-        try {
-            Thread.sleep(1000);
-            wait.until(ExpectedConditions.visibilityOf(Nos_Activites_Text));
-            wait.until(ExpectedConditions.elementToBeClickable(Nos_Activites_Text));
-        } catch (Exception e) {
-            e.fillInStackTrace();
-        }
-    } */
+    public String getOrderConfirmationMessage() throws InterruptedException {
+        Thread.sleep(7000);
+        WebElement message = wait.until(ExpectedConditions.visibilityOf(OrderConfirmationMessage));
+        return message.getText();
+    }
 }

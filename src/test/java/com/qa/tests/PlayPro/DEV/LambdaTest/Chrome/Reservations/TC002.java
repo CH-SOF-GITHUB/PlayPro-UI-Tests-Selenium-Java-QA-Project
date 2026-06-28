@@ -65,6 +65,7 @@ public class TC002 extends LoggedBaseTest {
     @Owner("Chaker Ben Said")
     public void NavigateToActivityVrPartyTest() throws InterruptedException {
         // Test implementation goes here
+        Allure.suite("Suite 003");
         step1();
         step2();
         step4();
