@@ -52,11 +52,12 @@ public class WebDevisEntreprise {
     @FindBy(xpath = "(//li[@aria-label='12 hours'])[1]")
     private WebElement TwelveHoursOption;
 
-    @FindBy(xpath = "(//button[@aria-label='Choose time'])[2]")
+    @FindBy(xpath = "(//input[@placeholder='HH:mm'])[2]/following::button[@aria-label='Choose time'][1]")
     private WebElement DateBtn2;
 
     @FindBy(xpath = "(//button[@aria-label='Choose date'])[1]")
     private WebElement DateBtn3;
+
     /**
      * Methods
      */
@@ -127,8 +128,9 @@ public class WebDevisEntreprise {
     public void FillFinishDate() throws InterruptedException {
         Thread.sleep(2000);
         WebElement button = wait.until(ExpectedConditions.elementToBeClickable(DateBtn2));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", button);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+        button.click();
+        //((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", button);
+        //((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
         System.out.println("Finish date entered");
         Actions actions = new Actions(driver);
         for (int i = 0; i < 12; i++) {

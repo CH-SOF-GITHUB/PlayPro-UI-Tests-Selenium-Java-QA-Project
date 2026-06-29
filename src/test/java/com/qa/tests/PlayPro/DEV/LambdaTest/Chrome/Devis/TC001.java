@@ -74,6 +74,7 @@ public class TC001 extends LoggedBaseTest {
     @Step("Step 9")
     public void step9() throws InterruptedException {
         webDevisEntreprise.FillFinishDate();
+        subStep1();
     }
 
     @Step("Step 10")
@@ -98,8 +99,8 @@ public class TC001 extends LoggedBaseTest {
         step6();
         step7();
         step8();
-        //step9();
-        step10();
+        step9();
+        //step10();
         Thread.sleep(5000);
     }
 }
