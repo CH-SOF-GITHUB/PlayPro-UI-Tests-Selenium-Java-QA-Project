@@ -42,13 +42,13 @@ Using TestNG (@AfterMethod)In TestNG, you can inject the ITestResult object dire
 
 TestNG will automatically populate this object with the execution metadata of the test that just finished.
 
-Annotation	Purpose
-@Epic	Big module / system area
-@Feature	Functionality inside epic
-@Story	Specific user story
-@Description	Test explanation
-@Severity	Importance (CRITICAL, NORMAL, etc.)
-@Step	Actions inside test
+Annotation	      Purpose
+@Epic	       Big module / system area
+@Feature	   Functionality inside epic
+@Story	       Specific user story
+@Description   Test explanation
+@Severity	   Importance (CRITICAL, NORMAL, etc.)
+@Step	       Actions inside test
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Use Tools of Apps:

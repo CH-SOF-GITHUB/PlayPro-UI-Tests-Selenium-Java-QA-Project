@@ -43,6 +43,9 @@ public class WebReservationPage {
     @FindBy(xpath = "//p[@class='font-poppins font-semibold text-black md:text-xl text-sm py-6 text-center leading-4']")
     private WebElement OrderConfirmationMessage;
 
+    @FindBy(xpath = "//p[@class='font-poppins font-semibold text-black md:text-xl text-sm py-6 text-center leading-4']")
+    private WebElement CommandeConfirmationMessage;
+
 
     /* methods of POM class */
     public void ClickOffreMenuNavbar() throws InterruptedException {
@@ -76,6 +79,12 @@ public class WebReservationPage {
     public String getOrderConfirmationMessage() throws InterruptedException {
         Thread.sleep(7000);
         WebElement message = wait.until(ExpectedConditions.visibilityOf(OrderConfirmationMessage));
+        return message.getText();
+    }
+
+    public String getDemandeConfirmationMessage() throws InterruptedException {
+        Thread.sleep(7000);
+        WebElement message = wait.until(ExpectedConditions.visibilityOf(CommandeConfirmationMessage));
         return message.getText();
     }
 }

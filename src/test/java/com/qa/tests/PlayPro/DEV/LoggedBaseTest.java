@@ -16,7 +16,7 @@ La solution abstract reste la plus claire et sûre pour une classe utilitaire de
 
 public abstract class LoggedBaseTest extends BaseTest {
     // Define email and password for login
-    protected final String user = "demotenant1@yopmail.com";
+    protected final String user = "chakerqa-client@yopmail.com";
     protected final String pass = "Admin1234!";
     // define an instance of a specific page object
     protected WebCookiesPage webCookiesPage = null;

@@ -3,6 +3,7 @@ package com.qa.tests.PlayPro.DEV;
 import com.qa.pages.Activites.WebEXP1Page;
 import com.qa.pages.Activites.WebEXP2Page;
 import com.qa.pages.WebCartPage;
+import com.qa.pages.WebDevisEntreprise;
 import com.qa.pages.WebReservationPage;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.logging.Log;
@@ -38,6 +39,7 @@ public class BaseTest {
     protected WebReservationPage webReservationPage = null;
     protected WebEXP1Page webEXP1Page = null;
     protected WebCartPage webCartPage = null;
+    protected WebDevisEntreprise webDevisEntreprise = null;
 
     @BeforeMethod
     public void setUp() {
@@ -72,9 +74,10 @@ public class BaseTest {
         webEXP1Page = new WebEXP1Page(driver);
         webEXP2Page = new WebEXP2Page(driver);
         webCartPage = new WebCartPage(driver);
+        webDevisEntreprise = new WebDevisEntreprise(driver);
 
         log.info("Navigating to application...");
-        driver.get("https://demotenant.playpro.fr/connexion");
+        driver.get("https://chakerqa.playpro.fr/connexion");
     }
 
     @AfterMethod
