@@ -46,17 +46,19 @@ public class WebDevisEntreprise {
     @FindBy(xpath = "//select[@name='13']")
     private WebElement NbrParticipantsSelect;
 
-    @FindBy(xpath = "(//button[@aria-label='Choose time'])[1]")
+    // Hours/Minutes Pickers - Target by finding the container that holds 'Heure de début' and locating its clock button
+    @FindBy(xpath = "//p[text()='Heure de début']/following::button[contains(@aria-label, 'Choose time')][1]")
     private WebElement DateBtn1;
 
-    @FindBy(xpath = "(//li[@aria-label='12 hours'])[1]")
-    private WebElement TwelveHoursOption;
-
-    @FindBy(xpath = "(//input[@placeholder='HH:mm'])[2]/following::button[@aria-label='Choose time'][1]")
+    @FindBy(xpath = "//p[text()='Heure de fin']/following::button[contains(@aria-label, 'Choose time')][1]")
     private WebElement DateBtn2;
 
+    // Date Picker
     @FindBy(xpath = "(//button[@aria-label='Choose date'])[1]")
     private WebElement DateBtn3;
+
+    @FindBy(xpath = "(//button[@title='Next month'])[1]")
+    private WebElement NextMonthBtn;
 
     /**
      * Methods
@@ -107,35 +109,53 @@ public class WebDevisEntreprise {
         System.out.println("Number of participants selected");
     }
 
+    /*
+    * The stack trace shows a StaleElementReferenceException on selectHour10 inside the FillFinishDate() method.
+    * As stated in the Selenium documentation, an element goes stale when the DOM dynamically changes.
+    * In your code, when the time picker menu closes and reopens, the entire dropdown HTML container
+    * (MuiMultiSectionDigitalClock-root) is completely destroyed and recreated.
+    * Because Page Factory caches elements by default, selectHour10 still points to the old,
+    * destroyed menu version, resulting in a crash.To completely solve this,
+    * you need to stop using pre-cached @FindBy elements for the dropdown values.
+    * Instead, look them up dynamically on-the-fly right after you open the picker.
+    * The Solution Remove the dynamic time selectors (selectHour10 and selectMinute50)
+    * from your global @FindBy definitions, and write your methods using dynamic runtime locators:
+    * */
+    // Keep these global locators since they remain stable on the main page
     public void FillStartDate() throws InterruptedException {
-        Thread.sleep(2000);
-        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(DateBtn1));
-        button.click();
-        System.out.println("Start date entered");
-        Actions actions = new Actions(driver);
-        for (int i = 0; i < 12; i++) {
-            actions.sendKeys(Keys.ARROW_DOWN).perform();
-        }
-    }
+        // 1. Open picker
+        wait.until(ExpectedConditions.elementToBeClickable(DateBtn1)).click();
 
-    public void SelectTwelveHoursOption() throws InterruptedException {
-        Thread.sleep(2000);
-        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(TwelveHoursOption));
-        option.click();
-        System.out.println("12 hours option selected");
+        // 2. Locate and click Hour dynamically to prevent Stale exceptions
+        By hourLocator = By.xpath("//div[contains(@class, 'MuiMultiSectionDigitalClock-root')]//ul[1]/li[text()='04']");
+        wait.until(ExpectedConditions.elementToBeClickable(hourLocator)).click();
+
+        Thread.sleep(600); // Allow DOM container closure animation
+
+        // 3. Re-open picker
+        wait.until(ExpectedConditions.elementToBeClickable(DateBtn1)).click();
+
+        // 4. Locate and click Minute dynamically
+        By minuteLocator = By.xpath("//div[contains(@class, 'MuiMultiSectionDigitalClock-root')]//ul[2]/li[text()='10']");
+        wait.until(ExpectedConditions.elementToBeClickable(minuteLocator)).click();
     }
 
     public void FillFinishDate() throws InterruptedException {
-        Thread.sleep(2000);
-        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(DateBtn2));
-        button.click();
-        //((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", button);
-        //((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
-        System.out.println("Finish date entered");
-        Actions actions = new Actions(driver);
-        for (int i = 0; i < 12; i++) {
-            actions.sendKeys(Keys.ARROW_DOWN).perform();
-        }
+        // 1. Open picker for Finish Date
+        wait.until(ExpectedConditions.elementToBeClickable(DateBtn2)).click();
+
+        // 2. Locate and click Hour dynamically (re-finds the fresh elements in the new DOM structure)
+        By hourLocator = By.xpath("//div[contains(@class, 'MuiMultiSectionDigitalClock-root')]//ul[1]/li[text()='04']");
+        wait.until(ExpectedConditions.elementToBeClickable(hourLocator)).click();
+
+        Thread.sleep(600);
+
+        // 3. Re-open picker for Finish Date
+        wait.until(ExpectedConditions.elementToBeClickable(DateBtn2)).click();
+
+        // 4. Locate and click Minute dynamically
+        By minuteLocator = By.xpath("//div[contains(@class, 'MuiMultiSectionDigitalClock-root')]//ul[2]/li[text()='10']");
+        wait.until(ExpectedConditions.elementToBeClickable(minuteLocator)).click();
     }
 
     public void FillDateEvent() throws InterruptedException {
@@ -143,5 +163,19 @@ public class WebDevisEntreprise {
         WebElement button = wait.until(ExpectedConditions.elementToBeClickable(DateBtn3));
         button.click();
         System.out.println("Date event entered");
+    }
+
+    public void ClickNextMonth() throws InterruptedException {
+        Thread.sleep(2000);
+        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(NextMonthBtn));
+        button.click();
+        System.out.println("Next month button clicked");
+    }
+
+    public void SelectDateOption(String date) throws InterruptedException {
+        Thread.sleep(2000);
+        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[normalize-space()='" + date + "'])[1]")));
+        option.click();
+        System.out.println("Date " + date + " is selected");
     }
 }

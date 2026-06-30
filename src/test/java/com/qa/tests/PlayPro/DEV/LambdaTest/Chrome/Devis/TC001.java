@@ -62,24 +62,29 @@ public class TC001 extends LoggedBaseTest {
 
     @Step("Step 8")
     public void step8() throws InterruptedException {
-        webDevisEntreprise.FillStartDate();
-        subStep1();
-    }
-
-    @Step("Sub-step 1")
-    public void subStep1() throws InterruptedException {
-        webDevisEntreprise.SelectTwelveHoursOption();
+        webDevisEntreprise.FillStartDate();     // open First picker
     }
 
     @Step("Step 9")
     public void step9() throws InterruptedException {
-        webDevisEntreprise.FillFinishDate();
-        subStep1();
+        webDevisEntreprise.FillFinishDate();    // open Second picker
     }
 
     @Step("Step 10")
     public void step10() throws InterruptedException {
         webDevisEntreprise.FillDateEvent();
+        subStep3();
+        subStep4("12");
+    }
+
+    @Step("Sub-Step 2")
+    public void subStep3() throws InterruptedException {
+        webDevisEntreprise.ClickNextMonth();
+    }
+
+    @Step("Sub-Step 3")
+    public void subStep4(String date) throws InterruptedException {
+        webDevisEntreprise.SelectDateOption(date);
     }
 
     @Test
@@ -99,8 +104,9 @@ public class TC001 extends LoggedBaseTest {
         step6();
         step7();
         step8();
+        Thread.sleep(3000);
         step9();
-        //step10();
+        step10();
         Thread.sleep(5000);
     }
 }
