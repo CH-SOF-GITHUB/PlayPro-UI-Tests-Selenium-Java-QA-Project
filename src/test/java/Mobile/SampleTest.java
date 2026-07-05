@@ -60,7 +60,7 @@ public class SampleTest {
         js.executeScript("arguments[0].scrollIntoView(true);", acceptBtn);
         js.executeScript("arguments[0].click();", acceptBtn);
         // Click on the menu button
-        WebElement MenuBtn = driver.findElement(By.xpath("//button[@aria-label='Navigation.open_menu']"));
+        WebElement MenuBtn = driver.findElement(By.xpath("//button[@aria-label='NavigationTests.open_menu']"));
         Assert.assertTrue(MenuBtn.isEnabled());
         MenuBtn.click();
         System.out.println("Menu button clicked successfully.");

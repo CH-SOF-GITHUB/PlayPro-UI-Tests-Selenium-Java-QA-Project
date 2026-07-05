@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Test Suite 1" verbose="2" parallel="classes" thread-count="4">
-    <test name="Tests" preserve-order="true">
-        <packages>
-            <package name="tests.PlayPro.DEV.LambdaTest.Chrome.Reservations"/>
-        </packages>
-    </test>
-    <!--<test name="Cucumber Tests" preserve-order="true">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test my website">
+
+    <test name="Test 1 authentication with login">
+        <parameter name="Email" value="chakerqa-client@yopmail.com"/>
+        <parameter name="Password" value="Admin1234!"/>
         <classes>
-            <class name="Runners.TestRunner"/>
+            <class name="com.qa.tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC002"/>
         </classes>
-    </test>-->
+    </test>
+
+    <test name="Test 2 authentication with login">
+        <parameter name="Email" value="chakerqa-client@yopmail.com"/>
+        <parameter name="Password" value="Admin1234!"/>
+        <classes>
+            <class name="com.qa.tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC002"/>
+        </classes>
+    </test>
+
+    <test name="Test 3 authentication with login">
+        <parameter name="Email" value="chakerqa-client@yopmail.com"/>
+        <parameter name="Password" value="Admin1234!"/>
+        <classes>
+            <class name="com.qa.tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC002"/>
+        </classes>
+    </test>
+
 </suite>
+
+
+        <!--TestNG XML Configuration File
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+        <suite name="Test Suite 1" verbose="2" parallel="classes" thread-count="4">
+            <test name="Tests" preserve-order="true">
+                <packages>
+                    <package name="tests.PlayPro.DEV.LambdaTest.Chrome.Reservations"/>
+                </packages>
+            </test>
+            <test name="Cucumber Tests" preserve-order="true">
+                <classes>
+                    <class name="Runners.TestRunner"/>
+                </classes>
+            </test>
+        </suite>-->

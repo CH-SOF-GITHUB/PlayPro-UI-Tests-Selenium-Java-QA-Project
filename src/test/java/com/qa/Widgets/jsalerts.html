@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Alerts</title>
+</head>
+<body>
+<h2>Handling JavaScript Alerts Using Selenium WebDriver</h2>
+
+<button id="simple" onclick="simpleAlert()">Try Simple Alert</button>
+<button id="prompt" onclick="promptAlert()">Try Prompt Alert</button>
+<button id="confirm" onclick="confirmAlert()">Try Confirm Alert</button>
+
+<p id="lambdaTestDemo"></p>
+
+<script>
+    function simpleAlert() {
+        alert("This is how simple alert looks!");
+    }
+
+    function confirmAlert() {
+        var textToDisplay;
+        if (confirm("Click Ok or Cancel!")) {
+            textToDisplay = "Selenium Webdriver clicked on OK!";
+        } else {
+            textToDisplay = "Selenium Webdriver clicked on Cancel!";
+        }
+        document.getElementById("lambdaTestDemo").innerHTML = textToDisplay;
+    }
+
+    function promptAlert() {
+        var textToDisplay;
+        var pincode = prompt("Please enter your area pincode:", "560061");
+        if (pincode == null || pincode == "") {
+            textToDisplay = "Selenium Webdriver cancelled the prompt.";
+        } else {
+            textToDisplay = "Product will be delivered to " + pincode + ". Happy?";
+        }
+        document.getElementById("lambdaTestDemo").innerHTML = textToDisplay;
+    }
+
+</script>
+</body>
+</html>
