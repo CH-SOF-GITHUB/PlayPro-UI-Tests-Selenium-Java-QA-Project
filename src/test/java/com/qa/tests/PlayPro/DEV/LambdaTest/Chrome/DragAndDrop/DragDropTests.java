@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 
 public class DragDropTests {
     // create a web driver object
@@ -68,5 +69,26 @@ public class DragDropTests {
         // Capture Screen Shot fo Browser
         File srcFile1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/tests/Screenshots/allure/DragAndDrop2.png"));
+    }
+
+    @Test(testName = "Drag And Drop Test 2", description = "This test attempts to drag and drop by mouse movement.")
+    @Feature("Drag,Drop and Mouse Over,Mouse Events Features")
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Chaker Ben Said")
+    public void TC003() throws IOException, InterruptedException {
+        Allure.suite("Drag&Drop Tests");
+        // navigate to the page with drag and drop
+        driver.get("https://pynishant.github.io/");
+        // create an object to class Actions
+        Actions a = new Actions(driver);
+        // Drag and Drop using a source and destination
+        WebElement src = driver.findElement(By.id("div1"));
+        WebElement dst = driver.findElement(By.id("div2"));
+        // Mouse over on specific element
+        a.moveToElement(src).clickAndHold().pause(Duration.ofMillis(500)).moveToElement(dst).pause(Duration.ofMillis(500)).release().build().perform();
+        // Capture Screen Shot fo Browser
+        File srcFile1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/tests/Screenshots/allure/DragAndDrop3.png"));
+        Thread.sleep(10000);
     }
 }

@@ -240,6 +240,12 @@
             <version>1.81</version> <!-- Vérifiez la dernière version -->
         </dependency>
         <!-- Add necessary Allure dependencies to dependencies section -->
+        <!-- java.lang.ClassNotFoundException: io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm => 2.21.0-->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber7-jvm</artifactId>
+            <version>2.21.0</version> <!-- Vérifiez la version compatible -->
+        </dependency>
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
