@@ -51,6 +51,9 @@ public class WebLoginPage {
     @FindBy(xpath = "//span[normalize-space()='Mot de passe est obligatoire']")
     private WebElement PasswordRequiredErrorMessage;
 
+    @FindBy(xpath = "/html/body/div[2]/div/div/div[1]/div[2]")
+    private WebElement WelcomeMsg;
+
     /* methods of POM class */
     public void GoToLoginPage() {
         try {
@@ -115,5 +118,10 @@ public class WebLoginPage {
     public String GetPasswordRequiredErrorMessage() {
         wait.until(ExpectedConditions.visibilityOf(PasswordRequiredErrorMessage));
         return PasswordRequiredErrorMessage.getText();
+    }
+
+    public String GetWelcomeMessage() {
+        wait.until(ExpectedConditions.visibilityOf(WelcomeMsg));
+        return WelcomeMsg.getText();
     }
 }

@@ -53,8 +53,10 @@ public class TC001 {
         // wait for some time to let the page load
         Thread.sleep(7000);
         // verify the login conditions
-        Assert.assertEquals(driver.getCurrentUrl(), "https://chakerqa.playpro.fr/");
-        Assert.assertEquals(driver.getTitle(), "playprosite");
+        String welcomeMsg = webLoginPage.GetWelcomeMessage();
+        Assert.assertEquals(welcomeMsg, "Heureux de vous revoir \uD83D\uDC4B");
+        //Assert.assertEquals(driver.getCurrentUrl(), "https://chakerqa.playpro.fr/");
+        //Assert.assertEquals(driver.getTitle(), "playprosite");
         File srcFile1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/cucumber/bdd/Screenshots/success/scenario_login_ok.png"));
         Thread.sleep(3000);

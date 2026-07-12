@@ -42,4 +42,4 @@ jobs:
       - name: Run Specific Suite (test cases - selenium java)
         env:
           CI: true
-        run: mvn test -Dheadless=true -Dtest=com.qa.tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC001
+        run: mvn test -Dheadless=true -Dtest=com.qa.cucumber.bdd.DEV.Login.TC001
