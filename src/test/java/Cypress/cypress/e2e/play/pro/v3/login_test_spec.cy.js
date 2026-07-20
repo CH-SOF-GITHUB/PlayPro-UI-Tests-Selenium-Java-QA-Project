@@ -8,5 +8,7 @@ describe("PlayPro V3 Login ", () => {
         cy.get('input[name="email"]').eq(0).type("chakerqa-client@yopmail.com");
         cy.get('input[name="password"]').eq(0).type("Admin1234!");
         cy.contains('button', 'Me connecter').click();
+        // add cypress assertion BDD
+        cy.url().should('equal', 'https://chakerqa.playpro.fr/');
     });
 })
