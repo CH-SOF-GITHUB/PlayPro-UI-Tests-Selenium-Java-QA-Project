@@ -1,0 +1,32 @@
+{
+   "lambdatest_auth": {
+      "username": "chakerbensaid1mockinbox",
+      "access_key": "LT_95A1XnCh8ufgFfPUKZopTAeKO2zVnbTmMoeGuTU33qLEIzW"
+   },
+   "browsers": [
+      {
+         "browser": "Chrome",
+         "platform": "Windows 10",
+         "versions": [
+            "latest-1"
+         ]
+      }
+   ],
+   "run_settings": {
+      "reporter_config_file": "base_reporter_config.json",
+      "build_name": "cypress build tests - PlayPro V3",
+      "parallels": 1,
+      "specs": "./cypress/e2e/play/pro/v3/login_test_spec.cy.js",
+      "ignore_files": "",
+      "network": false,
+      "video": true,
+      "headless": false,
+      "npm_dependencies": {
+         "cypress": "15.18.1"
+      }
+   },
+   "tunnel_settings": {
+      "tunnel": false,
+      "tunnel_name": null
+   }
+}

@@ -1,5 +1,6 @@
 {
   "devDependencies": {
-    "cypress": "^15.18.1"
+    "cypress": "^15.18.1",
+    "lambdatest-cypress-cli": "^3.0.50"
   }
 }

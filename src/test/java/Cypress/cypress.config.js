@@ -1,11 +1,12 @@
-const { defineConfig } = require("cypress");
+const {defineConfig} = require("cypress");
 
 module.exports = defineConfig({
-  allowCypressEnv: false,
-
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+    e2e: {
+        setupNodeEvents(on, config) {
+            // implement node event listeners here
+        },
+        baseUrl: "https://chakerqa.playpro.fr",
+        specPattern: "cypress/e2e/**/*.cy.js",
+        supportFile: false
     },
-  },
 });

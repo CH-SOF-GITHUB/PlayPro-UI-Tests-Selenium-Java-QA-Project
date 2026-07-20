@@ -1,0 +1,47 @@
+version: "0.1"
+globalTimeout: 90
+testSuiteTimeout: 90
+testSuiteStep: 90
+runson: ${matrix.os}
+cypress: true
+concurrency: 1
+jobLabel:
+  - heJob
+pre:
+  - npm install cypress@15.18.1 --legacy-peer-deps
+  - npm install cypress@15.18.1 --legacy-peer-deps
+cacheKey: '{{ checksum "package.lock.json" }}'
+cacheDirectories:
+  - node_modules
+  - cypressCache
+env:
+  CYPRESS_CACHE_FOLDER: cypressCache
+  HYPEREXECUTE_CUSTOM_BUILD: cypress build tests - PlayPro V3
+matrix:
+  browser:
+    - Chrome-latest-1
+  test:
+    - ./cypress/e2e/play/pro/v3/login_test_spec.cy.js
+  os:
+    - win
+testSuites:
+  - npx cypress run --browser=$browser --headed --config video=false --spec $test
+cypressOps:
+  DedicatedProxy: false
+  Build: cypress build tests - PlayPro V3
+  BuildTags: []
+  Tags: []
+  Network: false
+  GeoLocation: ""
+  ReporterConfigFile: base_reporter_config.json
+  ProjectAutoCreate: true
+uploadArtefacts: []
+project:
+  name: cypress_project
+  differentialUpload:
+    enabled: true
+    ttlHours: 60
+combineTasksInMatrixMode: true
+runtime:
+  language: node
+  version: 16.18.1
