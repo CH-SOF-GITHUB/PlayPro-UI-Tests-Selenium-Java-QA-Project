@@ -30,7 +30,7 @@ public class WebEXP1Page {
     private WebElement Vr_Party_Test;
 
     /**
-     *  STEP 1: Locators Of Number of participants and Choices of Duration by price
+     *  STEP 1: LocatorsByLinks Of Number of participants and Choices of Duration by price
      */
     @FindBy(xpath = "(//div[contains(@role,'button')])[7]")
     private WebElement ButtonPlus;
