@@ -1,0 +1,82 @@
+{
+  "id": "6d312bfc-3977-47d8-8cbe-43b31cc2b304",
+  "version": "2.0",
+  "name": "SimplelearnIDE",
+  "url": "https://demowebshop.tricentis.com/",
+  "tests": [{
+    "id": "df90cb9c-6be9-469b-8191-d0b56e4f13d9",
+    "name": "SearchTest2",
+    "commands": [{
+      "id": "0b9dbc38-2618-46a3-a5ab-8bf3434c9440",
+      "comment": "",
+      "command": "open",
+      "target": "https://demowebshop.tricentis.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "725292a4-8124-4f4c-97dd-b6f69a7d5601",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x672",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c17f525c-09ca-45ca-90b0-9a464e7eec37",
+      "comment": "",
+      "command": "type",
+      "target": "id=small-searchterms",
+      "targets": [
+        ["id=small-searchterms", "id"],
+        ["name=q", "name"],
+        ["css=#small-searchterms", "css:finder"],
+        ["xpath=//input[@id='small-searchterms']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "T-shirt"
+    }, {
+      "id": "12a7cb84-3678-46f3-a590-3b881ab7335d",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=small-searchterms",
+      "targets": [
+        ["id=small-searchterms", "id"],
+        ["name=q", "name"],
+        ["css=#small-searchterms", "css:finder"],
+        ["xpath=//input[@id='small-searchterms']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "f668e72e-91f8-42c1-939d-a1179a3a2738",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Custom T-Shirt",
+      "targets": [
+        ["linkText=Custom T-Shirt", "linkText"],
+        ["css=.product-title > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Custom T-Shirt')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/custom-t-shirt')])[2]", "xpath:href"],
+        ["xpath=//h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Custom T-Shirt')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96d5ff9b-63f1-4c0d-a543-9380e51d3bba",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2d06df59-94dc-49bd-ba2b-cd6b61c5d96e",
+    "name": "SearchTestsSuite",
+    "persistSession": false,
+    "parallel": true,
+    "timeout": 300,
+    "tests": ["df90cb9c-6be9-469b-8191-d0b56e4f13d9"]
+  }],
+  "urls": [],
+  "plugins": []
+}

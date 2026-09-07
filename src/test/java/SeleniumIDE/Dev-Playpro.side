@@ -1,0 +1,74 @@
+{
+  "id": "3c0bf4e0-8601-41e4-a62a-58a9f1aa923e",
+  "version": "2.0",
+  "name": "Dev-Playpro",
+  "url": "https://devsite.playpro.fr",
+  "tests": [{
+    "id": "69c402d9-d87a-4f3d-b064-dc39528369a2",
+    "name": "access login page",
+    "commands": [{
+      "id": "62340e67-0612-43ff-99b1-7a6256084aca",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f02defe7-afc8-4561-b75e-9bd365698de8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x672",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69c0ae97-8871-41bd-8aaa-471e8c052544",
+      "comment": "",
+      "command": "click",
+      "target": "css=.lg\\3Apx-4",
+      "targets": [
+        ["css=.lg\\3Apx-4", "css:finder"],
+        ["xpath=//a[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Se connecter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7fe7e020-d9fc-423c-84e7-16d372baa5d2",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": "sleep5s"
+    }, {
+      "id": "23868580-c49d-4c66-a944-d927e5b2f145",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "//h1[normalize-space()='Se connecter']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14f00de8-39c3-4d19-a674-8e7059fd655c",
+      "comment": "",
+      "command": "echo",
+      "target": "Test passed OK",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f3ab416-829b-4b16-9998-cf2a3892d498",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "17345474-3880-4630-a764-91054d75d176",
+    "name": "login",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://devsite.playpro.fr/"],
+  "plugins": []
+}
