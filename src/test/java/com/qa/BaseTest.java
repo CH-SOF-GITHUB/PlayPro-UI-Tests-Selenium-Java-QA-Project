@@ -1,4 +1,4 @@
-package com.qa.tests.PlayPro.DEV;
+package com.qa;
 
 import com.qa.pages.Activites.WebEXP1Page;
 import com.qa.pages.Activites.WebEXP2Page;
@@ -22,7 +22,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
-import static com.qa.tests.LTTestStatus.markTestStatusViaJS;
+import static com.qa.LTTestStatus.markTestStatusViaJS;
 
 public class BaseTest {
     // define web driver

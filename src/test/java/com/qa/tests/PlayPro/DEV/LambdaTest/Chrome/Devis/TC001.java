@@ -1,6 +1,6 @@
 package com.qa.tests.PlayPro.DEV.LambdaTest.Chrome.Devis;
 
-import com.qa.tests.PlayPro.DEV.LoggedBaseTest;
+import com.qa.LoggedBaseTest;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;

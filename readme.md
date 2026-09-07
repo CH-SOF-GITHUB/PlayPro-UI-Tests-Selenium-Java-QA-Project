@@ -422,7 +422,7 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 import java.io.IOException;
 
-import static com.qa.tests.LTTestStatus.markTestStatusViaJS;
+import static com.qa.LTTestStatus.markTestStatusViaJS;
 
 
 public class Hooks extends LTConfigCucumber {

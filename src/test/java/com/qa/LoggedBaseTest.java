@@ -1,4 +1,4 @@
-package com.qa.tests.PlayPro.DEV;
+package com.qa;
 
 import com.qa.pages.WebCookiesPage;
 import com.qa.pages.WebLoginPage;

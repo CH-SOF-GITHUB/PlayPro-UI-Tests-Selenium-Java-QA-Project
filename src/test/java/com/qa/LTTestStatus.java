@@ -1,5 +1,5 @@
 // java
-package com.qa.tests;
+package com.qa;
 
 import com.qa.factory.LTConfig;
 import org.openqa.selenium.JavascriptExecutor;

@@ -1,7 +1,7 @@
 package com.qa.tests.PlayPro.DEV.LambdaTest.Chrome.Login;
 
 import com.qa.pages.WebLoginPage;
-import com.qa.tests.PlayPro.DEV.BaseTest;
+import com.qa.BaseTest;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;

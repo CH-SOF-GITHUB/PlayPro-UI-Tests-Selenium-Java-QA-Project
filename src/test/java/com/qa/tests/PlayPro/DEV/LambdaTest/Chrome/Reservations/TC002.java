@@ -3,7 +3,7 @@ package com.qa.tests.PlayPro.DEV.LambdaTest.Chrome.Reservations;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.qa.tests.PlayPro.DEV.LoggedBaseTest;
+import com.qa.LoggedBaseTest;
 
 public class TC002 extends LoggedBaseTest {
 

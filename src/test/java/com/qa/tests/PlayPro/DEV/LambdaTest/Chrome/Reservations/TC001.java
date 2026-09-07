@@ -1,10 +1,9 @@
 package com.qa.tests.PlayPro.DEV.LambdaTest.Chrome.Reservations;
 
 import io.qameta.allure.*;
-import org.apache.xmlbeans.impl.xb.xsdschema.All;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.qa.tests.PlayPro.DEV.LoggedBaseTest;
+import com.qa.LoggedBaseTest;
 
 public class TC001 extends LoggedBaseTest {
 

@@ -5,7 +5,7 @@ import com.qa.pages.WebLoginPage;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.qa.tests.PlayPro.DEV.BaseTest;
+import com.qa.BaseTest;
 
 public class TC001 extends BaseTest {
     // define Login object page
