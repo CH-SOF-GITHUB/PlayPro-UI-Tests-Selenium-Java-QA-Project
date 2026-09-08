@@ -17,6 +17,7 @@ import java.util.concurrent.locks.LockSupport;
 
 public class BaseClass {
     protected Properties prop;
+
     protected WebDriver driver;
 
     @BeforeMethod
@@ -81,5 +82,15 @@ public class BaseClass {
 *  */
     public void staticWait(int seconds) {
         LockSupport.parkNanos((TimeUnit.SECONDS.toNanos(seconds)));
+    }
+
+    @SuppressWarnings("lombok")
+    public WebDriver getDriver() {
+        return driver;
+    }
+
+    @SuppressWarnings("lombok")
+    public void setDriver(WebDriver driver) {
+        this.driver = driver;
     }
 }
