@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+    <appenders>
+        <!-- Console Appender -->
+        <console name="Console" target="SYSTEM_OUT">
+            <patternlayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %C{1} - %msg%n" />
+        </console>
+
+        <!-- General File Appender -->
+        <file name="FileLogger" filename="logs/app.log" append="true">
+            <filters>
+                <!-- Exclude ERROR and FATAL logs -->
+                <thresholdfilter level="error" onMatch="DENY" onMismatch="ACCEPT" />
+            </filters>
+            <patternlayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %C{1} - %msg%n" />
+        </file>
+
+        <!-- Error File Appender -->
+        <file name="ErrorFileLogger" filename="logs/error.log" append="true">
+            <filters>
+                <!-- Include only ERROR and FATAL logs -->
+                <thresholdfilter level="error" onMatch="ACCEPT" onMismatch="DENY" />
+            </filters>
+            <patternlayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %C{1} - %msg%n" />
+        </file>
+    </appenders>
+
+    <loggers>
+        <!-- Logger for com.demoproject (specify the package name here) -->
+        <logger name="com.qa.e2e" level="trace" additivity="false">
+            <appenderref ref="Console" />
+            <appenderref ref="FileLogger" />
+            <appenderref ref="ErrorFileLogger" />
+        </logger>
+
+    </loggers>
+</configuration>
+
+<!--
+C'est le fichier de configuration de Log4j 2, une bibliothèque de logging Java.
+Il permet de définir :
+où afficher les logs ;
+le niveau de logs (TRACE, DEBUG, INFO, WARN, ERROR) ;
+le format des messages ;
+écrire les logs dans un fichier ;
+afficher les logs dans la console ;
+gérer les fichiers de logs, leur rotation, etc.
+-->

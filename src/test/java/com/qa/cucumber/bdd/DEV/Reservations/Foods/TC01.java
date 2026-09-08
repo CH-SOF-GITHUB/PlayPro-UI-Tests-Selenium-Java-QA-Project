@@ -1,7 +1,7 @@
 package com.qa.cucumber.bdd.DEV.Reservations.Foods;
 
-import com.qa.pages.WebFoodPage;
-import com.qa.pages.WebReservationPage;
+import org.qa.pages.WebFoodPage;
+import org.qa.pages.WebReservationPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

@@ -1,7 +1,7 @@
 package com.qa.cucumber.bdd.DEV.Reservations.Subscriptions;
 
-import com.qa.pages.Abonnements.WebSubscriptionsPage;
-import com.qa.pages.WebReservationPage;
+import org.qa.pages.Abonnements.WebSubscriptionsPage;
+import org.qa.pages.WebReservationPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

@@ -1,7 +1,7 @@
 package com.qa.cucumber.bdd;
 
-import com.qa.pages.WebCookiesPage;
-import com.qa.pages.WebLoginPage;
+import org.qa.pages.WebCookiesPage;
+import org.qa.pages.WebLoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.apache.commons.logging.Log;

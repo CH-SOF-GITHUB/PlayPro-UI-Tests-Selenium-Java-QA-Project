@@ -1,12 +1,12 @@
 package com.qa.datadriven;
 
-import com.qa.utils.Constant;
+import org.qa.utilities.Constant;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 
 import java.util.Arrays;
 
-import static com.qa.utils.DataProviderUtils.getLoginExcelData;
-import static com.qa.utils.ExcelUtils.getExcelSheet;
+import static org.qa.utilities.DataProviderUtils.getLoginExcelData;
+import static org.qa.utilities.ExcelUtils.getExcelSheet;
 
 public class SampleTest {
 

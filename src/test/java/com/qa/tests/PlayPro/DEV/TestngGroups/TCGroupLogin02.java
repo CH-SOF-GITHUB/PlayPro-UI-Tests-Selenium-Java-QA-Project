@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterGroups;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.Test;
-import com.qa.pages.WebLoginPage;
+import org.qa.pages.WebLoginPage;
 
 public class TCGroupLogin02 extends LTConfig {
     // declare web driver and other necessary variables for the test class

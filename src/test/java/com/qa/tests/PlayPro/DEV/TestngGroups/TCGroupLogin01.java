@@ -6,7 +6,7 @@ import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import com.qa.pages.WebLoginPage;
+import org.qa.pages.WebLoginPage;
 
 
 public class TCGroupLogin01 extends LTConfig {

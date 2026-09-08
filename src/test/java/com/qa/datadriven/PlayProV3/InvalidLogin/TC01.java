@@ -1,10 +1,10 @@
 package com.qa.datadriven.PlayProV3.InvalidLogin;
 
-import com.qa.constants.Priority;
-import com.qa.pages.WebCookiesPage;
-import com.qa.pages.WebLoginPage;
+import org.qa.constants.Priority;
+import org.qa.pages.WebCookiesPage;
+import org.qa.pages.WebLoginPage;
 import com.qa.factory.LTConfig;
-import com.qa.utils.DataProviderUtils;
+import org.qa.utilities.DataProviderUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.remote.RemoteWebDriver;

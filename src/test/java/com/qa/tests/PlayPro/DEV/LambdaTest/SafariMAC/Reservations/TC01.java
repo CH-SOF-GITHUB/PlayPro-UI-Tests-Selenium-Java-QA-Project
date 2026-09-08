@@ -1,6 +1,6 @@
 package com.qa.tests.PlayPro.DEV.LambdaTest.SafariMAC.Reservations;
 
-import com.qa.constants.Priority;
+import org.qa.constants.Priority;
 import com.qa.factory.LTConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

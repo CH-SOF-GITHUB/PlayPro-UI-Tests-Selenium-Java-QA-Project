@@ -1,7 +1,7 @@
 package com.qa;
 
-import com.qa.pages.WebCookiesPage;
-import com.qa.pages.WebLoginPage;
+import org.qa.pages.WebCookiesPage;
+import org.qa.pages.WebLoginPage;
 import org.testng.annotations.BeforeMethod;
 
 /*

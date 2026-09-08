@@ -1,10 +1,10 @@
 package com.qa;
 
-import com.qa.pages.Activites.WebEXP1Page;
-import com.qa.pages.Activites.WebEXP2Page;
-import com.qa.pages.WebCartPage;
-import com.qa.pages.WebDevisEntreprise;
-import com.qa.pages.WebReservationPage;
+import org.qa.pages.Activites.WebEXP1Page;
+import org.qa.pages.Activites.WebEXP2Page;
+import org.qa.pages.WebCartPage;
+import org.qa.pages.WebDevisEntreprise;
+import org.qa.pages.WebReservationPage;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
