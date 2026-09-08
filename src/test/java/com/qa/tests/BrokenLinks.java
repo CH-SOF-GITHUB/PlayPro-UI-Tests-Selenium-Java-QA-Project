@@ -13,7 +13,9 @@ import java.util.List;
 public class BrokenLinks {
 
     public static void main(String[] args) {
+        // Store url
         String url;
+        // Define HttpURLConnection
         HttpURLConnection con = null;
         // Define a web driver
         WebDriver driver;
@@ -22,7 +24,7 @@ public class BrokenLinks {
         driver = new ChromeDriver();
         driver.get("https://www.facebook.com/");
 
-        // fetch all the elements with //a
+        // fetch all the elements with '//a'
         List<WebElement> links = driver.findElements(By.tagName("a"));
         for (WebElement link : links) {
             url = link.getAttribute("href");
