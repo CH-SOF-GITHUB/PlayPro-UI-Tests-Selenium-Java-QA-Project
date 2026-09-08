@@ -11,6 +11,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.LockSupport;
 
 
 public class BaseClass {
@@ -20,6 +22,8 @@ public class BaseClass {
     @BeforeMethod
     public void setup() {
         try {
+            System.out.println("Settings up for : " + this.getClass().getSimpleName());
+
             FileInputStream file = new FileInputStream("src/main/resources/config.properties");
             prop = new Properties();
             prop.load(file);
@@ -46,6 +50,9 @@ public class BaseClass {
             // Navigate the Base URL
             String url = prop.getProperty("url");
             driver.get(url);
+
+            // static wait for 2 S
+            staticWait(2);
         } catch (IOException e) {
             e.fillInStackTrace();
         }
@@ -54,7 +61,25 @@ public class BaseClass {
     @AfterMethod
     public void tearDown() {
         if (driver != null) {
-            driver.quit();
+            try {
+                driver.quit();
+            } catch (Exception e) {
+                System.out.println("unable to quit browser : " + e.getMessage());
+            }
         }
+    }
+
+    /* Static wait for pause:
+    * When to use staticWait:
+    * Waiting for AJAX calls to complete (though explicit waits are better)
+    * Synchronization points between test steps
+    * Delays needed for UI animations
+        When to avoid:
+        * General pauses in test flow
+        * Replacing proper wait strategies
+        * Making tests unnecessarily slow
+*  */
+    public void staticWait(int seconds) {
+        LockSupport.parkNanos((TimeUnit.SECONDS.toNanos(seconds)));
     }
 }
