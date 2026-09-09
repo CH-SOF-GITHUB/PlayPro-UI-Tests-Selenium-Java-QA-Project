@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.qa.base.BaseClass;
 
 import java.time.Duration;
 
@@ -16,7 +17,8 @@ public class ActionDriver {
     // add a constructor of class
     public ActionDriver(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(25));
+        int explicitWait = Integer.parseInt(BaseClass.getProp().getProperty("explicit"));
+        this.wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(explicitWait));
     }
 
     // Method to clic kin element

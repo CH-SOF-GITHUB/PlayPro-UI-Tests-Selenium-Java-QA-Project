@@ -16,7 +16,7 @@ import java.util.concurrent.locks.LockSupport;
 
 
 public class BaseClass {
-    protected Properties prop;
+    protected static Properties prop;
 
     protected WebDriver driver;
 
@@ -92,5 +92,15 @@ public class BaseClass {
     @SuppressWarnings("lombok")
     public void setDriver(WebDriver driver) {
         this.driver = driver;
+    }
+
+    @SuppressWarnings("lombok")
+    public static Properties getProp() {
+        return prop;
+    }
+
+    @SuppressWarnings("lombok")
+    public void setProp(Properties prop) {
+        this.prop = prop;
     }
 }
