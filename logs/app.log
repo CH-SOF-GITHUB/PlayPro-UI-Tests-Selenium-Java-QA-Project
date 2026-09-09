@@ -26,3 +26,31 @@
 2026-09-09 13:41:24 [main] INFO  ActionDriver - Clicked on element: By.className: oxd-userdropdown-name
 2026-09-09 13:41:25 [main] INFO  ActionDriver - Clicked on element: By.linkText: Logout
 2026-09-09 13:41:31 [main] INFO  BaseClass - WebDriver instance is closed for :  LoginTest
+2026-09-09 14:20:27 [main] INFO  BaseClass - properties.config File Loaded successfully
+2026-09-09 14:20:37 [main] INFO  BaseClass - ChromeDriver Instance Initialized successfully
+2026-09-09 14:20:45 [main] INFO  BaseClass - WebDriver Initialized and Browser Opened and Maximized
+2026-09-09 14:20:45 [main] TRACE BaseClass - This is a trace message
+2026-09-09 14:20:45 [main] DEBUG BaseClass - This is a debug message
+2026-09-09 14:20:45 [main] WARN  BaseClass - This is an warning message
+2026-09-09 14:20:45 [main] INFO  ActionDriver - WebDriver instance is created for : ActionDriver
+2026-09-09 14:20:45 [main] INFO  BaseClass - Action driver is created !!
+2026-09-09 14:20:45 [main] INFO  ActionDriver - Value entered on Element with name: username is : Admin
+2026-09-09 14:20:45 [main] INFO  ActionDriver - Value entered on Element with name: password is : admin1234
+2026-09-09 14:20:46 [main] INFO  ActionDriver - Clicked on element  ---> : Element with text: Login
+2026-09-09 14:20:47 [main] INFO  ActionDriver - ERROR: Actual Text : Invalid credentials does not match | Expected Value: Invalid credentials1
+2026-09-09 14:20:47 [main] INFO  BaseClass - WebDriver instance is closed for :  LoginTest
+2026-09-09 14:20:47 [main] INFO  BaseClass - properties.config File Loaded successfully
+2026-09-09 14:20:49 [main] INFO  BaseClass - ChromeDriver Instance Initialized successfully
+2026-09-09 14:20:57 [main] INFO  BaseClass - WebDriver Initialized and Browser Opened and Maximized
+2026-09-09 14:20:57 [main] TRACE BaseClass - This is a trace message
+2026-09-09 14:20:57 [main] DEBUG BaseClass - This is a debug message
+2026-09-09 14:20:57 [main] WARN  BaseClass - This is an warning message
+2026-09-09 14:20:57 [main] INFO  ActionDriver - WebDriver instance is created for : ActionDriver
+2026-09-09 14:20:57 [main] INFO  BaseClass - Action driver is created !!
+2026-09-09 14:20:57 [main] INFO  ActionDriver - Value entered on Element with name: username is : Admin
+2026-09-09 14:20:57 [main] INFO  ActionDriver - Value entered on Element with name: password is : admin123
+2026-09-09 14:20:59 [main] INFO  ActionDriver - Clicked on element  ---> : Element with text: Login
+2026-09-09 14:21:00 [main] INFO  ActionDriver - Element : Element with text: Admin is displayed
+2026-09-09 14:21:00 [main] INFO  ActionDriver - Clicked on element  ---> : Element with text: hitler epsten
+2026-09-09 14:21:02 [main] INFO  ActionDriver - Clicked on element  ---> : Element with text: Logout
+2026-09-09 14:21:04 [main] INFO  BaseClass - WebDriver instance is closed for :  LoginTest
