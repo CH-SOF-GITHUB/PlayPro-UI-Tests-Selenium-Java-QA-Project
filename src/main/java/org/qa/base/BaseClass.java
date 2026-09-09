@@ -21,9 +21,11 @@ import java.util.concurrent.locks.LockSupport;
 public class BaseClass {
     protected static Properties prop;
 
-    protected static WebDriver driver;
+    // protected static WebDriver driver;   (problem: web driver is not opened: parallel: classes not tests in tesntng file.
+    // private static ActionDriver actionDriver;
 
-    private static ActionDriver actionDriver;
+    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    private static ThreadLocal<ActionDriver> actionDriver = new ThreadLocal<>();
 
     public static final Logger loggr = LoggerManager.getLogger(BaseClass.class);
 
@@ -42,13 +44,16 @@ public class BaseClass {
             // Initialize the WebDriver based on the browser specified in the properties file
             String browser = prop.getProperty("browser");
             if (browser.equalsIgnoreCase("firefox")) {
-                driver = new FirefoxDriver();
+                // driver = new FirefoxDriver();
+                driver.set(new FirefoxDriver());
                 loggr.info("FirefoxDriver Instance Initialized successfully");
             } else if (browser.equalsIgnoreCase("chrome")) {
-                driver = new ChromeDriver();
+                //driver = new ChromeDriver();
+                driver.set(new ChromeDriver());
                 loggr.info("ChromeDriver Instance Initialized successfully");
             } else if (browser.equalsIgnoreCase("edge")) {
-                driver = new EdgeDriver();
+                //driver = new EdgeDriver();
+                driver.set(new EdgeDriver());
                 loggr.info("EdgeDriver Instance Initialized successfully");
             } else {
                 throw new IllegalArgumentException("Browser not supported: " + browser);
@@ -56,14 +61,14 @@ public class BaseClass {
 
             // Initialize Implicit Wait
             int timeout = Integer.parseInt(prop.getProperty("timeout"));
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
+            driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
 
             // Maximize the web driver
-            driver.manage().window().maximize();
+            driver.get().manage().window().maximize();
 
             // Navigate the Base URL
             String url = prop.getProperty("url");
-            driver.get(url);
+            driver.get().get(url);
 
             // static wait for 2 S
             staticWait(2);
@@ -76,10 +81,13 @@ public class BaseClass {
             loggr.fatal("This is a fatal message");
 
             // Implement Singleton Design Pattern and Initialize action driver only once
-            if (actionDriver == null) {
+            /*if (actionDriver == null) {
                 actionDriver = new ActionDriver(driver);
-                loggr.info("Action driver is created !!");
-            }
+                loggr.info("Action driver is created in Thread : {}", Thread.currentThread().getId());
+            }*/
+            // Initialize action driver for current thread
+            actionDriver.set(new ActionDriver(getDriver()));
+            loggr.info("ActionDriver Initialize form Thread {}", Thread.currentThread().getId());
         } catch (IOException e) {
             e.fillInStackTrace();
         }
@@ -87,16 +95,20 @@ public class BaseClass {
 
     @AfterMethod
     public void tearDown() {
-        if (driver != null) {
+        if (driver.get() != null) {
             try {
-                driver.quit();
+                driver.get().quit();
             } catch (Exception e) {
                 System.out.println("unable to quit browser : " + e.getMessage());
             }
         }
         loggr.info("WebDriver instance is closed for :  {}", this.getClass().getSimpleName());
-        driver = null;
-        actionDriver = null;
+
+        driver.remove();
+        actionDriver.remove();
+        // Close wen driver for current thread
+        // driver = null;
+        // actionDriver = null;
     }
 
     /* Static wait for pause:
@@ -118,23 +130,25 @@ public class BaseClass {
         return driver;
     }*/
     public static WebDriver getDriver() {
-        if (driver == null) {
+        // Use ThreadLocal for parallel testing
+        if (driver.get() == null) {
             System.out.print("WebDriver is not initialized !!");
             throw new IllegalStateException("WebDriver is not initialized !!");
         }
-        return driver;
+        return driver.get();
     }
 
     public static ActionDriver getActionDriver() {
-        if (actionDriver == null) {
+        // Use ThreadLocal for parallel testing
+        if (actionDriver.get() == null) {
             System.out.print("Action Driver is not initialized !!");
             throw new IllegalStateException("Action Driver is not initialized !!");
         }
-        return actionDriver;
+        return actionDriver.get();
     }
 
     @SuppressWarnings("lombok")
-    public void setDriver(WebDriver driver) {
+    public void setDriver(ThreadLocal<WebDriver> driver) {  // public void setDriver(WebDriver driver) in current thread
         this.driver = driver;
     }
 

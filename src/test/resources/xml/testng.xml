@@ -2,9 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name="OrangeHRM Test Suite" verbose="1" parallel="tests" thread-count="2">
+<suite name="OrangeHRM Test Suite" parallel="methods" thread-count="5">
     <test name="OrangeHRM Test 1">
         <classes>
+            <class name="com.qa.e2e.orangeHRM.DummyClass"/>
+            <class name="com.qa.e2e.orangeHRM.DummyClass2"/>
             <class name="com.qa.e2e.orangeHRM.LoginTest"/>
             <class name="com.qa.e2e.orangeHRM.HomeTest"/>
         </classes>
