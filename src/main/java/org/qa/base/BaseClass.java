@@ -30,7 +30,7 @@ public class BaseClass {
     public static final Logger loggr = LoggerManager.getLogger(BaseClass.class);
 
     @BeforeMethod
-    public void setup() {
+    public synchronized void setup() {
         try {
             // Set Settings up message
             System.out.println("Settings up for : " + this.getClass().getSimpleName());
@@ -94,7 +94,7 @@ public class BaseClass {
     }
 
     @AfterMethod
-    public void tearDown() {
+    public synchronized void tearDown() {
         if (driver.get() != null) {
             try {
                 driver.get().quit();
