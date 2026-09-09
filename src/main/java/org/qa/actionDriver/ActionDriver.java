@@ -52,18 +52,21 @@ public class ActionDriver {
         }
     }
 
-    // Method to compare Two Text
-    public void compareText(By by, String expectedText) {
+    // Method to compare Two Text - (change return type)
+    public boolean compareText(By by, String expectedText) {
         try {
             waitForElementToBeVisible(by);
             String actualText = driver.findElement(by).getText();
             if (expectedText.equals(actualText)) {
                 System.out.println("Actual Text : " + actualText + " Math" + " Expected: " + expectedText);
+                return true;
             } else {
                 System.out.println("ERROR=> Actual Text : " + actualText + " does not Math" + " Expected: " + expectedText);
+                return false;
             }
         } catch (Exception e) {
             System.out.println("Element is not visible: " + e.getMessage());
+            return false;
         }
     }
 

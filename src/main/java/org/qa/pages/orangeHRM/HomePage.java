@@ -10,7 +10,7 @@ public class HomePage {
     private ActionDriver actionDriver;
 
     // Define locators by class
-    private By adminTab = By.xpath("//li[1]//a[1]//span[1]");
+    private By adminTab = By.cssSelector("body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)");
     private By userIDBtn = By.className("oxd-userdropdown-name");
     private By logoutBtn = By.linkText("Logout");
     private By orangeHRMLogo = By.xpath("//div[@class='oxd-brand-banner']//img");

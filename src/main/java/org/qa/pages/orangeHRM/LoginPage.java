@@ -13,7 +13,7 @@ public class LoginPage {
     private By passwordField = By.cssSelector("input[type='password']");
     private By loginButton = By.cssSelector("button[type='submit']");
 
-    private By errorMessage = By.cssSelector("div[class='oxd-alert-content--error']");
+    private By errorMessage = By.xpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']");
 
     // Initialize action driver by constructor
     public LoginPage(WebDriver driver) {
@@ -39,8 +39,8 @@ public class LoginPage {
     }
 
     // Method if error is correct or not
-    public void verifyErrorMessage(String expectedErrorMsg) {
-        actionDriver.compareText(errorMessage, expectedErrorMsg);
+    public boolean verifyErrorMessage(String expectedErrorMsg) {
+        return actionDriver.compareText(errorMessage, expectedErrorMsg);
     }
 
 }
