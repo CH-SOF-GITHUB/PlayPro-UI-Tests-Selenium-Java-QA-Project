@@ -3,6 +3,7 @@ package org.qa.pages.orangeHRM;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.qa.actionDriver.ActionDriver;
+import org.qa.base.BaseClass;
 
 public class LoginPage {
 
@@ -16,8 +17,11 @@ public class LoginPage {
     private By errorMessage = By.xpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']");
 
     // Initialize action driver by constructor
-    public LoginPage(WebDriver driver) {
+    /*public LoginPage(WebDriver driver) {
         this.actionDriver = new ActionDriver(driver);
+    }*/
+    public LoginPage(WebDriver driver) {
+        this.actionDriver = BaseClass.getActionDriver();
     }
 
 

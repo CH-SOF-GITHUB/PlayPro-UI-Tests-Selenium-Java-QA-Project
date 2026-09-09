@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.qa.actionDriver.ActionDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -18,7 +19,9 @@ import java.util.concurrent.locks.LockSupport;
 public class BaseClass {
     protected static Properties prop;
 
-    protected WebDriver driver;
+    protected static WebDriver driver;
+
+    private static ActionDriver actionDriver;
 
     @BeforeMethod
     public void setup() {
@@ -54,6 +57,12 @@ public class BaseClass {
 
             // static wait for 2 S
             staticWait(2);
+
+            // Implement Singleton Design Pattern and Initialize action driver only once
+            if (actionDriver == null) {
+                actionDriver = new ActionDriver(driver);
+                System.out.println("Action driver is created !!");
+            }
         } catch (IOException e) {
             e.fillInStackTrace();
         }
@@ -68,6 +77,9 @@ public class BaseClass {
                 System.out.println("unable to quit browser : " + e.getMessage());
             }
         }
+        System.out.println("WebDriver instance is closed : " + this.getClass().getSimpleName());
+        driver = null;
+        actionDriver = null;
     }
 
     /* Static wait for pause:
@@ -85,8 +97,23 @@ public class BaseClass {
     }
 
     @SuppressWarnings("lombok")
-    public WebDriver getDriver() {
+    /*public WebDriver getDriver() {
         return driver;
+    }*/
+    public static WebDriver getDriver() {
+        if (driver == null) {
+            System.out.print("WebDriver is not initialized !!");
+            throw new IllegalStateException("WebDriver is not initialized !!");
+        }
+        return driver;
+    }
+
+    public static ActionDriver getActionDriver() {
+        if (actionDriver == null) {
+            System.out.print("Action Driver is not initialized !!");
+            throw new IllegalStateException("Action Driver is not initialized !!");
+        }
+        return actionDriver;
     }
 
     @SuppressWarnings("lombok")

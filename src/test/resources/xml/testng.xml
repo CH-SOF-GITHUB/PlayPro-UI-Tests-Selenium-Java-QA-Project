@@ -5,6 +5,7 @@
 <suite name="OrangeHRM Test Suite" verbose="1" parallel="tests" thread-count="2">
     <test name="OrangeHRM Test 1">
         <classes>
+            <class name="com.qa.e2e.orangeHRM.LoginTest"/>
             <class name="com.qa.e2e.orangeHRM.HomeTest"/>
         </classes>
     </test>
