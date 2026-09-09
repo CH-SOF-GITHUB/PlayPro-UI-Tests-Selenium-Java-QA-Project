@@ -1,5 +1,6 @@
 package org.qa.actionDriver;
 
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -14,11 +15,14 @@ public class ActionDriver {
     private WebDriver driver;
     private WebDriverWait wait;
 
+    public static final Logger loggr =  BaseClass.loggr;
+
     // add a constructor of class
     public ActionDriver(WebDriver driver) {
         this.driver = driver;
         int explicitWait = Integer.parseInt(BaseClass.getProp().getProperty("explicit"));
         this.wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(explicitWait));
+        loggr.info("WebDriver instance is created for : {}", this.getClass().getSimpleName());
     }
 
     // Method to clic kin element
@@ -26,8 +30,9 @@ public class ActionDriver {
         try {
             waitForElementToBeClickable(by);
             driver.findElement(by).click();
+            loggr.info("Clicked on element: {}", by.toString());
         } catch (Exception e) {
-            System.out.println("Element is not clickable: " + e.getMessage());
+            loggr.error("Element is not clickable: {}", e.getMessage());
         }
     }
 
@@ -36,8 +41,9 @@ public class ActionDriver {
         try {
             waitForElementToBeVisible(by);
             driver.findElement(by).sendKeys(text);
+            loggr.info("Value entered: {}", text);
         } catch (Exception e) {
-            System.out.println("Element is not entered: " + e.getMessage());
+            loggr.error("Element is not entered: {}", e.getMessage());
         }
     }
 
@@ -47,7 +53,7 @@ public class ActionDriver {
             waitForElementToBeVisible(by);
             return driver.findElement(by).getText();
         } catch (Exception e) {
-            System.out.println("Element is not visible: " + e.getMessage());
+            loggr.error("Element is not visible: {}", e.getMessage());
             return null;
         }
     }
@@ -58,14 +64,14 @@ public class ActionDriver {
             waitForElementToBeVisible(by);
             String actualText = driver.findElement(by).getText();
             if (expectedText.equals(actualText)) {
-                System.out.println("Actual Text : " + actualText + " Math" + " Expected: " + expectedText);
+                loggr.info("Actual Text : {} match to | Expected Value: {}", actualText, expectedText);
                 return true;
             } else {
-                System.out.println("ERROR=> Actual Text : " + actualText + " does not Math" + " Expected: " + expectedText);
+                loggr.info("ERROR: Actual Text : {} does not match | Expected Value: {}", actualText, expectedText);
                 return false;
             }
         } catch (Exception e) {
-            System.out.println("Element is not visible: " + e.getMessage());
+            loggr.error("Element compared is not visible: {}", e.getMessage());
             return false;
         }
     }
@@ -76,14 +82,14 @@ public class ActionDriver {
             waitForElementToBeVisible(by);
             boolean isDisplayed = driver.findElement(by).isDisplayed();
             if (isDisplayed) {
-                System.out.println("Element is displayed");
+                loggr.info("Element is displayed: {}", by.toString());
                 return true;
             } else {
-                System.out.println("Element is not displayed");
+                loggr.info("Element is not displayed: {}", by.toString());
                 return false;
             }
         } catch (Exception e) {
-            System.out.println("Element is not displayed: " + e.getMessage());
+            loggr.error("Element is not displayed: {}", e.getMessage());
             return false;
         }
     }
@@ -95,7 +101,7 @@ public class ActionDriver {
             WebElement element = driver.findElement(by);
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         } catch (Exception e) {
-            System.out.println("Element is not visible: " + e.getMessage());
+            loggr.error("Element to scroll is not visible: {}", e.getMessage());
         }
     }
 
@@ -104,9 +110,9 @@ public class ActionDriver {
         try {
             wait.withTimeout(Duration.ofSeconds(timeOutInSec)).until(WebDriver -> ((JavascriptExecutor) driver)
                     .executeScript("return document.readyState").equals("complete"));
-            System.out.println("Page load successfully!");
+            loggr.info("Page load successfully!");
         } catch (Exception e) {
-            System.out.println("Page is not loaded within " + timeOutInSec + " seconds. Exception: " + e.getMessage());
+            loggr.error("Page is not loaded within: {}  seconds. Exception: {}", timeOutInSec, e.getMessage());
         }
     }
 
@@ -115,7 +121,7 @@ public class ActionDriver {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(by));
         } catch (Exception e) {
-            System.out.println("Element is not clickable: " + e.getMessage());
+            loggr.error("This Element is not clickable: {}", e.getMessage());
         }
     }
 
@@ -124,7 +130,7 @@ public class ActionDriver {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(by));
         } catch (Exception e) {
-            System.out.println("Element is not visible: " + e.getMessage());
+            loggr.error("This Element is not visible: {}", e.getMessage());
         }
     }
 }

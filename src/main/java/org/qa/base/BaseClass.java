@@ -1,10 +1,12 @@
 package org.qa.base;
 
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.qa.actionDriver.ActionDriver;
+import org.qa.utilities.LoggerManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -23,23 +25,31 @@ public class BaseClass {
 
     private static ActionDriver actionDriver;
 
+    public static final Logger loggr = LoggerManager.getLogger(BaseClass.class);
+
     @BeforeMethod
     public void setup() {
         try {
+            // Set Settings up message
             System.out.println("Settings up for : " + this.getClass().getSimpleName());
 
+            // Load properties configuration
             FileInputStream file = new FileInputStream("src/main/resources/config.properties");
             prop = new Properties();
             prop.load(file);
+            loggr.info("properties.config File Loaded successfully");
 
             // Initialize the WebDriver based on the browser specified in the properties file
             String browser = prop.getProperty("browser");
             if (browser.equalsIgnoreCase("firefox")) {
                 driver = new FirefoxDriver();
+                loggr.info("FirefoxDriver Instance Initialized successfully");
             } else if (browser.equalsIgnoreCase("chrome")) {
                 driver = new ChromeDriver();
+                loggr.info("ChromeDriver Instance Initialized successfully");
             } else if (browser.equalsIgnoreCase("edge")) {
                 driver = new EdgeDriver();
+                loggr.info("EdgeDriver Instance Initialized successfully");
             } else {
                 throw new IllegalArgumentException("Browser not supported: " + browser);
             }
@@ -58,10 +68,17 @@ public class BaseClass {
             // static wait for 2 S
             staticWait(2);
 
+            loggr.info("WebDriver Initialized and Browser Opened and Maximized");
+            loggr.trace("This is a trace message");
+            loggr.error("This is an error message");
+            loggr.debug("This is a debug message");
+            loggr.warn("This is an warning message");
+            loggr.fatal("This is a fatal message");
+
             // Implement Singleton Design Pattern and Initialize action driver only once
             if (actionDriver == null) {
                 actionDriver = new ActionDriver(driver);
-                System.out.println("Action driver is created !!");
+                loggr.info("Action driver is created !!");
             }
         } catch (IOException e) {
             e.fillInStackTrace();
@@ -77,7 +94,7 @@ public class BaseClass {
                 System.out.println("unable to quit browser : " + e.getMessage());
             }
         }
-        System.out.println("WebDriver instance is closed : " + this.getClass().getSimpleName());
+        loggr.info("WebDriver instance is closed for :  {}", this.getClass().getSimpleName());
         driver = null;
         actionDriver = null;
     }

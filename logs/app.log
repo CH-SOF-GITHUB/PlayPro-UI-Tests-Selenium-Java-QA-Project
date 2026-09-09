@@ -1,0 +1,28 @@
+2026-09-09 13:40:45 [main] INFO  BaseClass - properties.config File Loaded successfully
+2026-09-09 13:40:56 [main] INFO  BaseClass - ChromeDriver Instance Initialized successfully
+2026-09-09 13:41:07 [main] INFO  BaseClass - WebDriver Initialized and Browser Opened and Maximized
+2026-09-09 13:41:07 [main] TRACE BaseClass - This is a trace message
+2026-09-09 13:41:07 [main] DEBUG BaseClass - This is a debug message
+2026-09-09 13:41:07 [main] WARN  BaseClass - This is an warning message
+2026-09-09 13:41:07 [main] INFO  ActionDriver - WebDriver instance is created for : ActionDriver
+2026-09-09 13:41:07 [main] INFO  BaseClass - Action driver is created !!
+2026-09-09 13:41:08 [main] INFO  ActionDriver - Value entered: Admin
+2026-09-09 13:41:08 [main] INFO  ActionDriver - Value entered: admin1234
+2026-09-09 13:41:08 [main] INFO  ActionDriver - Clicked on element: By.cssSelector: button[type='submit']
+2026-09-09 13:41:09 [main] INFO  ActionDriver - ERROR: Actual Text : Invalid credentials does not match | Expected Value: Invalid credentials1
+2026-09-09 13:41:11 [main] INFO  BaseClass - WebDriver instance is closed for :  LoginTest
+2026-09-09 13:41:11 [main] INFO  BaseClass - properties.config File Loaded successfully
+2026-09-09 13:41:13 [main] INFO  BaseClass - ChromeDriver Instance Initialized successfully
+2026-09-09 13:41:21 [main] INFO  BaseClass - WebDriver Initialized and Browser Opened and Maximized
+2026-09-09 13:41:21 [main] TRACE BaseClass - This is a trace message
+2026-09-09 13:41:21 [main] DEBUG BaseClass - This is a debug message
+2026-09-09 13:41:21 [main] WARN  BaseClass - This is an warning message
+2026-09-09 13:41:21 [main] INFO  ActionDriver - WebDriver instance is created for : ActionDriver
+2026-09-09 13:41:21 [main] INFO  BaseClass - Action driver is created !!
+2026-09-09 13:41:22 [main] INFO  ActionDriver - Value entered: Admin
+2026-09-09 13:41:22 [main] INFO  ActionDriver - Value entered: admin123
+2026-09-09 13:41:23 [main] INFO  ActionDriver - Clicked on element: By.cssSelector: button[type='submit']
+2026-09-09 13:41:24 [main] INFO  ActionDriver - Element is displayed: By.cssSelector: body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)
+2026-09-09 13:41:24 [main] INFO  ActionDriver - Clicked on element: By.className: oxd-userdropdown-name
+2026-09-09 13:41:25 [main] INFO  ActionDriver - Clicked on element: By.linkText: Logout
+2026-09-09 13:41:31 [main] INFO  BaseClass - WebDriver instance is closed for :  LoginTest
