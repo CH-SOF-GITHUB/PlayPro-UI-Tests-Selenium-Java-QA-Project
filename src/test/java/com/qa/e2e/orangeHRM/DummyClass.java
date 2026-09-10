@@ -11,7 +11,7 @@ public class DummyClass extends BaseClass {
     @Test
     public void dummyTest() {
         // Lunch the test with Extent Report
-        ExtentManager.startTest("DummyTest 1 Test");
+        // ExtentManager.startTest("DummyTest 1 Test"); // This has been implemented in TestListener
         String ExpectedTitle = "OrangeHRM";
         ExtentManager.logStep("Verifying the Title");
         String ActualTitle = getDriver().getTitle();

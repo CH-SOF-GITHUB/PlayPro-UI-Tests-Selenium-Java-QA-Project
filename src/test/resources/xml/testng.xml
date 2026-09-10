@@ -3,6 +3,9 @@
 
 
 <suite name="OrangeHRM Test Suite" parallel="classes" thread-count="5">
+    <listeners>
+        <listener class-name="org.qa.listeners.TestListener"/>
+    </listeners>
     <test name="OrangeHRM Test 1">
         <classes>
             <class name="com.qa.e2e.orangeHRM.DummyClass"/>

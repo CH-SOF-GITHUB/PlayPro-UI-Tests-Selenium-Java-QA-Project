@@ -36,7 +36,7 @@ public class ActionDriver {
             ExtentManager.logStep("Clicked on element  ---> : " + elementDescription);
             loggr.info("Clicked on element  ---> : {}", elementDescription);
         } catch (Exception e) {
-            ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to click en this element", elementDescription + "_unable_to_click");
+            ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to click en this element!", elementDescription + "_unable_to_click");
             loggr.error("Element is not clickable: {}", e.getMessage());
         }
     }
@@ -51,7 +51,7 @@ public class ActionDriver {
             ExtentManager.logStep("Value entered on: " + elementDescription + " is " + text);
             loggr.info("Value entered on {} is  {}", elementDescription, text);
         } catch (Exception e) {
-            ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to click en this element", elementDescription + "_unable_to_click");
+            ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to enter a value on this element!", elementDescription + "_unable_to_enter_value");
             loggr.error("Element is not entered: {}", e.getMessage());
         }
     }
@@ -74,11 +74,11 @@ public class ActionDriver {
             String actualText = driver.findElement(by).getText();
             if (expectedText.equals(actualText)) {
                 loggr.info("Actual Text : {} match to | Expected Value: {}", actualText, expectedText);
-                ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Compare Text", "Test Verified successfully: " + expectedText + " equals " + actualText);
+                ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Compare Text!", "Test Verified successfully: " + expectedText + " equals " + actualText);
                 return true;
             } else {
                 loggr.info("ERROR: Actual Text : {} does not match | Expected Value: {}", actualText, expectedText);
-                ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Compare Text", "Test failed: " + expectedText + " not equals " + actualText);
+                ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Text Comparison fails!", "Test failed: " + expectedText + " not equals " + actualText);
                 return false;
             }
         } catch (Exception e) {
@@ -95,7 +95,7 @@ public class ActionDriver {
             boolean isDisplayed = driver.findElement(by).isDisplayed();
             if (isDisplayed) {
                 ExtentManager.logStep("Element is displayed: " + elementDescription);
-                ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Element is displayed: ", elementDescription + "_is_displayed");
+                ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Element is displayed !", elementDescription + "_is_displayed");
                 loggr.info("Element : {} is displayed", elementDescription);
                 return true;
             } else {
@@ -103,7 +103,7 @@ public class ActionDriver {
                 return false;
             }
         } catch (Exception e) {
-            ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Element is not displayed", elementDescription + "_is_not_displayed");
+            ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Element is not displayed !", elementDescription + "_is_not_displayed");
             loggr.error("Element is not displayed: {}", e.getMessage());
             return false;
         }

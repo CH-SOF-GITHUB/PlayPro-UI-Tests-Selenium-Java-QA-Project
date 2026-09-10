@@ -1,0 +1,66 @@
+package org.qa.listeners;
+
+import org.qa.base.BaseClass;
+import org.qa.utilities.ExtentManager;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+/**
+ * Classe d'écouteur de tests TestNG.
+ * Surcharge des méthodes clés pour capturer les résultats des tests.
+ */
+public class TestListener implements ITestListener {
+
+    // Triggered when a suite starts
+    @Override
+    public void onStart(ITestContext context) {
+        System.out.println("Test suite started: " + context.getName());
+        ExtentManager.getReporter(); // Initialize the ExtentReports
+    }
+
+    // Triggered when a suite finishes
+    @Override
+    public void onFinish(ITestContext context) {
+        System.out.println("Test suite finished: " + context.getName());
+        ExtentManager.endTest();
+    }
+
+    // Triggered when a test start
+    @Override
+    public void onTestStart(ITestResult result) {
+        String testName = result.getMethod().getMethodName();
+        // Start logging in Extent Reports
+        ExtentManager.startTest(testName);
+        ExtentManager.logStep("Test Started - " + testName);
+    }
+
+    // Triggered when a test success
+    @Override
+    public void onTestSuccess(ITestResult result) {
+        String testName = result.getMethod().getMethodName();
+        // Send success results in Extent Reports
+        ExtentManager.logStepWithScreenshot(BaseClass.getDriver(),"Test Passed", "Test End: " + testName + " - ✔️ Test Passed");
+    }
+
+    // Triggered when a test fails
+    @Override
+    public void onTestFailure(ITestResult result) {
+        String testName = result.getMethod().getMethodName();
+        // Send success results in Extent Reports
+        ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(),"Test Failed: "+result.getThrowable().getMessage(), "Test End: " + testName + " - ❌ Test Failed");
+    }
+
+    @Override
+    public void onTestSkipped(ITestResult result) {
+        String testName = result.getMethod().getMethodName();
+        // Send success results in Extent Reports
+        ExtentManager.logSkip("Test Skipped - " + testName + " - ⚠️ Test Skipped");
+
+    }
+
+    @Override
+    public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+        System.out.println("Test failed but within success percentage: " + result.getName());
+    }
+}

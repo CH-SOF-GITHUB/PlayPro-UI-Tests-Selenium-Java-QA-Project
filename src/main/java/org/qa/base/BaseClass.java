@@ -43,7 +43,7 @@ public class BaseClass {
             loggr.info("properties.config File Loaded successfully");
 
             // Start the Extent Report:
-            ExtentManager.getReporter();
+            // ExtentManager.getReporter();  // This has been implemented in TestListener
 
             // Initialize the WebDriver based on the browser specified in the properties file
             String browser = prop.getProperty("browser");
@@ -118,7 +118,7 @@ public class BaseClass {
         // driver = null;
         // actionDriver = null;
         /* After each test , we call end test to flush the extent report */
-        ExtentManager.endTest();
+        // ExtentManager.endTest();   // This has been implemented in TestListener
     }
 
     /* Static wait for pause:

@@ -18,6 +18,7 @@ public class ExtentManager {
     private static ExtentReports extent;
     @Getter
     private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
+    private static String testName;
 
     public static void setTest(ThreadLocal<ExtentTest> test) {
         ExtentManager.test = test;
@@ -46,6 +47,7 @@ public class ExtentManager {
 
     // Start the test
     public synchronized static ExtentTest startTest(String testName) {
+        ExtentManager.testName = testName;
         ExtentTest extentTest = getReporter().createTest(testName);
         test.set(extentTest);
         return extentTest;
@@ -73,7 +75,7 @@ public class ExtentManager {
 
     // Log a step
     public static void logStep(String logMessage) {
-        getTest().info("Step executed in test: " + getTestName());
+        getTest().info(logMessage);
     }
 
     // Log a step validation with screenshot (Base64 embedded) - parameter removed
