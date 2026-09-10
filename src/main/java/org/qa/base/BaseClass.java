@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.qa.actionDriver.ActionDriver;
+import org.qa.utilities.ExtentManager;
 import org.qa.utilities.LoggerManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -41,19 +42,26 @@ public class BaseClass {
             prop.load(file);
             loggr.info("properties.config File Loaded successfully");
 
+            // Start the Extent Report:
+            ExtentManager.getReporter();
+
             // Initialize the WebDriver based on the browser specified in the properties file
             String browser = prop.getProperty("browser");
             if (browser.equalsIgnoreCase("firefox")) {
                 // driver = new FirefoxDriver();
                 driver.set(new FirefoxDriver());
+                // Register the driver for Extent Report
+                ExtentManager.registerDriver(getDriver());
                 loggr.info("FirefoxDriver Instance Initialized successfully");
             } else if (browser.equalsIgnoreCase("chrome")) {
                 //driver = new ChromeDriver();
                 driver.set(new ChromeDriver());
+                ExtentManager.registerDriver(getDriver());
                 loggr.info("ChromeDriver Instance Initialized successfully");
             } else if (browser.equalsIgnoreCase("edge")) {
                 //driver = new EdgeDriver();
                 driver.set(new EdgeDriver());
+                ExtentManager.registerDriver(getDriver());
                 loggr.info("EdgeDriver Instance Initialized successfully");
             } else {
                 throw new IllegalArgumentException("Browser not supported: " + browser);
@@ -109,6 +117,8 @@ public class BaseClass {
         // Close wen driver for current thread
         // driver = null;
         // actionDriver = null;
+        /* After each test , we call end test to flush the extent report */
+        ExtentManager.endTest();
     }
 
     /* Static wait for pause:

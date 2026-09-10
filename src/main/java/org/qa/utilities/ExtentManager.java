@@ -35,7 +35,7 @@ public class ExtentManager {
             spark.config().setTheme(Theme.DARK);
 
             extent = new ExtentReports();
-
+            extent.attachReporter(spark);
             // Adding system information to the report
             extent.setSystemInfo("Operating System", System.getProperty("os.name"));
             extent.setSystemInfo("User Name", System.getProperty("user.name"));
@@ -76,13 +76,8 @@ public class ExtentManager {
         getTest().info("Step executed in test: " + getTestName());
     }
 
-    // Log a Skip
-    public static void logSkip(String logMessage) {
-        getTest().skip(logMessage);
-    }
-
     // Log a step validation with screenshot (Base64 embedded) - parameter removed
-    public static void logPassedWithScreenshot(WebDriver driver, String logMessage, String ScreenShotMessage) {
+    public static void logStepWithScreenshot(WebDriver driver, String logMessage, String ScreenShotMessage) {
         getTest().pass(logMessage);
         // Screenshot method
         attachScreenshot64(driver, ScreenShotMessage);
@@ -90,9 +85,18 @@ public class ExtentManager {
 
     // Log a Failure
     public static void logFailureWithScreenshot(WebDriver driver, String failMessage, String ScreenShotMessage) {
-        getTest().fail(failMessage);
+        // update color of log failure
+        String colorMessage = String.format("<span style='color:red;'>%s</span>", failMessage);
+        getTest().fail(colorMessage);
         // Screenshot method
         attachScreenshot64(driver, ScreenShotMessage);
+    }
+
+    // Log a Skip
+    public static void logSkip(String logMessage) {
+        // update color of log skip
+        String colorMessage = String.format("<span style='color:orange;'>%s</span>", logMessage);
+        getTest().skip(logMessage);
     }
 
 

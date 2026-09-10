@@ -48,7 +48,6 @@ public class ScreenshotUtil {
 
         // Saving the screenshot to a file
         String destPath = System.getProperty("user.dir") + "/src/test/resources/extentReports/screenshots/" + screenshotName + "_" + timeStamp + ".png";
-
         File finalPath = new File(destPath);
         try {
             FileUtils.copyFile(src, finalPath);
