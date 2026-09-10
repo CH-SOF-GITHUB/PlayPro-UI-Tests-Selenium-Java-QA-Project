@@ -21,12 +21,12 @@ public class LoginTest extends BaseClass {
         homePage = new HomePage(getDriver());
     }
 
-    @Test(dataProvider = "validLoginData", dataProviderClass = DataProviders.class)
-    public void validLoginTest(String username, String pwd) {
+    @Test
+    public void validLoginTest() {
         // Lunch the test with Extent Report
         // ExtentManager.startTest("Valid Login Test");  // This has been implemented in TestListener
         ExtentManager.logStep("Navigating to login page and entering username & password");
-        loginPage.login(username, pwd);
+        loginPage.login("orangehrm_chaker", "AdminOrangeHRM12@!");
         ExtentManager.logStep("Verifying Admin Tab is visible or not");
         Assert.assertTrue(homePage.isAdminTabVisible(), "Error: Admin tab is not visible after login");
         ExtentManager.logStep("Validation successful");
@@ -40,8 +40,8 @@ public class LoginTest extends BaseClass {
         // Lunch the test with Extent Report
         // ExtentManager.startTest("In-valid Login Test");  // This has been implemented in TestListener
         ExtentManager.logStep("Navigating to login page and entering username & password");
-        loginPage.login("Admin", "admin1234");
-        String ExpectedErrorMsg = "Invalid credentials1";
+        loginPage.login("orangehrm_chaker", "AdminOrangeHRM12@!!");
+        String ExpectedErrorMsg = "Invalid credentials";
         // Assert.assertTrue(loginPage.checkErrorMsgDisplayed(), "Error: Error message is not displayed");
         Assert.assertTrue(loginPage.verifyErrorMessage(ExpectedErrorMsg), "Error: Error message is not correct");
         ExtentManager.logStep("Validation Of Error Message successful");

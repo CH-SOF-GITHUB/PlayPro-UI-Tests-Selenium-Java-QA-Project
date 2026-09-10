@@ -24,7 +24,7 @@ public class HomeTest extends BaseClass {
         // Lunch the test with Extent Report
         // ExtentManager.startTest("Home Page Logo Test");   // This has been implemented in TestListener
         ExtentManager.logStep("Navigating to login page and entering username & password");
-        loginPage.login("Admin", "admin123");
+        loginPage.login("orangehrm_chaker", "AdminOrangeHRM12@!");
         ExtentManager.logStep("Verifying Logo is visible or not");
         Assert.assertTrue(homePage.verifyOrangeHRMLogo(), "Error: OrangeHRM logo is not visible on the home page");
         ExtentManager.logStep("Validation Logo successful");
