@@ -30,12 +30,14 @@ public class ActionDriver {
     public void click(By by) {
         String elementDescription = getElementDescription(by);
         try {
+            applyBorder(by, "green");
             waitForElementToBeClickable(by);
             driver.findElement(by).click();
             // Add extent manager to log a step for the report
             ExtentManager.logStep("Clicked on element  ---> : " + elementDescription);
             loggr.info("Clicked on element  ---> : {}", elementDescription);
         } catch (Exception e) {
+            applyBorder(by, "red");
             ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to click en this element!", elementDescription + "_unable_to_click");
             loggr.error("Element is not clickable: {}", e.getMessage());
         }
@@ -45,12 +47,14 @@ public class ActionDriver {
     public void enter(By by, String text) {
         String elementDescription = getElementDescription(by);
         try {
+            applyBorder(by, "green");
             waitForElementToBeVisible(by);
             driver.findElement(by).sendKeys(text);
             // Add extent manager to log a step for the report
             ExtentManager.logStep("Value entered on: " + elementDescription + " is " + text);
             loggr.info("Value entered on {} is  {}", elementDescription, text);
         } catch (Exception e) {
+            applyBorder(by, "red");
             ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to enter a value on this element!", elementDescription + "_unable_to_enter_value");
             loggr.error("Element is not entered: {}", e.getMessage());
         }
@@ -59,9 +63,11 @@ public class ActionDriver {
     // Method to get text from input field
     public String getText(By by) {
         try {
+            applyBorder(by, "green");
             waitForElementToBeVisible(by);
             return driver.findElement(by).getText();
         } catch (Exception e) {
+            applyBorder(by, "red");
             loggr.error("Element is not visible: {}", e.getMessage());
             return null;
         }
@@ -75,13 +81,16 @@ public class ActionDriver {
             if (expectedText.equals(actualText)) {
                 loggr.info("Actual Text : {} match to | Expected Value: {}", actualText, expectedText);
                 ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Compare Text!", "Test Verified successfully: " + expectedText + " equals " + actualText);
+                applyBorder(by, "green");
                 return true;
             } else {
                 loggr.info("ERROR: Actual Text : {} does not match | Expected Value: {}", actualText, expectedText);
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Text Comparison fails!", "Test failed: " + expectedText + " not equals " + actualText);
+                applyBorder(by, "red");
                 return false;
             }
         } catch (Exception e) {
+            applyBorder(by, "red");
             loggr.error("Element compared is not visible: {}", e.getMessage());
             return false;
         }
@@ -97,12 +106,15 @@ public class ActionDriver {
                 ExtentManager.logStep("Element is displayed: " + elementDescription);
                 ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Element is displayed !", elementDescription + "_is_displayed");
                 loggr.info("Element : {} is displayed", elementDescription);
+                applyBorder(by, "green");
                 return true;
             } else {
                 loggr.info("Element : {} is not displayed", elementDescription);
+                applyBorder(by, "red");
                 return false;
             }
         } catch (Exception e) {
+            applyBorder(by, "red");
             ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Element is not displayed !", elementDescription + "_is_not_displayed");
             loggr.error("Element is not displayed: {}", e.getMessage());
             return false;
@@ -112,10 +124,12 @@ public class ActionDriver {
     // Method to scroll to an element
     public void scrollToElement(By by) {
         try {
+            applyBorder(by, "green");
             waitForElementToBeVisible(by);
             WebElement element = driver.findElement(by);
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         } catch (Exception e) {
+            applyBorder(by, "red");
             loggr.error("Element to scroll is not visible: {}", e.getMessage());
         }
     }
@@ -199,5 +213,20 @@ public class ActionDriver {
             return value;
         }
         return value.substring(0, maxLength) + "...";
+    }
+
+    // Utility Method to border an element
+    public void applyBorder(By by, String color) {
+        try {
+            // LOcate the lement
+            WebElement element = driver.findElement(by);
+            String eleDis = getElementDescription(by);
+            // Apply the border
+            String script = "arguments[0].style.border = '3px solid " + color + "'";
+            ((JavascriptExecutor) driver).executeScript(script, element);
+            loggr.info("Border applied on {} with color {}", eleDis, color);
+        } catch (Exception e) {
+            loggr.error("Error when try to apply color in a border: {}", e.getMessage());
+        }
     }
 }

@@ -2,7 +2,7 @@ package com.qa.datadriven;
 
 import org.qa.utilities.Constant;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
-
+/*
 import java.util.Arrays;
 
 import static org.qa.utilities.DataProviderUtils.getLoginExcelData;
@@ -51,6 +51,7 @@ public class SampleTest {
                 }
             }
             System.out.println();
-        }*/
+        }
     }
 }
+*/

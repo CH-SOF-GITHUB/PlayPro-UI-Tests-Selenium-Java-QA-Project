@@ -165,3 +165,531 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 2026-09-10 11:12:01 [TestNG-test-OrangeHRM Test 1-4] FATAL BaseClass - This is a fatal message
 2026-09-10 11:12:36 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
 2026-09-10 11:12:36 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-10 11:20:34 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-10 11:20:34 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-10 11:21:26 [TestNG-test-OrangeHRM Test 1-4] ERROR BaseClass - This is an error message
+2026-09-10 11:21:26 [TestNG-test-OrangeHRM Test 1-4] FATAL BaseClass - This is a fatal message
+2026-09-10 11:21:26 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-10 11:21:26 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-10 11:21:26 [TestNG-test-OrangeHRM Test 1-2] ERROR BaseClass - This is an error message
+2026-09-10 11:21:26 [TestNG-test-OrangeHRM Test 1-2] FATAL BaseClass - This is a fatal message
+2026-09-10 11:21:41 [TestNG-test-OrangeHRM Test 1-4] ERROR ActionDriver - Unable to describe the element: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef2d6e72b0c2cd98aa1629566f205c66, findElement {value=username, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56372}, goog:processID: 8720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56372/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef2d6e72b0c2cd98aa1629566f205c66
+2026-09-10 11:21:41 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Unable to describe the element: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76426a23eb765f3b5187d0509aa88072, findElement {value=username, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56371}, goog:processID: 31456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56371/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76426a23eb765f3b5187d0509aa88072
+2026-09-10 11:22:11 [TestNG-test-OrangeHRM Test 1-4] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.name: username, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}.
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56372}, goog:processID: 8720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56372/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef2d6e72b0c2cd98aa1629566f205c66
+2026-09-10 11:22:11 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.name: username, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}.
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56371}, goog:processID: 31456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56371/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76426a23eb765f3b5187d0509aa88072
+2026-09-10 11:22:27 [TestNG-test-OrangeHRM Test 1-4] ERROR ActionDriver - Element is not entered: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef2d6e72b0c2cd98aa1629566f205c66, findElement {value=username, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56372}, goog:processID: 8720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56372/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef2d6e72b0c2cd98aa1629566f205c66
+2026-09-10 11:22:27 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Element is not entered: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76426a23eb765f3b5187d0509aa88072, findElement {value=username, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56371}, goog:processID: 31456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56371/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76426a23eb765f3b5187d0509aa88072
+2026-09-10 11:22:42 [TestNG-test-OrangeHRM Test 1-4] ERROR ActionDriver - Unable to describe the element: no such element: Unable to locate element: {"method":"css selector","selector":"input[type='password']"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef2d6e72b0c2cd98aa1629566f205c66, findElement {value=input[type='password'], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56372}, goog:processID: 8720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56372/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef2d6e72b0c2cd98aa1629566f205c66
+2026-09-10 11:22:42 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Unable to describe the element: no such element: Unable to locate element: {"method":"css selector","selector":"input[type='password']"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76426a23eb765f3b5187d0509aa88072, findElement {value=input[type='password'], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56371}, goog:processID: 31456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56371/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76426a23eb765f3b5187d0509aa88072
+2026-09-10 11:23:12 [TestNG-test-OrangeHRM Test 1-4] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.cssSelector: input[type='password'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"input[type='password']"}.
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56372}, goog:processID: 8720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56372/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef2d6e72b0c2cd98aa1629566f205c66
+2026-09-10 11:23:12 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.cssSelector: input[type='password'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"input[type='password']"}.
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56371}, goog:processID: 31456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56371/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76426a23eb765f3b5187d0509aa88072
+2026-09-10 11:23:28 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Element is not entered: no such element: Unable to locate element: {"method":"css selector","selector":"input[type='password']"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76426a23eb765f3b5187d0509aa88072, findElement {value=input[type='password'], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56371}, goog:processID: 31456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56371/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76426a23eb765f3b5187d0509aa88072
+2026-09-10 11:23:34 [TestNG-test-OrangeHRM Test 1-4] ERROR ActionDriver - Unable to describe the element: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef2d6e72b0c2cd98aa1629566f205c66, findElement {value=//div[@class='oxd-brand-banner']//img, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56372}, goog:processID: 8720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56372/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef2d6e72b0c2cd98aa1629566f205c66
+2026-09-10 11:23:35 [TestNG-test-OrangeHRM Test 1-4] ERROR ActionDriver - This Element is not visible: invalid session id
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef2d6e72b0c2cd98aa1629566f205c66, findElement {value=//div[@class='oxd-brand-banner']//img, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56372}, goog:processID: 8720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56372/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef2d6e72b0c2cd98aa1629566f205c66
+2026-09-10 11:23:35 [TestNG-test-OrangeHRM Test 1-4] ERROR ActionDriver - Element is not displayed: invalid session id
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef2d6e72b0c2cd98aa1629566f205c66, findElement {value=//div[@class='oxd-brand-banner']//img, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56372}, goog:processID: 8720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56372/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef2d6e72b0c2cd98aa1629566f205c66
+2026-09-10 11:23:36 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Unable to describe the element: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76426a23eb765f3b5187d0509aa88072, findElement {value=button[type='submit'], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56371}, goog:processID: 31456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56371/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76426a23eb765f3b5187d0509aa88072
+2026-09-10 11:23:37 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - This Element is not clickable: invalid session id
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76426a23eb765f3b5187d0509aa88072, findElement {value=button[type='submit'], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56371}, goog:processID: 31456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56371/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76426a23eb765f3b5187d0509aa88072
+2026-09-10 11:23:37 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Element is not clickable: invalid session id
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76426a23eb765f3b5187d0509aa88072, findElement {value=button[type='submit'], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56371}, goog:processID: 31456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56371/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76426a23eb765f3b5187d0509aa88072
+2026-09-10 11:23:37 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - This Element is not visible: invalid session id
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76426a23eb765f3b5187d0509aa88072, findElement {value=//p[@class='oxd-text oxd-text--p oxd-alert-content-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56371}, goog:processID: 31456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56371/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76426a23eb765f3b5187d0509aa88072
+2026-09-10 11:23:37 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Element compared is not visible: invalid session id
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76426a23eb765f3b5187d0509aa88072, findElement {value=//p[@class='oxd-text oxd-text--p oxd-alert-content-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56371}, goog:processID: 31456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56371/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76426a23eb765f3b5187d0509aa88072
+2026-09-10 11:24:16 [TestNG-test-OrangeHRM Test 1-2] ERROR BaseClass - This is an error message
+2026-09-10 11:24:16 [TestNG-test-OrangeHRM Test 1-2] FATAL BaseClass - This is a fatal message
+2026-09-10 11:24:52 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-10 11:24:52 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-10 11:24:55 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-10 11:24:55 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-10 11:24:57 [TestNG-test-OrangeHRM Test 1-4] ERROR BaseClass - This is an error message
+2026-09-10 11:24:57 [TestNG-test-OrangeHRM Test 1-4] FATAL BaseClass - This is a fatal message
+2026-09-10 11:25:09 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-10 11:25:09 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-10 11:56:04 [TestNG-test-OrangeHRM Test 1-2] ERROR BaseClass - This is an error message
+2026-09-10 11:56:04 [TestNG-test-OrangeHRM Test 1-2] FATAL BaseClass - This is a fatal message
+2026-09-10 11:56:31 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-10 11:56:31 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-10 11:56:32 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-10 11:56:32 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-10 11:56:32 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Error when try to apply color in a border: javascript error: Unexpected identifier 'green'
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f08c2319299c8e316920a026e96c7bf6, executeScript {script=arguments[0].apply.border = '3px solid 'green', args=[{element-6066-11e4-a52e-4f735466cecf=f.DD8F143F20ED014919E858D1B117A420.d.1FEF47FAAE31ACC31DB6FD31F172D33C.e.2}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52808}, goog:processID: 9240, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52808/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f08c2319299c8e316920a026e96c7bf6
+2026-09-10 11:56:34 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Error when try to apply color in a border: javascript error: Unexpected identifier 'green'
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f08c2319299c8e316920a026e96c7bf6, executeScript {script=arguments[0].apply.border = '3px solid 'green', args=[{element-6066-11e4-a52e-4f735466cecf=f.DD8F143F20ED014919E858D1B117A420.d.1FEF47FAAE31ACC31DB6FD31F172D33C.e.4}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52808}, goog:processID: 9240, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52808/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f08c2319299c8e316920a026e96c7bf6
+2026-09-10 11:56:34 [TestNG-test-OrangeHRM Test 1-4] ERROR BaseClass - This is an error message
+2026-09-10 11:56:34 [TestNG-test-OrangeHRM Test 1-4] FATAL BaseClass - This is a fatal message
+2026-09-10 11:56:34 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Error when try to apply color in a border: javascript error: Unexpected identifier 'green'
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f08c2319299c8e316920a026e96c7bf6, executeScript {script=arguments[0].apply.border = '3px solid 'green', args=[{element-6066-11e4-a52e-4f735466cecf=f.DD8F143F20ED014919E858D1B117A420.d.1FEF47FAAE31ACC31DB6FD31F172D33C.e.6}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52808}, goog:processID: 9240, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52808/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f08c2319299c8e316920a026e96c7bf6
+2026-09-10 11:56:34 [TestNG-test-OrangeHRM Test 1-4] ERROR ActionDriver - Error when try to apply color in a border: javascript error: Unexpected identifier 'green'
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25955eb0c542e6139b5ef93214bd1f3d, executeScript {script=arguments[0].apply.border = '3px solid 'green', args=[{element-6066-11e4-a52e-4f735466cecf=f.9F0C0B01306370603F4C91439573447D.d.4D2295FE1DD0C37340EE2411582AEED8.e.2}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52810}, goog:processID: 2772, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52810/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25955eb0c542e6139b5ef93214bd1f3d
+2026-09-10 11:56:35 [TestNG-test-OrangeHRM Test 1-4] ERROR ActionDriver - Error when try to apply color in a border: javascript error: Unexpected identifier 'green'
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25955eb0c542e6139b5ef93214bd1f3d, executeScript {script=arguments[0].apply.border = '3px solid 'green', args=[{element-6066-11e4-a52e-4f735466cecf=f.9F0C0B01306370603F4C91439573447D.d.4D2295FE1DD0C37340EE2411582AEED8.e.4}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52810}, goog:processID: 2772, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52810/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25955eb0c542e6139b5ef93214bd1f3d
+2026-09-10 11:56:38 [TestNG-test-OrangeHRM Test 1-4] ERROR ActionDriver - Error when try to apply color in a border: javascript error: Unexpected identifier 'green'
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25955eb0c542e6139b5ef93214bd1f3d, executeScript {script=arguments[0].apply.border = '3px solid 'green', args=[{element-6066-11e4-a52e-4f735466cecf=f.9F0C0B01306370603F4C91439573447D.d.4D2295FE1DD0C37340EE2411582AEED8.e.8}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52810}, goog:processID: 2772, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52810/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25955eb0c542e6139b5ef93214bd1f3d
+2026-09-10 11:56:40 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Error when try to apply color in a border: javascript error: Unexpected identifier 'red'
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f08c2319299c8e316920a026e96c7bf6, executeScript {script=arguments[0].apply.border = '3px solid 'red', args=[{element-6066-11e4-a52e-4f735466cecf=f.DD8F143F20ED014919E858D1B117A420.d.92218D6F08944FC4DDC49258A9F540E4.e.54}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52808}, goog:processID: 9240, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52808/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f08c2319299c8e316920a026e96c7bf6
+2026-09-10 11:56:47 [TestNG-test-OrangeHRM Test 1-4] ERROR ActionDriver - Error when try to apply color in a border: javascript error: Unexpected identifier 'green'
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25955eb0c542e6139b5ef93214bd1f3d, executeScript {script=arguments[0].apply.border = '3px solid 'green', args=[{element-6066-11e4-a52e-4f735466cecf=f.9F0C0B01306370603F4C91439573447D.d.48CD0B505FD45E73D4CD9B2E018A6ED3.e.51}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52810}, goog:processID: 2772, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52810/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25955eb0c542e6139b5ef93214bd1f3d
+2026-09-10 11:56:49 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-10 11:56:49 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-10 11:56:56 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Error when try to apply color in a border: javascript error: Unexpected identifier 'green'
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [28f46abad65d685e47282674463b63db, executeScript {script=arguments[0].apply.border = '3px solid 'green', args=[{element-6066-11e4-a52e-4f735466cecf=f.56DC45D7E5654C09DC4AD1BF0FD55A58.d.B3E3EC52E4E41512779EC606726DC13D.e.2}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51593}, goog:processID: 12344, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51593/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 28f46abad65d685e47282674463b63db
+2026-09-10 11:56:57 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Error when try to apply color in a border: javascript error: Unexpected identifier 'green'
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [28f46abad65d685e47282674463b63db, executeScript {script=arguments[0].apply.border = '3px solid 'green', args=[{element-6066-11e4-a52e-4f735466cecf=f.56DC45D7E5654C09DC4AD1BF0FD55A58.d.B3E3EC52E4E41512779EC606726DC13D.e.4}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51593}, goog:processID: 12344, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51593/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 28f46abad65d685e47282674463b63db
+2026-09-10 11:56:57 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Error when try to apply color in a border: javascript error: Unexpected identifier 'green'
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [28f46abad65d685e47282674463b63db, executeScript {script=arguments[0].apply.border = '3px solid 'green', args=[{element-6066-11e4-a52e-4f735466cecf=f.56DC45D7E5654C09DC4AD1BF0FD55A58.d.B3E3EC52E4E41512779EC606726DC13D.e.6}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51593}, goog:processID: 12344, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51593/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 28f46abad65d685e47282674463b63db
+2026-09-10 11:57:08 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Error when try to apply color in a border: javascript error: Unexpected identifier 'green'
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [28f46abad65d685e47282674463b63db, executeScript {script=arguments[0].apply.border = '3px solid 'green', args=[{element-6066-11e4-a52e-4f735466cecf=f.56DC45D7E5654C09DC4AD1BF0FD55A58.d.40EEA733C55A66D9F46D4FCFA7364131.e.51}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51593}, goog:processID: 12344, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51593/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 28f46abad65d685e47282674463b63db
+2026-09-10 11:57:08 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Error when try to apply color in a border: javascript error: Unexpected identifier 'green'
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [28f46abad65d685e47282674463b63db, executeScript {script=arguments[0].apply.border = '3px solid 'green', args=[{element-6066-11e4-a52e-4f735466cecf=f.56DC45D7E5654C09DC4AD1BF0FD55A58.d.40EEA733C55A66D9F46D4FCFA7364131.e.54}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51593}, goog:processID: 12344, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51593/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 28f46abad65d685e47282674463b63db
+2026-09-10 11:57:09 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Error when try to apply color in a border: javascript error: Unexpected identifier 'green'
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [28f46abad65d685e47282674463b63db, executeScript {script=arguments[0].apply.border = '3px solid 'green', args=[{element-6066-11e4-a52e-4f735466cecf=f.56DC45D7E5654C09DC4AD1BF0FD55A58.d.40EEA733C55A66D9F46D4FCFA7364131.e.55}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51593}, goog:processID: 12344, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51593/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 28f46abad65d685e47282674463b63db
+2026-09-10 12:00:35 [TestNG-test-OrangeHRM Test 1-4] ERROR BaseClass - This is an error message
+2026-09-10 12:00:35 [TestNG-test-OrangeHRM Test 1-4] FATAL BaseClass - This is a fatal message
+2026-09-10 12:00:38 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-10 12:00:38 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-10 12:00:50 [TestNG-test-OrangeHRM Test 1-2] ERROR BaseClass - This is an error message
+2026-09-10 12:00:50 [TestNG-test-OrangeHRM Test 1-2] FATAL BaseClass - This is a fatal message
+2026-09-10 12:00:52 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-10 12:00:52 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-10 12:01:26 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-10 12:01:26 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-10 13:18:53 [TestNG-test-OrangeHRM Test 1-2] ERROR BaseClass - This is an error message
+2026-09-10 13:18:53 [TestNG-test-OrangeHRM Test 1-2] FATAL BaseClass - This is a fatal message
+2026-09-10 13:19:27 [TestNG-test-OrangeHRM Test 1-4] ERROR BaseClass - This is an error message
+2026-09-10 13:19:27 [TestNG-test-OrangeHRM Test 1-4] FATAL BaseClass - This is a fatal message
+2026-09-10 13:19:33 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-10 13:19:33 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-10 13:19:41 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-10 13:19:41 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-10 13:19:46 [TestNG-test-OrangeHRM Test 1-4] ERROR ActionDriver - Unable to describe the element: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3f6d4c35ad8061f23828f83812f2071b, findElement {value=username, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51066}, goog:processID: 20860, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51066/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3f6d4c35ad8061f23828f83812f2071b
+2026-09-10 13:19:48 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Unable to describe the element: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7caeaf662122ea17f48a41721e11b6a3, findElement {value=username, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57125}, goog:processID: 13452, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57125/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7caeaf662122ea17f48a41721e11b6a3
+2026-09-10 13:20:57 [TestNG-test-OrangeHRM Test 1-4] ERROR ActionDriver - Unable to describe the element: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='oxd-brand-banner']//img"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3f6d4c35ad8061f23828f83812f2071b, findElement {value=//div[@class='oxd-brand-banner']//img, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51066}, goog:processID: 20860, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51066/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3f6d4c35ad8061f23828f83812f2071b
+2026-09-10 13:21:55 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-10 13:21:55 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-10 13:22:12 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Unable to describe the element: no such element: Unable to locate element: {"method":"css selector","selector":"body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [690cd9264be30382cebf4cffc3cdbbcc, findElement {value=body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2), using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61107}, goog:processID: 16784, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61107/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 690cd9264be30382cebf4cffc3cdbbcc
+2026-09-10 13:22:42 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.cssSelector: body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2), but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)"}.
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61107}, goog:processID: 16784, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61107/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 690cd9264be30382cebf4cffc3cdbbcc
+2026-09-10 13:23:12 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Error when try to apply color in a border: no such element: Unable to locate element: {"method":"css selector","selector":"body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [690cd9264be30382cebf4cffc3cdbbcc, findElement {value=body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2), using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61107}, goog:processID: 16784, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61107/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 690cd9264be30382cebf4cffc3cdbbcc
+2026-09-10 13:23:12 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Element is not displayed: no such element: Unable to locate element: {"method":"css selector","selector":"body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [690cd9264be30382cebf4cffc3cdbbcc, findElement {value=body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2), using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61107}, goog:processID: 16784, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61107/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 690cd9264be30382cebf4cffc3cdbbcc
+2026-09-10 13:27:02 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-10 13:27:02 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-10 13:27:11 [TestNG-test-OrangeHRM Test 1-2] ERROR BaseClass - This is an error message
+2026-09-10 13:27:11 [TestNG-test-OrangeHRM Test 1-2] FATAL BaseClass - This is a fatal message
+2026-09-10 13:27:15 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-10 13:27:15 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-10 13:27:30 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Unable to describe the element: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [45410d836a250e255124175a6f92b975, findElement {value=username, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63963}, goog:processID: 31388, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63963/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 45410d836a250e255124175a6f92b975
+2026-09-10 13:27:45 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Error when try to apply color in a border: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [45410d836a250e255124175a6f92b975, findElement {value=username, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63963}, goog:processID: 31388, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63963/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 45410d836a250e255124175a6f92b975
+2026-09-10 13:28:16 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.name: username, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}.
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63963}, goog:processID: 31388, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63963/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 45410d836a250e255124175a6f92b975
+2026-09-10 13:29:13 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Element is not entered: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [45410d836a250e255124175a6f92b975, findElement {value=username, using=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63963}, goog:processID: 31388, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63963/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 45410d836a250e255124175a6f92b975
+2026-09-10 13:29:39 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.xpath: //p[@class='oxd-text oxd-text--p oxd-alert-content-text']
+(tried for 25 seconds with 500 milliseconds interval)
+2026-09-10 13:29:39 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Error when try to apply color in a border: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [45410d836a250e255124175a6f92b975, findElement {value=//p[@class='oxd-text oxd-text--p oxd-alert-content-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63963}, goog:processID: 31388, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63963/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 45410d836a250e255124175a6f92b975
+2026-09-10 13:29:39 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Element compared is not visible: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=152.0.7977.76)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [45410d836a250e255124175a6f92b975, findElement {value=//p[@class='oxd-text oxd-text--p oxd-alert-content-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63963}, goog:processID: 31388, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63963/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 45410d836a250e255124175a6f92b975
+2026-09-10 13:30:23 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-10 13:30:23 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-10 13:31:21 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Unable to describe the element: no such element: Unable to locate element: {"method":"css selector","selector":"body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [74cdee3d91986bec10eec4543897609f, findElement {value=body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2), using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65378}, goog:processID: 35272, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65378/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74cdee3d91986bec10eec4543897609f
+2026-09-10 13:40:48 [TestNG-test-OrangeHRM Test 1-2] ERROR BaseClass - This is an error message
+2026-09-10 13:40:48 [TestNG-test-OrangeHRM Test 1-2] FATAL BaseClass - This is a fatal message
+2026-09-10 13:40:50 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-10 13:40:50 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-10 13:41:05 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - Unable to describe the element: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
+  (Session info: chrome=152.0.7977.76)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c4eaafa3f0fb53e7476bd0fa0d7837da, findElement {using=name, value=username}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.76, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58103}, goog:processID: 35052, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58103/devtoo..., se:cdpVersion: 152.0.7977.76, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4eaafa3f0fb53e7476bd0fa0d7837da
+2026-09-10 13:41:18 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-10 13:41:18 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-10 14:23:15 [main] ERROR BaseClass - This is an error message
+2026-09-10 14:23:15 [main] FATAL BaseClass - This is a fatal message
+2026-09-10 14:31:23 [main] ERROR BaseClass - This is an error message
+2026-09-10 14:31:23 [main] FATAL BaseClass - This is a fatal message
+2026-09-10 14:32:43 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-10 14:32:43 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-10 14:33:09 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-10 14:33:09 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-10 15:37:48 [main] ERROR BaseClass - This is an error message
+2026-09-10 15:37:48 [main] FATAL BaseClass - This is a fatal message
+2026-09-10 15:39:19 [main] ERROR BaseClass - This is an error message
+2026-09-10 15:39:19 [main] FATAL BaseClass - This is a fatal message
+2026-09-10 15:41:21 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-10 15:41:21 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-10 15:42:27 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.xpath: //p[@class='oxd-text oxd-text--p oxd-alert-content-text'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[@class='oxd-text oxd-text--p oxd-alert-content-text']"}.
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52922}, goog:processID: 18860, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52922/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0981bd138b32a9b95096aadbbdcefc24
+2026-09-10 15:42:57 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - Error when try to apply color in a border: no such element: Unable to locate element: {"method":"xpath","selector":"//p[@class='oxd-text oxd-text--p oxd-alert-content-text']"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0981bd138b32a9b95096aadbbdcefc24, findElement {value=//p[@class='oxd-text oxd-text--p oxd-alert-content-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52922}, goog:processID: 18860, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52922/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0981bd138b32a9b95096aadbbdcefc24
+2026-09-10 15:42:57 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - Element compared is not visible: no such element: Unable to locate element: {"method":"xpath","selector":"//p[@class='oxd-text oxd-text--p oxd-alert-content-text']"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0981bd138b32a9b95096aadbbdcefc24, findElement {value=//p[@class='oxd-text oxd-text--p oxd-alert-content-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52922}, goog:processID: 18860, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52922/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0981bd138b32a9b95096aadbbdcefc24
+2026-09-10 15:43:51 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-10 15:43:51 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-10 15:44:58 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-10 15:44:58 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-10 15:45:41 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - This Element is not visible: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=152.0.7977.84)
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ffc33b33fb6c1932ce7d42a8f8044406, findElement {value=//p[@class='oxd-text oxd-text--p oxd-alert-content-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54901}, goog:processID: 15932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54901/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ffc33b33fb6c1932ce7d42a8f8044406
+2026-09-10 15:45:41 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - Error when try to apply color in a border: invalid session id
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ffc33b33fb6c1932ce7d42a8f8044406, findElement {value=//p[@class='oxd-text oxd-text--p oxd-alert-content-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54901}, goog:processID: 15932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54901/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ffc33b33fb6c1932ce7d42a8f8044406
+2026-09-10 15:45:41 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - Element compared is not visible: invalid session id
+Build info: version: '4.48.0', revision: '27f5213 27f5213055e28398a5105b7892b7a3bb2012a6ef'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ffc33b33fb6c1932ce7d42a8f8044406, findElement {value=//p[@class='oxd-text oxd-text--p oxd-alert-content-text'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54901}, goog:processID: 15932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54901/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ffc33b33fb6c1932ce7d42a8f8044406
+2026-09-10 15:47:59 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-10 15:47:59 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-10 15:49:31 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-10 15:49:31 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message

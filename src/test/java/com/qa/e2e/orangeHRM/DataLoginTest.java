@@ -9,7 +9,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTest extends BaseClass {
+
+public class DataLoginTest extends BaseClass {
 
     private LoginPage loginPage;
     private HomePage homePage;
@@ -22,7 +23,7 @@ public class LoginTest extends BaseClass {
     }
 
     @Test(dataProvider = "validLoginData", dataProviderClass = DataProviders.class)
-    public void validLoginTest(String username, String pwd) {
+    public void dataValidLoginTest(String username, String pwd) {
         // Lunch the test with Extent Report
         // ExtentManager.startTest("Valid Login Test");  // This has been implemented in TestListener
         ExtentManager.logStep("Navigating to login page and entering username & password");
@@ -35,17 +36,16 @@ public class LoginTest extends BaseClass {
         staticWait(2);
     }
 
-    @Test
-    public void invalidLoginTest() {
+    @Test(dataProvider = "inValidLoginData", dataProviderClass = DataProviders.class)
+    public void dataInvalidLoginTest(String username, String pwd) {
         // Lunch the test with Extent Report
         // ExtentManager.startTest("In-valid Login Test");  // This has been implemented in TestListener
         ExtentManager.logStep("Navigating to login page and entering username & password");
-        loginPage.login("Admin", "admin1234");
+        loginPage.login(username, pwd);
         String ExpectedErrorMsg = "Invalid credentials1";
         // Assert.assertTrue(loginPage.checkErrorMsgDisplayed(), "Error: Error message is not displayed");
         Assert.assertTrue(loginPage.verifyErrorMessage(ExpectedErrorMsg), "Error: Error message is not correct");
         ExtentManager.logStep("Validation Of Error Message successful");
         ExtentManager.logStep("Logout successfully!");
     }
-
 }
