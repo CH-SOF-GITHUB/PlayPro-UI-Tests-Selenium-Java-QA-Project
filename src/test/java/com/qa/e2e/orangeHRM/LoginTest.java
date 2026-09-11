@@ -29,9 +29,9 @@ public class LoginTest extends BaseClass {
         loginPage.login("orangehrm_chaker", "AdminOrangeHRM12@!");
         ExtentManager.logStep("Verifying Admin Tab is visible or not");
         Assert.assertTrue(homePage.isAdminTabVisible(), "Error: Admin tab is not visible after login");
-        ExtentManager.logStep("Validation successful");
+        ExtentManager.logStep("Validation successful !");
         homePage.logout();
-        ExtentManager.logStep("Logout successfully!");
+        ExtentManager.logStep("Logout successfully !");
         staticWait(2);
     }
 
@@ -45,7 +45,7 @@ public class LoginTest extends BaseClass {
         // Assert.assertTrue(loginPage.checkErrorMsgDisplayed(), "Error: Error message is not displayed");
         Assert.assertTrue(loginPage.verifyErrorMessage(ExpectedErrorMsg), "Error: Error message is not correct");
         ExtentManager.logStep("Validation Of Error Message successful");
-        ExtentManager.logStep("Logout successfully!");
+        ExtentManager.logStep("Logout successfully !");
     }
 
 }

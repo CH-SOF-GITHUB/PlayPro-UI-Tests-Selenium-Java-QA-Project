@@ -8,8 +8,7 @@
     </listeners>
     <test name="OrangeHRM Test 1">
         <classes>
-            <class name="com.qa.e2e.orangeHRM.LoginTest"/>
-            <class name="com.qa.e2e.orangeHRM.HomeTest"/>
+            <class name="com.qa.e2e.orangeHRM.DBVerificationTest"/>
         </classes>
     </test>
 </suite>
