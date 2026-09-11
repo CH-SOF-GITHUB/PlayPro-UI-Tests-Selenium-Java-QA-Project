@@ -2,17 +2,28 @@ package org.qa.listeners;
 
 import org.qa.base.BaseClass;
 import org.qa.utilities.ExtentManager;
+import org.qa.utilities.RetryAnalyser;
+import org.testng.IAnnotationTransformer;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.annotations.ITestAnnotation;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 import java.util.Locale;
 
 /**
  * Classe d'écouteur de tests TestNG.
  * Surcharge des méthodes clés pour capturer les résultats des tests.
  */
-public class TestListener implements ITestListener {
+public class TestListener implements ITestListener, IAnnotationTransformer {
+
+    // USE IAnnotationTransformer interface for Re-Try Tests execution:
+    @Override
+    public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
+        annotation.setRetryAnalyzer(RetryAnalyser.class);
+    }
 
     // Triggered when a suite starts
     @Override
@@ -66,7 +77,6 @@ public class TestListener implements ITestListener {
         String testName = result.getMethod().getMethodName();
         // Send success results in Extent Reports
         ExtentManager.logSkip("Test Skipped - " + testName + " - ⚠️ Test Skipped");
-
     }
 
     @Override

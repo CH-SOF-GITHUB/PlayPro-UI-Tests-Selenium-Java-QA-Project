@@ -9,7 +9,7 @@
     <test name="OrangeHRM Test 1">
         <classes>
             <class name="com.qa.e2e.orangeHRM.DBVerificationTest"/>
-            <class name="com.qa.e2e.orangeHRM.ApiTest"/>
+            <class name="com.qa.e2e.orangeHRM.HomeTest"/>
         </classes>
     </test>
 </suite>

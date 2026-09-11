@@ -76,9 +76,6 @@ public class BaseClass {
             int timeout = Integer.parseInt(prop.getProperty("timeout"));
             driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
 
-            // Maximize the web driver
-            driver.get().manage().window().maximize();
-
             // Navigate the Base URL
             String url = prop.getProperty("url");
             driver.get().get(url);
@@ -101,6 +98,9 @@ public class BaseClass {
             // Initialize action driver for current thread
             actionDriver.set(new ActionDriver(getDriver()));
             loggr.info("ActionDriver Initialize form Thread {}", Thread.currentThread().getId());
+
+            // Maximize the web driver
+            new ActionDriver(getDriver()).maximizeWindow();
         } catch (IOException e) {
             e.fillInStackTrace();
         }
@@ -178,7 +178,7 @@ public class BaseClass {
     }
 
 
-    // Getter method for soft assert class 
+    // Getter method for soft assert class
     @SuppressWarnings("lombok")
     public static SoftAssert getSoftAsserts() {
         return softAsserts.get();

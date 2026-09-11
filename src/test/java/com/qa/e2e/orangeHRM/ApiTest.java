@@ -4,11 +4,14 @@ import io.restassured.response.Response;
 import org.qa.base.BaseClass;
 import org.qa.utilities.ApiUtility;
 import org.qa.utilities.ExtentManager;
+import org.qa.utilities.RetryAnalyser;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class ApiTest {
+
+    // delete annotation: retryAnalyzer = RetryAnalyser.class; we use transform method of IAnnotationTransformer in TestListener
 
 
     @Test
@@ -25,7 +28,7 @@ public class ApiTest {
         Response response = ApiUtility.sendGetRequest(endpoint);
         // STEP 3: Validate status code
         ExtentManager.logStep("Validating Status Code ...");
-        boolean isStatusCodeOK = ApiUtility.validateStatusCode(response, 200);
+        boolean isStatusCodeOK = ApiUtility.validateStatusCode(response, 201);
         softAssert.assertTrue(isStatusCodeOK, "Error: Status code does not 200ok");
         if (isStatusCodeOK) {
             ExtentManager.logStepForApi("Status code is OK");
