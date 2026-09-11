@@ -6,6 +6,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import java.util.Locale;
+
 /**
  * Classe d'écouteur de tests TestNG.
  * Surcharge des méthodes clés pour capturer les résultats des tests.
@@ -40,7 +42,11 @@ public class TestListener implements ITestListener {
     public void onTestSuccess(ITestResult result) {
         String testName = result.getMethod().getMethodName();
         // Send success results in Extent Reports
-        ExtentManager.logStepWithScreenshot(BaseClass.getDriver(),"Test Passed", "Test End: " + testName + " - ✔️ Test Passed");
+        if (!result.getTestClass().getName().toLowerCase().contains("api")) {
+            ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Test Passed", "Test End: " + testName + " - ✔️ Test Passed");
+        } else {
+            ExtentManager.logStepForApi("Test API End: " + testName + " - ✔️ Test Passed");
+        }
     }
 
     // Triggered when a test fails
@@ -48,7 +54,11 @@ public class TestListener implements ITestListener {
     public void onTestFailure(ITestResult result) {
         String testName = result.getMethod().getMethodName();
         // Send success results in Extent Reports
-        ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(),"Test Failed: "+result.getThrowable().getMessage(), "Test End: " + testName + " - ❌ Test Failed");
+        if (!result.getTestClass().getName().toLowerCase().contains("api")) {
+            ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Test Failed: " + result.getThrowable().getMessage(), "Test End: " + testName + " - ❌ Test Failed");
+        } else {
+            ExtentManager.logFailureForApi("Test API End: " + testName + " - ❌ Test Failed:  " + result.getThrowable().getMessage());
+        }
     }
 
     @Override

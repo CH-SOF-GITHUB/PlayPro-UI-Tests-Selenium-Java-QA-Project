@@ -117,4 +117,18 @@ public class ExtentManager {
     public static void registerDriver(WebDriver driver) {
         driverMap.put(Thread.currentThread().getId(), driver);
     }
+
+
+    // Log a Failure For API
+    public static void logFailureForApi(String failMessage) {
+        // update color of log failure
+        String colorMessage = String.format("<span style='color:red;'>%s</span>", failMessage);
+        getTest().fail(colorMessage);
+    }
+
+    // Log a step For API
+    public static void logStepForApi(String logMessage) {
+        getTest().pass(logMessage);
+    }
+
 }
