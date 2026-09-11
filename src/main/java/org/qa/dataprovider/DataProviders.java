@@ -7,7 +7,7 @@ import java.util.List;
 
 public class DataProviders {
 
-    private static final String FILE_PATH = System.getProperty("user.dir") + "/src/test/resources/testdata/TestData.xlsx";
+    private static final String FILE_PATH = System.getProperty("user.dir") + "/src/test/resources/testdata/TestData2.xlsx";
 
     // Create a MethOD to fetch data from Excel Sheet
     private static String[][] FetchSheetData(String sheetName) {
@@ -30,4 +30,8 @@ public class DataProviders {
         return FetchSheetData("invalidLoginData");
     }
 
+    @DataProvider(name = "empDataById")
+    public static Object[][] empDataForTest() {
+        return FetchSheetData("empVerification");
+    }
 }

@@ -1,6 +1,7 @@
 package com.qa.e2e.orangeHRM;
 
 import org.qa.base.BaseClass;
+import org.qa.dataprovider.DataProviders;
 import org.qa.pages.orangeHRM.HomePage;
 import org.qa.pages.orangeHRM.LoginPage;
 import org.qa.utilities.DBConnection;
@@ -23,16 +24,15 @@ public class DBVerificationTest extends BaseClass {
         homePage = new HomePage(getDriver());
     }
 
-    @Test
-    public void verifyEmployeeNamesFromDB() {
+    @Test(dataProvider = "empDataById", dataProviderClass = DataProviders.class)
+    public void verifyEmployeeNamesFromDB(String employee_id, String empName) {
         ExtentManager.logStep("Logging with valid credentials");
         loginPage.login("orangehrm_chaker", "AdminOrangeHRM12@!");
         ExtentManager.logStep("Click on PIM Tab");
         homePage.clickOnPIMTab();
         ExtentManager.logStep("Search for Employee ... ");
-        homePage.searchOfEmployee("alice");
+        homePage.searchOfEmployee(empName);
         ExtentManager.logStep("Get Employee First, Middle Name and Last Name from database ... ");
-        String employee_id = "3";
         // Fetch data into a map
         Map<String, String> empDetails = DBConnection.getEmployeeDetails(employee_id);
         Assert.assertNotNull(empDetails);

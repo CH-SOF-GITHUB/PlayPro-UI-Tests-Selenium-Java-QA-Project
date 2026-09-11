@@ -797,3 +797,5 @@ Session ID: f96455080000dace4d9f43e73b443cf8
 2026-09-11 12:31:02 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
 2026-09-11 12:32:37 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
 2026-09-11 12:32:37 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-11 12:48:56 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-11 12:48:56 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
