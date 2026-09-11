@@ -1904,3 +1904,21 @@
 2026-09-11 17:45:31 [TestNG-test-OrangeHRM Test 1-1] INFO  ActionDriver - Border applied on Element with text: PIM with color green
 2026-09-11 17:45:31 [TestNG-test-OrangeHRM Test 1-2] INFO  ActionDriver - Element : Unable to describe the element is displayed
 2026-09-11 17:45:31 [TestNG-test-OrangeHRM Test 1-2] INFO  ActionDriver - Border applied on Unable to describe the element with color green
+2026-09-11 17:45:34 [TestNG-test-OrangeHRM Test 1-2] INFO  BaseClass - WebDriver instance is closed for :  HomeTest
+2026-09-11 17:45:38 [TestNG-test-OrangeHRM Test 1-1] INFO  ActionDriver - Clicked on element  ---> : Element with text: PIM
+2026-09-11 17:45:39 [TestNG-test-OrangeHRM Test 1-1] INFO  ActionDriver - Border applied on Element with placeholder: Type for hints... with color green
+2026-09-11 17:45:39 [TestNG-test-OrangeHRM Test 1-1] INFO  ActionDriver - Value entered on Element with placeholder: Type for hints... is  alice
+2026-09-11 17:45:39 [TestNG-test-OrangeHRM Test 1-1] INFO  ActionDriver - Border applied on Element with text: Search with color green
+2026-09-11 17:45:39 [TestNG-test-OrangeHRM Test 1-1] INFO  ActionDriver - Clicked on element  ---> : Element with text: Search
+2026-09-11 17:45:40 [TestNG-test-OrangeHRM Test 1-1] INFO  ActionDriver - Border applied on Element with text: Alice Marie with color green
+2026-09-11 17:45:40 [TestNG-test-OrangeHRM Test 1-1] INFO  ActionDriver - Scrolled to element using JS : Element with text: Alice Marie
+2026-09-11 17:45:40 [TestNG-test-OrangeHRM Test 1-1] INFO  DBConnection - Starting DB Connection ...
+2026-09-11 17:45:41 [TestNG-test-OrangeHRM Test 1-1] INFO  DBConnection - DB Connection Successful ! 
+2026-09-11 17:45:41 [TestNG-test-OrangeHRM Test 1-1] INFO  DBConnection - Executing query : SELECT emp_firstname, emp_middle_name, emp_lastname FROM hs_hr_employee WHERE employee_id = 3.0
+2026-09-11 17:45:41 [TestNG-test-OrangeHRM Test 1-1] INFO  DBConnection - Query Executing Successfully !
+2026-09-11 17:45:41 [TestNG-test-OrangeHRM Test 1-1] INFO  DBConnection - Employees Data Fetch : {firstName=Alice, lastName=Dubois, middleName=Marie}
+2026-09-11 17:45:41 [TestNG-test-OrangeHRM Test 1-1] INFO  ActionDriver - Actual Text : Alice Marie match to | Expected Value: Alice Marie
+2026-09-11 17:45:41 [TestNG-test-OrangeHRM Test 1-1] INFO  ActionDriver - Border applied on Element with text: Alice Marie with color green
+2026-09-11 17:45:41 [TestNG-test-OrangeHRM Test 1-1] INFO  ActionDriver - Actual Text : Dubois match to | Expected Value: Dubois
+2026-09-11 17:45:41 [TestNG-test-OrangeHRM Test 1-1] INFO  ActionDriver - Border applied on Element with text: Dubois with color green
+2026-09-11 17:45:42 [TestNG-test-OrangeHRM Test 1-1] INFO  BaseClass - WebDriver instance is closed for :  DBVerificationTest

@@ -585,3 +585,101 @@ jobs:
         env:
           CI: true
         run: mvn test -Dheadless=true -Dtest=com.qa.tests.PlayPro.DEV.LambdaTest.Chrome.Login.TC001
+
+
+
+
+POM/XML:
+build:
+<build>
+        <plugins>
+            <plugin>
+                <!-- Compiles Java source code -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version> <!-- ajouter une version -->
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                    <!--
+                    This is a very common configuration:
+                                 Develop with the latest JDK (21)
+                                 Produce code compatible with Java 11
+                                 This allows your tests to run on environments that only have Java 11.
+
+                    When should you change to 17?
+                    Only if you actually need Java 17 features or your team has decided to standardize on Java 17.
+                    Examples:
+                       - Pattern matching
+                       - Records
+                       - Sealed classes
+                       - Other Java 17 language/API features
+                       - For a Selenium automation framework, most teams don't need these features.
+
+                    Apache Maven : 3.9.9
+                    JDK          : 21.0.9 (Oracle)
+                    Maven Plugin : maven-compiler-plugin 3.11.0
+                    pom.xml      : source=11 / target=11
+
+                    Replace <source>/<target> with <release>?  Yes, recommended if the tester decided to do this
+                    -->
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <!-- Runs TestNG/JUnit tests -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <!-- keep your cucumber config -->
+                    <systemPropertyVariables>
+                        <!--suppress UnresolvedMavenProperty -->
+                        <cucumber.filter.tags>${cucumber.filter.tags}</cucumber.filter.tags>
+                    </systemPropertyVariables>
+                    <!-- ✅ Force JUnit format (for CircleCI) -->
+                    <properties>
+                        <property>
+                            <name>junit</name>
+                            <value>true</value>
+                        </property>
+                    </properties>
+                    <!-- ✅ IMPORTANT: show logs in console -->
+                    <useFile>true</useFile>
+                    <!-- ✅ show more details -->
+                    <printSummary>true</printSummary>
+                    <!-- optional -->
+                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                    <!-- Add the following options of allure report to your maven-surefire-plugin -->
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>dev.aspectj</groupId>
+                <artifactId>aspectj-maven-plugin</artifactId>
+                <version>1.14</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjtools</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <complianceLevel>17</complianceLevel>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
