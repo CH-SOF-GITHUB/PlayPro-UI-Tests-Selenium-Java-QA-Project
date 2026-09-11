@@ -38,7 +38,7 @@ public class ApiTest {
         String actualResponseUsername = ApiUtility.getJsonValue(response, "username");
         String expectedResponseUsername = "Bret";
         boolean isUsernameOK = actualResponseUsername.equals(expectedResponseUsername);
-        softAssert.assertEquals(isUsernameOK, "Error: username from response body does not match");
+        softAssert.assertTrue(isUsernameOK, "Error: username from response body does not match");
         if (isUsernameOK) {
             ExtentManager.logStepForApi("Username is OK");
         } else {
@@ -47,7 +47,7 @@ public class ApiTest {
         // STEP 4: Validate username from JSON response
         ExtentManager.logStep("Validating response body for email");
         String actualResponseEmail = ApiUtility.getJsonValue(response, "email");
-        String expectedResponseEmail = "Sincere@april.bizz";
+        String expectedResponseEmail = "Sincere@april.biz";
         boolean isEmailOK = actualResponseEmail.equals(expectedResponseEmail);
         softAssert.assertEquals(actualResponseEmail, expectedResponseEmail, "Error: User Email from response body does not match");
         if (isEmailOK) {

@@ -49,7 +49,7 @@ public class DBVerificationTest extends BaseClass {
 
         // Validation 1 for first & middle names
         ExtentManager.logStep("Verify first & middle names data employee compare to database ... ");
-        String expectedEmpFirstAndMiddleName = empFirstNameDB + "test" + empMiddleNameDB;
+        String expectedEmpFirstAndMiddleName = empFirstNameDB + " " + empMiddleNameDB;
         softAssert.assertTrue(homePage.verifyEmpFirstAndMiddleName(expectedEmpFirstAndMiddleName), "Error: First & Middle Names are not matching");
 
         // Validation 2 for last name
