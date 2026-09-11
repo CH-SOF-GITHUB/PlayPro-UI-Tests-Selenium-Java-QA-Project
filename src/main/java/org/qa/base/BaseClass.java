@@ -10,6 +10,7 @@ import org.qa.utilities.ExtentManager;
 import org.qa.utilities.LoggerManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.asserts.SoftAssert;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -29,6 +30,10 @@ public class BaseClass {
     private static ThreadLocal<ActionDriver> actionDriver = new ThreadLocal<>();
 
     public static final Logger loggr = LoggerManager.getLogger(BaseClass.class);
+
+    // Create the object thread local of soft assert or we can create instance: ThreadLocal.withInitial(SoftAssert::new);
+    private static ThreadLocal<SoftAssert> softAsserts = ThreadLocal.withInitial(SoftAssert::new);
+
 
     @BeforeMethod
     public synchronized void setup() {
@@ -170,5 +175,12 @@ public class BaseClass {
     @SuppressWarnings("lombok")
     public void setProp(Properties prop) {
         this.prop = prop;
+    }
+
+
+    // Getter method for soft assert class 
+    @SuppressWarnings("lombok")
+    public static SoftAssert getSoftAsserts() {
+        return softAsserts.get();
     }
 }

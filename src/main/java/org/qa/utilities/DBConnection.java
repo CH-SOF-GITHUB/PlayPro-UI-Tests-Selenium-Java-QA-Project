@@ -1,5 +1,8 @@
 package org.qa.utilities;
 
+import org.apache.logging.log4j.Logger;
+import org.qa.base.BaseClass;
+
 import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,16 +12,17 @@ public class DBConnection {
     private static final String DB_URL = "jdbc:mysql://localhost:3307/orangehrm";
     private static final String DB_USERNAME = "root";
     private static final String DB_PASSWORD = "";
+    public static final Logger loggr = BaseClass.loggr;
 
     // Add a method for connection to database
     public static Connection getDBConnection() {
         try {
-            System.out.println("Starting DB Connection ...");
+            loggr.info("Starting DB Connection ...");
             Connection con = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
-            System.out.println("DB Connection Successful ! ");
+            loggr.info("DB Connection Successful ! ");
             return con;
         } catch (Exception e) {
-            System.out.println("Error of establishing DB Connection ... " + e.getMessage());
+            loggr.error("Error of establishing DB Connection : {}", e.getMessage());
             e.fillInStackTrace();
             return null;
         }
@@ -37,7 +41,7 @@ public class DBConnection {
                 Statement stmt = conn.createStatement();
                 stmt.executeQuery(query);
                 ResultSet rs = stmt.getResultSet();
-                System.out.println("Executing query : " + query);
+                loggr.info("Executing query : {}", query);
                 if (rs.next()) {
                     String firstName = rs.getString("emp_firstname");
                     String middleName = rs.getString("emp_middle_name");
@@ -49,11 +53,10 @@ public class DBConnection {
                     employeeDetails.put("middleName", middleName != null ? middleName : "");
                     employeeDetails.put("lastName", lastName);
 
-                    System.out.println("Query Executing Successfully !");
-                    System.out.println("Employees Data Fetch : " + employeeDetails);
+                    loggr.info("Query Executing Successfully !");
+                    loggr.info("Employees Data Fetch : {}", employeeDetails);
                 } else {
-                    System.out.println("Query Executing Failed ! ");
-                    System.out.println("Employees Data Not Found !");
+                    loggr.error("Query Executing Failed and Employee not Found !");
                 }
             }
             return employeeDetails;
