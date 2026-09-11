@@ -42,7 +42,7 @@ public class DataLoginTest extends BaseClass {
         // ExtentManager.startTest("In-valid Login Test");  // This has been implemented in TestListener
         ExtentManager.logStep("Navigating to login page and entering username & password");
         loginPage.login(username, pwd);
-        String ExpectedErrorMsg = "Invalid credentials1";
+        String ExpectedErrorMsg = "Invalid credentials";
         // Assert.assertTrue(loginPage.checkErrorMsgDisplayed(), "Error: Error message is not displayed");
         Assert.assertTrue(loginPage.verifyErrorMessage(ExpectedErrorMsg), "Error: Error message is not correct");
         ExtentManager.logStep("Validation Of Error Message successful");

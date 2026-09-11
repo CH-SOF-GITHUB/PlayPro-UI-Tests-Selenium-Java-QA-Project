@@ -28,7 +28,7 @@ public class ApiTest {
         Response response = ApiUtility.sendGetRequest(endpoint);
         // STEP 3: Validate status code
         ExtentManager.logStep("Validating Status Code ...");
-        boolean isStatusCodeOK = ApiUtility.validateStatusCode(response, 201);
+        boolean isStatusCodeOK = ApiUtility.validateStatusCode(response, 200);
         softAssert.assertTrue(isStatusCodeOK, "Error: Status code does not 200ok");
         if (isStatusCodeOK) {
             ExtentManager.logStepForApi("Status code is OK");
