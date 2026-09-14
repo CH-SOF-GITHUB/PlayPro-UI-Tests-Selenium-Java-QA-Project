@@ -16,8 +16,9 @@ import static org.qa.utilities.ScreenshotUtil.takeScreenshot;
 public class ExtentManager {
 
     private static ExtentReports extent;
-    @Getter
+
     private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
+
     private static String testName;
 
     public static void setTest(ThreadLocal<ExtentTest> test) {
