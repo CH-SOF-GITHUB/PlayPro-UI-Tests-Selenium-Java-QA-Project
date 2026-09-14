@@ -368,9 +368,17 @@
                     <configuration>
                         <suiteXmlFiles>
                             <!-- Specify the location of your testng.xml file -->
-                            <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                            <suiteXmlFile>src/test/resources/xml/testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
+                    <dependencies>
+                        <!--Source: https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-testng-->
+                        <dependency>
+                            <groupId>org.apache.maven.surefire</groupId>
+                            <artifactId>surefire-testng</artifactId>
+                            <version>3.2.5</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
                 <!-- Emballe le code compilé de votre projet d'automatisation dans une archive de fichier .jar exploitable -->
                 <plugin>
@@ -401,11 +409,5 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-        <!-- 🟢 AJOUTEZ CE BLOC JUSTE ICI POUR ACTIVER LE PLUGIN SUREFIRE -->
-        <plugins>
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-            </plugin>
-        </plugins>
     </build>
 </project>
