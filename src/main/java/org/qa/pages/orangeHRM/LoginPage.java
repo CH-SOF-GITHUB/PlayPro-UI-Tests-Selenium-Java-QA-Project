@@ -10,11 +10,11 @@ public class LoginPage {
     private ActionDriver actionDriver;
 
     // Define locators by class
-    private By userNameField = By.name("username");
-    private By passwordField = By.cssSelector("input[type='password']");
-    private By loginButton = By.cssSelector("button[type='submit']");
+    private final By userNameField = By.name("username");
+    private final By passwordField = By.cssSelector("input[type='password']");
+    private final By loginButton = By.cssSelector("button[type='submit']");
 
-    private By errorMessage = By.xpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']");
+    private final By errorMessage = By.xpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']");
 
     // Initialize action driver by constructor
     /*public LoginPage(WebDriver driver) {

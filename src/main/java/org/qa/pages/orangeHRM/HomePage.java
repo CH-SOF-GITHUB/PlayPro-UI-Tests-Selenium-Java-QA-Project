@@ -12,17 +12,17 @@ public class HomePage {
     private ActionDriver actionDriver;
 
     // Define locators by class
-    private By adminTab = By.cssSelector("body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)");
-    private By userIDBtn = By.className("oxd-userdropdown-name");
-    private By logoutBtn = By.linkText("Logout");
-    private By orangeHRMLogo = By.xpath("//div[@class='oxd-brand-banner']//img");
+    private final By adminTab = By.xpath("//span[text()='Admin']");
+    private final By userIDBtn = By.className("oxd-userdropdown-name");
+    private final By logoutBtn = By.linkText("Logout");
+    private final By orangeHRMLogo = By.xpath("//div[@class='oxd-brand-banner']//img");
 
     // Implementing Page Class for UI Verification compare to DataBase
-    private By pimTab = By.xpath("//span[text()='PIM']");
-    private By empSearchField = By.xpath("//input[@placeholder='Type for hints...']");
-    private By searchBtn = By.xpath("//button[normalize-space()='Search']");
-    private By empFirstAndMiddleName = By.xpath("//div[@class='oxd-table-card']/div/div[3]");
-    private By empLastName = By.xpath("//div[@class='oxd-table-card']/div/div[4]");
+    private final By pimTab = By.xpath("//span[text()='PIM']");
+    private final By empSearchField = By.xpath("//input[@placeholder='Type for hints...']");
+    private final By searchBtn = By.xpath("//button[normalize-space()='Search']");
+    private final By empFirstAndMiddleName = By.xpath("//div[@class='oxd-table-card']/div/div[3]");
+    private final By empLastName = By.xpath("//div[@class='oxd-table-card']/div/div[4]");
 
     // Initialize action driver by constructor // Commited for singleton design pattern
     /*public HomePage(WebDriver driver) {

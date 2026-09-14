@@ -33,9 +33,9 @@ public class ActionDriver {
     public void click(By by) {
         String elementDescription = getElementDescription(by);
         try {
-            applyBorder(by, "green");
             waitForElementToBeClickable(by);
             driver.findElement(by).click();
+            applyBorder(by, "green");
             // Add extent manager to log a step for the report
             ExtentManager.logStep("Clicked on element  ---> : " + elementDescription);
             loggr.info("Clicked on element  ---> : {}", elementDescription);
@@ -50,9 +50,9 @@ public class ActionDriver {
     public void enter(By by, String text) {
         String elementDescription = getElementDescription(by);
         try {
-            applyBorder(by, "green");
             waitForElementToBeVisible(by);
             driver.findElement(by).sendKeys(text);
+            applyBorder(by, "green");
             // Add extent manager to log a step for the report
             ExtentManager.logStep("Value entered on: " + elementDescription + " is " + text);
             loggr.info("Value entered on {} is  {}", elementDescription, text);
@@ -66,8 +66,8 @@ public class ActionDriver {
     // Method to get text from input field
     public String getText(By by) {
         try {
-            applyBorder(by, "green");
             waitForElementToBeVisible(by);
+            applyBorder(by, "green");
             return driver.findElement(by).getText();
         } catch (Exception e) {
             applyBorder(by, "red");
@@ -137,20 +137,12 @@ public class ActionDriver {
 
     // Wait for element to be clickable
     public void waitForElementToBeClickable(By by) {
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(by));
-        } catch (Exception e) {
-            loggr.error("This Element is not clickable: {}", e.getMessage());
-        }
+        wait.until(ExpectedConditions.elementToBeClickable(by));
     }
 
     // Wait for element to be visible
     public void waitForElementToBeVisible(By by) {
-        try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-        } catch (Exception e) {
-            loggr.error("This Element is not visible: {}", e.getMessage());
-        }
+        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 
 

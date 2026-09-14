@@ -13,6 +13,7 @@ import org.qa.utilities.ExtentManager;
 import org.qa.utilities.LoggerManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
 
 import java.io.FileInputStream;
@@ -30,37 +31,41 @@ public class BaseClass {
     // private static ActionDriver actionDriver;
 
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-    private static ThreadLocal<ActionDriver> actionDriver = new ThreadLocal<>();
+    private static final ThreadLocal<ActionDriver> actionDriver = new ThreadLocal<>();
 
     public static final Logger loggr = LoggerManager.getLogger(BaseClass.class);
 
-    // Create the object thread local of soft assert or we can create instance: ThreadLocal.withInitial(SoftAssert::new);
-    private static ThreadLocal<SoftAssert> softAsserts = ThreadLocal.withInitial(SoftAssert::new);
+    // Create the object thread local of soft assert; or we can create instance: ThreadLocal.withInitial(SoftAssert::new);
+    private static final ThreadLocal<SoftAssert> softAsserts = ThreadLocal.withInitial(SoftAssert::new);
 
 
-    @BeforeMethod
-    public synchronized void setup() {
+    @BeforeSuite
+    public void configProp() {
         try {
-            // Set Settings up message
-            System.out.println("Settings up for : " + this.getClass().getSimpleName());
-
             // Load properties configuration
             FileInputStream file = new FileInputStream("src/main/resources/config.properties");
             prop = new Properties();
             prop.load(file);
             loggr.info("properties.config File Loaded successfully");
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
+    }
 
-            // Start the Extent Report:
-            // ExtentManager.getReporter();  // This has been implemented in TestListener
+    public synchronized void configBrowser() {
+        try {
+            // Initialize the WebDriver based on the browser and url specified keys in the properties file
+            String browser = getProp().get("browser").toString();
+            String url = getProp().get("url").toString();
 
-            // Initialize the WebDriver based on the browser specified in the properties file
-            String browser = prop.getProperty("browser");
+
             if (browser.equalsIgnoreCase("firefox")) {
                 // driver = new FirefoxDriver();
                 // Update WebDriver for browser execution to headless mode
                 FirefoxOptions options = new FirefoxOptions();
-                options.addArguments("--headless");                    // Run Chrome in headless mode
+                options.addArguments("--headless=new");                // Run Chrome in headless mode
                 options.addArguments("--disable-gpu");                 // Disable GPU for headless mode
+                options.addArguments("--window-size=1920,1080");       // Set window size
                 options.addArguments("--disable-notifications");       // Disable browser notifications
                 options.addArguments("--no-sandbox");                  // Required for some CI environments like Jenkins
                 options.addArguments("--disable-dev-shm-usage");       // Resolve issues in resource-limited environments
@@ -72,7 +77,7 @@ public class BaseClass {
                 //driver = new ChromeDriver();
                 // Update WebDriver for browser execution to headless mode
                 ChromeOptions options = new ChromeOptions();
-                options.addArguments("--headless");                    // Run Chrome in headless mode
+                options.addArguments("--headless=new");                // Run Chrome in headless mode
                 options.addArguments("--disable-gpu");                 // Disable GPU for headless mode
                 options.addArguments("--window-size=1920,1080");       // Set window size
                 options.addArguments("--disable-notifications");       // Disable browser notifications
@@ -85,8 +90,9 @@ public class BaseClass {
                 //driver = new EdgeDriver();
                 // Update WebDriver for browser execution to headless mode
                 EdgeOptions options = new EdgeOptions();
-                options.addArguments("--headless");                    // Run Chrome in headless mode
+                options.addArguments("--headless=new");                // Run Chrome in headless mode
                 options.addArguments("--disable-gpu");                 // Disable GPU for headless mode
+                options.addArguments("--window-size=1920,1080");       // Set window size
                 options.addArguments("--disable-notifications");       // Disable browser notifications
                 options.addArguments("--no-sandbox");                  // Required for some CI environments like Jenkins
                 options.addArguments("--disable-dev-shm-usage");       // Resolve issues in resource-limited environments
@@ -100,20 +106,21 @@ public class BaseClass {
             // Initialize Implicit Wait
             int timeout = Integer.parseInt(prop.getProperty("timeout"));
             driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
+            // Maximize the web driver
+            // driver.get().manage().window().maximize();
 
             // Navigate the Base URL
-            String url = prop.getProperty("url");
             driver.get().get(url);
 
-            // static wait for 2 S
-            staticWait(2);
+            // static wait for 3 S
+            staticWait(3);
 
             loggr.info("WebDriver Initialized and Browser Opened and Maximized");
-            loggr.trace("This is a trace message");
-            loggr.error("This is an error message");
-            loggr.debug("This is a debug message");
-            loggr.warn("This is an warning message");
-            loggr.fatal("This is a fatal message");
+            // loggr.trace("This is a trace message");
+            // loggr.error("This is an error message");
+            // loggr.debug("This is a debug message");
+            // loggr.warn("This is an warning message");
+            // loggr.fatal("This is a fatal message");
 
             // Implement Singleton Design Pattern and Initialize action driver only once
             /*if (actionDriver == null) {
@@ -123,12 +130,21 @@ public class BaseClass {
             // Initialize action driver for current thread
             actionDriver.set(new ActionDriver(getDriver()));
             loggr.info("ActionDriver Initialize form Thread {}", Thread.currentThread().getId());
-
-            // Maximize the web driver
-            new ActionDriver(getDriver()).maximizeWindow();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.fillInStackTrace();
         }
+    }
+
+    @BeforeMethod
+    public synchronized void setup() {
+        // Set Settings up message
+        System.out.println("Settings up for : " + this.getClass().getSimpleName());
+        // Start the Extent Report:
+        // ExtentManager.getReporter();  // This has been implemented in TestListener
+        // call load properties method
+        configProp();
+        // call lunch browser method
+        configBrowser();
     }
 
     @AfterMethod
@@ -189,7 +205,7 @@ public class BaseClass {
 
     @SuppressWarnings("lombok")
     public void setDriver(ThreadLocal<WebDriver> driver) {  // public void setDriver(WebDriver driver) in current thread
-        this.driver = driver;
+        BaseClass.driver = driver;
     }
 
     @SuppressWarnings("lombok")
@@ -199,7 +215,7 @@ public class BaseClass {
 
     @SuppressWarnings("lombok")
     public void setProp(Properties prop) {
-        this.prop = prop;
+        BaseClass.prop = prop;
     }
 
 
