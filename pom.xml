@@ -138,9 +138,9 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.11.0</version>
-            <scope>compile</scope>
+            <scope>test</scope>
         </dependency>
-        <!-- BONUS ISSUE IN YOUR LOGS Circleci ... -->
+        <!-- BONUS ISSUE IN YOUR LOGS Circle CI ... -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
