@@ -1285,3 +1285,212 @@ Session ID: 996b564cba9faa5b42f91897d2d1bf21
 2026-09-11 18:26:36 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
 2026-09-11 18:26:48 [TestNG-test-OrangeHRM Test 1-5] ERROR BaseClass - This is an error message
 2026-09-11 18:26:48 [TestNG-test-OrangeHRM Test 1-5] FATAL BaseClass - This is a fatal message
+2026-09-14 10:06:35 [TestNG-test-OrangeHRM Test 1-2] ERROR BaseClass - This is an error message
+2026-09-14 10:06:35 [TestNG-test-OrangeHRM Test 1-2] FATAL BaseClass - This is a fatal message
+2026-09-14 10:06:35 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-14 10:06:35 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-14 10:06:35 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-14 10:06:35 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-14 10:06:35 [TestNG-test-OrangeHRM Test 1-4] ERROR BaseClass - This is an error message
+2026-09-14 10:06:35 [TestNG-test-OrangeHRM Test 1-4] FATAL BaseClass - This is a fatal message
+2026-09-14 10:06:35 [TestNG-test-OrangeHRM Test 1-5] ERROR BaseClass - This is an error message
+2026-09-14 10:06:50 [TestNG-test-OrangeHRM Test 1-5] FATAL BaseClass - This is a fatal message
+2026-09-14 10:07:25 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-14 10:07:25 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-14 10:07:25 [TestNG-test-OrangeHRM Test 1-5] ERROR BaseClass - This is an error message
+2026-09-14 10:07:25 [TestNG-test-OrangeHRM Test 1-5] FATAL BaseClass - This is a fatal message
+2026-09-14 10:07:33 [TestNG-test-OrangeHRM Test 1-2] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-brand-banner']//img
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65052}, goog:processID: 28956, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65052/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dc39e46750e6ba9d9adbc9c05b53017
+2026-09-14 10:07:33 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - This Element is not clickable: Expected condition failed: waiting for element found by By.xpath: //span[text()='PIM'] to be clickable, but the element was not visible.
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61304}, goog:processID: 26396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61304/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef0b631c52947b349c061daf3aee0c6b
+2026-09-14 10:07:48 [TestNG-test-OrangeHRM Test 1-5] ERROR BaseClass - This is an error message
+2026-09-14 10:07:48 [TestNG-test-OrangeHRM Test 1-5] FATAL BaseClass - This is a fatal message
+2026-09-14 10:07:49 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - Element is not clickable: element not interactable
+  (Session info: chrome=152.0.7977.84)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef0b631c52947b349c061daf3aee0c6b, clickElement {id=f.269BD42490F503A0B9B7674A80D7D36D.d.C8BB980AC768E922358DC272092725E0.e.58}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61304}, goog:processID: 26396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61304/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (ef0b631c52947b349c061daf3aee0c6b)] -> xpath: //span[text()='PIM']]
+Session ID: ef0b631c52947b349c061daf3aee0c6b
+2026-09-14 10:07:50 [TestNG-test-OrangeHRM Test 1-2] ERROR BaseClass - This is an error message
+2026-09-14 10:07:50 [TestNG-test-OrangeHRM Test 1-2] FATAL BaseClass - This is a fatal message
+2026-09-14 10:08:04 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - Unable to describe the element: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Type for hints...']"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef0b631c52947b349c061daf3aee0c6b, findElement {using=xpath, value=//input[@placeholder='Type for hints...']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61304}, goog:processID: 26396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61304/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef0b631c52947b349c061daf3aee0c6b
+2026-09-14 10:08:07 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.cssSelector: body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57206}, goog:processID: 26780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57206/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 62b35b97ac02f94a49d28ef68002c89c
+2026-09-14 10:08:13 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-14 10:08:13 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-14 10:08:19 [TestNG-test-OrangeHRM Test 1-5] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.cssSelector: body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59545}, goog:processID: 28520, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59545/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d9789a489ccc068a87f449f366780d57
+2026-09-14 10:08:19 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - Error when try to apply color in a border: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Type for hints...']"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef0b631c52947b349c061daf3aee0c6b, findElement {using=xpath, value=//input[@placeholder='Type for hints...']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61304}, goog:processID: 26396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61304/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef0b631c52947b349c061daf3aee0c6b
+2026-09-14 10:08:20 [TestNG-test-OrangeHRM Test 1-2] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-brand-banner']//img
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58118}, goog:processID: 3128, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58118/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8c5fe49152e2d153040ec02adba5cde7
+2026-09-14 10:08:32 [TestNG-test-OrangeHRM Test 1-2] ERROR BaseClass - This is an error message
+2026-09-14 10:08:32 [TestNG-test-OrangeHRM Test 1-2] FATAL BaseClass - This is a fatal message
+2026-09-14 10:08:32 [TestNG-test-OrangeHRM Test 1-5] ERROR BaseClass - This is an error message
+2026-09-14 10:08:32 [TestNG-test-OrangeHRM Test 1-5] FATAL BaseClass - This is a fatal message
+2026-09-14 10:08:47 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.cssSelector: body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58377}, goog:processID: 27696, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58377/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3ed39f0b5f048d568a3e2b7a540229f7
+2026-09-14 10:08:50 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.xpath: //input[@placeholder='Type for hints...'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Type for hints...']"}.
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61304}, goog:processID: 26396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61304/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef0b631c52947b349c061daf3aee0c6b
+2026-09-14 10:08:55 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-14 10:08:55 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-14 10:09:05 [TestNG-test-OrangeHRM Test 1-2] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.xpath: //div[@class='oxd-brand-banner']//img
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55220}, goog:processID: 22968, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55220/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c6ae8e0cb37bc9faab8c8c4a96b507f0
+2026-09-14 10:09:05 [TestNG-test-OrangeHRM Test 1-5] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.cssSelector: body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51420}, goog:processID: 21380, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51420/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d181912600d9405222be2cc6900565f
+2026-09-14 10:09:12 [TestNG-test-OrangeHRM Test 1-5] ERROR BaseClass - This is an error message
+2026-09-14 10:09:12 [TestNG-test-OrangeHRM Test 1-5] FATAL BaseClass - This is a fatal message
+2026-09-14 10:09:20 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - Error when try to apply color in a border: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Type for hints...']"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef0b631c52947b349c061daf3aee0c6b, findElement {using=xpath, value=//input[@placeholder='Type for hints...']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61304}, goog:processID: 26396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61304/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef0b631c52947b349c061daf3aee0c6b
+2026-09-14 10:09:20 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - Element is not entered: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Type for hints...']"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef0b631c52947b349c061daf3aee0c6b, findElement {using=xpath, value=//input[@placeholder='Type for hints...']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61304}, goog:processID: 26396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61304/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef0b631c52947b349c061daf3aee0c6b
+2026-09-14 10:09:24 [TestNG-test-OrangeHRM Test 1-3] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.cssSelector: body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51246}, goog:processID: 5512, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51246/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1f4afc31678b37154e683c72dc005af0
+2026-09-14 10:09:35 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - Unable to describe the element: no such element: Unable to locate element: {"method":"xpath","selector":"//button[normalize-space()='Search']"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef0b631c52947b349c061daf3aee0c6b, findElement {using=xpath, value=//button[normalize-space()='Search']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61304}, goog:processID: 26396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61304/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef0b631c52947b349c061daf3aee0c6b
+2026-09-14 10:09:41 [TestNG-test-OrangeHRM Test 1-5] ERROR ActionDriver - This Element is not visible: Expected condition failed: waiting for visibility of element found by By.cssSelector: body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55497}, goog:processID: 5820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55497/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f06a268ef26e6d686ca75f2b08891bcd
+2026-09-14 10:09:50 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - Error when try to apply color in a border: no such element: Unable to locate element: {"method":"xpath","selector":"//button[normalize-space()='Search']"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef0b631c52947b349c061daf3aee0c6b, findElement {using=xpath, value=//button[normalize-space()='Search']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61304}, goog:processID: 26396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61304/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef0b631c52947b349c061daf3aee0c6b
+2026-09-14 10:10:21 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - This Element is not clickable: Expected condition failed: waiting for element found by By.xpath: //button[normalize-space()='Search'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[normalize-space()='Search']"}.
+(tried for 25 seconds with 500 milliseconds interval)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61304}, goog:processID: 26396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61304/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef0b631c52947b349c061daf3aee0c6b
+2026-09-14 10:10:52 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - Error when try to apply color in a border: no such element: Unable to locate element: {"method":"xpath","selector":"//button[normalize-space()='Search']"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef0b631c52947b349c061daf3aee0c6b, findElement {using=xpath, value=//button[normalize-space()='Search']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61304}, goog:processID: 26396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61304/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef0b631c52947b349c061daf3aee0c6b
+2026-09-14 10:10:52 [TestNG-test-OrangeHRM Test 1-1] ERROR ActionDriver - Element is not clickable: no such element: Unable to locate element: {"method":"xpath","selector":"//button[normalize-space()='Search']"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef0b631c52947b349c061daf3aee0c6b, findElement {using=xpath, value=//button[normalize-space()='Search']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61304}, goog:processID: 26396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61304/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef0b631c52947b349c061daf3aee0c6b
+2026-09-14 10:12:10 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-14 10:12:10 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-14 10:12:12 [TestNG-test-OrangeHRM Test 1-1] ERROR BaseClass - This is an error message
+2026-09-14 10:12:12 [TestNG-test-OrangeHRM Test 1-1] FATAL BaseClass - This is a fatal message
+2026-09-14 10:12:12 [TestNG-test-OrangeHRM Test 1-5] ERROR BaseClass - This is an error message
+2026-09-14 10:12:12 [TestNG-test-OrangeHRM Test 1-4] ERROR BaseClass - This is an error message
+2026-09-14 10:12:12 [TestNG-test-OrangeHRM Test 1-4] FATAL BaseClass - This is a fatal message
+2026-09-14 10:12:12 [TestNG-test-OrangeHRM Test 1-5] FATAL BaseClass - This is a fatal message
+2026-09-14 10:12:42 [TestNG-test-OrangeHRM Test 1-2] ERROR BaseClass - This is an error message
+2026-09-14 10:12:42 [TestNG-test-OrangeHRM Test 1-2] FATAL BaseClass - This is a fatal message
+2026-09-14 10:13:19 [TestNG-test-OrangeHRM Test 1-4] ERROR BaseClass - This is an error message
+2026-09-14 10:13:19 [TestNG-test-OrangeHRM Test 1-4] FATAL BaseClass - This is a fatal message
+2026-09-14 10:13:44 [TestNG-test-OrangeHRM Test 1-3] ERROR BaseClass - This is an error message
+2026-09-14 10:13:44 [TestNG-test-OrangeHRM Test 1-3] FATAL BaseClass - This is a fatal message
+2026-09-14 10:13:51 [TestNG-test-OrangeHRM Test 1-4] ERROR BaseClass - This is an error message
+2026-09-14 10:13:51 [TestNG-test-OrangeHRM Test 1-4] FATAL BaseClass - This is a fatal message

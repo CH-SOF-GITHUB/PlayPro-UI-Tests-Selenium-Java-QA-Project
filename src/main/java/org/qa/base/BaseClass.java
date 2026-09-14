@@ -3,8 +3,11 @@ package org.qa.base;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.qa.actionDriver.ActionDriver;
 import org.qa.utilities.ExtentManager;
 import org.qa.utilities.LoggerManager;
@@ -54,18 +57,40 @@ public class BaseClass {
             String browser = prop.getProperty("browser");
             if (browser.equalsIgnoreCase("firefox")) {
                 // driver = new FirefoxDriver();
-                driver.set(new FirefoxDriver());
+                // Update WebDriver for browser execution to headless mode
+                FirefoxOptions options = new FirefoxOptions();
+                options.addArguments("--headless");                    // Run Chrome in headless mode
+                options.addArguments("--disable-gpu");                 // Disable GPU for headless mode
+                options.addArguments("--disable-notifications");       // Disable browser notifications
+                options.addArguments("--no-sandbox");                  // Required for some CI environments like Jenkins
+                options.addArguments("--disable-dev-shm-usage");       // Resolve issues in resource-limited environments
+                driver.set(new FirefoxDriver(options));                // New Changes as per Thread
                 // Register the driver for Extent Report
                 ExtentManager.registerDriver(getDriver());
                 loggr.info("FirefoxDriver Instance Initialized successfully");
             } else if (browser.equalsIgnoreCase("chrome")) {
                 //driver = new ChromeDriver();
-                driver.set(new ChromeDriver());
+                // Update WebDriver for browser execution to headless mode
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless");                    // Run Chrome in headless mode
+                options.addArguments("--disable-gpu");                 // Disable GPU for headless mode
+                options.addArguments("--window-size=1920,1080");       // Set window size
+                options.addArguments("--disable-notifications");       // Disable browser notifications
+                options.addArguments("--no-sandbox");                  // Required for some CI environments like Jenkins
+                options.addArguments("--disable-dev-shm-usage");       // Resolve issues in resource-limited environments
+                driver.set(new ChromeDriver(options));                 // New Changes as per Thread
                 ExtentManager.registerDriver(getDriver());
                 loggr.info("ChromeDriver Instance Initialized successfully");
             } else if (browser.equalsIgnoreCase("edge")) {
                 //driver = new EdgeDriver();
-                driver.set(new EdgeDriver());
+                // Update WebDriver for browser execution to headless mode
+                EdgeOptions options = new EdgeOptions();
+                options.addArguments("--headless");                    // Run Chrome in headless mode
+                options.addArguments("--disable-gpu");                 // Disable GPU for headless mode
+                options.addArguments("--disable-notifications");       // Disable browser notifications
+                options.addArguments("--no-sandbox");                  // Required for some CI environments like Jenkins
+                options.addArguments("--disable-dev-shm-usage");       // Resolve issues in resource-limited environments
+                driver.set(new EdgeDriver(options));                   // New Changes as per Thread
                 ExtentManager.registerDriver(getDriver());
                 loggr.info("EdgeDriver Instance Initialized successfully");
             } else {
