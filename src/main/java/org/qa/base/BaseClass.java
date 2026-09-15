@@ -8,6 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.qa.actionDriver.ActionDriver;
 import org.qa.utilities.ExtentManager;
 import org.qa.utilities.LoggerManager;
@@ -17,6 +18,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
 
 import java.io.FileInputStream;
+import java.net.URL;
 import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -48,13 +50,38 @@ public class BaseClass {
 
     public synchronized void configBrowser() {
         try {
-            // retrieve the specified keys in the properties file
+            // retrieve the specified keys{browser,url} in the properties file
             String browser = getProp().getProperty("browser", "chrome");
             String url = getProp().getProperty("url");
             // Safer Boolean parsing to avoid ClassCastException
             boolean isHeadless = Boolean.parseBoolean(getProp().getProperty("headless", "false"));
+            // retrieve the specified keys {isGrid,gridUrl} in the properties file
+            String gridURL = getProp().getProperty("gridUrl");
+            boolean isGRID = Boolean.parseBoolean(getProp().getProperty("isGrid", "false"));
+/**/
+            if (isGRID) {
+                try {
+                    if (browser.equalsIgnoreCase("firefox")) {
+                        FirefoxOptions firefoxOptions = new FirefoxOptions();
+                        firefoxOptions.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080", "--disable-notifications", "--no-sandbox", "--disable-dev-shm-usage");
+                        driver.set(new RemoteWebDriver(new URL(gridURL), firefoxOptions));
+                    } else if (browser.equalsIgnoreCase("chrome")) {
+                        ChromeOptions chromeOptions = new ChromeOptions();
+                        chromeOptions.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080", "--disable-notifications", "--no-sandbox", "--disable-dev-shm-usage");
+                        driver.set(new RemoteWebDriver(new URL(gridURL), chromeOptions));
+                    } else if (browser.equalsIgnoreCase("edge")) {
+                        EdgeOptions edgeOptions = new EdgeOptions();
+                        edgeOptions.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080", "--disable-notifications", "--no-sandbox", "--disable-dev-shm-usage");
+                        driver.set(new RemoteWebDriver(new URL(gridURL), edgeOptions));
 
-            if (browser.equalsIgnoreCase("firefox")) {
+                        loggr.warn("RemoteWebDriver instance created for Grid in headless mode.");
+                    } else {
+                        throw new IllegalArgumentException("Browser '" + browser + "' not supported for Grid Tests");
+                    }
+                } catch (Exception e) {
+                    e.fillInStackTrace();
+                }
+            } else if (browser.equalsIgnoreCase("firefox")) {
                 FirefoxOptions options = new FirefoxOptions();
                 if (isHeadless) {
                     options.addArguments("--headless=new");
