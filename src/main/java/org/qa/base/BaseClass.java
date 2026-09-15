@@ -15,6 +15,7 @@ import org.qa.utilities.LoggerManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
 import java.io.FileInputStream;
@@ -48,17 +49,17 @@ public class BaseClass {
         }
     }
 
-    public synchronized void configBrowser() {
+    public synchronized void configBrowser(String browser) {
         try {
             // retrieve the specified keys{browser,url} in the properties file
-            String browser = getProp().getProperty("browser", "chrome");
+            //String browser = getProp().getProperty("browser", "chrome");
             String url = getProp().getProperty("url");
             // Safer Boolean parsing to avoid ClassCastException
             boolean isHeadless = Boolean.parseBoolean(getProp().getProperty("headless", "false"));
             // retrieve the specified keys {isGrid,gridUrl} in the properties file
             String gridURL = getProp().getProperty("gridUrl");
             boolean isGRID = Boolean.parseBoolean(getProp().getProperty("isGrid", "false"));
-/**/
+            /**/
             if (isGRID) {
                 try {
                     if (browser.equalsIgnoreCase("firefox")) {
@@ -81,55 +82,57 @@ public class BaseClass {
                 } catch (Exception e) {
                     e.fillInStackTrace();
                 }
-            } else if (browser.equalsIgnoreCase("firefox")) {
-                FirefoxOptions options = new FirefoxOptions();
-                if (isHeadless) {
-                    options.addArguments("--headless=new");
-                    options.addArguments("--disable-gpu");
-                    options.addArguments("--window-size=1920,1080");
-                    options.addArguments("--disable-notifications");
-                    options.addArguments("--no-sandbox");
-                    options.addArguments("--disable-dev-shm-usage");
-                }
-                driver.set(new FirefoxDriver(options));
-                ExtentManager.registerDriver(getDriver());
-                loggr.info("FirefoxDriver Instance Initialized successfully On ------> {}", isHeadless ? "Headless Mode" : "Opening Browser");
-
-            } else if (browser.equalsIgnoreCase("chrome")) {
-                ChromeOptions options = new ChromeOptions();
-                if (isHeadless) {
-                    options.addArguments("--headless=new");
-                    options.addArguments("--disable-gpu");
-                    options.addArguments("--window-size=1920,1080");
-                    options.addArguments("--disable-notifications");
-                    options.addArguments("--no-sandbox");
-                    options.addArguments("--disable-dev-shm-usage");
-                }
-                driver.set(new ChromeDriver(options));
-                ExtentManager.registerDriver(getDriver());
-                loggr.info("ChromeDriver Instance Initialized successfully On -------> {}", isHeadless ? "Headless Mode" : "Opening Browser");
-
-            } else if (browser.equalsIgnoreCase("edge")) {
-                EdgeOptions options = new EdgeOptions();
-                if (isHeadless) {
-                    options.addArguments("--headless=new");
-                    options.addArguments("--disable-gpu");
-                    options.addArguments("--window-size=1920,1080");
-                    options.addArguments("--disable-notifications");
-                    options.addArguments("--no-sandbox");
-                    options.addArguments("--disable-dev-shm-usage");
-                }
-                driver.set(new EdgeDriver(options));
-                ExtentManager.registerDriver(getDriver());
-                loggr.info("EdgeDriver Instance Initialized successfully On ------> {}", isHeadless ? "Headless Mode" : "Opening Browser");
-
             } else {
-                throw new IllegalArgumentException("Browser not supported: " + browser);
+                if (browser.equalsIgnoreCase("firefox")) {
+                    FirefoxOptions options = new FirefoxOptions();
+                    if (isHeadless) {
+                        options.addArguments("--headless=new");
+                        options.addArguments("--disable-gpu");
+                        options.addArguments("--window-size=1920,1080");
+                        options.addArguments("--disable-notifications");
+                        options.addArguments("--no-sandbox");
+                        options.addArguments("--disable-dev-shm-usage");
+                    }
+                    driver.set(new FirefoxDriver(options));
+                    ExtentManager.registerDriver(getDriver());
+                    loggr.info("FirefoxDriver Instance Initialized successfully On ------> {}", isHeadless ? "Headless Mode" : "Opening Browser");
+
+                } else if (browser.equalsIgnoreCase("chrome")) {
+                    ChromeOptions options = new ChromeOptions();
+                    if (isHeadless) {
+                        options.addArguments("--headless=new");
+                        options.addArguments("--disable-gpu");
+                        options.addArguments("--window-size=1920,1080");
+                        options.addArguments("--disable-notifications");
+                        options.addArguments("--no-sandbox");
+                        options.addArguments("--disable-dev-shm-usage");
+                    }
+                    driver.set(new ChromeDriver(options));
+                    ExtentManager.registerDriver(getDriver());
+                    loggr.info("ChromeDriver Instance Initialized successfully On -------> {}", isHeadless ? "Headless Mode" : "Opening Browser");
+
+                } else if (browser.equalsIgnoreCase("edge")) {
+                    EdgeOptions options = new EdgeOptions();
+                    if (isHeadless) {
+                        options.addArguments("--headless=new");
+                        options.addArguments("--disable-gpu");
+                        options.addArguments("--window-size=1920,1080");
+                        options.addArguments("--disable-notifications");
+                        options.addArguments("--no-sandbox");
+                        options.addArguments("--disable-dev-shm-usage");
+                    }
+                    driver.set(new EdgeDriver(options));
+                    ExtentManager.registerDriver(getDriver());
+                    loggr.info("EdgeDriver Instance Initialized successfully On ------> {}", isHeadless ? "Headless Mode" : "Opening Browser");
+
+                } else {
+                    throw new IllegalArgumentException("Browser not supported: " + browser);
+                }
             }
 
             // Initialize Implicit Wait
-            int timeout = Integer.parseInt(prop.getProperty("timeout", "10"));
-            getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
+            // int timeout = Integer.parseInt(prop.getProperty("timeout", "10"));
+            // getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
 
             // Maximize the WebDriver
             if (!isHeadless) {
@@ -141,7 +144,7 @@ public class BaseClass {
             // Sleep time for 3 s
             staticWait(3);
 
-            loggr.info("WebDriver Initialized correctly and a Browser Opened and Maximized");
+            // loggr.info("WebDriver Initialized correctly and a Browser Opened and Maximized");
             // loggr.trace("This is a trace message");
             // loggr.error("This is an error message");
             // loggr.debug("This is a debug message");
@@ -157,15 +160,16 @@ public class BaseClass {
 
             actionDriver.set(new ActionDriver(getDriver()));
             loggr.warn("ActionDriver Initialized for Thread ---------------------> {}", Thread.currentThread().getId());
-
         } catch (Exception e) {
             loggr.error("Error during browser configuration", e);
             throw new RuntimeException("WebDriver initialization failed: " + e.getMessage());
         }
     }
 
+
     @BeforeMethod
-    public void setup() {
+    @Parameters({"browser"})
+    public void setup(String browser) {
         loggr.warn("Setting up for ---------------> : {}", this.getClass().getSimpleName());
         // Start the Extent Report:
         // ExtentManager.getReporter();  // This has been implemented in TestListener
@@ -174,7 +178,7 @@ public class BaseClass {
             configProp();
         }
         // call the method to open the browser
-        configBrowser();
+        configBrowser(browser);
     }
 
     @AfterMethod
