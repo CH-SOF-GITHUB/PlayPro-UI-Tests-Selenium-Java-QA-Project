@@ -135,7 +135,7 @@ public class BaseClass {
             // getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
 
             // Maximize the WebDriver
-            if (!isHeadless) {
+            if (!isHeadless & !isGRID) {
                 getDriver().manage().window().maximize();
             }
 

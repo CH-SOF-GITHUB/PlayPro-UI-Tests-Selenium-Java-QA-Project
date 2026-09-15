@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name="OrangeHRM Test Suite" parallel="classes" thread-count="5">
+<suite name="OrangeHRM Test Suite" parallel="tests" thread-count="21">
     <listeners>
         <listener class-name="org.qa.listeners.TestListener"/>
     </listeners>

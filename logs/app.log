@@ -5078,3 +5078,294 @@ Session ID: f2aa8dad-855b-4eb0-adb6-ec9acb02c6f2
 2026-09-15 16:47:35 [TestNG-test-OrangeHRM_Test_1.2_EDGE-3] INFO  ActionDriver - Border applied on element with color ------> [green].
 2026-09-15 16:47:36 [TestNG-test-OrangeHRM_Test_1.2_EDGE-3] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Logout ']
 2026-09-15 16:47:39 [TestNG-test-OrangeHRM_Test_1.2_EDGE-3] WARN  BaseClass - WebDriver instance is closed for ---------------> : DataLoginTest
+2026-09-15 17:07:48 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-15 17:07:49 [TestNG-tests-3] WARN  BaseClass - Setting up for ---------------> : DBVerificationTest
+2026-09-15 17:07:49 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : DBVerificationTest
+2026-09-15 17:07:49 [TestNG-tests-2] WARN  BaseClass - Setting up for ---------------> : DBVerificationTest
+2026-09-15 17:07:57 [TestNG-tests-3] WARN  BaseClass - RemoteWebDriver instance created for Grid in headless mode.
+2026-09-15 17:08:03 [TestNG-tests-3] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:08:03 [TestNG-tests-3] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 30
+2026-09-15 17:08:03 [TestNG-tests-2] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:08:03 [TestNG-tests-2] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 29
+2026-09-15 17:08:04 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:04 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:05 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:08:05 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:08:05 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:05 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:05 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!].
+2026-09-15 17:08:06 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!].
+2026-09-15 17:08:06 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:06 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:09 [TestNG-tests-2] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:08:11 [TestNG-tests-3] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:08:12 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:21 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:25 [TestNG-tests-2] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' PIM ']
+2026-09-15 17:08:26 [TestNG-tests-3] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' PIM ']
+2026-09-15 17:08:26 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:26 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with placeholder ' Type for hints... ' ' is [alice].
+2026-09-15 17:08:27 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:27 [TestNG-tests-2] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Search ']
+2026-09-15 17:08:27 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:27 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with placeholder ' Type for hints... ' ' is [alice].
+2026-09-15 17:08:28 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:28 [TestNG-tests-3] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Search ']
+2026-09-15 17:08:29 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:29 [TestNG-tests-2] INFO  ActionDriver - Scrolled to element --------> Element with text ' Alice Marie ' using JS
+2026-09-15 17:08:29 [TestNG-tests-2] INFO  DBConnection - Starting DB Connection ...
+2026-09-15 17:08:29 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:29 [TestNG-tests-3] INFO  ActionDriver - Scrolled to element --------> Element with text ' Alice Marie ' using JS
+2026-09-15 17:08:29 [TestNG-tests-3] INFO  DBConnection - Starting DB Connection ...
+2026-09-15 17:08:30 [TestNG-tests-3] INFO  DBConnection - DB Connection Successful ! 
+2026-09-15 17:08:30 [TestNG-tests-3] INFO  DBConnection - Executing query : SELECT emp_firstname, emp_middle_name, emp_lastname FROM hs_hr_employee WHERE employee_id = 3.0
+2026-09-15 17:08:30 [TestNG-tests-3] INFO  DBConnection - Query Executing Successfully !
+2026-09-15 17:08:30 [TestNG-tests-3] INFO  DBConnection - Employees Data Fetch : {firstName=Alice, lastName=Dubois, middleName=Marie}
+2026-09-15 17:08:30 [TestNG-tests-2] INFO  DBConnection - DB Connection Successful ! 
+2026-09-15 17:08:30 [TestNG-tests-2] INFO  DBConnection - Executing query : SELECT emp_firstname, emp_middle_name, emp_lastname FROM hs_hr_employee WHERE employee_id = 3.0
+2026-09-15 17:08:30 [TestNG-tests-2] INFO  DBConnection - Query Executing Successfully !
+2026-09-15 17:08:30 [TestNG-tests-2] INFO  DBConnection - Employees Data Fetch : {firstName=Alice, lastName=Dubois, middleName=Marie}
+2026-09-15 17:08:30 [TestNG-tests-3] INFO  ActionDriver - Actual Text: [Alice Marie] match to -----> Expected Text Value: [Alice Marie]
+2026-09-15 17:08:30 [TestNG-tests-2] INFO  ActionDriver - Actual Text: [Alice Marie] match to -----> Expected Text Value: [Alice Marie]
+2026-09-15 17:08:30 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:31 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:31 [TestNG-tests-2] INFO  ActionDriver - Actual Text: [Dubois] match to -----> Expected Text Value: [Dubois]
+2026-09-15 17:08:31 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:32 [TestNG-tests-3] INFO  ActionDriver - Actual Text: [Dubois] match to -----> Expected Text Value: [Dubois]
+2026-09-15 17:08:33 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:08:33 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 28
+2026-09-15 17:08:33 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:35 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:35 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:08:35 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:35 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!].
+2026-09-15 17:08:36 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:41 [TestNG-tests-2] WARN  BaseClass - WebDriver instance is closed for ---------------> : DBVerificationTest
+2026-09-15 17:08:41 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:08:41 [TestNG-tests-3] WARN  BaseClass - WebDriver instance is closed for ---------------> : DBVerificationTest
+2026-09-15 17:08:42 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:47 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' PIM ']
+2026-09-15 17:08:50 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:50 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with placeholder ' Type for hints... ' ' is [alice].
+2026-09-15 17:08:51 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:51 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Search ']
+2026-09-15 17:08:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:52 [TestNG-tests-1] INFO  ActionDriver - Scrolled to element --------> Element with text ' Alice Marie ' using JS
+2026-09-15 17:08:52 [TestNG-tests-1] INFO  DBConnection - Starting DB Connection ...
+2026-09-15 17:08:52 [TestNG-tests-1] INFO  DBConnection - DB Connection Successful ! 
+2026-09-15 17:08:52 [TestNG-tests-1] INFO  DBConnection - Executing query : SELECT emp_firstname, emp_middle_name, emp_lastname FROM hs_hr_employee WHERE employee_id = 3.0
+2026-09-15 17:08:52 [TestNG-tests-1] INFO  DBConnection - Query Executing Successfully !
+2026-09-15 17:08:52 [TestNG-tests-1] INFO  DBConnection - Employees Data Fetch : {firstName=Alice, lastName=Dubois, middleName=Marie}
+2026-09-15 17:08:52 [TestNG-tests-1] INFO  ActionDriver - Actual Text: [Alice Marie] match to -----> Expected Text Value: [Alice Marie]
+2026-09-15 17:08:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:52 [TestNG-tests-1] INFO  ActionDriver - Actual Text: [Dubois] match to -----> Expected Text Value: [Dubois]
+2026-09-15 17:08:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:08:56 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : DBVerificationTest
+2026-09-15 17:09:09 [TestNG-tests-2] WARN  BaseClass - Setting up for ---------------> : DataLoginTest
+2026-09-15 17:09:09 [TestNG-tests-3] WARN  BaseClass - Setting up for ---------------> : DataLoginTest
+2026-09-15 17:09:13 [TestNG-tests-3] WARN  BaseClass - RemoteWebDriver instance created for Grid in headless mode.
+2026-09-15 17:09:17 [TestNG-tests-2] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:09:17 [TestNG-tests-2] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 29
+2026-09-15 17:09:17 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : DataLoginTest
+2026-09-15 17:09:18 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:09:18 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:09:18 [TestNG-tests-3] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:09:18 [TestNG-tests-3] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 30
+2026-09-15 17:09:18 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:09:18 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!!].
+2026-09-15 17:09:18 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:09:18 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:09:18 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:09:19 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:09:19 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!!].
+2026-09-15 17:09:19 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:09:21 [TestNG-tests-2] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:09:22 [TestNG-tests-3] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:09:22 [TestNG-tests-2] INFO  ActionDriver - Actual Text: [Invalid credentials] match to -----> Expected Text Value: [Invalid credentials]
+2026-09-15 17:09:23 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:09:23 [TestNG-tests-3] INFO  ActionDriver - Actual Text: [Invalid credentials] match to -----> Expected Text Value: [Invalid credentials]
+2026-09-15 17:09:25 [TestNG-tests-2] WARN  BaseClass - WebDriver instance is closed for ---------------> : DataLoginTest
+2026-09-15 17:09:25 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:09:25 [TestNG-tests-2] WARN  BaseClass - Setting up for ---------------> : DataLoginTest
+2026-09-15 17:09:27 [TestNG-tests-3] WARN  BaseClass - WebDriver instance is closed for ---------------> : DataLoginTest
+2026-09-15 17:09:28 [TestNG-tests-3] WARN  BaseClass - Setting up for ---------------> : DataLoginTest
+2026-09-15 17:09:37 [TestNG-tests-2] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:09:37 [TestNG-tests-2] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 29
+2026-09-15 17:09:44 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:09:44 [TestNG-tests-3] WARN  BaseClass - RemoteWebDriver instance created for Grid in headless mode.
+2026-09-15 17:09:45 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:09:56 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:09:57 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!].
+2026-09-15 17:09:57 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:10:02 [TestNG-tests-3] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:10:02 [TestNG-tests-3] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 30
+2026-09-15 17:10:08 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:10:08 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:10:10 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:10:11 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!].
+2026-09-15 17:10:12 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:10:12 [TestNG-tests-3] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:10:22 [TestNG-tests-2] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:10:27 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:10:29 [TestNG-tests-3] INFO  ActionDriver - Element  [Element with text ' Admin '] ------> is displayed
+2026-09-15 17:10:30 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:10:31 [TestNG-tests-3] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Chaker Ben Said ']
+2026-09-15 17:10:31 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:10:31 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:10:31 [TestNG-tests-2] INFO  ActionDriver - Element  [Element with text ' Admin '] ------> is displayed
+2026-09-15 17:10:32 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:10:32 [TestNG-tests-2] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Chaker Ben Said ']
+2026-09-15 17:10:33 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:10:39 [TestNG-tests-3] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Logout ']
+2026-09-15 17:10:41 [TestNG-tests-2] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Logout ']
+2026-09-15 17:10:49 [TestNG-tests-2] WARN  BaseClass - WebDriver instance is closed for ---------------> : DataLoginTest
+2026-09-15 17:10:49 [TestNG-tests-3] WARN  BaseClass - WebDriver instance is closed for ---------------> : DataLoginTest
+2026-09-15 17:10:49 [TestNG-tests-3] WARN  BaseClass - Setting up for ---------------> : DummyClass
+2026-09-15 17:10:49 [TestNG-tests-2] WARN  BaseClass - Setting up for ---------------> : DummyClass
+2026-09-15 17:10:59 [TestNG-tests-3] WARN  BaseClass - RemoteWebDriver instance created for Grid in headless mode.
+2026-09-15 17:11:03 [TestNG-tests-3] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:11:03 [TestNG-tests-3] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 30
+2026-09-15 17:11:03 [TestNG-tests-2] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:11:03 [TestNG-tests-2] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 29
+2026-09-15 17:11:09 [TestNG-tests-2] WARN  BaseClass - WebDriver instance is closed for ---------------> : DummyClass
+2026-09-15 17:11:09 [TestNG-tests-2] WARN  BaseClass - Setting up for ---------------> : DummyClass2
+2026-09-15 17:11:10 [TestNG-tests-3] WARN  BaseClass - WebDriver instance is closed for ---------------> : DummyClass
+2026-09-15 17:11:10 [TestNG-tests-3] WARN  BaseClass - Setting up for ---------------> : DummyClass2
+2026-09-15 17:11:14 [TestNG-tests-3] WARN  BaseClass - RemoteWebDriver instance created for Grid in headless mode.
+2026-09-15 17:11:19 [TestNG-tests-3] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:11:19 [TestNG-tests-3] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 30
+2026-09-15 17:11:20 [TestNG-tests-3] WARN  BaseClass - WebDriver instance is closed for ---------------> : DummyClass2
+2026-09-15 17:11:20 [TestNG-tests-3] WARN  BaseClass - Setting up for ---------------> : HomeTest
+2026-09-15 17:11:21 [TestNG-tests-3] WARN  BaseClass - RemoteWebDriver instance created for Grid in headless mode.
+2026-09-15 17:11:26 [TestNG-tests-3] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:11:26 [TestNG-tests-3] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 30
+2026-09-15 17:11:27 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:27 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:11:27 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:28 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!].
+2026-09-15 17:11:28 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:31 [TestNG-tests-3] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:11:31 [TestNG-tests-2] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:11:31 [TestNG-tests-2] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 29
+2026-09-15 17:11:32 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:33 [TestNG-tests-3] INFO  ActionDriver - Element  [By.xpath: //div[@class='oxd-brand-banner']//img] ------> is displayed
+2026-09-15 17:11:33 [TestNG-tests-2] WARN  BaseClass - WebDriver instance is closed for ---------------> : DummyClass2
+2026-09-15 17:11:33 [TestNG-tests-2] WARN  BaseClass - Setting up for ---------------> : HomeTest
+2026-09-15 17:11:34 [TestNG-tests-3] WARN  BaseClass - WebDriver instance is closed for ---------------> : HomeTest
+2026-09-15 17:11:34 [TestNG-tests-3] WARN  BaseClass - Setting up for ---------------> : LoginTest
+2026-09-15 17:11:38 [TestNG-tests-3] WARN  BaseClass - RemoteWebDriver instance created for Grid in headless mode.
+2026-09-15 17:11:40 [TestNG-tests-2] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:11:40 [TestNG-tests-2] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 29
+2026-09-15 17:11:42 [TestNG-tests-3] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:11:42 [TestNG-tests-3] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 30
+2026-09-15 17:11:43 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:43 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:11:43 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:43 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!].
+2026-09-15 17:11:43 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:43 [TestNG-tests-2] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:11:44 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:44 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:11:44 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:44 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!!].
+2026-09-15 17:11:44 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:46 [TestNG-tests-3] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:11:46 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:47 [TestNG-tests-2] INFO  ActionDriver - Element  [By.xpath: //div[@class='oxd-brand-banner']//img] ------> is displayed
+2026-09-15 17:11:47 [TestNG-tests-3] INFO  ActionDriver - Actual Text: [Invalid credentials] match to -----> Expected Text Value: [Invalid credentials]
+2026-09-15 17:11:47 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:48 [TestNG-tests-2] WARN  BaseClass - WebDriver instance is closed for ---------------> : HomeTest
+2026-09-15 17:11:48 [TestNG-tests-2] WARN  BaseClass - Setting up for ---------------> : LoginTest
+2026-09-15 17:11:48 [TestNG-tests-3] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTest
+2026-09-15 17:11:48 [TestNG-tests-3] WARN  BaseClass - Setting up for ---------------> : LoginTest
+2026-09-15 17:11:50 [TestNG-tests-3] WARN  BaseClass - RemoteWebDriver instance created for Grid in headless mode.
+2026-09-15 17:11:54 [TestNG-tests-2] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:11:54 [TestNG-tests-2] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 29
+2026-09-15 17:11:54 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:54 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:11:54 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:54 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!!].
+2026-09-15 17:11:54 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:54 [TestNG-tests-2] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:11:55 [TestNG-tests-3] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:11:55 [TestNG-tests-3] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 30
+2026-09-15 17:11:56 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:56 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:11:56 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:56 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!].
+2026-09-15 17:11:56 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:56 [TestNG-tests-3] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:11:56 [TestNG-tests-2] INFO  ActionDriver - Actual Text: [Invalid credentials] match to -----> Expected Text Value: [Invalid credentials]
+2026-09-15 17:11:57 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:11:57 [TestNG-tests-2] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTest
+2026-09-15 17:11:57 [TestNG-tests-2] WARN  BaseClass - Setting up for ---------------> : LoginTest
+2026-09-15 17:12:00 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:12:00 [TestNG-tests-3] INFO  ActionDriver - Element  [Element with text ' Admin '] ------> is displayed
+2026-09-15 17:12:01 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:12:01 [TestNG-tests-3] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Chaker Ben Said ']
+2026-09-15 17:12:02 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:12:04 [TestNG-tests-2] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:12:04 [TestNG-tests-2] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 29
+2026-09-15 17:12:07 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:12:07 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:12:08 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:12:08 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!].
+2026-09-15 17:12:08 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:12:09 [TestNG-tests-3] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Logout ']
+2026-09-15 17:12:13 [TestNG-tests-2] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:12:14 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:12:14 [TestNG-tests-3] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTest
+2026-09-15 17:12:14 [TestNG-tests-2] INFO  ActionDriver - Element  [Element with text ' Admin '] ------> is displayed
+2026-09-15 17:12:18 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:12:18 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : DummyClass
+2026-09-15 17:12:18 [TestNG-tests-2] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Chaker Ben Said ']
+2026-09-15 17:12:19 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:12:20 [TestNG-tests-2] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Logout ']
+2026-09-15 17:12:24 [TestNG-tests-2] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTest
+2026-09-15 17:12:49 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:12:49 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 28
+2026-09-15 17:12:51 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : DummyClass
+2026-09-15 17:12:51 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : DummyClass2
+2026-09-15 17:13:00 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:13:00 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 28
+2026-09-15 17:13:02 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : DummyClass2
+2026-09-15 17:13:02 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : HomeTest
+2026-09-15 17:13:13 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:13:14 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 28
+2026-09-15 17:13:14 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:13:14 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:13:14 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:13:14 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!].
+2026-09-15 17:13:14 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:13:16 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:13:17 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:13:17 [TestNG-tests-1] INFO  ActionDriver - Element  [By.xpath: //div[@class='oxd-brand-banner']//img] ------> is displayed
+2026-09-15 17:13:18 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : HomeTest
+2026-09-15 17:13:18 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTest
+2026-09-15 17:13:30 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:13:30 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 28
+2026-09-15 17:13:30 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:13:30 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:13:30 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:13:30 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!!].
+2026-09-15 17:13:30 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:13:32 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:13:32 [TestNG-tests-1] INFO  ActionDriver - Actual Text: [Invalid credentials] match to -----> Expected Text Value: [Invalid credentials]
+2026-09-15 17:13:32 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:13:38 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTest
+2026-09-15 17:13:38 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTest
+2026-09-15 17:13:52 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-15 17:13:52 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 28
+2026-09-15 17:13:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:13:52 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' username ' ' is [orangehrm_chaker].
+2026-09-15 17:13:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:13:52 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [AdminOrangeHRM12@!].
+2026-09-15 17:13:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:14:00 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-15 17:14:01 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:14:01 [TestNG-tests-1] INFO  ActionDriver - Element  [Element with text ' Admin '] ------> is displayed
+2026-09-15 17:14:02 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:14:02 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Chaker Ben Said ']
+2026-09-15 17:14:03 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-15 17:14:05 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Logout ']
+2026-09-15 17:14:13 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTest
