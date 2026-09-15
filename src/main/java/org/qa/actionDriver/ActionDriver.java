@@ -38,7 +38,7 @@ public class ActionDriver {
             applyBorder(by, "green");
             // Add extent manager to log a step for the report
             ExtentManager.logStep("Clicked on element  ---> : " + elementDescription);
-            loggr.info("Clicked on element  ---> : {}", elementDescription);
+            loggr.info("Clicked on element  ----------------> : {}", elementDescription);
         } catch (Exception e) {
             applyBorder(by, "red");
             ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to click en this element!", elementDescription + "_unable_to_click");
@@ -54,8 +54,8 @@ public class ActionDriver {
             driver.findElement(by).sendKeys(text);
             applyBorder(by, "green");
             // Add extent manager to log a step for the report
-            ExtentManager.logStep("Value entered on: " + elementDescription + " is " + text);
-            loggr.info("Value entered on {} is  {}", elementDescription, text);
+            ExtentManager.logStep("Value entered on ' " + elementDescription + " ' is ' " + text + " '.");
+            loggr.info("Value entered on ' {} ' is  ' {} '.", elementDescription, text);
         } catch (Exception e) {
             applyBorder(by, "red");
             ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to enter a value on this element!", elementDescription + "_unable_to_enter_value");
@@ -82,12 +82,12 @@ public class ActionDriver {
             waitForElementToBeVisible(by);
             String actualText = driver.findElement(by).getText();
             if (expectedText.equals(actualText)) {
-                loggr.info("Actual Text : {} match to | Expected Value: {}", actualText, expectedText);
+                loggr.info("Actual Text: {} match to ----------> Expected Text Value: {}", actualText, expectedText);
                 ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Compare Text!", "Test Verified successfully: " + expectedText + " equals " + actualText);
                 applyBorder(by, "green");
                 return true;
             } else {
-                loggr.info("ERROR: Actual Text : {} does not match | Expected Value: {}", actualText, expectedText);
+                loggr.info("ERROR: Actual Text : {} does not match to ----------> Expected Text Value: {}", actualText, expectedText);
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Text Comparison fails!", "Test failed: " + expectedText + " not equals " + actualText);
                 applyBorder(by, "red");
                 return false;
@@ -108,11 +108,11 @@ public class ActionDriver {
             if (isDisplayed) {
                 ExtentManager.logStep("Element is displayed: " + elementDescription);
                 ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Element is displayed !", elementDescription + "_is_displayed");
-                loggr.info("Element : {} is displayed", elementDescription);
+                loggr.info("Element ' {} ' ------> is displayed", elementDescription);
                 applyBorder(by, "green");
                 return true;
             } else {
-                loggr.info("Element : {} is not displayed", elementDescription);
+                loggr.info("Element ' {} ' ------> is not displayed", elementDescription);
                 applyBorder(by, "red");
                 return false;
             }
@@ -168,15 +168,15 @@ public class ActionDriver {
 
             // Return the description based on element attribute
             if (isNotEmpty(name)) {
-                return "Element with name: " + name;
+                return "Element with name ' " + name + " '";
             } else if (isNotEmpty(id)) {
-                return "Element with id: " + id;
+                return "Element with id ' " + id + " '";
             } else if (isNotEmpty(text)) {
-                return "Element with text: " + truncate(text, 50);
+                return "Element with text ' " + truncate(text, 50) + " '";
             } else if (isNotEmpty(className)) {
-                return "Element with class: " + className;
+                return "Element with class ' " + className + " '";
             } else if (isNotEmpty(placeHolder)) {
-                return "Element with placeholder: " + placeHolder;
+                return "Element with placeholder ' " + placeHolder + " '";
             }
         } catch (Exception e) {
             loggr.error("Unable to describe the element: {}", e.getMessage());
@@ -265,7 +265,7 @@ public class ActionDriver {
             WebElement element = driver.findElement(by);
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
             applyBorder(by, "green");
-            loggr.info("Scrolled to element using JS : {}", getElementDescription(by));
+            loggr.info("Scrolled to element --------> {} using JS", getElementDescription(by));
         } catch (Exception e) {
             applyBorder(by, "red");
             loggr.error("Element to scroll is not visible: {}", e.getMessage());
@@ -281,7 +281,7 @@ public class ActionDriver {
             // Apply the border
             String script = "arguments[0].style.border = '3px solid " + color + "'";
             ((JavascriptExecutor) driver).executeScript(script, element);
-            loggr.info("Border applied on {} with color {}", eleDis, color);
+            loggr.info("Border applied on ------> {} with color ------> {}", eleDis, color);
         } catch (Exception e) {
             loggr.error("Error when try to apply color in a border: {}", e.getMessage());
         }

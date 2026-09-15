@@ -46,7 +46,7 @@ public class BaseClass {
             FileInputStream file = new FileInputStream("src/main/resources/config.properties");
             prop = new Properties();
             prop.load(file);
-            loggr.info("properties.config File Loaded successfully");
+            loggr.warn("properties.config File Loaded successfully");
         } catch (Exception e) {
             e.fillInStackTrace();
         }
@@ -115,7 +115,7 @@ public class BaseClass {
             // static wait for 3 S
             staticWait(3);
 
-            loggr.info("WebDriver Initialized and Browser Opened and Maximized");
+            loggr.info("WebDriver Initialized correctly and a Browser Opened and Maximized");
             // loggr.trace("This is a trace message");
             // loggr.error("This is an error message");
             // loggr.debug("This is a debug message");
@@ -129,7 +129,7 @@ public class BaseClass {
             }*/
             // Initialize action driver for current thread
             actionDriver.set(new ActionDriver(getDriver()));
-            loggr.info("ActionDriver Initialize form Thread {}", Thread.currentThread().getId());
+            loggr.warn("ActionDriver Initialize form Thread ---------------------> {}", Thread.currentThread().getId());
         } catch (Exception e) {
             e.fillInStackTrace();
         }
@@ -138,7 +138,7 @@ public class BaseClass {
     @BeforeMethod
     public synchronized void setup() {
         // Set Settings up message
-        System.out.println("Settings up for : " + this.getClass().getSimpleName());
+        loggr.warn("Settings up for ---------------> : {} ", this.getClass().getSimpleName());
         // Start the Extent Report:
         // ExtentManager.getReporter();  // This has been implemented in TestListener
         // call load properties method
@@ -156,7 +156,7 @@ public class BaseClass {
                 System.out.println("unable to quit browser : " + e.getMessage());
             }
         }
-        loggr.info("WebDriver instance is closed for :  {}", this.getClass().getSimpleName());
+        loggr.warn("WebDriver instance is closed for ---------------> : {}", this.getClass().getSimpleName());
 
         driver.remove();
         actionDriver.remove();
