@@ -59,7 +59,9 @@ pipeline {
                         <li><b>Build URL:</b> <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></li>
                     </ul>
                     <p><b>Last Commit Details:</b></p>
-                    <blockquote style="background-color: #f9f9f9; padding: 10px; border-left: 4px solid #4CAF50;">${CHANGES}</blockquote>
+                    <blockquote style="background-color: #f9f9f9; padding: 10px; border-left: 4px solid #4CAF50;">
+                                            \${CHANGES}
+                    </blockquote>
                     <p><b>Extent Report:</b> <a href="${env.JOB_URL}Extent_20Spark_20Report/">CLICK HERE</a></p>
                     <p>Best Regards,<br>
                     <b>CHAKER BEN SAID - Automation Team</b></p>
