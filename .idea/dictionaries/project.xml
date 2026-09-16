@@ -2,33 +2,49 @@
   <dictionary name="project">
     <words>
       <w>ACTIVER</w>
+      <w>Appuie</w>
+      <w>Appuyer</w>
+      <w>Augmenté</w>
       <w>Copie</w>
+      <w>Déplacer</w>
       <w>Emballe</w>
       <w>Envoie</w>
       <w>Génère</w>
       <w>Installe</w>
       <w>Pilote</w>
+      <w>actuellement</w>
+      <w>atteindre</w>
       <w>automatique</w>
       <w>classique</w>
       <w>compatibilité</w>
       <w>d'abord</w>
       <w>dans</w>
+      <w>désormais</w>
       <w>détaillés</w>
       <w>enfin</w>
+      <w>envoyer</w>
+      <w>focalisé</w>
       <w>fournisseur</w>
+      <w>infinie</w>
       <w>informations</w>
       <w>jdbc</w>
       <w>l'artefact</w>
+      <w>l'email</w>
       <w>l'état</w>
       <w>lisant</w>
+      <w>localisable</w>
       <w>loggr</w>
       <w>modifiant</w>
       <w>propriétés</w>
       <w>qualid</w>
+      <w>receveur</w>
+      <w>recevoir</w>
       <w>réutilisé</w>
       <w>s'ouvrir</w>
       <w>serveur</w>
+      <w>valider</w>
       <w>verte</w>
+      <w>vient</w>
       <w>échouer</w>
     </words>
   </dictionary>

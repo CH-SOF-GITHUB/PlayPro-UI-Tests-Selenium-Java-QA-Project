@@ -5730,3 +5730,296 @@ Session ID: 555550cb99e4d0700f0774da1e556311
 2026-09-16 12:26:47 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
 2026-09-16 12:26:47 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Actual Text: [Warning: No match for E-Mail Address and/or Password.] match to -----> Expected Text Value: [Warning: No match for E-Mail Address and/or Password.]
 2026-09-16 12:26:49 [TestNG-test-TutorialsNINJA Test 1.0-2] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests
+2026-09-16 17:17:33 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-16 17:17:34 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:17:43 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-16 17:17:52 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:17:52 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 24
+2026-09-16 17:17:53 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:17:53 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:17:53 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:17:53 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:17:54 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:17:54 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' email ' ' is [chakerbensaid1@gmail.com].
+2026-09-16 17:17:54 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:17:54 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r].
+2026-09-16 17:17:54 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:17:56 [TestNG-tests-1] INFO  ActionDriver - Successfully navigated via TAB to [Element with class ' btn btn-primary '] and pressed ENTER
+2026-09-16 17:18:21 [TestNG-tests-1] DEBUG ActionDriver - Unable to apply border color on element [By.xpath: //div[@id='content']/h2] | Error: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='content']/h2"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ca1ea84647abd72fe5ee9cc05bfdb032, findElement {using=xpath, value=//div[@id='content']/h2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64082}, goog:processID: 26580, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64082/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ca1ea84647abd72fe5ee9cc05bfdb032
+2026-09-16 17:18:21 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-16 17:18:21 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:18:23 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-16 17:18:30 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:18:30 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 24
+2026-09-16 17:18:30 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:18:30 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:18:30 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:18:30 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:18:31 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:18:31 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' email ' ' is [chakerbensaid1@gmail.com].
+2026-09-16 17:18:31 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:18:31 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r].
+2026-09-16 17:18:31 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:18:32 [TestNG-tests-1] INFO  ActionDriver - Successfully navigated via TAB to [By.xpath: //input[@value='Login']] and pressed ENTER
+2026-09-16 17:18:57 [TestNG-tests-1] DEBUG ActionDriver - Unable to apply border color on element [By.xpath: //div[@id='content']/h2] | Error: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='content']/h2"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8d4106f8c1a4402f6d851d2243e64be5, findElement {using=xpath, value=//div[@id='content']/h2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63492}, goog:processID: 11780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63492/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d4106f8c1a4402f6d851d2243e64be5
+2026-09-16 17:18:57 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-16 17:18:57 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:18:59 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-16 17:19:06 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:19:06 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 24
+2026-09-16 17:19:06 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:19:06 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:19:06 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:19:07 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:19:07 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:19:07 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' email ' ' is [chakerbensaid1@gmail.com].
+2026-09-16 17:19:07 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:19:07 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r].
+2026-09-16 17:19:07 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:19:08 [TestNG-tests-1] INFO  ActionDriver - Successfully navigated via TAB to [Element with class ' btn btn-primary '] and pressed ENTER
+2026-09-16 17:19:34 [TestNG-tests-1] DEBUG ActionDriver - Unable to apply border color on element [By.xpath: //div[@id='content']/h2] | Error: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='content']/h2"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0952098998ee574a264933a393091fc0, findElement {using=xpath, value=//div[@id='content']/h2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50584}, goog:processID: 10956, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50584/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0952098998ee574a264933a393091fc0
+2026-09-16 17:19:34 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-16 17:21:34 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-16 17:21:35 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:21:38 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-16 17:21:46 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:21:46 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 22
+2026-09-16 17:21:46 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:21:46 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:21:46 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:21:47 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:21:47 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:21:47 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' email ' ' is [chakerbensaid1@gmail.com].
+2026-09-16 17:21:48 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:21:48 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r].
+2026-09-16 17:21:48 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:21:50 [TestNG-tests-1] INFO  ActionDriver - Successfully navigated via TAB to [Element with class ' btn btn-primary '] and pressed ENTER
+2026-09-16 17:23:22 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-16 17:23:23 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:23:26 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-16 17:23:36 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:23:36 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-16 17:23:36 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:23:37 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:23:37 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:23:37 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:23:38 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:23:38 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' email ' ' is [chakerbensaid1@gmail.com].
+2026-09-16 17:23:38 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:23:38 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r].
+2026-09-16 17:23:38 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:23:39 [TestNG-tests-1] INFO  ActionDriver - Successfully navigated via TAB to [Element with class ' btn btn-primary '] and pressed ENTER
+2026-09-16 17:24:04 [TestNG-tests-1] DEBUG ActionDriver - Unable to apply border color on element [By.xpath: //div[@id='content']/h2] | Error: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='content']/h2"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0acb187bf0648e0be4023ec829e1f4db, findElement {value=//div[@id='content']/h2, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59344}, goog:processID: 18024, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59344/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0acb187bf0648e0be4023ec829e1f4db
+2026-09-16 17:24:05 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-16 17:24:05 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:24:07 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-16 17:24:13 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:24:13 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-16 17:24:13 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:24:14 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:24:14 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:24:14 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:24:14 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:24:15 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' email ' ' is [chakerbensaid1@gmail.com].
+2026-09-16 17:24:15 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:24:15 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r].
+2026-09-16 17:24:15 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:24:15 [TestNG-tests-1] INFO  ActionDriver - Successfully navigated via TAB to [By.xpath: //input[@value='Login']] and pressed ENTER
+2026-09-16 17:24:19 [TestNG-tests-1] DEBUG ActionDriver - Unable to apply border color on element [By.xpath: //div[@id='content']/h2] | Error: invalid session id
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ff6164198c93ebe82a18f7d93c11b209, findElement {value=//div[@id='content']/h2, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53347}, goog:processID: 17612, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53347/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ff6164198c93ebe82a18f7d93c11b209
+2026-09-16 17:24:19 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-16 17:24:19 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:29:22 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-16 17:29:22 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:29:27 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-16 17:29:31 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:29:31 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 22
+2026-09-16 17:29:31 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:29:32 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:29:32 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:29:32 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:29:33 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:29:33 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' email ' ' is [chakerbensaid1@gmail.com].
+2026-09-16 17:29:34 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:29:34 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r].
+2026-09-16 17:29:34 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:29:35 [TestNG-tests-1] INFO  ActionDriver - Successfully navigated via TAB to [By.xpath: //input[@value='Login']] and pressed ENTER
+2026-09-16 17:30:01 [TestNG-tests-1] DEBUG ActionDriver - Unable to apply border color on element [By.xpath: //div[@id='content']/h2] | Error: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='content']/h2"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [09c162cc52c1d0c8fc4b609c85086ec4, findElement {using=xpath, value=//div[@id='content']/h2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54417}, goog:processID: 21116, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54417/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 09c162cc52c1d0c8fc4b609c85086ec4
+2026-09-16 17:30:01 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-16 17:30:01 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:30:03 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-16 17:30:10 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:30:10 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 22
+2026-09-16 17:30:10 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:30:10 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:30:11 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:30:11 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:30:12 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:30:12 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' email ' ' is [chakerbensaid1@gmail.com].
+2026-09-16 17:30:12 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:30:12 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r].
+2026-09-16 17:30:12 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:30:19 [TestNG-tests-1] INFO  ActionDriver - Successfully navigated via TAB to [By.xpath: //input[@value='Login']] and pressed ENTER
+2026-09-16 17:30:45 [TestNG-tests-1] DEBUG ActionDriver - Unable to apply border color on element [By.xpath: //div[@id='content']/h2] | Error: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='content']/h2"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9161eba33494259a88fcd479ae8716c0, findElement {using=xpath, value=//div[@id='content']/h2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49428}, goog:processID: 2468, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49428/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9161eba33494259a88fcd479ae8716c0
+2026-09-16 17:30:45 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-16 17:30:45 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:30:47 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-16 17:30:53 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:30:53 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 22
+2026-09-16 17:30:53 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:30:53 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:30:53 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:30:54 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:30:54 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:30:54 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' email ' ' is [chakerbensaid1@gmail.com].
+2026-09-16 17:30:54 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:30:54 [TestNG-tests-1] INFO  ActionDriver - Value entered via Tab Key on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r].
+2026-09-16 17:30:54 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:30:55 [TestNG-tests-1] INFO  ActionDriver - Successfully navigated via TAB to [By.xpath: //input[@value='Login']] and pressed ENTER
+2026-09-16 17:31:22 [TestNG-tests-1] DEBUG ActionDriver - Unable to apply border color on element [By.xpath: //div[@id='content']/h2] | Error: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='content']/h2"}
+  (Session info: chrome=152.0.7977.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3fc7ec21843f90db33541b783809d1e4, findElement {using=xpath, value=//div[@id='content']/h2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 152.0.7977.84, chrome: {chromedriverVersion: 152.0.7977.82 (d04cdb24d67b..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53754}, goog:processID: 22648, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53754/devtoo..., se:cdpVersion: 152.0.7977.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3fc7ec21843f90db33541b783809d1e4
+2026-09-16 17:31:25 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-16 17:37:00 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-16 17:37:00 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:37:04 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-16 17:37:11 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:37:11 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-16 17:37:11 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:37:12 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:37:12 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:37:12 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:37:13 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [red].
+2026-09-16 17:37:14 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-16 17:37:14 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:37:16 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-16 17:37:22 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:37:22 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-16 17:37:22 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:37:22 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:37:22 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:37:23 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:37:23 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [red].
+2026-09-16 17:37:24 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-16 17:37:24 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:37:26 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-16 17:37:32 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:37:32 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-16 17:37:32 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:37:32 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:37:32 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:37:33 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:37:33 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [red].
+2026-09-16 17:37:34 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-16 17:37:46 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-16 17:37:47 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:37:50 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-16 17:37:57 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:37:57 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 22
+2026-09-16 17:37:57 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:37:57 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:37:57 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:37:58 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:37:58 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [red].
+2026-09-16 17:37:59 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-16 17:37:59 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:38:02 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-16 17:38:09 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:38:09 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 22
+2026-09-16 17:38:09 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:38:09 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:38:10 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:38:10 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:38:11 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [red].
+2026-09-16 17:38:12 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-16 17:38:12 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:38:15 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-16 17:38:23 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:38:23 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 22
+2026-09-16 17:38:23 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:38:23 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:38:23 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:38:24 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:38:24 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [red].
+2026-09-16 17:38:25 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-16 17:41:52 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-16 17:41:53 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests2
+2026-09-16 17:42:01 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-16 17:42:05 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-16 17:42:05 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-16 17:42:08 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:42:08 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-16 17:42:08 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:42:10 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-16 17:42:15 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:42:15 [TestNG-tests-1] INFO  ActionDriver - Navigated via TAB to [Element with name ' email '] and entered text successfully
+2026-09-16 17:42:15 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:42:15 [TestNG-tests-1] INFO  ActionDriver - Navigated via TAB to [Element with name ' password '] and entered text successfully
+2026-09-16 17:42:16 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:42:18 [TestNG-tests-1] INFO  ActionDriver - Successfully navigated via TAB to [By.xpath: //input[@value='Login']] and pressed ENTER
+2026-09-16 17:42:18 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:42:18 [TestNG-tests-1] INFO  ActionDriver - Actual Text: [My Account] match to -----> Expected Text Value: [My Account]
+2026-09-16 17:42:18 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:42:19 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Logout ']
+2026-09-16 17:42:20 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-16 17:42:20 [TestNG-tests-1] INFO  ActionDriver - Actual Text: [Account Logout] match to -----> Expected Text Value: [Account Logout]
+2026-09-16 17:42:25 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2

@@ -1,10 +1,8 @@
 package org.qa.actionDriver;
 
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -29,6 +27,82 @@ public class ActionDriver {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(explicitWait));
         loggr.info("WebDriver Instance is created correctly and A Browser Opened and Maximized: {}", this.getClass().getSimpleName());
     }
+
+    // 2 Methods of Tab Keyboard
+    public void navigateWithTabAndPressEnter(By by) {
+        try {
+            WebElement element = waitForElementToBeVisible(by);
+            Actions actions = new Actions(driver);
+
+            int maxAttempts = 15; // Limite de sécurité pour éviter la boucle infinie
+            int attempts = 0;
+
+            // Boucle avec garde-fou
+            while (!driver.switchTo().activeElement().equals(element) && attempts < maxAttempts) {
+                actions.sendKeys(Keys.TAB).perform();
+                attempts++;
+            }
+
+            if (!driver.switchTo().activeElement().equals(element)) {
+                throw new RuntimeException("Target element was not focused after " + maxAttempts + " TAB presses.");
+            }
+
+            // Appliquer la bordure verte sur le bouton cible avant de valider
+            applyBorder(element, "green");
+            ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "TAB to Element", "Focus reached [" + getElementDescription(by, element) + "], pressing ENTER");
+
+            // Appuyer sur Entrée
+            actions.sendKeys(Keys.ENTER).perform();
+            loggr.info("Successfully navigated via TAB to [{}] and pressed ENTER", getElementDescription(by, element));
+
+        } catch (Exception e) {
+            applyBorder(by, "red");
+            String description = getElementDescription(by, null);
+            ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Tab & Enter Failed", "Unable to reach target [" + description + "] via TAB or press ENTER");
+            loggr.error("Error during TAB navigation to element [{}] | Error: {}", description, e.getMessage());
+            Assert.fail("Test failed: Could not navigate via TAB and press ENTER on [" + description + "]", e);
+        }
+    }
+
+    // Method to enter text into input field
+    public void tabToElementAndType(By targetBy, String text) {
+        try {
+            WebElement targetElement = waitForElementToBeVisible(targetBy);
+            Actions actions = new Actions(driver);
+
+            int maxAttempts = 35; // Augmenté à 35 pour traverser le menu
+            int attempts = 0;
+
+            while (!driver.switchTo().activeElement().equals(targetElement) && attempts < maxAttempts) {
+                actions.sendKeys(Keys.TAB).perform();
+                attempts++;
+                try {
+                    Thread.sleep(50);
+                } catch (InterruptedException ignored) {
+                } // Mini-pause pour stabiliser le focus
+            }
+
+            if (!driver.switchTo().activeElement().equals(targetElement)) {
+                throw new RuntimeException("Target element was not focused after " + maxAttempts + " TAB presses.");
+            }
+
+            // Saisie du texte sur l'élément focalisé
+            driver.switchTo().activeElement().sendKeys(text);
+            applyBorder(targetElement, "green");
+
+            String description = getElementDescription(targetBy, targetElement);
+            loggr.info("Navigated via TAB to [{}] and entered text successfully", description);
+            ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "TAB & Type", "Entered text in [" + description + "]");
+
+        } catch (Exception e) {
+            applyBorder(targetBy, "red");
+            String description = getElementDescription(targetBy, null);
+            ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "TAB & Type Failed", "Could not reach or type in [" + description + "]");
+            loggr.error("Error during TAB navigation to [{}] | Error: {}", description, e.getMessage());
+            Assert.fail("Test failed: Could not navigate via TAB and type in [" + description + "]", e);
+        }
+    }
+
 
     // Method to click on element
     public void click(By by) {
@@ -57,15 +131,13 @@ public class ActionDriver {
             element.clear();
             element.sendKeys(text);
             applyBorder(element, "green");
-            String description = getElementDescription(by, element);
 
-            ExtentManager.logStep("Value entered on ' " + description + " ' is ' " + text + " '.");
-            loggr.info("Value entered on ' {} ' is [{}].", description, text);
+            ExtentManager.logStep("Value entered on ' " + getElementDescription(by) + " ' is ' " + text + " '.");
+            loggr.info("Value entered on ' {} ' is [{}].", getElementDescription(by), text);
         } catch (Exception e) {
             applyBorder(by, "red");
-            String description = getElementDescription(by, null);
-            ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to enter a value on this element!", description + "_unable_to_enter_value");
-            loggr.error("Unable to Enter to Element [{}] | Error: {}", description, e.getMessage());
+            ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to enter a value on this element!", getElementDescription(by) + "_unable_to_enter_value");
+            loggr.error("Unable to Enter to Element [{}] | Error: {}", getElementDescription(by), e.getMessage());
         }
     }
 

@@ -90,4 +90,13 @@ public class LoginPage {
     public boolean compareForgetTitlePwd(String ExpectedLink) {
         return actionDriver.compareText(ForgetPwdTitle, ExpectedLink);
     }
+
+    // Method to check Login via TAB
+    public void loginViaTab(String email, String pwd) {
+        actionDriver.click(MyAccountDropDown);
+        actionDriver.click(LoginOption);
+        actionDriver.tabToElementAndType(EmailField, email);
+        actionDriver.tabToElementAndType(PasswordField, pwd);
+        actionDriver.navigateWithTabAndPressEnter(LoginBtn);
+    }
 }
