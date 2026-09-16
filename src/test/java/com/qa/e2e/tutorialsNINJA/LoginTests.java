@@ -13,6 +13,9 @@ public class LoginTests extends BaseClass {
     private LoginPage loginPage;
     private MyAccountPage myAccountPagePage;
 
+    String ExpectedMsg1 = "Warning: No match for E-Mail Address and/or Password.";
+    String ExpectedMsg2 = "Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.";
+
     @BeforeMethod
     public void setupPages() {
         loginPage = new LoginPage(getDriver());
@@ -39,8 +42,10 @@ public class LoginTests extends BaseClass {
         ExtentManager.logStep("TutorialsNINJA - Navigation to login page and enter invalid email and password");
         loginPage.login("chakerbensaid11@gmail.com", "2U8@C7VGxvtx@rr!");
         ExtentManager.logStep("TutorialsNINJA - Login fails and an Error message should display");
+        // Use Ternary Operator in my assertion between two expected messages
+        boolean IsValidErrorMsg = loginPage.verifyErrorMessage(ExpectedMsg1) || loginPage.verifyErrorMessage(ExpectedMsg2);
         Assert.assertTrue(loginPage.errorMsgIsDisplayed(), "ERROR: error login message not display !");
-        Assert.assertTrue(loginPage.verifyErrorMessage("Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour."), "ERROR: error login message does not match the expected value");
+        Assert.assertTrue(IsValidErrorMsg, "ERROR: error login message does not match the expected value");
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
     }
 
@@ -49,8 +54,10 @@ public class LoginTests extends BaseClass {
         ExtentManager.logStep("TutorialsNINJA - Navigation to login page and enter invalid email");
         loginPage.login("chakerbensaid11@gmail.com", "2U8@C7VGxvtx@r");
         ExtentManager.logStep("TutorialsNINJA - Login fails and an Error message should display");
+        // Use Ternary Operator in my assertion between two expected messages
+        boolean IsValidErrorMsg = loginPage.verifyErrorMessage(ExpectedMsg1) || loginPage.verifyErrorMessage(ExpectedMsg2);
         Assert.assertTrue(loginPage.errorMsgIsDisplayed(), "ERROR: error login message not display !");
-        Assert.assertTrue(loginPage.verifyErrorMessage("Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour."), "ERROR: error login message does not match the expected value");
+        Assert.assertTrue(IsValidErrorMsg, "ERROR: error login message does not match the expected value");
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
     }
 
@@ -59,8 +66,10 @@ public class LoginTests extends BaseClass {
         ExtentManager.logStep("TutorialsNINJA - Navigation to login page and enter invalid password");
         loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@rr!");
         ExtentManager.logStep("TutorialsNINJA - Login fails and an Error message should display");
+        // Use Ternary Operator in my assertion between two expected messages
+        boolean IsValidErrorMsg = loginPage.verifyErrorMessage(ExpectedMsg1) || loginPage.verifyErrorMessage(ExpectedMsg2);
         Assert.assertTrue(loginPage.errorMsgIsDisplayed(), "ERROR: error login message not display !");
-        Assert.assertTrue(loginPage.verifyErrorMessage("Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour."), "ERROR: error login message does not match the expected value");
+        Assert.assertTrue(IsValidErrorMsg, "ERROR: error login message does not match the expected value");
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
     }
 
@@ -69,8 +78,10 @@ public class LoginTests extends BaseClass {
         ExtentManager.logStep("TutorialsNINJA - Navigation to login page and don't enter any email or password");
         loginPage.login("", "");
         ExtentManager.logStep("TutorialsNINJA - Login fails and an Error message should display");
+        // Use Ternary Operator in my assertion between two expected messages
+        boolean IsValidErrorMsg = loginPage.verifyErrorMessage(ExpectedMsg1) || loginPage.verifyErrorMessage(ExpectedMsg2);
         Assert.assertTrue(loginPage.errorMsgIsDisplayed(), "ERROR: error login message not display !");
-        Assert.assertTrue(loginPage.verifyErrorMessage("Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour."), "ERROR: error login message does not match the expected value");
+        Assert.assertTrue(IsValidErrorMsg, "ERROR: error login message does not match the expected value");
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
     }
 }
