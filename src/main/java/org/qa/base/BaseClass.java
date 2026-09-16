@@ -128,8 +128,12 @@ public class BaseClass {
                         options.addArguments("--disable-notifications");
                         options.addArguments("--no-sandbox");
                         options.addArguments("--disable-dev-shm-usage");
-                        // ARGUMENTS A AJOUTER POUR FIXER L'ERREUR JENKINS :
-                        // options.addArguments("--remote-debugging-port=9222");
+                        /* ARGUMENTS A AJOUTER POUR FIXER L'ERREUR JENKINS :
+                        options.addArguments("--remote-debugging-port=9222");
+                        En modifiant le compte de connexion du service Jenkins pour utiliser votre session Windows,
+                        le navigateur dispose enfin d'un profil utilisateur valide et des droits requis pour s'ouvrir.
+                        Le correctif élimine le crash de démarrage d'Edge et résout définitivement l'erreur DevToolsActivePort.
+                         */
                     }
                     driver.set(new EdgeDriver(options));
                     ExtentManager.registerDriver(getDriver());
