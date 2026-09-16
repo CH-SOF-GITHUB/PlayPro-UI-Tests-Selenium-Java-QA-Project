@@ -1,0 +1,37 @@
+package com.qa.e2e.tutorialsNINJA;
+
+import org.qa.base.BaseClass;
+import org.qa.pages.TutorialsNINJA.LoginPage;
+import org.qa.pages.TutorialsNINJA.MyAccountPage;
+import org.qa.pages.orangeHRM.HomePage;
+import org.qa.utilities.ExtentManager;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class LoginTests extends BaseClass {
+
+    private LoginPage loginPage;
+    private MyAccountPage myAccountPagePage;
+
+    @BeforeMethod
+    public void setupPages() {
+        loginPage = new LoginPage(getDriver());
+        myAccountPagePage = new MyAccountPage(getDriver());
+    }
+
+    @Test(priority = 1)
+    public void verifySuccessfulLoginWithValidCredentials() {
+        String email = BaseClass.email;
+        String pwd = BaseClass.password;
+        ExtentManager.logStep("TutorialsNINJA - Navigation to login page and enter email and password");
+        loginPage.login(email, pwd);
+        ExtentManager.logStep("TutorialsNINJA - Comparison of success message if is correct or not");
+        Assert.assertTrue(myAccountPagePage.compareMyAccountTitle("My Account"), "ERROR: Success message does not match the expected value");
+        ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
+        loginPage.logout();
+        Assert.assertTrue(loginPage.compareLogoutMsg("Account Logout"), "ERROR: success logout message does not math the expected value");
+        ExtentManager.logStep("TutorialsNINJA - Logout successfully !");
+        staticWait(2);
+    }
+}

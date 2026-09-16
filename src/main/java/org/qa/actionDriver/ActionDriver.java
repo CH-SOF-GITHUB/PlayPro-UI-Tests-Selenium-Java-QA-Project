@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.qa.base.BaseClass;
 import org.qa.utilities.ExtentManager;
+import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -44,6 +45,8 @@ public class ActionDriver {
             String description = getElementDescription(by, null);
             ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to click on this element !", description + "_unable_to_click");
             loggr.error("Element is not clickable [{}] | Error: {}", description, e.getMessage());
+            // AJOUTER CECI pour faire échouer le test TestNG:
+            // Assert.fail("Test échoué : Impossible de cliquer sur l'élément [" + description + "]", e);
         }
     }
 
@@ -84,17 +87,18 @@ public class ActionDriver {
         try {
             WebElement element = waitForElementToBeVisible(by);
             String actualText = element.getText();
-            String description = getElementDescription(by, element);
 
             if (expectedText.equals(actualText)) {
+                // 1. Appliquer d'abord le bordure verte
+                applyBorder(element, "green");
                 loggr.info("Actual Text: [{}] match to -----> Expected Text Value: [{}]", actualText, expectedText);
                 ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Compare Text!", "Test Verified successfully: " + expectedText + " equals " + actualText);
-                applyBorder(element, "green");
                 return true;
             } else {
+                // 1. Appliquer ensuite le bordure rouge
+                applyBorder(element, "red");
                 loggr.info("ERROR: Actual Text : [{}] does not match to -----> Expected Text Value: [{}]", actualText, expectedText);
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Text Comparison fails!", "Test failed: " + expectedText + " not equals " + actualText);
-                applyBorder(element, "red");
                 return false;
             }
         } catch (Exception e) {

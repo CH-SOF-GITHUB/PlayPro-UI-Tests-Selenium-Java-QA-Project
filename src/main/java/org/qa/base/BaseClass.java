@@ -36,6 +36,9 @@ public class BaseClass {
     // Create the objet for log utilities
     public static final Logger loggr = LoggerManager.getLogger(BaseClass.class);
 
+    public static String email;
+    public static String password;
+
     @BeforeSuite
     public void configProp() {
         try {
@@ -51,14 +54,19 @@ public class BaseClass {
 
     public synchronized void configBrowser(String browser) {
         try {
-            // retrieve the specified keys{browser,url} in the properties file
+            // retrieve the specified keys{browser,url} from the properties file
             //String browser = getProp().getProperty("browser", "chrome");
             String url = getProp().getProperty("url");
             // Safer Boolean parsing to avoid ClassCastException
             boolean isHeadless = Boolean.parseBoolean(getProp().getProperty("headless", "false"));
-            // retrieve the specified keys {isGrid,gridUrl} in the properties file
+            // retrieve the specified keys {isGrid,gridUrl} from the properties file
             String gridURL = getProp().getProperty("gridUrl");
             boolean isGRID = Boolean.parseBoolean(getProp().getProperty("isGrid", "false"));
+
+            // retrieve the specified keys [email, password) from the properties file
+            email = getProp().getProperty("email");
+            password = getProp().getProperty("password");
+
             /**/
             if (isGRID) {
                 try {

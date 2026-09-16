@@ -6,7 +6,13 @@
     <listeners>
         <listener class-name="org.qa.listeners.TestListener"/>
     </listeners>
-    <test name="OrangeHRM_Test_1.0_FIREFOX">
+    <test name="TutorialsNINJA_Test_1.0">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.qa.e2e.tutorialsNINJA.LoginTests"/>
+        </classes>
+    </test>
+    <!--<test name="OrangeHRM_Test_1.0_FIREFOX">
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="com.qa.e2e.orangeHRM.DBVerificationTest"/>
@@ -41,7 +47,7 @@
             <class name="com.qa.e2e.orangeHRM.HomeTest"/>
             <class name="com.qa.e2e.orangeHRM.LoginTest"/>
         </classes>
-    </test>
+    </test>-->
 </suite>
 
         <!--<suite name="Test my website">
