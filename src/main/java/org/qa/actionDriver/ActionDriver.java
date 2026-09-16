@@ -94,13 +94,14 @@ public class ActionDriver {
                 loggr.info("Actual Text: [{}] match to -----> Expected Text Value: [{}]", actualText, expectedText);
                 ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Compare Text!", "Test Verified successfully: " + expectedText + " equals " + actualText);
                 return true;
-            } else {
-                // 1. Appliquer ensuite le bordure rouge
-                applyBorder(element, "red");
-                loggr.info("ERROR: Actual Text : [{}] does not match to -----> Expected Text Value: [{}]", actualText, expectedText);
-                ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Text Comparison fails!", "Test failed: " + expectedText + " not equals " + actualText);
-                return false;
             }
+            //else {
+            // 1. Appliquer ensuite le bordure rouge
+            applyBorder(element, "red");
+            loggr.info("ERROR: Actual Text : [{}] does not match to -----> Expected Text Value: [{}]", actualText, expectedText);
+            ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Text Comparison fails!", "Test failed: " + expectedText + " not equals " + actualText);
+            return false;
+            //}
         } catch (Exception e) {
             applyBorder(by, "red");
             loggr.error("Unable to compare This Element [{}] | Error: {}", getElementDescription(by, null), e.getMessage());
