@@ -25,6 +25,10 @@ public class LoginPage {
     private final By LogoutBtn = By.xpath("//a[@class='list-group-item' and text()='Logout']");
     private final By SuccessLogoutMsg = By.xpath("//div[@id='content']//h1");
 
+    // Locate Web Element of 'Forgotten Password'
+    private final By ForgetPwdLink = By.linkText("Forgotten Password");
+    private final By ForgetPwdTitle = By.xpath("//div[@id='content']//h1");
+
     // Add Constructor of class page with Singleton Design Pattern
     public LoginPage(WebDriver driver) {
         this.actionDriver = BaseClass.getActionDriver();
@@ -37,6 +41,11 @@ public class LoginPage {
         actionDriver.enter(EmailField, email);
         actionDriver.enter(PasswordField, password);
         actionDriver.click(LoginBtn);
+    }
+
+    public void openLoginPage() {
+        actionDriver.click(MyAccountDropDown);
+        actionDriver.click(LoginOption);
     }
 
     // Check if an error message displays or not when login fails
@@ -57,5 +66,27 @@ public class LoginPage {
     // Method to compare Logout Message after logout system
     public boolean compareLogoutMsg(String ExpectedLogoutMsg) {
         return actionDriver.compareText(SuccessLogoutMsg, ExpectedLogoutMsg);
+    }
+
+    // Method to check if 'Forgotten Password' Link display and visible
+    public boolean isForgetPwdLinkDisplayed() {
+        return actionDriver.isDisplayed(ForgetPwdLink);
+    }
+
+    public boolean compareForgetLinkPwd(String ExpectedLink) {
+        return actionDriver.compareText(ForgetPwdLink, ExpectedLink);
+    }
+
+    public void openForgetPwdPage() {
+        actionDriver.click(ForgetPwdLink);
+    }
+
+    // Method to check if 'Forgotten Password' Title is displayed and visible
+    public boolean isForgetPwdTitleDisplayed() {
+        return actionDriver.isDisplayed(ForgetPwdTitle);
+    }
+
+    public boolean compareForgetTitlePwd(String ExpectedLink) {
+        return actionDriver.compareText(ForgetPwdTitle, ExpectedLink);
     }
 }

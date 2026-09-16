@@ -84,4 +84,18 @@ public class LoginTests extends BaseClass {
         Assert.assertTrue(IsValidErrorMsg, "ERROR: error login message does not match the expected value");
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
     }
+
+    @Test(priority = 6)
+    public void forgetPwdTest() {
+        ExtentManager.logStep("TutorialsNINJA - Navigation to login page");
+        loginPage.openLoginPage();
+        ExtentManager.logStep("TutorialsNINJA - 'Forgotten Password' Link should be display and visible");
+        Assert.assertTrue(loginPage.isForgetPwdLinkDisplayed(), "ERROR: 'Forgotten Password' Link not display !");
+        Assert.assertTrue(loginPage.compareForgetLinkPwd("Forgotten Password"), "ERROR: 'Forgotten Password' Link Text does not match the expected value !");
+        ExtentManager.logStep("TutorialsNINJA - Navigation and Verification of Forgotten Password Page");
+        loginPage.openForgetPwdPage();
+        Assert.assertTrue(loginPage.isForgetPwdTitleDisplayed(), "ERROR: 'Forgotten Password' Title Page not display !");
+        Assert.assertTrue(loginPage.compareForgetTitlePwd("Forgot Your Password?"), "ERROR: 'Forgotten Password' Title Page does not match the expected value !");
+        ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
+    }
 }
