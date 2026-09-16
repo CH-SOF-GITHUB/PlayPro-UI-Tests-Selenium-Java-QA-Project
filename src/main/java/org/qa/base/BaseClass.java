@@ -129,7 +129,7 @@ public class BaseClass {
                         options.addArguments("--no-sandbox");
                         options.addArguments("--disable-dev-shm-usage");
                         // ARGUMENTS A AJOUTER POUR FIXER L'ERREUR JENKINS :
-                        options.addArguments("--remote-debugging-port=9222");
+                        // options.addArguments("--remote-debugging-port=9222");
                     }
                     driver.set(new EdgeDriver(options));
                     ExtentManager.registerDriver(getDriver());
