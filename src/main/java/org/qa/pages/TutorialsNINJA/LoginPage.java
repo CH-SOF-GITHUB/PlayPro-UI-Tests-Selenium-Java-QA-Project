@@ -50,7 +50,8 @@ public class LoginPage {
 
     // Check if an error message displays or not when login fails
     public boolean verifyErrorMessage(String ExpectedErrorMsg) {
-        return actionDriver.compareText(ErrorMsg, ExpectedErrorMsg);
+        String ActualText = actionDriver.getText(ErrorMsg);
+        return ActualText.equalsIgnoreCase(ExpectedErrorMsg);
     }
 
     // Method to check if Error Message is displayed or not
