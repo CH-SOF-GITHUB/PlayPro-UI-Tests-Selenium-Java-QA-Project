@@ -40,7 +40,7 @@ public class LoginTests extends BaseClass {
         loginPage.login("chakerbensaid11@gmail.com", "2U8@C7VGxvtx@rr!");
         ExtentManager.logStep("TutorialsNINJA - Login fails and an Error message should display");
         Assert.assertTrue(loginPage.errorMsgIsDisplayed(), "ERROR: error login message not display !");
-        Assert.assertTrue(loginPage.verifyErrorMessage("Warning: No match for E-Mail Address and/or Password."), "ERROR: error login message does not match the expected value");
+        Assert.assertTrue(loginPage.verifyErrorMessage("Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour."), "ERROR: error login message does not match the expected value");
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
     }
 
@@ -50,7 +50,7 @@ public class LoginTests extends BaseClass {
         loginPage.login("chakerbensaid11@gmail.com", "2U8@C7VGxvtx@r");
         ExtentManager.logStep("TutorialsNINJA - Login fails and an Error message should display");
         Assert.assertTrue(loginPage.errorMsgIsDisplayed(), "ERROR: error login message not display !");
-        Assert.assertTrue(loginPage.verifyErrorMessage("Warning: No match for E-Mail Address and/or Password."), "ERROR: error login message does not match the expected value");
+        Assert.assertTrue(loginPage.verifyErrorMessage("Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour."), "ERROR: error login message does not match the expected value");
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
     }
 
@@ -60,7 +60,7 @@ public class LoginTests extends BaseClass {
         loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@rr!");
         ExtentManager.logStep("TutorialsNINJA - Login fails and an Error message should display");
         Assert.assertTrue(loginPage.errorMsgIsDisplayed(), "ERROR: error login message not display !");
-        Assert.assertTrue(loginPage.verifyErrorMessage("Warning: No match for E-Mail Address and/or Password."), "ERROR: error login message does not match the expected value");
+        Assert.assertTrue(loginPage.verifyErrorMessage("Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour."), "ERROR: error login message does not match the expected value");
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
     }
 
@@ -70,7 +70,7 @@ public class LoginTests extends BaseClass {
         loginPage.login("", "");
         ExtentManager.logStep("TutorialsNINJA - Login fails and an Error message should display");
         Assert.assertTrue(loginPage.errorMsgIsDisplayed(), "ERROR: error login message not display !");
-        Assert.assertTrue(loginPage.verifyErrorMessage("Warning: No match for E-Mail Address and/or Password."), "ERROR: error login message does not match the expected value");
+        Assert.assertTrue(loginPage.verifyErrorMessage("Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour."), "ERROR: error login message does not match the expected value");
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
     }
 }
