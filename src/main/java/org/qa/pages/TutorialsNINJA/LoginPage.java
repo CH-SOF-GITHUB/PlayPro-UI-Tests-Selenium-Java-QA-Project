@@ -19,13 +19,13 @@ public class LoginPage {
     private final By LoginBtn = By.xpath("//input[@value='Login']");
 
     // Locate Web Element of Error Message
-    private final By ErrorMsg = By.xpath("//div[@class='alert alert-danger']");
+    private final By ErrorMsg = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
 
     // Locate Web Element of Logout
     private final By LogoutBtn = By.xpath("//a[@class='list-group-item' and text()='Logout']");
     private final By SuccessLogoutMsg = By.xpath("//div[@id='content']//h1");
 
-    // Add Constructor of class page with Singleton Design Patter
+    // Add Constructor of class page with Singleton Design Pattern
     public LoginPage(WebDriver driver) {
         this.actionDriver = BaseClass.getActionDriver();
     }
@@ -44,13 +44,18 @@ public class LoginPage {
         return actionDriver.compareText(ErrorMsg, ExpectedErrorMsg);
     }
 
+    // Method to check if Error Message is displayed or not
+    public boolean errorMsgIsDisplayed() {
+        return actionDriver.isDisplayed(ErrorMsg);
+    }
+
     // Method to logout from the system
     public void logout() {
         actionDriver.click(LogoutBtn);
     }
 
     // Method to compare Logout Message after logout system
-    public boolean compareLogoutMsg(String ExpectedLogoutMsg){
+    public boolean compareLogoutMsg(String ExpectedLogoutMsg) {
         return actionDriver.compareText(SuccessLogoutMsg, ExpectedLogoutMsg);
     }
 }

@@ -34,4 +34,16 @@ public class LoginTests extends BaseClass {
         ExtentManager.logStep("TutorialsNINJA - Logout successfully !");
         staticWait(2);
     }
+
+
+    @Test(priority = 2)
+    public void shouldShowErrorMsgWithInvalidCredentials() {
+        String pwd = BaseClass.password;
+        ExtentManager.logStep("TutorialsNINJA - Navigation to login page and enter email and password");
+        loginPage.login("chakerbensaid11@gmail.com", pwd);
+        ExtentManager.logStep("TutorialsNINJA - Login fails and an Error message should display");
+        Assert.assertTrue(loginPage.errorMsgIsDisplayed(), "ERROR: error login message not display !");
+        Assert.assertTrue(loginPage.verifyErrorMessage("Warning: No match for E-Mail Address and/or Password."), "ERROR: error login message does not match the expected value");
+        ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
+    }
 }
