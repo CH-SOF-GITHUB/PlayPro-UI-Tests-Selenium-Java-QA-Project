@@ -64,7 +64,7 @@ public class BaseClass {
         }
     }
 
-    public synchronized void configBrowser(String browser) {
+    public synchronized void configBrowser(String browser, Method m) {
         try {
             // retrieve the specified keys{browser,url} from the properties file
             //String browser = getProp().getProperty("browser", "chrome");
@@ -107,7 +107,7 @@ public class BaseClass {
                     // ✅ Use LambdaTest W3C-compliant structure (LT:Options)
                     MutableCapabilities ltOptions = new MutableCapabilities();
                     ltOptions.setCapability("build", "LT_PlayPro_UI_Tests_Selenium_Java_TestNG");
-                    ltOptions.setCapability("name", Method.class.getName() + " - " + this.getClass().getName());
+                    ltOptions.setCapability("name", m.getName() + " - " + this.getClass().getName());
                     ltOptions.setCapability("platformName", "Windows 11");
                     ltOptions.setCapability("plugin", "maven");
                     ltOptions.setCapability("network", true);
@@ -221,7 +221,7 @@ public class BaseClass {
 
     @BeforeMethod
     @Parameters({"browser"})
-    public void setup(String browser) {
+    public void setup(String browser, Method m) {
         loggr.warn("Setting up for ---------------> : {}", this.getClass().getSimpleName());
         // Start the Extent Report:
         // ExtentManager.getReporter();  // This has been implemented in TestListener
@@ -230,7 +230,7 @@ public class BaseClass {
             configProp();
         }
         // call the method to open the browser
-        configBrowser(browser);
+        configBrowser(browser, m);
     }
 
     @AfterMethod
