@@ -99,4 +99,15 @@ public class LoginPage {
         actionDriver.tabToElementAndType(PasswordField, pwd);
         actionDriver.navigateWithTabAndPressEnter(LoginBtn);
     }
+
+    // Method to return the placeholder for any field input
+    public boolean isEEmailHavePlaceholder(String ExpectedValue) {
+        return actionDriver.compareByAttribute(EmailField, "placeholder", ExpectedValue);
+    }
+
+    public boolean isPwdHavePlaceholder(String ExpectedValue) {
+        return actionDriver.compareByAttribute(PasswordField, "placeholder", ExpectedValue);
+    }
+
+
 }

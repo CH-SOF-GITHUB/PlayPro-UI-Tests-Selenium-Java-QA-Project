@@ -31,4 +31,18 @@ public class LoginTests2 extends BaseClass {
         staticWait(2);
     }
 
+    @Test(priority = 2)
+    public void verifyEmailAndPwdPlaceholder() {
+        ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page");
+        loginPage.openLoginPage();
+        ExtentManager.logStep("TutorialsNINJA - Check Email field has the place holder text");
+        String ExpectedEmailPlaceholder = "E-Mail Address";
+        Assert.assertTrue(loginPage.isEEmailHavePlaceholder(ExpectedEmailPlaceholder), "Email Field does not have the place holder Text");
+        ExtentManager.logStep("TutorialsNINJA - Check Password field has the place holder text");
+        String ExpectedPwdPlaceholder = "Password";
+        Assert.assertTrue(loginPage.isPwdHavePlaceholder(ExpectedPwdPlaceholder), "Password Field does not have the place holder Text");
+        ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
+        staticWait(2);
+    }
+
 }
