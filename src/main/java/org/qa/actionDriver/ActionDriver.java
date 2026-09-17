@@ -48,7 +48,7 @@ public class ActionDriver {
             }
 
             // Appliquer la bordure verte sur le bouton cible avant de valider
-            applyBorder(element, "green");
+            applyBorder(by, "green");
             ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "TAB to Element", "Focus reached [" + getElementDescription(by, element) + "], pressing ENTER");
 
             // Appuyer sur Entrée
@@ -88,7 +88,7 @@ public class ActionDriver {
 
             // Saisie du texte sur l'élément focalisé
             driver.switchTo().activeElement().sendKeys(text);
-            applyBorder(targetElement, "green");
+            applyBorder(targetBy, "green");
 
             String description = getElementDescription(targetBy, targetElement);
             loggr.info("Navigated via TAB to [{}] and entered text successfully", description);
@@ -109,7 +109,7 @@ public class ActionDriver {
         try {
             WebElement element = waitForElementToBeClickable(by);
             String description = getElementDescription(by, element);
-            applyBorder(element, "green");
+            applyBorder(by, "green");
             element.click();
 
             ExtentManager.logStep("Clicked on element  ---> : " + description);
@@ -130,7 +130,7 @@ public class ActionDriver {
             WebElement element = waitForElementToBeVisible(by);
             element.clear();
             element.sendKeys(text);
-            applyBorder(element, "green");
+            applyBorder(by, "green");
 
             ExtentManager.logStep("Value entered on ' " + getElementDescription(by) + " ' is ' " + text + " '.");
             loggr.info("Value entered on ' {} ' is [{}].", getElementDescription(by), text);
@@ -149,15 +149,17 @@ public class ActionDriver {
 
             if (expectedValue.equals(actualValue)) {
                 // 1. Appliquer d'abord le bordure verte
-                applyBorder(element, "green");
+                applyBorder(by, "green");
                 loggr.info("Actual Attribute [{}] value [{}] match to -----> Expected Attribute Value: [{}]", attribute, actualValue, expectedValue);
                 ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Compare Text!", "Test Verified successfully: " + expectedValue + " equals " + actualValue);
+                resetBorder(element);
                 return true;
             } else {
                 // 1. Appliquer ensuite le bordure rouge
-                applyBorder(element, "red");
+                applyBorder(by, "red");
                 loggr.info("ERROR: Actual Attribute [{}] value [{}] does not match to -----> Expected Attribute Value: [{}]", attribute, actualValue, expectedValue);
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Text Comparison fails!", "Test failed: " + expectedValue + " not equals " + actualValue);
+                resetBorder(element);
                 return false;
             }
         } catch (Exception e) {
@@ -171,7 +173,7 @@ public class ActionDriver {
     public String getText(By by) {
         try {
             WebElement element = waitForElementToBeVisible(by);
-            applyBorder(element, "green");
+            applyBorder(by, "green");
             return element.getText();
         } catch (Exception e) {
             applyBorder(by, "red");
@@ -188,13 +190,13 @@ public class ActionDriver {
 
             if (expectedText.equals(actualText)) {
                 // 1. Appliquer d'abord le bordure verte
-                applyBorder(element, "green");
+                applyBorder(by, "green");
                 loggr.info("Actual Text: [{}] match to -----> Expected Text Value: [{}]", actualText, expectedText);
                 ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Compare Text!", "Test Verified successfully: " + expectedText + " equals " + actualText);
                 return true;
             } else {
                 // 1. Appliquer ensuite le bordure rouge
-                applyBorder(element, "red");
+                applyBorder(by, "red");
                 loggr.info("ERROR: Actual Text : [{}] does not match to -----> Expected Text Value: [{}]", actualText, expectedText);
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Text Comparison fails!", "Test failed: " + expectedText + " not equals " + actualText);
                 return false;
@@ -214,13 +216,13 @@ public class ActionDriver {
             String description = getElementDescription(by, element);
 
             if (isDisplayed) {
-                applyBorder(element, "green");
+                applyBorder(by, "green");
                 ExtentManager.logStep("Element is displayed: " + description);
                 ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Element is displayed !", description + "_is_displayed");
                 loggr.info("Element  [{}] ------> is displayed", description);
                 return true;
             } else {
-                applyBorder(element, "red");
+                applyBorder(by, "red");
                 loggr.info("Element  [{}] ------> is not displayed", description);
                 return false;
             }
@@ -300,7 +302,7 @@ public class ActionDriver {
         try {
             WebElement element = waitForElementToBeVisible(by);
             new Select(element).selectByVisibleText(textOption);
-            applyBorder(element, "green");
+            applyBorder(by, "green");
             loggr.info("Selected dropdown text value : {}", textOption);
         } catch (Exception e) {
             applyBorder(by, "red");
@@ -312,7 +314,7 @@ public class ActionDriver {
         try {
             WebElement element = waitForElementToBeVisible(by);
             new Select(element).selectByValue(valueOption);
-            applyBorder(element, "green");
+            applyBorder(by, "green");
             loggr.info("Selected dropdown value : {}", valueOption);
         } catch (Exception e) {
             applyBorder(by, "red");
@@ -324,7 +326,7 @@ public class ActionDriver {
         try {
             WebElement element = waitForElementToBeVisible(by);
             new Select(element).selectByIndex(index);
-            applyBorder(element, "green");
+            applyBorder(by, "green");
             loggr.info("Selected dropdown value by index : {}", index);
         } catch (Exception e) {
             applyBorder(by, "red");
@@ -340,7 +342,7 @@ public class ActionDriver {
             for (WebElement option : select.getOptions()) {
                 options.add(option.getText());
             }
-            applyBorder(dropDownElement, "green");
+            applyBorder(by, "green");
             loggr.info("Retrieved options from dropdown : {}", options);
             return options;
         } catch (Exception e) {
@@ -351,12 +353,11 @@ public class ActionDriver {
     }
 
     // ========================= JS Methods ================================
-
     public void scrollToElement(By by) {
         try {
             WebElement element = waitForElementToBeVisible(by);
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-            applyBorder(element, "green");
+            applyBorder(by, "green");
             loggr.info("Scrolled to element --------> {} using JS", getElementDescription(by, element));
         } catch (Exception e) {
             applyBorder(by, "red");
@@ -364,31 +365,34 @@ public class ActionDriver {
         }
     }
 
-    public void applyBorder(WebElement element, String color) {
+    public void applyBorder(By by, String color) {
+        WebElement element = driver.findElement(by);
         try {
-            if (element != null) {
-                String script = "arguments[0].style.border = '3px solid " + color + "'";
-                ((JavascriptExecutor) driver).executeScript(script, element);
-                loggr.info("Border applied on element with color ------> [{}].", color);
-            }
+            String script = "arguments[0].style.border = '3px solid " + color + "'";
+            ((JavascriptExecutor) driver).executeScript(script, element);
+            loggr.info("Border applied on element with color ------> [{}].", color);
         } catch (Exception e) {
             loggr.debug("Unable to apply border color on web element | Error: {}", e.getMessage());
         }
     }
 
-    public void applyBorder(By by, String color) {
+    public void resetBorder(WebElement element) {
         try {
-            WebElement element = driver.findElement(by);
-            applyBorder(element, color);
+            if (element != null) {
+                String script = "arguments[0].style.border = ''";
+                ((JavascriptExecutor) driver).executeScript(script, element);
+                loggr.info("Border reset on element !");
+            }
+
         } catch (Exception e) {
-            loggr.debug("Unable to apply border color on element [{}] | Error: {}", getElementDescription(by, null), e.getMessage());
+            loggr.debug("Unable to reset border color on web element | Error: {}", e.getMessage());
         }
     }
 
     public void clickUsingJS(By by) {
         try {
             WebElement element = waitForElementToBeVisible(by);
-            applyBorder(element, "green");
+            applyBorder(by, "green");
             String description = getElementDescription(by, element);
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
             loggr.info("Clicked on element using JS : {}", description);
