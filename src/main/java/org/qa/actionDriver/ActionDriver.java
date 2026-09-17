@@ -145,7 +145,7 @@ public class ActionDriver {
     public boolean compareByAttribute(By by, String attribute, String expectedValue) {
         try {
             WebElement element = waitForElementToBeVisible(by);
-            String actualValue = element.getText();
+            String actualValue = element.getAttribute(attribute);
 
             if (expectedValue.equals(actualValue)) {
                 // 1. Appliquer d'abord le bordure verte
