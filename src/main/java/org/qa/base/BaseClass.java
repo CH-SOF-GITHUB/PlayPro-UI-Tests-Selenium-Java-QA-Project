@@ -237,14 +237,24 @@ public class BaseClass {
     public void tearDown(ITestResult result) {
         if (driver.get() != null) {
             try {
-                boolean isSuccess = result.getStatus() == ITestResult.SUCCESS;
-                String remark = isSuccess ? "Test Passed Successfully" : "Test failed: " + result.getThrowable().getMessage();
+                // Déterminer le status du LambdaTest
+                String status;
+                if (result.getStatus() == ITestResult.SUCCESS) {
+                    status = "passed";
+                } else if (result.getStatus() == ITestResult.FAILURE) {
+                    status = "failed";
+                } else if (result.getStatus() == ITestResult.SKIP) {
+                    status = "skipped";
+                } else {
+                    throw new IllegalArgumentException("ERROR: Status not generated From result");
+                }
+                String remark = (result.getStatus() == ITestResult.SUCCESS) ? "Test Passed Successfully" : (result.getStatus() == ITestResult.SKIP) ? "Test Skipped" : "Test failed: " + result.getThrowable().getMessage();
                 addLambdaStepContext(driver.get(), "Closing Session");
-                markTestStatusViaJS(driver.get(), isSuccess, remark);
-                driver.get().quit();
+                markTestStatusViaJS(driver.get(), status, remark);
             } catch (Exception e) {
                 loggr.error("Unable to quit browser", e);
             } finally {
+                driver.get().quit();
                 driver.remove();
                 actionDriver.remove();
                 softAsserts.remove();

@@ -36,10 +36,10 @@ public class LTStatus {
      * Marque le test sur LambdaTest via JavascriptExecutor (exécuté dans la session browser).
      * Usage: appeler après l'exécution du test (avant driver.quit()).
      */
-    public static void markTestStatusViaJS(WebDriver driver, boolean passed, String remark) {
+    public static void markTestStatusViaJS(WebDriver driver, String status, String remark) {
         if (driver == null) return;
         try {
-            String status = passed ? "passed" : "failed";
+            /* String status = passed ? "passed" : "failed"; */
             String jsCommand = String.format("lambda-status=%s", status);
             // Certaines intégrations acceptent aussi un message via console log
             ((JavascriptExecutor) driver).executeScript(jsCommand);
@@ -48,7 +48,7 @@ public class LTStatus {
             }
         } catch (Exception e) {
             // ne pas casser le flow de test si le marquage échoue
-            System.err.println("Impossible de marquer le test via JS: " + e.getMessage());
+            System.err.println("Impossible de marquer le test via JS With Status: " + e.getMessage());
         }
     }
 }

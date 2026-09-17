@@ -466,7 +466,7 @@ public class ActionDriver {
     public void refreshPage() {
         try {
             driver.navigate().refresh();
-            loggr.info("Loading a page in Browser !");
+            loggr.info("Loading of page in the browser !");
         } catch (Exception e) {
             loggr.info("Unable to load a browser : {}", e.getMessage());
         }

@@ -44,20 +44,4 @@ public class LoginTests2 extends BaseClass {
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
         staticWait(2);
     }
-
-
-    @Test(priority = 3, description = "Check Login system when browser back")
-    public void verifySystemLoginAfterBrowserBack() {
-        ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and login with email and password");
-        loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r");
-        ExtentManager.logStep("TutorialsNINJA - Browsing back in page");
-        loginPage.backBrowser();
-        ExtentManager.logStep("TutorialsNINJA - Verification that should not logout");
-        String ExpectedLoginURL = "https://tutorialsninja.com/demo/index.php?route=account/login";
-        String ActualCurrentURL = loginPage.returnCurrentURL();
-        boolean isLoginURL = ActualCurrentURL.equals(ExpectedLoginURL);
-        Assert.assertFalse(isLoginURL, "ERROR: Current URL match the expected Login URL");
-        ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
-    }
-
 }

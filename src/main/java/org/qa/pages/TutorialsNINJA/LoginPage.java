@@ -125,4 +125,9 @@ public class LoginPage {
     public String returnCurrentURL() {
         return actionDriver.getCurrentURL();
     }
+
+    // Method to Load the Current Page
+    public void refreshCurrentPage(){
+        actionDriver.refreshPage();
+    }
 }
