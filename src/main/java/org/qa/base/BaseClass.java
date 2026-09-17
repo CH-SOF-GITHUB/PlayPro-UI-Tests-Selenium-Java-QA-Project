@@ -35,9 +35,10 @@ public class BaseClass {
     private static final ThreadLocal<SoftAssert> softAsserts = ThreadLocal.withInitial(SoftAssert::new);
     // Create the objet for log utilities
     public static final Logger loggr = LoggerManager.getLogger(BaseClass.class);
-
-    public static String email;
-    public static String password;
+    // Directs the native Java Util Logger to ignore anything lower than SEVERE errors for Selenium
+    static {
+        java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(java.util.logging.Level.SEVERE);
+    }
 
     @BeforeSuite
     public void configProp() {
@@ -62,10 +63,6 @@ public class BaseClass {
             // retrieve the specified keys {isGrid,gridUrl} from the properties file
             String gridURL = getProp().getProperty("gridUrl");
             boolean isGRID = Boolean.parseBoolean(getProp().getProperty("isGrid", "false"));
-
-            // retrieve the specified keys [email, password) from the properties file
-            email = getProp().getProperty("email");
-            password = getProp().getProperty("password");
 
             /**/
             if (isGRID) {

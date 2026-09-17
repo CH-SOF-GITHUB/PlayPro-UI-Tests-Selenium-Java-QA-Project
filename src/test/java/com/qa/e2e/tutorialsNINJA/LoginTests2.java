@@ -49,7 +49,7 @@ public class LoginTests2 extends BaseClass {
     @Test(priority = 3, description = "Check Login system when browser back")
     public void verifySystemLoginAfterBrowserBack() {
         ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and login with email and password");
-        loginPage.login("chakerbensaid11@gmail.com", "2U8@C7VGxvtx@rr!");
+        loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r");
         ExtentManager.logStep("TutorialsNINJA - Browsing back in page");
         loginPage.backBrowser();
         ExtentManager.logStep("TutorialsNINJA - Verification that should not logout");

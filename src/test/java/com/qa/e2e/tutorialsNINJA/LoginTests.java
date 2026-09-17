@@ -24,10 +24,8 @@ public class LoginTests extends BaseClass {
 
     @Test(priority = 1)
     public void verifySuccessfulLoginWithValidCredentials() {
-        String email = BaseClass.email;
-        String pwd = BaseClass.password;
         ExtentManager.logStep("TutorialsNINJA - Navigation to login page and enter email and password");
-        loginPage.login(email, pwd);
+        loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r");
         ExtentManager.logStep("TutorialsNINJA - Comparison of success message if is correct or not");
         Assert.assertTrue(myAccountPagePage.compareMyAccountTitle("My Account"), "ERROR: Success message does not match the expected value");
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
