@@ -40,9 +40,6 @@
             <appenderref ref="ErrorFileLogger"/>
         </logger>
 
-        <!-- Forces Selenium to only log actual errors, skipping the CDP warning -->
-        <logger name="org.openqa.selenium" level="ERROR"/>
-
         <!-- Fallback catch-all root logger configuration -->
         <root level="info">
             <appenderref ref="Console"/>

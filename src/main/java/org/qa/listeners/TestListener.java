@@ -11,7 +11,8 @@ import org.testng.annotations.ITestAnnotation;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
-import java.util.Locale;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Classe d'écouteur de tests TestNG.
@@ -28,6 +29,8 @@ public class TestListener implements ITestListener, IAnnotationTransformer {
     // Triggered when a suite starts
     @Override
     public void onStart(ITestContext context) {
+        // Masque les logs d'avertissement de Selenium DevTools
+        Logger.getLogger("org.seleniumhq.selenium.devtools").setLevel(Level.SEVERE);
         System.out.println("Test suite started: " + context.getName());
         ExtentManager.getReporter(); // Initialize the ExtentReports
     }
