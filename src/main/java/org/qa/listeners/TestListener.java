@@ -54,6 +54,11 @@ public class TestListener implements ITestListener, IAnnotationTransformer {
         String testName = result.getMethod().getMethodName();
         // Send success results in Extent Reports
         if (!result.getTestClass().getName().toLowerCase().contains("api")) {
+            /* AJOUT:
+             *  Reapply the borders on all valid elements during the test
+             * */
+            ExtentManager.applyFinalBorders(BaseClass.getDriver());
+            // After that during the final state
             ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Test Passed", "Test End: " + testName + " - ✔️ Test Passed");
         } else {
             ExtentManager.logStepForApi("Test API End: " + testName + " - ✔️ Test Passed");

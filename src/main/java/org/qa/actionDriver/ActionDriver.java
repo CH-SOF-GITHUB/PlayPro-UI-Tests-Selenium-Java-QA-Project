@@ -148,10 +148,15 @@ public class ActionDriver {
             String actualValue = element.getAttribute(attribute);
 
             if (expectedValue.equals(actualValue)) {
+                // AJOUT:
+                // Mémoriser cet élèment pour la capture finale.
+                ExtentManager.addHighlightedElement(by);
                 // 1. Appliquer d'abord le bordure verte
                 applyBorder(by, "green");
                 loggr.info("Actual Attribute [{}] value [{}] match to -----> Expected Attribute Value: [{}]", attribute, actualValue, expectedValue);
                 ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Compare Text!", "Test Verified successfully: " + expectedValue + " equals " + actualValue);
+                // IMPORTANT:
+                // On supprime la bordure après le screenshot intermédiaire.
                 resetBorder(element);
                 return true;
             } else {
@@ -159,6 +164,8 @@ public class ActionDriver {
                 applyBorder(by, "red");
                 loggr.info("ERROR: Actual Attribute [{}] value [{}] does not match to -----> Expected Attribute Value: [{}]", attribute, actualValue, expectedValue);
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Text Comparison fails!", "Test failed: " + expectedValue + " not equals " + actualValue);
+                // IMPORTANT:
+                // On supprime la bordure après le screenshot intermédiaire.
                 resetBorder(element);
                 return false;
             }

@@ -6,9 +6,14 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import lombok.Getter;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static org.qa.utilities.ScreenshotUtil.takeScreenshot;
@@ -26,6 +31,12 @@ public class ExtentManager {
     }
 
     private static Map<Long, WebDriver> driverMap = new HashMap<>();
+
+    /* Ajout
+     * Stocke les éléments validés qui devront entourés
+     * dans la capture finale du test.
+     * */
+    private static final ThreadLocal<List<By>> highlightedElements = ThreadLocal.withInitial(ArrayList::new);
 
     // Initialize extent report
     public synchronized static ExtentReports getReporter() {
@@ -49,6 +60,9 @@ public class ExtentManager {
     // Start the test
     public synchronized static ExtentTest startTest(String testName) {
         ExtentManager.testName = testName;
+        // Ajout
+        // clean up elements of previous test
+        clearHighlightedElements();
         ExtentTest extentTest = getReporter().createTest(testName);
         test.set(extentTest);
         return extentTest;
@@ -112,6 +126,37 @@ public class ExtentManager {
             getTest().fail("Failed to attach screenshot: " + e.getMessage());
             e.fillInStackTrace();
         }
+    }
+
+    /* Add an element to list highlightedElements */
+    public static void addHighlightedElement(By by) {
+        if (by != null && !highlightedElements.get().contains(by)) {
+            highlightedElements.get().add(by);
+        }
+    }
+
+    /* Add a Method to re-apply the borders before the final screenshot */
+    public static void applyFinalBorders(WebDriver driver) {
+        if (driver == null) {
+            return;
+        }
+        for (By by : highlightedElements.get()) {
+            try {
+                WebElement element = driver.findElement(by);
+                String script = "arguments[0].style.border = '3px solid green';";
+                ((JavascriptExecutor) driver).executeScript(script, element);
+            } catch (Exception e) {
+                e.fillInStackTrace();
+            }
+        }
+    }
+
+    /* Clean up the list highlightedElements
+    * */
+    public static void clearHighlightedElements(){
+        highlightedElements.get().clear();
+        // clear the value associated to thread
+        highlightedElements.remove();
     }
 
     // Register WebDriver for current Thread
