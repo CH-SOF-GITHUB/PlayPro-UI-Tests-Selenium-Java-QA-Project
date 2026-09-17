@@ -482,6 +482,14 @@ public class ActionDriver {
         }
     }
 
+    public void navigateBack() {
+        try {
+            driver.navigate().back();
+        } catch (Exception e) {
+            loggr.info("Unable to navigate back in Page : {}", e.getMessage());
+        }
+    }
+
     public void maximizeWindow() {
         try {
             driver.manage().window().maximize();

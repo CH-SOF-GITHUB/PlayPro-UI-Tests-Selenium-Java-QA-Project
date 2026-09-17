@@ -109,5 +109,13 @@ public class LoginPage {
         return actionDriver.compareByAttribute(PasswordField, "placeholder", ExpectedValue);
     }
 
+    // Method to back in browser
+    public void backBrowser(){
+        actionDriver.navigateBack();
+    }
 
+    // Method to get Login page URL
+    public String returnCurrentURL() {
+        return actionDriver.getCurrentURL();
+    }
 }
