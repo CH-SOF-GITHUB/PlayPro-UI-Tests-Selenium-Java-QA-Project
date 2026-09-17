@@ -485,6 +485,7 @@ public class ActionDriver {
     public void navigateBack() {
         try {
             driver.navigate().back();
+            loggr.info("Clicked on Back Browser Button");
         } catch (Exception e) {
             loggr.info("Unable to navigate back in Page : {}", e.getMessage());
         }
