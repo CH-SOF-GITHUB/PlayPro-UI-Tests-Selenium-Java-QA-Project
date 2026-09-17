@@ -35,8 +35,8 @@ public class LoginTests5 extends BaseClass {
         addLambdaStepContext(getDriver(), "Verify That User Not Logged in again");
         // String ExpectedURL = "https://tutorialsninja.com/demo/index.php?route=account/login";
         String ActualCurrentURL = loginPage.returnCurrentURL();
-        boolean isNotLogoutURL = !ActualCurrentURL.contains("login");
-        Assert.assertTrue(isNotLogoutURL, "ERROR: Current URL does not match the expected URL");
+        boolean isLogoutURL = ActualCurrentURL.contains("login");
+        Assert.assertTrue(isLogoutURL, "ERROR: Current URL does not match the expected URL");
         addLambdaStepContext(getDriver(), "LT- Verification Of Logout By Back Browser Terminated");
         ExtentManager.logStep("Verification Of Logout By Back Browser Terminated");
         staticWait(5);

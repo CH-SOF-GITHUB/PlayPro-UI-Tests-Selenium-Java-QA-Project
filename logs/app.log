@@ -6431,3 +6431,25 @@ Session ID: 3fc7ec21843f90db33541b783809d1e4
 2026-09-17 16:05:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Account Logout] match to -----> Expected Text Value: [Account Logout]
 2026-09-17 16:05:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/logout
 2026-09-17 16:05:36 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests4
+2026-09-17 16:41:12 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-17 16:41:12 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : LoginTests5
+2026-09-17 16:41:21 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - LT RemoteWebDriver instance was created in headless mode.
+2026-09-17 16:41:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-17 16:41:26 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-17 16:41:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-17 16:41:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-17 16:41:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-17 16:41:34 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-17 16:41:35 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-17 16:41:37 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chakerbensaid1@gmail.com].
+2026-09-17 16:41:38 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-17 16:41:39 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r].
+2026-09-17 16:41:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-17 16:41:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with class ' btn btn-primary ']
+2026-09-17 16:41:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-17 16:41:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-17 16:41:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-17 16:41:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Logout ']
+2026-09-17 16:41:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-17 16:41:50 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/account
+2026-09-17 16:41:57 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests5
