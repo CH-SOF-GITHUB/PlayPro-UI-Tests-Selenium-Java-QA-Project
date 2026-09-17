@@ -24,6 +24,7 @@ public class LoginPage {
     // Locate Web Element of Logout
     private final By LogoutBtn = By.xpath("//a[@class='list-group-item' and text()='Logout']");
     private final By SuccessLogoutMsg = By.xpath("//div[@id='content']//h1");
+    private final By LogoutOption = By.xpath("//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Logout']");
 
     // Locate Web Element of 'Forgotten Password'
     private final By ForgetPwdLink = By.linkText("Forgotten Password");
@@ -62,6 +63,12 @@ public class LoginPage {
     // Method to logout from the system
     public void logout() {
         actionDriver.click(LogoutBtn);
+    }
+
+    // Method to logout from the system via drop down and navbar
+    public void logoutViaDropDown(){
+        actionDriver.click(MyAccountDropDown);
+        actionDriver.click(LogoutOption);
     }
 
     // Method to compare Logout Message after logout system
