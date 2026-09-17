@@ -171,31 +171,14 @@
             <version>2.23.1</version>
         </dependency>
         <!-- selenium dependencies-->
+        <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.43.0</version>
             <scope>compile</scope>
-            <exclusions>
-                <!-- SLF4J is already included in the project, so we exclude it from Selenium to avoid conflicts -->
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-                <!-- Exclude FindBugs to avoid potential conflicts: FindBugs est historiquement lié à l'analyse statique du code Java. -->
-                <exclusion>
-                    <groupId>com.google.code.findbugs</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api -->
-        <!--<dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-api</artifactId>
-            <version>4.48.0</version>
-        </dependency>-->
-        <!-- selenide -->
+        <!-- selenide dependencies -->
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
