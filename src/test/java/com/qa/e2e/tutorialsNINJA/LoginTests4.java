@@ -31,7 +31,7 @@ public class LoginTests4 extends BaseClass {
         Assert.assertTrue(loginPage.compareLogoutMsg("Account Logout"), "ERROR: success logout message does not math the expected value");
         ExtentManager.logStep("TutorialsNINJA - Verification Of Logout URL");
         addLambdaStepContext(getDriver(), "Verification Of Logout URL");
-        String ExpectedLogoutURL = "https://tutorialsninja.com/demo/index.php?route=account/account";
+        String ExpectedLogoutURL = "https://tutorialsninja.com/demo/index.php?route=account/logout";
         String ActualCurrentURL = loginPage.returnCurrentURL();
         boolean isLogoutURL = ActualCurrentURL.equals(ExpectedLogoutURL);
         Assert.assertTrue(isLogoutURL, "ERROR: Current URL does not match the expected Logout URL");
