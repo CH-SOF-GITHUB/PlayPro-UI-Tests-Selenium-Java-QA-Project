@@ -1,6 +1,6 @@
 package com.qa.tests.PlayPro.BackOfficeV3.Login;
 
-import com.qa.factory.LTConfig;
+import com.qa.configuration.LTConfig;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.remote.RemoteWebDriver;

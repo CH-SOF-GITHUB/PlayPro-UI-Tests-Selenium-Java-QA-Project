@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name="OrangeHRM Test Suite" parallel="classes" thread-count="4">
+<suite name="OrangeHRM Test Suite" parallel="classes" thread-count="1">
     <listeners>
         <listener class-name="org.qa.listeners.TestListener"/>
     </listeners>
     <test name="TutorialsNINJA Test 1.0">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.qa.e2e.tutorialsNINJA.LoginTests2"/>
+            <class name="com.qa.e2e.tutorialsNINJA.LoginTests3"/>
         </classes>
     </test>
     <!--<test name="TutorialsNINJA Test 1.1">
@@ -62,6 +62,14 @@
     </test>-->
 </suite>
 
+        <!--
+        <suite thread-count="1" parallel="tests" name="Suite">
+        <test thread-count="1" parallel="classes" name="Test">
+            <classes>
+                <class name="com.lambdatest.TestNGTodo2"/>
+            </classes>
+        </test>
+        </suite> -->
         <!--<suite name="Test my website">
             <test name="Test 1 authentication with login">
                 <parameter name="Email" value="chakerqa-client@yopmail.com"/>

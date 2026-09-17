@@ -406,7 +406,7 @@ How best to confgurate POM.XML:
 ########################################################################################################################################################
 package com.qa.cucumber.bdd;
 
-import com.qa.factory.LTConfigCucumber;
+import com.qa.configuration.LTConfigCucumber;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 

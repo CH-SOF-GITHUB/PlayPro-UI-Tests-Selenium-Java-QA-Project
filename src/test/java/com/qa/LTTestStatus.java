@@ -1,7 +1,7 @@
 // java
 package com.qa;
 
-import com.qa.factory.LTConfig;
+import com.qa.configuration.LTConfig;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;

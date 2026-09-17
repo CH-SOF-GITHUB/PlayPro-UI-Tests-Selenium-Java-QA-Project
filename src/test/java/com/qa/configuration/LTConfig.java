@@ -1,4 +1,4 @@
-package com.qa.factory;
+package com.qa.configuration;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.remote.CapabilityType;

@@ -1,6 +1,8 @@
 package org.qa.base;
 
+
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,6 +14,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.qa.actionDriver.ActionDriver;
 import org.qa.utilities.ExtentManager;
 import org.qa.utilities.LoggerManager;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -19,12 +22,15 @@ import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
 import java.io.FileInputStream;
+import java.lang.reflect.Method;
 import java.net.URL;
-import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
 import java.util.logging.Level;
+
+import static org.qa.utilities.LTStatus.addLambdaStepContext;
+import static org.qa.utilities.LTStatus.markTestStatusViaJS;
 
 public class BaseClass {
     protected static Properties prop;
@@ -36,6 +42,7 @@ public class BaseClass {
     private static final ThreadLocal<SoftAssert> softAsserts = ThreadLocal.withInitial(SoftAssert::new);
     // Create the objet for log utilities
     public static final Logger loggr = LoggerManager.getLogger(BaseClass.class);
+
     // Directs the native Java Util Logger to ignore anything lower than SEVERE errors for Selenium
     static {
         // Directs the native Java Util Logger to ignore anything lower than SEVERE errors for Selenium
@@ -62,12 +69,16 @@ public class BaseClass {
             // retrieve the specified keys{browser,url} from the properties file
             //String browser = getProp().getProperty("browser", "chrome");
             String url = getProp().getProperty("url");
-            // Safer Boolean parsing to avoid ClassCastException
+            // Safer Boolean parsing to avoid ClassCastException for property: headless
             boolean isHeadless = Boolean.parseBoolean(getProp().getProperty("headless", "false"));
             // retrieve the specified keys {isGrid,gridUrl} from the properties file
             String gridURL = getProp().getProperty("gridUrl");
             boolean isGRID = Boolean.parseBoolean(getProp().getProperty("isGrid", "false"));
-
+            // Safer Boolean parsing to avoid ClassCastException for properties: LambdaTest, LT_USERNAME, LT_ACCESS_KEY
+            boolean isLambdaTest = Boolean.parseBoolean(getProp().getProperty("LambdaTest", "false"));
+            String username = getProp().getProperty("LT_USERNAME");
+            String authkey = getProp().getProperty("LT_ACCESS_KEY");
+            String hub = getProp().getProperty("hub");
             /**/
             if (isGRID) {
                 try {
@@ -84,11 +95,37 @@ public class BaseClass {
                         edgeOptions.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080", "--disable-notifications", "--no-sandbox", "--disable-dev-shm-usage");
                         driver.set(new RemoteWebDriver(new URL(gridURL), edgeOptions));
 
-                        loggr.warn("RemoteWebDriver instance created for Grid in headless mode.");
+                        loggr.warn("GRID RemoteWebDriver instance was created in headless mode.");
                     } else {
                         throw new IllegalArgumentException("Browser '" + browser + "' not supported for Grid Tests");
                     }
                 } catch (Exception e) {
+                    e.fillInStackTrace();
+                }
+            } else if (isLambdaTest) {
+                try {
+                    // ✅ Use LambdaTest W3C-compliant structure (LT:Options)
+                    MutableCapabilities ltOptions = new MutableCapabilities();
+                    ltOptions.setCapability("build", "LT_PlayPro_UI_Tests_Selenium_Java_TestNG");
+                    ltOptions.setCapability("name", Method.class.getName() + " - " + this.getClass().getName());
+                    ltOptions.setCapability("platformName", "Windows 11");
+                    ltOptions.setCapability("plugin", "maven");
+                    ltOptions.setCapability("network", true);
+                    ltOptions.setCapability("visual", true);
+                    ltOptions.setCapability("w3c", true);
+                    ltOptions.setCapability("video", true);
+                    ltOptions.setCapability("console", true);
+                    ltOptions.setCapability("terminal", true);
+                    ltOptions.setCapability("devicelog", true);
+                    // ✅ Chrome browser setup (works with Selenium 4.x)
+                    ChromeOptions browserOptions = new ChromeOptions();
+                    browserOptions.setCapability("browserVersion", "latest");
+                    browserOptions.setCapability("LT:options", ltOptions);
+                    // ✅ Web Driver setup
+                    driver.set(new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), browserOptions));
+                    loggr.warn("LT RemoteWebDriver instance was created in headless mode.");
+                } catch (Exception e) {
+                    loggr.error("Unable to set LT capabilities: {}", e.getMessage());
                     e.fillInStackTrace();
                 }
             } else {
@@ -150,7 +187,7 @@ public class BaseClass {
             // getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
 
             // Maximize the WebDriver
-            if (!isHeadless & !isGRID) {
+            if (!isHeadless & !isGRID & !isLambdaTest) {
                 getDriver().manage().window().maximize();
             }
 
@@ -197,9 +234,13 @@ public class BaseClass {
     }
 
     @AfterMethod
-    public void tearDown() {
+    public void tearDown(ITestResult result) {
         if (driver.get() != null) {
             try {
+                boolean isSuccess = result.getStatus() == ITestResult.SUCCESS;
+                String remark = isSuccess ? "Test Passed Successfully" : "Test failed: " + result.getThrowable().getMessage();
+                addLambdaStepContext(driver.get(), "Closing Session");
+                markTestStatusViaJS(driver.get(), isSuccess, remark);
                 driver.get().quit();
             } catch (Exception e) {
                 loggr.error("Unable to quit browser", e);

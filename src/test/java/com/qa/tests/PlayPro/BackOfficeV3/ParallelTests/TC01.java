@@ -1,7 +1,7 @@
 package com.qa.tests.PlayPro.BackOfficeV3.ParallelTests;
 
 import org.qa.constants.Priority;
-import com.qa.factory.LTConfigParallelTest;
+import com.qa.configuration.LTConfigParallelTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -11,15 +11,20 @@
       <w>Envoie</w>
       <w>Génère</w>
       <w>Installe</w>
+      <w>L'instance</w>
       <w>Pilote</w>
       <w>Stocke</w>
       <w>actuellement</w>
+      <w>addbutton</w>
       <w>atteindre</w>
       <w>automatique</w>
       <w>classique</w>
       <w>compatibilité</w>
+      <w>contexte</w>
       <w>d'abord</w>
       <w>d'avertissement</w>
+      <w>d'envoyer</w>
+      <w>d'étape</w>
       <w>dans</w>
       <w>devront</w>
       <w>désormais</w>
@@ -35,6 +40,7 @@
       <w>jdbc</w>
       <w>l'artefact</w>
       <w>l'email</w>
+      <w>l'étape</w>
       <w>l'état</w>
       <w>lisant</w>
       <w>localisable</w>
@@ -46,7 +52,10 @@
       <w>recevoir</w>
       <w>réutilisé</w>
       <w>s'ouvrir</w>
+      <w>sampletodotext</w>
       <w>serveur</w>
+      <w>simplifiée</w>
+      <w>stepcontext</w>
       <w>valider</w>
       <w>verte</w>
       <w>vient</w>

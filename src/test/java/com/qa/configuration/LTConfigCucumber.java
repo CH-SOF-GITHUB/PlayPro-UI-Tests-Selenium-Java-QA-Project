@@ -1,4 +1,4 @@
-package com.qa.factory;
+package com.qa.configuration;
 
 import org.openqa.selenium.SessionNotCreatedException;
 import org.openqa.selenium.WebDriver;
