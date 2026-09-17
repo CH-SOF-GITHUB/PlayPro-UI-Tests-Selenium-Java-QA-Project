@@ -9,7 +9,7 @@
     <test name="TutorialsNINJA Test 1.0">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.qa.e2e.tutorialsNINJA.LoginTests4"/>
+            <class name="com.qa.e2e.tutorialsNINJA.LoginTests5"/>
         </classes>
     </test>
     <!--<test name="TutorialsNINJA Test 1.1">
