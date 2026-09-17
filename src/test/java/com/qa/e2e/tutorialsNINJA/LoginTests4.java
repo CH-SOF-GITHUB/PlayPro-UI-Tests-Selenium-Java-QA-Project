@@ -33,8 +33,8 @@ public class LoginTests4 extends BaseClass {
         addLambdaStepContext(getDriver(), "Verification Of Logout URL");
         String ExpectedLogoutURL = "https://tutorialsninja.com/demo/index.php?route=account/account";
         String ActualCurrentURL = loginPage.returnCurrentURL();
-        boolean isLoginURL = ActualCurrentURL.equals(ExpectedLogoutURL);
-        Assert.assertTrue(isLoginURL, "ERROR: Current URL does not match the expected Logout URL");
+        boolean isLogoutURL = ActualCurrentURL.equals(ExpectedLogoutURL);
+        Assert.assertTrue(isLogoutURL, "ERROR: Current URL does not match the expected Logout URL");
         addLambdaStepContext(getDriver(), "LT- Verification Of Logout Terminated");
         ExtentManager.logStep("Verification Of Logout Terminated");
     }
