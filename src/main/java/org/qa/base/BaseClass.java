@@ -24,6 +24,7 @@ import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
+import java.util.logging.Level;
 
 public class BaseClass {
     protected static Properties prop;
@@ -37,7 +38,10 @@ public class BaseClass {
     public static final Logger loggr = LoggerManager.getLogger(BaseClass.class);
     // Directs the native Java Util Logger to ignore anything lower than SEVERE errors for Selenium
     static {
-        java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(java.util.logging.Level.SEVERE);
+        // Directs the native Java Util Logger to ignore anything lower than SEVERE errors for Selenium
+        java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.SEVERE);
+        java.util.logging.Logger.getLogger("org.openqa.selenium.devtools").setLevel(Level.SEVERE);
+        java.util.logging.Logger.getLogger("org.openqa.selenium.chromium").setLevel(Level.SEVERE);
     }
 
     @BeforeSuite
