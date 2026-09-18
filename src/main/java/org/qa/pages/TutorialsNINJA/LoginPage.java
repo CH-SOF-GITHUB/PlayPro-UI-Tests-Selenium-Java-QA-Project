@@ -52,7 +52,7 @@ public class LoginPage {
     // Check if an error message displays or not when login fails
     public boolean verifyErrorMessage(String ExpectedErrorMsg) {
         String ActualText = actionDriver.getText(ErrorMsg);
-        return ActualText.equalsIgnoreCase(ExpectedErrorMsg);
+        return ActualText.equals(ExpectedErrorMsg);
     }
 
     // Method to check if Error Message is displayed or not
@@ -66,7 +66,7 @@ public class LoginPage {
     }
 
     // Method to logout from the system via drop down and navbar
-    public void logoutViaDropDown(){
+    public void logoutViaDropDown() {
         actionDriver.click(MyAccountDropDown);
         actionDriver.click(LogoutOption);
     }
@@ -117,7 +117,7 @@ public class LoginPage {
     }
 
     // Method to back in browser
-    public void backBrowser(){
+    public void backBrowser() {
         actionDriver.navigateBack();
     }
 
@@ -127,7 +127,15 @@ public class LoginPage {
     }
 
     // Method to Load the Current Page
-    public void refreshCurrentPage(){
+    public void refreshCurrentPage() {
         actionDriver.refreshPage();
+    }
+
+    // Method to click on Login button multiple times
+    public void clickMultipleLogin() {
+        for (int i = 0; i < 4; i++) {
+            actionDriver.click(LoginBtn);
+            i++;
+        }
     }
 }
