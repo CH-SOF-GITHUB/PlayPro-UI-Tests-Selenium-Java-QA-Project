@@ -141,6 +141,19 @@ public class ActionDriver {
         }
     }
 
+    // Method to get text from input field
+    public String getText(By by) {
+        try {
+            WebElement element = waitForElementToBeVisible(by);
+            applyBorder(by, "green");
+            return element.getText();
+        } catch (Exception e) {
+            applyBorder(by, "red");
+            loggr.error("Unable to get Text From Element [{}] | Error: {}", getElementDescription(by, null), e.getMessage());
+            return null;
+        }
+    }
+
     // Method to compare Two Attribute
     public boolean compareByAttribute(By by, String attribute, String expectedValue) {
         try {
@@ -176,19 +189,6 @@ public class ActionDriver {
         }
     }
 
-    // Method to get text from input field
-    public String getText(By by) {
-        try {
-            WebElement element = waitForElementToBeVisible(by);
-            applyBorder(by, "green");
-            return element.getText();
-        } catch (Exception e) {
-            applyBorder(by, "red");
-            loggr.error("Unable to get Text From Element [{}] | Error: {}", getElementDescription(by, null), e.getMessage());
-            return null;
-        }
-    }
-
     // Method to compare Two Text
     public boolean compareText(By by, String expectedText) {
         try {
@@ -196,16 +196,20 @@ public class ActionDriver {
             String actualText = element.getText();
 
             if (expectedText.equals(actualText)) {
-                // 1. Appliquer d'abord le bordure verte
+                // 1.  Mémoriser cet élèment pour la capture finale.
+                ExtentManager.addHighlightedElement(by);
+                // 2. Appliquer d'abord le bordure verte
                 applyBorder(by, "green");
                 loggr.info("Actual Text: [{}] match to -----> Expected Text Value: [{}]", actualText, expectedText);
                 ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Compare Text!", "Test Verified successfully: " + expectedText + " equals " + actualText);
+                resetBorder(element);
                 return true;
             } else {
-                // 1. Appliquer ensuite le bordure rouge
+                // 3. Appliquer ensuite le bordure rouge
                 applyBorder(by, "red");
                 loggr.info("ERROR: Actual Text : [{}] does not match to -----> Expected Text Value: [{}]", actualText, expectedText);
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Text Comparison fails!", "Test failed: " + expectedText + " not equals " + actualText);
+                resetBorder(element);
                 return false;
             }
         } catch (Exception e) {
