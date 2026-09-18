@@ -8,7 +8,7 @@ public class RetryAnalyser implements IRetryAnalyzer {
     // Number of retries
     private int retryCount = 0;
     // Declare maximum number of retires
-    private static final int maxRetries = 2;
+    private static final int maxRetries = 1;
 
     @Override
     public boolean retry(ITestResult result) {

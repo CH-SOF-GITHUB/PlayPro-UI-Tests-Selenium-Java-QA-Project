@@ -21,10 +21,10 @@ import java.util.logging.Logger;
 public class TestListener implements ITestListener, IAnnotationTransformer {
 
     // USE IAnnotationTransformer interface for Re-Try Tests execution:
-    /*@Override
+    @Override
     public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
         annotation.setRetryAnalyzer(RetryAnalyser.class);
-    }*/
+    }
 
     // Triggered when a suite starts
     @Override
