@@ -132,10 +132,10 @@ public class LoginPage {
     }
 
     // Method to click on Login button multiple times
-    public void clickMultipleLogin() {
-        for (int i = 0; i < 4; i++) {
+    public void clickMultipleLogin(int nb) {
+        for (int i = 1; i < nb; i++) {
             actionDriver.click(LoginBtn);
-            i++;
+            System.out.println("Login Button clicked - attempt #" + i);
         }
     }
 }

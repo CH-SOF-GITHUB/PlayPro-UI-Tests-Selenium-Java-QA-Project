@@ -46,12 +46,12 @@ public class LoginTests4 extends BaseClass {
         loginPage.login("testing@gmail.com", "2U8@C7VGxvtx@r");
         ExtentManager.logStep("TutorialsNINJA - Click on Login Button multiple times");
         addLambdaStepContext(getDriver(), "Click on Login Button multiple times");
-        loginPage.clickMultipleLogin();
+        loginPage.clickMultipleLogin(5);
         ExtentManager.logStep("TutorialsNINJA - Warning Error Msg displays for the 5th time");
         addLambdaStepContext(getDriver(), "LT - Warning Error Msg displays for the 5th time");
         Assert.assertTrue(loginPage.errorMsgIsDisplayed(), "Warning Error Message does not display !");
         String ExpectedWarnMsg = "Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.";
-        Assert.assertTrue(loginPage.verifyErrorMessage(ExpectedWarnMsg), "ERROR: success logout message does not math the expected value");
+        Assert.assertTrue(loginPage.verifyErrorMessage(ExpectedWarnMsg), "ERROR: Warn Attemps message does not math the expected value");
         ExtentManager.logStep("TutorialsNINJA - Verification of unsuccessful Login Attemps at 5th time Terminated !");
         addLambdaStepContext(getDriver(), "LT - Verification of unsuccessful Login Attemps at 5th time Terminated !");
     }
