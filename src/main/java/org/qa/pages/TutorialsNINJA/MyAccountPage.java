@@ -16,6 +16,7 @@ public class MyAccountPage {
     private final By PasswordLink = By.linkText("Password");
     private final By NewPwdField = By.id("input-password");
     private final By ConfirmNewPwdField = By.id("input-confirm");
+    private final By ContinueBtn = By.xpath("//input[@value='Continue']");
 
     // Add a constructor of class page with Singleton Design Patter
     public MyAccountPage(WebDriver driver) {
@@ -35,6 +36,7 @@ public class MyAccountPage {
     public void enterNewPwd(String pwd) {
         actionDriver.enter(NewPwdField, pwd);
         actionDriver.enter(ConfirmNewPwdField, pwd);
+        actionDriver.click(ContinueBtn);
     }
 
 }

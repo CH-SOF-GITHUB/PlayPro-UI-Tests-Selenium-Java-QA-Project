@@ -7059,3 +7059,74 @@ Session ID: 3fc7ec21843f90db33541b783809d1e4
 2026-09-18 14:50:34 [TestNG-tests-1] INFO  ActionDriver - Actual Attribute [type] value [password] match to -----> Expected Attribute Value: [password]
 2026-09-18 14:50:37 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
 2026-09-18 14:50:40 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests2
+2026-09-18 15:52:35 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-18 15:52:35 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests6
+2026-09-18 15:52:44 [TestNG-tests-1] WARN  BaseClass - LT RemoteWebDriver instance was created in headless mode.
+2026-09-18 15:52:48 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-18 15:52:48 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-18 15:52:50 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:52:50 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-18 15:52:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:52:52 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-18 15:52:53 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:52:57 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chakerbensaid1@gmail.com].
+2026-09-18 15:52:58 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:53:00 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r].
+2026-09-18 15:53:01 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:53:02 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with class ' btn btn-primary ']
+2026-09-18 15:53:05 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:53:05 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Password ']
+2026-09-18 15:53:06 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:53:08 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r!!!].
+2026-09-18 15:53:09 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:53:11 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [2U8@C7VGxvtx@r!!!].
+2026-09-18 15:53:12 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:53:12 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-18 15:53:15 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:53:16 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Logout ']
+2026-09-18 15:53:18 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:53:19 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-18 15:53:20 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:53:20 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-18 15:53:22 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:53:24 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chakerbensaid1@gmail.com].
+2026-09-18 15:53:25 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:53:26 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r!!!].
+2026-09-18 15:53:28 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:53:29 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with class ' btn btn-primary ']
+2026-09-18 15:53:57 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests6
+2026-09-18 15:53:57 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests6
+2026-09-18 15:54:04 [TestNG-tests-1] WARN  BaseClass - LT RemoteWebDriver instance was created in headless mode.
+2026-09-18 15:54:10 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-18 15:54:10 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-18 15:54:13 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:13 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-18 15:54:16 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:16 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-18 15:54:18 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:19 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chakerbensaid1@gmail.com].
+2026-09-18 15:54:20 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:22 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r].
+2026-09-18 15:54:24 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:25 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with class ' btn btn-primary ']
+2026-09-18 15:54:27 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:28 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Password ']
+2026-09-18 15:54:29 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:31 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r!!!].
+2026-09-18 15:54:32 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:34 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [2U8@C7VGxvtx@r!!!].
+2026-09-18 15:54:37 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:38 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-18 15:54:42 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:43 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Logout ']
+2026-09-18 15:54:44 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:44 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-18 15:54:46 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:47 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-18 15:54:48 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:49 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chakerbensaid1@gmail.com].
+2026-09-18 15:54:50 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:52 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [2U8@C7VGxvtx@r!!!].
+2026-09-18 15:54:53 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-18 15:54:54 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with class ' btn btn-primary ']
+2026-09-18 15:55:22 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests6
