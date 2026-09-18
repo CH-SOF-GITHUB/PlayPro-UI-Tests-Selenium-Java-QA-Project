@@ -57,37 +57,19 @@ public class LTStatus {
      * @param status passed / failed / skipped
      * @param remark Message associé au résultat
      */
-    public static void markTestStatusViaJS(
-            WebDriver driver,
-            String status,
-            String remark) {
-
-        if (driver == null || status == null || status.isEmpty()) {
-            return;
-        }
-
+    public static void markTestStatusViaJS(WebDriver driver, String status, String remark) {
+        if (driver == null || status == null || status.isEmpty()) return;
         try {
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-
-            String safeStatus = escapeJavaScript(status);
-            String safeRemark = escapeJavaScript(
-                    remark == null ? "" : remark
-            );
-
-            String script =
-                    "window.lambdatest_executor = " +
-                            "{action: 'setTestStatus', arguments: {" +
-                            "status: '" + safeStatus + "', " +
-                            "remark: '" + safeRemark + "'" +
-                            "}};";
-
-            js.executeScript(script);
-
+            /* String status = passed ? "passed" : "failed"; */
+            String jsCommand = String.format("lambda-status=%s", status);
+            // Certaines intégrations acceptent aussi un message via console log
+            ((JavascriptExecutor) driver).executeScript(jsCommand);
+            if (remark != null && !remark.isEmpty()) {
+                ((JavascriptExecutor) driver).executeScript("console.log(arguments[0])", remark);
+            }
         } catch (Exception e) {
-            System.err.println(
-                    "Impossible de marquer le test via JS With Status: "
-                            + e.getMessage()
-            );
+            // ne pas casser le flow de test si le marquage échoue
+            System.err.println("Impossible de marquer le test via JS With Status: " + e.getMessage());
         }
     }
 
