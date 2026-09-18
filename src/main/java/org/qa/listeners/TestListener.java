@@ -31,14 +31,14 @@ public class TestListener implements ITestListener, IAnnotationTransformer {
     public void onStart(ITestContext context) {
         // Masque les logs d'avertissement de Selenium DevTools
         Logger.getLogger("org.seleniumhq.selenium.devtools").setLevel(Level.SEVERE);
-        ExtentManager.logStep("Test suite started: " + context.getName());
+        System.out.println("Test suite started: " + context.getName()); // ExtentManager.logStep: À ce moment-là, aucun ExtentTest n'a encore été créé.
         ExtentManager.getReporter(); // Initialize the ExtentReports
     }
 
     // Triggered when a suite finishes
     @Override
     public void onFinish(ITestContext context) {
-        ExtentManager.logStep("Test suite finished: " + context.getName());
+        System.out.println("Test suite finished: " + context.getName());  // ExtentManager.logStep: À ce moment-là, aucun ExtentTest n'a encore été créé.
         ExtentManager.endTest();
     }
 

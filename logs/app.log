@@ -6938,3 +6938,22 @@ Session ID: 3fc7ec21843f90db33541b783809d1e4
 2026-09-18 11:24:23 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Loading of page in the browser !
 2026-09-18 11:24:28 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/login
 2026-09-18 11:24:30 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests5
+2026-09-18 12:13:34 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-18 12:21:28 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-18 12:21:28 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests4
+2026-09-18 12:21:37 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-18 12:21:48 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-18 12:21:48 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 21
+2026-09-18 12:21:49 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests4
+2026-09-18 12:28:30 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-18 12:28:30 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests4
+2026-09-18 12:28:33 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-18 12:28:38 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-18 12:28:38 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-18 12:28:38 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests4
+2026-09-18 12:28:38 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests4
+2026-09-18 12:28:41 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-18 12:28:47 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-18 12:28:47 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-18 12:28:47 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests4
+2026-09-18 12:31:57 [main] WARN  BaseClass - properties.config File Loaded successfully

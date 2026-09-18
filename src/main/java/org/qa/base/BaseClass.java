@@ -237,8 +237,8 @@ public class BaseClass {
     public void tearDown(ITestResult result) {
         if (driver.get() != null) {
             try {
-                // Déterminer le status du LambdaTest
                 String status;
+
                 if (result.getStatus() == ITestResult.SUCCESS) {
                     status = "passed";
                 } else if (result.getStatus() == ITestResult.FAILURE) {
@@ -248,21 +248,44 @@ public class BaseClass {
                 } else {
                     throw new IllegalArgumentException("ERROR: Status not generated From result");
                 }
-                String remark = (result.getStatus() == ITestResult.SUCCESS) ? "Test Passed Successfully" : (result.getStatus() == ITestResult.SKIP) ? "Test Skipped" : "Test failed: " + result.getThrowable().getMessage();
-                addLambdaStepContext(driver.get(), "Closing Session");
-                markTestStatusViaJS(driver.get(), status, remark);
+
+                String remark;
+
+                if (result.getStatus() == ITestResult.SUCCESS) {
+                    remark = "Test Passed Successfully";
+                } else if (result.getStatus() == ITestResult.SKIP) {
+                    remark = "Test Skipped";
+                } else {
+                    remark = "Test failed: " +
+                            (result.getThrowable() != null
+                                    ? result.getThrowable().getMessage()
+                                    : "Unknown error");
+                }
+
+                // LambdaTest uniquement
+                boolean isLambdaTest = Boolean.parseBoolean(
+                        getProp().getProperty("LambdaTest", "false")
+                );
+
+                if (isLambdaTest) {
+                    addLambdaStepContext(
+                            driver.get(),
+                            "Closing Session"
+                    );
+
+                    markTestStatusViaJS(
+                            driver.get(),
+                            status,
+                            remark
+                    );
+                }
             } catch (Exception e) {
-                loggr.error("Unable to quit browser", e);
+                loggr.error("Unable to process test result before quitting browser", e);
             } finally {
                 driver.get().quit();
                 driver.remove();
                 actionDriver.remove();
                 softAsserts.remove();
-                // Close wen driver for current thread
-                // driver = null;
-                // actionDriver = null;
-                /* After each test , we call end test to flush the extent report */
-                // ExtentManager.endTest();   // This has been implemented in TestListener
             }
         }
         loggr.warn("WebDriver instance is closed for ---------------> : {}", this.getClass().getSimpleName());
