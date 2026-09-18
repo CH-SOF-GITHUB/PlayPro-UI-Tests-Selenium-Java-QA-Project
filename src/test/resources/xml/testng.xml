@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name="TutorialsNINJA Test Suite" parallel="tests" thread-count="4">
+<suite name="TutorialsNINJA Test Suite" parallel="tests" thread-count="1">
     <listeners>
         <listener class-name="org.qa.listeners.TestListener"/>
     </listeners>
-    <test name="TutorialsNINJA Test 1.0">
+    <test name="TutorialsNINJA Test 1.0" parallel="tests" thread-count="1">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.qa.e2e.tutorialsNINJA.LoginTests4"/>
