@@ -8,6 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import static org.qa.utilities.LTStatus.addLambdaStepContext;
+
 public class LoginTests2 extends BaseClass {
     private LoginPage loginPage;
     private MyAccountPage myAccountPagePage;
@@ -43,5 +45,17 @@ public class LoginTests2 extends BaseClass {
         Assert.assertTrue(loginPage.isPwdHavePlaceholder(ExpectedPwdPlaceholder), "Password Field does not have the place holder Text");
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
         staticWait(2);
+    }
+
+    @Test(priority = 3)
+    public void verifyTextIntoPwdHideItsVisibility(){
+        ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page");
+        addLambdaStepContext(getDriver(), "LT - Navigation to Login Page");
+        loginPage.openLoginPage();
+        ExtentManager.logStep("TutorialsNINJA - Enter Text In Password Field & Check is toggled to hide its visibility");
+        addLambdaStepContext(getDriver(), "LT - Enter Text In Password Field & Check is toggled to hide its visibility");
+        loginPage.isHidePwdVisibility("2U8@C7VGxvtx@r", "type", "password");
+        ExtentManager.logStep("TutorialsNINJA - Verification Pwd Field hide its visibility Terminated !");
+        addLambdaStepContext(getDriver(), "LT - Verification Pwd Field hide its visibility Terminated !");
     }
 }

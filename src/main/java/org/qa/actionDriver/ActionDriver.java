@@ -145,7 +145,7 @@ public class ActionDriver {
     public boolean compareByAttribute(By by, String attribute, String expectedValue) {
         try {
             WebElement element = waitForElementToBeVisible(by);
-            String actualValue = element.getAttribute(attribute);
+            String actualValue = element.getDomAttribute(attribute);
 
             if (expectedValue.equals(actualValue)) {
                 // AJOUT:

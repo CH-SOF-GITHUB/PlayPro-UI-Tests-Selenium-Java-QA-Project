@@ -112,8 +112,15 @@ public class LoginPage {
         return actionDriver.compareByAttribute(EmailField, "placeholder", ExpectedValue);
     }
 
+    // Methods of password
     public boolean isPwdHavePlaceholder(String ExpectedValue) {
         return actionDriver.compareByAttribute(PasswordField, "placeholder", ExpectedValue);
+    }
+
+    // Method check tha password field hide its visibility
+    public boolean isHidePwdVisibility(String pwd,String attribute, String ExpectedValue) {
+        actionDriver.enter(PasswordField,pwd);
+        return actionDriver.compareByAttribute(PasswordField, attribute, ExpectedValue);
     }
 
     // Method to back in browser
