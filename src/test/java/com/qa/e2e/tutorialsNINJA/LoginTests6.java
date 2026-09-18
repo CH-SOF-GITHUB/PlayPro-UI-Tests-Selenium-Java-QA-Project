@@ -22,12 +22,12 @@ public class LoginTests6 extends BaseClass {
     }
 
 
-    @Test(priority = 1, description = "Verify Logging into the Application after changing the password")
+    @Test(priority = 1, description = "TC_LF_018", suiteName = "(TS_002) - Login Functionality")
     public void verifyLoggingAfterChangePwd() {
         // STEP 1: Go to login page and Login with valid credentials
         ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and connects with valid credentials");
         addLambdaStepContext(getDriver(), "LT - Navigation to Login Page and connects with valid credentials");
-        loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r");
+        loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r!!!");
         // STEP 2: Click on 'Change your password' Link
         ExtentManager.logStep("TutorialsNINJA - Click on 'Change your password' Link");
         addLambdaStepContext(getDriver(), "LT - Click on 'Change your password' Link");
@@ -35,7 +35,7 @@ public class LoginTests6 extends BaseClass {
         // STEP 3: Change new Password
         ExtentManager.logStep("TutorialsNINJA - Enter and change with new Password");
         addLambdaStepContext(getDriver(), "LT - Enter and change with new Password");
-        myAccountPage.enterNewPwd("2U8@C7VGxvtx@r!!!");
+        myAccountPage.enterNewPwd("2U9@C7VGxvtx@r!!!");
         // STEP 4: Logout from System
         ExtentManager.logStep("TutorialsNINJA - Logout from system via Navbar");
         addLambdaStepContext(getDriver(), "LT - Logout from system via Navbar");
@@ -43,7 +43,7 @@ public class LoginTests6 extends BaseClass {
         // STEP 5: Enter new credentials and Login Again
         ExtentManager.logStep("TutorialsNINJA - Login with new credentials");
         addLambdaStepContext(getDriver(), "LT - Login with new credentials");
-        loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r!!!");
+        loginPage.login("chakerbensaid1@gmail.com", "2U9@C7VGxvtx@r!!!");
         // STEP 6: Check Login with new credentials
         ExtentManager.logStep("TutorialsNINJA - Verification of login with new credentials Terminated");
         addLambdaStepContext(getDriver(), "LT - Verification of login with new credentials Terminated");

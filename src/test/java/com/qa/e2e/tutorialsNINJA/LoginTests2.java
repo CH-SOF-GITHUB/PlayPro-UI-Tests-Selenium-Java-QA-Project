@@ -20,7 +20,7 @@ public class LoginTests2 extends BaseClass {
         myAccountPagePage = new MyAccountPage(getDriver());
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, description = "TC_LF_007", suiteName = "(TS_002) - Login Functionality")
     public void validLoginViaTab() {
         ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and Press TAB Key to enter email and password and to click on Login Btn");
         loginPage.loginViaTab("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r");
@@ -33,7 +33,7 @@ public class LoginTests2 extends BaseClass {
         staticWait(2);
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, description = "TC_LF_008", suiteName = "(TS_002) - Login Functionality")
     public void verifyEmailAndPwdPlaceholder() {
         ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page");
         loginPage.openLoginPage();
@@ -47,8 +47,8 @@ public class LoginTests2 extends BaseClass {
         staticWait(2);
     }
 
-    @Test(priority = 3)
-    public void verifyTextIntoPwdHideItsVisibility(){
+    @Test(priority = 3, description = "TC_LF_013", suiteName = "(TS_002) - Login Functionality")
+    public void verifyTextIntoPwdHideItsVisibility() {
         ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page");
         addLambdaStepContext(getDriver(), "LT - Navigation to Login Page");
         loginPage.openLoginPage();

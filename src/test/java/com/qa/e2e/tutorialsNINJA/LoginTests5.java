@@ -19,7 +19,7 @@ public class LoginTests5 extends BaseClass {
         loginPage = new LoginPage(getDriver());
     }
 
-    @Test(priority = 1, description = "Check Login system when browser back")
+    @Test(priority = 1, description = "TC_LF_009", suiteName = "(TS_002) - Login Functionality")
     public void verifyLoginByBrowserBack() {
         ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and login with email and password");
         addLambdaStepContext(getDriver(), "LT - Login with valid credentials");
@@ -37,7 +37,7 @@ public class LoginTests5 extends BaseClass {
         addLambdaStepContext(getDriver(), "LT - Verification Of Not Logout By Back Browser is terminated !");
     }
 
-    @Test(priority = 2, description = "Check After Logout when browser back not logging again")
+    @Test(priority = 2, description = "TC_LF_010", suiteName = "(TS_002) - Login Functionality")
     public void verifyLogoutByBackBrowser() {
         ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and login with email and password");
         addLambdaStepContext(getDriver(), "LT - Login with valid credentials");
@@ -58,7 +58,7 @@ public class LoginTests5 extends BaseClass {
         staticWait(5);
     }
 
-    @Test(priority = 3, description = "Verify Logging into system After browsing back and Loading page")
+    @Test(priority = 3, description = "TC_LF_011", suiteName = "(TS_002) - Login Functionality")
     public void verifyLoginByBrowserBackAndLoadPage() {
         ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and Login with email and password");
         addLambdaStepContext(getDriver(), "LT - Login with valid credentials");
@@ -81,7 +81,7 @@ public class LoginTests5 extends BaseClass {
     }
 
 
-    @Test(priority = 4, description = "Verify Logging out from system After browsing back and Loading page")
+    @Test(priority = 4, description = "TC_LF_012", suiteName = "(TS_002) - Login Functionality")
     public void verifyLogoutByBrowserBackAndLoadPage() {
         ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and Login with email and password");
         addLambdaStepContext(getDriver(), "LT - Login with valid credentials");

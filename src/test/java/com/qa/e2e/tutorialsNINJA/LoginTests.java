@@ -22,7 +22,7 @@ public class LoginTests extends BaseClass {
         myAccountPagePage = new MyAccountPage(getDriver());
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, description = "TC_LF_001", suiteName = "(TS_002) - Login Functionality")
     public void verifySuccessfulLoginWithValidCredentials() {
         ExtentManager.logStep("TutorialsNINJA - Navigation to login page and enter email and password");
         loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r");
@@ -35,7 +35,7 @@ public class LoginTests extends BaseClass {
         staticWait(2);
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, description = "TC_LF_002", suiteName = "(TS_002) - Login Functionality")
     public void shouldShowErrorMsgWithInvalidCredentials() {
         ExtentManager.logStep("TutorialsNINJA - Navigation to login page and enter invalid email and password");
         loginPage.login("chakerbensaid11@gmail.com", "2U8@C7VGxvtx@rr!");
@@ -47,7 +47,7 @@ public class LoginTests extends BaseClass {
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, description = "TC_LF_003", suiteName = "(TS_002) - Login Functionality")
     public void shouldShowErrorMsgWithInvalidEmail() {
         ExtentManager.logStep("TutorialsNINJA - Navigation to login page and enter invalid email");
         loginPage.login("chakerbensaid11@gmail.com", "2U8@C7VGxvtx@r");
@@ -59,7 +59,7 @@ public class LoginTests extends BaseClass {
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, description = "TC_LF_004", suiteName = "(TS_002) - Login Functionality")
     public void shouldShowErrorMsgWithInvalidPassword() {
         ExtentManager.logStep("TutorialsNINJA - Navigation to login page and enter invalid password");
         loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@rr!");
@@ -71,7 +71,7 @@ public class LoginTests extends BaseClass {
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
     }
 
-    @Test(priority = 5)
+    @Test(priority = 5, description = "TC_LF_005", suiteName = "(TS_002) - Login Functionality")
     public void shouldShowErrorMshWithEmptyCredentials() {
         ExtentManager.logStep("TutorialsNINJA - Navigation to login page and don't enter any email or password");
         loginPage.login("", "");
@@ -83,7 +83,7 @@ public class LoginTests extends BaseClass {
         ExtentManager.logStep("TutorialsNINJA - Verification is terminated !");
     }
 
-    @Test(priority = 6)
+    @Test(priority = 6, description = "TC_LF_006", suiteName = "(TS_002) - Login Functionality")
     public void forgetPwdTest() {
         ExtentManager.logStep("TutorialsNINJA - Navigation to login page");
         loginPage.openLoginPage();

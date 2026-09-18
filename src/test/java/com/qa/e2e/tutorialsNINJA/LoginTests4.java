@@ -18,7 +18,7 @@ public class LoginTests4 extends BaseClass {
         loginPage = new LoginPage(getDriver());
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, suiteName = "(TS_002) - Login Functionality")
     public void verifyLogoutViaNavBar() {
         ExtentManager.logStep("TutorialsNINJA - Login with valid credentials");
         addLambdaStepContext(getDriver(), "LT - Login with valid credentials");
@@ -39,7 +39,7 @@ public class LoginTests4 extends BaseClass {
         addLambdaStepContext(getDriver(), "LT- Verification Of Logout Via Navbar Terminated !");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, description = "TC_LF_014", suiteName = "(TS_002) - Login Functionality")
     public void verifyNbOfUnsuccessfulLoginAttemps() {
         ExtentManager.logStep("TutorialsNINJA - Login with Invalid credentials");
         addLambdaStepContext(getDriver(), "LT - Login with Invalid credentials");
