@@ -18,7 +18,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
-import static com.qa.LTTestStatus.markTestStatusViaJS;
+import static org.qa.utilities.LTStatus.markTestStatusViaJS;
 
 
 public class Hooks {
@@ -70,7 +70,7 @@ public class Hooks {
             Thread.sleep(3000);
         }
         // declare a method to set the test status in LambdaTest via JS
-        markTestStatusViaJS(driver, scenario.getStatus() == Status.PASSED, "Scenario " + scenario.getName() + " " + (scenario.getStatus() == Status.PASSED ? "passed" : "failed"));
+        markTestStatusViaJS(driver, String.valueOf(scenario.getStatus() == Status.PASSED), "Scenario " + scenario.getName() + " " + (scenario.getStatus() == Status.PASSED ? "passed" : "failed"));
         if (driver != null) {
             log.info("\n 🚀 Closing WebDriver For Cucumber BDD...");
             driver.quit();

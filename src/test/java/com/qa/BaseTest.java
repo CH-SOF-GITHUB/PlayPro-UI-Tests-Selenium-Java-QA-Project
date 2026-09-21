@@ -21,8 +21,7 @@ import org.testng.annotations.BeforeMethod;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
-
-import static com.qa.LTTestStatus.markTestStatusViaJS;
+import static org.qa.utilities.LTStatus.markTestStatusViaJS;
 
 public class BaseTest {
     // define web driver
@@ -88,7 +87,7 @@ public class BaseTest {
             FileUtils.copyFile(srcFile, targetFile);
         }
 
-        markTestStatusViaJS(driver, result.getStatus() == ITestResult.SUCCESS, "Test " + result.getMethod().getMethodName() + " " + (result.getStatus() == ITestResult.SUCCESS ? "passed" : "failed"));
+        markTestStatusViaJS(driver, String.valueOf(result.getStatus() == ITestResult.SUCCESS), "Test " + result.getMethod().getMethodName() + " " + (result.getStatus() == ITestResult.SUCCESS ? "passed" : "failed"));
 
         if (driver != null) {
             log.info("Closing WebDriver...");

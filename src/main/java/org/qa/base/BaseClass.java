@@ -107,7 +107,8 @@ public class BaseClass {
                     // ✅ Use LambdaTest W3C-compliant structure (LT:Options)
                     MutableCapabilities ltOptions = new MutableCapabilities();
                     ltOptions.setCapability("build", "LT_PlayPro_UI_Tests_Selenium_Java_TestNG");
-                    ltOptions.setCapability("name", m.getName() + " - " + this.getClass().getName());
+                    String testName = (m != null) ? m.getName() : this.getClass().getSimpleName();
+                    ltOptions.setCapability("name", testName + " - " + this.getClass().getName());
                     ltOptions.setCapability("platformName", "Windows 11");
                     ltOptions.setCapability("plugin", "maven");
                     ltOptions.setCapability("network", true);
@@ -289,6 +290,11 @@ public class BaseClass {
             }
         }
         loggr.warn("WebDriver instance is closed for ---------------> : {}", this.getClass().getSimpleName());
+    }
+
+    public void reopenBrowser(String browser) {
+        loggr.info("Reopening the browser: {}", browser);
+        configBrowser(browser, null);
     }
 
     /* Static wait for pause:

@@ -37,6 +37,9 @@ public class LoginPage {
 
     // Login Steps: click en my account, click on login link, type email, type pwd, and click on Login Btn
     public void login(String email, String password) {
+        if(BaseClass.getDriver() == null){
+            BaseClass.getDriver().get("https://tutorialsninja.com/demo/");
+        }
         actionDriver.click(MyAccountDropDown);
         actionDriver.click(LoginOption);
         actionDriver.enter(EmailField, email);
