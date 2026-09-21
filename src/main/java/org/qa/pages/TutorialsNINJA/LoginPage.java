@@ -12,6 +12,7 @@ public class LoginPage {
     // Locate Web Elements to access to Login page using class By
     private final By MyAccountDropDown = By.xpath("//span[text()='My Account']");
     private final By LoginOption = By.linkText("Login");
+    private final By RegisterOption = By.linkText("Register");
 
     // Locate Web Elements to Login process using class By
     private final By EmailField = By.name("email");
@@ -30,6 +31,9 @@ public class LoginPage {
     private final By ForgetPwdLink = By.linkText("Forgotten Password");
     private final By ForgetPwdTitle = By.xpath("//div[@id='content']//h1");
 
+    // Locate Web Element depending on register new customer
+    private final By ContinueBtn = By.linkText("Continue");
+
     // Add Constructor of class page with Singleton Design Pattern
     public LoginPage(WebDriver driver) {
         this.actionDriver = BaseClass.getActionDriver();
@@ -37,7 +41,7 @@ public class LoginPage {
 
     // Login Steps: click en my account, click on login link, type email, type pwd, and click on Login Btn
     public void login(String email, String password) {
-        if(BaseClass.getDriver() == null){
+        if (BaseClass.getDriver() == null) {
             BaseClass.getDriver().get("https://tutorialsninja.com/demo/");
         }
         actionDriver.click(MyAccountDropDown);
@@ -103,11 +107,23 @@ public class LoginPage {
 
     // Method to check Login via TAB
     public void loginViaTab(String email, String pwd) {
-        actionDriver.click(MyAccountDropDown);
-        actionDriver.click(LoginOption);
+        clickOnMyAccountDropmenu();
+        clickOnLoginOption();
         actionDriver.tabToElementAndType(EmailField, email);
         actionDriver.tabToElementAndType(PasswordField, pwd);
         actionDriver.navigateWithTabAndPressEnter(LoginBtn);
+    }
+
+    public void clickOnMyAccountDropmenu() {
+        actionDriver.click(MyAccountDropDown);
+    }
+
+    public void clickOnLoginOption() {
+        actionDriver.click(LoginOption);
+    }
+
+    public void clickOnRegisterOption() {
+        actionDriver.click(RegisterOption);
     }
 
     // Method to return the placeholder for any field input
@@ -115,21 +131,23 @@ public class LoginPage {
         return actionDriver.compareByAttribute(EmailField, "placeholder", ExpectedValue);
     }
 
-    // Methods of password
+    // Methods of password:check placeholder and check tha password field hide its visibility
     public boolean isPwdHavePlaceholder(String ExpectedValue) {
         return actionDriver.compareByAttribute(PasswordField, "placeholder", ExpectedValue);
     }
 
-    // Method check tha password field hide its visibility
-    public boolean isHidePwdVisibility(String pwd,String attribute, String ExpectedValue) {
-        actionDriver.enter(PasswordField,pwd);
+    public boolean isHidePwdVisibility(String pwd, String attribute, String ExpectedValue) {
+        actionDriver.enter(PasswordField, pwd);
         return actionDriver.compareByAttribute(PasswordField, attribute, ExpectedValue);
     }
 
-    // Method to back in browser
-    public void backBrowser() {
+    // Method to back in browser or navigate to another page
+    public void backBrowser() throws InterruptedException {
         actionDriver.navigateBack();
+        // return back to Login page
+        Thread.sleep(2);
     }
+
 
     // Method to get Login page URL
     public String returnCurrentURL() {
@@ -147,5 +165,10 @@ public class LoginPage {
             actionDriver.click(LoginBtn);
             System.out.println("Login Button clicked - attempt #" + i);
         }
+    }
+
+    // Method to click on Continue button to access register new customer page
+    public void clickOnContinue() {
+        actionDriver.click(ContinueBtn);
     }
 }

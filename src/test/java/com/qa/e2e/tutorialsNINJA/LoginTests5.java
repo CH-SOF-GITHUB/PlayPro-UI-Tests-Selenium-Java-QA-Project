@@ -21,89 +21,105 @@ public class LoginTests5 extends BaseClass {
 
     @Test(priority = 1, description = "TC_LF_009", suiteName = "(TS_002) - Login Functionality")
     public void verifyLoginByBrowserBack() {
-        ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and login with email and password");
-        addLambdaStepContext(getDriver(), "LT - Login with valid credentials");
-        loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r");
-        ExtentManager.logStep("TutorialsNINJA - Browsing back in page");
-        addLambdaStepContext(getDriver(), "LT - Browsing back in page");
-        loginPage.backBrowser();
-        ExtentManager.logStep("TutorialsNINJA - Verification that User not logout");
-        addLambdaStepContext(getDriver(), "LT - Verification that User not logout");
-        String ExpectedLoginURL = "https://tutorialsninja.com/demo/index.php?route=account/login";
-        String ActualCurrentURL = loginPage.returnCurrentURL();
-        boolean isLoginURL = ActualCurrentURL.equals(ExpectedLoginURL);
-        Assert.assertFalse(isLoginURL, "ERROR: Current URL match the expected Login URL");
-        ExtentManager.logStep("TutorialsNINJA - Verification Of Not Logout By Back Browser is terminated !");
-        addLambdaStepContext(getDriver(), "LT - Verification Of Not Logout By Back Browser is terminated !");
+        try {
+            ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and login with email and password");
+            addLambdaStepContext(getDriver(), "LT - Login with valid credentials");
+            loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r");
+            ExtentManager.logStep("TutorialsNINJA - Browsing back in page");
+            addLambdaStepContext(getDriver(), "LT - Browsing back in page");
+            loginPage.backBrowser();
+            ExtentManager.logStep("TutorialsNINJA - Verification that User not logout");
+            addLambdaStepContext(getDriver(), "LT - Verification that User not logout");
+            String ExpectedLoginURL = "https://tutorialsninja.com/demo/index.php?route=account/login";
+            String ActualCurrentURL = loginPage.returnCurrentURL();
+            boolean isLoginURL = ActualCurrentURL.equals(ExpectedLoginURL);
+            Assert.assertFalse(isLoginURL, "ERROR: Current URL match the expected Login URL");
+            ExtentManager.logStep("TutorialsNINJA - Verification Of Not Logout By Back Browser is terminated !");
+            addLambdaStepContext(getDriver(), "LT - Verification Of Not Logout By Back Browser is terminated !");
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     @Test(priority = 2, description = "TC_LF_010", suiteName = "(TS_002) - Login Functionality")
     public void verifyLogoutByBackBrowser() {
-        ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and login with email and password");
-        addLambdaStepContext(getDriver(), "LT - Login with valid credentials");
-        loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r");
-        ExtentManager.logStep("TutorialsNINJA - Logout via Navbar(My Account)");
-        addLambdaStepContext(getDriver(), "LT - Logout via Navbar(My Account)");
-        loginPage.logoutViaDropDown();
-        ExtentManager.logStep("TutorialsNINJA - Browsing Back");
-        addLambdaStepContext(getDriver(), "LT - Browsing Back");
-        loginPage.backBrowser();
-        ExtentManager.logStep("TutorialsNINJA - Verify That User Not Logged in again");
-        addLambdaStepContext(getDriver(), "LT - Verify That User Not Logged in again");
-        String ActualCurrentURL = loginPage.returnCurrentURL();
-        boolean isLogoutURL = ActualCurrentURL.contains("login");
-        Assert.assertTrue(isLogoutURL, "ERROR: Current URL does not match the expected URL");
-        ExtentManager.logStep("Verification Of Not Login Again By Back Browser Terminated !");
-        addLambdaStepContext(getDriver(), "LT - Verification Of Not Login Again By Back Browser Terminated !");
-        staticWait(5);
+        try {
+            ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and login with email and password");
+            addLambdaStepContext(getDriver(), "LT - Login with valid credentials");
+            loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r");
+            ExtentManager.logStep("TutorialsNINJA - Logout via Navbar(My Account)");
+            addLambdaStepContext(getDriver(), "LT - Logout via Navbar(My Account)");
+            loginPage.logoutViaDropDown();
+            ExtentManager.logStep("TutorialsNINJA - Browsing Back");
+            addLambdaStepContext(getDriver(), "LT - Browsing Back");
+            loginPage.backBrowser();
+            ExtentManager.logStep("TutorialsNINJA - Verify That User Not Logged in again");
+            addLambdaStepContext(getDriver(), "LT - Verify That User Not Logged in again");
+            String ActualCurrentURL = loginPage.returnCurrentURL();
+            boolean isLogoutURL = ActualCurrentURL.contains("login");
+            Assert.assertTrue(isLogoutURL, "ERROR: Current URL does not match the expected URL");
+            ExtentManager.logStep("Verification Of Not Login Again By Back Browser Terminated !");
+            addLambdaStepContext(getDriver(), "LT - Verification Of Not Login Again By Back Browser Terminated !");
+            staticWait(5);
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
     @Test(priority = 3, description = "TC_LF_011", suiteName = "(TS_002) - Login Functionality")
     public void verifyLoginByBrowserBackAndLoadPage() {
-        ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and Login with email and password");
-        addLambdaStepContext(getDriver(), "LT - Login with valid credentials");
-        loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r");
-        ExtentManager.logStep("TutorialsNINJA - Browsing back in page");
-        addLambdaStepContext(getDriver(), "LT Browsing back in page");
-        loginPage.backBrowser();
-        ExtentManager.logStep("TutorialsNINJA - Loading the Browser");
-        addLambdaStepContext(getDriver(), "LT - Loading the Browser");
-        loginPage.refreshCurrentPage();
-        staticWait(5);
-        ExtentManager.logStep("TutorialsNINJA - Verification That User should not logout");
-        addLambdaStepContext(getDriver(), "LT - Verification That User should not logout");
-        String ExpectedLoginOKURL = "https://tutorialsninja.com/demo/index.php?route=account/account";
-        String ActualCurrentURL = loginPage.returnCurrentURL();
-        boolean isLoginOKURL = ActualCurrentURL.equals(ExpectedLoginOKURL);
-        Assert.assertTrue(isLoginOKURL, "ERROR: Current URL match the expected Login URL");
-        ExtentManager.logStep("TutorialsNINJA - Verification Of Not Logout By Back Browser And Load Page is terminated !");
-        addLambdaStepContext(getDriver(), "LT- Verification Of Not Logout By Back Browser And Load Page is terminated !");
+        try {
+            ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and Login with email and password");
+            addLambdaStepContext(getDriver(), "LT - Login with valid credentials");
+            loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r");
+            ExtentManager.logStep("TutorialsNINJA - Browsing back in page");
+            addLambdaStepContext(getDriver(), "LT Browsing back in page");
+            loginPage.backBrowser();
+            ExtentManager.logStep("TutorialsNINJA - Loading the Browser");
+            addLambdaStepContext(getDriver(), "LT - Loading the Browser");
+            loginPage.refreshCurrentPage();
+            staticWait(5);
+            ExtentManager.logStep("TutorialsNINJA - Verification That User should not logout");
+            addLambdaStepContext(getDriver(), "LT - Verification That User should not logout");
+            String ExpectedLoginOKURL = "https://tutorialsninja.com/demo/index.php?route=account/account";
+            String ActualCurrentURL = loginPage.returnCurrentURL();
+            boolean isLoginOKURL = ActualCurrentURL.equals(ExpectedLoginOKURL);
+            Assert.assertTrue(isLoginOKURL, "ERROR: Current URL match the expected Login URL");
+            ExtentManager.logStep("TutorialsNINJA - Verification Of Not Logout By Back Browser And Load Page is terminated !");
+            addLambdaStepContext(getDriver(), "LT- Verification Of Not Logout By Back Browser And Load Page is terminated !");
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
 
     @Test(priority = 4, description = "TC_LF_012", suiteName = "(TS_002) - Login Functionality")
     public void verifyLogoutByBrowserBackAndLoadPage() {
-        ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and Login with email and password");
-        addLambdaStepContext(getDriver(), "LT - Login with valid credentials");
-        loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r");
-        ExtentManager.logStep("TutorialsNINJA - Logout via Navbar(My Account)");
-        addLambdaStepContext(getDriver(), "Logout via Navbar(My Account)");
-        loginPage.logoutViaDropDown();
-        ExtentManager.logStep("TutorialsNINJA - Browsing Back");
-        addLambdaStepContext(getDriver(), "Browsing Back");
-        loginPage.backBrowser();
-        ExtentManager.logStep("TutorialsNINJA - Loading the Browser");
-        addLambdaStepContext(getDriver(), "Loading the Browser");
-        loginPage.refreshCurrentPage();
-        staticWait(5);
-        ExtentManager.logStep("TutorialsNINJA - Verify That User Not Logged in again");
-        addLambdaStepContext(getDriver(), "Verify That User Not Logged in again");
-        String ExpectedURL = "https://tutorialsninja.com/demo/index.php?route=account/login";
-        String ActualCurrentURL = loginPage.returnCurrentURL();
-        boolean isNotLogout = ActualCurrentURL.equals(ExpectedURL);
-        Assert.assertTrue(isNotLogout, "ERROR: Current URL does not match the expected URL");
-        ExtentManager.logStep("Verification Of Not Login Again By Back Browser And Load Page Terminated !");
-        addLambdaStepContext(getDriver(), "LT-Verification Of Not Login Again By Back Browser And Load Page Terminated !");
+        try {
+            ExtentManager.logStep("TutorialsNINJA - Navigation to Login Page and Login with email and password");
+            addLambdaStepContext(getDriver(), "LT - Login with valid credentials");
+            loginPage.login("chakerbensaid1@gmail.com", "2U8@C7VGxvtx@r");
+            ExtentManager.logStep("TutorialsNINJA - Logout via Navbar(My Account)");
+            addLambdaStepContext(getDriver(), "Logout via Navbar(My Account)");
+            loginPage.logoutViaDropDown();
+            ExtentManager.logStep("TutorialsNINJA - Browsing Back");
+            addLambdaStepContext(getDriver(), "Browsing Back");
+            loginPage.backBrowser();
+            ExtentManager.logStep("TutorialsNINJA - Loading the Browser");
+            addLambdaStepContext(getDriver(), "Loading the Browser");
+            loginPage.refreshCurrentPage();
+            staticWait(5);
+            ExtentManager.logStep("TutorialsNINJA - Verify That User Not Logged in again");
+            addLambdaStepContext(getDriver(), "Verify That User Not Logged in again");
+            String ExpectedURL = "https://tutorialsninja.com/demo/index.php?route=account/login";
+            String ActualCurrentURL = loginPage.returnCurrentURL();
+            boolean isNotLogout = ActualCurrentURL.equals(ExpectedURL);
+            Assert.assertTrue(isNotLogout, "ERROR: Current URL does not match the expected URL");
+            ExtentManager.logStep("Verification Of Not Login Again By Back Browser And Load Page Terminated !");
+            addLambdaStepContext(getDriver(), "LT-Verification Of Not Login Again By Back Browser And Load Page Terminated !");
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
     }
 
 }

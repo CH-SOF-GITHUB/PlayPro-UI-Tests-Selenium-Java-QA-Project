@@ -7776,3 +7776,900 @@ Session ID: 3fc7ec21843f90db33541b783809d1e4
 2026-09-21 11:25:49 [TestNG-tests-1] INFO  ActionDriver - Actual Text: [My Account] match to -----> Expected Text Value: [My Account]
 2026-09-21 11:25:49 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
 2026-09-21 11:25:49 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests7
+2026-09-21 12:24:19 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 12:24:19 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 12:24:30 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 12:24:39 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 12:24:39 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 21
+2026-09-21 12:24:40 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 12:26:08 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 12:26:09 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 12:26:12 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 12:26:18 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 12:26:18 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-21 12:26:19 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:26:19 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 12:26:19 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:26:19 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 12:26:20 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:26:22 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 12:26:22 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:26:22 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:26:23 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 12:26:23 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 12:26:23 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:26:23 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 12:26:23 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:26:24 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 12:26:24 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 12:26:25 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:26:25 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 12:26:25 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:26:26 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Register ']
+2026-09-21 12:26:26 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/register
+2026-09-21 12:26:26 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 12:43:40 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 12:43:42 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 12:43:48 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 12:43:54 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 12:43:54 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-21 12:43:54 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 12:43:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:43:55 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 12:43:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:43:55 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 12:43:56 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:43:57 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 12:43:57 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:43:57 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:43:58 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 12:43:58 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 12:43:58 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:43:58 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:43:58 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 12:43:58 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:44:00 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 12:44:00 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 12:44:00 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:44:00 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:44:00 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 12:44:00 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:44:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 12:44:01 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 12:44:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:44:01 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:44:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Components ']
+2026-09-21 12:44:02 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 12:46:01 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 12:46:01 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 12:46:05 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 12:46:11 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 12:46:11 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-21 12:46:11 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 12:46:11 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:46:11 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 12:46:11 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:46:12 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 12:46:12 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:46:14 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 12:46:14 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:46:14 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:46:14 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 12:46:14 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 12:46:14 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:46:15 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:46:15 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 12:46:15 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:46:16 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 12:46:16 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 12:46:16 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:46:16 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:46:16 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 12:46:16 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:46:17 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 12:46:17 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 12:46:17 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:46:43 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 12:52:35 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 12:52:36 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 12:52:40 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 12:52:46 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 12:52:46 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-21 12:52:46 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 12:52:46 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:52:46 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 12:52:47 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:52:47 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 12:52:47 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:52:49 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 12:52:49 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:52:49 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:52:50 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 12:52:50 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 12:52:50 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:52:50 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:52:50 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 12:52:50 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:52:52 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 12:52:52 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 12:52:52 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:52:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:52:52 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 12:52:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:52:53 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 12:52:53 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 12:52:53 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:53:19 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 12:55:27 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 12:55:27 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 12:55:30 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 12:55:37 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 12:55:37 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-21 12:55:37 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 12:55:38 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:55:38 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 12:55:38 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:55:39 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 12:55:39 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:55:41 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 12:55:41 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:55:41 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:55:41 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 12:55:41 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 12:55:41 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:55:42 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:55:42 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 12:55:42 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:55:44 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 12:55:44 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 12:55:44 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:55:44 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:55:44 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 12:55:44 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 12:55:44 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 12:55:44 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 12:55:44 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 12:56:10 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 12:59:47 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 12:59:47 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 12:59:51 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 12:59:59 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 12:59:59 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 22
+2026-09-21 13:00:00 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:00:14 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:00:14 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:00:14 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:00:19 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 13:00:19 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:00:22 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 13:00:22 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:00:22 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:00:23 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 13:00:23 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 13:00:23 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:00:23 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:00:24 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 13:00:24 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:00:26 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 13:00:26 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 13:00:26 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:00:26 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:00:26 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 13:00:26 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:00:28 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 13:00:28 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 13:00:28 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:00:53 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 13:01:40 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 13:01:41 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 13:01:44 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 13:01:53 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:01:53 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-21 13:01:53 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:01:53 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:01:53 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:01:53 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:01:54 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 13:01:54 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:01:56 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 13:01:56 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:01:56 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:01:57 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 13:01:57 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 13:01:57 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:01:57 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:01:57 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 13:01:57 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:02:00 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 13:02:00 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 13:02:00 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:02:00 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:02:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 13:02:01 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:02:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 13:02:01 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 13:02:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:02:01 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:02:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:02:02 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:02:02 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Register ']
+2026-09-21 13:02:02 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/register
+2026-09-21 13:02:02 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:02:02 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:02:03 [TestNG-tests-1] INFO  ActionDriver - Clicked on element using JS : Element with text ' About Us '
+2026-09-21 13:02:03 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=information/information&information_id=4
+2026-09-21 13:02:04 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 13:04:28 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 13:04:28 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 13:04:31 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 13:04:42 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:04:42 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-21 13:04:43 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:04:43 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:04:43 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:04:43 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:04:44 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 13:04:44 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:04:47 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 13:04:47 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:04:47 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:04:48 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 13:04:48 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 13:04:48 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:04:48 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:04:48 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 13:04:48 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:04:51 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 13:04:51 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 13:04:51 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:04:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:04:52 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 13:04:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:04:52 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 13:04:52 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 13:04:53 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:05:19 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 13:14:11 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 13:14:11 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 13:14:16 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 13:14:23 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:14:23 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-21 13:14:23 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:14:23 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:14:23 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:14:24 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:14:24 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 13:14:24 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:14:27 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 13:14:27 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:14:27 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:14:28 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 13:14:28 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 13:14:28 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:14:28 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:14:28 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 13:14:29 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:14:31 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 13:14:31 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 13:14:31 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:14:31 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:14:31 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 13:14:31 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:14:32 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 13:14:32 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 13:14:32 [TestNG-tests-1] INFO  ActionDriver - Opening of page with url https://tutorialsninja.com/demo/index.php?route=account/login: 
+2026-09-21 13:14:58 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 13:17:38 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 13:17:38 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 13:17:41 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 13:17:47 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:17:47 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-21 13:17:48 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:17:48 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:17:48 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:17:48 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:17:48 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 13:17:49 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:17:50 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 13:17:50 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:17:51 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:17:51 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 13:17:51 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 13:17:51 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:17:51 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:17:51 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 13:17:51 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:17:53 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 13:17:53 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 13:17:53 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:17:53 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:17:53 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 13:17:53 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:17:54 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 13:17:54 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 13:17:55 [TestNG-tests-1] INFO  ActionDriver - Opening of page with url https://tutorialsninja.com/demo/index.php?route=account/login: 
+2026-09-21 13:17:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:17:56 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Tablets ']
+2026-09-21 13:17:56 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=57
+2026-09-21 13:17:56 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:17:56 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:17:57 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:17:57 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:17:57 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Register ']
+2026-09-21 13:17:57 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/register
+2026-09-21 13:17:57 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:17:57 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:17:58 [TestNG-tests-1] INFO  ActionDriver - Clicked on element using JS : Element with text ' About Us '
+2026-09-21 13:17:58 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=information/information&information_id=4
+2026-09-21 13:17:59 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 13:18:44 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 13:18:45 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 13:18:49 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 13:18:55 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:18:55 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 22
+2026-09-21 13:18:55 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:18:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:18:56 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:18:56 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:18:56 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 13:18:57 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:18:58 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 13:18:58 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:18:58 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:18:59 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 13:18:59 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 13:18:59 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:18:59 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:18:59 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 13:18:59 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:19:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 13:19:01 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 13:19:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:19:01 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:19:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 13:19:01 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:19:02 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 13:19:02 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 13:19:02 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:19:02 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:19:03 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Tablets ']
+2026-09-21 13:19:03 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=57
+2026-09-21 13:19:03 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:19:03 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:19:04 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:19:04 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:19:04 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Register ']
+2026-09-21 13:19:04 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/register
+2026-09-21 13:19:04 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:19:04 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:19:05 [TestNG-tests-1] INFO  ActionDriver - Clicked on element using JS : Element with text ' About Us '
+2026-09-21 13:19:05 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=information/information&information_id=4
+2026-09-21 13:19:06 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 13:23:42 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 13:23:42 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 13:23:45 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 13:23:51 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:23:51 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-21 13:23:51 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:23:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:23:52 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:23:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:23:53 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 13:23:53 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:23:55 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 13:23:55 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:23:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:23:56 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 13:23:56 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 13:23:56 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:23:56 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:23:56 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 13:23:56 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:23:58 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 13:23:58 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 13:23:58 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:23:58 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:23:59 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 13:23:59 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:23:59 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 13:23:59 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 13:23:59 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:24:00 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:24:00 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Components ']
+2026-09-21 13:24:00 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 13:25:39 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 13:25:39 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 13:25:49 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 13:25:55 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:25:55 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 22
+2026-09-21 13:25:55 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:25:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:25:55 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:25:56 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:25:56 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 13:25:56 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:25:58 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 13:25:58 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:25:58 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:25:58 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 13:25:58 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 13:25:58 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:25:59 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:25:59 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 13:25:59 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:26:00 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 13:26:00 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 13:26:00 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:26:00 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:26:00 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 13:26:01 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:26:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 13:26:01 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 13:26:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:26:01 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:26:02 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Components ']
+2026-09-21 13:26:02 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:26:03 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Mice and Trackballs (0) ']
+2026-09-21 13:26:03 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=25_29
+2026-09-21 13:26:03 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:26:03 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:26:04 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Tablets ']
+2026-09-21 13:26:04 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=57
+2026-09-21 13:26:04 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:26:05 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:26:05 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:26:05 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:26:05 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Register ']
+2026-09-21 13:26:05 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/register
+2026-09-21 13:26:05 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:26:05 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:26:07 [TestNG-tests-1] INFO  ActionDriver - Clicked on element using JS : Element with text ' About Us '
+2026-09-21 13:26:07 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=information/information&information_id=4
+2026-09-21 13:26:08 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 13:32:44 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 13:32:44 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 13:32:48 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 13:32:57 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:32:57 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-21 13:32:57 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:32:57 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:32:57 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:32:57 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:32:58 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 13:32:58 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:00 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 13:33:00 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:33:00 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 13:33:01 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 13:33:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:33:01 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 13:33:01 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:04 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 13:33:04 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 13:33:04 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:33:04 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:04 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 13:33:05 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:05 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 13:33:05 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 13:33:05 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:33:05 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:05 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Components ']
+2026-09-21 13:33:05 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:06 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Mice and Trackballs (0) ']
+2026-09-21 13:33:06 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=25_29
+2026-09-21 13:33:06 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:33:06 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:07 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Tablets ']
+2026-09-21 13:33:07 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=57
+2026-09-21 13:33:07 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:33:08 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:08 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Software ']
+2026-09-21 13:33:08 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=17
+2026-09-21 13:33:08 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:33:08 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:09 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Phones & PDAs ']
+2026-09-21 13:33:09 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=24
+2026-09-21 13:33:09 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:33:09 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:11 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Cameras ']
+2026-09-21 13:33:11 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=33
+2026-09-21 13:33:11 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:33:11 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:11 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' MP3 Players ']
+2026-09-21 13:33:11 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:12 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' test 11 (0) ']
+2026-09-21 13:33:12 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=34_43
+2026-09-21 13:33:12 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:33:12 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:12 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:33:12 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:12 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Register ']
+2026-09-21 13:33:12 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/register
+2026-09-21 13:33:12 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:33:12 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:33:14 [TestNG-tests-1] INFO  ActionDriver - Clicked on element using JS : Element with text ' About Us '
+2026-09-21 13:33:14 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=information/information&information_id=4
+2026-09-21 13:33:15 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 13:52:36 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 13:52:36 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 13:52:39 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 13:52:46 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:52:46 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-21 13:52:46 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 13:52:47 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:52:47 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:52:47 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
+2026-09-21 13:52:47 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:52:48 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 13:52:48 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [728e2f376e657f3520c50f6f8f01600b, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.0BE1346C814457684B1288FBC47C4788.d.AABC5F7D5E5EB3B187E5DFCADF163CE6.e.267}], script=arguments[0].style.border = ''}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50437}, goog:processID: 17492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50437/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 728e2f376e657f3520c50f6f8f01600b
+2026-09-21 13:52:48 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:52:50 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 13:52:50 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [728e2f376e657f3520c50f6f8f01600b, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.0BE1346C814457684B1288FBC47C4788.d.A708B95CAFF91AF30DAF747F32690854.e.285}], script=arguments[0].style.border = ''}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50437}, goog:processID: 17492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50437/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 728e2f376e657f3520c50f6f8f01600b
+2026-09-21 13:52:50 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:52:50 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:52:50 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 13:52:50 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [728e2f376e657f3520c50f6f8f01600b, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.0BE1346C814457684B1288FBC47C4788.d.A708B95CAFF91AF30DAF747F32690854.e.314}], script=arguments[0].style.border = ''}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50437}, goog:processID: 17492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50437/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 728e2f376e657f3520c50f6f8f01600b
+2026-09-21 13:52:50 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 13:52:51 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:52:51 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:52:51 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 13:52:51 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
+2026-09-21 13:52:51 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:52:54 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 13:52:54 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [728e2f376e657f3520c50f6f8f01600b, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.0BE1346C814457684B1288FBC47C4788.d.A708B95CAFF91AF30DAF747F32690854.e.355}], script=arguments[0].style.border = ''}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50437}, goog:processID: 17492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50437/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 728e2f376e657f3520c50f6f8f01600b
+2026-09-21 13:52:54 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 13:52:54 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:52:54 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:52:54 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 13:52:54 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
+2026-09-21 13:52:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:52:55 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 13:52:55 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [728e2f376e657f3520c50f6f8f01600b, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.0BE1346C814457684B1288FBC47C4788.d.A708B95CAFF91AF30DAF747F32690854.e.386}], script=arguments[0].style.border = ''}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50437}, goog:processID: 17492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50437/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 728e2f376e657f3520c50f6f8f01600b
+2026-09-21 13:52:55 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 13:52:55 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:52:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:52:55 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Components ']
+2026-09-21 13:52:55 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
+2026-09-21 13:52:56 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:52:56 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Mice and Trackballs (0) ']
+2026-09-21 13:52:56 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [728e2f376e657f3520c50f6f8f01600b, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.0BE1346C814457684B1288FBC47C4788.d.A708B95CAFF91AF30DAF747F32690854.e.393}], script=arguments[0].style.border = ''}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50437}, goog:processID: 17492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50437/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 728e2f376e657f3520c50f6f8f01600b
+2026-09-21 13:52:56 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=25_29
+2026-09-21 13:52:56 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:52:56 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:52:59 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Tablets ']
+2026-09-21 13:52:59 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [728e2f376e657f3520c50f6f8f01600b, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.0BE1346C814457684B1288FBC47C4788.d.A708B95CAFF91AF30DAF747F32690854.e.326}], script=arguments[0].style.border = ''}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50437}, goog:processID: 17492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50437/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 728e2f376e657f3520c50f6f8f01600b
+2026-09-21 13:52:59 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=57
+2026-09-21 13:52:59 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:52:59 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:53:00 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Software ']
+2026-09-21 13:53:00 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [728e2f376e657f3520c50f6f8f01600b, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.0BE1346C814457684B1288FBC47C4788.d.A708B95CAFF91AF30DAF747F32690854.e.328}], script=arguments[0].style.border = ''}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50437}, goog:processID: 17492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50437/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 728e2f376e657f3520c50f6f8f01600b
+2026-09-21 13:53:00 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=17
+2026-09-21 13:53:00 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:53:00 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:53:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Phones & PDAs ']
+2026-09-21 13:53:01 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [728e2f376e657f3520c50f6f8f01600b, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.0BE1346C814457684B1288FBC47C4788.d.A708B95CAFF91AF30DAF747F32690854.e.330}], script=arguments[0].style.border = ''}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50437}, goog:processID: 17492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50437/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 728e2f376e657f3520c50f6f8f01600b
+2026-09-21 13:53:01 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=24
+2026-09-21 13:53:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:53:01 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:53:02 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Cameras ']
+2026-09-21 13:53:02 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [728e2f376e657f3520c50f6f8f01600b, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.0BE1346C814457684B1288FBC47C4788.d.A708B95CAFF91AF30DAF747F32690854.e.332}], script=arguments[0].style.border = ''}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50437}, goog:processID: 17492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50437/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 728e2f376e657f3520c50f6f8f01600b
+2026-09-21 13:53:02 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=33
+2026-09-21 13:53:02 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:53:02 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:53:02 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' MP3 Players ']
+2026-09-21 13:53:02 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
+2026-09-21 13:53:02 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:53:03 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' test 11 (0) ']
+2026-09-21 13:53:03 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [728e2f376e657f3520c50f6f8f01600b, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.0BE1346C814457684B1288FBC47C4788.d.A708B95CAFF91AF30DAF747F32690854.e.432}], script=arguments[0].style.border = ''}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50437}, goog:processID: 17492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50437/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 728e2f376e657f3520c50f6f8f01600b
+2026-09-21 13:53:03 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=34_43
+2026-09-21 13:53:03 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:53:03 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:53:03 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 13:53:03 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
+2026-09-21 13:53:03 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:53:04 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Register ']
+2026-09-21 13:53:04 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [728e2f376e657f3520c50f6f8f01600b, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.0BE1346C814457684B1288FBC47C4788.d.A708B95CAFF91AF30DAF747F32690854.e.448}], script=arguments[0].style.border = ''}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50437}, goog:processID: 17492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50437/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 728e2f376e657f3520c50f6f8f01600b
+2026-09-21 13:53:04 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/register
+2026-09-21 13:53:04 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 13:53:04 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 13:53:05 [TestNG-tests-1] INFO  ActionDriver - Clicked on element using JS : Element with text ' About Us '
+2026-09-21 13:53:05 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [728e2f376e657f3520c50f6f8f01600b, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.0BE1346C814457684B1288FBC47C4788.d.A708B95CAFF91AF30DAF747F32690854.e.476}], script=arguments[0].style.border = ''}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50437}, goog:processID: 17492, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50437/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 728e2f376e657f3520c50f6f8f01600b
+2026-09-21 13:53:05 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=information/information&information_id=4
+2026-09-21 13:53:05 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8
+2026-09-21 14:26:19 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-21 14:26:19 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests8
+2026-09-21 14:26:30 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-21 14:26:38 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 14:26:38 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 22
+2026-09-21 14:26:38 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-21 14:26:38 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:26:38 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 14:26:38 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
+2026-09-21 14:26:38 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:26:39 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Login ']
+2026-09-21 14:26:39 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8627fdc925e0f831da6f0fa0004e4c1c, executeScript {script=arguments[0].style.border = '', args=[{element-6066-11e4-a52e-4f735466cecf=f.CBB034E71A7457CDA427A81F820242F5.d.4E1339333EC58224C3E20253FEBEDC82.e.275}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62794}, goog:processID: 18028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62794/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8627fdc925e0f831da6f0fa0004e4c1c
+2026-09-21 14:26:39 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:26:41 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Continue ']
+2026-09-21 14:26:41 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8627fdc925e0f831da6f0fa0004e4c1c, executeScript {script=arguments[0].style.border = '', args=[{element-6066-11e4-a52e-4f735466cecf=f.CBB034E71A7457CDA427A81F820242F5.d.EE538BC55CBF45E0FAB9F13CC1B693E8.e.290}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62794}, goog:processID: 18028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62794/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8627fdc925e0f831da6f0fa0004e4c1c
+2026-09-21 14:26:41 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 14:26:42 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:26:44 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Forgotten Password ']
+2026-09-21 14:26:44 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8627fdc925e0f831da6f0fa0004e4c1c, executeScript {script=arguments[0].style.border = '', args=[{element-6066-11e4-a52e-4f735466cecf=f.CBB034E71A7457CDA427A81F820242F5.d.EE538BC55CBF45E0FAB9F13CC1B693E8.e.319}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62794}, goog:processID: 18028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62794/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8627fdc925e0f831da6f0fa0004e4c1c
+2026-09-21 14:26:44 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/forgotten
+2026-09-21 14:26:44 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 14:26:46 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:26:46 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Desktops ']
+2026-09-21 14:26:46 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
+2026-09-21 14:26:46 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:26:49 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Show AllDesktops ']
+2026-09-21 14:26:49 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8627fdc925e0f831da6f0fa0004e4c1c, executeScript {script=arguments[0].style.border = '', args=[{element-6066-11e4-a52e-4f735466cecf=f.CBB034E71A7457CDA427A81F820242F5.d.EE538BC55CBF45E0FAB9F13CC1B693E8.e.361}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62794}, goog:processID: 18028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62794/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8627fdc925e0f831da6f0fa0004e4c1c
+2026-09-21 14:26:49 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=20
+2026-09-21 14:26:49 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 14:26:49 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:26:50 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Laptops & Notebooks ']
+2026-09-21 14:26:50 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
+2026-09-21 14:26:50 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:26:51 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Windows (0) ']
+2026-09-21 14:26:51 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8627fdc925e0f831da6f0fa0004e4c1c, executeScript {script=arguments[0].style.border = '', args=[{element-6066-11e4-a52e-4f735466cecf=f.CBB034E71A7457CDA427A81F820242F5.d.EE538BC55CBF45E0FAB9F13CC1B693E8.e.393}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62794}, goog:processID: 18028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62794/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8627fdc925e0f831da6f0fa0004e4c1c
+2026-09-21 14:26:51 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=18_45
+2026-09-21 14:26:51 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 14:26:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:26:52 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Components ']
+2026-09-21 14:26:52 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
+2026-09-21 14:26:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:26:53 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Mice and Trackballs (0) ']
+2026-09-21 14:26:53 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8627fdc925e0f831da6f0fa0004e4c1c, executeScript {script=arguments[0].style.border = '', args=[{element-6066-11e4-a52e-4f735466cecf=f.CBB034E71A7457CDA427A81F820242F5.d.EE538BC55CBF45E0FAB9F13CC1B693E8.e.401}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62794}, goog:processID: 18028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62794/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8627fdc925e0f831da6f0fa0004e4c1c
+2026-09-21 14:26:53 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=25_29
+2026-09-21 14:26:53 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 14:26:54 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:26:55 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Tablets ']
+2026-09-21 14:26:55 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8627fdc925e0f831da6f0fa0004e4c1c, executeScript {script=arguments[0].style.border = '', args=[{element-6066-11e4-a52e-4f735466cecf=f.CBB034E71A7457CDA427A81F820242F5.d.EE538BC55CBF45E0FAB9F13CC1B693E8.e.331}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62794}, goog:processID: 18028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62794/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8627fdc925e0f831da6f0fa0004e4c1c
+2026-09-21 14:26:55 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=57
+2026-09-21 14:26:56 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 14:26:56 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:26:59 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Software ']
+2026-09-21 14:26:59 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8627fdc925e0f831da6f0fa0004e4c1c, executeScript {script=arguments[0].style.border = '', args=[{element-6066-11e4-a52e-4f735466cecf=f.CBB034E71A7457CDA427A81F820242F5.d.EE538BC55CBF45E0FAB9F13CC1B693E8.e.333}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62794}, goog:processID: 18028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62794/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8627fdc925e0f831da6f0fa0004e4c1c
+2026-09-21 14:26:59 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=17
+2026-09-21 14:26:59 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 14:27:00 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:27:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Phones & PDAs ']
+2026-09-21 14:27:01 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8627fdc925e0f831da6f0fa0004e4c1c, executeScript {script=arguments[0].style.border = '', args=[{element-6066-11e4-a52e-4f735466cecf=f.CBB034E71A7457CDA427A81F820242F5.d.EE538BC55CBF45E0FAB9F13CC1B693E8.e.335}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62794}, goog:processID: 18028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62794/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8627fdc925e0f831da6f0fa0004e4c1c
+2026-09-21 14:27:01 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=24
+2026-09-21 14:27:01 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 14:27:01 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:27:03 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Cameras ']
+2026-09-21 14:27:03 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8627fdc925e0f831da6f0fa0004e4c1c, executeScript {script=arguments[0].style.border = '', args=[{element-6066-11e4-a52e-4f735466cecf=f.CBB034E71A7457CDA427A81F820242F5.d.EE538BC55CBF45E0FAB9F13CC1B693E8.e.337}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62794}, goog:processID: 18028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62794/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8627fdc925e0f831da6f0fa0004e4c1c
+2026-09-21 14:27:03 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=33
+2026-09-21 14:27:03 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 14:27:04 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:27:04 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' MP3 Players ']
+2026-09-21 14:27:04 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
+2026-09-21 14:27:04 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:27:05 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' test 11 (0) ']
+2026-09-21 14:27:05 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8627fdc925e0f831da6f0fa0004e4c1c, executeScript {script=arguments[0].style.border = '', args=[{element-6066-11e4-a52e-4f735466cecf=f.CBB034E71A7457CDA427A81F820242F5.d.9DEA3B31C5746084D5F97AE584A4C210.e.479}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62794}, goog:processID: 18028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62794/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8627fdc925e0f831da6f0fa0004e4c1c
+2026-09-21 14:27:05 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=product/category&path=34_43
+2026-09-21 14:27:05 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 14:27:05 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:27:05 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' My Account ']
+2026-09-21 14:27:05 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
+2026-09-21 14:27:05 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:27:06 [TestNG-tests-1] INFO  ActionDriver - Clicked on element  ----------------> : [Element with text ' Register ']
+2026-09-21 14:27:06 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8627fdc925e0f831da6f0fa0004e4c1c, executeScript {script=arguments[0].style.border = '', args=[{element-6066-11e4-a52e-4f735466cecf=f.CBB034E71A7457CDA427A81F820242F5.d.9DEA3B31C5746084D5F97AE584A4C210.e.494}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62794}, goog:processID: 18028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62794/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8627fdc925e0f831da6f0fa0004e4c1c
+2026-09-21 14:27:06 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/register
+2026-09-21 14:27:06 [TestNG-tests-1] INFO  ActionDriver - Clicked on Back Browser Button
+2026-09-21 14:27:06 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-21 14:27:08 [TestNG-tests-1] INFO  ActionDriver - Clicked on element using JS : Element with text ' About Us '
+2026-09-21 14:27:08 [TestNG-tests-1] DEBUG ActionDriver - Unable to reset border color on web element | Error: stale element reference: stale element not found
+  (Session info: chrome=153.0.8010.52)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8627fdc925e0f831da6f0fa0004e4c1c, executeScript {script=arguments[0].style.border = '', args=[{element-6066-11e4-a52e-4f735466cecf=f.CBB034E71A7457CDA427A81F820242F5.d.9DEA3B31C5746084D5F97AE584A4C210.e.522}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 153.0.8010.52, chrome: {chromedriverVersion: 153.0.8010.52 (78e5e45d4bb4..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62794}, goog:processID: 18028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62794/devtoo..., se:cdpVersion: 153.0.8010.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8627fdc925e0f831da6f0fa0004e4c1c
+2026-09-21 14:27:08 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=information/information&information_id=4
+2026-09-21 14:27:09 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests8

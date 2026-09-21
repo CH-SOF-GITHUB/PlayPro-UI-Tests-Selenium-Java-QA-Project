@@ -106,19 +106,24 @@ public class ActionDriver {
 
     // Method to click on element
     public void click(By by) {
+        WebElement element = waitForElementToBeClickable(by);
         try {
-            WebElement element = waitForElementToBeClickable(by);
             String description = getElementDescription(by, element);
             applyBorder(by, "green");
             element.click();
 
             ExtentManager.logStep("Clicked on element  ---> : " + description);
             loggr.info("Clicked on element  ----------------> : [{}]", description);
+
+            resetBorder(element);
         } catch (Exception e) {
-            applyBorder(by, "red");
-            String description = getElementDescription(by, null);
-            ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to click on this element !", description + "_unable_to_click");
-            loggr.error("Element is not clickable [{}] | Error: {}", description, e.getMessage());
+            if (element != null) {
+                applyBorder(by, "red");
+                String description = getElementDescription(by, null);
+                ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to click on this element !", description + "_unable_to_click");
+                resetBorder(element);
+            }
+            loggr.error("Element is not clickable [{}] | Error: {}", getElementDescription(by), e.getMessage());
             // AJOUTER CECI pour faire échouer le test TestNG:
             // Assert.fail("Test échoué : Impossible de cliquer sur l'élément [" + description + "]", e);
         }
@@ -191,8 +196,8 @@ public class ActionDriver {
 
     // Method to compare Two Text
     public boolean compareText(By by, String expectedText) {
+        WebElement element = waitForElementToBeVisible(by);
         try {
-            WebElement element = waitForElementToBeVisible(by);
             String actualText = element.getText();
 
             if (expectedText.equals(actualText)) {
@@ -213,7 +218,11 @@ public class ActionDriver {
                 return false;
             }
         } catch (Exception e) {
-            applyBorder(by, "red");
+            if (element != null) {
+                applyBorder(by, "red");
+                ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Echec comparison 2 Texts", "Error_" + getElementDescription(by) + "_not_be_compared");
+                resetBorder(element);
+            }
             loggr.error("Unable to compare This Element [{}] | Error: {}", getElementDescription(by, null), e.getMessage());
             return false;
         }
@@ -401,14 +410,20 @@ public class ActionDriver {
     }
 
     public void clickUsingJS(By by) {
+        WebElement element = waitForElementToBeVisible(by);
         try {
-            WebElement element = waitForElementToBeVisible(by);
             applyBorder(by, "green");
             String description = getElementDescription(by, element);
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
             loggr.info("Clicked on element using JS : {}", description);
+            ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Element clicked using JS", "Element_" + description + "_clicked_using_js");
+            resetBorder(element);
         } catch (Exception e) {
-            applyBorder(by, "red");
+            if (element != null) {
+                applyBorder(by, "red");
+                ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to click using JS element!", getElementDescription(by, element) + "_unable_to_click");
+                resetBorder(element);
+            }
             loggr.error("Unable to click using JS element: {}", e.getMessage());
         }
     }
@@ -473,6 +488,15 @@ public class ActionDriver {
             loggr.info("Loading of page in the browser !");
         } catch (Exception e) {
             loggr.info("Unable to load a browser : {}", e.getMessage());
+        }
+    }
+
+    public void openPage(String url) {
+        try {
+            driver.get(url);
+            loggr.info("Opening of page with url {}: ", url);
+        } catch (Exception e) {
+            loggr.info("Unable to open a page with current url {} : ERROR: {}", url, e.getMessage());
         }
     }
 
