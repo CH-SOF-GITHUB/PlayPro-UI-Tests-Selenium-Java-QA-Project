@@ -32,7 +32,7 @@ public class LoginPage {
     private final By ForgetPwdTitle = By.xpath("//div[@id='content']//h1");
 
     // Locate Web Element depending on register new customer
-    private final By ContinueBtn = By.xpath("//a[normalize-space()='Continue']");
+    private final By ContinueBtn = By.xpath("//a[contains(@class,'btn-primary') and normalize-space()='Continue']");
 
     // Add Constructor of class page with Singleton Design Pattern
     public LoginPage(WebDriver driver) {
@@ -51,6 +51,10 @@ public class LoginPage {
     public void openLoginPage() {
         actionDriver.click(MyAccountDropDown);
         actionDriver.click(LoginOption);
+    }
+
+    public void openPageWithURL(String url){
+        actionDriver.openPage(url);
     }
 
     // Check if an error message displays or not when login fails
