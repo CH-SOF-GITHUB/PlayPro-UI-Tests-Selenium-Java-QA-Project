@@ -15,10 +15,7 @@ import org.qa.actionDriver.ActionDriver;
 import org.qa.utilities.ExtentManager;
 import org.qa.utilities.LoggerManager;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
 import java.io.FileInputStream;
@@ -222,7 +219,7 @@ public class BaseClass {
 
     @BeforeMethod
     @Parameters({"browser"})
-    public void setup(String browser, Method m) {
+    public void setup(@Optional("chrome") String browser, Method m) {
         loggr.warn("Setting up for ---------------> : {}", this.getClass().getSimpleName());
         // Start the Extent Report:
         // ExtentManager.getReporter();  // This has been implemented in TestListener

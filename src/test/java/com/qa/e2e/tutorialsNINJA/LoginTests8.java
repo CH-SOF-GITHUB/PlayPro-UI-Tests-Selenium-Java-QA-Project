@@ -7,6 +7,7 @@ import org.qa.pages.TutorialsNINJA.LoginPage;
 import org.qa.utilities.ExtentManager;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 
 import static org.qa.utilities.LTStatus.addLambdaStepContext;
@@ -28,8 +29,8 @@ public class LoginTests8 extends BaseClass {
     @Test(priority = 1, description = "Verify user is able to navigate to different pages from Login page")
     public void verifyEnableNavigateToPagesFromLogin() throws InterruptedException {
         // STEP 1: Click on 'My Account' Dropdown
-        ExtentManager.logStep("TutorialsNINJA - Click on 'My Account' Dropdown");
-        addLambdaStepContext(getDriver(), "LT - Click on 'My Account' Dropdown");
+        ExtentManager.logStep("TutorialsNINJA - Click on 'My Account' Dropmenu");
+        addLambdaStepContext(getDriver(), "LT - Click on 'My Account' Dropmenu");
         loginPage.clickOnMyAccountDropmenu();
         // STEP 2: Click on 'Login' option
         ExtentManager.logStep("TutorialsNINJA - Click on 'Login' option");

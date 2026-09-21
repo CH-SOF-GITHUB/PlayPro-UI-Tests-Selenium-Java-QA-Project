@@ -106,26 +106,19 @@ public class ActionDriver {
 
     // Method to click on element
     public void click(By by) {
-        WebElement element = waitForElementToBeClickable(by);
         try {
+            WebElement element = waitForElementToBeClickable(by);
             String description = getElementDescription(by, element);
             applyBorder(by, "green");
             element.click();
-
-            ExtentManager.logStep("Clicked on element  ---> : " + description);
-            loggr.info("Clicked on element  ----------------> : [{}]", description);
-
-            resetBorder(element);
+            ExtentManager.logStep("Clicked on element ---> : " + description);
+            loggr.info("Clicked on element ----------------> : [{}]", description);
+            resetBorder(by);
         } catch (Exception e) {
-            if (element != null) {
-                applyBorder(by, "red");
-                String description = getElementDescription(by, null);
-                ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to click on this element !", description + "_unable_to_click");
-                resetBorder(element);
-            }
-            loggr.error("Element is not clickable [{}] | Error: {}", getElementDescription(by), e.getMessage());
-            // AJOUTER CECI pour faire échouer le test TestNG:
-            // Assert.fail("Test échoué : Impossible de cliquer sur l'élément [" + description + "]", e);
+            applyBorder(by, "red");
+            ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to click on this element !", getElementDescription(by) + "_unable_to_click");
+            resetBorder(by);
+            loggr.error("Element is not clickable [{}] | Error: {}", getElementDescription(by), e.getMessage()); // AJOUTER CECI pour faire échouer le test TestNG: // Assert.fail("Test échoué : Impossible de cliquer sur l'élément [" + description + "]", e);
         }
     }
 
@@ -175,7 +168,7 @@ public class ActionDriver {
                 ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Compare Text!", "Test Verified successfully: " + expectedValue + " equals " + actualValue);
                 // IMPORTANT:
                 // On supprime la bordure après le screenshot intermédiaire.
-                resetBorder(element);
+                resetBorder(by);
                 return true;
             } else {
                 // 1. Appliquer ensuite le bordure rouge
@@ -184,7 +177,7 @@ public class ActionDriver {
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Text Comparison fails!", "Test failed: " + expectedValue + " not equals " + actualValue);
                 // IMPORTANT:
                 // On supprime la bordure après le screenshot intermédiaire.
-                resetBorder(element);
+                resetBorder(by);
                 return false;
             }
         } catch (Exception e) {
@@ -207,21 +200,21 @@ public class ActionDriver {
                 applyBorder(by, "green");
                 loggr.info("Actual Text: [{}] match to -----> Expected Text Value: [{}]", actualText, expectedText);
                 ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Compare Text!", "Test Verified successfully: " + expectedText + " equals " + actualText);
-                resetBorder(element);
+                resetBorder(by);
                 return true;
             } else {
                 // 3. Appliquer ensuite le bordure rouge
                 applyBorder(by, "red");
                 loggr.info("ERROR: Actual Text : [{}] does not match to -----> Expected Text Value: [{}]", actualText, expectedText);
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Text Comparison fails!", "Test failed: " + expectedText + " not equals " + actualText);
-                resetBorder(element);
+                resetBorder(by);
                 return false;
             }
         } catch (Exception e) {
             if (element != null) {
                 applyBorder(by, "red");
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Echec comparison 2 Texts", "Error_" + getElementDescription(by) + "_not_be_compared");
-                resetBorder(element);
+                resetBorder(by);
             }
             loggr.error("Unable to compare This Element [{}] | Error: {}", getElementDescription(by, null), e.getMessage());
             return false;
@@ -396,16 +389,15 @@ public class ActionDriver {
         }
     }
 
-    public void resetBorder(WebElement element) {
+    public void resetBorder(By by) {
+        WebElement element = driver.findElement(by);
         try {
-            if (element != null) {
-                String script = "arguments[0].style.border = ''";
-                ((JavascriptExecutor) driver).executeScript(script, element);
-                loggr.info("Border reset on element !");
-            }
+            String script = "arguments[0].style.border = ''";
+            ((JavascriptExecutor) driver).executeScript(script, element);
+            loggr.info("Border reset on element !");
 
         } catch (Exception e) {
-            loggr.debug("Unable to reset border color on web element | Error: {}", e.getMessage());
+            loggr.debug("Unable to reset border color on web element {} | Error: {}", getElementDescription(by), e.getMessage());
         }
     }
 
@@ -417,12 +409,12 @@ public class ActionDriver {
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
             loggr.info("Clicked on element using JS : {}", description);
             ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Element clicked using JS", "Element_" + description + "_clicked_using_js");
-            resetBorder(element);
+            resetBorder(by);
         } catch (Exception e) {
             if (element != null) {
                 applyBorder(by, "red");
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to click using JS element!", getElementDescription(by, element) + "_unable_to_click");
-                resetBorder(element);
+                resetBorder(by);
             }
             loggr.error("Unable to click using JS element: {}", e.getMessage());
         }

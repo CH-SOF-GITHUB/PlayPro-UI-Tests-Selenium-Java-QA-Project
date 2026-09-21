@@ -32,7 +32,7 @@ public class LoginPage {
     private final By ForgetPwdTitle = By.xpath("//div[@id='content']//h1");
 
     // Locate Web Element depending on register new customer
-    private final By ContinueBtn = By.linkText("Continue");
+    private final By ContinueBtn = By.xpath("//div[@class='well']//a[text()='Continue']");
 
     // Add Constructor of class page with Singleton Design Pattern
     public LoginPage(WebDriver driver) {
@@ -41,9 +41,6 @@ public class LoginPage {
 
     // Login Steps: click en my account, click on login link, type email, type pwd, and click on Login Btn
     public void login(String email, String password) {
-        if (BaseClass.getDriver() == null) {
-            BaseClass.getDriver().get("https://tutorialsninja.com/demo/");
-        }
         actionDriver.click(MyAccountDropDown);
         actionDriver.click(LoginOption);
         actionDriver.enter(EmailField, email);
@@ -147,7 +144,6 @@ public class LoginPage {
         // return back to Login page
         Thread.sleep(2);
     }
-
 
     // Method to get Login page URL
     public String returnCurrentURL() {
