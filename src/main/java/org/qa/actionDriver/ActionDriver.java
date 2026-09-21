@@ -457,12 +457,10 @@ public class ActionDriver {
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
             loggr.info("Clicked on element using JS : {}", description);
             ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Element clicked using JS", "Element_" + description + "_clicked_using_js");
-            resetBorder(element);
         } catch (Exception e) {
             if (element != null) {
                 applyBorder(element, "red");
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to click using JS element!", getElementDescription(by, element) + "_unable_to_click");
-                resetBorder(element);
             }
             loggr.error("Unable to click using JS element: {}", e.getMessage());
         }
