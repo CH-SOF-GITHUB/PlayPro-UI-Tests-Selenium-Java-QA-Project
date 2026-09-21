@@ -32,7 +32,7 @@ public class LoginPage {
     private final By ForgetPwdTitle = By.xpath("//div[@id='content']//h1");
 
     // Locate Web Element depending on register new customer
-    private final By ContinueBtn = By.xpath("//div[@class='well']//a[text()='Continue']");
+    private final By ContinueBtn = By.xpath("//a[normalize-space()='Continue']");
 
     // Add Constructor of class page with Singleton Design Pattern
     public LoginPage(WebDriver driver) {
