@@ -332,11 +332,14 @@ public class ActionDriver {
         try {
             List<WebElement> elements = driver.findElements(by);
             if (!elements.isEmpty()) {
+                // Register this locator for final screenshot
+                ExtentManager.addHighlightedElement(by);
                 int Index = 0;
                 // Ajout: Border à tous les élèments
                 for (WebElement element : elements) {
                     applyBorder(element, "green");
                     ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "one of List Find Elements", "web element's_" + getElementDescription(by) + "_founded_index_" + Index);
+                    resetBorder(element);
                     Index++;
                 }
             } else {

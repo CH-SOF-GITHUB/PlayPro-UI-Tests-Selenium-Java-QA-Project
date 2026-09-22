@@ -2,8 +2,12 @@ package org.qa.pages.TutorialsNINJA;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.qa.actionDriver.ActionDriver;
 import org.qa.base.BaseClass;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyAccountPage {
     private ActionDriver actionDriver;
@@ -17,6 +21,8 @@ public class MyAccountPage {
     private final By NewPwdField = By.id("input-password");
     private final By ConfirmNewPwdField = By.id("input-confirm");
     private final By ContinueBtn = By.xpath("//input[@value='Continue']");
+
+    private final By ContentHeadings = By.xpath("//div[@id='content']//h2");
 
     // Add a constructor of class page with Singleton Design Patter
     public MyAccountPage(WebDriver driver) {
@@ -37,6 +43,15 @@ public class MyAccountPage {
         actionDriver.enter(NewPwdField, pwd);
         actionDriver.enter(ConfirmNewPwdField, pwd);
         actionDriver.click(ContinueBtn);
+    }
+
+    public List<String> getContentHeadings() {
+        List<WebElement> listOfContents = actionDriver.getElements(ContentHeadings);
+        List<String> Texts = new ArrayList<>();
+        for (WebElement element : listOfContents) {
+            Texts.add(element.getText());
+        }
+        return Texts;
     }
 
 }

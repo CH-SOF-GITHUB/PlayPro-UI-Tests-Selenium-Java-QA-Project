@@ -135,7 +135,27 @@ public class ExtentManager {
         }
     }
 
-    /* Add a Method to re-apply the borders before the final screenshot */
+    public static void applyFinalBorders(WebDriver driver) {
+        if (driver == null) {
+            return;
+        }
+
+        for (By by : highlightedElements.get()) {
+            try {
+                List<WebElement> elements = driver.findElements(by);
+
+                for (WebElement element : elements) {
+                    String script = "arguments[0].style.border = '3px solid green';";
+                    ((JavascriptExecutor) driver).executeScript(script, element);
+                }
+
+            } catch (Exception e) {
+                e.fillInStackTrace();
+            }
+        }
+    }
+
+    /* Add a Method to re-apply the borders before the final screenshot
     public static void applyFinalBorders(WebDriver driver) {
         if (driver == null) {
             return;
@@ -149,11 +169,11 @@ public class ExtentManager {
                 e.fillInStackTrace();
             }
         }
-    }
+    }*/
 
     /* Clean up the list highlightedElements
-    * */
-    public static void clearHighlightedElements(){
+     * */
+    public static void clearHighlightedElements() {
         highlightedElements.get().clear();
         // clear the value associated to thread
         highlightedElements.remove();

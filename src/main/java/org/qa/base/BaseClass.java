@@ -220,6 +220,7 @@ public class BaseClass {
     @BeforeMethod
     @Parameters({"browser"})
     public void setup(@Optional("chrome") String browser, Method m) {
+        loggr.info("-------------------------------------------------------------------------------------------------");
         loggr.warn("Setting up for ---------------> : {}", this.getClass().getSimpleName());
         // Start the Extent Report:
         // ExtentManager.getReporter();  // This has been implemented in TestListener
