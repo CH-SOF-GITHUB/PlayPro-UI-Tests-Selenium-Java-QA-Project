@@ -1,4 +1,4 @@
-package com.qa.e2e.tutorialsNINJA.Login;
+package com.qa.e2e.tutorialsNINJA.TS_002;
 
 import org.qa.base.BaseClass;
 import org.qa.pages.TutorialsNINJA.LoginPage;

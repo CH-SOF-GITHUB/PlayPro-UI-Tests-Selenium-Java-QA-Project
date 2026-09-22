@@ -1,4 +1,4 @@
-package com.qa.e2e.tutorialsNINJA.Login;
+package com.qa.e2e.tutorialsNINJA.TS_002;
 
 import org.qa.base.BaseClass;
 import org.qa.pages.TutorialsNINJA.LoginPage;
@@ -31,7 +31,7 @@ public class LoginTests9 extends BaseClass {
         myAccountPage = new MyAccountPage(getDriver());
     }
 
-    @Test(priority = 1, description = "TC_LF_022")
+    @Test(priority = 1, description = "TC_LF_022", suiteName = "(TS_002) - Login Functionality")
     public void verifyWaysToLoginPage() {
         // STEP 1: Click on 'Login Page' link in the 'Register Account' page
         ExtentManager.logStep("TutorialsNINJA - Click on 'Login Page' link in the 'Register Account' page");
@@ -68,7 +68,7 @@ public class LoginTests9 extends BaseClass {
         ExtentManager.logStep("TutorialsNINJA - Verification navigate to Login Page with 3 ways Terminated");
     }
 
-    @Test(priority = 2, description = "TC_LF_023")
+    @Test(priority = 2, description = "TC_LF_023", suiteName = "(TS_002) - Login Functionality")
     public void verifyLoginPageBreadcrumbHeadingTitleAndURL() {
         // STEP 1: Click on 'My Account' in Dropmenu
         ExtentManager.logStep("TutorialsNINJA - Click on 'My Account' in Dropmenu");
@@ -102,7 +102,7 @@ public class LoginTests9 extends BaseClass {
         ExtentManager.logStep("TutorialsNINJA - Verification UI Page Terminated");
     }
 
-    @Test(priority = 3, description = "TC_LF_025")
+    @Test(priority = 3, description = "TC_LF_025", suiteName = "(TS_002) - Login Functionality")
     public void verifyLoginInAllSupportedEnvironments() {
         // STEP 1: Click on 'My Account' in Dropmenu
         ExtentManager.logStep("TutorialsNINJA - Click on 'My Account' in Dropmenu");

@@ -1,4 +1,4 @@
-package com.qa.e2e.tutorialsNINJA.Login;
+package com.qa.e2e.tutorialsNINJA.TS_002;
 
 import org.qa.base.BaseClass;
 import org.qa.pages.TutorialsNINJA.LoginPage;
@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTests extends BaseClass {
+public class LoginTests1 extends BaseClass {
 
     private LoginPage loginPage;
     private MyAccountPage myAccountPagePage;

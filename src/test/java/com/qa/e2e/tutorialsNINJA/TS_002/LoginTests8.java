@@ -1,4 +1,4 @@
-package com.qa.e2e.tutorialsNINJA.Login;
+package com.qa.e2e.tutorialsNINJA.TS_002;
 
 import org.qa.base.BaseClass;
 import org.qa.pages.TutorialsNINJA.FooterPage;
@@ -25,7 +25,7 @@ public class LoginTests8 extends BaseClass {
         footerPage = new FooterPage();
     }
 
-    @Test(priority = 1, description = "Verify user is able to navigate to different pages from Login page")
+    @Test(priority = 1, description = "TC_LF_021", suiteName = "(TS_002) - Login Functionality")
     public void verifyEnableNavigateToPagesFromLogin() throws InterruptedException {
         // STEP 1: Click on 'My Account' Dropdown
         ExtentManager.logStep("TutorialsNINJA - Click on 'My Account' Dropmenu");

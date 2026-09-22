@@ -107,45 +107,52 @@ public class ActionDriver {
 
     // Method to click on element
     public void click(By by) {
-        WebElement element = null;
+        WebElement element = waitForElementToBeClickable(by);
         try {
-            // 1. Find element
-            element = waitForElementToBeClickable(by);
-            // 2. Get description
+            // 1. Mémoriser cet élément
+            ExtentManager.addHighlightedElement(by);
+            // 2. Obtenir la description
             String description = getElementDescription(by, element);
-            // 3. Apply green border BEFORE click
+            // 3. Appliquer la bordure verte AVANT le clic
             applyBorder(element, "green");
-            // 4. Click
+            // 4. PRENDRE LE SCREENSHOT MAINTENANT (Avant le changement de page / de DOM)
+            ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Clicking on element...", "Element_" + description + "_clicked");
+            // 5. Effectuer le Clic (peut recharger la page)
             element.click();
-            // 5. Log
-            ExtentManager.logStep("Clicked on element ---> : " + description);
             loggr.info("Clicked on element ----------------> : [{}]", description);
+            // 6. Retirer la bordure si la page n'a pas changé
+            try {
+                resetBorder(element);
+            } catch (Exception ignored) {
+                // Ignoré si la page a changé après le clic
+            }
         } catch (Exception e) {
-            // 6. Get description safely
             String description = getElementDescription(by, element);
-            // 7. Apply red border ONLY if element was found
             if (element != null) {
-                applyBorder(element, "red");
+                try {
+                    applyBorder(element, "red");
+                } catch (Exception ignored) {
+                }
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to click on this element !", description + "_unable_to_click");
             } else {
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Element not found !", description + "_element_not_found");
             }
-            // 8. Log error
             loggr.error("Element is not clickable [{}] | Error: {}", description, e.getMessage());
         }
     }
 
     // Method to enter text into input field
     public void enter(By by, String text) {
-        WebElement element = null;
+        WebElement element = waitForElementToBeVisible(by);
         try {
-            element = waitForElementToBeVisible(by);
+            // 1.  Mémoriser cet élèment pour la capture finale.
+            ExtentManager.addHighlightedElement(by);
             element.clear();
             element.sendKeys(text);
             applyBorder(element, "green");
-
             ExtentManager.logStep("Value entered on ' " + getElementDescription(by) + " ' is ' " + text + " '.");
             loggr.info("Value entered on ' {} ' is [{}].", getElementDescription(by), text);
+            resetBorder(element);
         } catch (Exception e) {
             applyBorder(element, "red");
             ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Unable to enter a value on this element!", getElementDescription(by) + "_unable_to_enter_value");
@@ -155,10 +162,13 @@ public class ActionDriver {
 
     // Method to get text from input field
     public String getText(By by) {
-        WebElement element = null;
+        WebElement element = waitForElementToBeVisible(by);
+        ;
         try {
-            element = waitForElementToBeVisible(by);
+            // 1.  Mémoriser cet élèment pour la capture finale.
+            ExtentManager.addHighlightedElement(by);
             applyBorder(element, "green");
+            resetBorder(element);
             return element.getText();
         } catch (Exception e) {
             applyBorder(element, "red");
@@ -169,7 +179,7 @@ public class ActionDriver {
 
     // Method to compare Two Attribute
     public boolean compareByAttribute(By by, String attribute, String expectedValue) {
-        WebElement element = null;
+        WebElement element;
         try {
             element = waitForElementToBeVisible(by);
             String actualValue = element.getDomAttribute(attribute);
@@ -197,7 +207,6 @@ public class ActionDriver {
                 return false;
             }
         } catch (Exception e) {
-            applyBorder(element, "red");
             loggr.error("Unable to compare This Element By Attribute [{}] | Error: {}", getElementDescription(by), e.getMessage());
             return false;
         }
@@ -205,7 +214,7 @@ public class ActionDriver {
 
     // Method to compare Two Text
     public boolean compareText(By by, String expectedText) {
-        WebElement element = null;
+        WebElement element;
         try {
             element = waitForElementToBeVisible(by);
             String actualText = element.getText();
@@ -228,11 +237,11 @@ public class ActionDriver {
                 return false;
             }
         } catch (Exception e) {
-            if (element != null) {
+            /*if (element != null) {
                 applyBorder(element, "red");
                 ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Echec comparison 2 Texts", "Error_" + getElementDescription(by) + "_not_be_compared");
                 resetBorder(element);
-            }
+            }*/
             loggr.error("Unable to compare This Element [{}] | Error: {}", getElementDescription(by, null), e.getMessage());
             return false;
         }
