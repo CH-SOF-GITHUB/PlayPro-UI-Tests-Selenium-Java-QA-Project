@@ -162,7 +162,7 @@ public class ActionDriver {
             return element.getText();
         } catch (Exception e) {
             applyBorder(element, "red");
-            loggr.error("Unable to get Text From Element [{}] | Error: {}", getElementDescription(by, null), e.getMessage());
+            loggr.error("Unable to get Text From This Element [{}] | Error: {}", getElementDescription(by, null), e.getMessage());
             return null;
         }
     }

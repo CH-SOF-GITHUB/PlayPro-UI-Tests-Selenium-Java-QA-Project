@@ -25,7 +25,7 @@ public class HomePage {
     private final By empLastName = By.xpath("//div[@class='oxd-table-card']/div/div[4]");
 
     // Initialize action driver by constructor // Commited for singleton design pattern
-    /*public HomePage(WebDriver driver) {
+    /*public RightColumnPage(WebDriver driver) {
         this.actionDriver = new ActionDriver(driver);
     }*/
     public HomePage(WebDriver driver) {

@@ -19,6 +19,10 @@ public class LoginPage {
     private final By PasswordField = By.name("password");
     private final By LoginBtn = By.xpath("//input[@value='Login']");
 
+    // Locate Web Elements in Login Page Texts, Labels, Messages ...
+    private final By LoginTitleH2 = By.xpath("//h2[normalize-space()='Returning Customer']");
+    private final By LoginTitleSpan = By.xpath("//strong[normalize-space()='I am a returning customer']");
+
     // Locate Web Element of Error Message
     private final By ErrorMsg = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
 
@@ -41,8 +45,7 @@ public class LoginPage {
 
     // Login Steps: click en my account, click on login link, type email, type pwd, and click on Login Btn
     public void login(String email, String password) {
-        actionDriver.click(MyAccountDropDown);
-        actionDriver.click(LoginOption);
+        openLoginPage();
         actionDriver.enter(EmailField, email);
         actionDriver.enter(PasswordField, password);
         actionDriver.click(LoginBtn);
@@ -53,7 +56,19 @@ public class LoginPage {
         actionDriver.click(LoginOption);
     }
 
-    public void openPageWithURL(String url){
+    // Methods to Get Texts, Labels, Messages of Login Form
+    public String getLoginTitleH2() {
+        return actionDriver.getText(LoginTitleH2);
+    }
+
+    public String getLoginTitleSpan() {
+        return actionDriver.getText(LoginTitleSpan);
+    }
+
+
+
+    // Method to open page depending on URL
+    public void openPageWithURL(String url) {
         actionDriver.openPage(url);
     }
 
