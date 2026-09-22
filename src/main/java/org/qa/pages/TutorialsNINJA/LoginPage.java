@@ -2,8 +2,12 @@ package org.qa.pages.TutorialsNINJA;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.qa.actionDriver.ActionDriver;
 import org.qa.base.BaseClass;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class LoginPage {
 
@@ -19,9 +23,10 @@ public class LoginPage {
     private final By PasswordField = By.name("password");
     private final By LoginBtn = By.xpath("//input[@value='Login']");
 
-    // Locate Web Elements in Login Page Texts, Labels, Messages ...
-    private final By LoginTitleH2 = By.xpath("//h2[normalize-space()='Returning Customer']");
-    private final By LoginTitleSpan = By.xpath("//strong[normalize-space()='I am a returning customer']");
+    // Locate Web Elements in Login Page: Proper breadcrumb, page heading, page title ...
+    private final By LoginTitle1 = By.xpath("//h2[normalize-space()='Returning Customer']");
+    private final By LoginTitle2 = By.xpath("//strong[normalize-space()='I am a returning customer']");
+    private final By ListBreadCrumb = By.xpath("//ul[@class='breadcrumb']//li");
 
     // Locate Web Element of Error Message
     private final By ErrorMsg = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
@@ -56,16 +61,23 @@ public class LoginPage {
         actionDriver.click(LoginOption);
     }
 
-    // Methods to Get Texts, Labels, Messages of Login Form
-    public String getLoginTitleH2() {
-        return actionDriver.getText(LoginTitleH2);
+    // Methods to Get Texts, Labels, Messages, breadcrumb of Login Form
+    public String getLoginHeading1() {
+        return actionDriver.getText(LoginTitle1);
     }
 
-    public String getLoginTitleSpan() {
-        return actionDriver.getText(LoginTitleSpan);
+    public String getLoginHeading2() {
+        return actionDriver.getText(LoginTitle2);
     }
 
-
+    public List<String> getProperBreadcrumb() {
+        List<WebElement> listBreadCrumb = actionDriver.getElements(ListBreadCrumb);
+        List<String> Texts = new ArrayList<>();
+        for (WebElement element : listBreadCrumb) {
+            Texts.add(element.getText());
+        }
+        return Texts;
+    }
 
     // Method to open page depending on URL
     public void openPageWithURL(String url) {
@@ -164,9 +176,13 @@ public class LoginPage {
         Thread.sleep(2);
     }
 
-    // Method to get Login page URL
+    // Method to get Login page URL and Title
     public String returnCurrentURL() {
         return actionDriver.getCurrentURL();
+    }
+
+    public String returnCurrentTitle() {
+        return actionDriver.getCurrentTitle();
     }
 
     // Method to Load the Current Page

@@ -327,6 +327,28 @@ public class ActionDriver {
         return value.substring(0, maxLength) + "...";
     }
 
+    // Method to return to find a list of web elements
+    public List<WebElement> getElements(By by) {
+        try {
+            List<WebElement> elements = driver.findElements(by);
+            if (!elements.isEmpty()) {
+                int Index = 0;
+                // Ajout: Border à tous les élèments
+                for (WebElement element : elements) {
+                    applyBorder(element, "green");
+                    ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "one of List Find Elements", "web element's_" + getElementDescription(by) + "_founded_index_" + Index);
+                    Index++;
+                }
+            } else {
+                loggr.warn("No Web Elements founded for: {}", getElementDescription(by));
+            }
+            loggr.info("Found [{}] web element(s)", elements.size());
+            return elements;
+        } catch (Exception e) {
+            loggr.error("Error to get a list of web elements : {}", e.getMessage());
+            return null;
+        }
+    }
     // ========================= Select Methods ================================
 
     public void selectByVisibleText(By by, String textOption) {
@@ -564,6 +586,16 @@ public class ActionDriver {
             loggr.info("Maximized a Browser !");
         } catch (Exception e) {
             loggr.info("Unable to maximize a browser : {}", e.getMessage());
+        }
+    }
+
+    public String getCurrentTitle() {
+        try {
+            loggr.info("Retrieved a current Title of Page: {}", driver.getTitle());
+            return driver.getTitle();
+        } catch (Exception e) {
+            loggr.info("Unable to Retrieve a current Title of Page: {}", e.getMessage());
+            return null;
         }
     }
 }

@@ -10397,3 +10397,134 @@ Session ID: 8a5231c86252615fb264c3c6111cc873
 2026-09-22 11:09:27 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
 2026-09-22 11:09:27 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
 2026-09-22 11:09:28 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests9
+2026-09-22 11:58:23 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-22 11:58:23 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests9
+2026-09-22 11:58:33 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-22 11:58:39 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-22 11:58:39 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-22 11:58:39 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:39 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-22 11:58:40 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:42 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-22 11:58:42 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:42 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' login page ']
+2026-09-22 11:58:42 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:42 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:43 [TestNG-tests-1] INFO  ActionDriver - Opening of page with url https://tutorialsninja.com/demo/index.php?route=account/register: 
+2026-09-22 11:58:43 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:44 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Login ']
+2026-09-22 11:58:44 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:44 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:44 [TestNG-tests-1] INFO  ActionDriver - Opening of page with url https://tutorialsninja.com/demo/: 
+2026-09-22 11:58:44 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:44 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-22 11:58:45 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:45 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Login ']
+2026-09-22 11:58:45 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:45 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:47 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests9
+2026-09-22 11:58:47 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests9
+2026-09-22 11:58:48 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-22 11:58:54 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-22 11:58:54 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-22 11:58:54 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:54 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-22 11:58:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:55 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Login ']
+2026-09-22 11:58:55 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current Title of Page: Account Login
+2026-09-22 11:58:55 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/login
+2026-09-22 11:58:55 [TestNG-tests-1] INFO  ActionDriver - Get List Of Web Elements ...
+2026-09-22 11:58:55 [TestNG-tests-1] INFO  ActionDriver - Get List Of Web Elements ...
+2026-09-22 11:58:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 11:58:56 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests9
+2026-09-22 12:10:36 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-22 12:10:37 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests9
+2026-09-22 12:10:39 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-22 12:10:47 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-22 12:10:47 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-22 12:10:47 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:10:47 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-22 12:10:47 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:10:50 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-22 12:10:50 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:10:50 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' login page ']
+2026-09-22 12:10:50 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:10:50 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:10:51 [TestNG-tests-1] INFO  ActionDriver - Opening of page with url https://tutorialsninja.com/demo/index.php?route=account/register: 
+2026-09-22 12:10:51 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:10:52 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Login ']
+2026-09-22 12:10:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:10:52 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:10:53 [TestNG-tests-1] INFO  ActionDriver - Opening of page with url https://tutorialsninja.com/demo/: 
+2026-09-22 12:10:53 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:10:53 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-22 12:10:53 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:10:55 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Login ']
+2026-09-22 12:10:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:10:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:10:55 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests9
+2026-09-22 12:10:55 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests9
+2026-09-22 12:10:56 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-22 12:11:03 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-22 12:11:03 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-22 12:11:03 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:11:03 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-22 12:11:03 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:11:04 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Login ']
+2026-09-22 12:11:04 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current Title of Page: Account Login
+2026-09-22 12:11:04 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/login
+2026-09-22 12:11:04 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:11:04 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:11:04 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:11:05 [TestNG-tests-1] INFO  ActionDriver - Found [3] web element(s)
+2026-09-22 12:11:05 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:11:05 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:11:05 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:11:05 [TestNG-tests-1] INFO  ActionDriver - Found [3] web element(s)
+2026-09-22 12:11:05 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:11:05 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:11:06 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests9
+2026-09-22 12:18:27 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-22 12:18:27 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests9
+2026-09-22 12:18:29 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-22 12:18:39 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-22 12:18:39 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-22 12:18:40 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:40 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-22 12:18:40 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:42 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-22 12:18:42 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:43 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' login page ']
+2026-09-22 12:18:43 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:43 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:44 [TestNG-tests-1] INFO  ActionDriver - Opening of page with url https://tutorialsninja.com/demo/index.php?route=account/register: 
+2026-09-22 12:18:44 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:44 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Login ']
+2026-09-22 12:18:45 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:45 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:45 [TestNG-tests-1] INFO  ActionDriver - Opening of page with url https://tutorialsninja.com/demo/: 
+2026-09-22 12:18:45 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:45 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-22 12:18:46 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:46 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Login ']
+2026-09-22 12:18:46 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:46 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:47 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests9
+2026-09-22 12:18:47 [TestNG-tests-1] WARN  BaseClass - Setting up for ---------------> : LoginTests9
+2026-09-22 12:18:48 [TestNG-tests-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Opening Browser
+2026-09-22 12:18:54 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-22 12:18:54 [TestNG-tests-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-22 12:18:54 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:54 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-22 12:18:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:55 [TestNG-tests-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Login ']
+2026-09-22 12:18:55 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current Title of Page: Account Login
+2026-09-22 12:18:55 [TestNG-tests-1] INFO  ActionDriver - Retrieved a current URL of Page : https://tutorialsninja.com/demo/index.php?route=account/login
+2026-09-22 12:18:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:55 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:56 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:56 [TestNG-tests-1] INFO  ActionDriver - Found [3] web element(s)
+2026-09-22 12:18:56 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:56 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-22 12:18:56 [TestNG-tests-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : LoginTests9
