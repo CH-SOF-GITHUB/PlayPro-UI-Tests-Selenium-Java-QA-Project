@@ -1,4 +1,4 @@
-package com.qa.e2e.tutorialsNINJA;
+package com.qa.e2e.tutorialsNINJA.Login;
 
 import org.qa.base.BaseClass;
 import org.qa.pages.TutorialsNINJA.LoginPage;
@@ -10,7 +10,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.qa.utilities.LTStatus.addLambdaStepContext;

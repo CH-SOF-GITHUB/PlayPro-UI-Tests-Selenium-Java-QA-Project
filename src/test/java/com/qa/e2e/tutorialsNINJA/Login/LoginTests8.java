@@ -1,4 +1,4 @@
-package com.qa.e2e.tutorialsNINJA;
+package com.qa.e2e.tutorialsNINJA.Login;
 
 import org.qa.base.BaseClass;
 import org.qa.pages.TutorialsNINJA.FooterPage;
@@ -7,7 +7,6 @@ import org.qa.pages.TutorialsNINJA.LoginPage;
 import org.qa.utilities.ExtentManager;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
 
 import static org.qa.utilities.LTStatus.addLambdaStepContext;

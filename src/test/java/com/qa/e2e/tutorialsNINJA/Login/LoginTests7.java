@@ -1,9 +1,7 @@
-package com.qa.e2e.tutorialsNINJA;
+package com.qa.e2e.tutorialsNINJA.Login;
 
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.qa.base.BaseClass;
 import org.qa.pages.TutorialsNINJA.LoginPage;
 import org.qa.pages.TutorialsNINJA.MyAccountPage;

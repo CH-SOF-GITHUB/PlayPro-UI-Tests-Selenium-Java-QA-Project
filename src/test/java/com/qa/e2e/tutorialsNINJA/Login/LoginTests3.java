@@ -1,4 +1,4 @@
-package com.qa.e2e.tutorialsNINJA;
+package com.qa.e2e.tutorialsNINJA.Login;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
