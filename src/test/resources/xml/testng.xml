@@ -2,28 +2,28 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name="TutorialsNINJA Test Suite" parallel="tests" thread-count="1">
+<suite name="TutorialsNINJA Test Suite" parallel="tests" thread-count="3">
     <listeners>
         <listener class-name="org.qa.listeners.TestListener"/>
     </listeners>
-    <test name="TutorialsNINJA Test 1.0" parallel="tests" thread-count="1">
+    <test name="TutorialsNINJA Test 1.0" parallel="classes" thread-count="1">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.qa.e2e.tutorialsNINJA.LoginTests9"/>
         </classes>
     </test>
-    <!--<test name="TutorialsNINJA Test 1.1">
+    <test name="TutorialsNINJA Test 1.1" parallel="classes" thread-count="1">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com.qa.e2e.tutorialsNINJA.LoginTests"/>
+            <class name="com.qa.e2e.tutorialsNINJA.LoginTests9"/>
         </classes>
     </test>
-    <test name="TutorialsNINJA Test 1.2">
+    <test name="TutorialsNINJA Test 1.2" parallel="classes" thread-count="1">
         <parameter name="browser" value="edge"/>
         <classes>
-            <class name="com.qa.e2e.tutorialsNINJA.LoginTests"/>
+            <class name="com.qa.e2e.tutorialsNINJA.LoginTests9"/>
         </classes>
-    </test>-->
+    </test>
     <!--<test name="OrangeHRM_Test_1.0_FIREFOX">
         <parameter name="browser" value="firefox"/>
         <classes>
