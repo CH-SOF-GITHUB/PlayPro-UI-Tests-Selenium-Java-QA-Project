@@ -12,7 +12,7 @@
             <class name="com.qa.e2e.tutorialsNINJA.LoginTests9"/>
         </classes>
     </test>
-    <test name="TutorialsNINJA Test 1.1" parallel="classes" thread-count="1">
+    <!--<test name="TutorialsNINJA Test 1.1" parallel="classes" thread-count="1">
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="com.qa.e2e.tutorialsNINJA.LoginTests9"/>
@@ -23,7 +23,7 @@
         <classes>
             <class name="com.qa.e2e.tutorialsNINJA.LoginTests9"/>
         </classes>
-    </test>
+    </test>-->
     <!--<test name="OrangeHRM_Test_1.0_FIREFOX">
         <parameter name="browser" value="firefox"/>
         <classes>
