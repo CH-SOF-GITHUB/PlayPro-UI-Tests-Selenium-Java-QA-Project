@@ -121,11 +121,11 @@ public class ActionDriver {
             element.click();
             loggr.info("Clicked on element ----------------> : [{}]", description);
             // 6. Retirer la bordure si la page n'a pas changé
-            try {
+            /*try {
                 resetBorder(element);
             } catch (Exception ignored) {
                 // Ignoré si la page a changé après le clic
-            }
+            }*/
         } catch (Exception e) {
             String description = getElementDescription(by, element);
             if (element != null) {

@@ -6,9 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class RegisterTests1 extends BaseClass {
-
-    // (TS_001) Register Functionality
+public class RegisterTests2 extends BaseClass {
 
     private RegisterPage registerPage;
 
@@ -17,8 +15,8 @@ public class RegisterTests1 extends BaseClass {
         registerPage = new RegisterPage(getDriver());
     }
 
-    @Test(priority = 1, description = "TC_RF_001", suiteName = "(TS_001) - Register Functionality")
-    public void registerWithMandatoryFields() {
+    @Test(priority = 1, description = "TC_RF_003", suiteName = "(TS_001) - Register Functionality")
+    public void registerWithAllFields() {
         // Click on 'My Account' Link and 'Register' option to pass to register page
         registerPage.openRegisterPage();
         // Check you are in register page
@@ -33,13 +31,15 @@ public class RegisterTests1 extends BaseClass {
         // Enter The Last Name
         registerPage.enterLastName("Anderson");
         // Enter The E-mail
-        registerPage.enterEmail("chakerbensaid11@yopmail.com");
+        registerPage.enterEmail("chaker1@yopmail.com");
         // Enter The Telephone
-        registerPage.enterTelephone("21622114567");
+        registerPage.enterTelephone("21622114588");
         // Enter The Password
         registerPage.enterPassword("QaTest@1122");
         // Enter The Password Confirm
         registerPage.enterConfirmPassword("QaTest@1122");
+        // Select Subscribe YES
+        registerPage.selectSubscribeYES();
         // select privacy policy option before terminate register
         registerPage.clickPrivacyPolicy();
         // Terminate register
