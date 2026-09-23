@@ -2,13 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name="TutorialsNINJA Test Suite" parallel="tests" thread-count="3">
+<suite name="TutorialsNINJA Test Suite">
     <listeners>
         <listener class-name="org.qa.listeners.TestListener"/>
     </listeners>
-    <test name="TutorialsNINJA Test 1.0" parallel="classes" thread-count="1">
+    <test name="TutorialsNINJA Test 1.0" parallel="classes" thread-count="7">
         <parameter name="browser" value="chrome"/>
         <classes>
+            <class name="com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests1"/>
+            <class name="com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests2"/>
+            <class name="com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests3"/>
+            <class name="com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests4"/>
+            <class name="com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests5"/>
+            <class name="com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests6"/>
             <class name="com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests7"/>
         </classes>
     </test>
@@ -61,7 +67,14 @@
         </classes>
     </test>-->
 </suite>
-
+        <!--
+        Chaque classe aura son propre thread et donc son propre navigateur :
+        Thread 1 → RegisterTests1 → Chrome 1
+        Thread 2 → RegisterTests2 → Chrome 2
+        Thread 3 → RegisterTests3 → Chrome 3
+        ...
+        Thread 7 → RegisterTests7 → Chrome 7
+        -->
         <!--
         <suite thread-count="1" parallel="tests" name="Suite">
         <test thread-count="1" parallel="classes" name="Test">
