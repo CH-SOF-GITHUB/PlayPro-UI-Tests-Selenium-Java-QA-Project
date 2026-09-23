@@ -68,7 +68,7 @@ public class RegisterTests5 extends BaseClass {
         boolean checkTrue = newsletterPage.isInNewsletter();
         Assert.assertTrue(checkTrue, "Error: user is not in newsletter page");
         // checked est un attribut booléen HTML.
-        checkTrue = newsletterPage.isNewsLetterChecked("false");
+        checkTrue = newsletterPage.isNewsLetterNOChecked("true");
         Assert.assertTrue(checkTrue, "Error: Newsletter option is not checked");
         // Verification TC_RF_005 Terminated
         ExtentManager.logStep("TutorialsNINJA - Verification TC_RF_005 Terminated");

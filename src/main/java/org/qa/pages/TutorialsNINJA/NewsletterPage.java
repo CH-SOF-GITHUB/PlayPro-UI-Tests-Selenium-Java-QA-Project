@@ -18,15 +18,20 @@ public class NewsletterPage {
     // Locate Web Element(s) depending on NewsLetter
     private final By NewsLetterTitle = By.xpath("//h1[normalize-space()='Newsletter Subscription']");
 
-    private final By Subscribe = By.xpath("//input[@value='1']");
+    private final By SubscribeYES = By.xpath("//input[@value='1']");
+    private final By SubscribeNO = By.xpath("//input[@value='0']");
 
     // Methods
     public boolean isInNewsletter() {
         return actionDriver.isDisplayed(NewsLetterTitle);
     }
 
-    public boolean isNewsLetterChecked(String expectedValue) {
-        return actionDriver.compareByAttribute(Subscribe, "checked", expectedValue);
+    public boolean isNewsLetterYESChecked(String expectedValue) {
+        return actionDriver.compareByAttribute(SubscribeYES, "checked", expectedValue);
+    }
+
+    public boolean isNewsLetterNOChecked(String expectedValue) {
+        return actionDriver.compareByAttribute(SubscribeNO, "checked", expectedValue);
     }
 
 }
