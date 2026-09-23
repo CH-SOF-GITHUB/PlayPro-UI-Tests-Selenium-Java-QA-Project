@@ -43,7 +43,7 @@ public class RegisterTests4 extends BaseClass {
         registerPage.enterLastName("Anderson");
         // Enter The E-mail
         ExtentManager.logStep("TutorialsNINJA - Enter The E-Mail");
-        registerPage.enterEmail("chaker5@yopmail.com");
+        registerPage.enterEmail("chaker6@yopmail.com");
         // Enter The Telephone
         ExtentManager.logStep("TutorialsNINJA - Enter The Telephone");
         registerPage.enterTelephone("21622114588");
@@ -68,7 +68,8 @@ public class RegisterTests4 extends BaseClass {
         rightColumnPage.clickNewsLetterRightColumn();
         boolean checkTrue = newsletterPage.isInNewsletter();
         Assert.assertTrue(checkTrue, "Error: user is not in newsletter page");
-        checkTrue = newsletterPage.isNewsLetterChecked();
+        // checked est un attribut booléen HTML.
+        checkTrue = newsletterPage.isNewsLetterChecked("checked");
         Assert.assertTrue(checkTrue, "Error: Newsletter option is not checked");
         // Verification TC_RF_005 Terminated
         ExtentManager.logStep("TutorialsNINJA - Verification TC_RF_005 Terminated");

@@ -25,8 +25,8 @@ public class NewsletterPage {
         return actionDriver.isDisplayed(NewsLetterTitle);
     }
 
-    public boolean isNewsLetterChecked() {
-        return actionDriver.compareByAttribute(Subscribe, "checked", "checked");
+    public boolean isNewsLetterChecked(String expectedValue) {
+        return actionDriver.compareByAttribute(Subscribe, "checked", expectedValue);
     }
 
 }
