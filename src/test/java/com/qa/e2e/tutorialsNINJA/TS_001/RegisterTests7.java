@@ -68,7 +68,7 @@ public class RegisterTests7 extends BaseClass {
         // Check That Account not be created and an error message displays under confirm password field
         boolean isConfirmErrorDisplayed = registerPage.isConfirmPwdNotifDisplayed();
         Assert.assertTrue(isConfirmErrorDisplayed, "Confirm password notification message not displayed");
-        String ConfirmErrorText = registerPage.getNotifMessages("confirm");
+        String ConfirmErrorText = registerPage.getNotifMessages();
         Assert.assertEquals(ConfirmErrorText, "Password confirmation does not match password!", "Error to check text of Confirm password notification message");
         ExtentManager.logStep("TutorialsNINJA - Check That Account not be created and an error message displays under confirm password field");
     }

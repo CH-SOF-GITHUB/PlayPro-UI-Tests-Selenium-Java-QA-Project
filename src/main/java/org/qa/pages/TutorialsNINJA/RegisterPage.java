@@ -159,12 +159,8 @@ public class RegisterPage {
         return actionDriver.isDisplayed(confirmPwdField);
     }
 
-    public String getNotifMessages(String value){
-        if(confirmErrorMsg.toString().contains(value)) {
-            return actionDriver.getText(confirmErrorMsg);
-        } else {
-            throw new IllegalArgumentException("Cannot retrieve the text of message from web element");
-        }
+    public String getNotifMessages() {
+        return actionDriver.getText(confirmErrorMsg);
     }
 
 }
