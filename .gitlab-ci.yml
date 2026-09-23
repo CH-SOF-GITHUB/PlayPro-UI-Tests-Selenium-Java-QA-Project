@@ -15,9 +15,7 @@
 # https://docs.gitlab.com/development/cicd/templates/
 # This specific template is located at:
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
-image:
-  name: cypress/included:15.18.1  # This image contains all the dependencies needed to run Cypress tests.
-  entrypoint: [ "" ]
+image: maven:3.9.6-eclipse-temurin-17  # This image contains all the dependencies needed to run Cypress tests.
 
 stages: # List of stages for jobs, and their order of execution
   - build
@@ -27,8 +25,9 @@ stages: # List of stages for jobs, and their order of execution
 build-job: # This job runs in the build stage, which runs first.
   stage: build
   script:
-    - echo "Compiling the code..."
-    - echo "Compile complete."
+    - echo "Building Selenium Java Project..."
+    - mvn clean compile
+    - echo "Building complete."
 
 unit-test-job: # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
@@ -44,19 +43,18 @@ lint-test-job: # This job also runs in the test stage.
     - sleep 10
     - echo "No lint issues found."
 
-cypress-test-job:
+selenium-test-job:
   stage: test
   script:
-    - echo "Début du test Cypress"
+    - echo "Running Selenium Java TestNG tests..."
     # Exécution ciblée du test
-    - cd src/test/java/Cypress
-    - npx cypress run --spec "cypress/e2e/play/pro/v3/webservice/add_to_basket_01_spec.cy.js"
+    - mvn test -DsuiteXmlFile=src/test/resources/xml/testng.xml
 
   artifacts:
     when: always
     paths:
-      - src/test/java/Cypress/cypress/screenshots
-      - src/test/java/Cypress/cypress/videos
+      - src/test/resources/extentReports/
+      - target/surefire-reports/
     expire_in: 1 week
 
 deploy-job: # This job runs in the deployment stage.

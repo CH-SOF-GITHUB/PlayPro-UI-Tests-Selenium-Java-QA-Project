@@ -38,7 +38,7 @@ public class RegisterPage {
     private final By privacyPolicy = By.xpath("//input[@type='checkbox']");
     private final By ContinueBtn = By.xpath("//input[@type='submit']");
 
-    // Web(s) Element(s) of success account
+    // Web Element(s) of success account
     private final By successHeading = By.xpath("//h1[normalize-space()='Your Account Has Been Created!']");
     private final By congratulationsHeading = By.xpath("//p[contains(text(),'Congratulations! Your new account has been success')]");
 
