@@ -53,6 +53,8 @@ public class RegisterPage {
     private final By pwdErrorMsg = By.xpath("//div[contains(text(),'Password must be between 4 and 20 characters!')]");
     private final By privacyErrorMsg = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
 
+    private final By confirmErrorMsg = By.xpath("//div[@class='text-danger']");
+
     // Method to pass to login page via Link
     public void clickLoginPageLink() {
         actionDriver.click(loginPageLink);
@@ -151,6 +153,18 @@ public class RegisterPage {
 
     public boolean isPrivacyNotifDisplayed() {
         return actionDriver.isDisplayed(privacyErrorMsg);
+    }
+
+    public boolean isConfirmPwdNotifDisplayed() {
+        return actionDriver.isDisplayed(confirmPwdField);
+    }
+
+    public String getNotifMessages(String value){
+        if(confirmErrorMsg.toString().contains(value)) {
+            return actionDriver.getText(confirmErrorMsg);
+        } else {
+            throw new IllegalArgumentException("Cannot retrieve the text of message from web element");
+        }
     }
 
 }

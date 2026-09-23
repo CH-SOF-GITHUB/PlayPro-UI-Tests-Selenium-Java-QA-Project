@@ -163,12 +163,10 @@ public class ActionDriver {
     // Method to get text from input field
     public String getText(By by) {
         WebElement element = waitForElementToBeVisible(by);
-        ;
         try {
             // 1.  Mémoriser cet élèment pour la capture finale.
             ExtentManager.addHighlightedElement(by);
             applyBorder(element, "green");
-            resetBorder(element);
             return element.getText();
         } catch (Exception e) {
             applyBorder(element, "red");
