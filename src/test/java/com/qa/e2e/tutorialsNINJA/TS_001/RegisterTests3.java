@@ -38,10 +38,6 @@ public class RegisterTests3 extends BaseClass {
         registerPage.enterPassword("");
         // Enter The Password Confirm
         registerPage.enterConfirmPassword("");
-        // Select Subscribe YES
-        registerPage.selectSubscribeYES();
-        // select privacy policy option before terminate register
-        registerPage.clickPrivacyPolicy();
         // Terminate register
         registerPage.clickOnContinue();
         // Check proper notification messages are displayed when don't provide any fields
