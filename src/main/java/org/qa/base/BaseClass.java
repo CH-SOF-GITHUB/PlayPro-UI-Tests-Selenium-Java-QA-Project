@@ -97,7 +97,8 @@ public class BaseClass {
                         throw new IllegalArgumentException("Browser '" + browser + "' not supported for Grid Tests");
                     }
                 } catch (Exception e) {
-                    e.fillInStackTrace();
+                    loggr.error("Unable to initialize Selenium Grid", e);
+                    throw new RuntimeException("Selenium Grid WebDriver initialization failed", e);
                 }
             } else if (isLambdaTest) {
                 try {
@@ -124,7 +125,7 @@ public class BaseClass {
                     loggr.warn("LT RemoteWebDriver instance was created in headless mode.");
                 } catch (Exception e) {
                     loggr.error("Unable to set LT capabilities: {}", e.getMessage());
-                    e.fillInStackTrace();
+                    throw new RuntimeException("LambdaTest WebDriver initialization failed", e);
                 }
             } else {
                 if (browser.equalsIgnoreCase("firefox")) {
@@ -212,7 +213,7 @@ public class BaseClass {
             loggr.warn("ActionDriver Initialized for Thread ---------------------> {}", Thread.currentThread().getId());
         } catch (Exception e) {
             loggr.error("Error during browser configuration", e);
-            throw new RuntimeException("WebDriver initialization failed: " + e.getMessage());
+            throw new RuntimeException("WebDriver initialization failed for browser '" + browser + "': " + e.getMessage(), e);
         }
     }
 
