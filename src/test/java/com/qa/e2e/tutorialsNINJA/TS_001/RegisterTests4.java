@@ -43,7 +43,7 @@ public class RegisterTests4 extends BaseClass {
         registerPage.enterLastName("Anderson");
         // Enter The E-mail
         ExtentManager.logStep("TutorialsNINJA - Enter The E-Mail");
-        registerPage.enterEmail("chaker4@yopmail.com");
+        registerPage.enterEmail("chaker5@yopmail.com");
         // Enter The Telephone
         ExtentManager.logStep("TutorialsNINJA - Enter The Telephone");
         registerPage.enterTelephone("21622114588");
