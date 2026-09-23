@@ -213,7 +213,7 @@ public class ActionDriver {
     }
 
     // Method to verify an attribute value
-    public boolean isAttributeValue(By by, String attribute, String expectedValue) {
+    /* public boolean isAttributeValue(By by, String attribute, String expectedValue) {
         WebElement element;
         try {
             element = waitForElementToBeVisible(by);
@@ -240,7 +240,7 @@ public class ActionDriver {
             loggr.error("Unable to verify attribute [{}] | Error: {}", attribute, e.getMessage());
             return false;
         }
-    }
+    } */
 
     // Method to compare Two Text
     public boolean compareText(By by, String expectedText) {
