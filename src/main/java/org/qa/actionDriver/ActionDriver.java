@@ -212,6 +212,36 @@ public class ActionDriver {
         }
     }
 
+    // Method to verify an attribute value
+    public boolean isAttributeValue(By by, String attribute, String expectedValue) {
+        WebElement element;
+        try {
+            element = waitForElementToBeVisible(by);
+            String actualValue = element.getDomAttribute(attribute);
+            if (expectedValue.equals(actualValue)) {
+                // Mémoriser l'élément pour la capture finale
+                ExtentManager.addHighlightedElement(by);
+                // Appliquer une bordure verte
+                applyBorder(element, "green");
+                loggr.info("Attribute [{}] value [{}] matches expected value [{}]", attribute, actualValue, expectedValue);
+                ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Attribute value verified successfully!", "Verified: " + attribute + " = " + expectedValue);
+                // Supprimer la bordure après le screenshot
+                resetBorder(element);
+                return true;
+            } else {
+                // Appliquer une bordure rouge
+                applyBorder(element, "red");
+                loggr.error("Attribute [{}] value [{}] does not match expected value [{}]", attribute, actualValue, expectedValue);
+                ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Attribute value verification failed!", "Expected: " + expectedValue + " | Actual: " + actualValue);
+                resetBorder(element);
+                return false;
+            }
+        } catch (Exception e) {
+            loggr.error("Unable to verify attribute [{}] | Error: {}", attribute, e.getMessage());
+            return false;
+        }
+    }
+
     // Method to compare Two Text
     public boolean compareText(By by, String expectedText) {
         WebElement element;

@@ -15,10 +15,15 @@ public class RightColumnPage {
 
     // Locate Some Web Elements in the page
     private final By LoginRightColumn = By.xpath("//aside[@id=\"column-right\"]//div[@class=\"list-group\"]//a[text()='Login']");
+    private final By NewsLetterRightColumn = By.xpath("//aside[@id=\"column-right\"]//div[@class=\"list-group\"]//a[text()='Newsletter']");
 
     // Methods
     public void clickLoginRightColumn() {
         actionDriver.click(LoginRightColumn);
+    }
+
+    public void clickNewsLetterRightColumn() {
+        actionDriver.click(NewsLetterRightColumn);
     }
 
 }
