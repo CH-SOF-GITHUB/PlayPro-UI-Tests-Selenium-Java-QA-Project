@@ -66,8 +66,10 @@ public class RegisterTests4 extends BaseClass {
         // 'Yes' option should be displayed as selected by default in the Newsletter page
         ExtentManager.logStep("TutorialsNINJA - User should be taken to 'Account' page And 'Yes' option should be displayed as selected by default in the Newsletter page");
         rightColumnPage.clickNewsLetterRightColumn();
-        newsletterPage.isInNewsletter();
-        newsletterPage.isNewsLetterChecked();
+        boolean checkTrue = newsletterPage.isInNewsletter();
+        Assert.assertTrue(checkTrue, "Error: user is not in newsletter page");
+        checkTrue = newsletterPage.isNewsLetterChecked();
+        Assert.assertTrue(checkTrue, "Error: Newsletter option is not checked");
         // Verification TC_RF_005 Terminated
         ExtentManager.logStep("TutorialsNINJA - Verification TC_RF_005 Terminated");
     }

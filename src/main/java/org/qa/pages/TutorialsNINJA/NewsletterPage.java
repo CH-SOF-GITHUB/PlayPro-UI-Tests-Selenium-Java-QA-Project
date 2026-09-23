@@ -21,12 +21,13 @@ public class NewsletterPage {
     private final By Subscribe = By.xpath("//input[@value='1']");
 
     // Methods
-    public void isInNewsletter() {
-        actionDriver.isDisplayed(NewsLetterTitle);
+    public boolean isInNewsletter() {
+        return actionDriver.isDisplayed(NewsLetterTitle);
     }
 
-    public void isNewsLetterChecked() {
-        actionDriver.isAttributeValue(Subscribe, "checked", "checked");
+    public boolean isNewsLetterChecked() {
+
+        return actionDriver.isAttributeValue(Subscribe, "checked", "checked");
     }
 
 }
