@@ -9,7 +9,7 @@
     <test name="TutorialsNINJA Test 1.0" parallel="classes" thread-count="1">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests5"/>
+            <class name="com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests6"/>
         </classes>
     </test>
     <!--<test name="TutorialsNINJA Test 1.1" parallel="classes" thread-count="1">

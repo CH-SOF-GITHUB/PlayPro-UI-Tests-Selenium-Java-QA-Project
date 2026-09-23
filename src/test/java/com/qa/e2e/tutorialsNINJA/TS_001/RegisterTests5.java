@@ -70,7 +70,7 @@ public class RegisterTests5 extends BaseClass {
         // checked est un attribut booléen HTML.
         checkTrue = newsletterPage.isNewsLetterNOChecked("true");
         Assert.assertTrue(checkTrue, "Error: Newsletter option is not checked");
-        // Verification TC_RF_005 Terminated
+        // Verification TC_RF_006 Terminated
         ExtentManager.logStep("TutorialsNINJA - Verification TC_RF_005 Terminated");
     }
 }
