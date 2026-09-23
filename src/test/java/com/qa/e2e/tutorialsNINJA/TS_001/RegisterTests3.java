@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class RegisterTests2 extends BaseClass {
+public class RegisterTests3 extends BaseClass {
 
     private RegisterPage registerPage;
 
@@ -15,8 +15,8 @@ public class RegisterTests2 extends BaseClass {
         registerPage = new RegisterPage(getDriver());
     }
 
-    @Test(priority = 1, description = "TC_RF_003", suiteName = "(TS_001) - Register Functionality")
-    public void registerWithAllFields() {
+    @Test(priority = 1, description = "TC_RF_004", suiteName = "(TS_001) - Register Functionality")
+    public void verifyProperNotifications() {
         // Click on 'My Account' Link and 'Register' option to pass to register page
         registerPage.openRegisterPage();
         // Check you are in register page
@@ -27,27 +27,35 @@ public class RegisterTests2 extends BaseClass {
         isInRegisterPage = registerPage.comparePasswordLegend("Your Password");
         Assert.assertTrue(isInRegisterPage, "Error: user is not in register page");
         // Enter The First Name
-        registerPage.enterFirstName("John");
+        registerPage.enterFirstName("");
         // Enter The Last Name
-        registerPage.enterLastName("Anderson");
+        registerPage.enterLastName("");
         // Enter The E-mail
-        registerPage.enterEmail("chaker1@yopmail.com");
+        registerPage.enterEmail("");
         // Enter The Telephone
-        registerPage.enterTelephone("21622114588");
+        registerPage.enterTelephone("");
         // Enter The Password
-        registerPage.enterPassword("QaTest@1122");
+        registerPage.enterPassword("");
         // Enter The Password Confirm
-        registerPage.enterConfirmPassword("QaTest@1122");
+        registerPage.enterConfirmPassword("");
         // Select Subscribe YES
         registerPage.selectSubscribeYES();
         // select privacy policy option before terminate register
         registerPage.clickPrivacyPolicy();
         // Terminate register
         registerPage.clickOnContinue();
-        // Check That a new account registered
-        boolean isSuccessRegister1 = registerPage.compareSuccessHeadings("Your Account Has Been Created!");
-        Assert.assertTrue(isSuccessRegister1, "error in register account & success text does not display");
-        isSuccessRegister1 = registerPage.compareCongratulationsHeading("Congratulations! Your new account has been successfully created!");
-        Assert.assertTrue(isSuccessRegister1, "error in register account & congratulations text does not display");
+        // Check proper notification messages are displayed when don't provide any fields
+        boolean isDisplayed = registerPage.isFirstNameNotifDisplayed();
+        Assert.assertTrue(isDisplayed, "The bellow warning message is not displayed!");
+        isDisplayed = registerPage.isLastNameNotifDisplayed();
+        Assert.assertTrue(isDisplayed, "The bellow warning message is not displayed!");
+        isDisplayed = registerPage.isEmailNotifDisplayed();
+        Assert.assertTrue(isDisplayed, "The bellow warning message is not displayed!");
+        isDisplayed = registerPage.isPhoneNotifDisplayed();
+        Assert.assertTrue(isDisplayed, "The bellow warning message is not displayed!");
+        isDisplayed = registerPage.isPwdNotifDisplayed();
+        Assert.assertTrue(isDisplayed, "The bellow warning message is not displayed!");
+        isDisplayed = registerPage.isPrivacyNotifDisplayed();
+        Assert.assertTrue(isDisplayed, "The bellow warning message is not displayed!");
     }
 }

@@ -23,11 +23,11 @@ public class RegisterTests1 extends BaseClass {
         registerPage.openRegisterPage();
         // Check you are in register page
         boolean isInRegisterPage = registerPage.compareRegisterHeadings("Register Account");
-        Assert.assertTrue(isInRegisterPage, "Error user is not in register page");
+        Assert.assertTrue(isInRegisterPage, "Error: user is not in register page");
         isInRegisterPage = registerPage.comparePersonalDetailsLegend("Your Personal Details");
-        Assert.assertTrue(isInRegisterPage, "Error user is not in register page");
+        Assert.assertTrue(isInRegisterPage, "Error: user is not in register page");
         isInRegisterPage = registerPage.comparePasswordLegend("Your Password");
-        Assert.assertTrue(isInRegisterPage, "Error user is not in register page");
+        Assert.assertTrue(isInRegisterPage, "Error: user is not in register page");
         // Enter The First Name
         registerPage.enterFirstName("John");
         // Enter The Last Name

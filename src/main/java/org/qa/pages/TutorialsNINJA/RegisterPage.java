@@ -45,6 +45,14 @@ public class RegisterPage {
     private final By successHeading = By.xpath("//h1[normalize-space()='Your Account Has Been Created!']");
     private final By congratulationsHeading = By.xpath("//p[contains(text(),'Congratulations! Your new account has been success')]");
 
+    // Web Element(s) of proper notification/validation messages
+    private final By firstNameErrorMsg = By.xpath("//div[contains(text(),'First Name must be between 1 and 32 characters!')]");
+    private final By lastNameErrorMsg = By.xpath("//div[contains(text(),'Last Name must be between 1 and 32 characters!')]");
+    private final By emailErrorMsg = By.xpath("//div[contains(text(),'E-Mail Address does not appear to be valid!')]");
+    private final By phoneErrorMsg = By.xpath("//div[contains(text(),'Telephone must be between 3 and 32 characters!')]");
+    private final By pwdErrorMsg = By.xpath("//div[contains(text(),'Password must be between 4 and 20 characters!')]");
+    private final By privacyErrorMsg = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
+
     // Method to pass to login page via Link
     public void clickLoginPageLink() {
         actionDriver.click(loginPageLink);
@@ -111,12 +119,38 @@ public class RegisterPage {
         actionDriver.click(ContinueBtn);
     }
 
+    // Methods to click on Subscribe field
     public void selectSubscribeYES() {
         actionDriver.click(subscribeYES);
     }
 
     public void selectSubscribeNO() {
         actionDriver.click(subscribeNO);
+    }
+
+    // Methods to check proper notification/error messages
+    public boolean isFirstNameNotifDisplayed() {
+        return actionDriver.isDisplayed(firstNameErrorMsg);
+    }
+
+    public boolean isLastNameNotifDisplayed() {
+        return actionDriver.isDisplayed(lastNameErrorMsg);
+    }
+
+    public boolean isEmailNotifDisplayed() {
+        return actionDriver.isDisplayed(emailErrorMsg);
+    }
+
+    public boolean isPhoneNotifDisplayed() {
+        return actionDriver.isDisplayed(phoneErrorMsg);
+    }
+
+    public boolean isPwdNotifDisplayed() {
+        return actionDriver.isDisplayed(pwdErrorMsg);
+    }
+
+    public boolean isPrivacyNotifDisplayed() {
+        return actionDriver.isDisplayed(privacyErrorMsg);
     }
 
 }
