@@ -8,54 +8,17 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">PlayPro-Suite</th></tr>
-<tr><td><a href="#t0">DEV-Login-Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">21 014</td><td></td><td></td></tr>
+<tr><th colspan="8">TutorialsNINJA Test Suite</th></tr>
+<tr><td><a href="#t0">TutorialsNINJA Test 1.0</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">78 102</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">PlayPro-Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">DEV-Login-Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Login.Chrome.LambdaTest.DEV.PlayPro.com.qa.tests.TC01</td><td><a href="#m0">SampleLogin</a></td><td rowspan="1">1775318140773</td><td rowspan="1">11671</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TutorialsNINJA Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TutorialsNINJA Test 1.0 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests1</td><td><a href="#m0">registerWithMandatoryFields</a></td><td rowspan="1">1790257229119</td><td rowspan="1">15105</td></tr><tr class="passedodd"><td rowspan="1">com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests2</td><td><a href="#m1">registerWithAllFields</a></td><td rowspan="1">1790257195111</td><td rowspan="1">14145</td></tr><tr class="passedeven"><td rowspan="1">com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests3</td><td><a href="#m2">verifyProperNotifications</a></td><td rowspan="1">1790257225202</td><td rowspan="1">15093</td></tr><tr class="passedodd"><td rowspan="1">com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests4</td><td><a href="#m3">registerWithYesNewsLetterOption</a></td><td rowspan="1">1790257193970</td><td rowspan="1">16569</td></tr><tr class="passedeven"><td rowspan="1">com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests5</td><td><a href="#m4">registerWithYesNewsLetterOption</a></td><td rowspan="1">1790257230761</td><td rowspan="1">20281</td></tr><tr class="passedodd"><td rowspan="1">com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests6</td><td><a href="#m5">verifyWaysToRegisterPage</a></td><td rowspan="1">1790257225611</td><td rowspan="1">17345</td></tr><tr class="passedeven"><td rowspan="1">com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests7</td><td><a href="#m6">verifyNotificationOfConfirmPwd</a></td><td rowspan="1">1790257235060</td><td rowspan="1">16810</td></tr></tbody>
 </table>
-<h2>DEV-Login-Tests</h2><h3 id="m0">Login.Chrome.LambdaTest.DEV.PlayPro.com.qa.tests.TC01#SampleLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [https://demotenant.playpro.fr/] but found [https://demotenant.playpro.fr/connexion]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at Login.Chrome.LambdaTest.DEV.PlayPro.com.qa.tests.TC01.SampleLogin(TC01.java:24)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.&lt;init&gt;(FutureTask.java:151)
-	at org.testng.internal.thread.graph.TestNGFutureTask.&lt;init&gt;(TestNGFutureTask.java:15)
-	at org.testng.internal.thread.graph.GraphOrchestrator.runNodes(GraphOrchestrator.java:58)
-	at org.testng.internal.thread.graph.GraphOrchestrator.run(GraphOrchestrator.java:46)
-	at org.testng.TestTaskExecutor.execute(TestTaskExecutor.java:69)
-	at org.testng.TestRunner.privateRun(TestRunner.java:720)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TutorialsNINJA Test 1.0</h2><h3 id="m0">com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests1#registerWithMandatoryFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests2#registerWithAllFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests3#verifyProperNotifications</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests4#registerWithYesNewsLetterOption</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests5#registerWithYesNewsLetterOption</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests6#verifyWaysToRegisterPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.qa.e2e.tutorialsNINJA.TS_001.RegisterTests7#verifyNotificationOfConfirmPwd</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

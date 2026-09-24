@@ -33,7 +33,7 @@ public class RegisterTests1 extends BaseClass {
         // Enter The Last Name
         registerPage.enterLastName("Anderson");
         // Enter The E-mail
-        registerPage.enterEmail("chakerbensaid12@yopmail.com");
+        registerPage.enterEmail("chakerbensaid14@yopmail.com");
         // Enter The Telephone
         registerPage.enterTelephone("21622114567");
         // Enter The Password
