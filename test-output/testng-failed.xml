@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [TestNG Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="TestSafari(failed)">
-    <parameter name="browser" value="safari"/>
+<suite thread-count="1" parallel="tests" name="Failed suite [TestNG Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="tests" name="TestChrome(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.qa.tests.TestNG.NewTest4">
+      <class name="com.qa.tests.TestNG.MyClass">
         <methods>
-          <include name="end"/>
-          <include name="finish"/>
-          <include name="configureLogs"/>
-          <include name="z"/>
-          <include name="y"/>
-          <include name="setup"/>
+          <include name="myMethod2"/>
         </methods>
-      </class> <!-- com.qa.tests.TestNG.NewTest4 -->
+      </class> <!-- com.qa.tests.TestNG.MyClass -->
     </classes>
-  </test> <!-- TestSafari(failed) -->
+  </test> <!-- TestChrome(failed) -->
 </suite> <!-- Failed suite [TestNG Suite] -->

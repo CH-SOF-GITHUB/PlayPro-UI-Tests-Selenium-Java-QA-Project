@@ -10,7 +10,8 @@
     <test name="TestChrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.qa.tests.TestNG.NewTest4"/>
+            <class name="com.qa.tests.TestNG.MyClass"/>
+            <class name="com.qa.tests.TestNG.MyClass2"/>
         </classes>
     </test>
 </suite>
