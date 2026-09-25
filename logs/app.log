@@ -12564,3 +12564,1299 @@ Session ID: b6e4ddda9cdfd950bb9e38926dd0b7cd
 2026-09-24 14:40:51 [TestNG-test-TutorialsNINJA Test 1.0-7] INFO  ActionDriver - Element  [Element with name ' confirm '] ------> is displayed
 2026-09-24 14:40:51 [TestNG-test-TutorialsNINJA Test 1.0-7] INFO  ActionDriver - Border applied on element with color ------> [green].
 2026-09-24 14:40:52 [TestNG-test-TutorialsNINJA Test 1.0-7] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests7
+2026-09-24 15:02:34 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-24 15:02:34 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 15:02:34 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 15:02:37 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 15:02:44 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 15:02:44 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 22
+2026-09-24 15:02:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 15:02:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 15:02:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 15:02:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:02:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 15:02:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:02:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 15:02:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:02:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 15:02:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:02:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 15:02:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:02:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 15:02:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:02:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 15:02:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:02:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 15:02:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:02:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 15:02:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:02:50 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:50 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 15:02:50 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:50 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 15:02:50 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 15:02:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 15:02:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:02:53 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 15:13:46 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-24 15:13:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 15:13:47 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 15:13:50 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 15:13:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 15:13:56 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 15:13:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:13:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 15:13:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:13:58 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 15:13:58 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:13:58 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 15:13:58 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:13:58 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:13:58 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 15:13:58 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:13:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:13:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 15:13:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:13:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:13:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 15:13:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:13:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:13:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 15:13:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:13:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:13:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 15:13:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:13:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:13:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 15:14:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 15:14:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 15:14:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 15:14:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 15:14:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 15:14:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 15:14:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:03 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 15:14:03 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 15:14:03 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 15:14:05 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 15:14:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 15:14:11 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 15:14:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 15:14:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:13 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 15:14:13 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:13 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 15:14:13 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:13 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:13 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 15:14:13 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:13 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:13 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 15:14:13 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 15:14:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 15:14:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 15:14:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 15:14:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 15:14:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 15:14:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 15:14:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 15:14:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 15:14:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 15:14:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:17 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 15:14:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 15:14:17 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 15:14:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 15:14:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 15:14:26 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 15:14:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 15:14:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:29 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 15:14:29 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:29 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 15:14:29 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:29 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:29 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 15:14:29 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:29 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:29 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 15:14:29 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 15:14:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 15:14:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 15:14:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 15:14:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 15:14:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 15:14:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 15:14:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 15:14:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 15:14:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 15:14:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:34 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 15:14:34 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 15:14:34 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 15:14:35 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 15:14:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 15:14:42 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 15:14:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 15:14:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:44 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 15:14:44 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:44 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 15:14:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 15:14:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 15:14:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 15:14:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 15:14:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 15:14:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 15:14:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 15:14:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:49 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 15:14:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 15:14:49 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 15:14:50 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 15:14:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 15:14:56 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 15:14:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 15:14:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:58 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 15:14:58 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:58 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 15:14:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 15:15:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 15:15:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 15:15:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 15:15:00 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 15:15:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 15:15:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:03 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 15:15:03 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:03 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 15:15:03 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 15:15:03 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 15:15:05 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 15:15:12 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 15:15:12 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 15:15:12 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:12 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 15:15:12 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 15:15:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 15:15:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 15:15:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 15:15:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 15:15:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 15:15:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 15:15:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 15:15:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 15:15:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:20 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 15:15:20 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 15:15:20 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 15:15:21 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 15:15:28 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 15:15:28 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 15:15:28 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:28 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 15:15:28 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 15:15:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 15:15:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 15:15:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 15:15:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 15:15:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 15:15:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 15:15:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 15:15:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 15:15:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 15:15:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:35 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 15:15:35 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 15:15:35 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 15:15:37 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 15:15:43 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 15:15:43 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 15:15:43 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:43 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 15:15:43 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 15:15:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 15:15:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 15:15:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 15:15:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 15:15:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 15:15:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 15:15:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 15:15:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:46 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 15:15:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 15:15:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:15:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 15:15:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 15:15:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 15:15:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 15:15:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:51 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 15:15:51 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 15:15:51 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 15:15:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 15:15:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 15:15:59 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 15:15:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:15:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 15:15:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 15:16:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 15:16:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 15:16:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 15:16:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 15:16:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:01 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:02 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:03 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 15:16:03 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:03 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 15:16:03 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:04 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 15:16:04 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:04 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 15:16:04 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:05 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 15:16:05 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 15:16:05 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 15:16:06 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 15:16:12 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 15:16:12 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 15:16:12 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:12 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 15:16:12 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 15:16:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 15:16:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 15:16:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 15:16:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 15:16:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:16:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 15:16:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 15:16:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 15:16:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 15:16:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:16:18 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 15:34:45 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-24 15:36:21 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-24 15:36:55 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-24 15:36:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 15:36:56 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 15:36:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 15:37:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 15:37:08 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 15:37:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 15:37:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 15:37:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 15:37:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 15:37:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 15:37:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 15:37:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 15:37:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 15:37:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 15:37:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 15:37:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 15:37:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 15:37:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 15:37:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 15:37:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 15:37:19 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:19 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 15:37:19 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 15:37:19 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 15:37:21 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 15:37:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 15:37:27 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 15:37:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:28 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 15:37:28 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 15:37:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 15:37:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 15:37:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 15:37:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 15:37:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 15:37:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 15:37:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 15:37:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 15:37:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 15:37:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 15:37:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 15:37:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 15:37:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 15:37:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:34 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 15:37:34 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 15:37:34 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 16:00:48 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-24 16:00:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 16:00:48 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 16:00:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 16:01:03 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 16:01:03 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 16:01:04 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:04 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 16:01:04 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:06 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 16:01:06 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:06 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 16:01:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 16:01:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 16:01:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 16:01:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 16:01:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 16:01:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 16:01:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 16:01:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 16:01:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 16:01:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 16:01:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 16:01:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 16:01:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:11 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 16:01:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 16:01:11 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 16:01:13 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 16:01:21 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 16:01:21 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 16:01:21 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:21 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 16:01:21 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:23 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 16:01:23 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:23 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 16:01:24 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 16:01:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 16:01:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 16:01:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 16:01:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 16:01:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 16:01:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 16:01:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:29 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 16:01:29 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 16:01:29 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 16:01:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 16:01:38 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 16:01:38 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 16:01:38 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:39 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 16:01:39 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 16:01:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 16:01:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 16:01:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 16:01:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 16:01:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker@gmail].
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:01:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:43 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 16:01:43 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:43 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 16:01:43 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:44 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 16:01:44 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' E-Mail Address does not appear to be valid! '] ------> is displayed
+2026-09-24 16:01:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:01:45 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 16:17:37 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-24 16:17:37 [main] INFO  TestListener - ================================================
+2026-09-24 16:17:37 [main] INFO  TestListener - Test suite started: TutorialsNINJA Test 1.0
+2026-09-24 16:17:37 [main] INFO  TestListener - ================================================
+2026-09-24 16:17:38 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 16:17:38 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 16:17:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 16:17:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 16:17:48 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 16:17:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  TestListener - =========== Test Started: verifyRegistrationWithInvalidEmailFormat ===========
+2026-09-24 16:17:48 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 16:17:49 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:51 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 16:17:51 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:51 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 16:17:51 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:17:51 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:51 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 16:17:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:17:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 16:17:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:17:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 16:17:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:17:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 16:17:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:17:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker@gmail].
+2026-09-24 16:17:52 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:17:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 16:17:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:17:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 16:17:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:17:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 16:17:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:17:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:54 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 16:17:54 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:54 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 16:17:54 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 16:17:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' E-Mail Address does not appear to be valid! '] ------> is displayed
+2026-09-24 16:17:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:17:57 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 16:17:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 16:17:57 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 16:17:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 16:18:06 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 16:18:06 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 16:18:06 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  TestListener - =========== Test Started: verifyRegistrationWithExistAccount ===========
+2026-09-24 16:18:06 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:06 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 16:18:06 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 16:18:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 16:18:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 16:18:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 16:18:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 16:18:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 16:18:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 16:18:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 16:18:09 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 16:18:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 16:18:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 16:18:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 16:18:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 16:18:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 16:18:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:15 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 16:18:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 16:18:15 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 16:18:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 16:18:23 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 16:18:23 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 16:18:23 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  TestListener - =========== Test Started: verifyRegistrationWithExistAccount ===========
+2026-09-24 16:18:23 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:23 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 16:18:23 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 16:18:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 16:18:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 16:18:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 16:18:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 16:18:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 16:18:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 16:18:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 16:18:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 16:18:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:28 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 16:18:28 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:18:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 16:18:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 16:18:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:32 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 16:18:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 16:18:33 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:18:33 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 16:18:33 [main] INFO  TestListener - ===============================================
+2026-09-24 16:18:33 [main] INFO  TestListener - Test suite finished: TutorialsNINJA Test 1.0
+2026-09-24 16:18:33 [main] INFO  TestListener - ===============================================
+2026-09-24 16:21:13 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-24 16:21:13 [main] INFO  TestListener - ================================================
+2026-09-24 16:21:13 [main] INFO  TestListener - Test suite started: TutorialsNINJA Test 1.0
+2026-09-24 16:21:13 [main] INFO  TestListener - ================================================
+2026-09-24 16:21:13 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 16:21:13 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 16:21:16 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 16:21:23 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 16:21:23 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 16:21:23 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  TestListener - ****************** Test Started: verifyRegistrationWithInvalidEmailFormat ******************
+2026-09-24 16:21:23 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:23 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 16:21:23 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 16:21:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 16:21:25 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker@gmail].
+2026-09-24 16:21:26 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 16:21:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 16:21:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 16:21:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 16:21:27 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:28 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 16:21:28 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:29 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 16:21:29 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' E-Mail Address does not appear to be valid! '] ------> is displayed
+2026-09-24 16:21:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:30 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 16:21:30 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 16:21:30 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 16:21:31 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 16:21:38 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 16:21:38 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 16:21:38 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  TestListener - ****************** Test Started: verifyRegistrationWithExistAccount ******************
+2026-09-24 16:21:38 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:39 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 16:21:39 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 16:21:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 16:21:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 16:21:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 16:21:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:41 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 16:21:42 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:43 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:43 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 16:21:43 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:43 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 16:21:43 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:44 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 16:21:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 16:21:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:45 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 16:21:45 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 16:21:45 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 16:21:47 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 16:21:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 16:21:53 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 16:21:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  TestListener - ****************** Test Started: verifyRegistrationWithExistAccount ******************
+2026-09-24 16:21:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 16:21:53 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:55 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 16:21:55 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:55 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 16:21:55 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:55 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:55 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 16:21:56 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 16:21:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 16:21:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:21:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 16:21:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 16:21:57 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:58 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 16:21:58 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:21:58 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 16:21:58 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:22:01 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 16:22:01 [main] INFO  TestListener - ===============================================
+2026-09-24 16:22:01 [main] INFO  TestListener - Test suite finished: TutorialsNINJA Test 1.0
+2026-09-24 16:22:01 [main] INFO  TestListener - ===============================================
+2026-09-24 16:34:04 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-24 16:34:04 [main] INFO  TestListener - ================================================
+2026-09-24 16:34:04 [main] INFO  TestListener - Test suite started: TutorialsNINJA Test 1.0
+2026-09-24 16:34:04 [main] INFO  TestListener - ================================================
+2026-09-24 16:34:05 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 16:34:05 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 16:34:08 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 16:34:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 16:34:14 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 16:34:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  TestListener - ****************** Test Started: verifyRegistrationWithInvalidEmailFormat ******************
+2026-09-24 16:34:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 16:34:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 16:34:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 16:34:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:34:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 16:34:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:34:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 16:34:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:34:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 16:34:17 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker@gmail].
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 16:34:18 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 16:34:19 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:19 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 16:34:19 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:19 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 16:34:19 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:21 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 16:34:21 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:21 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' E-Mail Address does not appear to be valid! '] ------> is displayed
+2026-09-24 16:34:21 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 16:34:22 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 16:34:22 [main] INFO  TestListener - ===============================================
+2026-09-24 16:34:22 [main] INFO  TestListener - Test suite finished: TutorialsNINJA Test 1.0
+2026-09-24 16:34:22 [main] INFO  TestListener - ===============================================
+2026-09-24 16:59:55 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-09-24 16:59:55 [main] INFO  TestListener - ================================================
+2026-09-24 16:59:55 [main] INFO  TestListener - Test suite started: TutorialsNINJA Test 1.0
+2026-09-24 16:59:55 [main] INFO  TestListener - ================================================
+2026-09-24 16:59:55 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 16:59:55 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 16:59:59 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 17:00:06 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 17:00:06 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 23
+2026-09-24 17:00:06 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  TestListener - ****************** Test Started: verifyRegistrationWithInvalidEmailFormat ******************
+2026-09-24 17:00:06 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 17:00:07 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 17:00:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 17:00:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 17:00:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 17:00:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 17:00:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:10 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 17:00:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker@gmail].
+2026-09-24 17:00:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 17:00:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 17:00:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 17:00:11 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:12 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:12 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 17:00:12 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:12 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 17:00:12 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 17:00:14 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Element  [Element with text ' E-Mail Address does not appear to be valid! '] ------> is displayed
+2026-09-24 17:00:15 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:15 [TestNG-test-TutorialsNINJA Test 1.0-1] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 17:00:15 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 17:00:15 [TestNG-test-TutorialsNINJA Test 1.0-2] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 17:00:17 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 17:00:24 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 17:00:24 [TestNG-test-TutorialsNINJA Test 1.0-2] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 45
+2026-09-24 17:00:24 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  TestListener - ****************** Test Started: verifyRegistrationWithExistAccount ******************
+2026-09-24 17:00:24 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:24 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 17:00:24 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:26 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 17:00:26 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:26 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 17:00:26 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:26 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:26 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 17:00:26 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:26 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:26 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 17:00:27 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:28 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:28 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 17:00:28 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:28 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:28 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 17:00:28 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:28 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 17:00:28 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:29 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 17:00:30 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:30 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 17:00:30 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:32 [TestNG-test-TutorialsNINJA Test 1.0-2] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 17:00:32 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 17:00:32 [TestNG-test-TutorialsNINJA Test 1.0-2] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 17:00:33 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 17:00:40 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 17:00:40 [TestNG-test-TutorialsNINJA Test 1.0-2] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 45
+2026-09-24 17:00:40 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  TestListener - ****************** Test Started: verifyRegistrationWithExistAccount ******************
+2026-09-24 17:00:40 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:40 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 17:00:40 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:42 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 17:00:42 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:42 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 17:00:42 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:42 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:42 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 17:00:42 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:42 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:42 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chaker68@yopmail.com].
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [21622114588].
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 17:00:43 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:44 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:44 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 17:00:44 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:44 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:44 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 17:00:44 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:44 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 17:00:44 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:45 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 17:00:45 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:45 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Element  [Element with text ' Warning: E-Mail Address is already registered! '] ------> is displayed
+2026-09-24 17:00:45 [TestNG-test-TutorialsNINJA Test 1.0-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:48 [TestNG-test-TutorialsNINJA Test 1.0-2] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 17:00:48 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-09-24 17:00:48 [TestNG-test-TutorialsNINJA Test 1.0-3] WARN  BaseClass - Setting up for ---------------> : RegisterTests8
+2026-09-24 17:00:49 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-09-24 17:00:56 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-09-24 17:00:56 [TestNG-test-TutorialsNINJA Test 1.0-3] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 75
+2026-09-24 17:00:56 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  TestListener - ****************** Test Started: verifyRegistrationWithInvalidPhoneFormat ******************
+2026-09-24 17:00:56 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:56 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' My Account ']
+2026-09-24 17:00:56 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:58 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Register ']
+2026-09-24 17:00:58 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:58 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Actual Text: [Register Account] match to -----> Expected Text Value: [Register Account]
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Actual Text: [Your Personal Details] match to -----> Expected Text Value: [Your Personal Details]
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Actual Text: [Your Password] match to -----> Expected Text Value: [Your Password]
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Value entered on ' Element with name ' firstname ' ' is [John].
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Value entered on ' Element with name ' lastname ' ' is [Anderson].
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [chakerTesting@gmail.com].
+2026-09-24 17:00:59 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:01:00 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:01:00 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Value entered on ' Element with name ' telephone ' ' is [abcde].
+2026-09-24 17:01:00 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:01:00 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:01:00 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [QaTest@1122].
+2026-09-24 17:01:00 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:01:00 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:01:00 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Value entered on ' Element with name ' confirm ' ' is [QaTest@1122].
+2026-09-24 17:01:00 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border reset on element !
+2026-09-24 17:01:00 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:01:00 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Yes ']
+2026-09-24 17:01:00 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:01:01 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Clicked on element ----------------> : [Element with name ' agree ']
+2026-09-24 17:01:01 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-09-24 17:01:04 [TestNG-test-TutorialsNINJA Test 1.0-3] INFO  ActionDriver - Clicked on element ----------------> : [Element with class ' btn btn-primary ']
+2026-09-24 17:01:29 [TestNG-test-TutorialsNINJA Test 1.0-3] DEBUG ActionDriver - Unable to apply border color on web element | Error: javascript error: Cannot read properties of null (reading 'style')
+  (Session info: chrome=154.0.8037.57)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6cf23f5e84693d400df4173e01e6b363, executeScript {script=arguments[0].style.border = '3px solid red', args=[null]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 154.0.8037.57, chrome: {chromedriverVersion: 154.0.8037.57 (73c14f6228d7..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59906}, goog:processID: 3780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59906/devtoo..., se:cdpVersion: 154.0.8037.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6cf23f5e84693d400df4173e01e6b363
+2026-09-24 17:01:30 [TestNG-test-TutorialsNINJA Test 1.0-3] WARN  BaseClass - WebDriver instance is closed for ---------------> : RegisterTests8
+2026-09-24 17:01:30 [main] INFO  TestListener - ===============================================
+2026-09-24 17:01:30 [main] INFO  TestListener - Test suite finished: TutorialsNINJA Test 1.0
+2026-09-24 17:01:30 [main] INFO  TestListener - ===============================================
+2026-09-25 12:51:38 [main] INFO  TestListener - ================================================
+2026-09-25 12:51:38 [main] INFO  TestListener - Test suite started: TutorialsNINJA Test 1.0
+2026-09-25 12:51:38 [main] INFO  TestListener - ================================================
+2026-09-25 12:51:38 [TestNG-test-TutorialsNINJA Test 1.0-1] INFO  TestListener - ****************** Test Started: f ******************

@@ -51,9 +51,13 @@ public class RegisterPage {
     private final By emailErrorMsg = By.xpath("//div[contains(text(),'E-Mail Address does not appear to be valid!')]");
     private final By phoneErrorMsg = By.xpath("//div[contains(text(),'Telephone must be between 3 and 32 characters!')]");
     private final By pwdErrorMsg = By.xpath("//div[contains(text(),'Password must be between 4 and 20 characters!')]");
-    private final By privacyErrorMsg = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
 
-    private final By confirmErrorMsg = By.xpath("//div[@class='text-danger']");
+    private final By confirmErrorMsg = By.xpath("//div[contains(text(),'Password confirmation does not match password!')");
+    private final By EmailUnformatedMsg = By.xpath("//div[contains(text(),'E-Mail Address does not appear to be valid!')]");
+
+    private final By privacyErrorMsg = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
+    private final By ExistEmailErrorMsg = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
+    private final By TelephoneUnformatedMsg = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
 
     // Method to pass to login page via Link
     public void clickLoginPageLink() {
@@ -159,8 +163,28 @@ public class RegisterPage {
         return actionDriver.isDisplayed(confirmPwdField);
     }
 
-    public String getNotifMessages() {
+    public String getConfirmPwdMessage() {
         return actionDriver.getText(confirmErrorMsg);
+    }
+
+    public boolean isExistEmailNotifDisplayed() {
+        return actionDriver.isDisplayed(ExistEmailErrorMsg);
+    }
+
+    public String getEmailExistMessage() {
+        return actionDriver.getText(ExistEmailErrorMsg);
+    }
+
+    public boolean isEmailUnformatedMsgDisplayed() {
+        return actionDriver.isDisplayed(EmailUnformatedMsg);
+    }
+
+    public String getEmailUnformatedMessage() {
+        return actionDriver.getText(EmailUnformatedMsg);
+    }
+
+    public boolean isPhoneUnformatedMessageDisplayed() {
+        return actionDriver.isDisplayed(TelephoneUnformatedMsg);
     }
 
 }

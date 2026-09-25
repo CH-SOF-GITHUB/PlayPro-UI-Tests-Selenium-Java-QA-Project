@@ -7,18 +7,17 @@ import org.testng.IAnnotationTransformer;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.annotations.ITestAnnotation;
+import org.apache.logging.log4j.Logger;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Classe d'écouteur de tests TestNG.
  * Surcharge des méthodes clés pour capturer les résultats des tests.
  */
 public class TestListener implements ITestListener, IAnnotationTransformer {
+
+    public static final Logger loggr = BaseClass.loggr;
 
     // USE IAnnotationTransformer interface for Re-Try Tests execution:
     /* @Override
@@ -30,15 +29,19 @@ public class TestListener implements ITestListener, IAnnotationTransformer {
     @Override
     public void onStart(ITestContext context) {
         // Masque les logs d'avertissement de Selenium DevTools
-        Logger.getLogger("org.seleniumhq.selenium.devtools").setLevel(Level.SEVERE);
-        System.out.println("Test suite started: " + context.getName()); // ExtentManager.logStep: À ce moment-là, aucun ExtentTest n'a encore été créé.
+        java.util.logging.Logger.getLogger("org.seleniumhq.selenium.devtools").setLevel(Level.SEVERE);
+        loggr.info("================================================");
+        loggr.info("Test suite started: {}", context.getName());
+        loggr.info("================================================");
         ExtentManager.getReporter(); // Initialize the ExtentReports
     }
 
     // Triggered when a suite finishes
     @Override
     public void onFinish(ITestContext context) {
-        System.out.println("Test suite finished: " + context.getName());  // ExtentManager.logStep: À ce moment-là, aucun ExtentTest n'a encore été créé.
+        loggr.info("===============================================");
+        loggr.info("Test suite finished: {}", context.getName());
+        loggr.info("===============================================");
         ExtentManager.endTest();
     }
 
@@ -47,6 +50,7 @@ public class TestListener implements ITestListener, IAnnotationTransformer {
     public void onTestStart(ITestResult result) {
         String testName = result.getMethod().getMethodName();
         // Start logging in Extent Reports
+        loggr.info("****************** Test Started: {} ******************", testName);
         ExtentManager.startTest(testName);
         ExtentManager.logStep("Test Started - " + testName);
     }
