@@ -3,15 +3,15 @@
 
 
 <suite name="TestNG Suite" parallel="tests" thread-count="1">
-    <!--<listeners>
+    <listeners>
         <listener class-name="com.qa.tests.TestNG.TestNGListener"/>
-    </listeners>-->
+        <listener class-name="com.qa.tests.TestNG.MyAnnotationTransformer"/>
+    </listeners>
     <!-- Testing in Browser 1 Started -->
     <test name="TestChrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.qa.tests.TestNG.MyClass"/>
-            <class name="com.qa.tests.TestNG.MyClass2"/>
+            <class name="com.qa.tests.TestNG.RetryTestFailedAnnotation"/>
         </classes>
     </test>
 </suite>

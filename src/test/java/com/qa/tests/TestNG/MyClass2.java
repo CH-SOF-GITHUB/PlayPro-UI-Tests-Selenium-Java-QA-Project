@@ -13,6 +13,6 @@ public class MyClass2 {
     @Test
     public void myMethod4() {
         Reporter.log("Reporter - MyClass2 - Inside ....... myMethod4" + true);
-        Assert.assertEquals(true, true, "not equal");
+        Assert.assertEquals(true, false, "not equal");
     }
 }
