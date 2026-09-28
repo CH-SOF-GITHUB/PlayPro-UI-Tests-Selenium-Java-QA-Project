@@ -18,7 +18,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.qa.tests.TestNG.MyClassTestData"/>
+            <class name="com.qa.tests.ImplicitExplicitWaits.MyClassTestDataExplicitWait"/>
         </classes>
     </test>
 </suite>

@@ -1,4 +1,4 @@
-package com.qa.tests.TestNG;
+package com.qa.tests.ImplicitExplicitWaits;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class MyClassTestData {
-
+    // define ThreadLocal of WebDriver
     private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
 
     public static WebDriver getDriver() {
@@ -112,7 +112,6 @@ public class MyClassTestData {
     }
 
     public void verifyBookingConfirmed(String expectedCustomer) {
-
         Assert.assertTrue(getDriver().findElement(By.xpath("//h3[contains(text(),'Booking Confirmed!')]")).isDisplayed(), "Booking confirmation message is not displayed");
 
         String actualCustomer = getDriver().findElement(By.cssSelector("div.bg-indigo-50 div:nth-child(2) span:nth-child(2)")).getText();
