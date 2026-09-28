@@ -12,7 +12,7 @@
     <test name="TestChrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.qa.tests.ImplicitExplicitWaits.ExplicitWait1"/>
+            <class name="com.qa.tests.ImplicitExplicitWaits.ImplicitWait1"/>
         </classes>
     </test>
 </suite>
