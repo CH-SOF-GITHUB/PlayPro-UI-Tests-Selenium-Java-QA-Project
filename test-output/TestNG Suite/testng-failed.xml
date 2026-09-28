@@ -14,14 +14,14 @@
       </run>
     </groups>
     <classes>
-      <class name="com.qa.tests.ImplicitExplicitWaits.MyClassTestData">
+      <class name="com.qa.tests.ImplicitExplicitWaits.MyClassTestDataImplicitWait">
         <methods>
           <include name="tearDown"/>
           <include name="configureLogs"/>
           <include name="FillOutDetailsBooking" invocation-numbers="1 2"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.qa.tests.ImplicitExplicitWaits.MyClassTestData -->
+      </class> <!-- com.qa.tests.ImplicitExplicitWaits.MyClassTestDataImplicitWait -->
     </classes>
   </test> <!-- Test EventHUB(failed) -->
 </suite> <!-- Failed suite [TestNG Suite] -->

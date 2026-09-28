@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class MyClassTestData {
+public class MyClassTestDataImplicitWait {
     // define ThreadLocal of WebDriver
     private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
 
@@ -47,21 +47,7 @@ public class MyClassTestData {
     }
 
     @AfterMethod(alwaysRun = true)
-    public void tearDown(ITestResult result) {
-        switch (result.getStatus()) {
-            case ITestResult.SUCCESS:
-                Reporter.log("✅ Test PASSED : " + result.getName());
-                break;
-
-            case ITestResult.FAILURE:
-                Reporter.log("❌ Test FAILED : " + result.getName());
-                break;
-
-            case ITestResult.SKIP:
-                Reporter.log("⚠️ Test SKIPPED : " + result.getName());
-                break;
-        }
-
+    public void tearDown() {
         WebDriver driver = getDriver();
 
         if (driver != null) {

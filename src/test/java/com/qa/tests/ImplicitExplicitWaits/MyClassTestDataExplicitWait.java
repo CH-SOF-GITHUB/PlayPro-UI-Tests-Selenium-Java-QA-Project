@@ -57,18 +57,7 @@ public class MyClassTestDataExplicitWait {
     }
 
     @AfterMethod(alwaysRun = true)
-    public void tearDown(ITestResult result) {
-        switch (result.getStatus()) {
-            case ITestResult.SUCCESS:
-                Reporter.log("✅ Test PASSED : " + result.getName());
-                break;
-            case ITestResult.FAILURE:
-                Reporter.log("❌ Test FAILED : " + result.getName());
-                break;
-            case ITestResult.SKIP:
-                Reporter.log("⚠️ Test SKIPPED : " + result.getName());
-                break;
-        }
+    public void tearDown() {
         WebDriver driver = getDriver();
         if (driver != null) {
             driver.quit();

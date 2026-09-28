@@ -22,16 +22,16 @@ public class TestNGListener implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        System.out.println("✔️ Test Passed : '" + result.getMethod().getMethodName() + "'");
+        System.out.println("✅ Test PASSED : '" + result.getMethod().getMethodName() + "'");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
-        System.out.println("❌ Test Failed : '" + result.getMethod().getMethodName() + "'");
+        System.out.println("❌ Test FAILED : '" + result.getMethod().getMethodName() + "'");
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        ITestListener.super.onTestSkipped(result);
+        System.out.println("⚠️ Test SKIPPED : '" + result.getMethod().getMethodName() + "'");
     }
 }
