@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="1" parallel="tests" name="Failed suite [TestNG Suite]" guice-stage="DEVELOPMENT">
+<suite thread-count="4" parallel="tests" name="Failed suite [TestNG Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.qa.tests.TestNG.TestNGListener"/>
     <listener class-name="com.qa.tests.TestNG.MyAnnotationTransformer"/>
     <listener class-name="com.qa.tests.TestNG.CustomReporter"/>
   </listeners>
-  <test thread-count="1" parallel="tests" name="TestChrome(failed)">
+  <test thread-count="4" parallel="tests" name="Test EventHUB(failed)">
     <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.qa.tests.ImplicitExplicitWaits.ExplicitWait1">
+      <class name="com.qa.tests.TestNG.MyClassTestData">
         <methods>
+          <include name="tearDown"/>
           <include name="configureLogs"/>
-          <include name="end"/>
-          <include name="test1"/>
-          <include name="setup"/>
+          <include name="FillOutDetailsBooking" invocation-numbers="1 2"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.qa.tests.ImplicitExplicitWaits.ExplicitWait1 -->
+      </class> <!-- com.qa.tests.TestNG.MyClassTestData -->
     </classes>
-  </test> <!-- TestChrome(failed) -->
+  </test> <!-- Test EventHUB(failed) -->
 </suite> <!-- Failed suite [TestNG Suite] -->

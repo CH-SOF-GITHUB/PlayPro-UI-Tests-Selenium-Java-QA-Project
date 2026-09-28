@@ -90,7 +90,7 @@ public class ImplicitWait1 {
         Reporter.log("Customer : " + driver.findElement(By.cssSelector("div[class='bg-indigo-50 border border-indigo-100 rounded-xl p-4 mb-5 text-left space-y-2'] div:nth-child(2) span:nth-child(2)")).getText());
     }
 
-    @Test
+    @Test(invocationCount = 5)
     public void test1() {
         driver.get("https://eventhub.rahulshettyacademy.com/");
         signIn("bchaker28@yahoo.com", "Q5n@j!i!QnZQmYm");
