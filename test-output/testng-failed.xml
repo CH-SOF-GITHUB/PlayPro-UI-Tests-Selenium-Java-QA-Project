@@ -9,11 +9,14 @@
   <test thread-count="1" parallel="tests" name="TestChrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.qa.tests.TestNG.ClassTestForCustomReporter">
+      <class name="com.qa.tests.ImplicitExplicitWaits.ExplicitWait1">
         <methods>
-          <include name="myMethod2"/>
+          <include name="configureLogs"/>
+          <include name="end"/>
+          <include name="test1"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.qa.tests.TestNG.ClassTestForCustomReporter -->
+      </class> <!-- com.qa.tests.ImplicitExplicitWaits.ExplicitWait1 -->
     </classes>
   </test> <!-- TestChrome(failed) -->
 </suite> <!-- Failed suite [TestNG Suite] -->
