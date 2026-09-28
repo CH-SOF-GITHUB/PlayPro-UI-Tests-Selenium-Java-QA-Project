@@ -4,15 +4,16 @@
   <listeners>
     <listener class-name="com.qa.tests.TestNG.TestNGListener"/>
     <listener class-name="com.qa.tests.TestNG.MyAnnotationTransformer"/>
+    <listener class-name="com.qa.tests.TestNG.CustomReporter"/>
   </listeners>
   <test thread-count="1" parallel="tests" name="TestChrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.qa.tests.TestNG.RetryTestFailedAnnotation">
+      <class name="com.qa.tests.TestNG.ClassTestForCustomReporter">
         <methods>
           <include name="myMethod2"/>
         </methods>
-      </class> <!-- com.qa.tests.TestNG.RetryTestFailedAnnotation -->
+      </class> <!-- com.qa.tests.TestNG.ClassTestForCustomReporter -->
     </classes>
   </test> <!-- TestChrome(failed) -->
 </suite> <!-- Failed suite [TestNG Suite] -->

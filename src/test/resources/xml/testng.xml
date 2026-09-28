@@ -6,12 +6,13 @@
     <listeners>
         <listener class-name="com.qa.tests.TestNG.TestNGListener"/>
         <listener class-name="com.qa.tests.TestNG.MyAnnotationTransformer"/>
+        <listener class-name="com.qa.tests.TestNG.CustomReporter"/>
     </listeners>
     <!-- Testing in Browser 1 Started -->
     <test name="TestChrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.qa.tests.TestNG.RetryTestFailedAnnotation"/>
+            <class name="com.qa.tests.TestNG.ClassTestForCustomReporter"/>
         </classes>
     </test>
 </suite>

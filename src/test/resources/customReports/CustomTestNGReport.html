@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Custom TestNG Report</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f6f8;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #444;
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .passed {
+            color: green;
+            font-weight: bold;
+        }
+
+        .failed {
+            color: red;
+            font-weight: bold;
+        }
+
+        .skipped {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .summary {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .card {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            min-width: 120px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Custom TestNG Report</h1>
+<h2>Suite: TestNG Suite</h2><div class="summary">
+<div class='card'><strong>Total</strong><br>6</div><div class='card'><strong>Passed</strong><br><span class='passed'>2</span></div><div class='card'><strong>Failed</strong><br><span class='failed'>1</span></div><div class='card'><strong>Skipped</strong><br><span class='skipped'>3</span></div></div><table>
+    <tr>
+        <th>Test Method</th>
+        <th>Class</th>
+        <th>Status</th>
+    </tr>
+<tr><td>myMethod3</td><td>com.qa.tests.TestNG.ClassTestForCustomReporter</td><td class='passed'>PASSED</td></tr><tr><td>myMethod1</td><td>com.qa.tests.TestNG.ClassTestForCustomReporter</td><td class='passed'>PASSED</td></tr><tr><td>myMethod2</td><td>com.qa.tests.TestNG.ClassTestForCustomReporter</td><td class='failed'>FAILED</td></tr><tr><td>myMethod2</td><td>com.qa.tests.TestNG.ClassTestForCustomReporter</td><td class='skipped'>SKIPPED</td></tr><tr><td>myMethod2</td><td>com.qa.tests.TestNG.ClassTestForCustomReporter</td><td class='skipped'>SKIPPED</td></tr><tr><td>myMethod2</td><td>com.qa.tests.TestNG.ClassTestForCustomReporter</td><td class='skipped'>SKIPPED</td></tr></table><h2>Global Summary</h2><table>
+    <tr>
+        <th>Total Tests</th>
+        <th>Passed</th>
+        <th>Failed</th>
+        <th>Skipped</th>
+    </tr>
+<tr><td>6</td><td class='passed'>2</td><td class='failed'>1</td><td class='skipped'>3</td></tr></table></body>
+</html>
