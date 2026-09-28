@@ -16,4 +16,9 @@ public class RetryTestFailedAnnotation {
         Reporter.log("RetryTestFailed - Inside ....... myMethod2" + true);
         Assert.assertEquals(false, true, "not equal");
     }
+
+    @Test
+    public void myMethod3() {
+        Reporter.log("RetryTestFailed - Inside ....... myMethod3" + true);
+    }
 }
