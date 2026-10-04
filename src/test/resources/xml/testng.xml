@@ -3,11 +3,11 @@
 
 
 <suite name="TestNG Suite" thread-count="4">
-    <listeners>
+    <!--<listeners>
         <listener class-name="com.qa.tests.TestNG.TestNGListener"/>
         <listener class-name="com.qa.tests.TestNG.MyAnnotationTransformer"/>
         <listener class-name="com.qa.tests.TestNG.CustomReporter"/>
-    </listeners>
+    </listeners>-->
     <!-- Testing in Browser 1 Started -->
     <test name="Test EventHUB">
         <!-- MODIFICATION : parameter doit être avant groups -->
