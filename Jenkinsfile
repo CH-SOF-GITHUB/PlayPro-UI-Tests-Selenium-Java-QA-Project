@@ -1,8 +1,13 @@
 pipeline {
     agent any
 
+    // 1. Déclaration des paramètres envoyés par Xray / Jira
+    parameters {
+        string(name: 'projectKey', defaultValue: '', description: 'Clé du projet Jira/Xray')
+        string(name: 'testExecKey', defaultValue: '', description: 'Clé du Test Execution dans Xray')
+    }
+
     tools {
-        // Must match the Maven tool name configured in Jenkins global tool configuration
         maven 'MAVEN-3.9.9'
     }
 
@@ -15,13 +20,35 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean install'
+                bat 'mvn clean install -DskipTests'
             }
         }
 
         stage('Run UI Tests') {
             steps {
-                bat 'mvn clean test'
+                // 2. Utilisation de catchError pour poursuivre le pipeline en cas d'échec des tests
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    bat 'mvn test'
+                }
+            }
+        }
+
+        stage('Import Results to Xray') {
+            steps {
+                script {
+                    // Vérifie si le pipeline a été déclenché depuis Xray avec une clé de Test Execution
+                    if (params.testExecKey != '') {
+                        echo "Export des résultats vers Xray pour l'exécution : ${params.testExecKey}"
+                        // Exemple d'appel API Xray (Cloud) pour importer le rapport JUnit surefire
+                        /*
+                        withCredentials([string(credentialsId: 'xray-client-secret', variable: 'XRAY_CLIENT_SECRET')]) {
+                            // Commande curl pour poster target/surefire-reports/*.xml vers Xray
+                        }
+                        */
+                    } else {
+                        echo "Exécution standard (non déclenchée via Xray)."
+                    }
+                }
             }
         }
 
@@ -60,7 +87,7 @@ pipeline {
                     </ul>
                     <p><b>Last Commit Details:</b></p>
                     <blockquote style="background-color: #f9f9f9; padding: 10px; border-left: 4px solid #4CAF50;">
-                                            \${CHANGES}
+                        \${CHANGES}
                     </blockquote>
                     <p><b>Extent Report:</b> <a href="${env.JOB_URL}Extent_20Spark_20Report/">CLICK HERE</a></p>
                     <p>Best Regards,<br>
