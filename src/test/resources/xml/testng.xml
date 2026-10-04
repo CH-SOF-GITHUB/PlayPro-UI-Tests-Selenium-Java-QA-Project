@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name="TestNG Suite" parallel="tests" thread-count="4">
+<suite name="TestNG Suite" thread-count="4">
     <listeners>
         <listener class-name="com.qa.tests.TestNG.TestNGListener"/>
         <listener class-name="com.qa.tests.TestNG.MyAnnotationTransformer"/>
@@ -12,13 +12,8 @@
     <test name="Test EventHUB">
         <!-- MODIFICATION : parameter doit être avant groups -->
         <parameter name="browser" value="chrome"/>
-        <groups>
-            <run>
-                <include name="smoke"/>
-            </run>
-        </groups>
         <classes>
-            <class name="com.qa.tests.ImplicitExplicitWaits.MyClassTestDataImplicitWait"/>
+            <class name="com.qa.tests.TestNG.XrayGeneric"/>
         </classes>
     </test>
 </suite>
