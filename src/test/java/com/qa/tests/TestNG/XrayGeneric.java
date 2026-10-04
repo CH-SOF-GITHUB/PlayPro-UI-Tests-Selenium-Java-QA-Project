@@ -16,17 +16,13 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class XrayGeneric extends BaseClass {
-    WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(15));
+    WebDriverWait wait;
 
     // @BeforeMethod: The annotation method will be run before each test method.
-    // @BeforeMethod
-    // public void setup() {
-    //    driver = new ChromeDriver();
-    //    driver.manage().window().maximize();
-    //    wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-    //    driver.get("https://eventhub.rahulshettyacademy.com/");
-    //    System.out.println("Browser launched successfully");
-    // }
+    @BeforeMethod
+    public void setup() {
+        wait = new WebDriverWait(getDriver(), Duration.ofSeconds(15));
+    }
 
     // @AfterMethod: The annotation method will be run after each test method.
     // @AfterMethod
