@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.qa.actionDriver.ActionDriver;
 import org.qa.base.BaseClass;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -17,7 +18,7 @@ import java.time.Duration;
 
 public class XrayGeneric extends BaseClass {
     private WebDriverWait wait;
-
+    private ActionDriver actionDriver;
     // @BeforeMethod: The annotation method will be run before each test method.
     // @AfterMethod: The annotation method will be run after each test method.
     // @AfterMethod
@@ -28,8 +29,13 @@ public class XrayGeneric extends BaseClass {
     @Test
     public void VerifyLoginWithInvalidPwd() {
         wait = new WebDriverWait(getDriver(), Duration.ofSeconds(15));
+        openEventHUBLoginPage();
         signIn("bchaker28@yahoo.com", "P@ssword2026!");
         checkPwdErrorMessage("Invalid email or password");
+    }
+
+    public void openEventHUBLoginPage() {
+        actionDriver.openPage("https://eventhub.rahulshettyacademy.com/login");
     }
 
     public void signIn(String email, String password) {
