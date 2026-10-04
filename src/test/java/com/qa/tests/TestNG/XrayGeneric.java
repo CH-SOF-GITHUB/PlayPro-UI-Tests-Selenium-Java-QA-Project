@@ -16,14 +16,9 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class XrayGeneric extends BaseClass {
-    WebDriverWait wait;
+    private WebDriverWait wait;
 
     // @BeforeMethod: The annotation method will be run before each test method.
-    @BeforeMethod
-    public void setup() {
-        wait = new WebDriverWait(getDriver(), Duration.ofSeconds(15));
-    }
-
     // @AfterMethod: The annotation method will be run after each test method.
     // @AfterMethod
     // public void end() {
@@ -32,6 +27,7 @@ public class XrayGeneric extends BaseClass {
 
     @Test
     public void VerifyLoginWithInvalidPwd() {
+        wait = new WebDriverWait(getDriver(), Duration.ofSeconds(15));
         signIn("bchaker28@yahoo.com", "P@ssword2026!");
         checkPwdErrorMessage("Invalid email or password");
     }
