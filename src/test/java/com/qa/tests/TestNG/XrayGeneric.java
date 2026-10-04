@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.qa.base.BaseClass;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -14,25 +15,24 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class XrayGeneric {
-    WebDriver driver;
-    WebDriverWait wait;
+public class XrayGeneric extends BaseClass {
+    WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(15));
 
     // @BeforeMethod: The annotation method will be run before each test method.
-    @BeforeMethod
-    public void setup() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        driver.get("https://eventhub.rahulshettyacademy.com/");
-        System.out.println("Browser launched successfully");
-    }
+    // @BeforeMethod
+    // public void setup() {
+    //    driver = new ChromeDriver();
+    //    driver.manage().window().maximize();
+    //    wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+    //    driver.get("https://eventhub.rahulshettyacademy.com/");
+    //    System.out.println("Browser launched successfully");
+    // }
 
     // @AfterMethod: The annotation method will be run after each test method.
-    @AfterMethod
-    public void end() {
-        driver.close();
-    }
+    // @AfterMethod
+    // public void end() {
+    //    driver.close();
+    // }
 
     @Test
     public void VerifyLoginWithInvalidPwd() {
@@ -44,7 +44,7 @@ public class XrayGeneric {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys(email);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password"))).sendKeys(password);
         WebElement SignInButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[normalize-space()='Sign In'])[1]")));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", SignInButton);
+        ((JavascriptExecutor) getDriver()).executeScript("arguments[0].click();", SignInButton);
     }
 
     public void checkPwdErrorMessage(String expectedErrorMessage) {
