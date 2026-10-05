@@ -18,6 +18,7 @@
       <w>Obtenir</w>
       <w>PRENDRE</w>
       <w>Pilote</w>
+      <w>Puisque</w>
       <w>Quand</w>
       <w>Stocke</w>
       <w>Unformated</w>
@@ -27,11 +28,13 @@
       <w>atteindre</w>
       <w>attemps</w>
       <w>automatique</w>
+      <w>autour</w>
       <w>booléen</w>
       <w>chaker</w>
       <w>classique</w>
       <w>compatibilité</w>
       <w>contexte</w>
+      <w>conçu</w>
       <w>créé</w>
       <w>d'abord</w>
       <w>d'avertissement</w>
@@ -42,6 +45,7 @@
       <w>désormais</w>
       <w>détaillés</w>
       <w>enfin</w>
+      <w>enregistré</w>
       <w>entourés</w>
       <w>envoyer</w>
       <w>focalisé</w>
@@ -61,6 +65,7 @@
       <w>loggingout</w>
       <w>loggr</w>
       <w>modifiant</w>
+      <w>nullpointer</w>
       <w>ouvres</w>
       <w>partagent</w>
       <w>pouvant</w>
@@ -68,6 +73,7 @@
       <w>qualid</w>
       <w>receveur</w>
       <w>recevoir</w>
+      <w>remplacer</w>
       <w>réutilisé</w>
       <w>s'ouvrir</w>
       <w>sampletodotext</w>
@@ -79,6 +85,7 @@
       <w>verte</w>
       <w>vient</w>
       <w>échouer</w>
+      <w>également</w>
     </words>
   </dictionary>
 </component>

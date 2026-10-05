@@ -1,3 +1,4 @@
+/*
 package com.qa.cucumber.bdd.DEV.Login;
 
 import com.qa.cucumber.bdd.Hooks;
@@ -69,3 +70,4 @@ public class SampleLoginWithParameter {
         }
     }
 }
+*/

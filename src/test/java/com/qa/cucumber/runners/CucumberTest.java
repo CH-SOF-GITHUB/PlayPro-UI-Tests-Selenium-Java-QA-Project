@@ -7,9 +7,9 @@ import org.testng.annotations.Test;
 
 @Test
 @CucumberOptions(
-        features = "src/test/resources/features/FrontSite/allurelogin.feature",
+        features = "src/test/resources/features/EventHUBApp/login.feature",
         glue = {"com.qa.cucumber.bdd"},
-        plugin = {"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
+        plugin = {"json:target/cucumber.json"}
 )
 public class CucumberTest extends AbstractTestNGCucumberTests {
 }

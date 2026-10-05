@@ -1,3 +1,4 @@
+/*
 package com.qa.cucumber.bdd.DEV.Reservations.Subscriptions;
 
 import org.qa.pages.Abonnements.WebSubscriptionsPage;
@@ -52,3 +53,4 @@ public class SubscriptionTC01 {
         }
     }
 }
+*/

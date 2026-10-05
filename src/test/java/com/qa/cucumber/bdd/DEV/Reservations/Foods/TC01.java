@@ -1,3 +1,4 @@
+/*
 package com.qa.cucumber.bdd.DEV.Reservations.Foods;
 
 import org.qa.pages.WebFoodPage;
@@ -36,3 +37,4 @@ public class TC01 {
         Assert.assertNotEquals(ExpectedMsg, ActualMsg);
     }
 }
+*/

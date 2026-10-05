@@ -1,3 +1,4 @@
+/*
 package com.qa.cucumber.bdd.DEV.Login;
 
 import com.qa.cucumber.bdd.Hooks;
@@ -62,3 +63,4 @@ public class TC001 {
         System.out.println("Test OK");
     }
 }
+*/

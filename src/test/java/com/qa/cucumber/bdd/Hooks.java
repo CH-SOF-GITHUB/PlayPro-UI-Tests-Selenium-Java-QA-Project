@@ -7,73 +7,161 @@ import io.cucumber.java.Status;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.jetbrains.annotations.Contract;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.qa.actionDriver.ActionDriver;
+import org.qa.base.BaseClass;
+import org.qa.utilities.ExtentManager;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.Duration;
+import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
+import static org.qa.utilities.LTStatus.addLambdaStepContext;
 import static org.qa.utilities.LTStatus.markTestStatusViaJS;
 
 
 public class Hooks {
     private static final Log log = LogFactory.getLog(Hooks.class);
     // initialize the web driver
-    public static WebDriver driver = null;
-    // define explicit wait object
-    protected WebDriverWait Wait;
+    // public static WebDriver driver = null;
+    private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    private static final ThreadLocal<ActionDriver> actionDriver = new ThreadLocal<>();
+    // initialize the Properties object
+    protected static Properties prop;
+
+    // Create the objet for log utilities
+    // public static final org.apache.logging.log4j.Logger loggr = LoggerManager.getLogger(BaseClass.class);
+
+    static {
+        // AJOUT : masquer les logs Selenium INFO/WARNING
+        Logger.getLogger("org.openqa.selenium").setLevel(Level.SEVERE);
+        Logger.getLogger("org.openqa.selenium.devtools").setLevel(Level.SEVERE);
+        Logger.getLogger("org.openqa.selenium.chromium").setLevel(Level.SEVERE);
+        Logger.getLogger("org.openqa.selenium.remote.http.WebSocket").setLevel(Level.SEVERE);
+    }
 
     @Before
-    public void setUp() {
-        log.info("🚀 Starting WebDriver For Cucumber BDD...");
-        // initialize the ChromeOptions object
-        ChromeOptions options = new ChromeOptions();
+    public void setUp() throws IOException {
+        try {
+            log.warn("🚀... Starting WebDriver For Cucumber BDD ...");
 
-        // 🔥 default = false (LOCAL)
-        String headless = System.getProperty("headless", "false");
+            // remplacer le chargement de prop par BaseClass.configProp() (nullpointer exception)
+            BaseClass.configProp();
 
-        if (headless.equals("true")) {
-            options.addArguments("--headless=new");
-            options.addArguments("--window-size=1920,1080");
+            log.warn("properties.config File Loaded successfully");
+
+            boolean isHeadless = Boolean.parseBoolean(BaseClass.getProp().getProperty("headless", "false"));
+
+            // initialize the ChromeOptions object
+            ChromeOptions options = new ChromeOptions();
+            if (isHeadless) {
+                options.addArguments("--headless=new");
+                options.addArguments("--disable-gpu");
+                options.addArguments("--window-size=1920,1080");
+                options.addArguments("--disable-notifications");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+            }
+            driver.set(new ChromeDriver(options));
+            ExtentManager.registerDriver(getDriver());
+            log.info("ChromeDriver Instance Initialized successfully For Cucumber On -------> {}" + (isHeadless ? "Headless Mode" : "Normal Mode"));
+
+            // Maximize the WebDriver window only if not in headless mode
+            if (!isHeadless) {
+                driver.get().manage().window().maximize();
+            }
+
+            // initialize the ActionDriver object
+            actionDriver.set(new ActionDriver(getDriver()));
+
+            /* Puisque ton ActionDriver est conçu autour de BaseClass, il faut que le WebDriver créé par Cucumber soit également enregistré dans BaseClass. * */
+            BaseClass.setDriver(driver.get());
+
+            log.warn("ActionDriver Instance Initialized successfully For Cucumber Methods BDD");
+
+            /* The return value of "ExtentManager.getTest()" is null because of logSteps contain ActionDriver Class
+            logFailureWithScreenshot is called from ActionDriver Class, so we need to register the driver in ExtentManager */
+            ExtentManager.startTest("Cucumber - " + Thread.currentThread().getId());
+        } catch (Exception e) {
+            log.error("\n🚀... Initialization of CUCUMBER Web Driver Fails: " + e.getMessage());
+            throw new RuntimeException("Initialization of CUCUMBER Web Driver Fails: " + e.getMessage());
         }
-
-        // 🔥 COMMON STABLE OPTIONS (LOCAL + CI)
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--disable-gpu");
-
-        // 🔥 IMPORTANT FIX: always set window size (CI + local)
-        // options.addArguments("--window-size=1920,1080");
-
-        driver = new ChromeDriver(options);
-
-        // ❌ DO NOT USE maximize in CI (and avoid it globally)
-        // driver.manage().window().maximize(); ❌ REMOVE
-        driver.manage().window().maximize();
-        Wait = new WebDriverWait(driver, Duration.ofSeconds(25));
-
-        // Navigate to the login page
-        driver.get("https://chakerqa.playpro.fr/connexion");
     }
+
 
     @After
     public void tearDown(Scenario scenario) throws IOException, InterruptedException {
-        log.info("\n 🚀 Le Scenario Testé: " + scenario.getName() + " Et le status : " + scenario.getStatus());
-        if (scenario.getStatus() == Status.FAILED) {
-            File srcFile1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/cucumber/bdd/Screenshots/failure/scenario_fails.png"));
+        log.warn("\n 🚀 Le Scenario Testé: " + scenario.getName() + " Et le status : " + scenario.getStatus());
+        String scenarioName = scenario.getName().replaceAll("[^a-zA-Z0-9]", "_");
+        // Screenshot en cas de succès
+        if (scenario.getStatus() == Status.PASSED) {
+            File srcFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(srcFile, new File("src/test/java/com/qa/cucumber/bdd/Screenshots/success/scenarioPassed_" + scenarioName + ".png"));
             Thread.sleep(3000);
+        } else if (scenario.getStatus() == Status.FAILED) {
+            File srcFile1 = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/cucumber/bdd/Screenshots/failure/scenarioFailed_" + scenarioName + ".png"));
+            Thread.sleep(3000);
+        } else if (scenario.getStatus() == Status.SKIPPED) {
+            File srcFile2 = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(srcFile2, new File("src/test/java/com/qa/cucumber/bdd/Screenshots/skipped/scenarioSkipped" + scenarioName + ".png"));
+            Thread.sleep(3000);
+        } else {
+            log.error("\n 🚀 Le Scenario Testé: " + scenario.getName() + " Et le status : " + scenario.getStatus() + " n'est pas pris en charge pour la capture d'écran.");
         }
-        // declare a method to set the test status in LambdaTest via JS
-        markTestStatusViaJS(driver, String.valueOf(scenario.getStatus() == Status.PASSED), "Scenario " + scenario.getName() + " " + (scenario.getStatus() == Status.PASSED ? "passed" : "failed"));
-        if (driver != null) {
-            log.info("\n 🚀 Closing WebDriver For Cucumber BDD...");
-            driver.quit();
+
+        // LambdaTest uniquement
+        boolean isLambdaTest = Boolean.parseBoolean(BaseClass.getProp().getProperty("LambdaTest", "false"));
+
+        if (isLambdaTest) {
+            String status;
+            if (scenario.getStatus() == Status.PASSED) {
+                status = "passed";
+            } else if (scenario.getStatus() == Status.FAILED) {
+                status = "failed";
+            } else {
+                status = "skipped";
+            }
+            String remark = "Scenario " + scenario.getName() + " " + status;
+            addLambdaStepContext(driver.get(), "Closing Session");
+            markTestStatusViaJS(getDriver(), status, remark);
         }
+
+        // Fermeture du navigateur
+        if (driver.get() != null) {
+            log.info("\n 🚀... Closing WebDriver For Cucumber BDD...");
+            driver.get().quit();
+            driver.remove();
+            actionDriver.remove();
+        }
+    }
+
+    // Getter method to access the Properties object
+    @Contract(pure = true)
+    public static Properties getProp() {
+        return prop;
+    }
+
+    public static WebDriver getDriver() {
+        if (driver.get() == null) {
+            throw new IllegalStateException("WebDriver is not initialized for thread: " + Thread.currentThread().getId());
+        }
+        return driver.get();
+    }
+
+    // public void setDriver(WebDriver driver) in current thread
+    public static ActionDriver getActionDriver() {
+        if (actionDriver.get() == null) {
+            throw new IllegalStateException("Action Driver is not initialized for thread: " + Thread.currentThread().getId());
+        }
+        return actionDriver.get();
     }
 }

@@ -49,7 +49,7 @@ public class BaseClass {
     }
 
     @BeforeSuite
-    public void configProp() {
+    public static void configProp() {
         try {
             FileInputStream file = new FileInputStream("src/main/resources/config.properties");
             prop = new Properties();
@@ -207,8 +207,8 @@ public class BaseClass {
                 actionDriver = new ActionDriver(driver);
                 loggr.info("Action driver is created in Thread : {}", Thread.currentThread().getId());
             }*/
-            // Initialize action driver for current thread
 
+            // Initialize action driver for current thread
             actionDriver.set(new ActionDriver(getDriver()));
             loggr.warn("ActionDriver Initialized for Thread ---------------------> {}", Thread.currentThread().getId());
         } catch (Exception e) {
@@ -307,6 +307,13 @@ public class BaseClass {
         * Making tests unnecessarily slow  */
     public void staticWait(int seconds) {
         LockSupport.parkNanos((TimeUnit.SECONDS.toNanos(seconds)));
+    }
+
+    /*
+    * Puisque ton ActionDriver est conçu autour de BaseClass, il faut que le WebDriver créé par Cucumber soit également enregistré dans BaseClass.
+    * */
+    public static void setDriver(WebDriver webDriver) {
+        driver.set(webDriver);
     }
 
     public static WebDriver getDriver() {

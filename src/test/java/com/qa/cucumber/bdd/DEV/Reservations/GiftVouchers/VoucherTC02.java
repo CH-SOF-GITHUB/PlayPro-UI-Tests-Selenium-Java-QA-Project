@@ -1,3 +1,4 @@
+/*
 package com.qa.cucumber.bdd.DEV.Reservations.GiftVouchers;
 
 import org.qa.pages.WebCartPage;
@@ -117,3 +118,4 @@ public class VoucherTC02 {
     }
 
 }
+*/

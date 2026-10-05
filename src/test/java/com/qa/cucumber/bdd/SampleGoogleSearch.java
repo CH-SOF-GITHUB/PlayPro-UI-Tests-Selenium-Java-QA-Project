@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class SampleGoogleSearch {
-    WebDriver driver = Hooks.driver;
+    WebDriver driver = Hooks.getDriver();
 
     @Given("I open Google")
     public void i_open_google() {

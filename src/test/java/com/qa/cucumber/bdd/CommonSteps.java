@@ -1,3 +1,4 @@
+/*
 package com.qa.cucumber.bdd;
 
 import org.qa.pages.WebCookiesPage;
@@ -47,3 +48,4 @@ public class CommonSteps {
         log.info("COMMON-STEP: Click login button");
     }
 }
+*/
