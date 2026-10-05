@@ -38,7 +38,7 @@ jobs:
           cache: maven
 
 
-      # 3. Check Java and Maven
+      # 3. Check Java and Mavenn
       - name: Check Java and Maven
         run: |
           java -version
