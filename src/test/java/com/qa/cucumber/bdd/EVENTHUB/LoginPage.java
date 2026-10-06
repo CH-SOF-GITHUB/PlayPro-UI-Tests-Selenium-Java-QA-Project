@@ -19,7 +19,7 @@ public class LoginPage {
 
     // Add locators for the error message invalid email or password
     private final By errorPwdOrEmailMessage = By.xpath("//p[contains(@class,'text-sm font-medium flex-1 leading-snug')]");
-    private final By errorInvalidEmailMessage = By.xpath("//p[normalize-space()='Enter a valid email']");
+    private final By errorInvalidFormatEmailMessage = By.xpath("//p[normalize-space()='Enter a valid email']");
     private final By errorInvalidPasswordMessage = By.xpath("//p[normalize-space()='Password must be at least 6 characters']");
 
     // Add Constructor of class page with Singleton Design Pattern
@@ -37,6 +37,14 @@ public class LoginPage {
         actionDriver.enter(passwordField, password);
     }
 
+    public void enterEmail(String email) {
+        actionDriver.enter(emailField, email);
+    }
+
+    public void enterPassword(String password) {
+        actionDriver.enter(passwordField, password);
+    }
+
     public void clickSignIn() {
         actionDriver.click(signInButton);
     }
@@ -47,8 +55,8 @@ public class LoginPage {
         Assert.assertTrue(isErrorMessageCorrect, "Expected error message: " + expectedErrorMessage + ", but got: " + actualErrorMessage);
     }
 
-    public void checkInvalidEmailErrorMessageByText(String expectedErrorMessage) {
-        String actualErrorMessage = actionDriver.getText(errorInvalidEmailMessage);
+    public void checkInvalidFormatEmailErrorMessageByText(String expectedErrorMessage) {
+        String actualErrorMessage = actionDriver.getText(errorInvalidFormatEmailMessage);
         boolean isErrorMessageCorrect = actualErrorMessage.equals(expectedErrorMessage);
         Assert.assertTrue(isErrorMessageCorrect, "Expected error message: " + expectedErrorMessage + ", but got: " + actualErrorMessage);
     }
@@ -58,7 +66,6 @@ public class LoginPage {
         boolean isErrorMessageCorrect = actualErrorMessage.equals(expectedErrorMessage);
         Assert.assertTrue(isErrorMessageCorrect, "Expected error message: " + expectedErrorMessage + ", but got: " + actualErrorMessage);
     }
-
 
 
 }

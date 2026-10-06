@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 @Test
 @CucumberOptions(
-        features = "src/test/resources/features/EventHUBApp/login.feature",
+        features = "src/test/resources/features/EventHUBApp/login_invalid_email.feature",
         glue = {"com.qa.cucumber.bdd"},
         plugin = {"json:target/cucumber-report.json",
                 "html:target/cucumber-reports.html"}

@@ -14096,3 +14096,57 @@ Session ID: 6cf23f5e84693d400df4173e01e6b363
  🚀 Le Scenario Testé: Successful login with valid credentials Et le status : PASSED
 2026-10-06 11:14:33 [main] INFO  Hooks - 
  🚀... Closing WebDriver For Cucumber BDD...
+2026-10-06 13:14:33 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-06 13:14:33 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-06 13:14:33 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-06 13:14:43 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Headless Mode
+2026-10-06 13:14:43 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-06 13:14:43 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-06 13:14:43 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: login validation of invalid format email Et le status : UNDEFINED
+2026-10-06 13:14:43 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-06 13:20:59 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-06 13:20:59 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-06 13:20:59 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-06 13:21:01 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Headless Mode
+2026-10-06 13:21:01 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-06 13:21:01 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-06 13:21:05 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-06 13:21:05 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: login validation of invalid format email Et le status : FAILED
+2026-10-06 13:21:08 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-06 13:22:27 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-06 13:22:27 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-06 13:22:27 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-06 13:22:29 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Headless Mode
+2026-10-06 13:22:29 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-06 13:22:29 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-06 13:22:31 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-06 13:22:31 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: login validation of invalid format email Et le status : FAILED
+2026-10-06 13:22:35 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-06 13:24:05 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-06 13:24:05 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-06 13:24:05 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-06 13:24:07 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Headless Mode
+2026-10-06 13:24:07 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-06 13:24:07 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-06 13:24:09 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-06 13:24:09 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-06 13:24:09 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28.].
+2026-10-06 13:24:09 [main] INFO  ActionDriver - Border reset on element !
+2026-10-06 13:24:09 [main] INFO  ActionDriver - Border applied on element with color ------> [red].
+2026-10-06 13:24:10 [main] INFO  ActionDriver - Border applied on element with color ------> [red].
+2026-10-06 13:24:10 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-06 13:24:11 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-06 13:24:11 [main] INFO  ActionDriver - Border reset on element !
+2026-10-06 13:24:11 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-06 13:24:11 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with id ' login-btn ']
+2026-10-06 13:24:11 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-06 13:24:11 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: login validation of invalid format email Et le status : PASSED
+2026-10-06 13:24:14 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
