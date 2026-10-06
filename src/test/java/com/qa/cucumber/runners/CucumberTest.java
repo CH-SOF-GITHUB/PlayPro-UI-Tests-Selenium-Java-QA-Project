@@ -7,10 +7,12 @@ import org.testng.annotations.Test;
 
 @Test
 @CucumberOptions(
-        features = "src/test/resources/features/EventHUBApp/login_invalid_email.feature",
-        glue = {"com.qa.cucumber.bdd"},
-        plugin = {"json:target/cucumber-report.json",
-                "html:target/cucumber-reports.html"}
+        features = "src/test/resources/features",
+        glue = "com.qa.cucumber.bdd.EVENTHUB",
+        plugin = {
+                "pretty",
+                "json:target/cucumber-report.json" // Indispensable pour générer l'artefact lu par GitHub Actions
+        }
 )
 public class CucumberTest extends AbstractTestNGCucumberTests {
 }
