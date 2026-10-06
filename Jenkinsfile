@@ -1,109 +1,260 @@
 pipeline {
     agent any
 
-    // 1. Déclaration des paramètres envoyés par Xray / Jira
+    // =========================================================
+    // Parameters received from Xray Remote Job Trigger
+    // =========================================================
     parameters {
-        string(name: 'projectKey', defaultValue: '', description: 'Clé du projet Jira/Xray')
-        string(name: 'testExecKey', defaultValue: '', description: 'Clé du Test Execution dans Xray')
+        string(
+            name: 'projectKey',
+            defaultValue: '',
+            description: 'Jira/Xray Project Key'
+        )
+
+        string(
+            name: 'testExecKey',
+            defaultValue: '',
+            description: 'Xray Test Execution Key'
+        )
     }
 
+    // =========================================================
+    // Tools
+    // =========================================================
     tools {
         maven 'MAVEN-3.9.9'
     }
 
+    // =========================================================
+    // Stages
+    // =========================================================
     stages {
+
+        // -----------------------------------------------------
+        // 1. Checkout
+        // -----------------------------------------------------
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/CH-SOF-GITHUB/PlayPro-UI-Tests-Selenium-Java-QA-Project.git'
+                git(
+                    branch: 'main',
+                    url: 'https://github.com/CH-SOF-GITHUB/PlayPro-UI-Tests-Selenium-Java-QA-Project.git'
+                )
             }
         }
 
+        // -----------------------------------------------------
+        // 2. Build
+        // -----------------------------------------------------
         stage('Build') {
             steps {
                 bat 'mvn clean test-compile -DskipTests'
             }
         }
 
+        // -----------------------------------------------------
+        // 3. Run Selenium + TestNG
+        // -----------------------------------------------------
         stage('Run UI Tests') {
             steps {
-                // Utilisation de catchError pour poursuivre le pipeline vers l'import Xray et les rapports même si des tests échouent
-                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    bat 'mvn test -DsuiteXmlFile=src/test/resources/xml/testng.xml'
+
+                /*
+                 * Continue the pipeline even if one or more
+                 * automated tests fail.
+                 *
+                 * This is important because we still need
+                 * to send the TestNG results to Xray.
+                 */
+                catchError(
+                    buildResult: 'SUCCESS',
+                    stageResult: 'FAILURE'
+                ) {
+
+                    bat '''
+                        mvn test ^
+                        -Dsurefire.suiteXmlFiles=src/test/resources/xml/testng.xml
+                    '''
                 }
             }
         }
 
+        // -----------------------------------------------------
+        // 4. Verify TestNG result
+        // -----------------------------------------------------
+        stage('Verify TestNG Results') {
+            steps {
+
+                bat '''
+                    echo ==========================================
+                    echo SUREFIRE REPORTS
+                    echo ==========================================
+
+                    dir target\\surefire-reports
+
+                    echo.
+                    echo ==========================================
+                    echo CHECK TESTNG RESULT
+                    echo ==========================================
+
+                    if exist target\\surefire-reports\\testng-results.xml (
+                        echo testng-results.xml FOUND
+                    ) else (
+                        echo testng-results.xml NOT FOUND
+                        exit /b 1
+                    )
+                '''
+            }
+        }
+
+        // -----------------------------------------------------
+        // 5. Import results into Xray
+        // -----------------------------------------------------
         stage('Import Results to Xray') {
             steps {
+
                 script {
-                    // Vérifie si le pipeline a été déclenché depuis Xray avec une clé de Test Execution
-                    if (params.testExecKey != '') {
-                        echo "Exportation des résultats TestNG vers Xray pour l'exécution : ${params.testExecKey}"
+
+                    echo '=========================================='
+                    echo 'XRAY IMPORT'
+                    echo '=========================================='
+
+                    echo "Project Key   : ${params.projectKey}"
+                    echo "Test Exec Key : ${params.testExecKey}"
+
+                    if (params.testExecKey?.trim()) {
+
+                        echo 'Test Execution key detected.'
+                        echo 'Importing TestNG results into Xray...'
 
                         step([
                             $class: 'XrayImportBuilder',
-                            serverInstance: 'CLOUD-767e6712-2dd3-4e1a-9726-b929b7be49af',
+
+                            // Xray Cloud server configured in Jenkins
+                            serverInstance:
+                                'CLOUD-767e6712-2dd3-4e1a-9726-b929b7be49af',
+
+                            // Xray TestNG endpoint
                             endpointName: '/testng',
-                            importFilePath: 'target/surefire-reports/testng-results.xml',
+
+                            // TestNG result file
+                            importFilePath:
+                                'target/surefire-reports/testng-results.xml',
+
+                            // Import configuration
                             importInParallel: 'false',
                             importToSameExecution: 'true',
+
+                            // Xray parameters
                             testExecKey: params.testExecKey,
                             projectKey: params.projectKey
                         ])
+
+                        echo 'Xray import completed successfully.'
+
                     } else {
-                        echo "Exécution standard (non déclenchée via Xray)."
+
+                        echo 'WARNING: testExecKey is empty.'
+                        echo 'Xray import skipped.'
+                        echo 'Run the job with Xray parameters.'
                     }
                 }
             }
         }
 
-        stage('Reports') {
-             steps {
-                 publishHTML(target: [
-                       allowMissing: true,
-                       alwaysLinkToLastBuild: true,
-                       keepAll: true,
-                       reportDir: 'src/test/resources/extentReports',
-                       reportFiles: 'ExtentReports.html',
-                       reportName: 'Extent Spark Report',
-                       reportTitles: 'Selenium Test Results'
-                 ])
-             }
+        // -----------------------------------------------------
+        // 6. Publish Extent Report
+        // -----------------------------------------------------
+        stage('Publish Reports') {
+            steps {
+
+                publishHTML(
+                    target: [
+                        allowMissing: true,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true,
+
+                        reportDir:
+                            'src/test/resources/extentReports',
+
+                        reportFiles:
+                            'ExtentReports.html',
+
+                        reportName:
+                            'Extent Spark Report',
+
+                        reportTitles:
+                            'Selenium Test Results'
+                    ]
+                )
+            }
         }
     }
 
+    // =========================================================
+    // Post actions
+    // =========================================================
     post {
+
+        // -----------------------------------------------------
+        // Always execute
+        // -----------------------------------------------------
         always {
-            junit 'target/surefire-reports/*.xml'
-            archiveArtifacts artifacts: '**/src/test/resources/extentReports/*.html', fingerprint: true
-        }
-        success {
-            echo 'UI Automation Tests executed successfully!'
-            emailext (
-                to: 'chakerbensaid1@gmail.com',
-                subject: "SUCCESSFUL BUILD: Job '${env.JOB_NAME}' [Build #${env.BUILD_NUMBER}]",
-                body: """
-                    <p>Hello,</p>
-                    <p>The UI Automation Test pipeline completed successfully!</p>
-                    <ul>
-                        <li><b>Job Name:</b> ${env.JOB_NAME}</li>
-                        <li><b>Build Number:</b> ${env.BUILD_NUMBER}</li>
-                        <li><b>Build URL:</b> <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></li>
-                    </ul>
-                    <p><b>Last Commit Details:</b></p>
-                    <blockquote style="background-color: #f9f9f9; padding: 10px; border-left: 4px solid #4CAF50;">
-                        \${CHANGES}
-                    </blockquote>
-                    <p><b>Extent Report:</b> <a href="${env.JOB_URL}Extent_20Spark_20Report/">CLICK HERE</a></p>
-                    <p>Best Regards,<br>
-                    <b>CHAKER BEN SAID - Automation Team</b></p>
-                """,
-                mimeType: 'text/html',
-                attachLog: true
+
+            echo '=========================================='
+            echo 'PUBLISH TESTNG RESULTS'
+            echo '=========================================='
+
+            // Jenkins TestNG/JUnit result publication
+            junit(
+                testResults: 'target/surefire-reports/*.xml',
+                allowEmptyResults: true
+            )
+
+            // Archive TestNG result for verification
+            archiveArtifacts(
+                artifacts:
+                    'target/surefire-reports/testng-results.xml',
+
+                allowEmptyArchive: true,
+
+                fingerprint: true
+            )
+
+            // Archive Extent report
+            archiveArtifacts(
+                artifacts:
+                    'src/test/resources/extentReports/*.html',
+
+                allowEmptyArchive: true,
+
+                fingerprint: true
             )
         }
+
+        // -----------------------------------------------------
+        // Success
+        // -----------------------------------------------------
+        success {
+
+            echo '=========================================='
+            echo 'SUCCESS'
+            echo '=========================================='
+
+            echo 'UI Automation Tests executed successfully!'
+            echo 'TestNG results were generated.'
+            echo 'Xray import completed if testExecKey was provided.'
+        }
+
+        // -----------------------------------------------------
+        // Failure
+        // -----------------------------------------------------
         failure {
+
+            echo '=========================================='
+            echo 'FAILURE'
+            echo '=========================================='
+
             echo 'UI Automation Tests failed.'
+            echo 'Check the Jenkins console output and reports.'
         }
     }
 }
