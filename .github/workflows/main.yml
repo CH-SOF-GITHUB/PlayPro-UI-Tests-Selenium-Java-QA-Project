@@ -4,15 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       testExecKey:
-        description: 'Test Execution key from Xray (e.g., XQDP-69)'
+        description: 'Test Execution key from Xray'
         required: true
-        default: 'XQDP-69'
         type: string
 
       projectKey:
         description: 'Jira/Xray project key'
         required: true
-        default: 'XQDP'
         type: string
 
 jobs:
@@ -21,7 +19,7 @@ jobs:
 
     steps:
 
-      # 1. Checkout
+      # 1. Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -33,35 +31,57 @@ jobs:
           java-version: '17'
           cache: maven
 
-      # 3. Execute Tests
+      # 3. Run All Tests (TestNG + Cucumber)
       - name: Run Tests
         continue-on-error: true
         run: |
           mvn clean test \
             -Dsurefire.suiteXmlFiles=src/test/resources/xml/testng.xml
 
-      # 4. Authenticate & Import directly to XQDP-69
-      - name: Import Cucumber Results to Target Test Execution
+      # 4. Check Xray secrets
+      - name: Check Xray secrets
         if: always()
         run: |
-          # Retrieve Xray Bearer Token
-          TOKEN=$(curl -s -H "Content-Type: application/json" \
-            -X POST --data "{\"client_id\": \"${{ secrets.XRAY_CLIENT_ID }}\", \"client_secret\": \"${{ secrets.XRAY_CLIENT_SECRET }}\"}" \
-            https://xray.cloud.getxray.app/api/v2/authenticate | tr -d '"')
+          if [ -z "${{ secrets.XRAY_CLIENT_ID }}" ]; then
+            echo "ERROR: XRAY_CLIENT_ID is missing"
+            exit 1
+          fi
+          if [ -z "${{ secrets.XRAY_CLIENT_SECRET }}" ]; then
+            echo "ERROR: XRAY_CLIENT_SECRET is missing"
+            exit 1
+          fi
 
-          # POST Cucumber JSON directly targeting testExecKey
-          curl -s -X POST \
-            -H "Authorization: Bearer $TOKEN" \
-            -H "Content-Type: application/json" \
-            --data @target/cucumber-report.json \
-            "https://xray.cloud.getxray.app/api/v2/import/execution/cucumber?testExecKey=${{ inputs.testExecKey }}"
+      # 5. Import ONLY Classic TestNG Results to Xray
+      - name: Import TestNG results to Xray
+        if: always()
+        uses: mikepenz/xray-action@v4
+        with:
+          username: ${{ secrets.XRAY_CLIENT_ID }}
+          password: ${{ secrets.XRAY_CLIENT_SECRET }}
+          testFormat: "testng"
+          testPaths: "**/target/surefire-reports/testng-results.xml"
+          testExecKey: ${{ inputs.testExecKey }}
+          projectKey: ${{ inputs.projectKey }}
 
-      # 5. Save Artifacts
-      - name: Upload Test Reports
+      # 6. Import Cucumber BDD Results to Xray (Lié via @XQDP-76)
+      - name: Import Cucumber results to Xray
+        if: always()
+        uses: mikepenz/xray-action@v4
+        with:
+          username: ${{ secrets.XRAY_CLIENT_ID }}
+          password: ${{ secrets.XRAY_CLIENT_SECRET }}
+          testFormat: "cucumber"
+          testPaths: "**/target/cucumber-report.json"
+          testExecKey: ${{ inputs.testExecKey }}
+          projectKey: ${{ inputs.projectKey }}
+
+      # 7. Upload Artifacts
+      - name: Upload Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: execution-reports
+          name: all-test-reports
           path: |
             target/surefire-reports/
             target/cucumber-report.json
+            target/cucumber-report.html
