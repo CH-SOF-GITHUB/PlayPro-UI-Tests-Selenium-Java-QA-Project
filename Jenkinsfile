@@ -42,9 +42,10 @@ pipeline {
 
                         step([
                             $class: 'XrayImportBuilder',
-                            configurationId: '767e6712-2dd3-4e1a-9726-b929b7be49af',
+                            serverInstance: 'CLOUD-767e6712-2dd3-4e1a-9726-b929b7be49af',
                             endpointName: '/testng',
                             importFilePath: 'target/surefire-reports/testng-results.xml',
+                            importInParallel: 'false',
                             importToSameExecution: 'true',
                             testExecKey: params.testExecKey,
                             projectKey: params.projectKey
