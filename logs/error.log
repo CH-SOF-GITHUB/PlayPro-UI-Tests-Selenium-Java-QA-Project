@@ -4028,3 +4028,5 @@ Session ID: 6cf23f5e84693d400df4173e01e6b363
  🚀 Le Scenario Testé: login validation of invalid format email Et le status : UNDEFINED n'est pas pris en charge pour la capture d'écran.
 2026-10-06 13:24:10 [main] ERROR ActionDriver - Unable to Enter to Element [Element with name ' password '] | Error: Keys to send must be set
 2026-10-06 13:24:10 [main] ERROR ActionDriver - Unable to Enter to Element [Element with name ' email '] | Error: Keys to send must be set
+2026-10-06 14:56:22 [main] ERROR ActionDriver - Unable to Enter to Element [Element with name ' password '] | Error: Keys to send must be set
+2026-10-06 14:56:22 [main] ERROR ActionDriver - Unable to Enter to Element [Element with name ' email '] | Error: Keys to send must be set

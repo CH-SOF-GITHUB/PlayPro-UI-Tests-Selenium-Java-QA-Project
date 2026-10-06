@@ -1,7 +1,7 @@
-@XQDP-68
 Feature: User login validation
 
   # CORRECTIF : Le tag doit être placé exactement ici pour lier le rapport JSON au ticket Xray
+  @XQDP-68
   Scenario: login validation of invalid format email
     Given User is on EventHUB login page
     When User enters a invalid email "bchaker28."
