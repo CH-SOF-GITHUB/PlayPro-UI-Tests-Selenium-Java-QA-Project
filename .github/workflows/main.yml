@@ -4,13 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       testExecKey:
-        description: 'Test Execution key from Xray'
-        required: true
+        description: 'Test Execution key from Xray (ex: XQDP-69)'
+        required: false
         type: string
 
       projectKey:
         description: 'Jira/Xray project key'
         required: true
+        default: 'XQDP'
         type: string
 
 jobs:
@@ -31,7 +32,7 @@ jobs:
           java-version: '17'
           cache: maven
 
-      # 3. Run All Tests (TestNG + Cucumber)
+      # 3. Run All Tests
       - name: Run Tests
         continue-on-error: true
         run: |
@@ -51,20 +52,9 @@ jobs:
             exit 1
           fi
 
-      # 5. Import ONLY Classic TestNG Results to Xray
-      - name: Import TestNG results to Xray
-        if: always()
-        uses: mikepenz/xray-action@v4
-        with:
-          username: ${{ secrets.XRAY_CLIENT_ID }}
-          password: ${{ secrets.XRAY_CLIENT_SECRET }}
-          testFormat: "testng"
-          testPaths: "**/target/surefire-reports/testng-results.xml"
-          testExecKey: ${{ inputs.testExecKey }}
-          projectKey: ${{ inputs.projectKey }}
-
-      # 6. Import Cucumber BDD Results to Xray (Lié via @XQDP-76)
+      # 5. Import Cucumber BDD Results (Met à jour le test @XQDP-68 dans XQDP-69)
       - name: Import Cucumber results to Xray
+        id: xray_cucumber
         if: always()
         uses: mikepenz/xray-action@v4
         with:
@@ -73,6 +63,19 @@ jobs:
           testFormat: "cucumber"
           testPaths: "**/target/cucumber-report.json"
           testExecKey: ${{ inputs.testExecKey }}
+          projectKey: ${{ inputs.projectKey }}
+
+      # 6. Import TestNG Results (Exclut la méthode runScenario)
+      - name: Import TestNG results to Xray
+        if: always()
+        uses: mikepenz/xray-action@v4
+        with:
+          username: ${{ secrets.XRAY_CLIENT_ID }}
+          password: ${{ secrets.XRAY_CLIENT_SECRET }}
+          testFormat: "testng"
+          testPaths: "**/target/surefire-reports/testng-results.xml"
+          # Utilise le testExecKey renseigné OU réutilise la Test Execution créée à l'étape 5
+          testExecKey: ${{ inputs.testExecKey || steps.xray_cucumber.outputs.testExecKey }}
           projectKey: ${{ inputs.projectKey }}
 
       # 7. Upload Artifacts
