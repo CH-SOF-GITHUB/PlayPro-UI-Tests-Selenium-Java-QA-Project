@@ -53,18 +53,19 @@ jobs:
             exit 1
           fi
 
-      # 5. Import Cucumber results DIRECTLY to existing Test Execution via API
-      - name: Import Cucumber results to Xray via API
+      # 5. Import Cucumber results DIRECTLY to existing Test Execution
+      - name: Import Cucumber results to Xray API
         if: always()
         run: |
-          # 1. Obtenir le jeton d'authentification Xray
-          XRAY_TOKEN=$(curl -s -H "Content-Type: application/json" \
+          # Obtenir le jeton Xray Cloud
+          TOKEN=$(curl -s -H "Content-Type: application/json" \
             -X POST --data "{\"client_id\": \"${{ secrets.XRAY_CLIENT_ID }}\", \"client_secret\": \"${{ secrets.XRAY_CLIENT_SECRET }}\"}" \
             https://xray.cloud.getxray.app/api/v2/authenticate | tr -d '"')
 
-          # 2. Envoyer le rapport Cucumber JSON directement sur la Test Execution ciblée
-          curl -s -H "Content-Type: application/json" \
-            -H "Authorization: Bearer $XRAY_TOKEN" \
+          # Envoyer le rapport Cucumber JSON directement dans la Test Execution cible
+          curl -s -X POST \
+            -H "Authorization: Bearer $TOKEN" \
+            -H "Content-Type: application/json" \
             --data @target/cucumber-report.json \
             "https://xray.cloud.getxray.app/api/v2/import/execution/cucumber?testExecKey=${{ inputs.testExecKey }}"
 
