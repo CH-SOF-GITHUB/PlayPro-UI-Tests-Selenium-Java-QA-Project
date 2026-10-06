@@ -20,15 +20,15 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean install -DskipTests'
+                bat 'mvn clean test-compile -DskipTests'
             }
         }
 
         stage('Run UI Tests') {
             steps {
-                // 2. Utilisation de catchError pour poursuivre le pipeline en cas d'échec des tests
+                // Utilisation de catchError pour poursuivre le pipeline vers l'import Xray et les rapports même si des tests échouent
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    bat 'mvn test'
+                    bat 'mvn test -DsuiteXmlFile=src/test/resources/xml/testng.xml'
                 }
             }
         }
@@ -38,13 +38,16 @@ pipeline {
                 script {
                     // Vérifie si le pipeline a été déclenché depuis Xray avec une clé de Test Execution
                     if (params.testExecKey != '') {
-                        echo "Export des résultats vers Xray pour l'exécution : ${params.testExecKey}"
-                        // Exemple d'appel API Xray (Cloud) pour importer le rapport JUnit surefire
-                        /*
-                        withCredentials([string(credentialsId: 'xray-client-secret', variable: 'XRAY_CLIENT_SECRET')]) {
-                            // Commande curl pour poster target/surefire-reports/*.xml vers Xray
-                        }
-                        */
+                        echo "Exportation des résultats TestNG vers Xray pour l'exécution : ${params.testExecKey}"
+
+                        xrayImportResults(
+                            serverInstance: 'Xray Cloud',
+                            endpointName: '/testng',
+                            importFilePath: 'target/surefire-reports/testng-results.xml',
+                            importToSameExecution: 'true',
+                            testExecKey: params.testExecKey,
+                            projectKey: params.projectKey
+                        )
                     } else {
                         echo "Exécution standard (non déclenchée via Xray)."
                     }

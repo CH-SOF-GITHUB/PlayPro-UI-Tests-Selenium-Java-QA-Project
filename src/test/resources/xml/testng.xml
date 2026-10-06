@@ -13,7 +13,7 @@
         <!-- MODIFICATION : parameter doit être avant groups -->
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.qa.cucumber.runners.CucumberTest"/>
+            <class name="com.qa.tests.TestNG.XrayGeneric"/>
         </classes>
     </test>
 </suite>
