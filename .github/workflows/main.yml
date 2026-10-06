@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       testExecKey:
-        description: 'Test Execution key from Xray (ex: XQDP-69)'
+        description: 'Test Execution key from Xray (e.g., XQDP-69)'
         required: true
         default: 'XQDP-69'
         type: string
@@ -21,7 +21,7 @@ jobs:
 
     steps:
 
-      # 1. Checkout repository
+      # 1. Checkout
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -33,49 +33,35 @@ jobs:
           java-version: '17'
           cache: maven
 
-      # 3. Run All Tests
+      # 3. Execute Tests
       - name: Run Tests
         continue-on-error: true
         run: |
           mvn clean test \
             -Dsurefire.suiteXmlFiles=src/test/resources/xml/testng.xml
 
-      # 4. Check Xray secrets
-      - name: Check Xray secrets
+      # 4. Authenticate & Import directly to XQDP-69
+      - name: Import Cucumber Results to Target Test Execution
         if: always()
         run: |
-          if [ -z "${{ secrets.XRAY_CLIENT_ID }}" ]; then
-            echo "ERROR: XRAY_CLIENT_ID is missing"
-            exit 1
-          fi
-          if [ -z "${{ secrets.XRAY_CLIENT_SECRET }}" ]; then
-            echo "ERROR: XRAY_CLIENT_SECRET is missing"
-            exit 1
-          fi
-
-      # 5. Import Cucumber results DIRECTLY to existing Test Execution
-      - name: Import Cucumber results to Xray API
-        if: always()
-        run: |
-          # Obtenir le jeton Xray Cloud
+          # Retrieve Xray Bearer Token
           TOKEN=$(curl -s -H "Content-Type: application/json" \
             -X POST --data "{\"client_id\": \"${{ secrets.XRAY_CLIENT_ID }}\", \"client_secret\": \"${{ secrets.XRAY_CLIENT_SECRET }}\"}" \
             https://xray.cloud.getxray.app/api/v2/authenticate | tr -d '"')
 
-          # Envoyer le rapport Cucumber JSON directement dans la Test Execution cible
+          # POST Cucumber JSON directly targeting testExecKey
           curl -s -X POST \
             -H "Authorization: Bearer $TOKEN" \
             -H "Content-Type: application/json" \
             --data @target/cucumber-report.json \
             "https://xray.cloud.getxray.app/api/v2/import/execution/cucumber?testExecKey=${{ inputs.testExecKey }}"
 
-      # 6. Upload Artifacts
-      - name: Upload Reports
+      # 5. Save Artifacts
+      - name: Upload Test Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: all-test-reports
+          name: execution-reports
           path: |
             target/surefire-reports/
             target/cucumber-report.json
-            target/cucumber-report.html
