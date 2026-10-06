@@ -5,7 +5,8 @@ on:
     inputs:
       testExecKey:
         description: 'Test Execution key from Xray (ex: XQDP-69)'
-        required: false
+        required: true
+        default: 'XQDP-69'
         type: string
 
       projectKey:
@@ -52,33 +53,22 @@ jobs:
             exit 1
           fi
 
-      # 5. Import Cucumber BDD Results (Met à jour le test @XQDP-68 dans XQDP-69)
-      - name: Import Cucumber results to Xray
-        id: xray_cucumber
+      # 5. Import Cucumber results DIRECTLY to existing Test Execution via API
+      - name: Import Cucumber results to Xray via API
         if: always()
-        uses: mikepenz/xray-action@v4
-        with:
-          username: ${{ secrets.XRAY_CLIENT_ID }}
-          password: ${{ secrets.XRAY_CLIENT_SECRET }}
-          testFormat: "cucumber"
-          testPaths: "**/target/cucumber-report.json"
-          testExecKey: ${{ inputs.testExecKey }}
-          projectKey: ${{ inputs.projectKey }}
+        run: |
+          # 1. Obtenir le jeton d'authentification Xray
+          XRAY_TOKEN=$(curl -s -H "Content-Type: application/json" \
+            -X POST --data "{\"client_id\": \"${{ secrets.XRAY_CLIENT_ID }}\", \"client_secret\": \"${{ secrets.XRAY_CLIENT_SECRET }}\"}" \
+            https://xray.cloud.getxray.app/api/v2/authenticate | tr -d '"')
 
-      # 6. Import TestNG Results (Exclut la méthode runScenario)
-      - name: Import TestNG results to Xray
-        if: always()
-        uses: mikepenz/xray-action@v4
-        with:
-          username: ${{ secrets.XRAY_CLIENT_ID }}
-          password: ${{ secrets.XRAY_CLIENT_SECRET }}
-          testFormat: "testng"
-          testPaths: "**/target/surefire-reports/testng-results.xml"
-          # Utilise le testExecKey renseigné OU réutilise la Test Execution créée à l'étape 5
-          testExecKey: ${{ inputs.testExecKey || steps.xray_cucumber.outputs.testExecKey }}
-          projectKey: ${{ inputs.projectKey }}
+          # 2. Envoyer le rapport Cucumber JSON directement sur la Test Execution ciblée
+          curl -s -H "Content-Type: application/json" \
+            -H "Authorization: Bearer $XRAY_TOKEN" \
+            --data @target/cucumber-report.json \
+            "https://xray.cloud.getxray.app/api/v2/import/execution/cucumber?testExecKey=${{ inputs.testExecKey }}"
 
-      # 7. Upload Artifacts
+      # 6. Upload Artifacts
       - name: Upload Reports
         if: always()
         uses: actions/upload-artifact@v4
