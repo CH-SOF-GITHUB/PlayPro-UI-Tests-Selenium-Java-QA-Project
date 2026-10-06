@@ -18,7 +18,6 @@ import org.qa.base.BaseClass;
 import org.qa.utilities.ExtentManager;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.logging.Level;

@@ -98,3 +98,27 @@ jobs:
         with:
           name: testng-reports
           path: target/surefire-reports/
+
+      # 9. Import Cucumber results into Xray
+      - name: Import Cucumber results to Xray
+        if: always()
+        uses: mikepenz/xray-action@v4
+        with:
+          username: ${{ secrets.XRAY_CLIENT_ID }}
+          password: ${{ secrets.XRAY_CLIENT_SECRET }}
+
+          testFormat: "cucumber"
+          testPaths: "**/target/cucumber-report.json"
+
+          testExecKey: ${{ inputs.testExecKey }}
+          projectKey: ${{ inputs.projectKey }}
+
+      # 10. Save Cucumber reports
+      - name: Upload Cucumber reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-reports
+          path: |
+            target/cucumber-report.json
+            target/cucumber-report.html

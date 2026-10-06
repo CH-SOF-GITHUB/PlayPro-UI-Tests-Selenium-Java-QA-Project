@@ -14054,3 +14054,45 @@ Session ID: 6cf23f5e84693d400df4173e01e6b363
  🚀 Le Scenario Testé: Successful login with valid credentials Et le status : PASSED
 2026-10-05 18:59:38 [main] INFO  Hooks - 
  🚀... Closing WebDriver For Cucumber BDD...
+2026-10-06 11:13:00 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-06 11:13:00 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-06 11:13:00 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-06 11:13:13 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Headless Mode
+2026-10-06 11:13:13 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-06 11:13:13 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-06 11:13:15 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-06 11:13:15 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-06 11:13:15 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-06 11:13:15 [main] INFO  ActionDriver - Border reset on element !
+2026-10-06 11:13:15 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-06 11:13:15 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-06 11:13:15 [main] INFO  ActionDriver - Border reset on element !
+2026-10-06 11:13:16 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-06 11:13:16 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with id ' login-btn ']
+2026-10-06 11:13:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-06 11:13:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-06 11:13:19 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: Successful login with valid credentials Et le status : PASSED
+2026-10-06 11:13:22 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-06 11:14:22 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-06 11:14:23 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-06 11:14:23 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-06 11:14:26 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Headless Mode
+2026-10-06 11:14:26 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-06 11:14:26 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-06 11:14:28 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-06 11:14:28 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-06 11:14:28 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-06 11:14:28 [main] INFO  ActionDriver - Border reset on element !
+2026-10-06 11:14:28 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-06 11:14:28 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-06 11:14:28 [main] INFO  ActionDriver - Border reset on element !
+2026-10-06 11:14:29 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-06 11:14:29 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with id ' login-btn ']
+2026-10-06 11:14:30 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-06 11:14:30 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-06 11:14:30 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: Successful login with valid credentials Et le status : PASSED
+2026-10-06 11:14:33 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
