@@ -40,14 +40,15 @@ pipeline {
                     if (params.testExecKey != '') {
                         echo "Exportation des résultats TestNG vers Xray pour l'exécution : ${params.testExecKey}"
 
-                        xrayImportResults(
+                        step([
+                            $class: 'XrayImportBuilder',
                             serverInstance: 'Xray Cloud',
                             endpointName: '/testng',
                             importFilePath: 'target/surefire-reports/testng-results.xml',
                             importToSameExecution: 'true',
                             testExecKey: params.testExecKey,
                             projectKey: params.projectKey
-                        )
+                        ])
                     } else {
                         echo "Exécution standard (non déclenchée via Xray)."
                     }
