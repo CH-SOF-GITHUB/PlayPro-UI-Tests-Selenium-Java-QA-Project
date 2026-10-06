@@ -1,4 +1,4 @@
-name: Java Selenium TestNG - Xray
+name: Java Selenium TestNG + Cucumber - Xray
 
 on:
   workflow_dispatch:
@@ -19,10 +19,9 @@ jobs:
 
     steps:
 
-      # 1. Checkout projects
+      # 1. Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
-
 
       # 2. Setup Java 17
       - name: Setup Java 17
@@ -32,93 +31,57 @@ jobs:
           java-version: '17'
           cache: maven
 
-
-      # 3. Check Java and Maven
-      - name: Check Java and Maven
-        run: |
-          java -version
-          mvn -version
-
-
-      # 4. Run Selenium+TestNG
-      - name: Run TestNG tests
+      # 3. Run All Tests (TestNG + Cucumber)
+      - name: Run Tests
         continue-on-error: true
         run: |
           mvn clean test \
             -Dsurefire.suiteXmlFiles=src/test/resources/xml/testng.xml
 
-
-      # 5. Display TestNG results
-      - name: Display TestNG results
-        if: always()
-        run: |
-          echo "===== TestNG reports ====="
-          find target/surefire-reports -type f -maxdepth 2 -print || true
-
-
-      # 6. Check Xray secrets
+      # 4. Check Xray secrets
       - name: Check Xray secrets
         if: always()
         run: |
           if [ -z "${{ secrets.XRAY_CLIENT_ID }}" ]; then
             echo "ERROR: XRAY_CLIENT_ID is missing"
             exit 1
-          else
-            echo "OK: XRAY_CLIENT_ID is available"
           fi
-
           if [ -z "${{ secrets.XRAY_CLIENT_SECRET }}" ]; then
             echo "ERROR: XRAY_CLIENT_SECRET is missing"
             exit 1
-          else
-            echo "OK: XRAY_CLIENT_SECRET is available"
           fi
 
-
-      # 7. Import TestNG results into Xray
-      - name: Import results to Xray
+      # 5. Import ONLY Classic TestNG Results to Xray
+      - name: Import TestNG results to Xray
         if: always()
         uses: mikepenz/xray-action@v4
         with:
           username: ${{ secrets.XRAY_CLIENT_ID }}
           password: ${{ secrets.XRAY_CLIENT_SECRET }}
-
           testFormat: "testng"
-
           testPaths: "**/target/surefire-reports/testng-results.xml"
-
           testExecKey: ${{ inputs.testExecKey }}
           projectKey: ${{ inputs.projectKey }}
 
-
-      # 8. Save TestNG reports
-      - name: Upload TestNG reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: testng-reports
-          path: target/surefire-reports/
-
-      # 9. Import Cucumber results into Xray
+      # 6. Import Cucumber BDD Results to Xray (Lié via @XQDP-76)
       - name: Import Cucumber results to Xray
         if: always()
         uses: mikepenz/xray-action@v4
         with:
           username: ${{ secrets.XRAY_CLIENT_ID }}
           password: ${{ secrets.XRAY_CLIENT_SECRET }}
-
           testFormat: "cucumber"
           testPaths: "**/target/cucumber-report.json"
-
           testExecKey: ${{ inputs.testExecKey }}
           projectKey: ${{ inputs.projectKey }}
 
-      # 10. Save Cucumber reports
-      - name: Upload Cucumber reports
+      # 7. Upload Artifacts
+      - name: Upload Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: cucumber-reports
+          name: all-test-reports
           path: |
+            target/surefire-reports/
             target/cucumber-report.json
             target/cucumber-report.html
