@@ -218,7 +218,7 @@ pipeline {
             // Publication native TestNG dans "Résultats des tests" de Jenkins
             // Publication via l'instruction step générique
             step([
-                $class: 'TestNGResultsPublisher',
+                $class: 'Publisher',
                 reportFilenamePattern: '**/target/surefire-reports/testng-results.xml'
             ])
 
