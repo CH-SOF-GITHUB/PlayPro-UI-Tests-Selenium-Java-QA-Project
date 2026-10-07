@@ -14,7 +14,7 @@ pipeline {
         string(
             name: 'testExecKey',
             defaultValue: '',
-            description: 'Xray Test Execution Key (Ex: XQDP-74). Laissez vide pour créer un nouveau ticket dans le Backlog.'
+            description: 'Xray Test Execution Key (Ex: XQDP-74). Si renseigné, met à jour ce ticket ET crée une entrée dans le Backlog.'
         )
     }
 
@@ -103,7 +103,7 @@ pipeline {
         }
 
         // -----------------------------------------------------
-        // 5. Import results into Xray (Existant ou Nouveau)
+        // 5. Import results into Xray (Double Import)
         // -----------------------------------------------------
         stage('Import Results to Xray') {
             steps {
@@ -116,7 +116,7 @@ pipeline {
 
                     def effectiveProjectKey = params.projectKey?.trim() ? params.projectKey : 'XQDP'
 
-                    def xrayConfig = [
+                    def baseConfig = [
                         $class: 'XrayImportBuilder',
                         serverInstance: 'CLOUD-767e6712-2dd3-4e1a-9726-b929b7be49af',
                         endpointName: '/testng',
@@ -125,17 +125,27 @@ pipeline {
                         projectKey: effectiveProjectKey
                     ]
 
-                    // Si une clé d'exécution est fournie
                     if (params.testExecKey?.trim()) {
-                        echo "Mise à jour directe du Test Execution : ${params.testExecKey}"
-                        xrayConfig['testExecKey'] = params.testExecKey
-                        xrayConfig['importToSameExecution'] = 'true'
-                    } else {
-                        echo "Aucun Test Execution fourni. Création d'un NOUVEAU ticket dans le Backlog..."
-                        xrayConfig['importToSameExecution'] = 'false'
-                    }
 
-                    step(xrayConfig)
+                        // 1. Injection dans le Test Execution ciblé (ex: XQDP-74)
+                        echo "1/2 : Injection dans le Test Execution spécifié : ${params.testExecKey}"
+                        def configTarget = baseConfig.clone()
+                        configTarget['testExecKey'] = params.testExecKey
+                        configTarget['importToSameExecution'] = 'true'
+                        step(configTarget)
+
+                        // 2. Création automatique d'une nouvelle exécution dans le Backlog
+                        echo "2/2 : Création d'un nouveau ticket Execution Results dans le Backlog..."
+                        def configNew = baseConfig.clone()
+                        configNew['importToSameExecution'] = 'false'
+                        step(configNew)
+
+                    } else {
+                        echo "Aucun testExecKey fourni. Création d'une nouvelle Test Execution dans le Backlog..."
+                        def configNew = baseConfig.clone()
+                        configNew['importToSameExecution'] = 'false'
+                        step(configNew)
+                    }
 
                     echo 'Xray import completed successfully.'
                 }
@@ -191,7 +201,7 @@ pipeline {
                 allowEmptyResults: true
             )
 
-            // Conservation uniquement du rapport visual ExtentReports.html
+            // Conservation uniquement du rapport ExtentReports.html dans "Artefacts du build"
             archiveArtifacts(
                 artifacts:
                     'src/test/resources/extentReports/ExtentReports.html',
