@@ -216,10 +216,11 @@ pipeline {
             echo '=========================================='
 
             // Publication native TestNG dans "Résultats des tests" de Jenkins
-            testng(
-                reportFilenamePattern: '**/target/surefire-reports/testng-results.xml',
-                allowEmptyResults: true
-            )
+            // Publication via l'instruction step générique
+            step([
+                $class: 'TestNGResultsPublisher',
+                reportFilenamePattern: '**/target/surefire-reports/testng-results.xml'
+            ])
 
             // Conservation uniquement du rapport ExtentReports.html dans "Artefacts du build"
             archiveArtifacts(
