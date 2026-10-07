@@ -14334,3 +14334,31 @@ Session ID: 6cf23f5e84693d400df4173e01e6b363
 2026-10-07 14:39:31 [main] INFO  TestListener - ===============================================
 2026-10-07 14:39:31 [main] INFO  TestListener - Test suite finished: Test EventHUB
 2026-10-07 14:39:31 [main] INFO  TestListener - ===============================================
+2026-10-07 14:45:45 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-07 14:45:45 [main] INFO  TestListener - ================================================
+2026-10-07 14:45:45 [main] INFO  TestListener - Test suite started: Test EventHUB
+2026-10-07 14:45:45 [main] INFO  TestListener - ================================================
+2026-10-07 14:45:46 [main] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-10-07 14:45:46 [main] WARN  BaseClass - Setting up for ---------------> : XrayGeneric1
+2026-10-07 14:45:48 [main] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-10-07 14:45:51 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-07 14:45:51 [main] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 1
+2026-10-07 14:45:51 [main] INFO  TestListener - ****************** Test Started: VerifyLoginWithInvalidEmail ******************
+2026-10-07 14:45:55 [main] WARN  BaseClass - WebDriver instance is closed for ---------------> : XrayGeneric1
+2026-10-07 14:45:55 [main] INFO  TestListener - ===============================================
+2026-10-07 14:45:55 [main] INFO  TestListener - Test suite finished: Test EventHUB
+2026-10-07 14:45:55 [main] INFO  TestListener - ===============================================
+2026-10-07 14:50:52 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-07 14:50:52 [main] INFO  TestListener - ================================================
+2026-10-07 14:50:52 [main] INFO  TestListener - Test suite started: Test EventHUB
+2026-10-07 14:50:52 [main] INFO  TestListener - ================================================
+2026-10-07 14:50:53 [main] INFO  BaseClass - -------------------------------------------------------------------------------------------------
+2026-10-07 14:50:53 [main] WARN  BaseClass - Setting up for ---------------> : XrayGeneric1
+2026-10-07 14:50:55 [main] INFO  BaseClass - ChromeDriver Instance Initialized successfully On -------> Headless Mode
+2026-10-07 14:50:58 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-07 14:50:58 [main] WARN  BaseClass - ActionDriver Initialized for Thread ---------------------> 1
+2026-10-07 14:50:58 [main] INFO  TestListener - ****************** Test Started: VerifyLoginWithInvalidEmail ******************
+2026-10-07 14:51:02 [main] WARN  BaseClass - WebDriver instance is closed for ---------------> : XrayGeneric1
+2026-10-07 14:51:02 [main] INFO  TestListener - ===============================================
+2026-10-07 14:51:02 [main] INFO  TestListener - Test suite finished: Test EventHUB
+2026-10-07 14:51:02 [main] INFO  TestListener - ===============================================
