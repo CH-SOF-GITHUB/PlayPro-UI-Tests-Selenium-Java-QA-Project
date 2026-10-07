@@ -191,7 +191,7 @@ public class BaseClass {
             }
 
             // Navigate the Base URL
-            getDriver().get(url);
+            // getDriver().get(url);
             // Sleep time for 3 s
             staticWait(3);
 
@@ -310,8 +310,8 @@ public class BaseClass {
     }
 
     /*
-    * Puisque ton ActionDriver est conçu autour de BaseClass, il faut que le WebDriver créé par Cucumber soit également enregistré dans BaseClass.
-    * */
+     * Puisque ton ActionDriver est conçu autour de BaseClass, il faut que le WebDriver créé par Cucumber soit également enregistré dans BaseClass.
+     * */
     public static void setDriver(WebDriver webDriver) {
         driver.set(webDriver);
     }

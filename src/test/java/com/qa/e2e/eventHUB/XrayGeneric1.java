@@ -1,47 +1,50 @@
 package com.qa.e2e.eventHUB;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.qa.actionDriver.ActionDriver;
+
 import org.qa.base.BaseClass;
+import org.qa.pages.EventHUB.LoginPage;
+import org.qa.utilities.ExtentManager;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class XrayGeneric1 extends BaseClass {
 
-    // create a private WebDriverWait variable and ActionDriver variable
-    private WebDriverWait wait;
-    private ActionDriver actionDriver;
+    LoginPage loginPage;
 
+    // @BeforeSuite: The annotation method will be run before all tests in this suite have run.
+    @BeforeSuite
+    public void configureLogs() {
+        // AJOUT : masquer les logs Selenium INFO/WARNING
+        Logger.getLogger("org.openqa.selenium").setLevel(Level.SEVERE);
+        Logger.getLogger("org.openqa.selenium.devtools").setLevel(Level.SEVERE);
+        Logger.getLogger("org.openqa.selenium.chromium").setLevel(Level.SEVERE);
+        Logger.getLogger("org.openqa.selenium.remote.http.WebSocket").setLevel(Level.SEVERE);
+    }
 
-    @Test
+    @BeforeMethod(alwaysRun = true)
+    public void setupPages() {
+        loginPage = new LoginPage(getDriver());
+    }
+
+    @Test(priority = 1, description = "Verify login with invalid email and valid password")
     public void VerifyLoginWithInvalidEmail() {
-        wait = new WebDriverWait(getDriver(), Duration.ofSeconds(15));
-        this.actionDriver = BaseClass.getActionDriver();
-        openEventHUBLoginPage();
-        signIn("bchaker289@yahoo.com", "Q5n@j!i!QnZQmYm");
-        checkPwdOrEmailErrorMessage("Invalid email or password");
-    }
-
-    public void openEventHUBLoginPage() {
-        actionDriver.openPage("https://eventhub.rahulshettyacademy.com/login");
-    }
-
-    public void signIn(String email, String password) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys(email);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password"))).sendKeys(password);
-        WebElement SignInButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[normalize-space()='Sign In'])[1]")));
-        ((JavascriptExecutor) getDriver()).executeScript("arguments[0].click();", SignInButton);
-    }
-
-    public void checkPwdOrEmailErrorMessage(String expectedErrorMessage) {
-        String actualErrorMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(@class,'text-sm font-medium flex-1 leading-snug')]"))).getText();
-        boolean isErrorMessageCorrect = actualErrorMessage.equals(expectedErrorMessage);
-        Assert.assertTrue(isErrorMessageCorrect);
+        // STEP 1: Open the login page
+        ExtentManager.logStep("EventHUB - Open the login page");
+        loginPage.openLoginPage();
+        // STEP 2: Enter invalid email and valid password, then check for error message
+        ExtentManager.logStep("EventHUB - Enter invalid email and valid password, then click on Sign In button");
+        loginPage.enterCredentials("bchaker289@yahoo.com", "Q5n@j!i!QnZQmYm");
+        // STEP 3: Check for error message
+        ExtentManager.logStep("EventHUB - Check for invalid email error message");
+        loginPage.checkPwdOrEmailErrorMessageByText("Invalid email or password");
+        boolean isErrorMessageCorrect = loginPage.checkPwdOrEmailErrorMessageByText("Invalid email or password");
+        Assert.assertTrue(isErrorMessageCorrect, "Expected error message with invalid email login !");
+        // STEP 4: Terminate the Verification
+        ExtentManager.logStep("EventHUB - Verification Terminated");
     }
 }
