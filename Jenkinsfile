@@ -7,7 +7,7 @@ pipeline {
     parameters {
         string(
             name: 'projectKey',
-            defaultValue: '',
+            defaultValue: 'XQDP',
             description: 'Jira/Xray Project Key'
         )
 
@@ -58,11 +58,8 @@ pipeline {
             steps {
 
                 /*
-                 * Continue the pipeline even if one or more
-                 * automated tests fail.
-                 *
-                 * This is important because we still need
-                 * to send the TestNG results to Xray.
+                 * Poursuit le pipeline même si certains tests échouent
+                 * afin de pouvoir importer les résultats dans Xray.
                  */
                 catchError(
                     buildResult: 'SUCCESS',
@@ -106,7 +103,7 @@ pipeline {
         }
 
         // -----------------------------------------------------
-        // 5. Import results into Xray
+        // 5. Import results into Xray (Nouveau ticket systématique)
         // -----------------------------------------------------
         stage('Import Results to Xray') {
             steps {
@@ -117,45 +114,33 @@ pipeline {
                     echo 'XRAY IMPORT'
                     echo '=========================================='
 
-                    echo "Project Key   : ${params.projectKey}"
-                    echo "Test Exec Key : ${params.testExecKey}"
+                    def effectiveProjectKey = params.projectKey?.trim() ? params.projectKey : 'XQDP'
+                    echo "Project Key : ${effectiveProjectKey}"
 
-                    if (params.testExecKey?.trim()) {
+                    // Import Xray : Crée une nouvelle exécution dans Jira à chaque fois (Mode Cucumber)
+                    step([
+                        $class: 'XrayImportBuilder',
 
-                        echo 'Test Execution key detected.'
-                        echo 'Importing TestNG results into Xray...'
+                        // Cloud Server Xray configuré dans Jenkins
+                        serverInstance:
+                            'CLOUD-767e6712-2dd3-4e1a-9726-b929b7be49af',
 
-                        step([
-                            $class: 'XrayImportBuilder',
+                        // Endpoint TestNG
+                        endpointName: '/testng',
 
-                            // Xray Cloud server configured in Jenkins
-                            serverInstance:
-                                'CLOUD-767e6712-2dd3-4e1a-9726-b929b7be49af',
+                        // Rapport TestNG à importer
+                        importFilePath:
+                            'target/surefire-reports/testng-results.xml',
 
-                            // Xray TestNG endpoint
-                            endpointName: '/testng',
+                        // Options d'import
+                        importInParallel: 'false',
+                        importToSameExecution: 'false', // 'false' garantit la création d'une nouvelle Test Execution dans le Backlog
 
-                            // TestNG result file
-                            importFilePath:
-                                'target/surefire-reports/testng-results.xml',
+                        // Clé du projet Jira
+                        projectKey: effectiveProjectKey
+                    ])
 
-                            // Import configuration
-                            importInParallel: 'false',
-                            importToSameExecution: 'true',
-
-                            // Xray parameters
-                            testExecKey: params.testExecKey,
-                            projectKey: params.projectKey
-                        ])
-
-                        echo 'Xray import completed successfully.'
-
-                    } else {
-
-                        echo 'WARNING: testExecKey is empty.'
-                        echo 'Xray import skipped.'
-                        echo 'Run the job with Xray parameters.'
-                    }
+                    echo 'Xray import completed successfully.'
                 }
             }
         }
@@ -203,26 +188,16 @@ pipeline {
             echo 'PUBLISH TESTNG RESULTS'
             echo '=========================================='
 
-            // Jenkins TestNG/JUnit result publication
+            // Publication JUnit/TestNG interne dans Jenkins
             junit(
                 testResults: 'target/surefire-reports/*.xml',
                 allowEmptyResults: true
             )
 
-            // Archive TestNG result for verification
+            // Conservation uniquement du rapport ExtentReports.html dans "Artefacts du build"
             archiveArtifacts(
                 artifacts:
-                    'target/surefire-reports/testng-results.xml',
-
-                allowEmptyArchive: true,
-
-                fingerprint: true
-            )
-
-            // Archive Extent report
-            archiveArtifacts(
-                artifacts:
-                    'src/test/resources/extentReports/*.html',
+                    'src/test/resources/extentReports/ExtentReports.html',
 
                 allowEmptyArchive: true,
 
@@ -241,7 +216,7 @@ pipeline {
 
             echo 'UI Automation Tests executed successfully!'
             echo 'TestNG results were generated.'
-            echo 'Xray import completed if testExecKey was provided.'
+            echo 'New Test Execution created in Xray Jira.'
         }
 
         // -----------------------------------------------------
