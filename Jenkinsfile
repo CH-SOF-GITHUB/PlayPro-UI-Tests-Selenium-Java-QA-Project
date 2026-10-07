@@ -157,7 +157,7 @@ pipeline {
         // -----------------------------------------------------
         stage('Publish Reports') {
             steps {
-
+                // 1. Publication HTML Extent Report
                 publishHTML(
                     target: [
                         allowMissing: true,
@@ -175,6 +175,26 @@ pipeline {
 
                         reportTitles:
                             'Selenium Test Results'
+                    ]
+                )
+                // 2. Publication HTML Emailable Report
+                publishHTML(
+                    target: [
+                        allowMissing: true,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true,
+
+                        reportDir:
+                            'target/surefire-reports',
+
+                        reportFiles:
+                            'emailable-report.html',
+
+                        reportName:
+                            'TestNG Emailable Report',
+
+                        reportTitles:
+                            'TestNG Emailable Report'
                     ]
                 )
             }
@@ -195,19 +215,16 @@ pipeline {
             echo 'PUBLISH TESTNG RESULTS'
             echo '=========================================='
 
-            // Publication des résultats de tests dans Jenkins
-            junit(
-                testResults: 'target/surefire-reports/*.xml',
+            // Publication native TestNG dans "Résultats des tests" de Jenkins
+            testng(
+                reportFilenamePattern: '**/target/surefire-reports/testng-results.xml',
                 allowEmptyResults: true
             )
 
             // Conservation uniquement du rapport ExtentReports.html dans "Artefacts du build"
             archiveArtifacts(
-                artifacts:
-                    'src/test/resources/extentReports/ExtentReports.html',
-
+                artifacts: 'src/test/resources/extentReports/ExtentReports.html, target/surefire-reports/emailable-report.html',
                 allowEmptyArchive: true,
-
                 fingerprint: true
             )
         }
