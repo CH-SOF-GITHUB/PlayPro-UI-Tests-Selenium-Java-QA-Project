@@ -14,7 +14,7 @@ pipeline {
         string(
             name: 'testExecKey',
             defaultValue: '',
-            description: 'Xray Test Execution Key'
+            description: 'Xray Test Execution Key (Ex: XQDP-74). Laissez vide pour créer un nouveau ticket dans le Backlog.'
         )
     }
 
@@ -103,7 +103,7 @@ pipeline {
         }
 
         // -----------------------------------------------------
-        // 5. Import results into Xray (Nouveau ticket systématique)
+        // 5. Import results into Xray (Existant ou Nouveau)
         // -----------------------------------------------------
         stage('Import Results to Xray') {
             steps {
@@ -115,30 +115,27 @@ pipeline {
                     echo '=========================================='
 
                     def effectiveProjectKey = params.projectKey?.trim() ? params.projectKey : 'XQDP'
-                    echo "Project Key : ${effectiveProjectKey}"
 
-                    // Import Xray : Crée une nouvelle exécution dans Jira à chaque fois (Mode Cucumber)
-                    step([
+                    def xrayConfig = [
                         $class: 'XrayImportBuilder',
-
-                        // Cloud Server Xray configuré dans Jenkins
-                        serverInstance:
-                            'CLOUD-767e6712-2dd3-4e1a-9726-b929b7be49af',
-
-                        // Endpoint TestNG
+                        serverInstance: 'CLOUD-767e6712-2dd3-4e1a-9726-b929b7be49af',
                         endpointName: '/testng',
-
-                        // Rapport TestNG à importer
-                        importFilePath:
-                            'target/surefire-reports/testng-results.xml',
-
-                        // Options d'import
+                        importFilePath: 'target/surefire-reports/testng-results.xml',
                         importInParallel: 'false',
-                        importToSameExecution: 'false', // 'false' garantit la création d'une nouvelle Test Execution dans le Backlog
-
-                        // Clé du projet Jira
                         projectKey: effectiveProjectKey
-                    ])
+                    ]
+
+                    // Si une clé d'exécution est fournie
+                    if (params.testExecKey?.trim()) {
+                        echo "Mise à jour directe du Test Execution : ${params.testExecKey}"
+                        xrayConfig['testExecKey'] = params.testExecKey
+                        xrayConfig['importToSameExecution'] = 'true'
+                    } else {
+                        echo "Aucun Test Execution fourni. Création d'un NOUVEAU ticket dans le Backlog..."
+                        xrayConfig['importToSameExecution'] = 'false'
+                    }
+
+                    step(xrayConfig)
 
                     echo 'Xray import completed successfully.'
                 }
@@ -188,13 +185,13 @@ pipeline {
             echo 'PUBLISH TESTNG RESULTS'
             echo '=========================================='
 
-            // Publication JUnit/TestNG interne dans Jenkins
+            // Publication des résultats de tests dans Jenkins
             junit(
                 testResults: 'target/surefire-reports/*.xml',
                 allowEmptyResults: true
             )
 
-            // Conservation uniquement du rapport ExtentReports.html dans "Artefacts du build"
+            // Conservation uniquement du rapport visual ExtentReports.html
             archiveArtifacts(
                 artifacts:
                     'src/test/resources/extentReports/ExtentReports.html',
@@ -216,7 +213,7 @@ pipeline {
 
             echo 'UI Automation Tests executed successfully!'
             echo 'TestNG results were generated.'
-            echo 'New Test Execution created in Xray Jira.'
+            echo 'Xray import completed.'
         }
 
         // -----------------------------------------------------
