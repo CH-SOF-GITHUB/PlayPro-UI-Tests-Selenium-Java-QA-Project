@@ -6,6 +6,7 @@
       <w>Appuyer</w>
       <w>Attemps</w>
       <w>Augmenté</w>
+      <w>Convertir</w>
       <w>Copie</w>
       <w>D'Souza</w>
       <w>Dropmenu</w>
@@ -15,6 +16,7 @@
       <w>Génère</w>
       <w>Installe</w>
       <w>L'instance</w>
+      <w>Nettoyer</w>
       <w>Obtenir</w>
       <w>PRENDRE</w>
       <w>Pilote</w>
@@ -31,6 +33,7 @@
       <w>automatique</w>
       <w>autour</w>
       <w>booléen</w>
+      <w>brut</w>
       <w>chaker</w>
       <w>classique</w>
       <w>compatibilité</w>
@@ -79,6 +82,7 @@
       <w>loggr</w>
       <w>membres</w>
       <w>modifiant</w>
+      <w>nettoyée</w>
       <w>nullité</w>
       <w>nullpointer</w>
       <w>ouvres</w>
@@ -98,6 +102,7 @@
       <w>serveur</w>
       <w>simplifiée</w>
       <w>stepcontext</w>
+      <w>supprimant</w>
       <w>temurin</w>
       <w>transmettre</w>
       <w>travailler</w>

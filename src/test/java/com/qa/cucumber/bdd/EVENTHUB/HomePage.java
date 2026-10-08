@@ -13,7 +13,7 @@ public class HomePage {
     // Add locators for the login page elements
     private final By TitleHomePage = By.xpath("//h1[@class='text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight']");
     private final By SubTitleHomePage = By.xpath("//p[@class='text-indigo-100 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed']");
-    private final By BrowseEventsBtn = By.xpath("//span[@class='inline-flex items-center justify-center px-6 py-2.5 text-base font-semibold rounded-lg bg-white text-indigo-700 hover:bg-indigo-50 transition-colors w-full sm:w-auto']");
+    private final By BrowseEventsBtn = By.xpath("//a//span[normalize-space()='Browse Events →']");
     private final By MyBookingsBtn = By.xpath("//button[normalize-space()='My Bookings']");
 
     private final By FeaturedEventsSectionTitle = By.xpath("//h2[normalize-space()='Featured Events']");
