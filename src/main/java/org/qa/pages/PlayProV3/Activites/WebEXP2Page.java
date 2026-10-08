@@ -1,4 +1,4 @@
-package org.qa.pages.Activites;
+package org.qa.pages.PlayProV3.Activites;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

@@ -2,8 +2,8 @@
 package com.qa.cucumber.bdd.DEV.Login;
 
 import com.qa.cucumber.bdd.Hooks;
-import org.qa.pages.WebCookiesPage;
-import org.qa.pages.WebLoginPage;
+import org.qa.pages.PlayProV3.WebCookiesPage;
+import org.qa.pages.PlayProV3.WebLoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

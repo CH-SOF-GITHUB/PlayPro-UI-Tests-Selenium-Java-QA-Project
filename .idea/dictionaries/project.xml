@@ -40,9 +40,12 @@
       <w>d'abord</w>
       <w>d'avertissement</w>
       <w>d'envoyer</w>
+      <w>d'instanciation</w>
       <w>d'étape</w>
       <w>dans</w>
       <w>devront</w>
+      <w>différer</w>
+      <w>démarre</w>
       <w>désormais</w>
       <w>détaillés</w>
       <w>enfin</w>
@@ -54,20 +57,28 @@
       <w>getdata</w>
       <w>infinie</w>
       <w>informations</w>
+      <w>instancie</w>
       <w>intermédiaire</w>
       <w>jdbc</w>
+      <w>l'ActionDriver</w>
       <w>l'artefact</w>
       <w>l'email</w>
+      <w>l'intérieur</w>
+      <w>l'on</w>
       <w>l'étape</w>
       <w>l'état</w>
       <w>lequel</w>
+      <w>leurs</w>
       <w>lisant</w>
       <w>localisable</w>
       <w>loggingout</w>
       <w>loggr</w>
+      <w>membres</w>
       <w>modifiant</w>
+      <w>nullité</w>
       <w>nullpointer</w>
       <w>ouvres</w>
+      <w>paramètre</w>
       <w>partagent</w>
       <w>pouvant</w>
       <w>propriétés</w>
@@ -78,6 +89,7 @@
       <w>réutilisé</w>
       <w>s'ouvrir</w>
       <w>sampletodotext</w>
+      <w>selon</w>
       <w>serveur</w>
       <w>simplifiée</w>
       <w>stepcontext</w>
@@ -87,6 +99,7 @@
       <w>verte</w>
       <w>vient</w>
       <w>échouer</w>
+      <w>écrasé</w>
       <w>également</w>
     </words>
   </dictionary>

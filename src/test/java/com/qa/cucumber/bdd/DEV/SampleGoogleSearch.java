@@ -1,5 +1,6 @@
-package com.qa.cucumber.bdd;
+package com.qa.cucumber.bdd.DEV;
 
+import com.qa.cucumber.bdd.Hooks;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

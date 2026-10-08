@@ -1,7 +1,7 @@
 package com.qa;
 
-import org.qa.pages.WebCookiesPage;
-import org.qa.pages.WebLoginPage;
+import org.qa.pages.PlayProV3.WebCookiesPage;
+import org.qa.pages.PlayProV3.WebLoginPage;
 import org.testng.annotations.BeforeMethod;
 
 /*

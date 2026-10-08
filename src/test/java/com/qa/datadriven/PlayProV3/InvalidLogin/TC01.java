@@ -1,8 +1,8 @@
 package com.qa.datadriven.PlayProV3.InvalidLogin;
 /*
 import org.qa.constants.Priority;
-import org.qa.pages.WebCookiesPage;
-import org.qa.pages.WebLoginPage;
+import org.qa.pages.PlayProV3.WebCookiesPage;
+import org.qa.pages.PlayProV3.WebLoginPage;
 import com.qa.factory.LTConfig;
 import org.qa.utilities.DataProviderUtils;
 import org.apache.commons.logging.Log;

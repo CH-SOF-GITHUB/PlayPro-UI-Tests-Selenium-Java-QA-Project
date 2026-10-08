@@ -1,7 +1,7 @@
 package com.qa.tests.PlayPro.DEV.LambdaTest.Chrome.Login;
 
-import org.qa.pages.WebCookiesPage;
-import org.qa.pages.WebLoginPage;
+import org.qa.pages.PlayProV3.WebCookiesPage;
+import org.qa.pages.PlayProV3.WebLoginPage;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;

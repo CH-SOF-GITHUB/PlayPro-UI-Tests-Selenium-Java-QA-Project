@@ -1,8 +1,8 @@
 /*
 package com.qa.cucumber.bdd;
 
-import org.qa.pages.WebCookiesPage;
-import org.qa.pages.WebLoginPage;
+import org.qa.pages.PlayProV3.WebCookiesPage;
+import org.qa.pages.PlayProV3.WebLoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.apache.commons.logging.Log;

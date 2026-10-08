@@ -119,6 +119,24 @@ public class ExtentManager {
 
     // Add a Method to attach a screenshot to report using Base64
     public synchronized static void attachScreenshot64(WebDriver driver, String message) {
+        // 1. Contrôle de nullité
+        if (driver == null) {
+            if (getTest() != null) {
+                getTest().info(message + " (Capture ignorée: driver null)");
+            }
+            return;
+        }
+        // 2. Contrôle de session Selenium active (empêche 'Session ID is null')
+        if (driver instanceof org.openqa.selenium.remote.RemoteWebDriver) {
+            org.openqa.selenium.remote.SessionId sessionId = ((org.openqa.selenium.remote.RemoteWebDriver) driver).getSessionId();
+            if (sessionId == null) {
+                if (getTest() != null) {
+                    getTest().info(message + " (Capture ignorée: session déjà fermée)");
+                }
+                return;
+            }
+        }
+        // 3. Prise de capture
         try {
             String screenshotBase64 = takeScreenshot(driver, getTestName());
             getTest().info(message, MediaEntityBuilder.createScreenCaptureFromBase64String(screenshotBase64).build());

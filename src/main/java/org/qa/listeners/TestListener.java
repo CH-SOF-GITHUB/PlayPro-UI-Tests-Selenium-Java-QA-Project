@@ -59,16 +59,16 @@ public class TestListener implements ITestListener, IAnnotationTransformer {
     @Override
     public void onTestSuccess(ITestResult result) {
         String testName = result.getMethod().getMethodName();
-        // Send success results in Extent Reports
-        if (!result.getTestClass().getName().toLowerCase().contains("api")) {
-            /* AJOUT:
-             *  Reapply the borders on all valid elements during the test
-             * */
+
+        // VÉRIFICATION : Ne pas prendre de screenshot si c'est de l'API OU si c'est un Runner Cucumber
+        boolean isCucumber = result.getTestClass().getName().toLowerCase().contains("cucumber");
+        boolean isApi = result.getTestClass().getName().toLowerCase().contains("api");
+
+        if (!isApi && !isCucumber) {
             ExtentManager.applyFinalBorders(BaseClass.getDriver());
-            // After that during the final state
             ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Test Passed", "Test End: " + testName + " - ✔️ Test Passed");
         } else {
-            ExtentManager.logStepForApi("Test API End: " + testName + " - ✔️ Test Passed");
+            ExtentManager.logStepForApi("Test End: " + testName + " - ✔️ Test Passed");
         }
     }
 
@@ -76,11 +76,14 @@ public class TestListener implements ITestListener, IAnnotationTransformer {
     @Override
     public void onTestFailure(ITestResult result) {
         String testName = result.getMethod().getMethodName();
-        // Send success results in Extent Reports
-        if (!result.getTestClass().getName().toLowerCase().contains("api")) {
+
+        boolean isCucumber = result.getTestClass().getName().toLowerCase().contains("cucumber");
+        boolean isApi = result.getTestClass().getName().toLowerCase().contains("api");
+
+        if (!isApi && !isCucumber) {
             ExtentManager.logFailureWithScreenshot(BaseClass.getDriver(), "Test Failed: " + result.getThrowable().getMessage(), "Test End: " + testName + " - ❌ Test Failed");
         } else {
-            ExtentManager.logFailureForApi("Test API End: " + testName + " - ❌ Test Failed:  " + result.getThrowable().getMessage());
+            ExtentManager.logFailureForApi("Test API End: " + testName + " - ❌ Test Failed: " + result.getThrowable().getMessage());
         }
     }
 

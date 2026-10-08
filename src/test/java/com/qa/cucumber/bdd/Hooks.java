@@ -78,7 +78,7 @@ public class Hooks {
                 driver.get().manage().window().maximize();
             }
 
-            // initialize the ActionDriver object
+            // Initialize the ActionDriver object
             actionDriver.set(new ActionDriver(getDriver()));
 
             /* Puisque ton ActionDriver est conçu autour de BaseClass, il faut que le WebDriver créé par Cucumber soit également enregistré dans BaseClass. * */
@@ -87,7 +87,10 @@ public class Hooks {
             log.warn("ActionDriver Instance Initialized successfully For Cucumber Methods BDD");
 
             /* The return value of "ExtentManager.getTest()" is null because of logSteps contain ActionDriver Class
-            logFailureWithScreenshot is called from ActionDriver Class, so we need to register the driver in ExtentManager */
+            logFailureWithScreenshot is called from ActionDriver Class, so we need to register the driver in ExtentManager
+            Quand TestNG démarre -> ExtentTest est créé pour la méthode Runner TestNG.
+            Quand Hooks @Before s'exécute -> ExtentTest est écrasé par le test Cucumber.
+            */
             ExtentManager.startTest("Cucumber - " + Thread.currentThread().getId());
         } catch (Exception e) {
             log.error("\n🚀... Initialization of CUCUMBER Web Driver Fails: " + e.getMessage());
@@ -101,20 +104,20 @@ public class Hooks {
         log.warn("\n 🚀 Le Scenario Testé: " + scenario.getName() + " Et le status : " + scenario.getStatus());
         String scenarioName = scenario.getName().replaceAll("[^a-zA-Z0-9]", "_");
         // Screenshot en cas de succès
-        if (scenario.getStatus() == Status.PASSED) {
-            File srcFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(srcFile, new File("src/test/java/com/qa/cucumber/bdd/Screenshots/success/scenarioPassed_" + scenarioName + ".png"));
-            Thread.sleep(3000);
-        } else if (scenario.getStatus() == Status.FAILED) {
-            File srcFile1 = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/cucumber/bdd/Screenshots/failure/scenarioFailed_" + scenarioName + ".png"));
-            Thread.sleep(3000);
-        } else if (scenario.getStatus() == Status.SKIPPED) {
-            File srcFile2 = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(srcFile2, new File("src/test/java/com/qa/cucumber/bdd/Screenshots/skipped/scenarioSkipped" + scenarioName + ".png"));
-            Thread.sleep(3000);
-        } else {
-            log.error("\n 🚀 Le Scenario Testé: " + scenario.getName() + " Et le status : " + scenario.getStatus() + " n'est pas pris en charge pour la capture d'écran.");
+        try {
+            // Captures d'écran locales selon le statut
+            if (getDriver() != null) {
+                File srcFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+                if (scenario.getStatus() == Status.PASSED) {
+                    FileUtils.copyFile(srcFile, new File("src/test/java/com/qa/cucumber/bdd/Screenshots/success/scenarioPassed_" + scenarioName + ".png"));
+                } else if (scenario.getStatus() == Status.FAILED) {
+                    FileUtils.copyFile(srcFile, new File("src/test/java/com/qa/cucumber/bdd/Screenshots/failure/scenarioFailed_" + scenarioName + ".png"));
+                } else if (scenario.getStatus() == Status.SKIPPED) {
+                    FileUtils.copyFile(srcFile, new File("src/test/java/com/qa/cucumber/bdd/Screenshots/skipped/scenarioSkipped_" + scenarioName + ".png"));
+                }
+            }
+        } catch (Exception e) {
+            log.error("Erreur lors de la capture d'écran dans Hooks: " + e.getMessage());
         }
 
         // LambdaTest uniquement
@@ -133,6 +136,9 @@ public class Hooks {
             addLambdaStepContext(driver.get(), "Closing Session");
             markTestStatusViaJS(getDriver(), status, remark);
         }
+
+        // Flush du rapport Extent Reports
+        ExtentManager.endTest();
 
         // Fermeture du navigateur
         if (driver.get() != null) {

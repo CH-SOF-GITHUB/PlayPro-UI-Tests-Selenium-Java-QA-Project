@@ -1,4 +1,4 @@
-package org.qa.pages.Abonnements;
+package org.qa.pages.PlayProV3.Abonnements;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

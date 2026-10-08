@@ -1,4 +1,4 @@
-package org.qa.pages;
+package org.qa.pages.PlayProV3;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -46,7 +46,7 @@ public class LoginPage {
     }
 
     public void clickSignIn() {
-        actionDriver.click(signInButton);
+        actionDriver.clickUsingJS(signInButton);
     }
 
     public void checkPwdOrEmailErrorMessageByText(String expectedErrorMessage) {

@@ -1,8 +1,8 @@
 /*
 package com.qa.cucumber.bdd.DEV.Reservations.Subscriptions;
 
-import org.qa.pages.Abonnements.WebSubscriptionsPage;
-import org.qa.pages.WebReservationPage;
+import org.qa.pages.PlayProV3.Abonnements.WebSubscriptionsPage;
+import org.qa.pages.PlayProV3.WebReservationPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

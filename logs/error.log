@@ -4030,3 +4030,28 @@ Session ID: 6cf23f5e84693d400df4173e01e6b363
 2026-10-06 13:24:10 [main] ERROR ActionDriver - Unable to Enter to Element [Element with name ' email '] | Error: Keys to send must be set
 2026-10-06 14:56:22 [main] ERROR ActionDriver - Unable to Enter to Element [Element with name ' password '] | Error: Keys to send must be set
 2026-10-06 14:56:22 [main] ERROR ActionDriver - Unable to Enter to Element [Element with name ' email '] | Error: Keys to send must be set
+2026-10-08 15:21:57 [main] ERROR ActionDriver - Element is not clickable [Element with id ' login-btn '] | Error: element click intercepted: Element is not clickable at point (948, 578)
+  (Session info: chrome=154.0.8037.98)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d75c6572be13a94ac6a1daaa6847b159, clickElement {id=f.A5C9B12B5316F9E4396292D3C7EAD31C.d.C9141327568828788920AD2BF1FE8928.e.5}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 154.0.8037.98, chrome: {chromedriverVersion: 154.0.8037.92 (334b65d254cc..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64016}, goog:processID: 26308, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64016/devtoo..., se:cdpVersion: 154.0.8037.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (d75c6572be13a94ac6a1daaa6847b159)] -> xpath: (//button[normalize-space()='Sign In'])[1]]
+Session ID: d75c6572be13a94ac6a1daaa6847b159
+2026-10-08 15:22:33 [main] ERROR ActionDriver - Element is not clickable [Element with id ' login-btn '] | Error: element click intercepted: Element is not clickable at point (948, 580)
+  (Session info: chrome=154.0.8037.98)
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b578d7144e10449c225d6d998eeb7b86, clickElement {id=f.08A0AD1DBC7846938ECAF92BFFAB0C33.d.FC3A0255B99C2AF39A5729B28D8143C7.e.5}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 154.0.8037.98, chrome: {chromedriverVersion: 154.0.8037.92 (334b65d254cc..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60300}, goog:processID: 16300, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60300/devtoo..., se:cdpVersion: 154.0.8037.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b578d7144e10449c225d6d998eeb7b86)] -> xpath: (//button[normalize-space()='Sign In'])[1]]
+Session ID: b578d7144e10449c225d6d998eeb7b86
+2026-10-08 15:22:37 [main] ERROR Hooks - Erreur lors de la capture d'écran dans Hooks: invalid session id
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b578d7144e10449c225d6d998eeb7b86, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 154.0.8037.98, chrome: {chromedriverVersion: 154.0.8037.92 (334b65d254cc..., userDataDir: C:\Users\chaker\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60300}, goog:processID: 16300, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60300/devtoo..., se:cdpVersion: 154.0.8037.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b578d7144e10449c225d6d998eeb7b86

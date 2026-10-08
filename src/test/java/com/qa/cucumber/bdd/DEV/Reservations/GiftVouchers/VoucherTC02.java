@@ -1,9 +1,9 @@
 /*
 package com.qa.cucumber.bdd.DEV.Reservations.GiftVouchers;
 
-import org.qa.pages.WebCartPage;
-import org.qa.pages.WebGiftVoucherPage;
-import org.qa.pages.WebReservationPage;
+import org.qa.pages.PlayProV3.WebCartPage;
+import org.qa.pages.PlayProV3.WebGiftVoucherPage;
+import org.qa.pages.PlayProV3.WebReservationPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

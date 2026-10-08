@@ -42,4 +42,8 @@ public class HomePage {
         boolean isSubTitleCorrect = actualSectionTitle.equals(expectedSectionTitle);
         org.testng.Assert.assertTrue(isSubTitleCorrect, "Expected subtitle: " + expectedSectionTitle + ", but got: " + actualSectionTitle);
     }
+
+    public void clickOnMyBookingsButton() {
+        actionDriver.click(MyBookingsBtn);
+    }
 }

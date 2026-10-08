@@ -1,4 +1,4 @@
-package org.qa.pages;
+package org.qa.pages.PlayProV3;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
