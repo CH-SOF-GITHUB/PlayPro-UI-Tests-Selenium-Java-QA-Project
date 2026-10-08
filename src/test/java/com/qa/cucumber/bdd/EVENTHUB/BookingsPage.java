@@ -2,9 +2,13 @@ package com.qa.cucumber.bdd.EVENTHUB;
 
 import com.qa.cucumber.bdd.Hooks;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.qa.actionDriver.ActionDriver;
 import org.qa.base.BaseClass;
+import org.testng.Reporter;
 
 public class BookingsPage {
 
@@ -67,5 +71,10 @@ public class BookingsPage {
 
     public boolean checkUserInBookingsPage() {
         return actionDriver.getCurrentURL().equals(PAGE_URL);
+    }
+
+    public void clickOnBookNowById(int id) {
+        WebElement BookNow = actionDriver.waitForElementToBeClickable(By.xpath("//body[1]/main[1]/div[1]/div[3]/article[1]/div[2]/div[2]/a[" + id + "]"));
+        actionDriver.clickUsingJS((By) BookNow);
     }
 }

@@ -14689,3 +14689,105 @@ Session ID: 6cf23f5e84693d400df4173e01e6b363
 2026-10-08 15:23:41 [main] INFO  TestListener - ===============================================
 2026-10-08 15:23:41 [main] INFO  TestListener - Test suite finished: Test EventHUB
 2026-10-08 15:23:41 [main] INFO  TestListener - ===============================================
+2026-10-08 17:11:42 [TestNG-tests-1] INFO  TestListener - ================================================
+2026-10-08 17:11:42 [TestNG-tests-2] INFO  TestListener - ================================================
+2026-10-08 17:11:42 [TestNG-tests-3] INFO  TestListener - ================================================
+2026-10-08 17:11:42 [TestNG-tests-1] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-08 17:11:42 [TestNG-tests-1] INFO  TestListener - ================================================
+2026-10-08 17:11:42 [TestNG-tests-2] INFO  TestListener - Test suite started: Test EventHUB - firefox
+2026-10-08 17:11:42 [TestNG-tests-3] INFO  TestListener - Test suite started: Test EventHUB - edge
+2026-10-08 17:11:42 [TestNG-tests-3] INFO  TestListener - ================================================
+2026-10-08 17:11:42 [TestNG-tests-2] INFO  TestListener - ================================================
+2026-10-08 17:11:44 [TestNG-tests-1] INFO  TestListener - ===============================================
+2026-10-08 17:11:44 [TestNG-tests-2] INFO  TestListener - ===============================================
+2026-10-08 17:11:44 [TestNG-tests-3] INFO  TestListener - ===============================================
+2026-10-08 17:11:44 [TestNG-tests-2] INFO  TestListener - Test suite finished: Test EventHUB - firefox
+2026-10-08 17:11:44 [TestNG-tests-1] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-08 17:11:44 [TestNG-tests-2] INFO  TestListener - ===============================================
+2026-10-08 17:11:44 [TestNG-tests-1] INFO  TestListener - ===============================================
+2026-10-08 17:11:44 [TestNG-tests-3] INFO  TestListener - Test suite finished: Test EventHUB - edge
+2026-10-08 17:11:44 [TestNG-tests-3] INFO  TestListener - ===============================================
+2026-10-08 17:31:00 [TestNG-tests-2] INFO  TestListener - ================================================
+2026-10-08 17:31:00 [TestNG-tests-3] INFO  TestListener - ================================================
+2026-10-08 17:31:00 [TestNG-tests-1] INFO  TestListener - ================================================
+2026-10-08 17:31:00 [TestNG-tests-2] INFO  TestListener - Test suite started: Test EventHUB - firefox
+2026-10-08 17:31:00 [TestNG-tests-1] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-08 17:31:00 [TestNG-tests-3] INFO  TestListener - Test suite started: Test EventHUB - edge
+2026-10-08 17:31:00 [TestNG-tests-2] INFO  TestListener - ================================================
+2026-10-08 17:31:00 [TestNG-tests-1] INFO  TestListener - ================================================
+2026-10-08 17:31:00 [TestNG-tests-3] INFO  TestListener - ================================================
+2026-10-08 17:31:02 [TestNG-tests-2] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-08 17:31:02 [TestNG-tests-3] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-08 17:31:02 [TestNG-tests-1] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-08 17:31:02 [TestNG-tests-1] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-08 17:31:02 [TestNG-tests-2] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-08 17:31:02 [TestNG-tests-3] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-08 17:31:02 [TestNG-tests-3] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-08 17:31:02 [TestNG-tests-2] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-08 17:31:02 [TestNG-tests-3] WARN  Hooks - properties.config File Loaded successfully
+2026-10-08 17:31:02 [TestNG-tests-2] WARN  Hooks - properties.config File Loaded successfully
+2026-10-08 17:31:02 [TestNG-tests-1] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-08 17:31:02 [TestNG-tests-1] WARN  Hooks - properties.config File Loaded successfully
+2026-10-08 17:31:15 [TestNG-tests-2] INFO  Hooks - FirefoxDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-08 17:31:21 [TestNG-tests-1] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-08 17:31:21 [TestNG-tests-1] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-08 17:31:21 [TestNG-tests-1] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-08 17:31:25 [TestNG-tests-1] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-08 17:31:26 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:26 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-08 17:31:26 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
+2026-10-08 17:31:28 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:28 [TestNG-tests-1] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-08 17:31:28 [TestNG-tests-1] INFO  ActionDriver - Border reset on element !
+2026-10-08 17:31:28 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:29 [TestNG-tests-1] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-08 17:31:30 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:30 [TestNG-tests-1] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:30 [TestNG-tests-1] WARN  Hooks - 
+ 🚀 Le Scenario Testé: Successful login with valid credentials Et le status : PASSED
+2026-10-08 17:31:35 [TestNG-tests-3] INFO  Hooks - EdgeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-08 17:31:35 [TestNG-tests-1] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-08 17:31:35 [TestNG-tests-3] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-08 17:31:35 [TestNG-tests-3] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-08 17:31:37 [TestNG-tests-3] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-08 17:31:38 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:38 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-08 17:31:38 [TestNG-tests-1] INFO  TestListener - ===============================================
+2026-10-08 17:31:38 [TestNG-tests-1] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-08 17:31:38 [TestNG-tests-1] INFO  TestListener - ===============================================
+2026-10-08 17:31:38 [TestNG-tests-3] INFO  ActionDriver - Border reset on element !
+2026-10-08 17:31:39 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:39 [TestNG-tests-3] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-08 17:31:39 [TestNG-tests-3] INFO  ActionDriver - Border reset on element !
+2026-10-08 17:31:39 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:39 [TestNG-tests-3] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-08 17:31:40 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:40 [TestNG-tests-3] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:40 [TestNG-tests-3] WARN  Hooks - 
+ 🚀 Le Scenario Testé: Successful login with valid credentials Et le status : PASSED
+2026-10-08 17:31:41 [TestNG-tests-2] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-08 17:31:41 [TestNG-tests-2] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-08 17:31:41 [TestNG-tests-3] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-08 17:31:45 [TestNG-tests-2] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-08 17:31:45 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:46 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-08 17:31:46 [TestNG-tests-2] INFO  ActionDriver - Border reset on element !
+2026-10-08 17:31:46 [TestNG-tests-3] INFO  TestListener - ===============================================
+2026-10-08 17:31:46 [TestNG-tests-3] INFO  TestListener - Test suite finished: Test EventHUB - edge
+2026-10-08 17:31:46 [TestNG-tests-3] INFO  TestListener - ===============================================
+2026-10-08 17:31:46 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:47 [TestNG-tests-2] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-08 17:31:47 [TestNG-tests-2] INFO  ActionDriver - Border reset on element !
+2026-10-08 17:31:47 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:48 [TestNG-tests-2] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-08 17:31:49 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:49 [TestNG-tests-2] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-08 17:31:49 [TestNG-tests-2] WARN  Hooks - 
+ 🚀 Le Scenario Testé: Successful login with valid credentials Et le status : PASSED
+2026-10-08 17:31:50 [TestNG-tests-2] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-08 17:31:52 [TestNG-tests-2] INFO  TestListener - ===============================================
+2026-10-08 17:31:52 [TestNG-tests-2] INFO  TestListener - Test suite finished: Test EventHUB - firefox
+2026-10-08 17:31:52 [TestNG-tests-2] INFO  TestListener - ===============================================

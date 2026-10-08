@@ -13,9 +13,14 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.qa.actionDriver.ActionDriver;
 import org.qa.base.BaseClass;
 import org.qa.utilities.ExtentManager;
+import org.testng.annotations.Parameters;
 
 import java.io.File;
 import java.io.IOException;
@@ -39,6 +44,9 @@ public class Hooks {
     // Create the objet for log utilities
     // public static final org.apache.logging.log4j.Logger loggr = LoggerManager.getLogger(BaseClass.class);
 
+    // AJOUT : ThreadLocal permet d'avoir un browser indépendant pour chaque test parallèle
+    private static ThreadLocal<String> browser = new ThreadLocal<>();
+
     static {
         // AJOUT : masquer les logs Selenium INFO/WARNING
         Logger.getLogger("org.openqa.selenium").setLevel(Level.SEVERE);
@@ -59,19 +67,60 @@ public class Hooks {
 
             boolean isHeadless = Boolean.parseBoolean(BaseClass.getProp().getProperty("headless", "false"));
 
-            // initialize the ChromeOptions object
-            ChromeOptions options = new ChromeOptions();
-            if (isHeadless) {
-                options.addArguments("--headless=new");
-                options.addArguments("--disable-gpu");
-                options.addArguments("--window-size=1920,1080");
-                options.addArguments("--disable-notifications");
-                options.addArguments("--no-sandbox");
-                options.addArguments("--disable-dev-shm-usage");
+            // AJOUT : récupérer le navigateur configuré par le paramètre TestNG
+            String browser = getBrowser();
+            // AJOUT : vérifier que le paramètre browser a bien été transmis
+            if (browser == null || browser.isBlank()) {
+                throw new IllegalStateException(
+                        "Browser parameter was not provided by TestNG."
+                );
             }
-            driver.set(new ChromeDriver(options));
-            ExtentManager.registerDriver(getDriver());
-            log.info("ChromeDriver Instance Initialized successfully For Cucumber On -------> {}" + (isHeadless ? "Headless Mode" : "Normal Mode"));
+
+            if (browser.equalsIgnoreCase("chrome")) {
+                // initialize the ChromeOptions object
+                ChromeOptions options = new ChromeOptions();
+                if (isHeadless) {
+                    options.addArguments("--headless=new");
+                    options.addArguments("--disable-gpu");
+                    options.addArguments("--window-size=1920,1080");
+                    options.addArguments("--disable-notifications");
+                    options.addArguments("--no-sandbox");
+                    options.addArguments("--disable-dev-shm-usage");
+                }
+                driver.set(new ChromeDriver(options));
+                ExtentManager.registerDriver(getDriver());
+                log.info("ChromeDriver Instance Initialized successfully For Cucumber On -------> {}" + (isHeadless ? "Headless Mode" : "Normal Mode"));
+            } else if (browser.equalsIgnoreCase("firefox")) {
+                // initialize the FirefoxOptions object
+                FirefoxOptions options = new FirefoxOptions();
+                if (isHeadless) {
+                    options.addArguments("--headless=new");
+                    options.addArguments("--disable-gpu");
+                    options.addArguments("--window-size=1920,1080");
+                    options.addArguments("--disable-notifications");
+                    options.addArguments("--no-sandbox");
+                    options.addArguments("--disable-dev-shm-usage");
+                }
+                driver.set(new FirefoxDriver(options));
+                ExtentManager.registerDriver(getDriver());
+                log.info("FirefoxDriver Instance Initialized successfully For Cucumber On -------> {}" + (isHeadless ? "Headless Mode" : "Normal Mode"));
+            } else if (browser.equalsIgnoreCase("edge")) {
+                // initialize the EdgeOptions object
+                EdgeOptions options = new EdgeOptions();
+                if (isHeadless) {
+                    options.addArguments("--headless=new");
+                    options.addArguments("--disable-gpu");
+                    options.addArguments("--window-size=1920,1080");
+                    options.addArguments("--disable-notifications");
+                    options.addArguments("--no-sandbox");
+                    options.addArguments("--disable-dev-shm-usage");
+                }
+                driver.set(new EdgeDriver(options));
+                ExtentManager.registerDriver(getDriver());
+                log.info("EdgeDriver Instance Initialized successfully For Cucumber On -------> {}" + (isHeadless ? "Headless Mode" : "Normal Mode"));
+            } else {
+                throw new RuntimeException("Unsupported browser: " + browser);
+            }
 
             // Maximize the WebDriver window only if not in headless mode
             if (!isHeadless) {
@@ -168,5 +217,15 @@ public class Hooks {
             throw new IllegalStateException("Action Driver is not initialized for thread: " + Thread.currentThread().getId());
         }
         return actionDriver.get();
+    }
+
+    // AJOUT : stocker le navigateur par Thread pour supporter l'exécution parallèle
+    public static void setBrowser(String browserName) {
+        browser.set(browserName);
+    }
+
+    // AJOUT : récupérer le navigateur associé au thread courant
+    public static String getBrowser() {
+        return browser.get();
     }
 }
