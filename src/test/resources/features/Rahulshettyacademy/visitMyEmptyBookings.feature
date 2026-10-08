@@ -1,5 +1,6 @@
 Feature: User Empty Bookings Management
 
+  @XQDP-99 @Regression @Smoke @Bookings
   Scenario: User can view empty bookings
     Given The user is logged into the EventHUB Application
     When User navigates to the My Bookings section
