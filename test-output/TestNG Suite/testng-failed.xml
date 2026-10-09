@@ -3,19 +3,19 @@
 <suite thread-count="4" name="Failed suite [TestNG Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="org.qa.listeners.TestListener"/>
-    <listener class-name="com.qa.tests.TestNG.MyAnnotationTransformer"/>
     <listener class-name="com.qa.tests.TestNG.CustomReporter"/>
   </listeners>
-  <test thread-count="4" name="Test EventHUB(failed)">
+  <test thread-count="4" name="Test EventHUB - chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.qa.cucumber.runners.CucumberTest">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="configureBrowser"/>
           <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.qa.cucumber.runners.CucumberTest -->
     </classes>
-  </test> <!-- Test EventHUB(failed) -->
+  </test> <!-- Test EventHUB - chrome(failed) -->
 </suite> <!-- Failed suite [TestNG Suite] -->

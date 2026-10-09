@@ -32,7 +32,6 @@ public class ViewEmptyBookingsSteps {
     public void user_should_see_a_message_indicating_no_bookings_are_available() {
         // Write code here that turns the phrase above into concrete actions
         bookingsPage.CheckNoBookingsMessage("No bookings yet");
-
     }
 
     @Then("User should see the subDescription Text below the message")

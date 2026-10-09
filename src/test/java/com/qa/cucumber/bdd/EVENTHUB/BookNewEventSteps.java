@@ -1,75 +1,99 @@
 package com.qa.cucumber.bdd.EVENTHUB;
 
-import org.openqa.selenium.By;
-import org.qa.actionDriver.ActionDriver;
+import com.qa.cucumber.bdd.Hooks;
+import io.cucumber.java.After;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
+
+import static org.qa.base.BaseClass.getSoftAsserts;
 
 public class BookNewEventSteps {
+    // AJOUT : initialiser les objets après le démarrage du navigateur
+    private final WebDriver driver = Hooks.getDriver();
+    private final LoginPage loginPage = new LoginPage(driver);
+    private final HomePage homePage = new HomePage(driver);
+    private final BookingsPage bookingsPage = new BookingsPage(driver);
+    private final BookNewEventPage bookNewEventPage = new BookNewEventPage(driver);
+    // AJOUT : conserver une instance de SoftAssert pour le scénario
+    private final SoftAssert softAssert = getSoftAsserts();
 
-    private ActionDriver actionDriver;
-
-    public BookNewEventSteps(ActionDriver actionDriver) {
-        this.actionDriver = actionDriver;
+    @Given("The User is logged into the EventHUB Application")
+    public void theUserIsLoggedIntoTheEventHUBApplication() {
+        loginPage.openLoginPage();
+        loginPage.enterCredentials("bchaker28@yahoo.com", "Q5n@j!i!QnZQmYm");
+        loginPage.clickSignIn();
     }
 
-    // Locate the elements for booking a new event
-    // For example:
-    private static final By FullNameField = By.id("customerName");
-    private static final By EmailField = By.id("customer-email");
-    private static final By PhoneField = By.id("phone");
-
-    private static final By MinusBtn = By.xpath("//button[normalize-space()='-']");
-    private static final By PlusBtn = By.xpath("//button[normalize-space()='+']");
-
-    private static final By ConfirmBookingButton = By.xpath("//button[@id='confirm-booking']");
-
-    // Warning messages:
-    private static final By FullNameWarning = By.xpath("//p[normalize-space()='Name must be at least 2 chars']");
-    private static final By EmailWarning = By.xpath("//p[normalize-space()='Enter a valid email']");
-    private static final By PhoneWarning = By.xpath("//p[normalize-space()='Enter a valid 10-digit phone']");
-
-    // Total Price confirmation:
-    private static final By TotalPriceConfirmation = By.cssSelector("body > main:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(4) > div:nth-child(4) > span:nth-child(2)");
-
-    // Add methods for booking a new event
-    public void fillOutBookingDetails(String fullName, String email, String phone) {
-        actionDriver.enter(FullNameField, fullName);
-        actionDriver.enter(EmailField, email);
-        actionDriver.enter(PhoneField, phone);
+    @When("User navigates to the Events section")
+    public void user_navigates_to_the_events_section() {
+        // Write code here that turns the phrase above into concrete actions
+        homePage.clickOnBrowseEvents();
     }
 
-    public void clickConfirmBooking() {
-        actionDriver.click(ConfirmBookingButton);
+    @And("User selects an available event {string}")
+    public void userSelectsAnAvailableEvent(String NbrEvent) {
+        bookingsPage.clickOnBookNowById(Integer.parseInt(NbrEvent));
     }
 
-    public void clickMinusButton() {
-        actionDriver.click(MinusBtn);
+    @And("User selects the number of tickets to book")
+    public void user_selects_the_number_of_tickets_to_book() throws InterruptedException {
+        // Write code here that turns the phrase above into concrete actions
+        for (int i = 0; i < 5; i++) {
+            bookNewEventPage.clickPlusButton();
+            Thread.sleep(1000);
+        }
     }
 
-    public void clickPlusButton() {
-        actionDriver.click(PlusBtn);
+    @And("User enters the booking details")
+    public void user_enters_the_booking_details() {
+        // Write code here that turns the phrase above into concrete actions
+        bookNewEventPage.fillOutBookingDetails("Chaker Ben Said", "bchaker28@yahoo.com", "+9758484812");
     }
 
-    public boolean checkFullNameWarning(String expectedWarning) {
-        return actionDriver.getText(FullNameWarning).equals(expectedWarning);
+    @And("User clicks the Confirm Booking button")
+    public void user_clicks_the_confirm_booking_button() {
+        // Write code here that turns the phrase above into concrete actions
+        bookNewEventPage.clickConfirmBooking();
     }
 
-    public boolean checkEmailWarning(String expectedWarning) {
-        return actionDriver.getText(EmailWarning).equals(expectedWarning);
+    @Then("User should see a booking confirmation message")
+    public void user_should_see_a_booking_confirmation_message() {
+        // Write code here that turns the phrase above into concrete actions
+        String Text = bookNewEventPage.getBookingConfirmMsg();
+        System.out.println("Text 1 : " + Text);
+        softAssert.assertTrue(bookNewEventPage.checkBookingConfirmMsg("Booking Confirmed! 🎉"), "The booking confirmation message is not displayed.");
+        softAssert.assertTrue(bookNewEventPage.checkTicketsReservedMsg("Your tickets are reserved."));
     }
 
-    public boolean checkPhoneWarning(String expectedWarning) {
-        return actionDriver.getText(PhoneWarning).equals(expectedWarning);
+    @And("User should see the booking reference")
+    public void user_should_see_the_booking_reference() {
+        // Write code here that turns the phrase above into concrete actions
+        String Text2 = bookNewEventPage.getBookingRef();
+        System.out.println("Text 2 : " + Text2);
+        softAssert.assertTrue(bookNewEventPage.checkBookingRef("D-ZEPPUW"), "Error-The booking reference fails and not correct");
     }
 
-    public boolean checkTotalPriceConfirmation(int expectedTotal) {
-        // 1. Récupérer le texte brut de Selenium (ex: "$1,800")
-        String rawText = actionDriver.getText(TotalPriceConfirmation);
-        // 2. Nettoyer la chaîne en supprimant le "$" et la virgule ","
-        // Le regex "[^0-9]" supprime TOUT ce qui n'est pas un chiffre
-        String cleanedText = rawText.replaceAll("[^0-9]", "");
-        // 3. Convertir la chaîne nettoyée ("1800") en entier (int)
-        int actualTotal = Integer.parseInt(cleanedText);
-        // 4. Comparer les deux nombres
-        return actualTotal == expectedTotal;
+    @And("User should see the customer name and number of tickets")
+    public void user_should_see_the_customer_name_and_number_of_tickets() {
+        // Write code here that turns the phrase above into concrete actions
+        String Text3 = bookNewEventPage.getCustomerName();
+        System.out.println("Text 3 : " + Text3);
+        softAssert.assertTrue(bookNewEventPage.checkCustomerNameField("Chaker Ben Said"), "Error-The booking Customer Name fails and not correct");
+        String Text4 = bookNewEventPage.getNumberOfTickets();
+        System.out.println("Text 4 : " + Text4);
+        softAssert.assertTrue(bookNewEventPage.checkNumberOfTicketsField("6"), "Error-The booking Tickets Number fails and not correct");
+    }
+
+    @And("User should see the correct total booking amount")
+    public void user_should_see_the_correct_total_booking_amount() {
+        // Write code here that turns the phrase above into concrete actions
+        softAssert.assertTrue(bookNewEventPage.checkTotalPriceConfirmation(1800));
+        // Collecter toutes les assertions échouées
+        softAssert.assertAll();
     }
 }

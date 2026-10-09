@@ -20,7 +20,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.qa.actionDriver.ActionDriver;
 import org.qa.base.BaseClass;
 import org.qa.utilities.ExtentManager;
-import org.testng.annotations.Parameters;
 
 import java.io.File;
 import java.io.IOException;

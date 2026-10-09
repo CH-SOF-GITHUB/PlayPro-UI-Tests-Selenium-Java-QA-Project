@@ -19,11 +19,11 @@ public class BookingsPage {
      * PROBLÈME INITIAL (NPE / Échec d'instanciation Cucumber) :
      * Cucumber instancie les classes de Step Definitions (et donc leurs objets membres)
      * AVANT d'exécuter la méthode @Before des Hooks.
-     *
+     * <p>
      * Si l'on fait 'this.actionDriver = BaseClass.getActionDriver()' dans un constructeur
      * sans argument, le ThreadLocal 'actionDriver' est encore NULL au moment où Java
      * charge cette classe, ce qui fait planter l'exécution BDD.
-     *
+     * <p>
      * SOLUTION :
      * On passe 'WebDriver driver' en paramètre au constructeur (ou on instancie la page
      * directement à l'intérieur des méthodes de Steps) pour différer la récupération
@@ -74,7 +74,8 @@ public class BookingsPage {
     }
 
     public void clickOnBookNowById(int id) {
-        WebElement BookNow = actionDriver.waitForElementToBeClickable(By.xpath("//body[1]/main[1]/div[1]/div[3]/article[1]/div[2]/div[2]/a[" + id + "]"));
-        actionDriver.clickUsingJS((By) BookNow);
+        By bookNowLocator = By.xpath("//body[1]/main[1]/div[1]/div[3]/article[1]/div[2]/div[2]/a[" + id + "]");
+        actionDriver.waitForElementToBeClickable(bookNowLocator);
+        actionDriver.clickUsingJS(bookNowLocator);
     }
 }

@@ -46,4 +46,8 @@ public class HomePage {
     public void clickOnMyBookingsButton() {
         actionDriver.click(MyBookingsBtn);
     }
+
+    public void clickOnBrowseEvents() {
+        actionDriver.click(BrowseEventsBtn);
+    }
 }

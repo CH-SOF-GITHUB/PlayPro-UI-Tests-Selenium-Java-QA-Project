@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 @Test
 @CucumberOptions(
-        features = "src/test/resources/features/Rahulshettyacademy/login.feature",
+        features = "src/test/resources/features/Rahulshettyacademy/book_new_event.feature",
         glue = "com.qa.cucumber.bdd",
         plugin = {
                 "json:target/cucumber-report.json",

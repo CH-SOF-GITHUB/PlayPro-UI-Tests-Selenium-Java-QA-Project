@@ -14791,3 +14791,1158 @@ Session ID: 6cf23f5e84693d400df4173e01e6b363
 2026-10-08 17:31:52 [TestNG-tests-2] INFO  TestListener - ===============================================
 2026-10-08 17:31:52 [TestNG-tests-2] INFO  TestListener - Test suite finished: Test EventHUB - firefox
 2026-10-08 17:31:52 [TestNG-tests-2] INFO  TestListener - ===============================================
+2026-10-09 12:01:26 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 12:01:26 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 12:01:26 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 12:01:26 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 12:55:53 [main] INFO  TestListener - ================================================
+2026-10-09 12:55:53 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 12:55:53 [main] INFO  TestListener - ================================================
+2026-10-09 12:55:54 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 12:55:54 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 12:55:54 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 12:55:54 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 12:55:55 [main] INFO  TestListener - ===============================================
+2026-10-09 12:55:55 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 12:55:55 [main] INFO  TestListener - ===============================================
+2026-10-09 12:57:12 [main] INFO  TestListener - ================================================
+2026-10-09 12:57:12 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 12:57:12 [main] INFO  TestListener - ================================================
+2026-10-09 12:57:13 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 12:57:13 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 12:57:13 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 12:57:13 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 12:57:13 [main] INFO  TestListener - ===============================================
+2026-10-09 12:57:13 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 12:57:13 [main] INFO  TestListener - ===============================================
+2026-10-09 13:01:49 [main] INFO  TestListener - ================================================
+2026-10-09 13:01:49 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 13:01:49 [main] INFO  TestListener - ================================================
+2026-10-09 13:01:50 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 13:01:50 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 13:01:50 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 13:01:50 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 13:02:01 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 13:02:01 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 13:02:01 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 13:02:02 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 13:02:03 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 13:02:03 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 13:02:03 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 13:02:03 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 13:02:03 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 13:02:03 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 13:02:03 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 13:02:03 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 13:02:04 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 13:02:04 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 13:02:05 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 13:02:05 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 13:02:05 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 13:02:05 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 13:02:11 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 13:02:12 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 13:02:12 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 13:02:13 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 13:02:14 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 13:02:14 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 13:02:14 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 13:02:14 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 13:02:14 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 13:02:14 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 13:02:14 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 13:02:14 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 13:02:15 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 13:02:18 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 13:02:22 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 13:02:22 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 13:02:22 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 13:02:22 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 13:02:27 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 13:02:27 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 13:02:27 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 13:02:29 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 13:02:29 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 13:02:29 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 13:02:29 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 13:02:29 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 13:02:29 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 13:02:29 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 13:02:29 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 13:02:30 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 13:02:30 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 13:02:31 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 13:02:31 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 13:02:31 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 13:02:31 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 13:02:31 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 13:02:34 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 13:02:34 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 13:02:34 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 13:02:36 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 13:02:36 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 13:02:36 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 13:02:36 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 13:02:36 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 13:02:37 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 13:02:37 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 13:02:37 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 13:02:37 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 13:02:37 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 13:02:38 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 13:02:38 [main] INFO  TestListener - ===============================================
+2026-10-09 13:02:38 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 13:02:38 [main] INFO  TestListener - ===============================================
+2026-10-09 16:16:30 [main] INFO  TestListener - ================================================
+2026-10-09 16:16:30 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 16:16:30 [main] INFO  TestListener - ================================================
+2026-10-09 16:16:32 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 16:16:32 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 16:16:32 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 16:16:32 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 16:16:44 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 16:16:44 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 16:16:44 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 16:16:46 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 16:16:46 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:16:47 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 16:16:47 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:16:47 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:16:47 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 16:16:47 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:16:47 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:16:47 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 16:16:47 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 16:16:51 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 16:16:53 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 16:16:53 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 16:16:53 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 16:16:53 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 16:16:58 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 16:16:58 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 16:16:58 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 16:17:00 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 16:17:01 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:17:01 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 16:17:01 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:17:01 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:17:01 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 16:17:01 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:17:01 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:17:01 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 16:17:03 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 16:17:05 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 16:17:06 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 16:17:06 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 16:17:06 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 16:17:06 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 16:17:09 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 16:17:09 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 16:17:09 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 16:17:13 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 16:17:13 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:17:13 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 16:17:13 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:17:13 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:17:14 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 16:17:14 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:17:14 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:17:14 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 16:17:14 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 16:17:15 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 16:17:15 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 16:17:15 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 16:17:15 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 16:17:15 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 16:17:20 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 16:17:21 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 16:17:21 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 16:17:23 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 16:17:28 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:17:28 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 16:17:28 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:17:28 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:17:29 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 16:17:29 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:17:29 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:17:29 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 16:17:29 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 16:17:30 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 16:17:31 [main] INFO  TestListener - ===============================================
+2026-10-09 16:17:31 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 16:17:31 [main] INFO  TestListener - ===============================================
+2026-10-09 16:34:39 [main] INFO  TestListener - ================================================
+2026-10-09 16:34:39 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 16:34:39 [main] INFO  TestListener - ================================================
+2026-10-09 16:34:41 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 16:34:41 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 16:34:41 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 16:34:41 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 16:34:45 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 16:34:46 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 16:34:46 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 16:34:47 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 16:34:48 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:34:48 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 16:34:48 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:34:48 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:34:48 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 16:34:48 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:34:48 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:34:48 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 16:34:49 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:34:50 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:34:50 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: Successful login with valid credentials Et le status : PASSED
+2026-10-09 16:34:56 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 16:35:05 [main] INFO  TestListener - ===============================================
+2026-10-09 16:35:05 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 16:35:05 [main] INFO  TestListener - ===============================================
+2026-10-09 16:41:59 [main] INFO  TestListener - ================================================
+2026-10-09 16:41:59 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 16:41:59 [main] INFO  TestListener - ================================================
+2026-10-09 16:42:00 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 16:42:00 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 16:42:00 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 16:42:00 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 16:42:04 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 16:42:04 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 16:42:04 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 16:42:04 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 16:42:05 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 16:42:06 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 16:42:06 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 16:42:06 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 16:42:06 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 16:42:08 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 16:42:08 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 16:42:08 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 16:42:08 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 16:42:09 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 16:42:09 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 16:42:09 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 16:42:09 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 16:42:09 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 16:42:12 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 16:42:12 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 16:42:12 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 16:42:12 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 16:42:13 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 16:42:13 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 16:42:13 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 16:42:13 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 16:42:13 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 16:42:15 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 16:42:15 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 16:42:15 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 16:42:15 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 16:42:16 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 16:42:18 [main] INFO  TestListener - ===============================================
+2026-10-09 16:42:18 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 16:42:18 [main] INFO  TestListener - ===============================================
+2026-10-09 16:44:09 [main] INFO  TestListener - ================================================
+2026-10-09 16:44:09 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 16:44:09 [main] INFO  TestListener - ================================================
+2026-10-09 16:44:10 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 16:44:10 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 16:44:10 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 16:44:10 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 16:44:15 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 16:44:15 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 16:44:15 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 16:44:17 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 16:44:18 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:44:18 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 16:44:18 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:44:18 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:44:18 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 16:44:18 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:44:18 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:44:18 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 16:44:23 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:44:26 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 16:44:27 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 16:44:29 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 16:44:36 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 16:44:36 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 16:44:36 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 16:44:36 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 16:44:43 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 16:44:43 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 16:44:43 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 16:44:45 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 16:44:46 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:44:46 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 16:44:46 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:44:46 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:44:47 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 16:44:47 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:44:47 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:44:47 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 16:44:49 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:44:49 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 16:44:50 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 16:44:50 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 16:44:51 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 16:44:51 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 16:44:51 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 16:44:51 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 16:44:58 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 16:44:58 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 16:44:58 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 16:45:00 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 16:45:00 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:45:01 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 16:45:01 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:45:01 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:45:01 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 16:45:01 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:45:01 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:45:01 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 16:45:02 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:45:03 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 16:45:03 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 16:45:04 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 16:45:05 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 16:45:05 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 16:45:05 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 16:45:05 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 16:45:08 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 16:45:08 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 16:45:08 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 16:45:10 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 16:45:10 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:45:10 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 16:45:10 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:45:10 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:45:10 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 16:45:10 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:45:11 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:45:11 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 16:45:12 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:45:12 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 16:45:13 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 16:45:14 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 16:45:15 [main] INFO  TestListener - ===============================================
+2026-10-09 16:45:15 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 16:45:15 [main] INFO  TestListener - ===============================================
+2026-10-09 16:50:27 [main] INFO  TestListener - ================================================
+2026-10-09 16:50:27 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 16:50:27 [main] INFO  TestListener - ================================================
+2026-10-09 16:50:29 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 16:50:29 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 16:50:29 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 16:50:29 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 16:50:36 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 16:50:36 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 16:50:36 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 16:50:37 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 16:50:38 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:50:38 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 16:50:38 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:50:38 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:50:38 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 16:50:38 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 16:50:38 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:50:38 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 16:50:39 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:50:41 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 16:50:44 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 16:50:45 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 16:50:52 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : PASSED
+2026-10-09 16:50:54 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 16:51:08 [main] INFO  TestListener - ===============================================
+2026-10-09 16:51:08 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 16:51:08 [main] INFO  TestListener - ===============================================
+2026-10-09 17:16:31 [main] INFO  TestListener - ================================================
+2026-10-09 17:16:31 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 17:16:31 [main] INFO  TestListener - ================================================
+2026-10-09 17:16:34 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 17:16:34 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 17:16:34 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 17:16:34 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 17:16:39 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 17:16:39 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 17:16:39 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 17:16:39 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 17:16:40 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 17:16:41 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 17:16:41 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 17:16:41 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 17:16:41 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 17:17:28 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 17:17:28 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 17:17:28 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 17:17:28 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 17:17:29 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 17:17:29 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 17:17:29 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 17:17:29 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 17:17:29 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 17:17:32 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 17:17:32 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 17:17:32 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 17:17:32 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 17:17:32 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 17:17:32 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 17:17:32 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 17:17:32 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 17:17:32 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 17:17:38 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 17:17:38 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 17:17:38 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 17:17:38 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 17:17:38 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 17:17:40 [main] INFO  TestListener - ===============================================
+2026-10-09 17:17:40 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 17:17:40 [main] INFO  TestListener - ===============================================
+2026-10-09 17:21:38 [main] INFO  TestListener - ================================================
+2026-10-09 17:21:38 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 17:21:38 [main] INFO  TestListener - ================================================
+2026-10-09 17:21:39 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 17:21:39 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 17:21:39 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 17:21:39 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 17:21:43 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 17:21:44 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 17:21:44 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 17:21:46 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 17:21:46 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:21:46 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 17:21:46 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:21:47 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:21:47 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 17:21:47 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:21:47 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:21:47 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 17:21:50 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:21:52 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 17:21:53 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:21:53 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 17:22:00 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:00 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerName ' ' is [Chaker Ben Said].
+2026-10-09 17:22:00 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:22:00 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:00 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerEmail ' ' is [bchaker28@yahoo.com].
+2026-10-09 17:22:00 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:22:01 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:01 [main] INFO  ActionDriver - Value entered on ' Element with name ' phone ' ' is [+9758484812].
+2026-10-09 17:22:01 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:22:01 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:05 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' confirm-booking '
+2026-10-09 17:22:05 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:05 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:05 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:05 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:06 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:06 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:06 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 17:22:07 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 17:22:17 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 17:22:17 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 17:22:17 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 17:22:17 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 17:22:19 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 17:22:19 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 17:22:19 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 17:22:22 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 17:22:23 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:24 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 17:22:24 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:22:24 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:24 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 17:22:24 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:22:24 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:24 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 17:22:26 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:26 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 17:22:27 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:27 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 17:22:35 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:36 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerName ' ' is [Chaker Ben Said].
+2026-10-09 17:22:36 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:22:36 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:36 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerEmail ' ' is [bchaker28@yahoo.com].
+2026-10-09 17:22:36 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:22:37 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:37 [main] INFO  ActionDriver - Value entered on ' Element with name ' phone ' ' is [+9758484812].
+2026-10-09 17:22:37 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:22:37 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:37 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' confirm-booking '
+2026-10-09 17:22:40 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:40 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:40 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:40 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:40 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:40 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:40 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 17:22:41 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 17:22:42 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 17:22:42 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 17:22:42 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 17:22:42 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 17:22:46 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 17:22:46 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 17:22:46 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 17:22:49 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 17:22:50 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:51 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 17:22:51 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:22:53 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:53 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 17:22:53 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:22:53 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:54 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 17:22:55 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:56 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 17:22:57 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:22:57 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 17:23:05 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:23:06 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerName ' ' is [Chaker Ben Said].
+2026-10-09 17:23:06 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:23:06 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:23:07 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerEmail ' ' is [bchaker28@yahoo.com].
+2026-10-09 17:23:07 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:23:07 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:23:07 [main] INFO  ActionDriver - Value entered on ' Element with name ' phone ' ' is [+9758484812].
+2026-10-09 17:23:07 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:23:07 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:23:09 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' confirm-booking '
+2026-10-09 17:23:11 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:23:12 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:23:12 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:23:12 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:23:12 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:23:13 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:23:13 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 17:23:18 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 17:23:52 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 17:23:52 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 17:23:52 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 17:23:52 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 17:23:57 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 17:23:57 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 17:23:57 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 17:23:59 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 17:23:59 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:23:59 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 17:23:59 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:24:00 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:24:00 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 17:24:00 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:24:00 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:24:00 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 17:24:02 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:24:02 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 17:24:04 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:24:04 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 17:24:11 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:24:11 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerName ' ' is [Chaker Ben Said].
+2026-10-09 17:24:11 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:24:12 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:24:12 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerEmail ' ' is [bchaker28@yahoo.com].
+2026-10-09 17:24:12 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:24:12 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:24:12 [main] INFO  ActionDriver - Value entered on ' Element with name ' phone ' ' is [+9758484812].
+2026-10-09 17:24:12 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:24:12 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:24:13 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' confirm-booking '
+2026-10-09 17:24:13 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:24:13 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:24:13 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:24:14 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:24:14 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:24:14 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:24:14 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 17:24:16 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 17:24:18 [main] INFO  TestListener - ===============================================
+2026-10-09 17:24:18 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 17:24:18 [main] INFO  TestListener - ===============================================
+2026-10-09 17:36:05 [main] INFO  TestListener - ================================================
+2026-10-09 17:36:05 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 17:36:05 [main] INFO  TestListener - ================================================
+2026-10-09 17:36:06 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 17:36:06 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 17:36:06 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 17:36:06 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 17:36:09 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 17:36:09 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 17:36:09 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 17:36:10 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 17:36:11 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:11 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 17:36:11 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:36:11 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:11 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 17:36:11 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:36:11 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:11 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 17:36:12 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:13 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 17:36:14 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:14 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 17:36:21 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:21 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerName ' ' is [Chaker Ben Said].
+2026-10-09 17:36:21 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:36:21 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:21 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerEmail ' ' is [bchaker28@yahoo.com].
+2026-10-09 17:36:21 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:36:22 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:22 [main] INFO  ActionDriver - Value entered on ' Element with name ' phone ' ' is [+9758484812].
+2026-10-09 17:36:22 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:36:22 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:22 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' confirm-booking '
+2026-10-09 17:36:23 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:23 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:23 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:23 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:23 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:23 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:36:23 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 17:36:25 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 17:36:26 [main] INFO  TestListener - ===============================================
+2026-10-09 17:36:26 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 17:36:26 [main] INFO  TestListener - ===============================================
+2026-10-09 17:57:50 [main] INFO  TestListener - ================================================
+2026-10-09 17:57:50 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 17:57:50 [main] INFO  TestListener - ================================================
+2026-10-09 17:57:52 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 17:57:52 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 17:57:52 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 17:57:52 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 17:57:56 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 17:57:56 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 17:57:56 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 17:57:58 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 17:57:58 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:57:58 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 17:57:58 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:57:59 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:57:59 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 17:57:59 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:57:59 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:57:59 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 17:58:00 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:58:01 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 17:58:02 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:58:03 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 17:58:09 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:58:09 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerName ' ' is [Chaker Ben Said].
+2026-10-09 17:58:09 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:58:09 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:58:10 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerEmail ' ' is [bchaker28@yahoo.com].
+2026-10-09 17:58:10 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:58:10 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:58:10 [main] INFO  ActionDriver - Value entered on ' Element with name ' phone ' ' is [+9758484812].
+2026-10-09 17:58:10 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 17:58:10 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:58:10 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' confirm-booking '
+2026-10-09 17:58:12 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:58:12 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:58:12 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 17:58:12 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : PASSED
+2026-10-09 17:58:14 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 17:58:17 [main] INFO  TestListener - ===============================================
+2026-10-09 17:58:17 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 17:58:17 [main] INFO  TestListener - ===============================================
+2026-10-09 18:01:26 [main] INFO  TestListener - ================================================
+2026-10-09 18:01:26 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 18:01:26 [main] INFO  TestListener - ================================================
+2026-10-09 18:01:27 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 18:01:27 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 18:01:27 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 18:01:27 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 18:01:31 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 18:01:31 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 18:01:31 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 18:01:34 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 18:01:36 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:01:36 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:01:37 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:01:37 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:01:37 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 18:01:37 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:01:37 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:01:37 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 18:01:40 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:01:40 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 18:01:41 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:01:41 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 18:01:48 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:01:48 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerName ' ' is [Chaker Ben Said].
+2026-10-09 18:01:48 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:01:48 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:01:48 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerEmail ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:01:48 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:01:49 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:01:49 [main] INFO  ActionDriver - Value entered on ' Element with name ' phone ' ' is [+9758484812].
+2026-10-09 18:01:49 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:01:49 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:01:49 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' confirm-booking '
+2026-10-09 18:01:51 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:01:51 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:01:51 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:01:51 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : PASSED
+2026-10-09 18:01:52 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 18:01:54 [main] INFO  TestListener - ===============================================
+2026-10-09 18:01:54 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 18:01:54 [main] INFO  TestListener - ===============================================
+2026-10-09 18:03:11 [main] INFO  TestListener - ================================================
+2026-10-09 18:03:11 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 18:03:11 [main] INFO  TestListener - ================================================
+2026-10-09 18:03:12 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 18:03:12 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 18:03:12 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 18:03:12 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 18:03:16 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 18:03:16 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 18:03:16 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 18:03:17 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 18:03:18 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:18 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:03:18 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:03:18 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:18 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 18:03:18 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:03:18 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:18 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 18:03:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:20 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 18:03:21 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:21 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 18:03:22 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:22 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:03:24 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:24 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:03:26 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:26 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:03:27 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:27 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:03:29 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:29 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:03:30 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:30 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:03:32 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:32 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerName ' ' is [Chaker Ben Said].
+2026-10-09 18:03:32 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:03:32 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:32 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerEmail ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:03:32 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:03:33 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:33 [main] INFO  ActionDriver - Value entered on ' Element with name ' phone ' ' is [+9758484812].
+2026-10-09 18:03:33 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:03:33 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:03:33 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' confirm-booking '
+2026-10-09 18:03:34 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 18:04:19 [main] INFO  TestListener - ================================================
+2026-10-09 18:04:19 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 18:04:19 [main] INFO  TestListener - ================================================
+2026-10-09 18:04:20 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 18:04:20 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 18:04:20 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 18:04:20 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 18:04:24 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 18:04:24 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 18:04:24 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 18:04:25 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 18:04:26 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:26 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:04:26 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:04:26 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:26 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 18:04:26 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:04:26 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:26 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 18:04:27 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:28 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 18:04:30 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:30 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 18:04:32 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:32 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:04:33 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:33 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:04:35 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:35 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:04:36 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:36 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:04:37 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:37 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:04:39 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:39 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerName ' ' is [Chaker Ben Said].
+2026-10-09 18:04:39 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:04:39 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:39 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerEmail ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:04:39 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:04:40 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:40 [main] INFO  ActionDriver - Value entered on ' Element with name ' phone ' ' is [+9758484812].
+2026-10-09 18:04:40 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:04:40 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:40 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' confirm-booking '
+2026-10-09 18:04:41 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:41 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:41 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:41 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:41 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:42 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:42 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:04:42 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 18:04:43 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 18:04:44 [main] INFO  TestListener - ===============================================
+2026-10-09 18:04:44 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 18:04:44 [main] INFO  TestListener - ===============================================
+2026-10-09 18:05:57 [main] INFO  TestListener - ================================================
+2026-10-09 18:05:57 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 18:05:57 [main] INFO  TestListener - ================================================
+2026-10-09 18:05:58 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 18:05:58 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 18:05:58 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 18:05:58 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 18:06:01 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 18:06:01 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 18:06:01 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 18:06:03 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 18:06:03 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:04 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:06:04 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:06:04 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:04 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 18:06:04 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:06:04 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:04 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 18:06:05 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:06 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 18:06:07 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:07 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 18:06:08 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:09 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:06:11 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:11 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:06:12 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:12 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:06:13 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:14 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:06:15 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:15 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:06:17 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:17 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerName ' ' is [Chaker Ben Said].
+2026-10-09 18:06:17 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:06:17 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:17 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerEmail ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:06:17 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:06:17 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:18 [main] INFO  ActionDriver - Value entered on ' Element with name ' phone ' ' is [+9758484812].
+2026-10-09 18:06:18 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:06:18 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:18 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' confirm-booking '
+2026-10-09 18:06:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:06:19 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 18:06:21 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 18:06:22 [main] INFO  TestListener - ===============================================
+2026-10-09 18:06:22 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 18:06:22 [main] INFO  TestListener - ===============================================
+2026-10-09 18:08:22 [main] INFO  TestListener - ================================================
+2026-10-09 18:08:22 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 18:08:22 [main] INFO  TestListener - ================================================
+2026-10-09 18:08:23 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 18:08:23 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 18:08:23 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 18:08:23 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 18:08:27 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 18:08:27 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 18:08:27 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 18:08:29 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 18:08:29 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:29 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:08:29 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:08:30 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:30 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 18:08:30 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:08:30 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:30 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 18:08:33 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:34 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 18:08:35 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:35 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 18:08:37 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:37 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:08:38 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:38 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:08:40 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:40 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:08:41 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:41 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:08:43 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:43 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:08:45 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:45 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerName ' ' is [Chaker Ben Said].
+2026-10-09 18:08:46 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:08:46 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:46 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerEmail ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:08:46 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:08:46 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:46 [main] INFO  ActionDriver - Value entered on ' Element with name ' phone ' ' is [+9758484812].
+2026-10-09 18:08:46 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:08:47 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:47 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' confirm-booking '
+2026-10-09 18:08:48 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:48 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:48 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:48 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:48 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:48 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:08:48 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 18:08:49 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 18:08:51 [main] INFO  TestListener - ===============================================
+2026-10-09 18:08:51 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 18:08:51 [main] INFO  TestListener - ===============================================
+2026-10-09 18:12:58 [main] INFO  TestListener - ================================================
+2026-10-09 18:12:58 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 18:12:58 [main] INFO  TestListener - ================================================
+2026-10-09 18:13:00 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 18:13:00 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 18:13:00 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 18:13:00 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 18:13:03 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 18:13:03 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 18:13:03 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 18:13:05 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 18:13:05 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:05 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:13:05 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:13:06 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:06 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 18:13:06 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:13:06 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:06 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 18:13:07 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:08 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 18:13:09 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:09 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 18:13:11 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:11 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:13:13 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:13 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:13:14 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:14 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:13:16 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:16 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:13:17 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:17 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:13:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:19 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerName ' ' is [Chaker Ben Said].
+2026-10-09 18:13:19 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:13:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:19 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerEmail ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:13:19 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:13:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:20 [main] INFO  ActionDriver - Value entered on ' Element with name ' phone ' ' is [+9758484812].
+2026-10-09 18:13:20 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:13:20 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:20 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' confirm-booking '
+2026-10-09 18:13:21 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:21 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:21 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:21 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:21 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:21 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:21 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:21 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:22 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:13:22 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 18:13:23 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 18:13:25 [main] INFO  TestListener - ===============================================
+2026-10-09 18:13:25 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 18:13:25 [main] INFO  TestListener - ===============================================
+2026-10-09 18:15:26 [main] INFO  TestListener - ================================================
+2026-10-09 18:15:26 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 18:15:26 [main] INFO  TestListener - ================================================
+2026-10-09 18:15:28 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 18:15:28 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 18:15:28 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 18:15:28 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 18:15:34 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 18:15:34 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 18:15:34 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 18:15:35 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 18:15:36 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:36 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:15:36 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:15:36 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:36 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 18:15:36 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:15:36 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:36 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 18:15:37 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:38 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 18:15:39 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:39 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 18:15:40 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:41 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:15:42 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:42 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:15:44 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:44 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:15:46 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:46 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:15:47 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:47 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:15:49 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:49 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerName ' ' is [Chaker Ben Said].
+2026-10-09 18:15:49 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:15:49 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:49 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerEmail ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:15:49 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:15:50 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:50 [main] INFO  ActionDriver - Value entered on ' Element with name ' phone ' ' is [+9758484812].
+2026-10-09 18:15:50 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:15:50 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:50 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' confirm-booking '
+2026-10-09 18:15:53 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:53 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:53 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:53 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:53 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:54 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:54 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:54 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:54 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:15:54 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 18:15:58 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 18:16:00 [main] INFO  TestListener - ===============================================
+2026-10-09 18:16:00 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 18:16:00 [main] INFO  TestListener - ===============================================
+2026-10-09 18:17:06 [main] INFO  TestListener - ================================================
+2026-10-09 18:17:06 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-10-09 18:17:06 [main] INFO  TestListener - ================================================
+2026-10-09 18:17:07 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-10-09 18:17:07 [main] WARN  Hooks - 🚀... Starting WebDriver For Cucumber BDD ...
+2026-10-09 18:17:07 [main] WARN  BaseClass - properties.config File Loaded successfully
+2026-10-09 18:17:07 [main] WARN  Hooks - properties.config File Loaded successfully
+2026-10-09 18:17:16 [main] INFO  Hooks - ChromeDriver Instance Initialized successfully For Cucumber On -------> {}Normal Mode
+2026-10-09 18:17:16 [main] INFO  ActionDriver - WebDriver Instance is created correctly and A Browser Opened and Maximized: ActionDriver
+2026-10-09 18:17:16 [main] WARN  Hooks - ActionDriver Instance Initialized successfully For Cucumber Methods BDD
+2026-10-09 18:17:18 [main] INFO  ActionDriver - Opening of page with url https://eventhub.rahulshettyacademy.com/login: 
+2026-10-09 18:17:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:19 [main] INFO  ActionDriver - Value entered on ' Element with name ' email ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:17:19 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:17:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:19 [main] INFO  ActionDriver - Value entered on ' Element with name ' password ' ' is [Q5n@j!i!QnZQmYm].
+2026-10-09 18:17:19 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:17:19 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:19 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' login-btn '
+2026-10-09 18:17:20 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:22 [main] INFO  ActionDriver - Clicked on element ----------------> : [Element with text ' Browse Events → ']
+2026-10-09 18:17:23 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:23 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' book-now-btn '
+2026-10-09 18:17:24 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:24 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:17:25 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:25 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:17:27 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:27 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:17:28 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:28 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:17:29 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:29 [main] INFO  ActionDriver - Clicked on element using JS : Element with text ' + '
+2026-10-09 18:17:31 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:31 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerName ' ' is [Chaker Ben Said].
+2026-10-09 18:17:31 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:17:32 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:32 [main] INFO  ActionDriver - Value entered on ' Element with name ' customerEmail ' ' is [bchaker28@yahoo.com].
+2026-10-09 18:17:32 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:17:32 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:32 [main] INFO  ActionDriver - Value entered on ' Element with name ' phone ' ' is [+9758484812].
+2026-10-09 18:17:32 [main] INFO  ActionDriver - Border reset on element !
+2026-10-09 18:17:32 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:32 [main] INFO  ActionDriver - Clicked on element using JS : Element with id ' confirm-booking '
+2026-10-09 18:17:34 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:34 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:34 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:34 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:34 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:34 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:34 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:34 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:34 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:34 [main] INFO  ActionDriver - Border applied on element with color ------> [green].
+2026-10-09 18:17:34 [main] WARN  Hooks - 
+ 🚀 Le Scenario Testé: User can book an event successfully Et le status : FAILED
+2026-10-09 18:17:36 [main] INFO  Hooks - 
+ 🚀... Closing WebDriver For Cucumber BDD...
+2026-10-09 18:17:37 [main] INFO  TestListener - ===============================================
+2026-10-09 18:17:37 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-10-09 18:17:37 [main] INFO  TestListener - ===============================================
