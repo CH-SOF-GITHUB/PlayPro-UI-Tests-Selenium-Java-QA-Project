@@ -1,5 +1,7 @@
 package Packt.LearnAutomationTestingwithJavaandSeleniumWebdriver.Classes;
 
+import java.util.Arrays;
+
 public class StudentRunner {
 
     public static void main(String[] args) {
@@ -24,5 +26,26 @@ public class StudentRunner {
 
         double average = ranga.getAverageMarks();
         System.out.println("average of marks : " + average);
+
+        System.out.println("\n");
+
+        ranga.addMark(35);
+        System.out.println(ranga.toString());
+        number = ranga.getNumberOfMarks();
+        System.out.println("number of marks again : " + number);
+
+        System.out.println("\n");
+
+        ranga.addMark(55);
+        System.out.println(ranga.toString());
+        number = ranga.getNumberOfMarks();
+        System.out.println("number of marks again : " + number);
+
+        System.out.println("\n");
+
+        ranga.removeMarkByIndex(3);
+        System.out.println(ranga.toString());
+        number = ranga.getNumberOfMarks();
+        System.out.println("number of marks after remove element : " + number);
     }
 }
