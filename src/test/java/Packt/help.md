@@ -1615,3 +1615,12 @@ jshell> /save /in28Minutes/git/java-a-course-for-beginners/9-ReferenceTypes/comm
 
 jshell> 
 
+# Collections
+Examples of List and ArrayList
+List of students = [Packt.LearnAutomationTestingwithJavaandSeleniumWebdriver.Collections.Student@7c53a9eb, Packt.LearnAutomationTestingwithJavaandSeleniumWebdriver.Collections.Student@ed17bee, Packt.LearnAutomationTestingwithJavaandSeleniumWebdriver.Collections.Student@2a33fae0]
+Array List of students = [Packt.LearnAutomationTestingwithJavaandSeleniumWebdriver.Collections.Student@7c53a9eb, Packt.LearnAutomationTestingwithJavaandSeleniumWebdriver.Collections.Student@ed17bee, Packt.LearnAutomationTestingwithJavaandSeleniumWebdriver.Collections.Student@2a33fae0]
+
+
+# Functional Programming
+// Foreach: simplement exécuter une action
+// Map, Filter: attend obligatoirement que vous retourniez une valeur modifiée pour l'élément suivant du flux.

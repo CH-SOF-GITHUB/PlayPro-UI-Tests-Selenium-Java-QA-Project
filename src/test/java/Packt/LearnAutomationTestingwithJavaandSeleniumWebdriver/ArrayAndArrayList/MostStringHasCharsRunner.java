@@ -6,6 +6,13 @@ public class MostStringHasCharsRunner {
         String[] daysOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
         System.out.println("Most day with Characters : " + mostDayWithCharacters(daysOfWeek));
+
+
+        // parcourir le table daysOfWeek
+        for (int i = daysOfWeek.length - 1; i >= 0; i--) {
+            System.out.print(" " + daysOfWeek[i]);
+        }
+
     }
 
     private static String mostDayWithCharacters(String[] daysOfWeek) {

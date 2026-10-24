@@ -2,13 +2,16 @@
   <dictionary name="project">
     <words>
       <w>ACTIVER</w>
+      <w>Accepter</w>
       <w>Appuie</w>
       <w>Appuyer</w>
       <w>Attemps</w>
       <w>Augmenté</w>
+      <w>Boni</w>
       <w>Collecter</w>
       <w>Convertir</w>
       <w>Copie</w>
+      <w>Couverture</w>
       <w>D'Souza</w>
       <w>Dropmenu</w>
       <w>Déplacer</w>
@@ -16,13 +19,18 @@
       <w>Envoie</w>
       <w>Génère</w>
       <w>Installe</w>
+      <w>Insère</w>
+      <w>Interdits</w>
       <w>L'instance</w>
       <w>Nettoyer</w>
+      <w>Nommage</w>
       <w>Obtenir</w>
       <w>PRENDRE</w>
       <w>Pilote</w>
+      <w>Pourquoi</w>
       <w>Puisque</w>
       <w>Quand</w>
+      <w>Récupère</w>
       <w>Stocke</w>
       <w>Unformated</w>
       <w>Unsucessful</w>
@@ -30,39 +38,62 @@
       <w>ZEPPUW</w>
       <w>actuellement</w>
       <w>addbutton</w>
+      <w>appels</w>
+      <w>appropriée</w>
       <w>atteindre</w>
       <w>attemps</w>
+      <w>attendus</w>
+      <w>aucune</w>
       <w>automatique</w>
       <w>autour</w>
+      <w>ayant</w>
       <w>bien</w>
       <w>booléen</w>
       <w>brut</w>
+      <w>caractére</w>
+      <w>caractéres</w>
+      <w>chaine</w>
       <w>chaker</w>
       <w>classique</w>
+      <w>commentaires</w>
+      <w>communiquer</w>
       <w>compatibilité</w>
       <w>contexte</w>
+      <w>contrôler</w>
       <w>conçu</w>
+      <w>critère</w>
+      <w>crée</w>
       <w>créé</w>
+      <w>créées</w>
       <w>d'abord</w>
+      <w>d'accents</w>
+      <w>d'acceptation</w>
       <w>d'auvergne</w>
       <w>d'avertissement</w>
       <w>d'avoir</w>
       <w>d'envoyer</w>
       <w>d'instanciation</w>
+      <w>d'interaction</w>
+      <w>d'occurences</w>
       <w>d'étape</w>
       <w>dans</w>
+      <w>destructifs</w>
       <w>devront</w>
       <w>différer</w>
+      <w>disponibilité</w>
       <w>ducati</w>
       <w>défini</w>
       <w>démarrage</w>
       <w>démarre</w>
       <w>désormais</w>
       <w>détaillés</w>
+      <w>encapsulée</w>
       <w>enfin</w>
       <w>enregistré</w>
       <w>entourés</w>
       <w>envoyer</w>
+      <w>exactement</w>
+      <w>exclu</w>
       <w>faciliter</w>
       <w>focalisé</w>
       <w>fournisseur</w>
@@ -74,7 +105,9 @@
       <w>instancie</w>
       <w>intermédiaire</w>
       <w>jdbc</w>
+      <w>l'API</w>
       <w>l'ActionDriver</w>
+      <w>l'alerte</w>
       <w>l'artefact</w>
       <w>l'email</w>
       <w>l'intérieur</w>
@@ -89,32 +122,48 @@
       <w>loggr</w>
       <w>membres</w>
       <w>modifiant</w>
+      <w>modifie</w>
+      <w>moins</w>
+      <w>mylist</w>
       <w>nettoyée</w>
+      <w>nommées</w>
       <w>nullité</w>
       <w>nullpointer</w>
+      <w>occurances</w>
       <w>ouvres</w>
       <w>paramètre</w>
+      <w>parcourir</w>
       <w>partagent</w>
+      <w>partir</w>
+      <w>pilote</w>
+      <w>portée</w>
       <w>pouvant</w>
       <w>propriétés</w>
       <w>qualid</w>
+      <w>quand</w>
       <w>ranga</w>
       <w>receveur</w>
       <w>recevoir</w>
+      <w>relancer</w>
       <w>remplacer</w>
       <w>reçu</w>
       <w>réutilisé</w>
+      <w>s'il</w>
       <w>s'ouvrir</w>
       <w>sampletodotext</w>
       <w>selon</w>
       <w>serveur</w>
       <w>simplifiée</w>
       <w>stepcontext</w>
+      <w>suffixe</w>
       <w>supprimant</w>
+      <w>séparément</w>
       <w>temurin</w>
+      <w>tolérés</w>
       <w>transmettre</w>
       <w>transmis</w>
       <w>travailler</w>
+      <w>télécharge</w>
       <w>valider</w>
       <w>verte</w>
       <w>vient</w>
