@@ -8,7 +8,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

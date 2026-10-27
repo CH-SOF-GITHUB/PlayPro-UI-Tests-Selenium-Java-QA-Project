@@ -1,6 +1,4 @@
 package com.qa.tests.PlayPro.BackOfficeV3.Planning;
-
-
 import com.qa.configuration.LTConfig;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -42,7 +40,6 @@ public class TC01 extends LTConfig {
             e.getStackTrace();
         }
     }
-
 
     @Test(priority = 1)
     public void CheckPlanning01() {

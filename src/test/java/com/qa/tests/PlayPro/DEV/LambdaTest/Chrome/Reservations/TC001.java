@@ -1,5 +1,4 @@
 package com.qa.tests.PlayPro.DEV.LambdaTest.Chrome.Reservations;
-
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -37,7 +36,6 @@ public class TC001 extends LoggedBaseTest {
     public void step3() throws InterruptedException {
         webReservationPage.clickRéserverLink();
     }
-
 
     @Test
     @Epic("Web Interface")

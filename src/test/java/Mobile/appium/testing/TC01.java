@@ -1,5 +1,4 @@
 package Mobile.appium.testing;
-
 import Mobile.appium.Base;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -8,7 +7,6 @@ import org.testng.annotations.Test;
 
 
 public class TC01 extends Base {
-
 
     @Test(groups = {"smoke"})
     public void SampleValidLogin() throws InterruptedException {

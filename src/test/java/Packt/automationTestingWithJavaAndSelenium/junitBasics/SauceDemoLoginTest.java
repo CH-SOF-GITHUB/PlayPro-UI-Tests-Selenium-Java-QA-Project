@@ -1,12 +1,10 @@
 package Packt.automationTestingWithJavaAndSelenium.junitBasics;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 import org.junit.rules.TestName;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.qa.utilities.TakeCapture;
-
 import java.io.IOException;
 import java.time.Duration;
 

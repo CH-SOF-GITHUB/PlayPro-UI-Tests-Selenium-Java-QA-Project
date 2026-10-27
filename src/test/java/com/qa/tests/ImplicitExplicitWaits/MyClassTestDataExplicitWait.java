@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.*;
-
 import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;

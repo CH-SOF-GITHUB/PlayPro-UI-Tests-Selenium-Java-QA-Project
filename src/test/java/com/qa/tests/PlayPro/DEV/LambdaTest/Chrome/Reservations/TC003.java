@@ -1,5 +1,4 @@
 package com.qa.tests.PlayPro.DEV.LambdaTest.Chrome.Reservations;
-
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -82,7 +81,6 @@ public class TC003 extends LoggedBaseTest {
         String ActualMessage = webReservationPage.getOrderConfirmationMessage();
         Assert.assertEquals(ActualMessage, ExpectedMessage);
     }
-
 
     @Test
     @Epic("Web Interface")

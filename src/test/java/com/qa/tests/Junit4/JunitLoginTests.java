@@ -1,5 +1,4 @@
 package com.qa.tests.Junit4;
-
 import com.qa.factory.PCloudyDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
@@ -8,14 +7,13 @@ import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
 import org.openqa.selenium.*;
 import org.qa.utilities.TakeCapture;
-
 import java.io.IOException;
 import java.time.Duration;
+import io.testomat.core.annotation.TestId;
 
-public class JunitTests {
+public class JunitLoginTests {
     // base URL
     private static final String URL_LOGIN = "https://www.saucedemo.com/";
-
     // Locators
     private static final By CHAMP_USERNAME = By.id("user-name");
     private static final By CHAMP_PASSWORD = By.id("password");
@@ -69,6 +67,7 @@ public class JunitTests {
     }
 
     // Test Case 01 - successful login
+    @TestId("275866f6")
     @Ignore
     @Test
     public void testValidLogin() throws InterruptedException {
@@ -91,6 +90,7 @@ public class JunitTests {
     }
 
     // Test Case 02 - Empty Username
+    @TestId("9bf972bd")
     @Ignore
     @Test
     public void testEmptyUsername() {
@@ -108,6 +108,7 @@ public class JunitTests {
     }
 
     // Test Case 03 - Empty Password
+    @TestId("cd7b864d")
     @Ignore
     @Test
     public void testEmptyPassword() {
@@ -125,6 +126,7 @@ public class JunitTests {
     }
 
     // Test Case 04 - Username invalide
+    @TestId("b63050b8")
     @Ignore
     @Test
     public void testInvalidUsername() {
@@ -142,6 +144,7 @@ public class JunitTests {
     }
 
     // Test Case 05 - Password invalide
+    @TestId("d2006295")
     @Ignore
     @Test
     public void testInvalidPassword() {
@@ -159,6 +162,7 @@ public class JunitTests {
     }
 
     // Test Case 06 - Empty Username and Password
+    @TestId("e98e59a5")
     @Ignore
     @Test
     public void testEmptyCredentials() {

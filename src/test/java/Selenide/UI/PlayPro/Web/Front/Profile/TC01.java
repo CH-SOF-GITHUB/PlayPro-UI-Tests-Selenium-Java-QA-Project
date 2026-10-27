@@ -1,12 +1,10 @@
 package Selenide.UI.PlayPro.Web.Front.Profile;
-
 import Selenide.Base;
 import Selenide.UI.PlayPro.Web.Front.Pages.CookiePage;
 import Selenide.UI.PlayPro.Web.Front.Pages.LoginPage;
 import Selenide.UI.PlayPro.Web.Front.Pages.UserProfilePage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
 

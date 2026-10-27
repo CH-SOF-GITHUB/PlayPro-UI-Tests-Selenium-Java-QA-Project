@@ -1,7 +1,6 @@
 package com.qa.e2e.orangeHRM;
 
 import org.qa.base.BaseClass;
-import org.qa.dataprovider.DataProviders;
 import org.qa.pages.orangeHRM.HomePage;
 import org.qa.pages.orangeHRM.LoginPage;
 import org.qa.utilities.ExtentManager;

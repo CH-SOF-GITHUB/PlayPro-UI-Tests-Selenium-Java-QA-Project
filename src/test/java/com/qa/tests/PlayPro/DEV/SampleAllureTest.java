@@ -1,8 +1,6 @@
 package com.qa.tests.PlayPro.DEV;
-
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;

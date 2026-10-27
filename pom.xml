@@ -24,6 +24,8 @@
         <allure.version>2.29.0</allure.version>
         <!-- Define the version of AspectJ for the functionality of @Step and @Attachment annotations -->
         <aspectj.version>1.9.22</aspectj.version>
+        <surefire.version>3.3.0</surefire.version>
+        <surefire.provider>surefire-testng</surefire.provider>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -325,6 +327,12 @@
             <artifactId>rest-assured</artifactId>
             <version>5.5.6</version>
         </dependency>
+        <!-- Testomat.io Install Reporter Junit -->
+        <dependency>
+            <groupId>io.testomat</groupId>
+            <artifactId>java-reporter-junit</artifactId>
+            <version>0.19.0</version>
+        </dependency>
     </dependencies>
     <profiles>
         <profile>
@@ -333,71 +341,74 @@
                 <cucumber.filter.tags>@dev</cucumber.filter.tags>
             </properties>
         </profile>
+        <profile>
+            <id>junit4</id>
+            <properties>
+                <!-- Remplace le provider TestNG par le provider JUnit 4 -->
+                <surefire.provider>surefire-junit4</surefire.provider>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <!-- Ignore testng.xml : inutile avec JUnit 4 -->
+                            <suiteXmlFiles combine.self="override"/>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven
 			defaults (may be moved to parent pom) -->
             <plugins>
-                <!-- clean lifecycle, see
-                https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
                 <plugin>
                     <artifactId>maven-clean-plugin</artifactId>
                     <version>3.4.0</version>
                 </plugin>
-                <!-- default lifecycle, jar packaging: see
-                https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
-                <!-- Copie les fichiers de configuration, de propriétés et les fichiers Excel de test vers le dossier final de build -->
                 <plugin>
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>3.3.1</version>
                 </plugin>
-                <!-- Compile le code source Java (.java) en fichiers de classes exécutables (.class) -->
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.13.0</version>
                 </plugin>
-                <!-- console: mvn test - Pilote l'exécution automatique de vos scénarios de test Selenium en lisant votre suite de tests TestNG -->
+                <!-- mvn test : TestNG par defaut, JUnit 4 avec -Pjunit4 -->
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.3.0</version>
+                    <version>${surefire.version}</version>
                     <configuration>
                         <suiteXmlFiles>
-                            <!-- Specify the location of your testng.xml file -->
                             <suiteXmlFile>src/test/resources/xml/testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
                     <dependencies>
-                        <!--Source: https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-testng-->
                         <dependency>
                             <groupId>org.apache.maven.surefire</groupId>
-                            <artifactId>surefire-testng</artifactId>
-                            <version>3.2.5</version>
+                            <artifactId>${surefire.provider}</artifactId>
+                            <version>${surefire.version}</version>
                         </dependency>
                     </dependencies>
                 </plugin>
-                <!-- Emballe le code compilé de votre projet d'automatisation dans une archive de fichier .jar exploitable -->
                 <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>3.4.2</version>
                 </plugin>
-                <!-- Installe le fichier .jar généré dans votre bibliothèque locale .m2 pour être réutilisé sur votre machine -->
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
                     <version>3.1.2</version>
                 </plugin>
-                <!-- Envoie l'artefact final vers un serveur de stockage distant partagé avec votre infrastructure ou votre équipe -->
                 <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>3.1.2</version>
                 </plugin>
-                <!-- site lifecycle, see
-                https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
-                <!-- Génère un site web de documentation statique pour présenter la structure et l'état global du projet -->
                 <plugin>
                     <artifactId>maven-site-plugin</artifactId>
                     <version>3.12.1</version>
                 </plugin>
-                <!-- Crée des rapports détaillés sur les informations du projet (liste des dépendances, plugins utilisés, etc.) pour le site web de documentation -->
                 <plugin>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
                     <version>3.6.1</version>

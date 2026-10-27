@@ -7,7 +7,6 @@ import org.qa.utilities.ExtentManager;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import static org.qa.utilities.LTStatus.addLambdaStepContext;
 
 public class LoginTests6 extends BaseClass {
@@ -20,7 +19,6 @@ public class LoginTests6 extends BaseClass {
         loginPage = new LoginPage(getDriver());
         myAccountPage = new MyAccountPage(getDriver());
     }
-
 
     @Test(priority = 1, description = "TC_LF_018", suiteName = "(TS_002) - Login Functionality")
     public void verifyLoggingAfterChangePwd() {

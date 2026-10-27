@@ -23,11 +23,11 @@ public class PCloudyDriverFactory {
         pcloudyOptions.put("osVersion", "11");
         pcloudyOptions.put("browserVersion", "155");
         pcloudyOptions.put("clientName", "Chaker Ben Said");
-        pcloudyOptions.put("vmId", "7c:ed:8d:28:0b:6d");
+        pcloudyOptions.put("vmId", "7c:ed:8d:cc:11:8a");
         pcloudyOptions.put("seleniumVersion", "4.26.0");
-        pcloudyOptions.put("project", "SauceDemo_Login_Regression_v1.1");
-        pcloudyOptions.put("build", "SauceDemoLoginTest_Build_02");
-        pcloudyOptions.put("name", "JunitTestEmptyCredentials");
+        pcloudyOptions.put("project", "SauceDemo_Login_Regression_v1.2");
+        pcloudyOptions.put("build", "SauceDemoLoginTest_Build_03");
+        pcloudyOptions.put("name", "JunitTestEachProductHasNonEmptyTitle");
         pcloudyOptions.put("tag", "saucedemo");
         pcloudyOptions.put("local", false);
         pcloudyOptions.put("pCloudy_EnableVideo", true);

@@ -5,13 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.qa.base.BaseClass;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import static org.qa.utilities.LTStatus.addLambdaStepContext;
 
 public class LoginTests3 extends BaseClass {
     // private RemoteWebDriver driver;
     // private String Status = "failed";
-
 
     @Test
     public void basicTest() throws InterruptedException {

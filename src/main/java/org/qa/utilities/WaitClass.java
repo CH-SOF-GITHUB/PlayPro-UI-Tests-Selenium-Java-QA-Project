@@ -12,7 +12,20 @@ import org.testng.Assert;
 import java.time.Duration;
 import java.util.function.Function;
 
-public class FluentwaitDemo {
+public class WaitClass {
+
+    public WaitClass() {
+    }
+
+    public void sleep(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000L);
+        } catch (InterruptedException e) {
+            e.fillInStackTrace();
+        }
+    }
+
+
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();

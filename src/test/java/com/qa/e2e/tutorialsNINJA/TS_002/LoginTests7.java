@@ -9,9 +9,7 @@ import org.qa.utilities.ExtentManager;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import java.util.Arrays;
-
 import static org.qa.utilities.LTStatus.addLambdaStepContext;
 
 public class LoginTests7 extends BaseClass {

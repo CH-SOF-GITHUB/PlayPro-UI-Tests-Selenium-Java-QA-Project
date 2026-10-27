@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 public class DummyClass extends BaseClass {
 
-
     @Test
     public void dummyTest() {
         // Lunch the test with Extent Report

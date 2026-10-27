@@ -6,7 +6,6 @@ import org.qa.utilities.ExtentManager;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import static org.qa.utilities.LTStatus.addLambdaStepContext;
 
 public class LoginTests5 extends BaseClass {
@@ -91,7 +90,6 @@ public class LoginTests5 extends BaseClass {
             e.fillInStackTrace();
         }
     }
-
 
     @Test(priority = 4, description = "TC_LF_012", suiteName = "(TS_002) - Login Functionality")
     public void verifyLogoutByBrowserBackAndLoadPage() {

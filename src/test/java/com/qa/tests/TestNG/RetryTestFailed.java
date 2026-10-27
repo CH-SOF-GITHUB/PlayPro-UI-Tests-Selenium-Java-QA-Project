@@ -1,6 +1,5 @@
 package com.qa.tests.TestNG;
 
-import org.qa.utilities.RetryAnalyser;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;

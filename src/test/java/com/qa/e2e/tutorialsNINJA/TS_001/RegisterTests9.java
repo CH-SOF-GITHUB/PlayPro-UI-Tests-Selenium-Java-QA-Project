@@ -15,7 +15,6 @@ public class RegisterTests9 extends BaseClass {
         registerPage = new RegisterPage(getDriver());
     }
 
-
     @Test(description = "TC_RF_012", suiteName = "(TS_001) - Register Functionality")
     public void verifyRegistrationUsingKeyTabs() {
 

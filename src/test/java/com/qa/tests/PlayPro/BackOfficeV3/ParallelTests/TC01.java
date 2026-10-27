@@ -1,5 +1,4 @@
 package com.qa.tests.PlayPro.BackOfficeV3.ParallelTests;
-
 import org.qa.constants.Priority;
 import com.qa.configuration.LTConfigParallelTest;
 import org.openqa.selenium.By;
@@ -9,7 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
 import java.time.Duration;
 
 public class TC01 extends LTConfigParallelTest {
@@ -74,7 +72,6 @@ public class TC01 extends LTConfigParallelTest {
         // wait for 2 s
         Thread.sleep(2000);
     }
-
 
     @Test(priority = Priority.P4, dependsOnMethods = {"FilterBookingBySevenJ"})
     public void GetFiltresDefaultValue() {

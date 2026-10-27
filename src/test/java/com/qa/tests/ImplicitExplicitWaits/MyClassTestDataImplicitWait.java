@@ -1,11 +1,9 @@
 package com.qa.tests.ImplicitExplicitWaits;
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.*;
-
 import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;

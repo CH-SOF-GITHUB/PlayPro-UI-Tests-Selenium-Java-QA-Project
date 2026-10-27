@@ -8,7 +8,6 @@ import java.util.List;
 
 public class RunFailedTestCases {
 
-
     @Test
     public void myFailedMethod() {
         // create an instance of TestNG

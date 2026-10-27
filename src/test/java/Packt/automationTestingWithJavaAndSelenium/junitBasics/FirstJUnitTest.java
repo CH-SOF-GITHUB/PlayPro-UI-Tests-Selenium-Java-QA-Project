@@ -1,7 +1,5 @@
 package Packt.automationTestingWithJavaAndSelenium.junitBasics;
-
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 class SimpleClass {
@@ -80,7 +78,6 @@ public class FirstJUnitTest {
 
 	@Test
 	public void testFor5Elements() {
-
 		//Execute the Code
 		SimpleClass simpleClass = new SimpleClass();
 

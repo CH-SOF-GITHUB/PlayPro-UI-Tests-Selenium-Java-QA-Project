@@ -1,5 +1,4 @@
 package com.qa.tests.PlayPro.DEV.LambdaTest.Edge.Reservations;
-
 import com.qa.configuration.LTConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -9,7 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
-
 import java.time.Duration;
 
 public class TC01 extends LTConfig {

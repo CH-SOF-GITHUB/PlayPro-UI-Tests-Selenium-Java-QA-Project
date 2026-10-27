@@ -4,8 +4,6 @@ import io.restassured.response.Response;
 import org.qa.base.BaseClass;
 import org.qa.utilities.ApiUtility;
 import org.qa.utilities.ExtentManager;
-import org.qa.utilities.RetryAnalyser;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 

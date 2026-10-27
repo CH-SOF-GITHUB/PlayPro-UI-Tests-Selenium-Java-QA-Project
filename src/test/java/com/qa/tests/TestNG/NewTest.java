@@ -1,6 +1,4 @@
 package com.qa.tests.TestNG;
-
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
@@ -46,7 +44,6 @@ public class NewTest {
     public void y() {
         System.out.println("Inside method Y");
     }
-
 
     //@AfterSuite: The annotation method will be run after all tests in this suite have run.
     @AfterSuite
