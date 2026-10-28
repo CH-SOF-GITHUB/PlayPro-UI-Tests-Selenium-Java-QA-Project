@@ -86,9 +86,10 @@ public class JunitInventoryTests1 {
 
     // ---------- Scenario 1 : affichage global et integrite des elements ----------
     //TC07
-    @TestId("043d1f7a")
     @Test
     public void testEachProductHasButtonAddToCart() {
+        // @T043d1f7a
+
         List<WebElement> products = driver.findElements(PRODUCTS_CARDS);
         Assert.assertFalse(products.isEmpty(), "No Products are displayed ! ");
         for (WebElement product : products) {
