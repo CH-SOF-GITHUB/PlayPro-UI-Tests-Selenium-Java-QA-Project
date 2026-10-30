@@ -1,4 +1,4 @@
-package com.qa.e2e.PlayPro.DEV.LambdaTest.Chrome.Navigation;
+package com.qa.applications.PlayPro.DEV.LambdaTest.Chrome.Navigation;
 
 import io.qameta.allure.*;
 import org.apache.commons.io.FileUtils;

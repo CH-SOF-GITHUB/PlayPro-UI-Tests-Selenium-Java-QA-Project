@@ -1,4 +1,4 @@
-package com.qa.e2e.PlayPro.DEV.LambdaTest.Chrome.DragAndDrop;
+package com.qa.applications.PlayPro.DEV.LambdaTest.Chrome.DragAndDrop;
 
 import io.qameta.allure.*;
 import org.apache.commons.io.FileUtils;

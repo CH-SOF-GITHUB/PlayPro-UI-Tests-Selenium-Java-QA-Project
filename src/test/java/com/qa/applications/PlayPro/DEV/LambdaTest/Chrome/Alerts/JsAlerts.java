@@ -1,4 +1,4 @@
-package com.qa.e2e.PlayPro.DEV.LambdaTest.Chrome.Alerts;
+package com.qa.applications.PlayPro.DEV.LambdaTest.Chrome.Alerts;
 import io.qameta.allure.*;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;

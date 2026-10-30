@@ -1,7 +1,6 @@
-package com.qa.e2e.PlayPro.DEV.LambdaTest.SafariMAC.Reservations;
-
+package com.qa.applications.PlayPro.DEV.LambdaTest.SafariMAC.Reservations;
+import com.qa.factory.LTConfig;
 import org.qa.constants.Priority;
-import com.qa.configuration.LTConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;

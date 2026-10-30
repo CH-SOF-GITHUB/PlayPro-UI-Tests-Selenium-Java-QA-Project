@@ -1,23 +1,19 @@
-package com.qa.tests.Junit4;
-import com.qa.factory.PCloudyDriverFactory;
-import io.github.bonigarcia.wdm.WebDriverManager;
+package com.qa.tests.JUnit4;
+
+import com.qa.tests.AbstractJunit4ChromeWebDriverTest;
 import org.junit.*;
 import org.junit.rules.TestName;
-import org.junit.rules.TestWatcher;
-import org.junit.runner.Description;
 import org.openqa.selenium.*;
-import org.qa.utilities.TakeCapture;
-import java.io.IOException;
-import java.time.Duration;
+import org.qa.pages.SwagLabs.SwagLabsActionPage;
 import io.testomat.core.annotation.TestId;
 
-public class JunitLoginTests {
+
+public class Junit4LoginTests extends AbstractJunit4ChromeWebDriverTest {
     // base URL
     private static final String URL_LOGIN = "https://www.saucedemo.com/";
     // Locators
     private static final By CHAMP_USERNAME = By.id("user-name");
     private static final By CHAMP_PASSWORD = By.id("password");
-    private static final By BOUTON_LOGIN = By.id("login-button");
     private static final By MESSAGE_ERREUR = By.cssSelector("[data-test='error']");
     private static final By LISTE_PRODUITS = By.className("inventory_list");
 
@@ -30,47 +26,31 @@ public class JunitLoginTests {
     private static final String ERREUR_PASSWORD_REQUIS = "Epic sadface: Password is required";
     private static final String ERREUR_IDENTIFIANTS_INVALIDES = "Epic sadface: Username and password do not match any user in this service";
 
-    // Define Web driver object With PCloudy Driver Factory
-    private WebDriver driver;
-    PCloudyDriverFactory pCloudyDriverFactory;
+    // create an instance of POM pages
+    private SwagLabsActionPage swagLabsActionPage;
 
-    // Add an instance of TakeCapture class
-    TakeCapture capture;
+    @Before
+    public void setupPages() {
+        swagLabsActionPage = new SwagLabsActionPage(driver);
+    }
 
     @Rule
     public TestName testName = new TestName();
 
-    private boolean testPassed = true;
+    //private boolean testPassed = true;
 
-    @Rule
-    public TestWatcher watcher = new TestWatcher() {
-        @Override
-        protected void failed(Throwable e, Description description) {
-            testPassed = false;
-        }
-    };
-
-    // Setup Tests
-    @Before
-    public void setUp() {
-        System.out.println("Starting Test Automation Pcloudy...");
-        try {
-            WebDriverManager.getInstance().setup();
-            pCloudyDriverFactory = new PCloudyDriverFactory();
-            driver = pCloudyDriverFactory.createPcloudyDriver();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-            driver.manage().window().maximize();
-            capture = new TakeCapture(driver);
-        } catch (WebDriverException e) {
-            throw new WebDriverException("Web Driver not Initialized: " + e.getMessage());
-        }
-    }
+    //@Rule
+    //public TestWatcher watcher = new TestWatcher() {
+    //    @Override
+    //    protected void failed(Throwable e, Description description) {
+    //        testPassed = false;
+    //    }
+    //};
 
     // Test Case 01 - successful login
-    @TestId("275866f6")
-    @Ignore
+    @TestId("8b2a32fe")
     @Test
-    public void testValidLogin() throws InterruptedException {
+    public void testWithValidLogin() throws InterruptedException {
         driver.get(URL_LOGIN);
         driver.findElement(CHAMP_USERNAME).click();
         driver.findElement(CHAMP_USERNAME).clear();
@@ -81,17 +61,16 @@ public class JunitLoginTests {
         // sleep 3s to load page
         Thread.sleep(3000);
         // Assertion 1
-        String actualUrl = getCurrentURL();
+        String actualUrl = driver.getCurrentUrl();
         boolean isUrl = actualUrl.contains("/inventory.html");
         Assert.assertTrue(isUrl);
         // Assertion 2
-        boolean isProdsList = isElementDisplayed(LISTE_PRODUITS);
+        boolean isProdsList = swagLabsActionPage.isElementDisplayed(LISTE_PRODUITS);
         Assert.assertTrue(isProdsList);
     }
 
     // Test Case 02 - Empty Username
-    @TestId("9bf972bd")
-    @Ignore
+    @TestId("53dfe69d")
     @Test
     public void testEmptyUsername() {
         driver.get(URL_LOGIN);
@@ -102,14 +81,13 @@ public class JunitLoginTests {
         driver.findElement(CHAMP_PASSWORD).sendKeys(PASSWORD_VALIDE);
         driver.findElement(CHAMP_PASSWORD).sendKeys(Keys.ENTER);
         // Assertions
-        String errorMsg = getElementText(MESSAGE_ERREUR);
+        String errorMsg = swagLabsActionPage.getElementText(MESSAGE_ERREUR);
         boolean isErrorMsg = errorMsg.equals(ERREUR_USERNAME_REQUIS);
         Assert.assertTrue(isErrorMsg);
     }
 
     // Test Case 03 - Empty Password
-    @TestId("cd7b864d")
-    @Ignore
+    @TestId("e937d375")
     @Test
     public void testEmptyPassword() {
         driver.get(URL_LOGIN);
@@ -120,14 +98,13 @@ public class JunitLoginTests {
         driver.findElement(CHAMP_PASSWORD).sendKeys("");
         driver.findElement(CHAMP_PASSWORD).sendKeys(Keys.ENTER);
         // Assertions
-        String errorMsg = getElementText(MESSAGE_ERREUR);
+        String errorMsg = swagLabsActionPage.getElementText(MESSAGE_ERREUR);
         boolean isErrorMsg = errorMsg.equals(ERREUR_PASSWORD_REQUIS);
         Assert.assertTrue(isErrorMsg);
     }
 
     // Test Case 04 - Username invalide
-    @TestId("b63050b8")
-    @Ignore
+    @TestId("e760af30")
     @Test
     public void testInvalidUsername() {
         driver.get(URL_LOGIN);
@@ -138,14 +115,13 @@ public class JunitLoginTests {
         driver.findElement(CHAMP_PASSWORD).sendKeys(PASSWORD_VALIDE);
         driver.findElement(CHAMP_PASSWORD).sendKeys(Keys.ENTER);
         // Assertions
-        String errorMsg = getElementText(MESSAGE_ERREUR);
+        String errorMsg = swagLabsActionPage.getElementText(MESSAGE_ERREUR);
         boolean isErrorMsg = errorMsg.equals(ERREUR_IDENTIFIANTS_INVALIDES);
         Assert.assertTrue(isErrorMsg);
     }
 
     // Test Case 05 - Password invalide
-    @TestId("d2006295")
-    @Ignore
+    @TestId("b864769e")
     @Test
     public void testInvalidPassword() {
         driver.get(URL_LOGIN);
@@ -156,14 +132,13 @@ public class JunitLoginTests {
         driver.findElement(CHAMP_PASSWORD).sendKeys(PASSWORD_INVALIDE);
         driver.findElement(CHAMP_PASSWORD).sendKeys(Keys.ENTER);
         // Assertions
-        String errorMsg = getElementText(MESSAGE_ERREUR);
+        String errorMsg = swagLabsActionPage.getElementText(MESSAGE_ERREUR);
         boolean isErrorMsg = errorMsg.equals(ERREUR_IDENTIFIANTS_INVALIDES);
         Assert.assertTrue(isErrorMsg);
     }
 
     // Test Case 06 - Empty Username and Password
-    @TestId("e98e59a5")
-    @Ignore
+    @TestId("c29c0b5f")
     @Test
     public void testEmptyCredentials() {
         driver.get(URL_LOGIN);
@@ -174,48 +149,9 @@ public class JunitLoginTests {
         driver.findElement(CHAMP_PASSWORD).sendKeys("");
         driver.findElement(CHAMP_PASSWORD).sendKeys(Keys.ENTER);
         // Assertions
-        String errorMsg = getElementText(MESSAGE_ERREUR);
+        String errorMsg = swagLabsActionPage.getElementText(MESSAGE_ERREUR);
         boolean isErrorMsg = errorMsg.equals(ERREUR_USERNAME_REQUIS);
         Assert.assertTrue(isErrorMsg);
     }
 
-    // tearDown Tests
-    @After
-    public void tearDown() throws IOException {
-        if (driver != null) {
-            try {
-                System.out.println("I'm Executed");
-                ((JavascriptExecutor) driver)
-                        .executeScript("pCloudy_setResult", testPassed ? "pass" : "fail");
-                capture.takeScreenshot(testName.getMethodName());
-            } finally {
-                driver.quit();
-            }
-        }
-    }
-
-    // Actions
-    public boolean isElementDisplayed(By by) {
-        try {
-            return driver.findElement(by).isDisplayed();
-        } catch (NoSuchElementException e) {
-            throw new NoSuchElementException("No such element : " + e.getMessage());
-        }
-    }
-
-    public String getCurrentURL() {
-        try {
-            return driver.getCurrentUrl();
-        } catch (Exception e) {
-            throw new NoSuchSessionException("Cannot retrieve current URL : " + e.getMessage());
-        }
-    }
-
-    public String getElementText(By by) {
-        try {
-            return driver.findElement(by).getText();
-        } catch (NoSuchElementException e) {
-            throw new NoSuchElementException("cannot get Text of this element:  " + e.getMessage());
-        }
-    }
 }

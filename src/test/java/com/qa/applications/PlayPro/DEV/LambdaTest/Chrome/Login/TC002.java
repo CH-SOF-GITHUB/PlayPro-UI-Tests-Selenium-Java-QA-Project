@@ -1,4 +1,4 @@
-package com.qa.e2e.PlayPro.DEV.LambdaTest.Chrome.Login;
+package com.qa.applications.PlayPro.DEV.LambdaTest.Chrome.Login;
 
 import org.qa.pages.PlayProV3.WebLoginPage;
 import com.qa.BaseTest;

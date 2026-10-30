@@ -1,4 +1,4 @@
-package com.qa.e2e.PlayPro.DEV;
+package com.qa.applications.PlayPro.DEV;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
 import java.io.IOException;

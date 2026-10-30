@@ -26,6 +26,8 @@
         <aspectj.version>1.9.22</aspectj.version>
         <surefire.version>3.3.0</surefire.version>
         <surefire.provider>surefire-testng</surefire.provider>
+        <!-- override the AssertJ version -->
+        <assertj.version>3.27.7</assertj.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -117,62 +119,47 @@
             <version>5.0.0</version>
             <scope>test</scope>
         </dependency>
-        <!-- junit dependencies -->
+        <!-- Assertions versions & dependencies to your pom.xml -->
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.27.7</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- ******** ******** JUNIT dependencies ******* ******* -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.7.0</version>
+            <version>5.14.4</version> <!-- Use the latest version -->
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.7.0</version>
+            <version>5.14.4</version> <!-- Use the latest version -->
             <scope>test</scope>
-        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        </dependency>
+        <!-- JUnit Platform Launcher -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
+            <version>1.14.4</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- ******** ******** testng dependencies ******* ******* -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.11.0</version>
             <scope>compile</scope>
         </dependency>
-        <!-- BONUS ISSUE IN YOUR LOGS Circle CI ... -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.30</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>1.3.1</version>
-        </dependency>
-        <!-- Log4j2 API & Core Engine-->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>2.23.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.23.1</version>
-        </dependency>
-        <!-- SLF4J Bridge (Required because your project uses slf4j dependencies) -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>2.23.1</version>
-        </dependency>
-        <!-- selenium dependencies-->
+        <!-- ******** ******** selenium dependencies ******* ******* -->
         <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -192,7 +179,27 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- selenide dependencies -->
+        <!-- WebDriverManager (Third-party library) -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.4.0</version>
+        </dependency>
+        <!-- Source: https://mvnrepository.com/artifact/io.github.bonigarcia/selenium-jupiter -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>selenium-jupiter</artifactId>
+            <version>6.3.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Source: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v155 -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-devtools-v155</artifactId>
+            <version>4.51.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <!--    ******** ******* selenide dependencies ********* ********  -->
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
@@ -215,6 +222,97 @@
             <artifactId>selenide-video-recorder</artifactId>
             <version>7.16.1</version>
             <scope>test</scope>
+        </dependency>
+        <!-- ========================================== -->
+        <!--           CONFIGURATION DES LOGS           -->
+        <!-- ========================================== -->
+        <!-- SLF4J API : Fournit l'interface de journalisation universelle utilisée par Selenium et WebDriverManager -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Log4j2 API : Définit les interfaces et classes de base pour l'écriture des messages de log -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+        <!-- Log4j2 Core : Le moteur d'exécution qui gère le traitement, le formatage et le stockage des logs -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+        <!-- Log4j SLF4J Bridge : Fait la passerelle pour rediriger tous les logs de SLF4J (utilisé par Selenium) vers Log4j2 -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+        <!-- ========================================== -->
+        <!--          APACHE COMMONS UTILITIES          -->
+        <!-- ========================================== -->
+        <!-- Commons Lang : Fournit des fonctions utilitaires avancées pour manipuler les chaînes, objets et types Java -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.20.0</version>
+            <scope>runtime</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.findbugs</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- Commons Logging : API légère d'abstraction des logs utilisée en arrière-plan par diverses bibliothèques -->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+        <!-- Commons IO : Simplifie grandement la manipulation des fichiers, des flux et la gestion des screenshots en QA -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.18.0</version>
+        </dependency>
+        <!-- Source: https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.9</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- DataBASE Testing in Selenium Framework -->
+        <!-- Source: https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.1.0</version>
+        </dependency>
+        <!-- API Testing in Selenium Framework -->
+        <!-- Source: https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.5.6</version>
+        </dependency>
+        <!-- Incorporating Self-Healing AI Frameworks -->
+        <!-- Source: https://mvnrepository.com/artifact/com.epam.healenium/healenium-web -->
+        <dependency>
+            <groupId>com.epam.healenium</groupId>
+            <artifactId>healenium-web</artifactId>
+            <version>3.6.0</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Testomat.io Install Reporter Junit -->
+        <dependency>
+            <groupId>io.testomat</groupId>
+            <artifactId>java-reporter-junit</artifactId>
+            <version>0.19.2</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.jspecify/jspecify -->
         <dependency>
@@ -241,32 +339,6 @@
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.20.0</version>
-            <scope>runtime</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.google.code.findbugs</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <!-- Source: https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-        <dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>5.0.9</version>
-            <scope>compile</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.18.0</version>
         </dependency>
         <!-- TestNG dépend de jcommander. Maven devrait gérer cela automatiquement, mais parfois, il faut explicitement ajouter la dépendance. -->
         <dependency>
@@ -305,34 +377,6 @@
             <version>${aspectj.version}</version>
             <scope>provided</scope>
         </dependency>
-        <!-- Incorporating Self-Healing AI Frameworks -->
-        <!-- Source: https://mvnrepository.com/artifact/com.epam.healenium/healenium-web -->
-        <dependency>
-            <groupId>com.epam.healenium</groupId>
-            <artifactId>healenium-web</artifactId>
-            <version>3.6.0</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- DataBASE Testing in Selenium Framework -->
-        <!-- Source: https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>9.1.0</version>
-        </dependency>
-        <!-- API Testing in Selenium Framework -->
-        <!-- Source: https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>5.5.6</version>
-        </dependency>
-        <!-- Testomat.io Install Reporter Junit -->
-        <dependency>
-            <groupId>io.testomat</groupId>
-            <artifactId>java-reporter-junit</artifactId>
-            <version>0.19.2</version>
-        </dependency>
     </dependencies>
     <profiles>
         <profile>
@@ -353,6 +397,25 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <!-- Ignore testng.xml : inutile avec JUnit 4 -->
+                            <suiteXmlFiles combine.self="override"/>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>junit5</id>
+            <properties>
+                <!-- Use JUnit Platform Provider -->
+                <surefire.provider>surefire-junit-platform</surefire.provider>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-surefire-plugin</artifactId>
+
+                        <configuration>
+                            <!-- Disable TestNG suite XML for JUnit 5 -->
                             <suiteXmlFiles combine.self="override"/>
                         </configuration>
                     </plugin>

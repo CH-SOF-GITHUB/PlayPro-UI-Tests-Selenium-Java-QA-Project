@@ -1,4 +1,4 @@
-package com.qa.e2e.tutorialsNINJA.TS_001;
+package com.qa.applications.tutorialsNINJA.TS_001;
 
 import org.qa.base.BaseClass;
 import org.qa.pages.TutorialsNINJA.RegisterPage;

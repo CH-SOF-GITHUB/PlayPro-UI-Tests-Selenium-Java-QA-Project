@@ -48,49 +48,49 @@
             <test name="TutorialsNINJA Test 1.1" parallel="classes" thread-count="1">
                 <parameter name="browser" value="firefox"/>
                 <classes>
-                    <class name="com.qa.e2e.tutorialsNINJA.TS_002.LoginTests9"/>
+                    <class name="com.qa.applications.tutorialsNINJA.TS_002.LoginTests9"/>
                 </classes>
             </test>
             <test name="TutorialsNINJA Test 1.2" parallel="classes" thread-count="1">
                 <parameter name="browser" value="edge"/>
                 <classes>
-                    <class name="com.qa.e2e.tutorialsNINJA.TS_002.LoginTests9"/>
+                    <class name="com.qa.applications.tutorialsNINJA.TS_002.LoginTests9"/>
                 </classes>
             </test>-->
         <!--<test name="OrangeHRM_Test_1.0_FIREFOX">
             <parameter name="browser" value="firefox"/>
             <classes>
-                <class name="com.qa.e2e.orangeHRM.DBVerificationTest"/>
-                <class name="com.qa.e2e.orangeHRM.ApiTest"/>
-                <class name="com.qa.e2e.orangeHRM.DataLoginTest"/>
-                <class name="com.qa.e2e.orangeHRM.DummyClass"/>
-                <class name="com.qa.e2e.orangeHRM.DummyClass2"/>
-                <class name="com.qa.e2e.orangeHRM.HomeTest"/>
-                <class name="com.qa.e2e.orangeHRM.LoginTest"/>
+                <class name="com.qa.applications.orangeHRM.DBVerificationTest"/>
+                <class name="com.qa.applications.orangeHRM.ApiTest"/>
+                <class name="com.qa.applications.orangeHRM.DataLoginTest"/>
+                <class name="com.qa.applications.orangeHRM.DummyClass"/>
+                <class name="com.qa.applications.orangeHRM.DummyClass2"/>
+                <class name="com.qa.applications.orangeHRM.HomeTest"/>
+                <class name="com.qa.applications.orangeHRM.LoginTest"/>
             </classes>
         </test>
         <test name="OrangeHRM_Test_1.1_CHROME">
             <parameter name="browser" value="chrome"/>
             <classes>
-                <class name="com.qa.e2e.orangeHRM.DBVerificationTest"/>
-                <class name="com.qa.e2e.orangeHRM.ApiTest"/>
-                <class name="com.qa.e2e.orangeHRM.DataLoginTest"/>
-                <class name="com.qa.e2e.orangeHRM.DummyClass"/>
-                <class name="com.qa.e2e.orangeHRM.DummyClass2"/>
-                <class name="com.qa.e2e.orangeHRM.HomeTest"/>
-                <class name="com.qa.e2e.orangeHRM.LoginTest"/>
+                <class name="com.qa.applications.orangeHRM.DBVerificationTest"/>
+                <class name="com.qa.applications.orangeHRM.ApiTest"/>
+                <class name="com.qa.applications.orangeHRM.DataLoginTest"/>
+                <class name="com.qa.applications.orangeHRM.DummyClass"/>
+                <class name="com.qa.applications.orangeHRM.DummyClass2"/>
+                <class name="com.qa.applications.orangeHRM.HomeTest"/>
+                <class name="com.qa.applications.orangeHRM.LoginTest"/>
             </classes>
         </test>
         <test name="OrangeHRM_Test_1.2_EDGE">
             <parameter name="browser" value="edge"/>
             <classes>
-                <class name="com.qa.e2e.orangeHRM.DBVerificationTest"/>
-                <class name="com.qa.e2e.orangeHRM.ApiTest"/>
-                <class name="com.qa.e2e.orangeHRM.DataLoginTest"/>
-                <class name="com.qa.e2e.orangeHRM.DummyClass"/>
-                <class name="com.qa.e2e.orangeHRM.DummyClass2"/>
-                <class name="com.qa.e2e.orangeHRM.HomeTest"/>
-                <class name="com.qa.e2e.orangeHRM.LoginTest"/>
+                <class name="com.qa.applications.orangeHRM.DBVerificationTest"/>
+                <class name="com.qa.applications.orangeHRM.ApiTest"/>
+                <class name="com.qa.applications.orangeHRM.DataLoginTest"/>
+                <class name="com.qa.applications.orangeHRM.DummyClass"/>
+                <class name="com.qa.applications.orangeHRM.DummyClass2"/>
+                <class name="com.qa.applications.orangeHRM.HomeTest"/>
+                <class name="com.qa.applications.orangeHRM.LoginTest"/>
             </classes>
         </test>
     </suite>-->

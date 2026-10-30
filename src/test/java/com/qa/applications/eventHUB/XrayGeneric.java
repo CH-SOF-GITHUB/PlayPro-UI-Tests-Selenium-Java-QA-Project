@@ -1,4 +1,4 @@
-package com.qa.e2e.eventHUB;
+package com.qa.applications.eventHUB;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

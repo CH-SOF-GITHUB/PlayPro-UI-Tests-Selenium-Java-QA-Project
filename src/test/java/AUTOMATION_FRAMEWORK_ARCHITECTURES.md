@@ -133,7 +133,7 @@ WebDriver driver = new ChromeDriver();
                  |      Google Chrome       |
                  +--------------------------+
 
-#### Selenium Manager (Selenium 4.6+)
+#### Method 3 - Selenium Manager (Selenium 4.6+) - Automating the manual process of managing drivers
 // Create WebDriver instance
 WebDriver driver = new ChromeDriver();
 

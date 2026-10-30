@@ -1,5 +1,5 @@
-package com.qa.e2e.PlayPro.DEV.LambdaTest.Edge.Reservations;
-import com.qa.configuration.LTConfig;
+package com.qa.applications.PlayPro.DEV.LambdaTest.Edge.Reservations;
+import com.qa.factory.LTConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;

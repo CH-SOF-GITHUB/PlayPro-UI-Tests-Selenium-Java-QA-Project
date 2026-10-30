@@ -1,4 +1,4 @@
-package com.qa.e2e.PlayPro.DEV.LambdaTest.Chrome.Reservations;
+package com.qa.applications.PlayPro.DEV.LambdaTest.Chrome.Reservations;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;

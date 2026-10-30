@@ -1,4 +1,4 @@
-package com.qa.e2e.PlayPro.DEV.LambdaTest.Chrome.Devis;
+package com.qa.applications.PlayPro.DEV.LambdaTest.Chrome.Devis;
 import com.qa.LoggedBaseTest;
 import io.qameta.allure.*;
 import org.testng.Assert;

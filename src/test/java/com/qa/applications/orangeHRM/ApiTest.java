@@ -1,4 +1,4 @@
-package com.qa.e2e.orangeHRM;
+package com.qa.applications.orangeHRM;
 
 import io.restassured.response.Response;
 import org.qa.base.BaseClass;

@@ -1,4 +1,4 @@
-package com.qa.e2e.orangeHRM;
+package com.qa.applications.orangeHRM;
 
 import org.qa.base.BaseClass;
 import org.qa.dataprovider.DataProviders;

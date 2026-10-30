@@ -1,4 +1,4 @@
-package com.qa.e2e.eventHUB;
+package com.qa.applications.eventHUB;
 
 
 import org.qa.base.BaseClass;

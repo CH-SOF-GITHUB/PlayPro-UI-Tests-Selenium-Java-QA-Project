@@ -9,14 +9,18 @@
       <w>Augmenté</w>
       <w>Boni</w>
       <w>Collecter</w>
+      <w>Contrairement</w>
       <w>Convertir</w>
       <w>Copie</w>
       <w>Couverture</w>
       <w>D'Souza</w>
       <w>Dropmenu</w>
+      <w>Définit</w>
       <w>Déplacer</w>
       <w>Emballe</w>
       <w>Envoie</w>
+      <w>Exécutez</w>
+      <w>Fournit</w>
       <w>Génère</w>
       <w>Importe</w>
       <w>Installe</w>
@@ -33,6 +37,7 @@
       <w>Puisque</w>
       <w>Quand</w>
       <w>Récupère</w>
+      <w>Simplifie</w>
       <w>Stocke</w>
       <w>Unformated</w>
       <w>Unsucessful</w>
@@ -46,6 +51,7 @@
       <w>adaptant</w>
       <w>addbutton</w>
       <w>appels</w>
+      <w>approche</w>
       <w>appropriée</w>
       <w>atteindre</w>
       <w>attemps</w>
@@ -55,7 +61,9 @@
       <w>autour</w>
       <w>avons</w>
       <w>ayant</w>
+      <w>bibliothèques</w>
       <w>bien</w>
+      <w>blocages</w>
       <w>booléen</w>
       <w>brut</w>
       <w>caractére</w>
@@ -63,11 +71,14 @@
       <w>cassee</w>
       <w>chaine</w>
       <w>chaker</w>
+      <w>chaînes</w>
       <w>classique</w>
       <w>commentaires</w>
       <w>communiquer</w>
       <w>compatibilité</w>
       <w>concerné</w>
+      <w>conflits</w>
+      <w>consiste</w>
       <w>contenaient</w>
       <w>contexte</w>
       <w>contourner</w>
@@ -81,11 +92,13 @@
       <w>créée</w>
       <w>créées</w>
       <w>d'abord</w>
+      <w>d'abstraction</w>
       <w>d'accents</w>
       <w>d'acceptation</w>
       <w>d'auvergne</w>
       <w>d'avertissement</w>
       <w>d'avoir</w>
+      <w>d'environnement</w>
       <w>d'envoyer</w>
       <w>d'image</w>
       <w>d'instanciation</w>
@@ -94,11 +107,13 @@
       <w>d'étape</w>
       <w>dans</w>
       <w>decimales</w>
+      <w>defaut</w>
       <w>destructifs</w>
       <w>devront</w>
       <w>dgmyzswxrzbb</w>
       <w>différer</w>
       <w>disponibilité</w>
+      <w>diverses</w>
       <w>ducati</w>
       <w>défini</w>
       <w>délai</w>
@@ -107,6 +122,8 @@
       <w>dépassé</w>
       <w>désormais</w>
       <w>détaillés</w>
+      <w>développée</w>
+      <w>edgedriver</w>
       <w>encapsulée</w>
       <w>enfin</w>
       <w>enregistré</w>
@@ -116,9 +133,14 @@
       <w>exactement</w>
       <w>exclu</w>
       <w>faciliter</w>
+      <w>firefoxdriver</w>
       <w>focalisé</w>
+      <w>fonctions</w>
+      <w>formatage</w>
+      <w>fourni</w>
       <w>fournisseur</w>
       <w>getdata</w>
+      <w>grandement</w>
       <w>identifiant</w>
       <w>immédiatement</w>
       <w>importante</w>
@@ -130,20 +152,25 @@
       <w>instancie</w>
       <w>integrite</w>
       <w>intermédiaire</w>
+      <w>inutile</w>
       <w>jdbc</w>
       <w>jjxpwitiweykxbyjbvdoqvwslnextamniubepq</w>
       <w>jmnmmsvb</w>
+      <w>journalisation</w>
       <w>l'API</w>
       <w>l'ActionDriver</w>
+      <w>l'aide</w>
       <w>l'alerte</w>
       <w>l'annotation</w>
       <w>l'artefact</w>
       <w>l'attribut</w>
       <w>l'email</w>
+      <w>l'exécutable</w>
       <w>l'import</w>
       <w>l'intérieur</w>
       <w>l'on</w>
       <w>l'ordre</w>
+      <w>l'écriture</w>
       <w>l'étape</w>
       <w>l'état</w>
       <w>langage</w>
@@ -154,11 +181,16 @@
       <w>localisable</w>
       <w>loggingout</w>
       <w>loggr</w>
+      <w>légère</w>
+      <w>manipuler</w>
+      <w>manuellement</w>
       <w>membres</w>
       <w>modifiant</w>
       <w>modifie</w>
       <w>moins</w>
       <w>monetaire</w>
+      <w>moteur</w>
+      <w>msedgedriver</w>
       <w>mylist</w>
       <w>n'avons</w>
       <w>naturelle</w>
@@ -170,6 +202,7 @@
       <w>nullité</w>
       <w>nullpointer</w>
       <w>occurances</w>
+      <w>operadriver</w>
       <w>ouvres</w>
       <w>pCloudy</w>
       <w>paramètre</w>
@@ -183,6 +216,7 @@
       <w>pouvant</w>
       <w>problématique</w>
       <w>prochains</w>
+      <w>propriété</w>
       <w>propriétés</w>
       <w>précédente</w>
       <w>qualid</w>
@@ -201,6 +235,7 @@
       <w>résoudre</w>
       <w>réussir</w>
       <w>réutilisé</w>
+      <w>s'agit</w>
       <w>s'exécutent</w>
       <w>s'il</w>
       <w>s'ouvrir</w>
@@ -210,6 +245,7 @@
       <w>serveur</w>
       <w>simplifiée</w>
       <w>stepcontext</w>
+      <w>stricts</w>
       <w>suffixe</w>
       <w>suivre</w>
       <w>supprimant</w>
@@ -218,15 +254,20 @@
       <w>séparément</w>
       <w>temurin</w>
       <w>tolérés</w>
+      <w>traitement</w>
       <w>transmettre</w>
       <w>transmis</w>
       <w>travailler</w>
       <w>télécharge</w>
+      <w>universelle</w>
+      <w>utiles</w>
       <w>utilisée</w>
+      <w>utilitaires</w>
       <w>valeurs</w>
       <w>valider</w>
       <w>verte</w>
       <w>vient</w>
+      <w>webdrivermanager</w>
       <w>échouer</w>
       <w>échouées</w>
       <w>écrasé</w>

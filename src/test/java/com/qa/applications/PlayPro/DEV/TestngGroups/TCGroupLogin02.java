@@ -1,6 +1,6 @@
-package com.qa.e2e.PlayPro.DEV.TestngGroups;
+package com.qa.applications.PlayPro.DEV.TestngGroups;
 
-import com.qa.configuration.LTConfig;
+import com.qa.factory.LTConfig;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.remote.RemoteWebDriver;

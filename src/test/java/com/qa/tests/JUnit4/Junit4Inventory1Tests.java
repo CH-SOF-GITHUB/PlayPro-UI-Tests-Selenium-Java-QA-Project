@@ -1,20 +1,14 @@
-package com.qa.tests.Junit4;
-
-import com.qa.factory.PCloudyDriverFactory;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
+package com.qa.tests.JUnit4;
+import com.qa.tests.AbstractJunit4ChromeWebDriverTest;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
-import org.junit.rules.TestWatcher;
-import org.junit.runner.Description;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.qa.utilities.TakeCapture;
+import org.qa.pages.SwagLabs.SwagLabsActionPage;
 import org.testng.Assert;
-import java.io.IOException;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,13 +16,12 @@ import java.util.regex.Pattern;
 import static org.junit.Assert.assertTrue;
 import io.testomat.core.annotation.TestId;
 
-public class JunitInventoryTests {
+public class Junit4Inventory1Tests extends AbstractJunit4ChromeWebDriverTest {
     // base URL
     private static final String URL_LOGIN = "https://www.saucedemo.com/";
     //  Login Locators
     private static final By CHAMP_USERNAME = By.id("user-name");
     private static final By CHAMP_PASSWORD = By.id("password");
-    private static final By BOUTON_LOGIN = By.id("login-button");
     private static final String USERNAME_VALIDE = "standard_user";
     private static final String PASSWORD_VALIDE = "secret_sauce";
     // Inventory Locators
@@ -49,68 +42,40 @@ public class JunitInventoryTests {
     // Format monetaire : symbole $ suivi d'un nombre avec exactement deux decimales
     private static final Pattern FORMAT_PRIX = Pattern.compile("^\\$\\d+\\.\\d{2}$");
 
-    // Define Web driver object With PCloudy Driver Factory
-    private WebDriver driver;
-    PCloudyDriverFactory pCloudyDriverFactory;
+    // create an instance of POM pages
+    private SwagLabsActionPage swagLabsActionPage;
 
-    // Add an instance of TakeCapture class
-    TakeCapture capture;
+    @Before
+    public void setupPages() {
+        swagLabsActionPage = new SwagLabsActionPage(driver);
+    }
 
     @Rule
     public TestName testName = new TestName();
 
-    private boolean testPassed = true;
-
-    @Rule
-    public TestWatcher watcher = new TestWatcher() {
-        @Override
-        protected void failed(Throwable e, Description description) {
-            testPassed = false;
-        }
-    };
-
-    boolean pcloudy = false;
-    boolean LT = false;
-
-    // Setup Tests
-    @Before
-    public void setUp() {
-        System.out.println("Starting Test Automation Pcloudy...");
-        try {
-            WebDriverManager.getInstance().setup();
-            if (pcloudy) {
-                pCloudyDriverFactory = new PCloudyDriverFactory();
-                driver = pCloudyDriverFactory.createPcloudyDriver();
-            } else {
-                driver = new ChromeDriver();
-            }
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-            driver.manage().window().maximize();
-            capture = new TakeCapture(driver);
-            sauceDemoLogin();
-        } catch (WebDriverException e) {
-            throw new WebDriverException("Web Driver not Initialized: " + e.getMessage());
-        }
-    }
-
     // ---------- Scenario 1 : affichage global et integrite des elements ----------
     // TC01
-    @TestId("b0a99a12")
+    @TestId("4d87e452")
     @Test
     public void testPageInventoryReachedAfterLogin() {
+        sauceDemoLogin();
         // Assertions
-        Assert.assertTrue(getCurrentURL().contains("/inventory.html"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("/inventory.html"));
     }
+
     // TC02
     @TestId("df2fb3c4")
     @Test
     public void testCatalogDisplayTheSixProducts() {
+        sauceDemoLogin();
         Assert.assertEquals(returnProductsNumber(), EXPECTED_PRODUCTS_NUMBER);
     }
+
     // TC03
-    @TestId("6570f6d6")
+    @TestId("448dd6d3")
     @Test
     public void testEachProductHasNonEmptyTitle() {
+        sauceDemoLogin();
         List<WebElement> products = driver.findElements(PRODUCTS_CARDS);
         Assert.assertFalse(products.isEmpty(), "No Products are displayed ! ");
         int index = 0;
@@ -123,9 +88,10 @@ public class JunitInventoryTests {
     }
 
     // TC04
-    @TestId("36270dfa")
+    @TestId("e0d8d597")
     @Test
     public void testEachProductHasDescriptionNonEmpty() {
+        sauceDemoLogin();
         List<WebElement> products = driver.findElements(PRODUCTS_CARDS);
         Assert.assertFalse(products.isEmpty(), "No Products are displayed ! ");
         int index = 0;
@@ -137,10 +103,12 @@ public class JunitInventoryTests {
         }
 
     }
+
     // TC05
-    @TestId("daabdb6a")
+    @TestId("a2aa0573")
     @Test
     public void testEachProductHasImage() {
+        sauceDemoLogin();
         List<Boolean> isImages = getValidateImages();
         Assert.assertEquals(isImages.size(), EXPECTED_PRODUCTS_NUMBER);
         int index = 0;
@@ -152,9 +120,10 @@ public class JunitInventoryTests {
     }
 
     //TC06
-    @TestId("d46dffb7")
+    @TestId("3162b7a9")
     @Test
     public void testEachProductHasPriceInMonetaryFormat() {
+        sauceDemoLogin();
         List<WebElement> products = driver.findElements(PRODUCTS_CARDS);
         Assert.assertFalse(products.isEmpty(), "No Products are displayed ! ");
         int index = 0;
@@ -163,20 +132,6 @@ public class JunitInventoryTests {
             System.out.printf("Product %d 's Price : %s", index + 1, price).println();
             Assert.assertTrue(FORMAT_PRIX.matcher(price).matches(), "Format Price invalide : " + price);
             index++;
-        }
-    }
-
-    // tearDown Tests //
-    @After
-    public void tearDown() throws IOException {
-        if (driver != null) {
-            try {
-                System.out.println("I'm Executed");
-                //((JavascriptExecutor) driver).executeScript("pCloudy_setResult", testPassed ? "pass" : "fail");
-                capture.takeScreenshot(testName.getMethodName());
-            } finally {
-                driver.quit();
-            }
         }
     }
 
@@ -223,31 +178,6 @@ public class JunitInventoryTests {
             });
         } catch (Exception e) {
             return false; // Retourne false si le délai est dépassé ou si une erreur survient
-        }
-    }
-
-    // Actions //
-    public boolean isElementDisplayed(By by) {
-        try {
-            return driver.findElement(by).isDisplayed();
-        } catch (NoSuchElementException e) {
-            throw new NoSuchElementException("No such element : " + e.getMessage());
-        }
-    }
-
-    public String getCurrentURL() {
-        try {
-            return driver.getCurrentUrl();
-        } catch (Exception e) {
-            throw new NoSuchSessionException("Cannot retrieve current URL : " + e.getMessage());
-        }
-    }
-
-    public String getElementText(By by) {
-        try {
-            return driver.findElement(by).getText();
-        } catch (NoSuchElementException e) {
-            throw new NoSuchElementException("cannot get Text of this element:  " + e.getMessage());
         }
     }
 }

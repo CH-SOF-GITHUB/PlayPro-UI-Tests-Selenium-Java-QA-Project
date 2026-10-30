@@ -47,7 +47,7 @@ Pour générer le rapport XML du test :
 mvn clean test -Pjunit4 "-Dtest=JunitInventoryTests1"
 
 Le rapport est créé à cet emplacement :
-target/surefire-reports/TEST-com.qa.tests.Junit4.JunitInventoryTests1.xml
+target/surefire-reports/TEST-com.qa.tests.JUnit4.Junit4Inventory2Tests.xml
 
 Le nom du fichier dépend du nom complet de la classe de test.
 
@@ -60,7 +60,7 @@ Nous avons créé une copie du XML original, sans les éléments <system-err> et
 si les sorties de diagnostic contenaient un chemin problématique.
 
 Commande PowerShell utilisée :
-$source = "target/surefire-reports/TEST-com.qa.tests.Junit4.JunitInventoryTests1.xml"
+$source = "target/surefire-reports/TEST-com.qa.tests.JUnit4.Junit4Inventory2Tests.xml"
 $clean  = "target/surefire-reports/TEST-JunitInventoryTests1-clean.xml"
 
 [xml]$xml = Get-Content -LiteralPath $source -Raw
@@ -93,3 +93,12 @@ Chemin du XML	Indique le rapport à importer
 --java-tests "src/test/java"	Indique où retrouver les sources Java
 
 La commande crée un nouveau rapport dans Testomat.io.
+
+
+
+#### Import Junit5 Tests / Import Project from Source Code
+curl -L -O -z testomatio.jar https://github.com/testomatio/java-check-tests/releases/latest/download/testomatio.jar && set TESTOMATIO=tstmt_PIYAdyOv5Zm3b6bY4WOw_vk49NLsdZ-HiQ1793099007&& java -jar testomatio.jar sync
+
+🛠️ La commande adaptée pour PowerShell :
+Exécutez ce bloc complet dans votre terminal PowerShell :
+curl.exe -L -O -z testomatio.jar https://github.com/testomatio/java-check-tests/releases/latest/download/testomatio.jar; $env:TESTOMATIO="tstmt_PIYAdyOv5Zm3b6bY4WOw_vk49NLsdZ-HiQ1793099007"; java -jar testomatio.jar sync

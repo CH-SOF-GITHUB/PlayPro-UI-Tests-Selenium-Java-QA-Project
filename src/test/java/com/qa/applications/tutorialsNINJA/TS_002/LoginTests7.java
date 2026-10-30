@@ -1,4 +1,4 @@
-package com.qa.e2e.tutorialsNINJA.TS_002;
+package com.qa.applications.tutorialsNINJA.TS_002;
 
 
 import org.openqa.selenium.WindowType;

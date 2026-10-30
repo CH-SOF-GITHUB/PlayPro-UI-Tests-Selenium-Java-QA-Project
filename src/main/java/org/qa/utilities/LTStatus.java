@@ -88,4 +88,11 @@ public class LTStatus {
                 .replace("\r", "\\r")
                 .replace("\n", "\\n");
     }
+
+
+    // simple escape pour les guillemets/newlines dans le remark
+    private static String escapeJson(String s) {
+        if (s == null) return "";
+        return s.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", "\\n").replace("\r", "\\r");
+    }
 }

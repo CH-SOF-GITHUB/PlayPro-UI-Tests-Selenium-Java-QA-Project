@@ -1,5 +1,5 @@
-package com.qa.e2e.PlayPro.BackOfficeV3.Planning;
-import com.qa.configuration.LTConfig;
+package com.qa.applications.PlayPro.BackOfficeV3.Planning;
+import com.qa.factory.LTConfig;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.NoSuchElementException;
