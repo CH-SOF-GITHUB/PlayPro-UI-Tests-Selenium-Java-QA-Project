@@ -31,4 +31,5 @@ Credentials: saucedemo-standard-user (saucedemo-standard-user)
 
 
 cmd all test of package:
+mvn clean test -Pjunit5 "-Dtest=Junit5Inventory2Tests"
 mvn clean test -Pjunit5 "-Dtest=Junit5*"

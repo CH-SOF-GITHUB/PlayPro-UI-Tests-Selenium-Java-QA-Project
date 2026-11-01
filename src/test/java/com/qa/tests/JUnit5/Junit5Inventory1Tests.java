@@ -6,9 +6,10 @@ import org.openqa.selenium.*;
 import org.qa.pages.SwagLabs.SwagLabsActionPage;
 
 import java.util.List;
+
 import io.testomat.core.annotation.TestId;
 
-public class Junit5InventoryTests extends AbstractChromeWebDriverTest {
+public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
 
     // base URL
     private static final String URL_LOGIN = "https://www.saucedemo.com/";
@@ -30,7 +31,7 @@ public class Junit5InventoryTests extends AbstractChromeWebDriverTest {
         swagLabsActionPage = new SwagLabsActionPage(driver);
     }
 
-    // TESTS //
+    //TC-INV-01
     @TestId("a76316c8")
     @Test
     public void testInventoryReachedAndProductSelection() {
