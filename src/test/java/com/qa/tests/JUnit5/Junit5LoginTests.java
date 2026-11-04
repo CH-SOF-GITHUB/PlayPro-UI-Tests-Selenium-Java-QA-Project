@@ -25,17 +25,22 @@ public class Junit5LoginTests extends AbstractChromeWebDriverTest {
         swagLabsActionPage = new SwagLabsActionPage(driver);
     }
 
-    // TESTS - successful login //
-    @TestId("9d1e80c7")
+    // TC01
     @Test
     public void testValidLogin() {
-        driver.get(URL_LOGIN);
-        swagLabsActionPage.enter(CHAMP_USERNAME, USERNAME_VALIDE);
-        swagLabsActionPage.enter(CHAMP_PASSWORD, PASSWORD_VALIDE);
-        swagLabsActionPage.enter(CHAMP_PASSWORD, String.valueOf(Keys.ENTER));
+        // 1. login
+        login();
         // Assertions
         Assertions.assertTrue(swagLabsActionPage.isContain("/inventory.html"));
         Assertions.assertTrue(swagLabsActionPage.isElementDisplayed(LISTE_PRODUITS));
         Assertions.assertTrue(swagLabsActionPage.compareElement(INVENTORY_PRODUCTS_TITLE, "Products"));
+    }
+
+    // sample login method
+    private void login() {
+        driver.get(URL_LOGIN);
+        swagLabsActionPage.enter(CHAMP_USERNAME, USERNAME_VALIDE);
+        swagLabsActionPage.enter(CHAMP_PASSWORD, PASSWORD_VALIDE);
+        swagLabsActionPage.enter(CHAMP_PASSWORD, String.valueOf(Keys.ENTER));
     }
 }

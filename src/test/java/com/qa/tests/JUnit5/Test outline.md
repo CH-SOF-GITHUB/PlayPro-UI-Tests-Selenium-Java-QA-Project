@@ -29,7 +29,11 @@ Credentials: saucedemo-standard-user (saucedemo-standard-user)
    Assert the "Products" header is visible.
 
 
-
 cmd all test of package:
 mvn clean test -Pjunit5 "-Dtest=Junit5Inventory2Tests"
 mvn clean test -Pjunit5 "-Dtest=Junit5*"
+
+set TESTOMATIO=tstmt_PIYAdyOv5Zm3b6bY4WOw_vk49NLsdZ-HiQ1793099007&& mvn test -Pjunit5 "-Dtest=Junit5Inventory1Tests"
+$env:TESTOMATIO=tstmt_PIYAdyOv5Zm3b6bY4WOw_vk49NLsdZ-HiQ1793099007; mvn test -Pjunit5 "-Dtest=Junit5Inventory1Tests"
+
+$env:TESTOMATIO="tstmt_PIYAdyOv5Zm3b6bY4WOw_vk49NLsdZ-HiQ1793099007"; mvn test -Pjunit5 "-Dtest=Junit5InvalidLoginTests"

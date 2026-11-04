@@ -37,68 +37,56 @@ public class Junit5InvalidLoginTests extends AbstractChromeWebDriverTest {
     }
 
     //TC01
-    @TestId("449884f7")
     @Test
     public void testEmptyUsername() {
-        driver.get(URL_LOGIN);
-        swagLabsActionPage.enter(CHAMP_USERNAME, "");
-        swagLabsActionPage.enter(CHAMP_PASSWORD, PASSWORD_VALIDE);
-        swagLabsActionPage.enter(CHAMP_PASSWORD, String.valueOf(Keys.ENTER));
+        login("", PASSWORD_VALIDE);
         // Assertions
         boolean compareError = swagLabsActionPage.compareElement(MESSAGE_ERREUR, ERREUR_USERNAME_REQUIS);
         Assertions.assertTrue(compareError);
     }
 
     // TC02
-    @TestId("7a9d9a09")
     @Test
     public void testEmptyPassword() {
-        driver.get(URL_LOGIN);
-        swagLabsActionPage.enter(CHAMP_USERNAME, USERNAME_VALIDE);
-        swagLabsActionPage.enter(CHAMP_PASSWORD, "");
-        swagLabsActionPage.enter(CHAMP_PASSWORD, String.valueOf(Keys.ENTER));
+        login(USERNAME_VALIDE, "");
         // Assertions
         boolean compareError = swagLabsActionPage.compareElement(MESSAGE_ERREUR, ERREUR_PASSWORD_REQUIS);
         Assertions.assertTrue(compareError);
     }
 
     //TC03
-    @TestId("1530fdf5")
     @Test
     public void testInvalidUsername() {
-        driver.get(URL_LOGIN);
-        swagLabsActionPage.enter(CHAMP_USERNAME, USERNAME_INVALIDE);
-        swagLabsActionPage.enter(CHAMP_PASSWORD, PASSWORD_VALIDE);
-        swagLabsActionPage.enter(CHAMP_PASSWORD, String.valueOf(Keys.ENTER));
+        login(USERNAME_INVALIDE, PASSWORD_VALIDE);
         // Assertions
         boolean compareError = swagLabsActionPage.compareElement(MESSAGE_ERREUR, ERREUR_IDENTIFIANTS_INVALIDES);
         Assertions.assertTrue(compareError);
     }
 
     //TC04
-    @TestId("cb066d91")
     @Test
     public void testInvalidPassword() {
-        driver.get(URL_LOGIN);
-        swagLabsActionPage.enter(CHAMP_USERNAME, USERNAME_VALIDE);
-        swagLabsActionPage.enter(CHAMP_PASSWORD, PASSWORD_INVALIDE);
-        swagLabsActionPage.enter(CHAMP_PASSWORD, String.valueOf(Keys.ENTER));
+        login(USERNAME_VALIDE, PASSWORD_INVALIDE);
         // Assertions
         boolean compareError = swagLabsActionPage.compareElement(MESSAGE_ERREUR, ERREUR_IDENTIFIANTS_INVALIDES);
         Assertions.assertTrue(compareError);
     }
 
     //TC05
-    @TestId("2d8da855")
     @Test
     public void testEmptyCredentials() {
-        driver.get(URL_LOGIN);
-        swagLabsActionPage.enter(CHAMP_USERNAME, "");
-        swagLabsActionPage.enter(CHAMP_PASSWORD, "");
-        swagLabsActionPage.enter(CHAMP_PASSWORD, String.valueOf(Keys.ENTER));
+        login("", "");
         // Assertions
         boolean compareError = swagLabsActionPage.compareElement(MESSAGE_ERREUR, ERREUR_USERNAME_REQUIS);
         Assertions.assertTrue(compareError);
+    }
+
+    // sample login method
+    private void login(String value, String value1) {
+        driver.get(URL_LOGIN);
+        swagLabsActionPage.enter(CHAMP_USERNAME, value);
+        swagLabsActionPage.enter(CHAMP_PASSWORD, value1);
+        swagLabsActionPage.enter(CHAMP_PASSWORD, String.valueOf(Keys.ENTER));
     }
 
 }
