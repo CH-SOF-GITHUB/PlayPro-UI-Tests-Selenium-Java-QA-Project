@@ -150,6 +150,7 @@ public class Junit5CheckoutTests extends AbstractChromeWebDriverTest {
         driver.findElement(CART_CHECKOUT_OVERVIEW_FINISH_BTN).click();
         // Verify navigation to checkout-complete.html.
         boolean isCheckoutComplete = swagLabsActionPage.isUrlOK(BASE_URL, "/checkout-complete.html");
+        Assertions.assertTrue(isCheckoutComplete, "Url does not update to '/checkout-complete.html'.");
         // Verify header displays "Thank you for your order!" and cart badge is empty.
         boolean isThankYouForYourOrderMsg = swagLabsActionPage.compareElement(CART_CHECKOUT_COMPLETE_HEADER, "Thank you for your order!");
         Assertions.assertTrue(isThankYouForYourOrderMsg, "The Message 'Thank you for your order!' does not display");
