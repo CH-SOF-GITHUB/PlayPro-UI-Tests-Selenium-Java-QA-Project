@@ -156,6 +156,69 @@ public class Junit5CheckoutTests extends AbstractChromeWebDriverTest {
         Assertions.assertTrue(isThankYouForYourOrderMsg, "The Message 'Thank you for your order!' does not display");
     }
 
+    // TC-CHK-02: Complete checkout with a multiple product
+    @Test
+    public void testCompleteCheckoutWithMultipleProduct() throws InterruptedException {
+        // Add "Sauce Labs Backpack" ($29.99), "Sauce Labs Bike Light" ($9.99), "Sauce Labs Bolt T-Shirt" ($15.99) to the cart
+        for (int i = 0; i < 3; i++) {
+            getProducts().get(i).findElement(INVENTORY_BOUTON_ACTION).click();
+            Thread.sleep(500);
+        }
+        // Navigate to the cart page
+        driver.findElement(CART_LINK).click();
+        // Click "Checkout" button.
+        driver.findElement(CART_CHECKOUT_BTN).click();
+        // Verify navigation to checkout-step-one.html with title "Checkout: Your Information".
+        boolean isCheckoutStep1Title = swagLabsActionPage.compareElement(CART_CHECKOUT_TITLE, "Checkout: Your Information");
+        Assertions.assertTrue(isCheckoutStep1Title, "Checkout page should display the correct title 'Checkout: Your Information'.");
+        boolean isCheckoutStep1Page = swagLabsActionPage.isUrlOK(BASE_URL, "/checkout-step-one.html");
+        Assertions.assertTrue(isCheckoutStep1Page, "Clicking 'Checkout' should navigate to /checkout-step-one.html.");
+        // Enter "Jane" into First Name.
+        swagLabsActionPage.enter(CART_CHECKOUT_FIRST_NAME, "Jane");
+        // Enter "Doe" into Last Name.
+        swagLabsActionPage.enter(CART_CHECKOUT_LAST_NAME, "Doe");
+        // Enter "02138" into Zip/Postal Code.
+        swagLabsActionPage.enter(CART_CHECKOUT_POSTAL_CODE, "02138");
+        // Click "Continue".
+        driver.findElement(CART_CHECKOUT_CONTINUE_BTN).click();
+        Thread.sleep(500);
+        // Verify navigation to checkout-step-two.html with title "Checkout: Overview".
+        boolean isCheckoutStep2Title = swagLabsActionPage.compareElement(CART_CHECKOUT_OVERVIEW_TITLE, "Checkout: Overview");
+        Assertions.assertTrue(isCheckoutStep2Title, "Checkout page should display the correct title 'Checkout: Your Information'.");
+        boolean isCheckoutStep2Page = swagLabsActionPage.isUrlOK(BASE_URL, "/checkout-step-two.html");
+        Assertions.assertTrue(isCheckoutStep2Page, "Clicking 'Checkout' should navigate to /checkout-step-two.html.");
+        // Verify item summary: QTY, Name, Price of each product.
+        for (int j = 0; j < getOverviewProducts().size(); j++) {
+            System.out.println("Checkout: Overview - Product " + (j + 1) + " Name  : " + getOverviewProducts().get(j).findElement(CART_CHECKOUT_OVERVIEW_ITEM_NAME).getText());
+            System.out.println("Checkout: Overview - Product " + (j + 1) + " Desc  : " + getOverviewProducts().get(j).findElement(CART_CHECKOUT_OVERVIEW_ITEM_DESC).getText());
+            System.out.println("Checkout: Overview - Product " + (j + 1) + " Price : " + getOverviewProducts().get(j).findElement(CART_CHECKOUT_OVERVIEW_ITEM_PRICE).getText());
+            System.out.println("*********************************************************");
+            boolean itemCheckoutWithQty1 = swagLabsActionPage.compareElement(CART_CHECKOUT_OVERVIEW_ITEM_QUANTITY, "1");
+            Assertions.assertTrue(itemCheckoutWithQty1, "The quantity of the item in the cart should be 1.");
+
+            String currentPrice = getOverviewProducts().get(j).findElement(CART_CHECKOUT_OVERVIEW_ITEM_PRICE).getText().substring(1);
+            itemTotal = itemTotal.add(new BigDecimal(currentPrice));
+        }
+        // Verify financial calculations: Item total = "$29.99", Tax = "$2.40", Total = "$32.39".
+        System.out.println("Checkout: Overview - Item Total  : " + itemTotal);
+        tax = itemTotal.multiply(new BigDecimal("0.08")).setScale(2, RoundingMode.HALF_UP);
+        System.out.println("Checkout: Overview - Tax         : " + tax);
+        total = itemTotal.add(tax);
+        System.out.println("Checkout: Overview - Total       : " + total);
+
+        String expectedItemTotal = "$" + itemTotal.setScale(2, RoundingMode.HALF_UP).toPlainString();
+        String actualItemTotal = driver.findElement(CART_CHECKOUT_OVERVIEW_SUMMARY_SUBTOTAL_LABEL).getText().substring(12);
+        Assertions.assertEquals(expectedItemTotal, actualItemTotal, "The item total should match the expected");
+
+        String expectedTax = "$" + tax.setScale(2, RoundingMode.HALF_UP).toPlainString();
+        String actualItemTax = driver.findElement(CART_CHECKOUT_OVERVIEW_SUMMARY_TAX_LABEL).getText().substring(5);
+        Assertions.assertEquals(expectedTax, actualItemTax, "The item tax should match the expected");
+
+        String expectedTotal = "$" + total.setScale(2, RoundingMode.HALF_UP).toPlainString();
+        String actualTotal = driver.findElement(CART_CHECKOUT_OVERVIEW_SUMMARY_TOTAL_LABEL).getText().substring(7);
+        Assertions.assertEquals(expectedTotal, actualTotal, "The total with tax should match the expected");
+    }
+
     // Methods of class tests
     // sample login method
     private void login() {
@@ -167,6 +230,10 @@ public class Junit5CheckoutTests extends AbstractChromeWebDriverTest {
 
     private List<WebElement> getOverviewProducts() {
         return swagLabsActionPage.getList(CART_CHECKOUT_OVERVIEW_ITEM);
+    }
+
+    private List<WebElement> getProducts() {
+        return swagLabsActionPage.getList(_PRODUCT_ITEMS);
     }
 
 }
