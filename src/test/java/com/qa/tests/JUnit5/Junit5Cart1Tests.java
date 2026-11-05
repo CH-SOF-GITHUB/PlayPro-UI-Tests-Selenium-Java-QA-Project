@@ -12,6 +12,8 @@ import org.qa.pages.SwagLabs.SwagLabsActionPage;
 
 import java.util.List;
 
+import io.testomat.core.annotation.TestId;
+
 public class Junit5Cart1Tests extends AbstractChromeWebDriverTest {
 
     // base URL
@@ -26,6 +28,10 @@ public class Junit5Cart1Tests extends AbstractChromeWebDriverTest {
     private static final By INVENTORY_BOUTON_ACTION = By.cssSelector(".inventory_item .btn_inventory");
     private static final By INVENTORY_PRODUCT_NAME = By.className("inventory_item_name");
     //
+    private static final By SauceLabsBackpack = By.xpath("//div[normalize-space()='Sauce Labs Backpack']");
+    //
+    private static final By PRODUCT_DETAILS_NAME = By.className("inventory_details_name");
+    //
     private static final By PRODUCT_DETAILS_BUTTON = By.cssSelector(".btn.btn_secondary.btn_small.btn_inventory");
     private static final By PRODUCT_DETAILS_ADD_TO_CART_BTN = By.id("add-to-cart");
     //
@@ -35,6 +41,7 @@ public class Junit5Cart1Tests extends AbstractChromeWebDriverTest {
     private static final By CART_ITEM = By.className("cart_item");
     private static final By CART_CONTINUE_SHOPPING_BTN = By.id("continue-shopping");
     private static final By CART_CHECKOUT_BTN = By.id("checkout");
+    private static final By CART_CHECKOUT_TITLE = By.className("title");
     //
     private static final By CART_QUANTITY = By.className("cart_quantity");
     private static final By CART_INVENTORY_ITEM_NAME = By.className("inventory_item_name");
@@ -58,6 +65,7 @@ public class Junit5Cart1Tests extends AbstractChromeWebDriverTest {
      * Cart Module Test Coverage Matrix
      * */
     // TC-CART-01: Empty cart state and navigation
+    @TestId("51fad018")
     @Test
     public void testEmptyCartStateAndNavigation() {
         // 1. Cart icon initially has no count badge.
@@ -81,6 +89,7 @@ public class Junit5Cart1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-CART-02: Add multiple items from inventory catalog
+    @TestId("6c6a3f60")
     @Test
     public void testAddMultipleItemsFromInventoryCatalog() throws InterruptedException {
         // 1. Clicking "Add to cart" on items updates each button to "Remove" (Capture 3).
@@ -96,6 +105,7 @@ public class Junit5Cart1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-CART-03: Cart contents and metadata verification
+    @TestId("e099947b")
     @Test
     public void testCartContentsAndMetadataVerification() {
         // 1. Clicking "Add to cart" on items updates each button to "Remove"
@@ -120,6 +130,7 @@ public class Junit5Cart1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-CART-04: Remove item from cart page
+    @TestId("a42e0ff5")
     @Test
     public void testRemoveItemFromCartPage() {
         // 1. Clicking "Add to cart" on items updates each button to "Remove"
@@ -143,6 +154,7 @@ public class Junit5Cart1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-CART-05: Cart persistence across navigation
+    @TestId("c14c98bc")
     @Test
     public void testCartPersistenceAcrossNavigation() {
         // 1. Clicking "Add to cart" on items updates each button to "Remove"
@@ -168,6 +180,7 @@ public class Junit5Cart1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-CART-06: Add and remove from product details page
+    @TestId("95502296")
     @Test
     public void testAddAndRemoveFromProductDetailsPage() throws InterruptedException {
         // 1. Clicking an item title navigates to /inventory-item.html?id=4.
@@ -181,6 +194,7 @@ public class Junit5Cart1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-CART-07: Proceed to checkout
+    @TestId("67de6507")
     @Test
     public void testProceedToCheckout() {
         // 1. Clicking "Checkout" navigates to /checkout-step-one.html.
@@ -193,6 +207,7 @@ public class Junit5Cart1Tests extends AbstractChromeWebDriverTest {
     /*
     Detailed Test Plan
     * */
+    @TestId("8d3ab83e")
     @Test
     public void testCompleteScenario() throws InterruptedException {
         // Task 1: Verify Initial Empty Cart State
@@ -201,6 +216,7 @@ public class Junit5Cart1Tests extends AbstractChromeWebDriverTest {
         driver.findElement(CART_LINK).click();
         boolean isCartPage = swagLabsActionPage.isUrlOK(BASE_URL, "/cart.html");
         Assertions.assertTrue(isCartPage, "Clicking cart link should navigate to /cart.html.");
+        Thread.sleep(1000);
         boolean isCartHeader = swagLabsActionPage.compareElement(CART_HEADER_SECONDARY_TITLE, "Your Cart");
         Assertions.assertTrue(isCartHeader, "Cart page should display 'Your Cart' header.");
         driver.findElement(CART_CONTINUE_SHOPPING_BTN).click();
@@ -257,6 +273,30 @@ public class Junit5Cart1Tests extends AbstractChromeWebDriverTest {
         Assertions.assertTrue(Prod1ShowRemove, "'Sauce Labs Backpack' should show 'Add to cart' after being removed from the cart.");
         boolean Prod3ShowRemove = swagLabsActionPage.compareElement(getProducts().get(2).findElement(INVENTORY_BOUTON_ACTION), "Remove");
         Assertions.assertTrue(Prod3ShowRemove, "'Sauce Labs Bolt T-Shirt' should show 'Add to cart' after being removed from the cart.");
+
+        // Task 7: Verify Item Detail Synchronization
+        // Action: Click the title link for "Sauce Labs Backpack" to open /inventory-item.html?id=4 (Capture 5).
+        driver.findElement(SauceLabsBackpack).click();
+        // Assert the product details page loads with title "Sauce Labs Backpack".
+        String actualProdName = driver.findElement(PRODUCT_DETAILS_NAME).getText();
+        Assertions.assertEquals("Sauce Labs Backpack", actualProdName, "Product details page should display the correct product name.");
+        // Assert the action button displays "Remove".
+        String actualButtonText = driver.findElement(PRODUCT_DETAILS_BUTTON).getText();
+        Assertions.assertEquals("Remove", actualButtonText, "Product details page should display 'Remove' button for items already in the cart.");
+        // Assert the cart badge displays "2".
+        boolean cartBadgeIsCount2 = swagLabsActionPage.compareAttribute(CART_LINK, "aria-label", expectedCartLabel);
+        Assertions.assertTrue(cartBadgeIsCount2, "Cart badge should show 2 items after adding three products.");
+
+        // Task 8: Proceed to Checkout
+        // Action: Click the cart icon to return to /cart.html.
+        driver.findElement(CART_LINK).click();
+        // Action: Click the "Checkout" button.
+        driver.findElement(CART_CHECKOUT_BTN).click();
+        // Validation: Assert the browser navigates to /checkout-step-one.html and displays "Checkout: Your Information".
+        boolean isCheckoutTitle = swagLabsActionPage.compareElement(CART_CHECKOUT_TITLE, "Checkout: Your Information");
+        Assertions.assertTrue(isCheckoutTitle, "Checkout page should display the correct title 'Checkout: Your Information'.");
+        boolean isCheckoutPage = swagLabsActionPage.isUrlOK(BASE_URL, "/checkout-step-one.html");
+        Assertions.assertTrue(isCheckoutPage, "Clicking 'Checkout' should navigate to /checkout-step-one.html.");
     }
 
     // sample login method

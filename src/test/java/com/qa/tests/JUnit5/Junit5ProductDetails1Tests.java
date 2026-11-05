@@ -69,6 +69,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-01: Navigate to product details via item title link
+    @TestId("ef3b9929")
     @Test
     public void testNavigateToProductDetailsViaItemTitleLink() {
         // 1. Click on the product title link (e.g., "Sauce Labs Backpack").
@@ -87,6 +88,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-02: Navigate to product details via item image
+    @TestId("7ba713d6")
     @Test
     public void testNavigateToProductDetailsViaItemImage() {
         // 1. Click on the image thumbnail for "Sauce Labs Bike Light".
@@ -109,6 +111,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-03: Return to inventory using "Back to products"
+    @TestId("82a013d8")
     @Test
     public void testReturnToInventoryUsingBackToProducts() {
         driver.findElement(SauceLabsBackpack).click();
@@ -125,6 +128,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-04: Browser back button navigation
+    @TestId("4954ca35")
     @Test
     public void testBrowserBackButtonNavigation() {
         driver.findElement(SauceLabsBackpack).click();
@@ -143,6 +147,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-05: Product information verification (data consistency)
+    @TestId("f449d600")
     @Test
     public void testProductInformationVerificationDataConsistency() {
         // 1. Open product details for "Sauce Labs Backpack" (id=4).
@@ -167,6 +172,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-06: Currency and price formatting
+    @TestId("c849330e")
     @Test
     public void testCurrencyAndPriceFormatting() {
         // 2. Inspect the first two products
@@ -187,6 +193,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-07: Add item to cart from details page
+    @TestId("009fddda")
     @Test
     public void testAddItemToCartFromDetailsPage() {
         driver.findElement(SauceLabsBackpack).click();
@@ -208,6 +215,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-08: Remove item from cart from details page
+    @TestId("d2cabecc")
     @Test
     public void testRemoveItemFromCartFromDetailsPage() {
         getProducts().get(0).findElement(INVENTORY_BOUTON_ACTION).click();
@@ -223,6 +231,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-09: Cart state persistence when navigating between pages
+    @TestId("e9d98e05")
     @Test
     public void testCartStatePersistenceWhenNavigatingBetweenPages() {
         // 1. Click "Add to cart" for "Sauce Labs Backpack" on /inventory.html.
@@ -243,6 +252,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-10: Proceed to cart from product details page
+    @TestId("e99613ad")
     @Test
     public void testProceedToCartFromProductDetailsPage() throws InterruptedException {
         driver.findElement(SauceLabsBackpack).click();
@@ -260,6 +270,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-11: Direct URL access with valid ID
+    @TestId("73aff8b1")
     @Test
     public void testDirectURLAccessWithValidID() {
         // 1. Navigate directly to https://www.saucedemo.com/inventory-item.html?id=0.
@@ -270,6 +281,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-12: Direct URL access with non-existent or invalid ID
+    @TestId("1d7111a1")
     @Test
     public void testDirectURLAccessWithNonExistentOrInvalidID() {
         // 1. Navigate to /inventory-item.html?id=999 or /inventory-item.html?id=invalid.
@@ -282,6 +294,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-13: Unauthenticated direct access to product details
+    @TestId("1bd56c88")
     @Test
     public void testUnauthenticatedDirectAccessToProductDetails() {
         // 1. Logout from application
@@ -297,6 +310,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-14: Open side menu from product details
+    @TestId("4b3ac51c")
     @Test
     public void testOpenSideMenuFromProductDetails() throws InterruptedException {
         // 1. Click the hamburger menu button in the top left.
@@ -318,6 +332,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-15: Reset app state from product details
+    @TestId("23ab4f91")
     @Test
     public void testResetAppStateFromProductDetails() throws InterruptedException {
         driver.findElement(SauceLabsBackpack).click();
@@ -342,6 +357,7 @@ public class Junit5ProductDetails1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-PD-16: Logout from product details
+    @TestId("53916228")
     @Test
     public void testLogoutFromProductDetails() throws InterruptedException {
         driver.findElement(SauceLabsBackpack).click();

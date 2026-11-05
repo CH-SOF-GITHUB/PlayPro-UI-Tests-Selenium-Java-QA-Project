@@ -26,6 +26,7 @@ public class Junit5LoginTests extends AbstractChromeWebDriverTest {
     }
 
     // TC01
+    @TestId("0bc285cb")
     @Test
     public void testValidLogin() {
         // 1. login

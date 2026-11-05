@@ -92,6 +92,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     1. Page load and UI element presence (smoke)
     * */
     // TC-INV-01: Verify default inventory page layout and headers
+    @TestId("2107a6e3")
     @Tag("critical")
     @Test
     public void testVerifyDefaultInventoryPageLayoutAndHeaders() {
@@ -115,6 +116,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     2. Product catalog display and data validation
     * */
     // TC-INV-02: Verify product details and prices
+    @TestId("3f8ba6a8")
     @Tag("edge")
     @Test
     public void testVerifyProductDetailsAndPrices() {
@@ -138,6 +140,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     3. Product sorting functionality
     * */
     // TC-INV-03: Sort products by Name (A to Z) - default sort
+    @TestId("ec529da2")
     @Tag("functional")
     @Test
     public void testSortProductsByNameAToZ() {
@@ -153,6 +156,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-INV-04: Sort products by Name (Z to A)
+    @TestId("340c194f")
     @Tag("functional")
     @Test
     public void testSortProductsByNameZToA() {
@@ -169,6 +173,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-INV-05: Sort products by Price (low to high)
+    @TestId("c08b5629")
     @Tag("functional")
     @Test
     public void testSortProductsByPriceHighToLow() {
@@ -187,6 +192,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-INV-06: Sort products by Price (low to high)
+    @TestId("788cf4c0")
     @Tag("functional")
     @Test
     public void testSortProductsByPriceLowToHigh() {
@@ -208,6 +214,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     4. Add to cart and remove item interactions
     * */
     // TC-INV-07: Add single item to cart
+    @TestId("7bb49f0b")
     @Tag("critical")
     @Test
     public void testAddSingleItemToCart() {
@@ -222,6 +229,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-INV-08: Remove item directly from inventory page
+    @TestId("33e2aca2")
     @Tag("critical")
     @Test
     public void testRemoveItemDirectlyFromInventoryPage() {
@@ -242,6 +250,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-INV-09: Add multiple items and verify cumulative cart count
+    @TestId("d12d4778")
     @Tag("functional")
     @Test
     public void testAddMultipleItemsAndVerifyCumulativeCartCount() throws InterruptedException {
@@ -285,6 +294,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     /* 5. Navigation and product detail links
      */
     // TC-INV-10: Navigate to product detail page via item title
+    @TestId("5e8a0bf8")
     @Tag("functional")
     @Test
     public void testNavigateToProductDetailPageViaItemTitle() {
@@ -306,6 +316,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-INV-11: Navigate to product detail page via item image
+    @TestId("310f7524")
     @Tag("functional")
     @Test
     public void testNavigateToProductDetailPageViaItemImage() {
@@ -321,6 +332,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-INV-12: Navigate to shopping cart page
+    @TestId("ac7cf877")
     @Tag("critical")
     @Test
     public void testNavigateToShoppingCartPage() throws InterruptedException {
@@ -346,6 +358,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     6. Burger menu functionality
     * */
     // TC-INV-13: Open and close sidebar burger menu
+    @TestId("a54d640a")
     @Tag("edge")
     @Test
     public void testOpenAndCloseSidebarBurgerMenu() throws InterruptedException {
@@ -371,6 +384,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-INV-14: Sidebar "All Items" link
+    @TestId("f44d88f8")
     @Tag("edge")
     @Test
     public void testSidebarAllItemsLink() {
@@ -384,6 +398,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-INV-15: Sidebar "About" link
+    @TestId("8f92cd69")
     @Tag("edge")
     @Test
     public void testSidebarAboutLink() {
@@ -396,6 +411,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-INV-16: Sidebar "Reset App State"
+    @TestId("862bda44")
     @Tag("functional")
     @Test
     public void testSidebarResetAppState() throws InterruptedException {
@@ -425,6 +441,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-INV-17: Sidebar "Logout"
+    @TestId("3b5a93dc")
     @Tag("critical")
     @Test
     public void testSidebarLogout() {
@@ -440,6 +457,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
      * 7. Footer links and legal text validation
      * */
     // TC-INV-18: Verify social media external links
+    @TestId("891d08a0")
     @Tag("edge")
     @Test
     public void testVerifySocialMediaExternalLinks() throws InterruptedException {
@@ -490,6 +508,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-INV-19: Verify footer copyright and policy text
+    @TestId("fda6eaad")
     @Tag("edge")
     @Test
     public void testVerifyFooterCopyrightAndPolicyText() {
@@ -505,6 +524,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     8. State persistence and security / session guards
     * */
     // TC-INV-20: Cart state persistence on page reload
+    @TestId("7c41fb21")
     @Tag("edge")
     @Test
     public void testCartStatePersistenceOnPageReload() {
@@ -532,6 +552,7 @@ public class Junit5Inventory1Tests extends AbstractChromeWebDriverTest {
     }
 
     // TC-INV-21: Unauthorized direct access to inventory page
+    @TestId("15844dd7")
     @Tag("edge")
     @Test
     public void testUnauthorizedDirectAccessToInventoryPage() {
