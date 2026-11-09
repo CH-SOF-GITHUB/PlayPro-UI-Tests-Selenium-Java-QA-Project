@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Locale;
 
 
-public class Junit5CheckoutTests extends AbstractChromeWebDriverTest {
+public class Junit5Checkout1Tests extends AbstractChromeWebDriverTest {
 
     // define financial calculations variables
     BigDecimal itemTotal = BigDecimal.ZERO;
@@ -75,6 +75,7 @@ public class Junit5CheckoutTests extends AbstractChromeWebDriverTest {
     //
     private static final By CART_CHECKOUT_OVERVIEW_FINISH_BTN = By.id("finish");
     private static final By CART_CHECKOUT_OVERVIEW_CANCEL_BTN = By.id("cancel");
+    private static final By CART_CHECKOUT_COMPLETE_BACK_HOME = By.name("back-to-products");
     //
     private static final By CART_CHECKOUT_COMPLETE_HEADER = By.className("complete-header");
 
@@ -608,6 +609,48 @@ public class Junit5CheckoutTests extends AbstractChromeWebDriverTest {
         String expected_Total = String.format(Locale.US, "$%.2f", expTotal);
         Assertions.assertEquals(actual_Total, expected_Total);
     }
+
+    // TC-CHK-13: Cart badge and session reset upon order completion
+    // Réinitialisation du badge du panier et de la session une fois la commande terminée
+    @Tag("Critical")
+    @Test
+    public void testCartBadgeAndSessionResetUponOrderCompletion() throws InterruptedException {
+        // STEP 1: User completes order and reaches '\checkout-complete.html'
+        for (int i = 0; i < 3; i++) {
+            getProducts().get(i).findElement(INVENTORY_BOUTON_ACTION).click();
+            Thread.sleep(500);
+        }
+        driver.findElement(CART_LINK).click();
+        driver.findElement(CART_CHECKOUT_BTN).click();
+        // Enter First Name into step-one of checkout
+        swagLabsActionPage.enter(CART_CHECKOUT_FIRST_NAME, "Chaker");
+        // Enter Last Name into step-one of checkout
+        swagLabsActionPage.enter(CART_CHECKOUT_LAST_NAME, "Ben Said");
+        // Enter Zip/Postal Code into step-one of checkout
+        swagLabsActionPage.enter(CART_CHECKOUT_POSTAL_CODE, "056478");
+        //Click Continue to submit the customer information.
+        driver.findElement(CART_CHECKOUT_CONTINUE_BTN).click();
+        // Click on Finish button
+        driver.findElement(CART_CHECKOUT_OVERVIEW_FINISH_BTN).click();
+        boolean isCheckoutCompletePage = swagLabsActionPage.isUrlOK(BASE_URL, "/checkout-complete.html");
+        Assertions.assertTrue(isCheckoutCompletePage);
+        String ThankYouForYourOrderMsg = driver.findElement(CART_CHECKOUT_COMPLETE_HEADER).getText();
+        Assertions.assertEquals("Thank you for your order!", ThankYouForYourOrderMsg);
+        // STEP 2: Verify cart icon in upper right has no badge counter.
+        boolean cartIconHasNoBadgeCounter = swagLabsActionPage.compareAttribute(CART_LINK, "aria-label", "Cart, empty");
+        Assertions.assertTrue(cartIconHasNoBadgeCounter);
+        // STEP 3: Click "Back Home" button
+        driver.findElement(CART_CHECKOUT_COMPLETE_BACK_HOME).click();
+        // STEP 4: Verify navigation to '/inventory.html'
+        boolean isTheInventoryPage = swagLabsActionPage.isUrlOK(BASE_URL, "/inventory.html");
+        Assertions.assertTrue(isTheInventoryPage);
+        // STEP 5: Verify all inventory buttons read "Add to cart" rather than "Remove"
+        for (int i = 0; i < 6; i++) {
+            String ActualBtnActionText = getProducts().get(i).findElement(INVENTORY_BOUTON_ACTION).getText();
+            Assertions.assertEquals("Add to cart", ActualBtnActionText);
+        }
+    }
+
 
     // Methods of class tests
     // sample login method
