@@ -1,4 +1,5 @@
-package com.qa.cucumber.bdd;
+/*
+package com.qa.cucumber.hooks;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -129,16 +130,20 @@ public class Hooks {
             // Initialize the ActionDriver object
             actionDriver.set(new ActionDriver(getDriver()));
 
-            /* Puisque ton ActionDriver est conçu autour de BaseClass, il faut que le WebDriver créé par Cucumber soit également enregistré dans BaseClass. * */
+            */
+/* Puisque ton ActionDriver est conçu autour de BaseClass, il faut que le WebDriver créé par Cucumber soit également enregistré dans BaseClass. * *//*
+
             BaseClass.setDriver(driver.get());
 
             log.warn("ActionDriver Instance Initialized successfully For Cucumber Methods BDD");
 
-            /* The return value of "ExtentManager.getTest()" is null because of logSteps contain ActionDriver Class
+            */
+/* The return value of "ExtentManager.getTest()" is null because of logSteps contain ActionDriver Class
             logFailureWithScreenshot is called from ActionDriver Class, so we need to register the driver in ExtentManager
             Quand TestNG démarre -> ExtentTest est créé pour la méthode Runner TestNG.
             Quand Hooks @Before s'exécute -> ExtentTest est écrasé par le test Cucumber.
-            */
+            *//*
+
             ExtentManager.startTest("Cucumber - " + Thread.currentThread().getId());
         } catch (Exception e) {
             log.error("\n🚀... Initialization of CUCUMBER Web Driver Fails: " + e.getMessage());
@@ -157,11 +162,11 @@ public class Hooks {
             if (getDriver() != null) {
                 File srcFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
                 if (scenario.getStatus() == Status.PASSED) {
-                    FileUtils.copyFile(srcFile, new File("src/test/java/com/qa/cucumber/bdd/Screenshots/success/scenarioPassed_" + scenarioName + ".png"));
+                    FileUtils.copyFile(srcFile, new File("src/test/java/com/qa/cucumber/stepdefs/screenshots/success/scenarioPassed_" + scenarioName + ".png"));
                 } else if (scenario.getStatus() == Status.FAILED) {
-                    FileUtils.copyFile(srcFile, new File("src/test/java/com/qa/cucumber/bdd/Screenshots/failure/scenarioFailed_" + scenarioName + ".png"));
+                    FileUtils.copyFile(srcFile, new File("src/test/java/com/qa/cucumber/stepdefs/screenshots/failure/scenarioFailed_" + scenarioName + ".png"));
                 } else if (scenario.getStatus() == Status.SKIPPED) {
-                    FileUtils.copyFile(srcFile, new File("src/test/java/com/qa/cucumber/bdd/Screenshots/skipped/scenarioSkipped_" + scenarioName + ".png"));
+                    FileUtils.copyFile(srcFile, new File("src/test/java/com/qa/cucumber/stepdefs/screenshots/skipped/scenarioSkipped_" + scenarioName + ".png"));
                 }
             }
         } catch (Exception e) {
@@ -228,3 +233,4 @@ public class Hooks {
         return browser.get();
     }
 }
+*/
