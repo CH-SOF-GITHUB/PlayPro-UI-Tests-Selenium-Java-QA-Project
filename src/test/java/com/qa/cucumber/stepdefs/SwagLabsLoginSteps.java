@@ -12,6 +12,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.qa.pages.SwagLabs.SwagLabsActionPage;
+import org.testcontainers.shaded.org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
 
 import java.util.List;
@@ -86,6 +87,17 @@ public class SwagLabsLoginSteps {
         List<Map<String, String>> dataMap = data.asMaps(String.class, String.class);
         swagLabsActionPage.enter(SwagLabsLocators.CHAMP_USERNAME, dataMap.get(4).get("userName"));
         swagLabsActionPage.enter(SwagLabsLocators.CHAMP_PASSWORD, dataMap.get(4).get("Password"));
+        Thread.sleep(500);
+        swagLabsActionPage.enter(SwagLabsLocators.CHAMP_PASSWORD, String.valueOf(Keys.ENTER));
+    }
+
+    @When("User enters and click login button Random Alphanumeric")
+    public void userEntersAndClickLoginButtonRandomAlphanumeric(DataTable data) throws InterruptedException {
+        String s = RandomStringUtils.randomAlphabetic(4);
+
+        List<Map<String, String>> dataMap = data.asMaps(String.class, String.class);
+        swagLabsActionPage.enter(SwagLabsLocators.CHAMP_USERNAME, dataMap.get(4).get("userName") + s);
+        swagLabsActionPage.enter(SwagLabsLocators.CHAMP_PASSWORD, dataMap.get(4).get("Password") + s);
         Thread.sleep(500);
         swagLabsActionPage.enter(SwagLabsLocators.CHAMP_PASSWORD, String.valueOf(Keys.ENTER));
     }
