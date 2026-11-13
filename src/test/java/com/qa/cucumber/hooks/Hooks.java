@@ -3,6 +3,7 @@ package com.qa.cucumber.hooks;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import io.cucumber.java.Status;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -26,7 +27,10 @@ public class Hooks {
 
     @After
     public void tearDown(Scenario scenario) {
-        if (scenario.isFailed()) {
+        if (scenario.getStatus().equals(Status.PASSED)) {
+            System.out.println("Test Pass");
+        } else if (scenario.isFailed()) {
+            System.out.println("Test Failed");
             byte[] shot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             // Attach image directement dans le rapport cucumber
             scenario.attach(shot, "image/png", "failed screenshot");
@@ -34,7 +38,7 @@ public class Hooks {
         driver.quit();
     }
 
-    @Before(value = "@api")
+    @Before(value = "@api", order = 1)
     public void apiSetup() {
     }
 

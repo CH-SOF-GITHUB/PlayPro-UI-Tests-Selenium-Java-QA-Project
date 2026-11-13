@@ -2,6 +2,7 @@ package com.qa.cucumber.stepdefs;
 
 import com.qa.cucumber.hooks.Hooks;
 import com.qa.cucumber.locators.SwagLabsLocators;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,6 +15,7 @@ import org.qa.pages.SwagLabs.SwagLabsActionPage;
 import org.testng.Assert;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class SwagLabsLoginSteps {
@@ -48,14 +50,14 @@ public class SwagLabsLoginSteps {
         // Write code here that turns the phrase above into concrete actions
         boolean isInventoryPage = Objects.requireNonNull(driver.getCurrentUrl()).contains("/inventory.html");
         Assert.assertTrue(isInventoryPage);
-        String isInventoryPageTitle = swagLabsActionPage.getElementText(SwagLabsLocators.INVENTORY_PRODUCTS_TITLE);
+        String isInventoryPageTitle = swagLabsActionPage.getElementText(SwagLabsLocators.INVENTORY_PAGE_TITLE);
         Assertions.assertEquals("Products", isInventoryPageTitle, "The inventory page Title does not match !");
     }
 
     @Then("The error message {string} is shown")
     public void theErrorMessageIsShown(String errorMsg) {
         // Write code here that turns the phrase above into concrete actions
-        String errorMessage = driver.findElement(SwagLabsLocators.ERROR_FIELD).getText();
+        String errorMessage = swagLabsActionPage.getElementText(SwagLabsLocators.ERROR_FIELD);
         Assert.assertEquals(errorMessage, errorMsg, "Error message not shown yet !");
     }
 
@@ -64,5 +66,27 @@ public class SwagLabsLoginSteps {
         // Write code here that turns the phrase above into concrete actions
         List<WebElement> products = swagLabsActionPage.getList(SwagLabsLocators._PRODUCT_ITEMS);
         Assertions.assertEquals(products.size(), nbrOfProds, "The inventory page does not display the number exact of products !");
+    }
+
+    @When("User enters and click login button Table Method")
+    public void userEntersAndClickLoginButtonTableMethod(DataTable data) throws InterruptedException {
+        // cucumber version 7
+        // DataTable concept
+        List<List<String>> dataList = data.asLists(String.class);
+        // Input the data based on index
+        swagLabsActionPage.enter(SwagLabsLocators.CHAMP_USERNAME, dataList.get(0).get(0));
+        swagLabsActionPage.enter(SwagLabsLocators.CHAMP_PASSWORD, dataList.get(0).get(1));
+        Thread.sleep(500);
+        swagLabsActionPage.enter(SwagLabsLocators.CHAMP_PASSWORD, String.valueOf(Keys.ENTER));
+
+    }
+
+    @When("User enters and click login button Map Method")
+    public void userEntersAndClickLoginButtonMapMethod(DataTable data) throws InterruptedException {
+        List<Map<String, String>> dataMap = data.asMaps(String.class, String.class);
+        swagLabsActionPage.enter(SwagLabsLocators.CHAMP_USERNAME, dataMap.get(4).get("userName"));
+        swagLabsActionPage.enter(SwagLabsLocators.CHAMP_PASSWORD, dataMap.get(4).get("Password"));
+        Thread.sleep(500);
+        swagLabsActionPage.enter(SwagLabsLocators.CHAMP_PASSWORD, String.valueOf(Keys.ENTER));
     }
 }

@@ -6,6 +6,42 @@ A feature file (plain text) is linked to Java code with Step Definitions.
 Works with Selenium, REST Assured, Appium and more. Languages: Java, JS, Ruby.
 (Feature File ----> Step Definitions ----> Selenium/API Code ----> Result Report)
 
+It's a Behavior Development test tool (BDD).
+Cucumber is a software tool used by computer programmers used for testing the developed software's.
+It runs automated acceptance test written in BDD.
+
+Feature File: exp, login.feature
+The Feature can be defined as a standalone unit or functionality of a project.
+This file, which Cucumber tests are written in Gherkin syntax.
+It's favorable that should be a separate feature file, for each feature under test.
+One can create as many feature files as needed. To have an organized structure, each
+feature should have one feature file.
+Example of few Gherkin keywords:
+ Background
+ But
+ *
+ Scenario Outline
+ Examples
+
+User Story Format:
+As a (role), I want (goal), so that (benefit).
+Example, As a User, I want to log in, so I can see my orders.
+Story from Google.com:
+Card Template:
+As a _____________ T want to _____________ So that ______________.
+Acceptance criteria:
+- Verify that ...
+
+
+StepDefinitions:
+Cucumber execute each piece of code or function that explain the scenario defined in the feature file.
+Steps definition file stores the mapping between each step of the scenario defined 
+in the feature file with a code of function to be executed.
+So, now when Cucumber executes a step of the scenario mentioned in the feature file, it
+scans the step definition file and figures out which function is to be called.
+
+
+
 Why teams use it:
 Everyone understands the tests. They are living documentation.
 Clear rules before code starting. Fewer misunderstandings.
@@ -18,9 +54,6 @@ Bad steps become long and messy. Good writing needs practice.
 
 BDD is a process (talk before you code). Cucumber is just a tool that supports BDD. Do not say they are the same thing.
 
-User Story Format:
-As a (role), I want (goal), so that (benefit).
-Example, As a User, I want to log in, so I can see my orders.
 
 Popular BDD tools: Cucumber (Java,JS), SpecFlow (.NET), Behave (Python).
 A feature file can also be a requirement document for the team.

@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
         features = "src/test/resources/features/SwagLabs",
         glue = {"com.qa.cucumber.stepdefs", "com.qa.cucumber.hooks"},
         tags = "@smoke and @negative",    // Profiles > Run/Debug Configurations > Cucumber Options > Tags
-        plugin = {"pretty", "html:target/cucumber-report.html", "json:target/cucumber.json"},
+        plugin = {"pretty", "html:target/cucumber-report.html", "json:target/cucumber-report.json", "junit:target/cucumber-report.xml"},
         monochrome = true,
         dryRun = false
 )
