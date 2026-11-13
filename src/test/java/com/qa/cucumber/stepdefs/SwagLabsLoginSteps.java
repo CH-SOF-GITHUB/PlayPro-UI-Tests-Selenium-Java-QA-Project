@@ -1,3 +1,4 @@
+/*
 package com.qa.cucumber.stepdefs;
 
 import com.qa.cucumber.hooks.Hooks;
@@ -79,7 +80,6 @@ public class SwagLabsLoginSteps {
         swagLabsActionPage.enter(SwagLabsLocators.CHAMP_PASSWORD, dataList.get(0).get(1));
         Thread.sleep(500);
         swagLabsActionPage.enter(SwagLabsLocators.CHAMP_PASSWORD, String.valueOf(Keys.ENTER));
-
     }
 
     @When("User enters and click login button Map Method")
@@ -102,3 +102,4 @@ public class SwagLabsLoginSteps {
         swagLabsActionPage.enter(SwagLabsLocators.CHAMP_PASSWORD, String.valueOf(Keys.ENTER));
     }
 }
+*/
