@@ -57,3 +57,6 @@ Hooks.setBrowser(browser);
 */
 ------------------------------------------------------------------------------------------------------------------------
 mvn test "-Dcucumber.filter.tags=@smoke"
+mvn test "-Dcucumber.filter.tags=@negative"
+
+mvn test -Dcucumber.filter.tags="@swagLabsLogin"

@@ -37,3 +37,40 @@ set TESTOMATIO=tstmt_PIYAdyOv5Zm3b6bY4WOw_vk49NLsdZ-HiQ1793099007&& mvn test -Pj
 $env:TESTOMATIO=tstmt_PIYAdyOv5Zm3b6bY4WOw_vk49NLsdZ-HiQ1793099007; mvn test -Pjunit5 "-Dtest=Junit5Inventory1Tests"
 
 $env:TESTOMATIO="tstmt_PIYAdyOv5Zm3b6bY4WOw_vk49NLsdZ-HiQ1793099007"; mvn test -Pjunit5 "-Dtest=Junit5InvalidLoginTests"
+
+
+
+JUnit 5 = JUnit Platform + JUnit Jupiter + JUnit Vintage
+
+The JUnit Platform serves as a foundation for launching testing frameworks on the JVM. 
+It also defines the TestEngine API for developing a testing framework that runs on the platform. 
+Furthermore, the platform provides a Console Launcher to launch the platform from the command line and a JUnit 4 based Runner 
+for running any TestEngine on the platform in a JUnit 4 based environment. 
+First-class support for the JUnit Platform also exists in popular IDEs (see IntelliJ IDEA, Eclipse, NetBeans, and Visual Studio Code) 
+and build tools (see Gradle, Maven, and Ant).
+
+JUnit Jupiter is the combination of the new programming model and extension model for writing tests and extensions in JUnit 5. 
+The Jupiter sub-project provides a TestEngine for running Jupiter based tests on the platform.
+
+JUnit Vintage provides a TestEngine for running JUnit 3 and JUnit 4 based tests on the platform.
+
+
+JUnit 5 (également connu sous le nom de JUnit Jupiter) est le framework de tests unitaires de référence pour Java et la JVM (nécessite Java 8 ou supérieur).
+Architecture de JUnit 5:
+L'écosystème JUnit 5 se divise en trois sous-projets principaux :
+• JUnit Platform : Le socle d'exécution qui permet de lancer les frameworks de test sur la JVM (via IDE ou outils de build comme Maven/Gradle).
+• JUnit Jupiter : Le nouveau modèle de programmation et d'extension pour écrire des tests et des assertions.
+• JUnit Vintage : Un moteur de compatibilité permettant d'exécuter les anciens tests écrits en JUnit 3 ou 4.
+
+
+Quick Reference:
+Task	        Command
+Run all	     mvn test or ./gradlew test
+Run class	 mvn test -Dtest=UserServiceTest
+Run method	 mvn test -Dtest=UserServiceTest#createUser_succeeds
+Run tagged	 @Tag("slow") + mvn test -Dgroups="slow"
+Disable	     @Disabled("Reason")
+Conditional	 @EnabledOnOs(OS.LINUX)
+Timeout	     @Timeout(value = 5, unit = TimeUnit.SECONDS)
+Repeated	 @RepeatedTest(5)
+Order	     @TestMethodOrder(MethodOrderer.OrderAnnotation.class)

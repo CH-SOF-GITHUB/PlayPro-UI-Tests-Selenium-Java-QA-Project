@@ -20,7 +20,7 @@ jobs:
           browser: chrome
 
       # Étape 4 : Télécharger les captures d'écran en cas d'échec
-      - name: Upload Cypress Screenshots
+      - name: Upload Cypress screenshots
         uses: actions/upload-artifact@v4
         if: failure()
         with:

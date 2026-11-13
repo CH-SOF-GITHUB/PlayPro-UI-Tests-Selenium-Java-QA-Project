@@ -48,7 +48,7 @@ public class DragDropTests {
         a.dragAndDrop(src, dst).build().perform();
         // Capture Screen Shot fo Browser
         File srcFile1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/tests/Screenshots/allure/DragAndDrop.png"));
+        FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/tests/screenshots/allure/DragAndDrop.png"));
     }
 
     @Test(testName = "Drag And Drop Test 2", description = "This test attempts to drag and drop to specific position.")
@@ -67,7 +67,7 @@ public class DragDropTests {
         a.dragAndDropBy(src, 200, 0).build().perform();
         // Capture Screen Shot fo Browser
         File srcFile1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/tests/Screenshots/allure/DragAndDrop2.png"));
+        FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/tests/screenshots/allure/DragAndDrop2.png"));
     }
 
     @Test(testName = "Drag And Drop Test 2", description = "This test attempts to drag and drop by mouse movement.")
@@ -87,7 +87,7 @@ public class DragDropTests {
         a.moveToElement(src).clickAndHold().pause(Duration.ofMillis(500)).moveToElement(dst).pause(Duration.ofMillis(500)).release().build().perform();
         // Capture Screen Shot fo Browser
         File srcFile1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/tests/Screenshots/allure/DragAndDrop3.png"));
+        FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/tests/screenshots/allure/DragAndDrop3.png"));
         Thread.sleep(10000);
     }
 }

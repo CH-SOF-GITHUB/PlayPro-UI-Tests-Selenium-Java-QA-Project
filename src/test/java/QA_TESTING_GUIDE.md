@@ -678,7 +678,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         driver.get("https://demotenant.playpro.fr/connexion");
     }
 ########################################################################################################################################################
-package com.qa.cucumber.bdd;
+package com.qa.cucumber.stepdefs;
 
 import com.qa.configuration.LTConfigCucumber;
 import io.cucumber.java.After;

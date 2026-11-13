@@ -15946,3 +15946,23 @@ Session ID: 6cf23f5e84693d400df4173e01e6b363
 2026-10-09 18:17:37 [main] INFO  TestListener - ===============================================
 2026-10-09 18:17:37 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
 2026-10-09 18:17:37 [main] INFO  TestListener - ===============================================
+2026-11-12 16:02:46 [main] INFO  TestListener - ================================================
+2026-11-12 16:02:46 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-11-12 16:02:46 [main] INFO  TestListener - ================================================
+2026-11-12 16:02:47 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-11-12 16:02:48 [main] INFO  TestListener - ===============================================
+2026-11-12 16:02:48 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-11-12 16:02:48 [main] INFO  TestListener - ===============================================
+2026-11-12 16:07:57 [main] INFO  TestListener - ================================================
+2026-11-12 16:07:57 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-11-12 16:07:57 [main] INFO  TestListener - ================================================
+2026-11-12 16:07:58 [main] INFO  TestListener - ===============================================
+2026-11-12 16:07:58 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-11-12 16:07:58 [main] INFO  TestListener - ===============================================
+2026-11-12 16:15:56 [main] INFO  TestListener - ================================================
+2026-11-12 16:15:56 [main] INFO  TestListener - Test suite started: Test EventHUB - chrome
+2026-11-12 16:15:56 [main] INFO  TestListener - ================================================
+2026-11-12 16:15:58 [main] INFO  TestListener - ****************** Test Started: runScenario ******************
+2026-11-12 16:16:17 [main] INFO  TestListener - ===============================================
+2026-11-12 16:16:17 [main] INFO  TestListener - Test suite finished: Test EventHUB - chrome
+2026-11-12 16:16:17 [main] INFO  TestListener - ===============================================

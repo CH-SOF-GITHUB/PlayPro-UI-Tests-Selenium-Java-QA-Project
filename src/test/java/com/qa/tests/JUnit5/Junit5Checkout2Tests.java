@@ -1,14 +1,12 @@
 package com.qa.tests.JUnit5;
 
 import com.qa.tests.AbstractChromeWebDriverTest;
-import io.qameta.allure.Param;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -370,11 +368,104 @@ public class Junit5Checkout2Tests extends AbstractChromeWebDriverTest {
         Assertions.assertEquals(expectedTotal, OrderTotal);
     }
 
+    // TC12: Click multiple products in inventory page
+    @ParameterizedTest
+    @CsvSource({
+            "0, 1, 3, 4",
+            "1, 2, 3, 4",
+            "2, 3, 4, 5"
+    })
+    public void testAddMultipleProductsFlow(int index1, int index2, int index3, int index4) throws InterruptedException {
+        // Click on corresponding Products
+        int[] indexes = {index1, index2, index3, index4};
+        for (int index : indexes) {
+            getProducts().get(index).findElement(INVENTORY_BOUTON_ACTION).click();
+            Thread.sleep(500);
+        }
+        // Assertion cart badge icon counter
+        boolean cartIconBadgeCounter = swagLabsActionPage.compareElement(SHOPPING_CART_BADGE, 4);
+        Assertions.assertTrue(cartIconBadgeCounter);
+    }
+
+    // TC13: Add multiple products in inventory page
+    // and validate step-one.html page with multiple customer data.
+    @ParameterizedTest
+    @CsvSource({
+            "0, 1, 3, 4, Jane, Doe, 02138",
+            "1, 2, 3, 4, John, Smith, 10001",
+            "2, 3, 4, 5, Alice, Wonderland, 90210",
+            "3, 4, 5, 1, Test, QA, AB-1234"
+    })
+    public void testAddMultipleProductsWithCustomerDataFlow(int index1, int index2, int index3, int index4, String firstname, String lastname, String zipcode) throws InterruptedException {
+        // Click on corresponding Products
+        int[] indexes = {index1, index2, index3, index4};
+        for (int index : indexes) {
+            getProducts().get(index).findElement(INVENTORY_BOUTON_ACTION).click();
+            Thread.sleep(500);
+        }
+        // Assertion cart badge icon counter
+        boolean cartIconBadgeCounter = swagLabsActionPage.compareElement(SHOPPING_CART_BADGE, 4);
+        Assertions.assertTrue(cartIconBadgeCounter);
+        // Navigate to Shopping Cart
+        driver.findElement(CART_LINK).click();
+        // Click on Checkout button
+        driver.findElement(CART_CHECKOUT_BTN).click();
+        // Validate and enter personal information (First Name, Last Name, Postal Code) into step-one.html
+        // Enter "Jane" into First Name.
+        swagLabsActionPage.enter(CART_CHECKOUT_FIRST_NAME, firstname);
+        // Enter "Doe" into Last Name.
+        swagLabsActionPage.enter(CART_CHECKOUT_LAST_NAME, lastname);
+        // Enter "02138" into Zip/Postal Code.
+        swagLabsActionPage.enter(CART_CHECKOUT_POSTAL_CODE, zipcode);
+        // Click "Continue".
+        driver.findElement(CART_CHECKOUT_CONTINUE_BTN).click();
+        // Verify navigation to checkout-step-two.html with title "Checkout: Overview".
+        boolean isCheckoutStep2Title = swagLabsActionPage.compareElement(CART_CHECKOUT_OVERVIEW_TITLE, "Checkout: Overview");
+        Assertions.assertTrue(isCheckoutStep2Title, "Checkout page should display the correct title 'Checkout: Your Information'.");
+        boolean isCheckoutStep2Page = swagLabsActionPage.isUrlOK(BASE_URL, "/checkout-step-two.html");
+        Assertions.assertTrue(isCheckoutStep2Page);
+    }
+
+    // TC14: Add multiple products in inventory page.
+    // and validate step-one.html page with multiple customer data using csv file.
+    @ParameterizedTest
+    @CsvFileSource(resources = "/testdata/multiple_products_customer_data.csv", numLinesToSkip = 1)
+    public void testAddMultipleProductsWithCustomerDataCsvFlow(int index1, int index2, int index3, int index4, String firstname, String lastname, String zipcode) throws InterruptedException {
+        // Click on corresponding Products
+        int[] indexes = {index1, index2, index3, index4};
+        for (int index : indexes) {
+            getProducts().get(index).findElement(INVENTORY_BOUTON_ACTION).click();
+            Thread.sleep(500);
+        }
+        // Assertion cart badge icon counter
+        boolean cartIconBadgeCounter = swagLabsActionPage.compareElement(SHOPPING_CART_BADGE, 4);
+        Assertions.assertTrue(cartIconBadgeCounter);
+        // Navigate to Shopping Cart
+        driver.findElement(CART_LINK).click();
+        // Click on Checkout button
+        driver.findElement(CART_CHECKOUT_BTN).click();
+        // Validate and enter personal information (First Name, Last Name, Postal Code) into step-one.html
+        // Enter "Jane" into First Name.
+        swagLabsActionPage.enter(CART_CHECKOUT_FIRST_NAME, firstname);
+        // Enter "Doe" into Last Name.
+        swagLabsActionPage.enter(CART_CHECKOUT_LAST_NAME, lastname);
+        // Enter "02138" into Zip/Postal Code.
+        swagLabsActionPage.enter(CART_CHECKOUT_POSTAL_CODE, zipcode);
+        // Click "Continue".
+        driver.findElement(CART_CHECKOUT_CONTINUE_BTN).click();
+        // Verify navigation to checkout-step-two.html with title "Checkout: Overview".
+        boolean isCheckoutStep2Title = swagLabsActionPage.compareElement(CART_CHECKOUT_OVERVIEW_TITLE, "Checkout: Overview");
+        Assertions.assertTrue(isCheckoutStep2Title, "Checkout page should display the correct title 'Checkout: Your Information'.");
+        boolean isCheckoutStep2Page = swagLabsActionPage.isUrlOK(BASE_URL, "/checkout-step-two.html");
+        Assertions.assertTrue(isCheckoutStep2Page);
+    }
+
     // TC0xxx:
     /*@Test
     public void testCompleteEndToEndCheckoutFlow() {
         // Scénario global combinant tous les flux modulaires
         // Enchaîne tous les flux modulaires (Connexion ➔ Ajout au panier ➔ Tunnel d'achat étape 1 & 2 ➔ Validation de la commande réussie / CHECKOUT: COMPLETE!).
+
     }*/
 
 

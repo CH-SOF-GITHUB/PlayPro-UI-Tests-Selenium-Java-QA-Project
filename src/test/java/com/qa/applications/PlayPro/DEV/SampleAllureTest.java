@@ -19,7 +19,7 @@ public class SampleAllureTest {
         System.out.println("Testing My Site Web ok");
         Thread.sleep(10000);
         Allure.attachment("data.txt", "This is the file content.");
-        try (InputStream is = Files.newInputStream(Paths.get("src/test/java/com/qa/tests/Screenshots/allure/img.png"))) {
+        try (InputStream is = Files.newInputStream(Paths.get("src/test/java/com/qa/tests/screenshots/allure/img.png"))) {
             Allure.attachment("image.png", is);
         }
     }

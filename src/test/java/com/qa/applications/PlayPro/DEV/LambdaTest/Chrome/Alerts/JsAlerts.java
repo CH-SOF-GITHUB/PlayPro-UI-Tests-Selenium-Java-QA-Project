@@ -47,7 +47,7 @@ public class JsAlerts {
         al.accept();
         // Capture Screen Shot fo Browser
         File srcFile1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/tests/Screenshots/allure/simpleAlert.png"));
+        FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/tests/screenshots/allure/simpleAlert.png"));
     }
 
     @Test(testName = "Try Simple Alert 2", description = "This test attempts to handle and dismiss a simple alert.")
@@ -69,7 +69,7 @@ public class JsAlerts {
         al.dismiss();
         // Capture Screen Shot fo Browser
         File srcFile2 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile2, new File("src/test/java/com/qa/tests/Screenshots/allure/simpleAlert2.png"));
+        FileUtils.copyFile(srcFile2, new File("src/test/java/com/qa/tests/screenshots/allure/simpleAlert2.png"));
     }
 
     @Test(testName = "Try Prompt Alert 1", description = "This test attempts to handle a prompt alert, accept alert and send Text.")
@@ -96,7 +96,7 @@ public class JsAlerts {
         System.out.println("Prompt Alert Message is: " + promptMsg.getText());
         // Capture Screen Shot fo Browser
         File srcFile2 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile2, new File("src/test/java/com/qa/tests/Screenshots/allure/PromptAlert1.png"));
+        FileUtils.copyFile(srcFile2, new File("src/test/java/com/qa/tests/screenshots/allure/PromptAlert1.png"));
     }
 
     @Test(testName = "Try Prompt Alert 2", description = "This test attempts to handle a prompt alert, dismiss alert and send Text.")
@@ -123,7 +123,7 @@ public class JsAlerts {
         System.out.println("Prompt Alert Message is: " + promptMsg.getText());
         // Capture Screen Shot fo Browser
         File srcFile2 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile2, new File("src/test/java/com/qa/tests/Screenshots/allure/PromptAlert2.png"));
+        FileUtils.copyFile(srcFile2, new File("src/test/java/com/qa/tests/screenshots/allure/PromptAlert2.png"));
     }
 
     @Test(testName = "Try Confirm Alert 1", description = "This test attempts to handle a confirm alert, accept alert and send Text.")
@@ -148,7 +148,7 @@ public class JsAlerts {
         System.out.println("Prompt Alert Message is: " + promptMsg.getText());
         // Capture Screen Shot fo Browser
         File srcFile2 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile2, new File("src/test/java/com/qa/tests/Screenshots/allure/ConfirmAlert1.png"));
+        FileUtils.copyFile(srcFile2, new File("src/test/java/com/qa/tests/screenshots/allure/ConfirmAlert1.png"));
     }
 
     @Test(testName = "Try Confirm Alert 2", description = "This test attempts to handle a confirm alert, dismiss alert and send Text.")
@@ -173,6 +173,6 @@ public class JsAlerts {
         System.out.println("Prompt Alert Message is: " + promptMsg.getText());
         // Capture Screen Shot fo Browser
         File srcFile2 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile2, new File("src/test/java/com/qa/tests/Screenshots/allure/ConfirmAlert2.png"));
+        FileUtils.copyFile(srcFile2, new File("src/test/java/com/qa/tests/screenshots/allure/ConfirmAlert2.png"));
     }
 }

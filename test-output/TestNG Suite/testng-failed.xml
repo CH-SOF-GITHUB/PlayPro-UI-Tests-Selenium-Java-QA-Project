@@ -8,14 +8,14 @@
   <test thread-count="4" name="Test EventHUB - chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.qa.cucumber.runners.CucumberTest">
+      <class name="com.qa.cucumber.runner.CucumberTest">
         <methods>
           <include name="setUpClass"/>
           <include name="configureBrowser"/>
           <include name="tearDownClass"/>
           <include name="runScenario" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.qa.cucumber.runners.CucumberTest -->
+      </class> <!-- com.qa.cucumber.runnerCucumberTest -->
     </classes>
   </test> <!-- Test EventHUB - chrome(failed) -->
 </suite> <!-- Failed suite [TestNG Suite] -->

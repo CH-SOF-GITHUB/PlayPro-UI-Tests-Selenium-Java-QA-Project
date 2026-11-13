@@ -43,7 +43,7 @@ public class TCGroupLogin01 extends LTConfig {
             String ActualURL = driver.getCurrentUrl();
             Assert.assertEquals(ActualURL, ExpectedURL, "Login Failed!");
             // get screenshot
-            // webLoginPage.takeSnapShot(driver, "src/test/java/tests/Screenshots/TestngGroupValidLogin.png");
+            // webLoginPage.takeSnapShot(driver, "src/test/java/tests/screenshots/TestngGroupValidLogin.png");
         } catch (Exception e) {
             e.getStackTrace();
         }
@@ -63,7 +63,7 @@ public class TCGroupLogin01 extends LTConfig {
             String ActualErrorMsg = webLoginPage.GetLoginErrorMessage();
             Assert.assertEquals(ActualErrorMsg, ExpectedErrorMsg, "Login Failed!");
             // get screenshot
-            // webLoginPage.takeSnapShot(driver, "src/test/java/tests/Screenshots/TestngGroupInvalidLogin.png");
+            // webLoginPage.takeSnapShot(driver, "src/test/java/tests/screenshots/TestngGroupInvalidLogin.png");
         } catch (Exception e) {
             e.getStackTrace();
         }

@@ -38,7 +38,7 @@ public class Junit4Inventory2Tests extends AbstractJunit4ChromeWebDriverTest {
     @Rule
     public TestName testName = new TestName();
 
-    // ---------- Scenario 1 : affichage global et integrite des elements ----------
+    // ---------- Scenario 1 : affichage global et integrite des elements ---------- //
     //TC07
     @TestId("49fc47e9")
     @Test

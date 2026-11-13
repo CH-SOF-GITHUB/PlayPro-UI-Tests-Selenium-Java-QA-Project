@@ -102,3 +102,16 @@ curl -L -O -z testomatio.jar https://github.com/testomatio/java-check-tests/rele
 🛠️ La commande adaptée pour PowerShell :
 Exécutez ce bloc complet dans votre terminal PowerShell :
 curl.exe -L -O -z testomatio.jar https://github.com/testomatio/java-check-tests/releases/latest/download/testomatio.jar; $env:TESTOMATIO="tstmt_PIYAdyOv5Zm3b6bY4WOw_vk49NLsdZ-HiQ1793099007"; java -jar testomatio.jar sync
+
+🛠️ La commande adaptée pour PowerShell :
+Exécutez ce bloc complet dans votre terminal PowerShell :
+$env:TESTOMATIO="tstmt_PIYAdyOv5Zm3b6bY4WOw_vk49NLsdZ-HiQ1793099007"; mvn test -Pjunit5 "-Dtest=Junit5Cart1Tests"
+
+
+🛠️ La commande adaptée pour PowerShell :
+mvn test -Pjunit5 "-Dtest=Junit5Cart1Tests"
+@Tag("swaglabs")   // Tagging the test method
+@Tag("spinner")
+@Tag("smoke")
+@Test
+mvn test -Pjunit5 -Dgroups="swaglabs & spinner & smoke"

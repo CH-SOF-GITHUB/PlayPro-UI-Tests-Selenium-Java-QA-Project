@@ -64,7 +64,7 @@ public class SampleTest {
         // take the screenshot of the menu
         TakesScreenshot ts = (TakesScreenshot) driver;
         File file = ts.getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(file, new File("src/test/java/Mobile/Screenshots/MenuScreenshot.png"));
+        FileUtils.copyFile(file, new File("src/test/java/Mobile/screenshots/MenuScreenshot.png"));
     }
 
     @AfterTest

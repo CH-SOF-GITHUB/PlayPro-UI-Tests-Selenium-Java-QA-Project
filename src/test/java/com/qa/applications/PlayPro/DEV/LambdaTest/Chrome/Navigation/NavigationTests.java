@@ -46,11 +46,11 @@ public class NavigationTests {
         driver.navigate().back();
         // Capture Screen Shot fo Browser
         File srcFile1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/tests/Screenshots/allure/navigateBack.png"));
+        FileUtils.copyFile(srcFile1, new File("src/test/java/com/qa/tests/screenshots/allure/navigateBack.png"));
         // navigate forward to the second page
         driver.navigate().forward();
         // Capture Screen Shot fo Browser
         File srcFile2 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile2, new File("src/test/java/com/qa/tests/Screenshots/allure/navigateForward.png"));
+        FileUtils.copyFile(srcFile2, new File("src/test/java/com/qa/tests/screenshots/allure/navigateForward.png"));
     }
 }
