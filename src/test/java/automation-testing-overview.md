@@ -24,28 +24,28 @@ selenium_automation_framework:
 │          TEST LAYER          │
 │     TestNG / JUnit / Cucumber│
 └──────────────────────────────┘
-↓
+               ↓
 ┌──────────────────────────────┐
 │      PAGE OBJECT LAYER       │
 │    LoginPage / HomePage      │
 └──────────────────────────────┘
-↓
+               ↓
 ┌──────────────────────────────┐
 │      UTILITY / CORE LAYER    │
 │ BaseTest / DriverFactory     │
 │ WaitUtils / ConfigReader     │
 └──────────────────────────────┘
-↓
+              ↓
 ┌──────────────────────────────┐
 │      SELENIUM WEBDRIVER      │
 │   WebDriver API /ChromeDriver│
 └──────────────────────────────┘
-↓
+              ↓
 ┌──────────────────────────────┐
 │           BROWSER            │
 │         Google Chrome        │
 └──────────────────────────────┘
-↓
+              ↓
 ┌──────────────────────────────┐
 │    APPLICATION UNDER TEST    │
 │        Web Application       │
