@@ -1,4 +1,10 @@
 package com.qa.cucumber.Utility;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,8 +16,11 @@ import org.json.simple.JSONObject;                    // bibliothèque A (org.js
 import org.json.simple.parser.JSONParser;      // bibliothèque B (json-simple)
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Base {
@@ -138,5 +147,37 @@ public class Base {
             e.printStackTrace();
         }
         return jsonObject;
+    }
+
+    //
+    public static List<HashMap<String, String>> readValueFromExcelSheet() {
+        List<HashMap<String, String>> mapDatasList = new ArrayList<>();
+        try {
+            File excelLocation = new File("./Excel/Facebook.xlsx");
+            String sheetName = "Face";
+            FileInputStream f = new FileInputStream(excelLocation.getAbsolutePath());
+            Workbook w = new XSSFWorkbook(f);
+            Sheet sheet = w.getSheet(sheetName);
+            Row headerRow = sheet.getRow(0);
+            for (int i = 0; i < sheet.getPhysicalNumberOfRows(); i++) {
+                Row currentRow = sheet.getRow(i);
+                HashMap<String, String> mapDatas = new HashMap<String, String>();
+                for (int j = 0; j < headerRow.getPhysicalNumberOfCells(); j++) {
+                    Cell currentCell = currentRow.getCell(j);
+                    switch (currentCell.getCellType()) {
+                        case STRING:
+                            mapDatas.put(headerRow.getCell(j).getStringCellValue(), currentCell.getStringCellValue());
+                            break;
+                        case NUMERIC:
+                            mapDatas.put(headerRow.getCell(j).getStringCellValue(), String.valueOf(currentCell.getNumericCellValue()));
+                            break;
+                    }
+                }
+                mapDatasList.add(mapDatas);
+            }
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+        return mapDatasList;
     }
 }

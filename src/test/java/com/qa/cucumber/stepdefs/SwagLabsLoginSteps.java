@@ -1,6 +1,7 @@
 package com.qa.cucumber.stepdefs;
 
 import com.qa.cucumber.Utility.Base;
+import com.qa.cucumber.Utility.ExcelReader;
 import com.qa.cucumber.pages.InventoryPage;
 import com.qa.cucumber.pages.LoginPage;
 import io.cucumber.datatable.DataTable;
@@ -11,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.testcontainers.shaded.org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -92,5 +94,18 @@ public class SwagLabsLoginSteps extends Base {
         setText(loginPage.getTxtUserName(), dataMap.get(4).get("userName") + s);
         setText(loginPage.getTextPassword(), dataMap.get(4).get("Password") + s);
         clickBtn(loginPage.getBtnLogin());
+    }
+
+    @When("The user enters sheetname {string} and rowNumber {int}")
+    public void theUserEntersSheetnameAndRowNumber(String sheetName, int rowNumber) throws IOException {
+        ExcelReader excelReader = new ExcelReader();
+
+        String ExcelPath = "src/test/resources/testdata/SwagLabsLogin.xlsx";
+        List<Map<String, String>> testdata = excelReader.getData(ExcelPath, sheetName);
+        String username = testdata.get(rowNumber).get("username");
+        String password = testdata.get(rowNumber).get("password");
+        System.out.println("User Enter username as \"" + username + "\"and password as \"" + password + "\"");
+        setText(loginPage.getTxtUserName(), username);
+        setText(loginPage.getTextPassword(), password);
     }
 }
