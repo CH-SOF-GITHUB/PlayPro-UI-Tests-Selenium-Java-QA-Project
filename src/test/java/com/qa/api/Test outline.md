@@ -102,4 +102,4 @@ webhook payloads or simulate custom timeouts and error rules.
 
 ######
 Cmds Terminal:
-mvn test -Dtest=ValidateListingTest
+mvn clean test -Pjunit5 "-Dtest=ValidateRestfulBookerTest"
