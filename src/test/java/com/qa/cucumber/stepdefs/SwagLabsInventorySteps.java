@@ -1,13 +1,10 @@
 package com.qa.cucumber.stepdefs;
-
 import com.qa.cucumber.Utility.Base;
-import com.qa.cucumber.locators.SwagLabsLocators;
 import com.qa.cucumber.pages.InventoryPage;
 import com.qa.cucumber.pages.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -16,11 +13,6 @@ public class SwagLabsInventorySteps extends Base {
     LoginPage loginPage;
     InventoryPage inventoryPage;
 
-    // call web driver object from Hooks
-    // WebDriver driver = Hooks.driver;
-
-    // create an object from POM pages
-    // SwagLabsActionPage swagLabsActionPage = new SwagLabsActionPage(driver);
 
     @Given("The user is logged in as {string} and {string}")
     public void theUserIsLoggedInAsAnd(String user, String pass) {

@@ -93,3 +93,6 @@ mvn test "-Dcucumber.filter.tags=@smoke"
 mvn test "-Dcucumber.filter.tags=@negative"
 
 mvn test -Dcucumber.filter.tags="@swagLabsLogin"
+
+# run these 3 scenarios in the same cmd ligne
+mvn clean test "-Dcucumber.filter.tags=@smoke or @negative or @inventory"
