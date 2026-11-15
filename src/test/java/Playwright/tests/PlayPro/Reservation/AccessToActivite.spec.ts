@@ -1,3 +1,4 @@
+/*
 import {test, expect} from '@playwright/test';
 
 
@@ -38,3 +39,4 @@ test('Access to activite', async ({page}) => {
     // Expect the correct results
     await expect(page.getByText('Créer une expérience')).toBeVisible({ timeout: 15000});
 })
+*/

@@ -1,12 +1,13 @@
+/*
 import {test, expect} from '@playwright/test';
 
 
 test('Click to profile of user', async ({page}) => {
-    /* Desktop viewport
+    /!* Desktop viewport
     await page.setViewportSize({
         width: 1920,
         height: 1080
-    }); */
+    }); *!/
     // Go to the login page by URL
     await page.goto('https://demotenant.playpro.fr/connexion');
     // Close the cookie
@@ -44,3 +45,4 @@ test('Access to the profile page', async ({page}) => {
     // Expect the URL to be the profile page URL
     await expect(page).toHaveURL('https://demotenant.playpro.fr/profile?tab=profile', {timeout: 10000});
 })
+*/

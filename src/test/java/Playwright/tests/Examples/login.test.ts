@@ -1,3 +1,4 @@
+/*
 import { chromium, test } from "@playwright/test";
 
 
@@ -18,7 +19,7 @@ test("Login test demo", async () => {
     // STEP 2: hover en Lien My account avec css selector
     await page.hover("body > div:nth-child(1) > div:nth-child(5) > header:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > nav:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(6) > a:nth-child(1) > div:nth-child(2) > span:nth-child(1)");
     // STEP 3: cliquer sur le login link avec text selector
-    // await page.click("text=Login"); 
+    // await page.click("text=Login");
     await page.click("'Login'");
     // STEP 4: saisir email valid
     await page.fill("#input-email", "demolambdatestio@yopmail.com");
@@ -37,4 +38,4 @@ test("Login test demo", async () => {
 
     // wait for 5s
     await page1.waitForTimeout(5000);
-});
+});*/

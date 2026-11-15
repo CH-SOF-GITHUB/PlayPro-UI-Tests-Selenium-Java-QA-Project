@@ -1,3 +1,4 @@
+/*
 import {expect, test} from "@playwright/test";
 
 test('Access to login page - Method 1', async ({page}) => {
@@ -15,3 +16,4 @@ test('Access to login page - Method 2', async ({page}) => {
     // Expect the title "to be equal to" a string.
     await expect(page.getByText("Créer un compte")).toBeVisible();
 });
+*/

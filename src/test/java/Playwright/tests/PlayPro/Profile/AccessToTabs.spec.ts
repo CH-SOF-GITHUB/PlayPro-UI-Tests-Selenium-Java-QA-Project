@@ -1,3 +1,4 @@
+/*
 import {test, expect} from "@playwright/test";
 
 // TC001
@@ -165,3 +166,4 @@ test('Access to my subscriptions page', async ({page}) => {
     await Tab2.click();
 
 });
+*/

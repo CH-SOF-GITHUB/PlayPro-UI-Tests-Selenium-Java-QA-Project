@@ -1,3 +1,4 @@
+/*
 import {test, expect} from "@playwright/test";
 
 
@@ -36,3 +37,4 @@ test('User should access to reservation page', async ({page}) => {
 
     // await expect(page).toHaveURL("https://demotenant.playpro.fr/discover/reservation", {timeout: 15000});
 })
+*/

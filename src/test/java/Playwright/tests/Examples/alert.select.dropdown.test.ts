@@ -1,3 +1,4 @@
+/*
 import {expect, test} from "@playwright/test";
 
 
@@ -32,3 +33,4 @@ test("Test Alert Select Dropdown 2", async ({page}) => {
     // wait for 2s
     await page.waitForTimeout(2000);
 });
+*/

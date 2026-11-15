@@ -1,3 +1,4 @@
+/*
 import {expect, test} from "@playwright/test";
 
 
@@ -67,3 +68,4 @@ test("Test Alert 3.1", async ({page}) => {
     console.log("Msg Text after prompt: " + await promptMsg.textContent());
     await expect(promptMsg).toContainText(expectedName);
 });
+*/

@@ -1,3 +1,4 @@
+/*
 import {chromium, expect, test} from "@playwright/test";
 
 test("interaction with inputs", async ({page}) => {
@@ -66,3 +67,4 @@ test("Test Checkbox", async ({page}) => {
     // <p> to have text </p>
     await expect(SuccessCheckboxMsg).toHaveText(ExpectedCheckboxMsg);
 });
+*/

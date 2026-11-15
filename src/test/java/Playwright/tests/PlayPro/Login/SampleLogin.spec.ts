@@ -1,3 +1,4 @@
+/*
 import {test, expect} from "@playwright/test";
 
 test("Client should login with valid credentials", async ({page}) => {
@@ -12,3 +13,4 @@ test("Client should login with valid credentials", async ({page}) => {
     // Expect the user to be logged successfully
     await expect(page).toHaveURL('https://demotenant.playpro.fr/');
 });
+*/

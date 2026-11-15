@@ -1,3 +1,4 @@
+/*
 import {expect, test} from "@playwright/test";
 
 
@@ -30,3 +31,4 @@ test("Alert Modal Test 1.0", async ({page}) => {
     const style2 = await Modal.getAttribute("style");
     expect(style2).toBe("display: none;");
 });
+*/

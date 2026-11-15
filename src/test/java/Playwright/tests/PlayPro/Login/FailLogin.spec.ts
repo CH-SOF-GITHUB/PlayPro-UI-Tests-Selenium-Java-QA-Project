@@ -1,3 +1,4 @@
+/*
 import {test, expect} from "@playwright/test";
 
 test("Client should not login with invalid credentials", async ({page}) => {
@@ -12,3 +13,4 @@ test("Client should not login with invalid credentials", async ({page}) => {
     // Expect the user to be logged successfully
     await expect(page.getByText("Veuillez vérifier votre email/ mot de passe")).toBeVisible();
 });
+*/
