@@ -1,10 +1,5 @@
 package com.qa.cucumber.Utility;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,11 +11,9 @@ import org.json.simple.JSONObject;                    // bibliothèque A (org.js
 import org.json.simple.parser.JSONParser;      // bibliothèque B (json-simple)
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
+import java.sql.SQLException;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class Base {
@@ -33,12 +26,16 @@ public class Base {
         String browser = ((String) jsonObject.get("browser")).trim();
         String base_url = (String) jsonObject.get("url");
         int timeout = ((Long) jsonObject.get("timeout")).intValue();
+        File f = new File("src/test/resources/drivers");
 
         if (browser.equalsIgnoreCase("chrome")) {
+            System.setProperty("webdriver.chrome.driver", f.getAbsolutePath() + "/chromedriver.exe");
             driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("firefox")) {
+            System.setProperty("webdriver.gecko.driver", f.getAbsolutePath() + "/geckodriver.exe");
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("edge")) {
+            System.setProperty("webdriver.edge.driver", f.getAbsolutePath() + "/msedgedriver.exe");
             driver = new EdgeDriver();
         } else {
             throw new IllegalArgumentException("Browser '" + browser + "' is not supported");
@@ -75,6 +72,17 @@ public class Base {
         boolean flag = false;
         try {
             wait.until(ExpectedConditions.alertIsPresent());
+            flag = true;
+        } catch (Exception e) {
+            e.fillInStackTrace();
+        }
+        return flag;
+    }
+
+    public static boolean elementToBeClickable(WebDriver driver, WebElement element) {
+        boolean flag = false;
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(element));
             flag = true;
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -149,35 +157,25 @@ public class Base {
         return jsonObject;
     }
 
-    //
-    public static List<HashMap<String, String>> readValueFromExcelSheet() {
-        List<HashMap<String, String>> mapDatasList = new ArrayList<>();
+    /*public static List<Employee> retriveValueFromDataBase() {
+        ResultSet rs = null;
+        List<Employee> emp = new ArrayList<Employee>();
         try {
-            File excelLocation = new File("./Excel/Facebook.xlsx");
-            String sheetName = "Face";
-            FileInputStream f = new FileInputStream(excelLocation.getAbsolutePath());
-            Workbook w = new XSSFWorkbook(f);
-            Sheet sheet = w.getSheet(sheetName);
-            Row headerRow = sheet.getRow(0);
-            for (int i = 0; i < sheet.getPhysicalNumberOfRows(); i++) {
-                Row currentRow = sheet.getRow(i);
-                HashMap<String, String> mapDatas = new HashMap<String, String>();
-                for (int j = 0; j < headerRow.getPhysicalNumberOfCells(); j++) {
-                    Cell currentCell = currentRow.getCell(j);
-                    switch (currentCell.getCellType()) {
-                        case STRING:
-                            mapDatas.put(headerRow.getCell(j).getStringCellValue(), currentCell.getStringCellValue());
-                            break;
-                        case NUMERIC:
-                            mapDatas.put(headerRow.getCell(j).getStringCellValue(), String.valueOf(currentCell.getNumericCellValue()));
-                            break;
-                    }
-                }
-                mapDatasList.add(mapDatas);
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/selenum_schema", "root", "");
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM selenium_schema.emp_table where roll=3;");
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                Employee e = new Employee();
+                e.setName(rs.getString("name"));
+                e.setPassword(rs.getString("password"));
+                emp.add(e);
             }
-        } catch (Throwable e) {
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
-        return mapDatasList;
-    }
+        return emp;
+    }*/
 }

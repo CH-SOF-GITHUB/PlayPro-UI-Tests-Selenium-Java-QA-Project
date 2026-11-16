@@ -48,7 +48,7 @@ public class SwagLabsLoginSteps extends Base {
         // Write code here that turns the phrase above into concrete actions
         boolean isInventoryPage = Objects.requireNonNull(driver.getCurrentUrl()).contains("/inventory.html");
         Assert.assertTrue(isInventoryPage);
-        String isInventoryPageTitle = getText(inventoryPage.getInventoryPageTitle());
+        String isInventoryPageTitle = getText(inventoryPage.getInventorySubHeaderTitle());
         Assert.assertEquals(isInventoryPageTitle, "Products", "The inventory page Title does not match !");
     }
 

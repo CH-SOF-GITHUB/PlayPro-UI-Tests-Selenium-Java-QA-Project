@@ -15,9 +15,6 @@ public class InventoryPage extends Base {
     @FindBy(className = "inventory_list")
     private WebElement productsList;
 
-    @FindBy(className = "title")
-    private WebElement inventoryPageTitle;
-
     @FindBy(className = "inventory_item_name")
     private WebElement inventoryProductName;
 
@@ -39,6 +36,21 @@ public class InventoryPage extends Base {
     @FindBy(className = "product_sort_container")
     private WebElement inventoryProductsSort;
 
+    @FindBy(id = "react-burger-menu-btn")
+    private WebElement inventoryBurgerMenuBtn;
+
+    @FindBy(className = "shopping_cart_link")
+    private WebElement inventoryShoppingCart;
+
+    @FindBy(className = "app_logo")
+    private WebElement inventoryHeaderAppLogo;
+
+    @FindBy(className = "title")
+    private WebElement inventorySubHeaderTitle;
+
+    @FindBy(className = "footer")
+    private WebElement inventoryFooter;
+
     // Constructor
     public InventoryPage() {
         PageFactory.initElements(driver, this);
@@ -53,20 +65,22 @@ public class InventoryPage extends Base {
         this.inventoryProductItem = inventoryProductItem;
     }
 
+    public List<WebElement> getInventoryProductItem() {
+        return inventoryProductItem;
+    }
+
+    public void setInventoryProductItem(List<WebElement> inventoryProductItem) {
+        this.inventoryProductItem = inventoryProductItem;
+    }
+    //
+
+    //
     public WebElement getProductsList() {
         return productsList;
     }
 
     public void setProductsList(WebElement productsList) {
         this.productsList = productsList;
-    }
-
-    public WebElement getInventoryPageTitle() {
-        return inventoryPageTitle;
-    }
-
-    public void setInventoryPageTitle(WebElement inventoryPageTitle) {
-        this.inventoryPageTitle = inventoryPageTitle;
     }
 
     public WebElement getInventoryProductName() {
@@ -123,5 +137,45 @@ public class InventoryPage extends Base {
 
     public void setInventoryProductsSort(WebElement inventoryProductsSort) {
         this.inventoryProductsSort = inventoryProductsSort;
+    }
+
+    public WebElement getInventoryBurgerMenuBtn() {
+        return inventoryBurgerMenuBtn;
+    }
+
+    public void setInventoryBurgerMenuBtn(WebElement inventoryBurgerMenuBtn) {
+        this.inventoryBurgerMenuBtn = inventoryBurgerMenuBtn;
+    }
+
+    public WebElement getInventoryShoppingCart() {
+        return inventoryShoppingCart;
+    }
+
+    public void setInventoryShoppingCart(WebElement inventoryShoppingCart) {
+        this.inventoryShoppingCart = inventoryShoppingCart;
+    }
+
+    public WebElement getInventoryHeaderAppLogo() {
+        return inventoryHeaderAppLogo;
+    }
+
+    public void setInventoryHeaderAppLogo(WebElement inventoryHeaderAppLogo) {
+        this.inventoryHeaderAppLogo = inventoryHeaderAppLogo;
+    }
+
+    public WebElement getInventorySubHeaderTitle() {
+        return inventorySubHeaderTitle;
+    }
+
+    public void setInventorySubHeaderTitle(WebElement inventorySubHeaderTitle) {
+        this.inventorySubHeaderTitle = inventorySubHeaderTitle;
+    }
+
+    public WebElement getInventoryFooter() {
+        return inventoryFooter;
+    }
+
+    public void setInventoryFooter(WebElement inventoryFooter) {
+        this.inventoryFooter = inventoryFooter;
     }
 }

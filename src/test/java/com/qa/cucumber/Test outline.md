@@ -89,6 +89,28 @@ Hooks.setBrowser(browser);
 }
 */
 ------------------------------------------------------------------------------------------------------------------------
+7) Driver helper (1 tiny class)
+
+Thread-safe holder so pages and steps can access the current WebDriver.
+
+src/main/java/com/tsb/framework/driver/Driver.java
+
+package com.tsb.framework.driver;
+import org.openqa.selenium.WebDriver;
+public final class Driver {
+private static final ThreadLocal<WebDriver> TL = new ThreadLocal<>();
+private Driver() {}
+public static void set(WebDriver driver) { TL.set(driver); }
+public static WebDriver get() { return TL.get(); }
+public static void quit() {
+WebDriver d = TL.get();
+if (d != null) {
+try { d.quit(); } catch (Exception ignored) {}
+TL.remove();
+}
+}
+}
+------------------------------------------------------------------------------------------------------------------------
 mvn test "-Dcucumber.filter.tags=@smoke"
 mvn test "-Dcucumber.filter.tags=@negative"
 
