@@ -1,8 +1,17 @@
 import {test, expect} from "@playwright/test";
+import {afterEach} from "node:test";
+
+// Hooks
+test.beforeEach(async ({page}) => {
+    await page.goto("https://www.saucedemo.com/");
+});
+
+test.afterEach(async ({page}) => {
+    await page.close();
+});
 
 // TC01: Cas UI/UX:
 test("Chargement de la page Login", async ({page}) => {
-    await page.goto("https://www.saucedemo.com/");
     // Assertions
     await expect(page).toHaveTitle("Swag Labs");
     const headerTitle = await page.locator(".login_logo").textContent();
@@ -13,40 +22,36 @@ test("Chargement de la page Login", async ({page}) => {
 // Cas positives
 //TC02
 test("Connexion avec identifiants valides", async ({page}) => {
-    await page.goto("https://www.saucedemo.com/");
     await page.fill("#user-name", "standard_user");
     await page.fill("#password", "secret_sauce");
     await page.click("#login-button");
     // Assertions
-    await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
+    await expect(page).toHaveURL("/inventory/");
     await expect(page.locator(".app_logo")).toHaveText("Swag Labs");
 });
 
 // TC03
 test("Connexion avec problem_user", async ({page}) => {
-    await page.goto("https://www.saucedemo.com/");
     await page.fill("#user-name", "problem_user");
     await page.fill("#password", "secret_sauce");
     await page.click("#login-button");
     // Assertions
-    await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
+    await expect(page).toHaveURL("/inventory/");
     await expect(page.locator(".app_logo")).toHaveText("Swag Labs");
 });
 
 // TC04
 test("Connexion avec performance_glitch_user", async ({page}) => {
-    await page.goto("https://www.saucedemo.com/");
     await page.fill("#user-name", "performance_glitch_user");
     await page.fill("#password", "secret_sauce");
     await page.click("#login-button");
     // Assertions
-    await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
+    await expect(page).toHaveURL("/inventory/");
     await expect(page.locator(".app_logo")).toHaveText("Swag Labs");
 });
 
 // TC05
 test("Déconnexion puis reconnexion", async ({page}) => {
-    await page.goto("https://www.saucedemo.com/");
     await page.fill("#user-name", "standard_user");
     await page.fill("#password", "secret_sauce");
     await page.click("#login-button");
@@ -57,19 +62,18 @@ test("Déconnexion puis reconnexion", async ({page}) => {
     await logoutLink.waitFor({state: 'visible'}); // Attend que le menu soit ouvert et visible
     await logoutLink.click();
     // Reconnexion
-    await expect(page).toHaveURL("https://www.saucedemo.com/");
+    expect(page.url()).toBe("https://www.saucedemo.com/");
     await page.fill("#user-name", "standard_user");
     await page.fill("#password", "secret_sauce");
     await page.click("#login-button");
     // Assertions
-    await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
+    await expect(page).toHaveURL("/inventory/");
     await expect(page.locator(".app_logo")).toHaveText("Swag Labs");
 });
 
 // Cas négatifs
 // TC06
 test("Utilisateur bloqué", async ({page}) => {
-    await page.goto("https://www.saucedemo.com/");
     await page.fill("#user-name", "locked_out_user");
     await page.fill("#password", "secret_sauce");
     await page.click("#login-button");
@@ -79,7 +83,6 @@ test("Utilisateur bloqué", async ({page}) => {
 
 // TC07
 test("Mot de passe incorrect", async ({page}) => {
-    await page.goto("https://www.saucedemo.com/");
     await page.fill("#user-name", "locked_out_user");
     await page.fill("#password", "secret_sau");
     await page.click("#login-button");
@@ -89,7 +92,6 @@ test("Mot de passe incorrect", async ({page}) => {
 
 // TC08
 test("Utilisateur inexistant", async ({page}) => {
-    await page.goto("https://www.saucedemo.com/");
     await page.fill("#user-name", "locked_out__user");
     await page.fill("#password", "secret_sauce");
     await page.click("#login-button");
@@ -99,7 +101,6 @@ test("Utilisateur inexistant", async ({page}) => {
 
 // TC09
 test("Les deux champs vides", async ({page}) => {
-    await page.goto("https://www.saucedemo.com/");
     await page.click("#login-button");
     let errorMsg = await page.locator("[data-test='error']").textContent();
     expect(errorMsg).toBe("Epic sadface: Username is required");
@@ -107,7 +108,6 @@ test("Les deux champs vides", async ({page}) => {
 
 //TC10
 test("Username vide", async ({page}) => {
-    await page.goto("https://www.saucedemo.com/");
     await page.fill("#password", "secret_sauce");
     await page.click("#login-button");
     let errorMsg = await page.locator("[data-test='error']").textContent();
@@ -116,7 +116,6 @@ test("Username vide", async ({page}) => {
 
 //TC11
 test("Password vide", async ({page}) => {
-    await page.goto("https://www.saucedemo.com/");
     await page.fill("#user-name", "standard_user");
     await page.click("#login-button");
     let errorMsg = await page.locator("[data-test='error']").textContent();
@@ -125,7 +124,6 @@ test("Password vide", async ({page}) => {
 
 // TC12
 test("Accès direct sans authentification", async ({page}) => {
-    await page.goto("https://www.saucedemo.com/");
     await page.goto("https://www.saucedemo.com/inventory.html");
     let errorMsg = await page.locator("[data-test='error']").textContent();
     expect(errorMsg).toBe("Epic sadface: You can only access '/inventory.html' when you are logged in.");
@@ -133,7 +131,6 @@ test("Accès direct sans authentification", async ({page}) => {
 
 // TC13
 test("Retour arrière après logout", async ({page}) => {
-    await page.goto("https://www.saucedemo.com/");
     await page.fill("#user-name", "standard_user");
     await page.fill("#password", "secret_sauce");
     await page.click("#login-button");
@@ -148,6 +145,6 @@ test("Retour arrière après logout", async ({page}) => {
     // Assertions
     let errorMsg = await page.locator("[data-test='error']").textContent();
     expect(errorMsg).toBe("Epic sadface: You can only access '/inventory.html' when you are logged in.");
-    await expect(page).toHaveURL("https://www.saucedemo.com/");
-    expect(page.url()).not.toBe("https://www.saucedemo.com/inventory.html");
+    expect(page.url()).toBe("https://www.saucedemo.com/");
+    expect(page.url()).not.toBe("/inventory/");
 });
