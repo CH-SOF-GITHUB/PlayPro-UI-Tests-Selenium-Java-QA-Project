@@ -42,6 +42,13 @@ public class InventoryPage {
                 .map(value -> Double.valueOf(value.replace("$", "").trim())).toList();
     }
 
+    public double getProductPrice(String productId) {
+        WebElement addButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("add-to-cart-" + productId)));
+        WebElement productCard = addButton.findElement(By.xpath("./ancestor::div[contains(@class, 'inventory_item')]"));
+        String priceText = productCard.findElement(PRODUCT_PRICE).getText();
+        return Double.parseDouble(priceText.replace("$", "").trim());
+    }
+
     public void sortProducts(String sortValue) {
         new Select(wait.until(ExpectedConditions.elementToBeClickable(SORT))).selectByValue(sortValue);
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(PRODUCT_NAME));

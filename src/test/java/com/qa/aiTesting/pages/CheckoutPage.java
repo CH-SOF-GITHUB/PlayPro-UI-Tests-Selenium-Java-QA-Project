@@ -51,9 +51,15 @@ public class CheckoutPage {
     }
 
     public double getItemSubtotal() {
-        String text = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.className("summary_subtotal_label"))).getText();
-        return Double.parseDouble(text.replace("Item total: $", "").trim());
+        return readAmount(By.className("summary_subtotal_label"), "Item total: $");
+    }
+
+    public double getTax() {
+        return readAmount(By.className("summary_tax_label"), "Tax: $");
+    }
+
+    public double getGrandTotal() {
+        return readAmount(By.className("summary_total_label"), "Total: $");
     }
 
     public List<Double> getOverviewItemPrices() {
@@ -69,5 +75,10 @@ public class CheckoutPage {
     public String getCompletionMessage() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.cssSelector("[data-test='complete-header']"))).getText();
+    }
+
+    private double readAmount(By locator, String label) {
+        String text = wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).getText();
+        return Double.parseDouble(text.replace(label, "").trim());
     }
 }
