@@ -80,6 +80,26 @@ public class InventoryPage {
         wait.until(driver -> driver.findElements(CART_BADGE).isEmpty());
     }
 
+    /**
+     * Recherche le premier bouton d'action visible ("Add to cart" ou "Remove") pour un identifiant produit donné.
+     */
+    public String getProductActionText(String productId) {
+        // Cibler l'un OU l'autre ID dans le DOM:
+        By productActionButton = By.cssSelector("#add-to-cart-" + productId + ", #remove-" + productId);
+        return wait.until(currentDriver -> {
+            return currentDriver.findElements(productActionButton).stream()
+                    .filter(WebElement::isDisplayed)
+                    .map(WebElement::getText)
+                    .findFirst()
+                    .orElse(null);
+        });
+    }
+
+    public void openDirectly() {
+        driver.get("https://www.saucedemo.com/inventory.html");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("login-button")));
+    }
+
     public void navigateBackToInventory() {
         driver.navigate().back();
         waitUntilLoaded();

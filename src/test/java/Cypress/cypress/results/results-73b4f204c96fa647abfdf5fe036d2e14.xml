@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="2.504" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2026-08-28T16:01:52" tests="0" file="cypress\e2e\play\pro\v3\webservice\add_to_basket_01_spec.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="Payment - Add To Basket API" timestamp="2026-08-28T16:01:52" tests="1" time="2.497" failures="0">
-    <testcase name="Payment - Add To Basket API should create an order with 2 undated tickets" time="2.411" classname="should create an order with 2 undated tickets">
-    </testcase>
-  </testsuite>
-</testsuites>

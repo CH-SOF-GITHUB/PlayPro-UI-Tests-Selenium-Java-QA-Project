@@ -15,6 +15,7 @@ import com.qa.aiTesting.pages.InventoryPage;
 import com.qa.aiTesting.pages.LoginPage;
 import com.qa.aiTesting.pages.MenuComponent;
 import com.qa.aiTesting.pages.ProductDetailsPage;
+import com.qa.aiTesting.pages.SideMenuPage;
 
 /** Shared browser setup and page objects for Swag Labs TestNG scenarios. */
 public abstract class SwagLabsTestBase {
@@ -26,6 +27,7 @@ public abstract class SwagLabsTestBase {
     protected CartPage cartPage;
     protected CheckoutPage checkoutPage;
     protected MenuComponent menu;
+    protected SideMenuPage sideMenuPage;
 
     @BeforeMethod(alwaysRun = true)
     public void startBrowser() {
@@ -43,6 +45,7 @@ public abstract class SwagLabsTestBase {
         cartPage = new CartPage(driver, WAIT_TIMEOUT);
         checkoutPage = new CheckoutPage(driver, WAIT_TIMEOUT);
         menu = new MenuComponent(driver, WAIT_TIMEOUT);
+        sideMenuPage = new SideMenuPage(driver, WAIT_TIMEOUT);
         loginPage.open();
     }
 

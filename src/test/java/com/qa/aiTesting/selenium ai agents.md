@@ -47,13 +47,22 @@
 5. Prompt pour la manipulation du POM Pages: 
    Example: "Je vais respecter l’encapsulation POM en plaçant les interactions et locators Swag Labs dans un petit objet de page dédié,"  
 
-Je vais d’abord cartographier les locators et interactions utilisés par les huit tests, puis les déplacer dans six objets de page/composants réutilisables sous com.qa.aiTesting.pages. Je mettrai à jour les tests et la règle racine AGENTS.md, puis lancerai toute la suite aiTesting en vérifiant que chaque navigateur est maximisé.
+Je vais d’abord cartographier les locators et interactions utilisés par les huit tests, 
+puis les déplacer dans six objets de page/composants réutilisables sous com.qa.aiTesting.pages. 
+Je mettrai à jour les tests et la règle racine AGENTS.md, puis lancerai toute la suite aiTesting en vérifiant 
+que chaque navigateur est maximisé.
 Ran 1 command, used 1 tool
 
-J’ai confirmé qu’il y a aussi CartManagementTest dans le dossier, en plus des classes citées. Je vais l’inclure dans le refactoring pour qu’aucun test du package ne conserve de locator Selenium en direct ; l’initialisation et la maximisation du navigateur seront aussi centralisées.
+J’ai confirmé qu’il y a aussi CartManagementTest dans le dossier, en plus des classes citées. 
+Je vais l’inclure dans le refactoring pour qu’aucun test du package ne conserve de locator Selenium en direct ; 
+l’initialisation et la maximisation du navigateur seront aussi centralisées.
 Ran 5 commands, edited 4 files, used 6 tools
 
-Les tests n’utilisent plus directement By, findElement ou WebElement : ces détails sont maintenant dans les objets de page. Je complète la consigne racine pour rendre cette séparation obligatoire et mets à jour testng.xml pour inclure toutes les classes du dossier, y compris celles ajoutées depuis la création initiale de la suite.
+Les tests n’utilisent plus directement By, findElement ou WebElement : ces détails sont maintenant dans les objets de page. 
+Je complète la consigne racine pour rendre cette séparation obligatoire et mets à jour testng.xml 
+pour inclure toutes les classes du dossier, y compris celles ajoutées depuis la création initiale de la suite.
 Edited 2 files, used 2 tools
 
-Les neuf classes du package figurent maintenant dans la suite XML. Le setup commun crée et maximise une nouvelle fenêtre Chrome à chaque méthode TestNG ; je lance à présent l’intégralité de cette suite via Maven.
+Les neuf classes du package figurent maintenant dans la suite XML. 
+Le setup commun crée et maximise une nouvelle fenêtre Chrome à chaque méthode TestNG ; 
+je lance à présent l’intégralité de cette suite via Maven.
