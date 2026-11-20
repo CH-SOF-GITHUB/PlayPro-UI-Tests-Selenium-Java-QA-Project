@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 
 import com.qa.aiTesting.pages.CartPage;
 import com.qa.aiTesting.pages.CheckoutPage;
+import com.qa.aiTesting.pages.FooterPage;
 import com.qa.aiTesting.pages.InventoryPage;
 import com.qa.aiTesting.pages.LoginPage;
 import com.qa.aiTesting.pages.MenuComponent;
@@ -26,6 +27,7 @@ public abstract class SwagLabsTestBase {
     protected ProductDetailsPage productDetailsPage;
     protected CartPage cartPage;
     protected CheckoutPage checkoutPage;
+    protected FooterPage footerPage;
     protected MenuComponent menu;
     protected SideMenuPage sideMenuPage;
 
@@ -44,6 +46,7 @@ public abstract class SwagLabsTestBase {
         productDetailsPage = new ProductDetailsPage(driver, WAIT_TIMEOUT);
         cartPage = new CartPage(driver, WAIT_TIMEOUT);
         checkoutPage = new CheckoutPage(driver, WAIT_TIMEOUT);
+        footerPage = new FooterPage(driver, WAIT_TIMEOUT);
         menu = new MenuComponent(driver, WAIT_TIMEOUT);
         sideMenuPage = new SideMenuPage(driver, WAIT_TIMEOUT);
         loginPage.open();
