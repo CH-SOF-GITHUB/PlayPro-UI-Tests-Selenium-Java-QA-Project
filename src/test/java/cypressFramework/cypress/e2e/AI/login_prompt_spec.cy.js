@@ -1,5 +1,5 @@
 describe("Swag Labs - cy.prompt", () => {
-    it('se connecte et vérifier la page des produits', () => {
+    it('Se connecte et vérifier la page des produits', () => {
         cy.prompt(
             [
                 'Visit https://www.saucedemo.com',
