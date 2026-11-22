@@ -16,3 +16,10 @@ WebSite of test: https://sqatools.in/automation-practice-page/
    Méthode 2 : Utiliser le nom du fichier et le numéro de lignePlaywright vous permet de cibler directement le fichier 
                et la ligne exacte du test (le test TC02 commence à la ligne 15) :   
                Bash: npx playwright test tests/SwagLabs/login.test.ts:15
+6. --workers=1 indique à Playwright d'exécuter les tests séquentiellement (un seul processus / worker à la fois) 
+    plutôt qu'en parallèle sur plusieurs workers simultanés.
+Dans votre sortie terminal :
+Playwright a lancé 3 tests (par exemple sur différents navigateurs ou projets configurés) 
+avec un seul worker (Running 3 tests using 1 worker) et les 3 ont réussi (3 passed (34.3s)).
+7. (À l'inverse, --workers=2 ou --workers=4 permet d'exécuter plusieurs tests en parallèle pour aller plus vite, 
+    au prix d'une charge machine plus élevée pendant la mesure).
