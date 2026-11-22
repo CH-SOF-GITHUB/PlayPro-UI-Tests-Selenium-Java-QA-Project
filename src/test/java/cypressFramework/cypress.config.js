@@ -10,7 +10,7 @@ export default defineConfig({
         json: true,
     },
     e2e: {
-        baseUrl: "https://example.cypress.io",
+        baseUrl: "https://www.saucedemo.com/",
         setupNodeEvents(on, config) {
             // implement node event listeners here
         },

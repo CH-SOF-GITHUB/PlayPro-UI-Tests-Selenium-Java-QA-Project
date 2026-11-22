@@ -46,7 +46,7 @@ Cypress BDD: https://www.testmuai.com/learning-hub/cypress-cucumber-tutorial
     npx cypress verify`
 4) Launching Cypress in Headed Mode (Mode is visible browser window, view each step and it executes in real time):
    `npx cypress open`
-5) Run Tests in Headless Mode: `npx cypress run`
+5) Run Tests in Headless Mode:  `npx cypress run`
 6) Run Cypress Test following the Correct Browser: `npx cypress run -- --browser chrome`
 7) Run a specific cypress Test: `npx cypress run -- --browser chrome --spec '<path to test file>'`
 8) Run Cloud Cypress io Tests:  `npx cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6`
@@ -95,3 +95,22 @@ Une fois les fichiers JSON générés dans cypress/results/, on les regroupe en 
 STEP 4: Générer le rapport HTML autonome avec marge (mochawesome-report-generator) :
 À partir du JSON fusionné (mochawesome.json), la commande marge produit le rapport HTML final : `npx marge mochawesome.json`
 Cela crée le rapport HTML complet dans mochawesome-report/mochawesome.html, incluant les résultats des tests, les temps d'exécution et le code/corps des tests.
+
+### Cypress AI Agents
+Rôle des 5 Cypress AI Skills:
+cypress-author    : Crée, met à jour et corrige les tests E2E et Component 
+                    En s'adaptant à ta configuration, ta version de Cypress, tes fixtures et tes commandes personnalisées.   
+cypress-explain   : Audite, résume ou explique des tests existants et signale les sélecteurs fragiles, attentes inutiles ou assertions manquantes.   
+cypress-tap       : Exécute et débogue un test contre une session cypress open active (Chromium) et inspecte Command Log, erreurs et snapshots DOM.   
+cypress-cloud-cli : Diagnostique les échecs et tests flaky enregistrés sur Cypress Cloud via Test Replay.   
+cypress-docs      : Interroge la documentation officielle docs.cypress.io (notamment /llms.txt) selon ta version de Cypress.   
+
+Step 1: Installer Cypress AI Skills: `npx skills add cypress-io/ai-toolkit`
+Step 2: Ouvrir Ton agent Codex sur le dossier cypressFramework
+Step 3: Rédiger Prompt de Test en utilisant `/cypress-author` agent skill
+Step 4: Exécuter nouvel Test Crée
+        `npx cypress open`
+         Prompt: Utilise `/cypress-tap` en ciblant le test :
+         {{/cypress-tap Run swag_labs_cart.cy.js against my open Cypress session, poll for a verdict, and if it fails, 
+           read the failing test's Command Log and error and inspect the app at the failing command to fix it. Use minimal exploration.}}
+Step 5: Continuer de tester autres scénarios.
