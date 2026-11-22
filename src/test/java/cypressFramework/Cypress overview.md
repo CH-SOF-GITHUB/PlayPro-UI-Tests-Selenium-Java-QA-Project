@@ -48,14 +48,15 @@ Cypress BDD: https://www.testmuai.com/learning-hub/cypress-cucumber-tutorial
    `npx cypress open`
 5) Run Tests in Headless Mode: `npx cypress run`
 6) Run Cypress Test following the Correct Browser: `npx cypress run -- --browser chrome`
-7) Run a specific cypress test: `npx cypress run -- --browser chrome --spec '<path to test file>'`
-8) 
+7) Run a specific cypress Test: `npx cypress run -- --browser chrome --spec '<path to test file>'`
+8) Run Cloud Cypress io Tests:  `npx cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6`
+
 ### How to Run Cypress Tests With TestMu AI?
 Step 1: Get your TestMu AI Username and an Access Key from your TestMu AI Account Settings > Password & Security.
-Step 2: Install the TestMu AI Cypress CLI using the below command: npm install -g lambdatest-cypress-cli
-Step 3: In your project root directory, generate a sample config file by running the below command: lambdatest-cypress init
+Step 2: Install the TestMu AI Cypress CLI using the below command: `npm install -g lambdatest-cypress-cli`
+Step 3: In your project root directory, generate a sample config file by running the below command: `lambdatest-cypress init`
 Step 4: Update the generated lambdatest-config.json file with your details.
-Step 5: Once your configuration file is ready, run the tests using the below command: lambdatest-cypress run --sync=true
+Step 5: Once your configuration file is ready, run the tests using the below command: `lambdatest-cypress run --sync=true --cy="--config-file cypress.config.js"`
 Step 6: Visit the TestMu AI Web Automation dashboard to view your Cypress test results.
 
 ### Assertions
@@ -78,3 +79,19 @@ use Describe Block describe("", () => {...})
 
 ### How use AI to write Cypress Tests?
 cy.prompt is an AI-powered Cypress command that turns plain-English test steps into executable Cypress commands.
+
+
+### Pipeline de génération de rapport en 3 étapes (documentation officiel Cypress)
+STEP 1: Install Mochawesome:
+`npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator`
+STEP 2: Execute Cypress to generate only files JSON :
+La configuration Cypress doit désactiver la génération HTML (html: false) et activer l'export JSON (json: true) dans le dossier cypress/results.
+En ligne de commande, l'équivalent direct est : `npx cypress run`
+Chaque exécution ou spec produit un fichier JSON distinct dans cypress/results/ 
+(par exemple cypress/results/mochawesome.json, cypress/results/mochawesome_001.json, etc.).
+Step 3: Fusionner les fichiers JSON avec mochawesome-merge :
+Une fois les fichiers JSON générés dans cypress/results/, on les regroupe en un seul fichier JSON consolidé :
+`npx mochawesome-merge cypress/results/*.json -o mochawesome.json`
+STEP 4: Générer le rapport HTML autonome avec marge (mochawesome-report-generator) :
+À partir du JSON fusionné (mochawesome.json), la commande marge produit le rapport HTML final : `npx marge mochawesome.json`
+Cela crée le rapport HTML complet dans mochawesome-report/mochawesome.html, incluant les résultats des tests, les temps d'exécution et le code/corps des tests.
