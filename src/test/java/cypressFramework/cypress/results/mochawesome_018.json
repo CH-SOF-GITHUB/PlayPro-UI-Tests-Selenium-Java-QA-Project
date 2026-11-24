@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-24T15:24:24.529Z",
+    "end": "2026-11-24T15:24:26.391Z",
+    "duration": 1862,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "24fe0e9e-1a6c-4e0a-b603-6f7519bd6b49",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SwagLabs\\login_invalid_password.cy.js",
+      "file": "cypress\\e2e\\SwagLabs\\login_invalid_password.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ff230bc2-9a22-4cab-9b10-5baed5fcb1b1",
+          "title": "Swag Labs authentication",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "invalid password → stays on the login page and shows an error",
+              "fullTitle": "Swag Labs authentication invalid password → stays on the login page and shows an error",
+              "timedOut": null,
+              "duration": 1588,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Open the Swag Labs login page.\ncy.visit('/');\n// Enter the standard user's username.\ncy.get('[data-test=\"username\"]').type('standard_user');\n// Enter an invalid password.\ncy.get('[data-test=\"password\"]').type('wrong_password');\n// Submit the login form.\ncy.get('[data-test=\"login-button\"]').click();\n// Confirm the browser remains on the login page.\ncy.location('pathname').should('eq', '/');\n// Confirm the login error is visible and contains the expected message.\ncy.get('[data-test=\"error\"]').should('be.visible').and('contain', 'Username and password do not match any user in this service');",
+              "err": {},
+              "uuid": "ccfb404d-dc14-4426-8b3d-65e354fbda4e",
+              "parentUUID": "ff230bc2-9a22-4cab-9b10-5baed5fcb1b1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ccfb404d-dc14-4426-8b3d-65e354fbda4e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1588,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

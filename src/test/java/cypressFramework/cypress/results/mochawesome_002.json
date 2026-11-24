@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-11-24T14:02:38.897Z",
-    "end": "2026-11-24T14:02:41.876Z",
-    "duration": 2979,
+    "start": "2026-11-24T15:11:13.607Z",
+    "end": "2026-11-24T15:11:15.378Z",
+    "duration": 1771,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "e17f8495-7d5d-473b-aaba-f00fa579eee3",
+      "uuid": "489faf11-7945-435c-ac13-2214daa7e46e",
       "title": "",
-      "fullFile": "cypress\\e2e\\SwagLabs\\login_valid.cy.js",
-      "file": "cypress\\e2e\\SwagLabs\\login_valid.cy.js",
+      "fullFile": "cypress\\e2e\\SwagLabs\\login_case_sensitive_username.cy.js",
+      "file": "cypress\\e2e\\SwagLabs\\login_case_sensitive_username.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "aaf72bde-61b2-44f5-9942-23dc768d15f2",
+          "uuid": "89104c63-071b-433f-85a6-6555f20e9bdb",
           "title": "Swag Labs authentication",
           "fullFile": "",
           "file": "",
@@ -35,32 +35,32 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "valid login → opens the inventory page",
-              "fullTitle": "Swag Labs authentication valid login → opens the inventory page",
+              "title": "uppercase username → stays on the login page and shows an error",
+              "fullTitle": "Swag Labs authentication uppercase username → stays on the login page and shows an error",
               "timedOut": null,
-              "duration": 2885,
+              "duration": 1641,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// Open the Swag Labs login page.\ncy.visit('/');\n// Enter the standard user's username.\ncy.get('[data-test=\"username\"]').type('standard_user');\n// Enter the standard user's password.\ncy.get('[data-test=\"password\"]').type('secret_sauce');\n// Submit the login form.\ncy.get('[data-test=\"login-button\"]').click();\n// Confirm the browser navigated to the inventory page.\ncy.location('pathname').should('eq', '/inventory.html');\n// Confirm the inventory page title is visible and reads Products.\ncy.get('[data-test=\"title\"]').should('be.visible').and('have.text', 'Products');\n// Confirm the inventory list is displayed.\ncy.get('[data-test=\"inventory-list\"]').should('be.visible');",
+              "code": "// Open the Swag Labs login page.\ncy.visit('/');\n// Enter the username in uppercase to verify case sensitivity.\ncy.get('[data-test=\"username\"]').type('STANDARD_USER');\n// Enter the standard password.\ncy.get('[data-test=\"password\"]').type('secret_sauce');\n// Submit the login form.\ncy.get('[data-test=\"login-button\"]').click();\n// Confirm the browser remains on the login page.\ncy.location('pathname').should('eq', '/');\n// Confirm the error is visible and contains the expected credential message.\ncy.get('[data-test=\"error\"]').should('be.visible').and('contain', 'Username and password do not match any user in this service');",
               "err": {},
-              "uuid": "a868fce0-5afb-4796-8664-401464b407e6",
-              "parentUUID": "aaf72bde-61b2-44f5-9942-23dc768d15f2",
+              "uuid": "de985685-65f9-4a01-bd9f-c4d62a58797a",
+              "parentUUID": "89104c63-071b-433f-85a6-6555f20e9bdb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a868fce0-5afb-4796-8664-401464b407e6"
+            "de985685-65f9-4a01-bd9f-c4d62a58797a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2885,
+          "duration": 1641,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

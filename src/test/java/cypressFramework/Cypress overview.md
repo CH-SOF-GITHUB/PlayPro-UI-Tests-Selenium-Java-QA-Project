@@ -92,11 +92,12 @@ Chaque exécution ou spec produit un fichier JSON distinct dans cypress/results/
 Step 3: Fusionner les fichiers JSON avec mochawesome-merge :
 Une fois les fichiers JSON générés dans cypress/results/, on les regroupe en un seul fichier JSON consolidé :
 `npx mochawesome-merge cypress/results/mochawesome_003.json -o mochawesome.json`
+`npx mochawesome-merge cypress/results/*.json -o mochawesome.json`
 `npx mochawesome-merge cypress/results/*.json -o mochawesome-report/mochawesome.json`
 STEP 4: Générer le rapport HTML autonome avec marge (mochawesome-report-generator) :
 À partir du JSON fusionné (mochawesome.json), la commande marge produit le rapport HTML final : 
 `npx marge mochawesome.json`
-`npx marge mochawesome-report/mochawesome.json -o mochawesome-report`
+`npx marge mochawesome-report/mochawesome.json`
 Cela crée le rapport HTML complet dans mochawesome-report/mochawesome.html, incluant les résultats des tests, les temps d'exécution et le code/corps des tests.
 
 ### Cypress AI Agents
@@ -197,4 +198,8 @@ website or the application is released to the public.
 4) Run the suite against WebKit: `npx cypress run --browser webkit --spec "cypress/e2e/example_test_spec.cy.js"`
 
 ### Execute your Tests:
-npx cypress run --browser chrome --spec "cypress/e2e/SwagLabs/login_valid.cy.js"
+1) npx cypress run --browser chrome --spec "cypress/e2e/SwagLabs/login_valid.cy.js"
+2) npx cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6 --spec "cypress/e2e/SwagLabs/login_valid.cy.js"
+3) npm run test:swaglabs
+4) npm run test:swaglabs:cloud
+5) npx cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6 --spec "cypress/e2e/SwagLabs/login_password_masking.cy.js"

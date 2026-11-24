@@ -2,6 +2,7 @@ import {defineConfig} from "cypress";
 
 export default defineConfig({
     projectId: "txbgdo",
+    video: true,  // enable video in cypress cloud
     reporter: "mochawesome",
     reporterOptions: {
         reportDir: "cypress/results",

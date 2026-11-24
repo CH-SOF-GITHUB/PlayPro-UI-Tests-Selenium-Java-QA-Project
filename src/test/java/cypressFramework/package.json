@@ -16,7 +16,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:swaglabs": "cypress run --browser chrome --spec \"cypress/e2e/SwagLabs/**/*.cy.js\"",
+    "test:swaglabs:cloud": "cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6 --spec \"cypress/e2e/SwagLabs/**/*.cy.js\""
   },
   "devDependencies": {
     "cypress": "^16.3.0",

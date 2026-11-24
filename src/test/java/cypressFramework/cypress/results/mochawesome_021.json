@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-24T15:24:57.678Z",
+    "end": "2026-11-24T15:24:59.126Z",
+    "duration": 1448,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4c9974e9-f2d5-42e0-86d8-a29144ddb2cf",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SwagLabs\\login_password_masking.cy.js",
+      "file": "cypress\\e2e\\SwagLabs\\login_password_masking.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9d67483b-15c1-4757-858d-28cade92c09e",
+          "title": "Swag Labs authentication",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "masks the typed password on the login page",
+              "fullTitle": "Swag Labs authentication masks the typed password on the login page",
+              "timedOut": null,
+              "duration": 1348,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Open the Swag Labs login page.\ncy.visit('/');\n// Type the password into the password input.\ncy.get('[data-test=\"password\"]').type('secret_sauce');\n// Confirm the input uses password masking.\ncy.get('[data-test=\"password\"]').should('have.attr', 'type', 'password');\n// Confirm the input retains the typed password value.\ncy.get('[data-test=\"password\"]').should('have.value', 'secret_sauce');",
+              "err": {},
+              "uuid": "4b0c168e-c9ac-4749-9ef0-eb081716f09e",
+              "parentUUID": "9d67483b-15c1-4757-858d-28cade92c09e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4b0c168e-c9ac-4749-9ef0-eb081716f09e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1348,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
