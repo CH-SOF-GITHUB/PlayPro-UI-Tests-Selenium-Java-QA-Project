@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-24T14:02:38.897Z",
+    "end": "2026-11-24T14:02:41.876Z",
+    "duration": 2979,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e17f8495-7d5d-473b-aaba-f00fa579eee3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SwagLabs\\login_valid.cy.js",
+      "file": "cypress\\e2e\\SwagLabs\\login_valid.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aaf72bde-61b2-44f5-9942-23dc768d15f2",
+          "title": "Swag Labs authentication",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "valid login → opens the inventory page",
+              "fullTitle": "Swag Labs authentication valid login → opens the inventory page",
+              "timedOut": null,
+              "duration": 2885,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Open the Swag Labs login page.\ncy.visit('/');\n// Enter the standard user's username.\ncy.get('[data-test=\"username\"]').type('standard_user');\n// Enter the standard user's password.\ncy.get('[data-test=\"password\"]').type('secret_sauce');\n// Submit the login form.\ncy.get('[data-test=\"login-button\"]').click();\n// Confirm the browser navigated to the inventory page.\ncy.location('pathname').should('eq', '/inventory.html');\n// Confirm the inventory page title is visible and reads Products.\ncy.get('[data-test=\"title\"]').should('be.visible').and('have.text', 'Products');\n// Confirm the inventory list is displayed.\ncy.get('[data-test=\"inventory-list\"]').should('be.visible');",
+              "err": {},
+              "uuid": "a868fce0-5afb-4796-8664-401464b407e6",
+              "parentUUID": "aaf72bde-61b2-44f5-9942-23dc768d15f2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a868fce0-5afb-4796-8664-401464b407e6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2885,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

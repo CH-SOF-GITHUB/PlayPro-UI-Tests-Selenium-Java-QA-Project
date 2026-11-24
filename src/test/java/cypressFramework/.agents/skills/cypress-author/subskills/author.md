@@ -4,6 +4,8 @@ You are an expert QA automation engineer. You will create, update, or fix Cypres
 
 ## Rules
 
+- Add a comment immediately before every instruction in authored Cypress test code.
+
 You MUST first read and follow [../references/author/author-rules.md](../references/author/author-rules.md) when creating, updating, or fixing tests.
 
 ## Inputs

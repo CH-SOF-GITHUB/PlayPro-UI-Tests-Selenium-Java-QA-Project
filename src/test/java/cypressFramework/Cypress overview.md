@@ -48,7 +48,7 @@ Cypress BDD: https://www.testmuai.com/learning-hub/cypress-cucumber-tutorial
    `npx cypress open`
 5) Run Tests in Headless Mode:  `npx cypress run`
 6) Run Cypress Test following the Correct Browser: `npx cypress run -- --browser chrome`
-7) Run a specific cypress Test: `npx cypress run -- --browser chrome --spec '<path to test file>'`
+7) Run a specific cypress Test: `npx cypress run --browser chrome --spec '<path to test file>'`
 8) Run Cloud Cypress io Tests:  `npx cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6`
 
 ### How to Run Cypress Tests With TestMu AI?
@@ -91,9 +91,12 @@ Chaque exécution ou spec produit un fichier JSON distinct dans cypress/results/
 (par exemple cypress/results/mochawesome.json, cypress/results/mochawesome_001.json, etc.).
 Step 3: Fusionner les fichiers JSON avec mochawesome-merge :
 Une fois les fichiers JSON générés dans cypress/results/, on les regroupe en un seul fichier JSON consolidé :
-`npx mochawesome-merge cypress/results/*.json -o mochawesome.json`
+`npx mochawesome-merge cypress/results/mochawesome_003.json -o mochawesome.json`
+`npx mochawesome-merge cypress/results/*.json -o mochawesome-report/mochawesome.json`
 STEP 4: Générer le rapport HTML autonome avec marge (mochawesome-report-generator) :
-À partir du JSON fusionné (mochawesome.json), la commande marge produit le rapport HTML final : `npx marge mochawesome.json`
+À partir du JSON fusionné (mochawesome.json), la commande marge produit le rapport HTML final : 
+`npx marge mochawesome.json`
+`npx marge mochawesome-report/mochawesome.json -o mochawesome-report`
 Cela crée le rapport HTML complet dans mochawesome-report/mochawesome.html, incluant les résultats des tests, les temps d'exécution et le code/corps des tests.
 
 ### Cypress AI Agents
@@ -114,3 +117,84 @@ Step 4: Exécuter nouvel Test Crée
          {{/cypress-tap Run swag_labs_cart.cy.js against my open Cypress session, poll for a verdict, and if it fails, 
            read the failing test's Command Log and error and inspect the app at the failing command to fix it. Use minimal exploration.}}
 Step 5: Continuer de tester autres scénarios.
+
+### Cypress Performance Testing ?
+Cypress is widely used for E2E and UI Testing, but with the help of plugins and custom utilities, it can also support performance testing.
+By extending its functionality, Cypress can monitor page load times, track key performance metrics, and analyze application Behavior 
+under various conditions. 
+
+### Load Testing ?
+While Cypress is primarily built for functional and UI testing in modern JavaScript applications, 
+it can be extended to support load testing through community-driven plugins.
+
+Although Cypress doesn’t natively support performance testing, tools like Google Lighthouse can be integrated 
+to simulate user load and assess app performance under stress.
+
+This allows teams to conduct basic load and stress testing using Cypress as part of a broader performance testing strategy.
+
+### Performance Testing With Cypress And Google Lighthouse
+Google Lighthouse is a powerful tool integrated into Chrome that measures web performance and identifies issues such as :
+slow loading times, inefficient images, and poorly optimized code.
+
+         +------------------------------------------------------------------------------+
+         |                   CHOIX D'UNE APPROCHE DE PERFORMANCE                        |
+         +------------------------------------------------------------------------------+
+                                                   |
+                     +-----------------------------+-----------------------------+
+                     |                                                           |
+                     v                                                           v
+         +----------------------------------------+                +---------------------------+
+         |     COTE NAVIGATEUR (FRONT-END)        |                |  CHARGE SERVEUR / API     |
+         |        Avec Cypress (v16 / ESM)        |                |  (Hors périmètre Cypress)|
+         +----------------------------------------+                +---------------------------+
+                               |                                                  |
+         +---------------------+------------------------+                         v
+         |                                              |                +-------------------+
+         v                                              v                | k6 / JMeter /     |
+         +---------------------------------+  +-----------------------+  |   Gatling         |
+         |  @cypress-audit/lighthouse      |  | API window.performance|  +-------------------+
+         +---------------------------------+  +-----------------------+  | Cas: 100+ users,  |
+         | Cas: Core Web Vitals (LCP, CLS, |  | Cas: Budgets temps    |  | stress & charge   |
+         |      TBT), SEO, Accessibilité   |  |      parcours, TTFB   |  | serveur           |
+         | Dep: Package npm + config.js    |  | Dep: Aucune (natif JS)|  | Dep: Outil externe|
+         | Nav: Chromium uniquement        |  | Nav: Tous navigateurs |  | Nav: N/A (réseau) |
+         +---------------------------------+  +-----------------------+  +-------------------+
+
+### Different ways to do Cross Browser Testing With Cypress
+By performing cross browser testing with Cypress, testers can identify any issues or inconsistencies before the 
+website or the application is released to the public.
+- using Cypress test runner:
+  1): open cypress 
+  2): select the type of testing: E2E or Component
+  3): choose the browser of your choice 
+  4): you can also change the browser from the Spec Runner screen by Menu
+
+- using cypress test file:
+  it("test case name", { browser: "chrome" }, () => {})
+
+- using browser configuration in cypress CLI:
+  Cypress runs in Electron by default in both headed and headless mode.
+  run your test case on the specified browser in headless mode: `npx cypress run --browser <browsername>`
+  run your test case on the specified browser in headed mode:   `npx cypress open --browser firefox`
+  `npx cypress run --browser chrome --spec "cypress/e2e/example_cross_browser_test_file_spec.cy.js"`
+  `npx cypress run --browser firefox --spec "cypress/e2e/example_cross_browser_test_file_spec.cy.js"`
+  `npx cypress run --browser edge --spec "cypress/e2e/example_cross_browser_test_file_spec.cy.js"`
+- using package.json:
+  "scripts": {
+     "test-browser-chrome": "npx cypress run --browser chrome"
+     "test-browser-firefox": "npx cypress run --browser firefox",
+     "test-browser-edge": "npx cypress run --browser edge"
+  }
+  npm run test-browser-chrome
+- using cloud platform
+- using CI/CD
+- using Docker on CI/CD
+
+### Run Safari Tests in Cypress
+1) Install the WebKit engine as a dev dependency: `npm install playwright-webkit --save-dev` 
+2) Install the WebKit browser: `npx playwright install webkit`
+3) Enable it in your Cypress config with `experimentalWebKitSupport: true`
+4) Run the suite against WebKit: `npx cypress run --browser webkit --spec "cypress/e2e/example_test_spec.cy.js"`
+
+### Execute your Tests:
+npx cypress run --browser chrome --spec "cypress/e2e/SwagLabs/login_valid.cy.js"
