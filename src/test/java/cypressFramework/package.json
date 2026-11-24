@@ -20,6 +20,7 @@
     "test:swaglabs:cloud": "cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6 --spec \"cypress/e2e/SwagLabs/**/*.cy.js\""
   },
   "devDependencies": {
+    "allure-cypress": "^3.15.0",
     "cypress": "^16.3.0",
     "mochawesome": "^8.1.1",
     "mochawesome-merge": "^5.1.1",

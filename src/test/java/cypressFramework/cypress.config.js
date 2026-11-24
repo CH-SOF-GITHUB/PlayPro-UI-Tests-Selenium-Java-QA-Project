@@ -1,4 +1,5 @@
 import {defineConfig} from "cypress";
+import {allureCypress} from "allure-cypress/reporter";
 
 export default defineConfig({
     projectId: "txbgdo",
@@ -16,6 +17,10 @@ export default defineConfig({
         baseUrl: "https://www.saucedemo.com/",
         setupNodeEvents(on, config) {
             // implement node event listeners here
+            // Call allureCypress to initialize the plugin from the setupNodeEvents function in cypress.config.js
+            allureCypress(on, config);
+
+            return config;
         },
     },
 });

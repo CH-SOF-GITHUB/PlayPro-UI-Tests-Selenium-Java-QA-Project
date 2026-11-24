@@ -197,9 +197,18 @@ website or the application is released to the public.
 3) Enable it in your Cypress config with `experimentalWebKitSupport: true`
 4) Run the suite against WebKit: `npx cypress run --browser webkit --spec "cypress/e2e/example_test_spec.cy.js"`
 
+### View Allure Report:
+Use Allure Report 2:
+allure generate ./allure-results -o ./allure-report
+allure open ./allure-report
+Or use Allure Report 3:
+npx allure generate ./allure-results
+npx allure open ./allure-report
+
 ### Execute your Tests:
 1) npx cypress run --browser chrome --spec "cypress/e2e/SwagLabs/login_valid.cy.js"
 2) npx cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6 --spec "cypress/e2e/SwagLabs/login_valid.cy.js"
 3) npm run test:swaglabs
 4) npm run test:swaglabs:cloud
 5) npx cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6 --spec "cypress/e2e/SwagLabs/login_password_masking.cy.js"
+6) npx cypress run --spec "cypress/e2e/example_test_spec.cy.js"
