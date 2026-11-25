@@ -13,7 +13,7 @@ describe('Swag Labs authentication', () => {
     cy.get('[data-test="login-button"]').click();
 
     // Confirm the browser navigated to the inventory page.
-    cy.location('pathname').should('eq', '/inventory.html');
+    cy.location('pathname').should('eq', '/inventoryy.html');
     // Confirm the inventory page title is visible and reads Products.
     cy.get('[data-test="title"]').should('be.visible').and('have.text', 'Products');
     // Confirm the inventory list is displayed.

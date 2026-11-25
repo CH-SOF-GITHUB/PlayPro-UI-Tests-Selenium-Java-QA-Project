@@ -22,6 +22,15 @@ Keys benefits of using Cypress test automation framework:
 - Cypress tests are less flaky due to the auto-wait features supported by the framework.
 - At each step, screen grabs that show the test behavior are captured. These can be super helpful in debugging issues with the tests.
 
+The Testing pyramid in cypress:
+         ▲
+       /E2E\         ← Slowest: full stack, real server, real routing
+      /─────\           Use for critical user paths only
+     / Comp  \       ← Medium: UI components in isolation, no server
+    /─────────\         Use for component behavior, visual states, events
+   / API Tests \     ← Fast: HTTP calls, no browser, no UI
+  /─────────────\       Use for backend contracts, data validation 
+ /───────────────\
 
 
 Your Agent Writes Better Tests When It Can See Your App.
@@ -49,8 +58,9 @@ LT learning hub: https://www.testmuai.com/learning-hub/cypress-tutorial/
    `npx cypress open`
 5) Run Tests in Headless Mode:  `npx cypress run`
 6) Run Cypress Test following the Correct Browser: `npx cypress run -- --browser chrome`
-7) Run a specific cypress Test: `npx cypress run --browser chrome --spec '<path to test file>'`
-8) Run Cloud Cypress io Tests:  `npx cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6`
+7) Run Cypress Test From CLI By launching browser: `npx cypress run -- headed`
+8) Run a specific cypress Test: `npx cypress run --browser chrome --spec '<path to test file>'`
+9) Run Cloud Cypress io Tests:  `npx cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6`
 
 ### How to Run Cypress Tests With TestMu AI?
 Step 1: Get your TestMu AI Username and an Access Key from your TestMu AI Account Settings > Password & Security.

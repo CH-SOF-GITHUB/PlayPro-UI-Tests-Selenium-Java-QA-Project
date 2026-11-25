@@ -4,6 +4,10 @@ import {allureCypress} from "allure-cypress/reporter";
 export default defineConfig({
     projectId: "txbgdo",
     video: true,  // enable video in cypress cloud
+    retries: {    // enable Test Retries
+        runMode: 2, // 2 retry in CLI/CI
+        openMode: 2 // 2 retry in User Interface
+    },
     reporter: "mochawesome",
     reporterOptions: {
         reportDir: "cypress/results",

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-11-25T12:32:19.858Z",
+    "end": "2026-11-25T12:32:40.162Z",
+    "duration": 20304,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c007c25a-23aa-46d6-9b60-fbf687f9afb8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SwagLabs\\login_valid.cy.js",
+      "file": "cypress\\e2e\\SwagLabs\\login_valid.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "45186fff-d502-4a66-9df5-75b36e7d9f61",
+          "title": "Swag Labs authentication",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "valid login → opens the inventory page",
+              "fullTitle": "Swag Labs authentication valid login → opens the inventory page",
+              "timedOut": null,
+              "duration": 5722,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Open the Swag Labs login page.\ncy.visit('/');\n// Enter the standard user's username.\ncy.get('[data-test=\"username\"]').type('standard_user');\n// Enter the standard user's password.\ncy.get('[data-test=\"password\"]').type('secret_sauce');\n// Submit the login form.\ncy.get('[data-test=\"login-button\"]').click();\n// Confirm the browser navigated to the inventory page.\ncy.location('pathname').should('eq', '/inventoryy.html');\n// Confirm the inventory page title is visible and reads Products.\ncy.get('[data-test=\"title\"]').should('be.visible').and('have.text', 'Products');\n// Confirm the inventory list is displayed.\ncy.get('[data-test=\"inventory-list\"]').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '/inventory.html' to equal '/inventoryy.html'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '/inventory.html' to equal '/inventoryy.html'\n    at Context.eval (webpack://cypress-e2e-tests/./cypress/e2e/SwagLabs/login_valid.cy.js:16:28)",
+                "diff": "- '/inventory.html'\n+ '/inventoryy.html'\n"
+              },
+              "uuid": "00eb98f0-bd9d-422c-b050-70d07724916f",
+              "parentUUID": "45186fff-d502-4a66-9df5-75b36e7d9f61",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "00eb98f0-bd9d-422c-b050-70d07724916f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5722,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
