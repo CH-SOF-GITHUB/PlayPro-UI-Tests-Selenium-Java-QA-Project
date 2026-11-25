@@ -42,10 +42,10 @@ No pasting HTML back and forth.
 
 Now available in Beta. Requires Cypress 15.21.0+.
 How Cypress Tap works: https://www.cypress.io/blog/cypress-tap-cli?utm_medium=Cloud+Message+Banner&utm_campaign=cypress-tap-cli&utm_source=Binary%3A+App&utm_medium=Cloud+Message+Banner&utm_campaign=cypress_tap_cli&utm_source=Binary%3A+App
-Get the skill: https://docs.cypress.io/app/tooling/ai-skills?utm_medium=Cloud+Message+Banner&utm_campaign=cypress-tap-cli&utm_source=Binary%3A+App%23cypress-tap&utm_medium=Cloud+Message+Banner&utm_campaign=cypress_tap_cli&utm_source=Binary%3A+App
-LambdaTest: https://www.testmuai.com/blog/cypress-test-automation-framework/
-Cypress BDD: https://www.testmuai.com/learning-hub/cypress-cucumber-tutorial
-LT learning hub: https://www.testmuai.com/learning-hub/cypress-tutorial/
+Get the skill:         https://docs.cypress.io/app/tooling/ai-skills?utm_medium=Cloud+Message+Banner&utm_campaign=cypress-tap-cli&utm_source=Binary%3A+App%23cypress-tap&utm_medium=Cloud+Message+Banner&utm_campaign=cypress_tap_cli&utm_source=Binary%3A+App
+LambdaTest:            https://www.testmuai.com/blog/cypress-test-automation-framework/
+Cypress BDD:           https://www.testmuai.com/learning-hub/cypress-cucumber-tutorial
+LT learning hub:       https://www.testmuai.com/learning-hub/cypress-tutorial/
 
 ### Cypress installation du Project:
 1) Create the package.json file: `npm init`
@@ -215,6 +215,10 @@ allure open ./allure-report
 Or use Allure Report 3:
 npx allure generate ./allure-results
 npx allure open ./allure-report
+
+### Record to Cypress Cloud in parallel. Needs CYPRESS_RECORD_KEY env var and a ci-build-id (auto-detected in CI).",
+"test:swaglabs:cloud:parallel": "cypress run --record --parallel --ci-build-id \"local-$(Get-Date -Format 'yyyyMMdd-HHmmss')\" --spec \"cypress/e2e/SwagLabs/**/*.cy.js\""
+
 
 ### Execute your Tests:
 1) npx cypress run --browser chrome --spec "cypress/e2e/SwagLabs/login_valid.cy.js"
