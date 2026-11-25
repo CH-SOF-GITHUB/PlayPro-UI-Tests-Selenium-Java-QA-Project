@@ -213,8 +213,9 @@ Use Allure Report 2:
 allure generate ./allure-results -o ./allure-report
 allure open ./allure-report
 Or use Allure Report 3:
-npx allure generate ./allure-results
-npx allure open ./allure-report
+1) `Remove-Item -Path ".\allure-results\*" -Recurse -Force`
+2) `npx allure generate ./allure-results -o ./allure-report --clean`
+3) `npx allure open ./allure-report`
 
 ### Record to Cypress Cloud in parallel. Needs CYPRESS_RECORD_KEY env var and a ci-build-id (auto-detected in CI).",
 "test:swaglabs:cloud:parallel": "cypress run --record --parallel --ci-build-id \"local-$(Get-Date -Format 'yyyyMMdd-HHmmss')\" --spec \"cypress/e2e/SwagLabs/**/*.cy.js\""

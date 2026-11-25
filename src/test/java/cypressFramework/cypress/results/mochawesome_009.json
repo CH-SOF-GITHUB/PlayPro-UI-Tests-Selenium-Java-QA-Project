@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-25T17:12:04.378Z",
+    "end": "2026-11-25T17:12:08.909Z",
+    "duration": 4531,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "adfb9a83-8814-42df-9e57-f059ea24fca4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SwagLabs\\Product_Catalog\\inventory_products_list.cy.js",
+      "file": "cypress\\e2e\\SwagLabs\\Product_Catalog\\inventory_products_list.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2cdd1781-b58a-4b8b-bc7e-70589e23dacf",
+          "title": "Swag Labs inventory products list",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "affiche six produits avec leurs informations et leur bouton Add to cart",
+              "fullTitle": "Swag Labs inventory products list affiche six produits avec leurs informations et leur bouton Add to cart",
+              "timedOut": null,
+              "duration": 3001,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Vérifier que le titre de l'inventaire affiche Products.\ncy.get('[data-test=\"title\"]').should('be.visible').and('have.text', 'Products');\n// Vérifier qu'il y a exactement six produits et examiner chacun d'eux.\ncy.get('.inventory_item').should('have.length', 6).each($product => {\n  // Vérifier que le nom du produit est visible et non vide.\n  cy.wrap($product).find('.inventory_item_name').should('be.visible').and('not.be.empty');\n  // Vérifier que la description du produit est visible et non vide.\n  cy.wrap($product).find('.inventory_item_desc').should('be.visible').and('not.be.empty');\n  // Vérifier que le prix est visible et respecte le format monétaire à deux décimales.\n  cy.wrap($product).find('.inventory_item_price').should('be.visible').and($price => {\n    expect($price.text().trim()).to.match(/^\\$\\d+\\.\\d{2}$/);\n  });\n  // Vérifier que l'image du produit est visible et possède un src non vide.\n  cy.wrap($product).find('img.inventory_item_img').should('be.visible').and('have.attr', 'src').and('not.be.empty');\n  // Vérifier que le bouton Add to cart du produit est visible.\n  cy.wrap($product).find('button[data-test^=\"add-to-cart\"]').should('be.visible').and('contain.text', 'Add to cart');\n});",
+              "err": {},
+              "uuid": "b217ecdf-d556-4066-8e07-236318edf3e2",
+              "parentUUID": "2cdd1781-b58a-4b8b-bc7e-70589e23dacf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b217ecdf-d556-4066-8e07-236318edf3e2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3001,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
