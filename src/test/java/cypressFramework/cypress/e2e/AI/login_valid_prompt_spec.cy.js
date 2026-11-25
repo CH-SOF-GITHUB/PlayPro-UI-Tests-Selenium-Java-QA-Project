@@ -1,4 +1,4 @@
-describe("Swag Labs - cy.prompt", () => {
+describe("Swag Labs authentification - cy.prompt", () => {
     it('Se connecte et vérifier la page des produits', () => {
         cy.prompt(
             [

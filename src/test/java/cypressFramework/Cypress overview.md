@@ -36,6 +36,7 @@ How Cypress Tap works: https://www.cypress.io/blog/cypress-tap-cli?utm_medium=Cl
 Get the skill: https://docs.cypress.io/app/tooling/ai-skills?utm_medium=Cloud+Message+Banner&utm_campaign=cypress-tap-cli&utm_source=Binary%3A+App%23cypress-tap&utm_medium=Cloud+Message+Banner&utm_campaign=cypress_tap_cli&utm_source=Binary%3A+App
 LambdaTest: https://www.testmuai.com/blog/cypress-test-automation-framework/
 Cypress BDD: https://www.testmuai.com/learning-hub/cypress-cucumber-tutorial
+LT learning hub: https://www.testmuai.com/learning-hub/cypress-tutorial/
 
 ### Cypress installation du Project:
 1) Create the package.json file: `npm init`
@@ -212,3 +213,4 @@ npx allure open ./allure-report
 4) npm run test:swaglabs:cloud
 5) npx cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6 --spec "cypress/e2e/SwagLabs/login_password_masking.cy.js"
 6) npx cypress run --spec "cypress/e2e/example_test_spec.cy.js"
+7) npx cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6 --spec "cypress/e2e/AI/logout_prompt_spec.cy.js"
