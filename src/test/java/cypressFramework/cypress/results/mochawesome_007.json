@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-26T17:34:56.675Z",
+    "end": "2026-11-26T17:35:03.641Z",
+    "duration": 6966,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "54e671c3-f832-42fb-bc13-123f8183ef8b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SwagLabs\\Cart\\remove_product_from_cart_page.cy.js",
+      "file": "cypress\\e2e\\SwagLabs\\Cart\\remove_product_from_cart_page.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bb894c0f-1836-4fc9-b22e-e2ef216d2eaf",
+          "title": "Swag Labs cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "supprime un produit depuis la page panier",
+              "fullTitle": "Swag Labs cart supprime un produit depuis la page panier",
+              "timedOut": null,
+              "duration": 2580,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Cliquer sur le bouton Remove d'un article ajouté au panier\ncy.get('[data-test=\"remove-sauce-labs-backpack\"]').should('be.visible').click();\n// Vérifier que L'article disparaît de la liste\ncy.get('[data-test=\"item-quantity\"]').should('not.exist');\ncy.get('[data-test=\"inventory-item-name\"]').should('not.exist');\ncy.get('[data-test=\"inventory-item-desc\"]').should('not.exist');\ncy.get('[data-test=\"inventory-item-price\"]').should('not.exist');\n// Vérifier que le badge est mis à jour\ncy.get('[data-test=\"shopping-cart-badge\"]').should('not.exist');",
+              "err": {},
+              "uuid": "51a38bd9-0785-4a40-8d7c-3756fdd96ba4",
+              "parentUUID": "bb894c0f-1836-4fc9-b22e-e2ef216d2eaf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "51a38bd9-0785-4a40-8d7c-3756fdd96ba4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2580,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

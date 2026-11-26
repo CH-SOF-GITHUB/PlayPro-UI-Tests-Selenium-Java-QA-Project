@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-26T17:35:08.075Z",
+    "end": "2026-11-26T17:35:13.028Z",
+    "duration": 4953,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b73967d1-5b48-4fee-85f7-2cd6d7b13fca",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SwagLabs\\Cart\\remove_product_from_list.cy.js",
+      "file": "cypress\\e2e\\SwagLabs\\Cart\\remove_product_from_list.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5851e9f4-1afa-48bd-a99b-759e72e2a927",
+          "title": "Swag Labs cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "retire un produit depuis la liste et met à jour les contrôles du panier",
+              "fullTitle": "Swag Labs cart retire un produit depuis la liste et met à jour les contrôles du panier",
+              "timedOut": null,
+              "duration": 1944,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Ajouter le Sauce Labs Backpack afin de pouvoir le retirer.\ncy.get('[data-test=\"add-to-cart-sauce-labs-backpack\"]').click();\n// Vérifier que le badge indique un produit avant le retrait.\ncy.get('[data-test=\"shopping-cart-badge\"]').should('be.visible').and('have.text', '1');\n// Retirer le Sauce Labs Backpack depuis la page Inventory.\ncy.get('[data-test=\"remove-sauce-labs-backpack\"]').click();\n// Vérifier que le bouton redevient Add to cart.\ncy.get('[data-test=\"add-to-cart-sauce-labs-backpack\"]').should('be.visible').and('have.text', 'Add to cart');\n// Vérifier que le badge disparaît lorsque le panier est vide.\ncy.get('[data-test=\"shopping-cart-badge\"]').should('not.exist');",
+              "err": {},
+              "uuid": "d6ac5f25-c65b-4f0c-8155-aab7849758e9",
+              "parentUUID": "5851e9f4-1afa-48bd-a99b-759e72e2a927",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d6ac5f25-c65b-4f0c-8155-aab7849758e9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1944,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

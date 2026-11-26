@@ -23,7 +23,9 @@ Cypress.Commands.add('login', (username = 'standard_user', password = 'secret_sa
 // -- This is a child command --
 // Log out from Swag Labs and confirm the login form is available again.
 Cypress.Commands.add('logout', () => {
-    cy.get('#react-burger-menu-btn').should('be.visible').click({ force: true });
+    // Take a screenshot before Leaving The Test
+    cy.screenshot('after-test', {capture: 'runner'});
+    cy.get('#react-burger-menu-btn').should('be.visible').click({force: true});
     // Attendre le lien de déconnexion lui-même plutôt que le conteneur animé du menu.
     cy.get('#logout_sidebar_link').should('be.visible').click();
     cy.get('[data-test="login-button"]').should('be.visible');

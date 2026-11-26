@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-26T17:33:09.511Z",
+    "end": "2026-11-26T17:33:23.634Z",
+    "duration": 14123,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "be9573c6-db05-498a-b34e-8f89e6b899a6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SwagLabs\\Cart\\add_multiple_products.cy.js",
+      "file": "cypress\\e2e\\SwagLabs\\Cart\\add_multiple_products.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2e3db7b3-9c4f-4e2d-8979-5403b66615fa",
+          "title": "Swag Labs cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "ajoute plusieurs produits au panier",
+              "fullTitle": "Swag Labs cart ajoute plusieurs produits au panier",
+              "timedOut": null,
+              "duration": 4932,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Ajouter produit N° 1 depuis la page Inventory\ncy.get('[data-test=\"add-to-cart-sauce-labs-backpack\"]').click();\n// Vérifier que le bouton du produit devient Remove\ncy.get('[data-test=\"remove-sauce-labs-backpack\"]').should('have.text', 'Remove');\n// Ajouter produit N° 2 depuis la page Inventory\ncy.get('[data-test=\"add-to-cart-sauce-labs-fleece-jacket\"]').click();\ncy.get('[data-test=\"remove-sauce-labs-fleece-jacket\"]').should('have.text', 'Remove');\n// Ajouter produit N° 3 depuis la page Inventory\ncy.get('[data-test=\"add-to-cart-test.allthethings()-t-shirt-(red)\"]').click();\ncy.get('[data-test=\"remove-test.allthethings()-t-shirt-(red)\"]').should('have.text', 'Remove');\n// Vérifier que le badge du panier affiche 3 produits\ncy.get('[data-test=\"shopping-cart-badge\"]').should('be.visible').and('have.text', '3');",
+              "err": {},
+              "uuid": "df264ef4-b6dd-4780-b2e2-ed6eca242c28",
+              "parentUUID": "2e3db7b3-9c4f-4e2d-8979-5403b66615fa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "df264ef4-b6dd-4780-b2e2-ed6eca242c28"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4932,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

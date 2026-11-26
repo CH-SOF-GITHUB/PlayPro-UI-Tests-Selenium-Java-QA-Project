@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-26T17:33:34.322Z",
+    "end": "2026-11-26T17:33:44.165Z",
+    "duration": 9843,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "06648e5f-a968-4464-bb32-ed60c47cd8e8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SwagLabs\\Cart\\add_product_from_list.cy.js",
+      "file": "cypress\\e2e\\SwagLabs\\Cart\\add_product_from_list.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "68b796bb-b648-4e66-9213-ee766b1ceee8",
+          "title": "Swag Labs cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "ajoute un produit depuis la liste et affiche Remove avec un badge à 1",
+              "fullTitle": "Swag Labs cart ajoute un produit depuis la liste et affiche Remove avec un badge à 1",
+              "timedOut": null,
+              "duration": 3686,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Ajouter le Sauce Labs Backpack depuis la page Inventory.\ncy.get('[data-test=\"add-to-cart-sauce-labs-backpack\"]').click();\n// Vérifier que le bouton du produit devient Remove.\ncy.get('[data-test=\"remove-sauce-labs-backpack\"]').should('be.visible').and('have.text', 'Remove');\n// Vérifier que le badge du panier affiche un produit.\ncy.get('[data-test=\"shopping-cart-badge\"]').should('be.visible').and('have.text', '1');",
+              "err": {},
+              "uuid": "5c17b804-dd27-4b30-ba42-2c314416ffd5",
+              "parentUUID": "68b796bb-b648-4e66-9213-ee766b1ceee8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5c17b804-dd27-4b30-ba42-2c314416ffd5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3686,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
