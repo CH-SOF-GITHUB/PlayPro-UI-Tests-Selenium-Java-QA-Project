@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-11-26T13:12:31.954Z",
+    "end": "2026-11-26T13:12:54.569Z",
+    "duration": 22615,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "11263460-b500-44ab-93fe-a48f092028e9",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SwagLabs\\Product_Sorting\\price_low_to_high.cy.js",
+      "file": "cypress\\e2e\\SwagLabs\\Product_Sorting\\price_low_to_high.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8e9300cd-74dc-4872-8531-8ad274f3878b",
+          "title": "Swag Labs product sorting",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "sorts products by price from low to high",
+              "fullTitle": "Swag Labs product sorting sorts products by price from low to high",
+              "timedOut": null,
+              "duration": 4790,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"product-sort-container\"]').select('Price (low to high)');\n// Vérifier que le menu de tri sélectionne l'ordre Name de Z to A.\ncy.get('[data-test=\"product-sort-container\"]').should('have.value', 'lohi');\n// Vérifier que l'inventaire contient le même ordre et nombre de produits.\ncy.get('.inventory_item').should('have.length', 6).then(items => {\n  const firstProduct = items.first();\n  const lastProduct = items.last();\n  const firstProdName = firstProduct.find('.inventory_item_name').text().trim();\n  const firstProdPrice = firstProduct.find('.inventory_item_price').text().trim();\n  const lastProdName = lastProduct.find('.inventory_item_name').text().trim();\n  const lastProdPrice = lastProduct.find('.inventory_item_price').text().trim();\n  expect(firstProdName).to.equal('Sauce Labs Onesie');\n  expect(firstProdPrice).to.equal(expectedProducts[firstProdName]);\n  cy.log(\"First Price: \" + expectedProducts[firstProdName]);\n  expect(lastProdName).to.equal('Sauce Labs Fleece Jacket');\n  expect(lastProdPrice).to.equal(expectedProducts[lastProdName]);\n  cy.log(\"Last Price: \" + expectedProducts[lastProdName]);\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<a#logout_sidebar_link.bm-item.menu-item>' to be 'visible'\n\nThis element `<a#logout_sidebar_link.bm-item.menu-item>` is not visible because its parent `<div.bm-menu-wrap>` has CSS property: `display: none`\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Swag Labs product sorting`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<a#logout_sidebar_link.bm-item.menu-item>' to be 'visible'\n\nThis element `<a#logout_sidebar_link.bm-item.menu-item>` is not visible because its parent `<div.bm-menu-wrap>` has CSS property: `display: none`\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Swag Labs product sorting`\n    at Context.eval (webpack://cypress-e2e-tests/./cypress/support/commands.js:27:33)\n    at wrapped (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:140183:43)",
+                "diff": null
+              },
+              "uuid": "c907bbd6-487f-4bde-96b8-db8ebd935cac",
+              "parentUUID": "8e9300cd-74dc-4872-8531-8ad274f3878b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c907bbd6-487f-4bde-96b8-db8ebd935cac"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4790,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

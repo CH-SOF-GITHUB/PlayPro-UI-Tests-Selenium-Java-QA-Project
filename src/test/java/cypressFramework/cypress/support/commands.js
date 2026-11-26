@@ -12,20 +12,21 @@
 // -- This is a parent command --
 // Log in to Swag Labs and confirm the inventory page is available.
 Cypress.Commands.add('login', (username = 'standard_user', password = 'secret_sauce') => {
-  cy.visit('/');
-  cy.get('[data-test="username"]').type(username);
-  cy.get('[data-test="password"]').type(password);
-  cy.get('[data-test="login-button"]').click();
-  cy.url().should('include', '/inventory.html');
+    cy.visit('/');
+    cy.get('[data-test="username"]').type(username);
+    cy.get('[data-test="password"]').type(password);
+    cy.get('[data-test="login-button"]').click();
+    cy.url().should('include', '/inventory.html');
 });
 //
 //
 // -- This is a child command --
 // Log out from Swag Labs and confirm the login form is available again.
 Cypress.Commands.add('logout', () => {
-  cy.get('#react-burger-menu-btn').click();
-  cy.get('#logout_sidebar_link').click();
-  cy.get('[data-test="login-button"]').should('be.visible');
+    cy.get('#react-burger-menu-btn').should('be.visible').click({ force: true });
+    // Attendre le lien de déconnexion lui-même plutôt que le conteneur animé du menu.
+    cy.get('#logout_sidebar_link').should('be.visible').click();
+    cy.get('[data-test="login-button"]').should('be.visible');
 });
 //
 //

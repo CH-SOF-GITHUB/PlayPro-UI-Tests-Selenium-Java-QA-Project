@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-11-26T13:33:10.987Z",
+    "end": "2026-11-26T13:33:23.040Z",
+    "duration": 12053,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b4cd4043-f847-4a8d-b491-ffe3cb329dea",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SwagLabs\\Product_Sorting\\price_high_to_low.cy.js",
+      "file": "cypress\\e2e\\SwagLabs\\Product_Sorting\\price_high_to_low.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4f4cb99b-1c59-4511-8d4a-f040ab57e0ff",
+          "title": "Swag Labs product sorting",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "sorts products by price from high to low",
+              "fullTitle": "Swag Labs product sorting sorts products by price from high to low",
+              "timedOut": null,
+              "duration": 2409,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"product-sort-container\"]').select('Price (low to high)');\n// Vérifier que le menu de tri sélectionne l'ordre Name de Z to A.\ncy.get('[data-test=\"product-sort-container\"]').should('have.value', 'lohi');\n// Vérifier que l'inventaire contient le même ordre et nombre de produits.\ncy.get('.inventory_item').should('have.length', 6).then(items => {\n  const firstProduct = items.first();\n  const lastProduct = items.last();\n  const firstProdName = firstProduct.find('.inventory_item_name').text().trim();\n  const firstProdPrice = firstProduct.find('.inventory_item_price').text().trim();\n  const lastProdName = lastProduct.find('.inventory_item_name').text().trim();\n  const lastProdPrice = lastProduct.find('.inventory_item_price').text().trim();\n  expect(firstProdName).to.equal('Sauce Labs Fleece Jacket');\n  expect(firstProdPrice).to.equal(expectedProducts[firstProdName]);\n  cy.log(\"First Price: \" + expectedProducts[firstProdName]);\n  expect(lastProdName).to.equal('Sauce Labs Onesie');\n  expect(lastProdPrice).to.equal(expectedProducts[lastProdName]);\n  cy.log(\"Last Price: \" + expectedProducts[lastProdName]);\n});",
+              "err": {
+                "message": "AssertionError: expected 'Sauce Labs Onesie' to equal 'Sauce Labs Fleece Jacket'",
+                "estack": "AssertionError: expected 'Sauce Labs Onesie' to equal 'Sauce Labs Fleece Jacket'\n    at Context.eval (webpack://cypress-e2e-tests/./cypress/e2e/SwagLabs/Product_Sorting/price_high_to_low.cy.js:42:37)\n    at getRet (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:119652:20)\n    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:119663:66)\n    at Context.then (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:119914:21)",
+                "diff": "- 'Sauce Labs Onesie'\n+ 'Sauce Labs Fleece Jacket'\n"
+              },
+              "uuid": "30ad230d-cb2c-4b5b-97df-43c834c49810",
+              "parentUUID": "4f4cb99b-1c59-4511-8d4a-f040ab57e0ff",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "30ad230d-cb2c-4b5b-97df-43c834c49810"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2409,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

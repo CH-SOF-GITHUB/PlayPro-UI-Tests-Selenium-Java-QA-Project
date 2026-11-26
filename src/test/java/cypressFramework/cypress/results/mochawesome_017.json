@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-26T13:46:21.887Z",
+    "end": "2026-11-26T13:46:26.596Z",
+    "duration": 4709,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c48032cb-0b54-4892-b313-eb7fd73b1974",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SwagLabs\\Product_Sorting\\price_high_to_low.cy.js",
+      "file": "cypress\\e2e\\SwagLabs\\Product_Sorting\\price_high_to_low.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "725813f0-37dd-4d67-acd7-c3a20a7943e0",
+          "title": "Swag Labs product sorting",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "sorts products by price from high to low",
+              "fullTitle": "Swag Labs product sorting sorts products by price from high to low",
+              "timedOut": null,
+              "duration": 3741,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"product-sort-container\"]').select('Price (high to low)');\n// Vérifier que le menu de tri sélectionne l'ordre Name de Z to A.\ncy.get('[data-test=\"product-sort-container\"]').should('have.value', 'hilo');\n// Vérifier que l'inventaire contient le même ordre et nombre de produits.\ncy.get('.inventory_item').should('have.length', 6).then(items => {\n  const firstProduct = items.first();\n  const lastProduct = items.last();\n  const firstProdName = firstProduct.find('.inventory_item_name').text().trim();\n  const firstProdPrice = firstProduct.find('.inventory_item_price').text().trim();\n  const lastProdName = lastProduct.find('.inventory_item_name').text().trim();\n  const lastProdPrice = lastProduct.find('.inventory_item_price').text().trim();\n  expect(firstProdName).to.equal('Sauce Labs Fleece Jacket');\n  expect(firstProdPrice).to.equal(expectedProducts[firstProdName]);\n  cy.log(\"First Price: \" + expectedProducts[firstProdName]);\n  cy.task('log', \"First Price: \" + expectedProducts[firstProdName]);\n  expect(lastProdName).to.equal('Sauce Labs Onesie');\n  expect(lastProdPrice).to.equal(expectedProducts[lastProdName]);\n  cy.log(\"Last Price: \" + expectedProducts[lastProdName]);\n  cy.task('log', \"First Price: \" + expectedProducts[lastProdName]);\n});",
+              "err": {},
+              "uuid": "56551af9-1b2d-472b-9cd3-a284ae64692b",
+              "parentUUID": "725813f0-37dd-4d67-acd7-c3a20a7943e0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "56551af9-1b2d-472b-9cd3-a284ae64692b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3741,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

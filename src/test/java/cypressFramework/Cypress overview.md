@@ -229,3 +229,4 @@ Or use Allure Report 3:
 5) npx cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6 --spec "cypress/e2e/SwagLabs/login_password_masking.cy.js"
 6) npx cypress run --spec "cypress/e2e/example_test_spec.cy.js"
 7) npx cypress run --record --key 97487063-2e65-4977-bce4-3f0364edbae6 --spec "cypress/e2e/AI/logout_prompt_spec.cy.js"
+8) npx cypress run --headed --spec "cypressFramework/cypress/e2e/SwagLabs/Product_Sorting/**/*.cy.js"

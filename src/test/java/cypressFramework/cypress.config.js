@@ -24,6 +24,14 @@ export default defineConfig({
             // Call allureCypress to initialize the plugin from the setupNodeEvents function in cypress.config.js
             allureCypress(on, config);
 
+            // Déclarer la tâche 'log' pour afficher des messages dans le terminal CLI pendant `cypress run`.
+            on('task', {
+                log(message) {
+                    console.log(message);
+                    return null;
+                },
+            });
+
             return config;
         },
     },
