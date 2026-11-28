@@ -11,6 +11,7 @@ public class LoginPage {
     private static final By USERNAME = By.id("user-name");
     private static final By PASSWORD = By.id("password");
     private static final By LOGIN_BUTTON = By.id("login-button");
+    private static final By ERROR = By.cssSelector("[data-test='error']");
 
     private final WebDriver driver;
     private final WebDriverWait wait;
@@ -28,5 +29,9 @@ public class LoginPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(USERNAME)).sendKeys(username);
         driver.findElement(PASSWORD).sendKeys(password);
         wait.until(ExpectedConditions.elementToBeClickable(LOGIN_BUTTON)).click();
+    }
+
+    public String getErrorMessage() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(ERROR)).getText().trim();
     }
 }

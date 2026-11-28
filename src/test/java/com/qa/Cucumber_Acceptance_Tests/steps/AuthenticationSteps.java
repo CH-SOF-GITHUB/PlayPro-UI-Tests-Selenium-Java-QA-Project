@@ -28,4 +28,19 @@ public class AuthenticationSteps {
     public void productCatalogIsDisplayed() {
         Assert.assertTrue(new InventoryPage(driver()).isDisplayed(), "The product catalog should be visible after sign-in.");
     }
+
+    @When("they sign in with password {string}")
+    public void shopperSignsInWithPassword(String password) {
+        new LoginPage(driver()).signIn("standard_user", password);
+    }
+
+    @Then("the sign-in error {string} is displayed")
+    public void signInErrorIsDisplayed(String expectedMessage) {
+        Assert.assertEquals(new LoginPage(driver()).getErrorMessage(), expectedMessage, "The expected sign-in error should be displayed.");
+    }
+
+    @When("they sign in with username {string}")
+    public void theySignInWithUsername(String username) {
+        new LoginPage(driver()).signIn(username, "secret_sauce");
+    }
 }

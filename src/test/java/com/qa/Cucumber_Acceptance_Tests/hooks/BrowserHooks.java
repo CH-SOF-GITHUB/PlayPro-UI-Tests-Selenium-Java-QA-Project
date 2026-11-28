@@ -11,17 +11,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.Properties;
 
 public class BrowserHooks {
-    /*private static final Path CONFIG_FILE = Path.of(
-            "src", "test", "java", "com", "qa", "Cucumber_Acceptance_Tests",
-            "config", "acceptance.properties"
-    );
-    private static final String URL_PROPERTY = "swagLabs.url";*/
-
     Properties props = new Properties();
 
     @Before
@@ -62,23 +54,4 @@ public class BrowserHooks {
         }
         return result;
     }
-    /*private static String applicationUrl() {
-        String overriddenUrl = System.getProperty(URL_PROPERTY);
-        if (overriddenUrl != null && !overriddenUrl.isBlank()) {
-            return overriddenUrl;
-        }
-
-        Properties properties = new Properties();
-        try (InputStream input = Files.newInputStream(CONFIG_FILE)) {
-            properties.load(input);
-        } catch (IOException e) {
-            throw new IllegalStateException("Unable to read acceptance configuration file: " + CONFIG_FILE, e);
-        }
-
-        String configuredUrl = properties.getProperty(URL_PROPERTY);
-        if (configuredUrl == null || configuredUrl.isBlank()) {
-            throw new IllegalStateException("Missing '" + URL_PROPERTY + "' in " + CONFIG_FILE);
-        }
-        return configuredUrl;
-    }*/
 }
