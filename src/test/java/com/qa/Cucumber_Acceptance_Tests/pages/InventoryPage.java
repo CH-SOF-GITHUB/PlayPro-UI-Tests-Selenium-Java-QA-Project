@@ -21,4 +21,8 @@ public class InventoryPage {
         return "Products".equals(wait.until(ExpectedConditions.visibilityOfElementLocated(TITLE)).getText())
                 && !wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(PRODUCTS)).isEmpty();
     }
+
+    public int getProductCount() {
+        return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(PRODUCTS)).size();
+    }
 }

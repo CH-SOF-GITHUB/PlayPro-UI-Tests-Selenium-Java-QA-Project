@@ -21,12 +21,12 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @Suite
 @SuiteDisplayName("Cucumber Acceptance Tests (JUnit 5)")
 @IncludeEngines("cucumber")
-@SelectDirectories("src/test/java/com/qa/Cucumber_Acceptance_Tests/features")
+@SelectDirectories("src/test/java/com/qa/Cucumber_Acceptance_Tests/features/inventory.feature")
 @ConfigurationParameter(
         key = GLUE_PROPERTY_NAME,
         value = "com.qa.Cucumber_Acceptance_Tests.steps, com.qa.Cucumber_Acceptance_Tests.hooks"
 )
-@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@acceptedUsers")
+//@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@acceptedUsers")
 @ConfigurationParameter(
         key = PLUGIN_PROPERTY_NAME,
         value = "pretty,html:target/cucumber-acceptance-report.html,json:target/cucumber-acceptance-report.json,junit:target/cucumber-acceptance-report.xml"
